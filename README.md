@@ -1,0 +1,95 @@
+# Jihao Liu — Personal Academic Website
+
+Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
+
+## Stack
+
+- Pure static HTML + CSS (no build step, no JavaScript dependencies)
+- Hosted on GitHub Pages
+- Custom academic design system in `assets/style.css`
+
+## Site Structure
+
+```
+.
+├── index.html              # Home / About
+├── publications.html       # Publications and preprints (48 papers)
+├── teaching.html           # Teaching experience
+├── talks.html              # Invited talks (conferences + seminars)
+├── conferences.html        # Conferences and seminars co-organized
+├── collaborators.html      # Mathematical collaborators
+├── pku-ag-seminar.html     # PKU Algebraic Geometry Seminar (current schedule)
+├── ffm-conference.html     # Conference on Foliation, Fibration, and Moduli (2026)
+└── assets/
+    └── style.css           # All site styles
+```
+
+## Local Preview
+
+To preview the site locally, you can use any static file server. The simplest options:
+
+```bash
+# Using Python (built-in on macOS)
+python3 -m http.server 8000
+
+# Or using Node
+npx serve .
+```
+
+Then open [http://localhost:8000](http://localhost:8000) in your browser.
+
+## How to Edit
+
+All content lives in plain HTML files. To update:
+
+1. Open the relevant `.html` file in any text editor (or in Cursor)
+2. Edit the content between the `<main>` tags
+3. Save the file
+4. Commit and push to GitHub — the site updates automatically within ~1 minute
+
+To change the site-wide style, edit `assets/style.css`.
+
+## Common Updates
+
+### Adding a new publication
+
+Open `publications.html`, find the year heading, and add a new entry block:
+
+```html
+<div class="entry">
+  <div class="entry-title"><span class="entry-number">49.</span> Title of the paper</div>
+  <div class="entry-authors">Author 1, Author 2</div>
+  <div class="entry-venue">Journal name, year, pages.</div>
+  <div class="entry-links">
+    <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a>
+    <a href="https://doi.org/...">DOI</a>
+  </div>
+</div>
+```
+
+### Adding a seminar talk
+
+Open `talks.html`, find the right section (Conferences or Seminars), and add an `<li>`:
+
+```html
+<li>
+  <div class="course-name"><span class="entry-number">N.</span> Talk title</div>
+  <div class="course-meta">Date · Venue · <a href="...">link</a></div>
+</li>
+```
+
+## Deployment
+
+The site auto-deploys to GitHub Pages from the `main` branch. To deploy:
+
+```bash
+git add .
+git commit -m "Update content"
+git push
+```
+
+GitHub Pages serves the site at `https://liu-jihao.github.io` within ~1 minute of pushing.
+
+## License
+
+Site content © Jihao Liu. Source code (HTML/CSS templates) free to reuse.
