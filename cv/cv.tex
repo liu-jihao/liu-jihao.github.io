@@ -1,0 +1,661 @@
+% =====================================================================
+%  Curriculum Vitae -- Jihao Liu
+%
+%  Compile with:  xelatex cv.tex   (run twice for the page-count footer)
+%
+%  Designed to echo the visual identity of https://jihaoliu.org :
+%  serif body (EB Garamond), academic red accent (#8b1a1a), thin
+%  rules under section headings, restrained typography.
+% =====================================================================
+\documentclass[11pt]{article}
+
+% ---------- Page geometry ----------
+\usepackage[
+  letterpaper,
+  top=0.85in,
+  bottom=0.95in,
+  left=0.95in,
+  right=0.95in,
+  footskip=0.5in
+]{geometry}
+
+% ---------- Fonts (XeLaTeX) ----------
+\usepackage{fontspec}
+\usepackage[lining,proportional]{ebgaramond}    % loads EB Garamond as the main serif
+\newfontfamily\cnfont{Songti SC}[Scale=0.95]    % for the few CJK glyphs (刘济豪 etc.)
+
+% ---------- Color (same palette as the website) ----------
+\usepackage[dvipsnames,table]{xcolor}
+\definecolor{accent}{HTML}{8B1A1A}      % academic red, only for headings + name
+\definecolor{textcol}{HTML}{1A1A1A}
+\definecolor{muted}{HTML}{555555}
+\definecolor{rule}{HTML}{C9C5B8}
+\definecolor{linkcol}{HTML}{6B1414}     % darker red for arXiv/DOI links
+
+% ---------- Hyperlinks ----------
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle    = {Jihao Liu -- Curriculum Vitae},
+  pdfauthor   = {Jihao Liu},
+  pdfsubject  = {Curriculum Vitae},
+  pdfkeywords = {algebraic geometry, birational geometry, foliations,
+                 minimal model program, singularities},
+  colorlinks  = true,
+  linkcolor   = linkcol,
+  urlcolor    = linkcol,
+  citecolor   = linkcol,
+  breaklinks  = true,
+}
+\urlstyle{same}
+
+% ---------- Section heading style ----------
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\scshape\color{accent}}{}{0pt}
+  {}[\vspace{2pt}{\color{rule}\titlerule[0.4pt]}]
+\titlespacing*{\section}{0pt}{1.2\baselineskip}{0.5\baselineskip}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\scshape\color{textcol}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{0.6\baselineskip}{0.2\baselineskip}
+
+% ---------- Header / footer ----------
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\small\color{muted}Jihao Liu \;\textbf{\textperiodcentered}\; CV}
+\fancyfoot[R]{\small\color{muted}\thepage\ / \pageref{LastPage}}
+
+% First page: no header, no footer
+\fancypagestyle{firststyle}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[R]{\small\color{muted}\thepage\ / \pageref{LastPage}}
+}
+
+% ---------- Lists ----------
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+
+% ---------- Page-break helpers ----------
+\usepackage{needspace}
+
+% ---------- Two-column "date | entry" layout ----------
+% \entry{date span}{title and details}
+\newlength{\datewidth}
+\setlength{\datewidth}{1.4in}
+\newcommand{\entry}[2]{%
+  \noindent
+  \begin{minipage}[t]{\datewidth}
+    \raggedright\small\color{muted}#1
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{\dimexpr\linewidth-\datewidth-0.1in\relax}
+    \raggedright #2
+  \end{minipage}\par\vspace{4pt}
+}
+
+% Numbered publication entry (uses an automatic counter so we can
+% renumber if the order changes -- but the absolute number on the
+% website is stable, so we set it manually with \pubitem{number}).
+\newcommand{\pubitem}[3]{%
+  \noindent
+  \begin{minipage}[t]{\datewidth}
+    \raggedright\small\color{muted}#1.\;\textit{#2}
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}[t]{\dimexpr\linewidth-\datewidth-0.1in\relax}
+    \raggedright #3
+  \end{minipage}\par\vspace{4pt}
+}
+
+% Inline emphasis for paper titles
+\newcommand{\paper}[1]{\textbf{#1}}
+% Light separator dot for inline metadata
+\newcommand{\sep}{\,\textperiodcentered\,}
+% Author rendering: bold the author's own name
+\newcommand{\me}{\textbf{Jihao Liu}}
+
+% ---------- Title block ----------
+\usepackage{titling}
+\setlength{\droptitle}{-0.6in}
+
+% =====================================================================
+\begin{document}
+\thispagestyle{firststyle}
+
+% ---------- Heading ----------
+\noindent
+\begin{minipage}[t]{0.66\textwidth}
+  \vspace{0pt}
+  {\fontsize{30pt}{34pt}\selectfont\color{textcol}Jihao Liu}\;%
+  {\fontsize{20pt}{24pt}\selectfont\color{muted}\cnfont 刘济豪}\\[8pt]
+  {\normalsize\color{accent}\scshape Curriculum Vitae}\\[3pt]
+  {\footnotesize\color{muted}Last updated April 2026}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.32\textwidth}
+  \vspace{6pt}\raggedleft\small
+  Beijing International Center\\
+  for Mathematical Research\\
+  Peking University, Beijing\\[4pt]
+  \href{mailto:liujihao@math.pku.edu.cn}{liujihao@math.pku.edu.cn}\\
+  \href{https://jihaoliu.org}{jihaoliu.org}
+\end{minipage}\par
+\vspace{10pt}{\color{rule}\hrule height 0.4pt}\par\vspace{14pt}
+
+% ---------- Research interests ----------
+\section*{Research Interests}
+Birational geometry, singularities, foliations, and explicit birational geometry.
+
+% ---------- Employment ----------
+\section*{Employment}
+\entry{2024 -- present}{%
+  \textbf{Peking University}, School of Mathematical Sciences\\
+  Assistant Professor / Researcher.}
+\entry{2021 -- 2024}{%
+  \textbf{Northwestern University}, Department of Mathematics\\
+  Boas Assistant Professor. Mentor: Yuchen Liu.}
+
+% ---------- Education ----------
+\section*{Education}
+\entry{2015 -- 2021}{%
+  \textbf{University of Utah}, Salt Lake City, USA\\
+  Ph.D.\ in Mathematics. Advisor: Christopher D.\ Hacon FRS.}
+\entry{2011 -- 2015}{%
+  \textbf{Peking University}, Beijing, China\\
+  B.S.\ in Mathematics. Undergraduate advisor: Gang Tian.}
+
+% ---------- Publications and preprints ----------
+\section*{Published Papers and Papers to Appear}
+{\small\color{muted}\noindent
+Numbering matches the master list at \href{https://jihaoliu.org/publications.html}{jihaoliu.org/publications.html}.}\par\vspace{4pt}
+
+\pubitem{43}{2025}{%
+  \paper{Sarkisov program for algebraically integrable and threefold foliations.}
+  Yifei Chen, \me, Yanze Wang.
+  Int.\ Math.\ Res.\ Not.\ \textbf{2026}, no.\ 6, 1--19.
+  \href{https://arxiv.org/abs/2505.15115}{arXiv:2505.15115}.}
+
+\pubitem{39}{2024}{%
+  \paper{A generalized non-vanishing theorem for surfaces.}
+  \me, Lingyao Xie.
+  Pure Appl.\ Math.\ Q.\ (special volume in honor of Caucher Birkar) \textbf{22} (2026), no.\ 1, 235--244.
+  \href{https://arxiv.org/abs/2410.15457}{arXiv:2410.15457}.}
+
+\pubitem{38}{2024}{%
+  \paper{Flop between algebraically integrable foliations on potentially klt varieties.}
+  Yifei Chen, \me, Yanze Wang.
+  Int.\ J.\ Math.\ \textbf{36} (2025), 2550035.
+  \href{https://arxiv.org/abs/2410.05764}{arXiv:2410.05764}.}
+
+\pubitem{35}{2024}{%
+  \paper{Volume of algebraically integrable foliations and locally stable families.}
+  Jingjun Han, Junpeng Jiao, Mengchu Li, \me.
+  To appear in Trans.\ Amer.\ Math.\ Soc.
+  \href{https://arxiv.org/abs/2406.16604}{arXiv:2406.16604}.}
+
+\pubitem{34}{2024}{%
+  \paper{Exceptional Fano varieties with small minimal log discrepancy.}
+  Louis Esser, \me, Chengxi Wang.
+  To appear in Math.\ Res.\ Lett.
+  \href{https://arxiv.org/abs/2406.03570}{arXiv:2406.03570}.}
+
+\pubitem{33}{2024}{%
+  \paper{Minimal model program for algebraically integrable foliations on klt varieties.}
+  \me, Fanjun Meng, Lingyao Xie.
+  Compos.\ Math.\ \textbf{161} (2025), 3213--3276.
+  \href{https://arxiv.org/abs/2404.01559}{arXiv:2404.01559}.}
+
+\pubitem{32}{2023}{%
+  \paper{On the equivalence between the effective adjunction conjectures of Prokhorov--Shokurov and of Li.}
+  Jingjun Han, \me, Qingyuan Xue.
+  Algebra Number Theory \textbf{19} (2025), no.\ 11.
+  \href{https://arxiv.org/abs/2312.15397}{arXiv:2312.15397}.}
+
+\pubitem{31}{2023}{%
+  \paper{On explicit bounds of Fano threefolds.}
+  Caucher Birkar, \me.
+  J.\ Reine Angew.\ Math.\ (Crelle's J.) (2025).
+  \href{https://arxiv.org/abs/2311.06732}{arXiv:2311.06732}.}
+
+\pubitem{29}{2023}{%
+  \paper{The minimal volume of surfaces of log general type with non-empty non-klt locus.}
+  \me, Wenfei Liu.
+  To appear in Algebr.\ Geom.
+  \href{https://arxiv.org/abs/2308.14268}{arXiv:2308.14268}.}
+
+\pubitem{28}{2023}{%
+  \paper{ACC for lc thresholds for algebraically integrable foliations.}
+  Omprokash Das, \me, Roktim Mascharak.
+  To appear in Selecta Math.
+  \href{https://arxiv.org/abs/2307.07157}{arXiv:2307.07157}.}
+
+\pubitem{27}{2023}{%
+  \paper{Uniform rational polytopes of foliated threefolds and the global ACC.}
+  \me, Fanjun Meng, Lingyao Xie.
+  J.\ Lond.\ Math.\ Soc.\ \textbf{109} (2024), no.\ 6, e12950.
+  \href{https://arxiv.org/abs/2306.00330}{arXiv:2306.00330}.}
+
+\pubitem{26}{2023}{%
+  \paper{Optimal bounds on surfaces.}
+  \me, Vyacheslav V.\ Shokurov.
+  To appear in \emph{Algebraic Geometry and Physics}.
+  \href{https://arxiv.org/abs/2305.19248}{arXiv:2305.19248}.}
+
+\pubitem{24}{2023}{%
+  \paper{Complements, index theorem, and minimal log discrepancies of foliated surface singularities.}
+  \me, Fanjun Meng, Lingyao Xie.
+  Eur.\ J.\ Math.\ \textbf{10} (2024), no.\ 6.
+  \href{https://arxiv.org/abs/2305.06493}{arXiv:2305.06493}.}
+
+\pubitem{23}{2023}{%
+  \paper{On global ACC for foliated threefolds.}
+  \me, Yujie Luo, Fanjun Meng.
+  Trans.\ Amer.\ Math.\ Soc.\ \textbf{376} (2023), no.\ 12, 8939--8972.
+  \href{https://arxiv.org/abs/2303.13083}{arXiv:2303.13083}.}
+
+\pubitem{22}{2023}{%
+  \paper{On effective Iitaka fibrations and existence of complements.}
+  Guodu Chen, Jingjun Han, \me.
+  Int.\ Math.\ Res.\ Not.\ (2024), no.\ 10, 8329--8349.
+  \href{https://arxiv.org/abs/2301.04813}{arXiv:2301.04813}.}
+
+\pubitem{21}{2022}{%
+  \paper{Semi-ampleness of NQC generalized log canonical pairs.}
+  \me, Lingyao Xie.
+  Adv.\ Math.\ \textbf{427} (2023), 109126.
+  \href{https://arxiv.org/abs/2210.01731}{arXiv:2210.01731}.}
+
+\pubitem{20}{2022}{%
+  \paper{On termination of flips and exceptionally non-canonical singularities.}
+  Jingjun Han, \me.
+  Geom.\ Topol.\ \textbf{29} (2025), no.\ 1, 399--441.
+  \href{https://arxiv.org/abs/2209.13122}{arXiv:2209.13122}.}
+
+\pubitem{19}{2022}{%
+  \paper{Infinitesimal structure of log canonical thresholds.}
+  \me, Fanjun Meng, Lingyao Xie.
+  Doc.\ Math.\ \textbf{29} (2024), no.\ 3, 703--732.
+  \href{https://arxiv.org/abs/2209.11369}{arXiv:2209.11369}.}
+
+\pubitem{18}{2022}{%
+  \paper{Remark on complements on surfaces.}
+  \me.
+  Forum Math.\ Sigma \textbf{11} (2023), e42.
+  \href{https://arxiv.org/abs/2208.09184}{arXiv:2208.09184}.}
+
+\pubitem{17}{2022}{%
+  \paper{Uniform rational polytopes for Iitaka dimensions.}
+  Guodu Chen, Jingjun Han, \me.
+  In: \emph{Higher Dimensional Algebraic Geometry: A Volume in Honor of V.\,V.\ Shokurov}
+  (C.\,D.\ Hacon, C.\ Xu eds.), London Math.\ Soc.\ Lecture Note Ser., Cambridge Univ.\ Press (2025), 43--68.
+  \href{https://arxiv.org/abs/2208.04663}{arXiv:2208.04663}.}
+
+\pubitem{16}{2022}{%
+  \paper{Relative Nakayama--Zariski decomposition and minimal models for generalized pairs.}
+  \me, Lingyao Xie.
+  Peking Math.\ J.\ (2025), no.\ 8, 299--349.
+  \href{https://arxiv.org/abs/2207.09576}{arXiv:2207.09576}.}
+
+\pubitem{14}{2022}{%
+  \paper{On the fixed part of pluricanonical systems for surfaces.}
+  \me, Lingyao Xie.
+  Math.\ Nachr.\ \textbf{296} (2023), 2046--2069.
+  \href{https://arxiv.org/abs/2202.11260}{arXiv:2202.11260}.}
+
+\pubitem{13}{2022}{%
+  \paper{On generalized lc pairs with b-log abundant nef part}
+  (with an Appendix by J.\ Han).
+  Junpeng Jiao, \me, Lingyao Xie.
+  Front.\ Math.\ (2025).
+  \href{https://arxiv.org/abs/2202.11256}{arXiv:2202.11256}.}
+
+\pubitem{12}{2022}{%
+  \paper{ACC for minimal log discrepancies of terminal threefolds.}
+  Jingjun Han, \me, Yujie Luo.
+  Adv.\ Math.\ \textbf{480} (2025), 110457.
+  \href{https://arxiv.org/abs/2202.05287}{arXiv:2202.05287}.}
+
+\pubitem{11}{2021}{%
+  \paper{Existence of flips for generalized lc pairs.}
+  Christopher D.\ Hacon, \me.
+  Camb.\ J.\ Math.\ \textbf{11} (2023), no.\ 4, 795--828.
+  \href{https://arxiv.org/abs/2105.13590}{arXiv:2105.13590}.}
+
+\pubitem{10}{2021}{%
+  \paper{Number of singular points on projective surfaces.}
+  \me, Lingyao Xie.
+  Chin.\ Ann.\ Math.\ Ser.\ B \textbf{46} (2025), 713--724.
+  \href{https://arxiv.org/abs/2103.04522}{arXiv:2103.04522}.}
+
+\pubitem{9}{2021}{%
+  \paper{Divisors computing minimal log discrepancies on lc surfaces.}
+  \me, Lingyao Xie.
+  Math.\ Proc.\ Camb.\ Philos.\ Soc.\ \textbf{175} (2023), no.\ 1, 107--128.
+  \href{https://arxiv.org/abs/2101.00138}{arXiv:2101.00138}.}
+
+\pubitem{8}{2020}{%
+  \paper{On effective birationality for sub-pairs.}
+  Jingjun Han, \me.
+  Int.\ J.\ Math.\ \textbf{34} (2023), no.\ 6, Article No.\ 2350029.
+  \href{https://arxiv.org/abs/2007.01849}{arXiv:2007.01849}.}
+
+\pubitem{7}{2019}{%
+  \paper{An optimal gap of minimal log discrepancies of threefold non-canonical singularities.}
+  \me, Liudan Xiao.
+  J.\ Pure Appl.\ Algebra \textbf{225} (2021), no.\ 9.
+  \href{https://arxiv.org/abs/1909.08759}{arXiv:1909.08759}.}
+
+\pubitem{6}{2019}{%
+  \paper{Bounded deformations of $(\varepsilon,\delta)$-log canonical singularities.}
+  Jingjun Han, \me, Joaqu\'in Moraga.
+  J.\ Math.\ Sci.\ Univ.\ Tokyo \textbf{27} (2020), no.\ 1, 1--28.
+  \href{https://arxiv.org/abs/1903.07202}{arXiv:1903.07202}.}
+
+\pubitem{5}{2019}{%
+  \paper{ACC for minimal log discrepancies of exceptional singularities.}
+  Jingjun Han, \me, Vyacheslav V.\ Shokurov.
+  Peking Math.\ J.\ (2024), 1--33.
+  \href{https://arxiv.org/abs/1903.04338}{arXiv:1903.04338}.}
+
+\pubitem{3}{2018}{%
+  \paper{Toward the equivalence of the ACC for $a$-log canonical thresholds and the ACC for minimal log discrepancies.}
+  \me.
+  To appear in \emph{Algebraic Geometry and Physics}.
+  \href{https://arxiv.org/abs/1809.04839}{arXiv:1809.04839}.}
+
+\pubitem{2}{2018}{%
+  \paper{Sarkisov program for generalized pairs.}
+  \me.
+  Osaka J.\ Math.\ \textbf{58} (2021), no.\ 4.
+  \href{https://arxiv.org/abs/1802.03926}{arXiv:1802.03926}.}
+
+\section*{Preprints}
+\pubitem{48}{2026}{%
+  \paper{Existence of the minimal model program for log canonical generalized pairs.}
+  Zhengyu Hu, \me.
+  \href{https://arxiv.org/abs/2603.03817}{arXiv:2603.03817}.}
+
+\pubitem{47}{2026}{%
+  \paper{Dual complexes of qdlt Fano type models and strong complete regularity.}
+  \me, Konstantin Loginov.
+  \href{https://arxiv.org/abs/2603.03588}{arXiv:2603.03588}.}
+
+\pubitem{46}{2025}{%
+  \paper{Non-algebraicity of non-abundant foliations and abundance for adjoint foliated structures.}
+  \me, Zheng Xu.
+  \href{https://arxiv.org/abs/2510.04419}{arXiv:2510.04419}.}
+
+\pubitem{45}{2025}{%
+  \paper{Variation of algebraically integrable adjoint foliated structures.}
+  Paolo Cascini, \me, Fanjun Meng, Roberto Svaldi, Lingyao Xie.
+  \href{https://arxiv.org/abs/2510.02498}{arXiv:2510.02498}.}
+
+\pubitem{44}{2025}{%
+  \paper{Boundedness in general type MMP and fivefold effective termination}
+  / \paper{Effective termination of general type MMPs in dimension at most five.}
+  Jingjun Han, \me, Lu Qi (44a only), Ziquan Zhuang.
+  \href{https://arxiv.org/abs/2506.20183v1}{arXiv:2506.20183v1}
+  / \href{https://arxiv.org/abs/2509.01501}{arXiv:2509.01501}.}
+
+\pubitem{42}{2025}{%
+  \paper{Non-vanishing implies numerical dimension one abundance.}
+  \me, Zheng Xu.
+  \href{https://arxiv.org/abs/2505.05250}{arXiv:2505.05250}.}
+
+\pubitem{41}{2025}{%
+  \paper{On finite generation and boundedness of adjoint foliated structures.}
+  Paolo Cascini, Jingjun Han, \me, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie.
+  \href{https://arxiv.org/abs/2504.10737}{arXiv:2504.10737}.}
+
+\pubitem{40}{2025}{%
+  \paper{Classification of threefold enc cDV quotient singularities.}
+  Jingjun Han, \me.
+  \href{https://arxiv.org/abs/2501.01024}{arXiv:2501.01024}.}
+
+\pubitem{37}{2024}{%
+  \paper{ACC for local volumes.}
+  Jingjun Han, \me, Lu Qi.
+  \href{https://arxiv.org/abs/2408.15090}{arXiv:2408.15090}.}
+
+\pubitem{36}{2024}{%
+  \paper{Minimal model program for algebraically integrable adjoint foliated structures.}
+  Paolo Cascini, Jingjun Han, \me, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie.
+  \href{https://arxiv.org/abs/2408.14258}{arXiv:2408.14258}.}
+
+\pubitem{30}{2023}{%
+  \paper{Minimal model program for algebraically integrable foliations and generalized pairs.}
+  Guodu Chen, Jingjun Han, \me, Lingyao Xie.
+  \href{https://arxiv.org/abs/2309.15823}{arXiv:2309.15823}.}
+
+\pubitem{25}{2023}{%
+  \paper{Vanishing theorems for generalized pairs.}
+  Bingyi Chen, \me, Lingyao Xie.
+  \href{https://arxiv.org/abs/2305.12337}{arXiv:2305.12337}.}
+
+\pubitem{15}{2022}{%
+  \paper{Second largest accumulation point of minimal log discrepancies of threefolds.}
+  \me, Yujie Luo.
+  \href{https://arxiv.org/abs/2207.04610}{arXiv:2207.04610}.}
+
+\pubitem{4}{2018}{%
+  \paper{Accumulation point theorem for generalized log canonical thresholds.}
+  \me.
+  \href{https://arxiv.org/abs/1810.12381}{arXiv:1810.12381}.}
+
+\pubitem{1}{2017}{%
+  \paper{On invariance of plurigenera for foliated surface pairs.}
+  \me.
+  \href{https://arxiv.org/abs/1707.07092}{arXiv:1707.07092}.}
+
+% ---------- Conference and workshop talks ----------
+\section*{Conference and Workshop Talks}
+{\small\color{muted}\noindent
+Selected; full list (including seminars) at \href{https://jihaoliu.org/talks.html}{jihaoliu.org/talks.html}.}\par\vspace{4pt}
+
+\entry{Apr 2026}{%
+  \emph{Existence of the minimal model program for log canonical generalized pairs.}\\
+  \href{http://ymsc.tsinghua.edu.cn/en/info/1060/3751.htm}{Algebraic Geometry Workshop 2026}, YMSC, Tsinghua University.}
+
+\entry{Feb 2026}{%
+  \emph{Boundedness of algebraically integrable foliations.}\\
+  \href{https://sites.google.com/view/ag-workshop-sydney-2026/schedule}{Algebraic Geometry Workshop}, Sydney Mathematical Research Institute.}
+
+\entry{Jan 2026}{%
+  \emph{Birational geometry of algebraically integrable adjoint foliated structures.}\\
+  \href{https://masataka123.github.io/AGCG_Osaka_2026/}{Workshop on Algebraic Geometry and Complex Geometry in Osaka}, The University of Osaka.}
+
+\entry{Dec 2025}{%
+  \emph{Boundedness of Fano algebraically integrable foliations.}\\
+  \href{https://tsimf.tsinghua.edu.cn/info/1477/1636.htm}{Conference on Algebraic Geometry}, TSIMF, Sanya.}
+
+\entry{Dec 2025}{%
+  \emph{Boundedness of Fano algebraically integrable foliations} (online).\\
+  Birational Geometry and Related Topics, XJTLU, Suzhou.}
+
+\entry{Jun 2025}{%
+  \emph{Adjoint foliated structures in birational geometry.}\\
+  \href{https://simonsmoduli.com/events/london/}{Higher Dimensional Geometry and Foliations}, Imperial College London.}
+
+\entry{Jun 2025}{%
+  \emph{Abundance conjecture when $\nu \le 1$.}\\
+  \href{https://math.sustech.edu.cn/conference/13283.html?lang=en}{Southeastern Algebraic Geometry Symposium VIII}.}
+
+\entry{Dec 2024}{%
+  \emph{Birational geometry of adjoint foliated structures.}\\
+  \href{https://www.tsimf.cn/meeting/agenda?id=390}{Sanya Algebraic Geometry Workshop}.}
+
+\entry{Dec 2024}{%
+  \emph{Adjoint foliated structures on surfaces.}\\
+  \href{https://math.tongji.edu.cn/info/1019/11822.htm}{2024 {\cnfont 代数几何研讨会}}, Tongji University.}
+
+\entry{Nov 2024}{%
+  \emph{Some optimal bounds in explicit birational geometry.}\\
+  \href{https://msrc.cqut.edu.cn/info/1014/2602.htm}{2024 {\cnfont 重庆理工大学代数几何会议}}, Chongqing University of Technology.}
+
+\entry{Dec 2023}{%
+  \emph{Minimal model program for algebraically integrable foliations.}\\
+  \href{https://www.tsimf.cn/meeting/report?id=360&rid=609}{Sanya Algebraic Geometry Workshop}.}
+
+\entry{Jun 2023}{%
+  \emph{Multiplicities on lc places.}\\
+  \href{https://qzc.tsinghua.edu.cn/en/info/1122/2509.htm}{Birational Geometry Workshop}, Tsinghua University.}
+
+\entry{May 2023}{%
+  \emph{Optimal bounds for algebraic invariants of surfaces.}\\
+  \href{https://sites.google.com/view/simonsconferences/simons-centre/higher-dimensional-geometry_1}{Simons Conference on Higher Dimensional Geometry}, Simons Center.}
+
+\entry{Aug 2022}{%
+  \emph{ACC for mlds for terminal threefolds.}\\
+  \href{https://sites.google.com/uic.edu/maggc-2022/schedule}{Midwest Algebraic Geometry Graduate Conference}, UIC.}
+
+\entry{May 2022}{%
+  \emph{On Shokurov's ACC conjecture for mlds in dimension 3.}\\
+  \href{https://sites.google.com/view/jami2022/schedule}{JAMI Conference 2022 (in honor of Shokurov's 70th birthday)}, Johns Hopkins University.}
+
+\entry{Aug 2021}{%
+  \emph{Existence of flips for generalized pairs.}\\
+  \href{http://www.mcm.ac.cn/events/programs/202106/t20210615_643460.html}{2021 Workshop on Algebraic Geometry: Generalised Pairs and Applications} (online).}
+
+\entry{Jul 2020}{%
+  \emph{Complements and ACC for minimal log discrepancies.}\\
+  \href{https://sites.google.com/view/simonsconferences/simons-foundation/rationality}{Simons Conference on Rationality} (online).}
+
+% ---------- Conferences and seminars organized ----------
+\section*{Conferences and Seminars Organized}
+\entry{Aug 2026}{%
+  \href{https://jihaoliu.org/ffm-conference.html}{Conference on Foliation, Fibration, and Moduli}.\\
+  Westlake University, Hangzhou, August 24--29, 2026.\\
+  With Chuanhao Wei (local organizer) and Paolo Cascini.}
+
+\entry{Jul 2026}{%
+  \href{https://www.math.pku.edu.cn/kxyj/xzky/171823.htm}{5th National Algebraic Geometry Conference}.\\
+  Peking University, July 6--10, 2026. Local organizer.\\
+  With Ruochuan Liu, Zhiyu Tian, Qizheng Yin.}
+
+\entry{Aug 2025}{%
+  \href{https://www.math.pku.edu.cn/kxyj/xzky/168546.htm}{Summer School on Birational Geometry of Foliations}.\\
+  Peking University, August 18--22, 2025.\\
+  With Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie.}
+
+\entry{May 2025}{%
+  \href{https://www.math.pku.edu.cn/kxyj/xzky/164429.htm}{Conference on Explicit Birational Geometry}.\\
+  Peking University, May 28 -- June 1, 2025.}
+
+\entry{May 2025}{%
+  \href{https://bicmr.pku.edu.cn/content/show/17-3613.html}{6th Beijing Algebraic Geometry Day}.\\
+  Peking University, May 9, 2025. Local organizer.}
+
+\entry{Nov 2024}{%
+  \href{https://bicmr.pku.edu.cn/content/show/17-3499.html}{2nd Beijing Algebraic Geometry Day}.\\
+  Peking University, November 23, 2024. Local organizer.}
+
+\entry{Aug 2024}{%
+  1st Conference on \href{https://scms.fudan.edu.cn/info/4589/7021.htm}{Foliation and Birational Geometry}.\\
+  Fudan University, August 26--30, 2024.\\
+  With Meng Chen, Chen Jiang, Jingjun Han.}
+
+\entry{2024 -- present}{%
+  \href{https://jihaoliu.org/pku-ag-seminar.html}{Peking University Algebraic Geometry Seminar}.\\
+  With Fumiaki Suzuki (from 2025), Zhiyu Tian, Qizheng Yin.}
+
+\entry{2024 -- present}{%
+  Beijing Algebraic Geometry Day (joint workshop series with the Chinese Academy of Sciences, Tsinghua University, and Capital Normal University).}
+
+\entry{2021 -- 2024}{%
+  \href{https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar.html}{Northwestern Algebraic Geometry Seminar}.\\
+  Co-organized over six semesters with Yuchen Liu and rotating co-organizers (Charles Stibitz, Kai Huang, Ananth Shankar).}
+
+\entry{2019 -- 2020}{%
+  \href{http://www.math.utah.edu/~jliu/utahagpreprintseminar2020Spring.html}{Utah Algebraic Geometry Reading Seminar}.\\
+  University of Utah, Fall 2019 -- Spring 2020.}
+
+% ---------- Teaching ----------
+\section*{Teaching}
+\subsection*{Peking University}
+\entry{Spring 2026}{%
+  {\cnfont 代数几何 II} (Algebraic Geometry II)~---~instructor (Class No.\ 00111770).}
+\entry{Fall 2025}{%
+  {\cnfont 代数几何 I} (Algebraic Geometry I)~---~instructor.}
+\entry{Spring 2025}{%
+  {\cnfont 代数几何专题} (Topics in Algebraic Geometry)~---~instructor.}
+
+\subsection*{Northwestern University}
+\entry{Winter 2024}{%
+  Math 230-2~---~Multivariable Integral Calculus. Instructor and course coordinator (sections 31, 41).}
+\entry{Fall 2023}{%
+  Math 220-1~---~Single-Variable Differential Calculus. Instructor (sections 71, 81).}
+\entry{Winter 2023}{%
+  Math 220-2~---~Single-Variable Integral Calculus. Instructor (sections 31, 41).}
+\entry{Fall 2022}{%
+  Math 228-1~---~Multivariable Differential Calculus for Engineering. Instructor (sections 71, 81).}
+\entry{Winter 2022}{%
+  Math 228-1~---~Multivariable Differential Calculus for Engineering. Instructor and course coordinator (sections 41, 51).}
+\entry{Fall 2021}{%
+  Math 220-1~---~Single-Variable Differential Calculus. Instructor (sections 41, 53).}
+
+\subsection*{University of Utah}
+\entry{2017 -- 2021}{%
+  Math 1090 (Business Algebra)~---~instructor, Spring 2021, Fall 2020, Fall 2019.\\
+  Math 2250 (Differential Equations)~---~teaching assistant, Fall 2018, Spring 2018.\\
+  Math 1320 (Engineering Calculus)~---~teaching assistant, Spring 2017.}
+
+% ---------- Refereeing ----------
+\section*{Refereeing}
+\noindent
+Refereed for the following journals:\\[2pt]
+{\small
+Annals of Mathematics
+\sep Compositio Mathematica
+\sep Peking Mathematical Journal
+\sep Journal f\"ur die reine und angewandte Mathematik (Crelle's Journal)
+\sep Advances in Mathematics
+\sep Journal of Differential Geometry
+\sep Journal of Algebraic Geometry
+\sep Mathematische Annalen
+\sep Selecta Mathematica
+\sep Journal of the Institute of Mathematics of Jussieu
+\sep Algebra and Number Theory
+\sep Forum of Mathematics, Sigma
+\sep International Mathematics Research Notices
+\sep Proceedings of the American Mathematical Society
+\sep Journal of Algebra
+\sep \'Epijournal de G\'eom\'etrie Alg\'ebrique
+\sep Acta Mathematica Sinica (English Series)
+\sep Michigan Mathematical Journal
+\sep Manuscripta Mathematica
+\sep International Journal of Mathematics
+\sep European Journal of Mathematics
+\sep Pacific Journal of Mathematics
+\sep Electronic Research Archive
+\sep \emph{Higher Dimensional Algebraic Geometry: A Volume in Honor of V.\,V.\ Shokurov} (London Math.\ Soc.\ Lecture Note Ser.).\par}
+\vspace{3pt}
+\noindent Reviewer for Mathematical Reviews.
+
+% ---------- References ----------
+\section*{References}
+\noindent
+\begin{minipage}[t]{0.32\textwidth}
+  \raggedright
+  \textbf{Christopher D.\ Hacon} \\
+  {\small\color{muted}Ph.D.\ advisor}\\
+  University of Utah\\
+  \href{mailto:hacon@math.utah.edu}{hacon@math.utah.edu}
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.32\textwidth}
+  \raggedright
+  \textbf{Paolo Cascini} \\[1.2em]
+  Imperial College London\\
+  \href{mailto:p.cascini@imperial.ac.uk}{p.cascini@imperial.ac.uk}
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.32\textwidth}
+  \raggedright
+  \textbf{Chenyang Xu} \\[1.2em]
+  Princeton University\\
+  \href{mailto:chenyang@princeton.edu}{chenyang@princeton.edu}
+\end{minipage}
+
+\end{document}

@@ -7,3 +7,12 @@ node_modules/
 .venv/
 __pycache__/
 *.pyc
+
+# LaTeX build artifacts (cv/ keeps cv.tex, cv.pdf, Makefile only)
+cv/*.aux
+cv/*.out
+cv/*.toc
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.synctex.gz
+cv/preview-*.png
