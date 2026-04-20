@@ -1,0 +1,22 @@
+# GitHub Pages / Jekyll configuration.
+#
+# This site is plain static HTML — there is no Jekyll layout or content
+# processing happening. The only purpose of this file is to tell GitHub
+# Pages which files to NOT publish to the live site.
+#
+# Files listed under `exclude` stay in the git repository (so they remain
+# version-controlled and can be edited locally) but are not copied into
+# the deployed site, i.e. they are not reachable at https://jihaoliu.org/...
+#
+# Notably, the LaTeX source for the CV (cv/cv.tex) and the Makefile live
+# in the repo for reproducibility but are not served publicly — only the
+# compiled cv/cv.pdf is.
+
+exclude:
+  - cv/cv.tex
+  - cv/Makefile
+  - scripts/
+  - .venv/
+  - .gitignore
+  - README.md
+  - texput.log

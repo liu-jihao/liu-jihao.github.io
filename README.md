@@ -12,17 +12,20 @@ Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
 
 ```
 .
-├── index.html              # Home / About
-├── publications.html       # Publications and preprints (48 papers)
-├── teaching.html           # Teaching experience
-├── talks.html              # Invited talks (conferences + seminars)
-├── conferences.html        # Conferences and seminars co-organized
-├── collaborators.html      # Mathematical collaborators
-├── pku-ag-seminar.html     # PKU Algebraic Geometry Seminar (current schedule)
-├── ffm-conference.html     # Conference on Foliation, Fibration, and Moduli (2026)
-├── cv/                     # CV source + compiled PDF (cv.tex, cv.pdf, Makefile)
+├── index.html                       # Home / About
+├── publications.html                # Publications and preprints (48 papers)
+├── teaching.html                    # Teaching experience
+├── talks.html                       # Invited talks (conferences + seminars)
+├── conferences.html                 # Conferences and seminars co-organized
+├── collaborators.html               # Mathematical collaborators
+├── pku-ag-seminar.html              # PKU Algebraic Geometry Seminar (current schedule)
+├── pku-ag-seminar-2025-fall.html    # Fall 2025 archive
+├── pku-ag-seminar-2025-spring.html  # Spring 2025 archive
+├── pku-ag-seminar-2024-fall.html    # Fall 2024 archive
+├── ffm-conference.html              # Conference on Foliation, Fibration, and Moduli (2026)
+├── cv/                              # CV: cv.pdf (published) + cv.tex, Makefile (repo only)
 └── assets/
-    └── style.css           # All site styles
+    └── style.css                    # All site styles
 ```
 
 ## Local Preview
@@ -117,6 +120,17 @@ Two passes are run automatically (the second pass settles the
 "page X / Y" footer). The Makefile cleans up `.aux/.log/.out` afterwards
 via `make clean`. EB Garamond and Songti SC are required (both ship with
 TeX Live / macOS by default).
+
+Note: `cv/cv.tex` and `cv/Makefile` live in the repository for
+reproducibility but are excluded from the published site by `_config.yml`.
+Only `cv/cv.pdf` is served at `https://jihaoliu.org/cv/cv.pdf`.
+
+## What `_config.yml` does
+
+The site is plain static HTML — there is no Jekyll templating. `_config.yml`
+exists only to tell GitHub Pages which files in the repo should NOT be
+copied into the deployed site (LaTeX source, helper scripts, README, etc.).
+Edit its `exclude:` list to publish or unpublish files.
 
 ## Deployment
 
