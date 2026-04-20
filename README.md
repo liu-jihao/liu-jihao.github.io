@@ -78,6 +78,31 @@ Open `talks.html`, find the right section (Conferences or Seminars), and add an 
 </li>
 ```
 
+## Regenerating favicons / OG image
+
+The favicons (`assets/favicon.{svg,ico}`, `assets/favicon-{32,180,512}.png`)
+and the social sharing card (`assets/og-image.png`) are generated from a
+single Python script. To rebuild them after changing the design:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install Pillow
+.venv/bin/python3 scripts/make_favicon.py
+```
+
+## Updating site-wide head tags
+
+The `<!-- META:START --> ... <!-- META:END -->` block in each HTML file
+(favicon links, canonical URL, Open Graph + Twitter card meta tags) is
+managed by `scripts/inject_head_tags.py`. To add a new page or change
+the tags everywhere at once:
+
+1. Edit the `PAGES` list (or the block template) in `scripts/inject_head_tags.py`
+2. Run `.venv/bin/python3 scripts/inject_head_tags.py`
+
+The script is idempotent — it replaces an existing block in place if found,
+and inserts after the `<meta name="description">` tag otherwise.
+
 ## Deployment
 
 The site auto-deploys to GitHub Pages from the `main` branch. To deploy:
