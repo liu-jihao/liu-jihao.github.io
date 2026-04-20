@@ -20,6 +20,7 @@ Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
 ├── collaborators.html      # Mathematical collaborators
 ├── pku-ag-seminar.html     # PKU Algebraic Geometry Seminar (current schedule)
 ├── ffm-conference.html     # Conference on Foliation, Fibration, and Moduli (2026)
+├── cv/                     # CV source + compiled PDF (cv.tex, cv.pdf, Makefile)
 └── assets/
     └── style.css           # All site styles
 ```
@@ -102,6 +103,20 @@ the tags everywhere at once:
 
 The script is idempotent — it replaces an existing block in place if found,
 and inserts after the `<meta name="description">` tag otherwise.
+
+## Rebuilding the CV
+
+The CV (`cv/cv.pdf`) is compiled from `cv/cv.tex` with XeLaTeX. After editing
+the `.tex`, regenerate the PDF with:
+
+```bash
+cd cv && make
+```
+
+Two passes are run automatically (the second pass settles the
+"page X / Y" footer). The Makefile cleans up `.aux/.log/.out` afterwards
+via `make clean`. EB Garamond and Songti SC are required (both ship with
+TeX Live / macOS by default).
 
 ## Deployment
 
