@@ -197,25 +197,27 @@ li {
   font-weight: 500;
 }
 
-.office-line {
-  font-size: 0.85rem;
-  white-space: nowrap;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  row-gap: 0.4rem;
+  column-gap: 0.5em;
+  align-items: baseline;
 }
 
-.office-line span {
-  white-space: normal;
+.contact-label {
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.office-en {
+  line-height: 1.5;
+}
+
+.office-cn {
+  color: var(--color-text-muted);
   display: inline-block;
-  font-size: 0.95rem;
-  padding-left: 81px;
-}
-
-@media (max-width: 760px) {
-  .office-line {
-    font-size: 0.78rem;
-  }
-  .office-line span {
-    padding-left: 76px;
-  }
+  margin-top: 0.15rem;
 }
 
 .research-interests {
