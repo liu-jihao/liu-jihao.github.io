@@ -16,3 +16,6 @@ cv/*.fls
 cv/*.fdb_latexmk
 cv/*.synctex.gz
 cv/preview-*.png
+
+# stray xelatex log when run from the wrong directory
+texput.log
