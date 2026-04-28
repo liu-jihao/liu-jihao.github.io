@@ -13,7 +13,7 @@ Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
 ```
 .
 ├── index.html                       # Home / About
-├── publications.html                # Publications and preprints (48 papers)
+├── publications.html                # Publications and preprints (49 papers)
 ├── teaching.html                    # Teaching experience
 ├── talks.html                       # Invited talks (conferences + seminars)
 ├── conferences.html                 # Conferences and seminars co-organized
