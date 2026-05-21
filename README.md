@@ -13,7 +13,7 @@ Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
 ```
 .
 ├── index.html                       # Home / About
-├── publications.html                # Publications and preprints (50 papers)
+├── publications.html                # Publications and preprints (53 papers)
 ├── teaching.html                    # Teaching experience
 ├── talks.html                       # Invited talks (conferences + seminars)
 ├── conferences.html                 # Conferences and seminars co-organized
@@ -61,7 +61,7 @@ Open `publications.html`, find the year heading, and add a new entry block:
 
 ```html
 <div class="entry">
-  <div class="entry-title"><span class="entry-number">50.</span> Title of the paper</div>
+  <div class="entry-title"><span class="entry-number">53.</span> Title of the paper</div>
   <div class="entry-authors">Author 1, Author 2</div>
   <div class="entry-venue">Journal name, year, pages.</div>
   <div class="entry-links">
