@@ -6,8 +6,8 @@
 Each topic is a <details> block (no JavaScript): the keyword is the <summary>, and opening it
 shows Jihao's papers on that topic, newest first, taken verbatim from publications.html.
 To file a new paper under topics, add its publication number to TOPICS_OF below and rerun.
-Papers that fit no other topic go under `general`. A paper with no entry in TOPICS_OF (currently only
-the Danus system report, which is not a mathematics paper) is not listed here; it stays on the Publications page.
+Papers that fit no other topic go under `general`; the Danus system report has its own topic `danus`.
+A paper with no entry in TOPICS_OF is not listed here; it stays on the Publications page.
 """
 import html
 import re
@@ -25,6 +25,7 @@ TOPICS = [
     ("explicit", "Explicit birational geometry"),
     ("surf", "Surfaces"),
     ("general", "General"),
+    ("danus", "Danus"),
 ]
 
 TOPICS_OF = {
@@ -42,6 +43,7 @@ TOPICS_OF = {
     "13": "gpairs mmp", "12": "sing", "11": "gpairs mmp", "10": "sing explicit surf", "9": "sing surf",
     "8": "bdd", "7": "sing explicit", "6": "sing bdd", "5": "sing", "4": "sing gpairs",
     "3": "sing", "2": "gpairs mmp", "1": "fol surf",
+    "66": "danus",
     "52": "surf", "68": "general", "67": "general", "65": "general", "63": "general", "59": "general",
 }
 
@@ -76,12 +78,13 @@ def render(pubs):
     if missing:
         raise SystemExit("TOPICS_OF refers to publication numbers not on publications.html: %s" % missing)
     lines = ['      <p class="research-interests">',
-             "        Birational geometry. Open a topic to see my papers on it.",
+             "        Open a topic to see my papers on it.",
              "      </p>"]
     for key, label in TOPICS:
         items = [p for p in pubs if key in TOPICS_OF.get(p["num"], "").split()]
         lines.append('      <details class="topic">')
-        lines.append('        <summary>%s <span class="topic-count">(%d papers)</span></summary>' % (label, len(items)))
+        count = "%d paper%s" % (len(items), "" if len(items) == 1 else "s")
+        lines.append('        <summary>%s <span class="topic-count">(%s)</span></summary>' % (label, count))
         lines.append('        <ul class="topic-list">')
         for p in items:
             t = '<a href="%s">%s</a>' % (p["link"], p["title"]) if p["link"] else p["title"]
