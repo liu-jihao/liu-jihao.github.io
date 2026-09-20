@@ -24,6 +24,7 @@ TOPICS = [
     ("fol", "Foliations"),
     ("sing", "Singularities: minimal log discrepancies, thresholds, ACC"),
     ("fano", "Fano varieties and K-stability"),
+    ("cy", "Calabi–Yau varieties and log Calabi–Yau pairs"),
     ("bdd", "Boundedness"),
     ("explicit", "Explicit birational geometry"),
     ("surf", "Surfaces"),
@@ -36,8 +37,8 @@ TOPICS = [
 TOPICS_OF = {
     "72": "fano", "71": "surf", "70": "gpairs mmp", "69": "fano", "64": "fano sing",
     "62": "fano", "61": "fano", "60a": "sing", "60b": "sing", "58": "surf",
-    "57": "sing bdd", "56": "fol bdd", "55": "sing", "54": "fano", "53": "fol explicit",
-    "51": "sing", "50": "explicit surf", "49": "bdd fol", "48": "mmp gpairs", "47": "fano sing",
+    "57": "sing bdd", "56": "fol bdd", "55": "sing", "54": "cy", "53": "fol explicit",
+    "51": "sing", "50": "explicit surf", "49": "bdd fol", "48": "mmp gpairs", "47": "fano sing cy",
     "46": "fol mmp", "45": "fol", "44a": "mmp bdd explicit", "44b": "mmp explicit", "43": "fol mmp",
     "42": "mmp", "41": "fol mmp bdd", "40": "sing explicit", "39": "gpairs mmp surf", "38": "fol mmp",
     "37": "sing fano", "36": "fol mmp", "35": "fol bdd", "34": "fano sing explicit",
@@ -49,7 +50,7 @@ TOPICS_OF = {
     "8": "bdd", "7": "sing explicit", "6": "sing bdd", "5": "sing", "4": "sing gpairs",
     "3": "sing", "2": "gpairs mmp", "1": "fol surf",
     "66": "danus",
-    "52": "surf", "68": "generalag", "67": "generalag", "65": "generalag", "63": "generalag", "59": "comb",
+    "52": "surf", "68": "generalag", "67": "generalag", "65": "cy", "63": "generalag", "59": "comb",
 }
 
 # Items that are not on publications.html: notes (notes.html) and AI-generated papers that no human
@@ -65,7 +66,7 @@ EXTRAS = [
     ("Syzygy bundles on Picard rank one varieties need not be stable", "notes/SyzygyBundleCounterexample.pdf",
      "Note; AI-generated, not verified by a human", 2607, "generalag"),
     ("Factorial asymptotics of the Matryoshka numbers", "notes/Matryoshka.pdf", "Note", 2606, "comb"),
-    ("On a conjecture of Esser, Totaro, and Wang", "notes/ET74.pdf", "Note", 2605, "explicit"),
+    ("On a conjecture of Esser, Totaro, and Wang", "notes/ET74.pdf", "Note", 2605, "explicit cy"),
 ]
 
 
