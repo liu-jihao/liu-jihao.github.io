@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "family": "12-cubic-fourfold/claims",
+  "values": {
+    "affine_nonquartic_max": "451/1000",
+    "affine_entry_margin": "1357633/107919000",
+    "affine_nonquartic_post_error_margin": "1/1000",
+    "affine_low_quartic_post_error_margin": "1/80",
+    "tail_4": "103/500",
+    "tail_5": "29/500",
+    "A_4": "4469/6750",
+    "D_4": "35411/27000",
+    "eta_4": "15471/36775",
+    "A_5": "2117/2700",
+    "D_5": "39407/27000",
+    "eta_5": "45765/102278",
+    "low_b_price": "43171/5400",
+    "large_sigma_price": "129563/16200",
+    "later_low_deficit_price": "1015757/127000",
+    "dimension_margin_slope": "2/27",
+    "initial_mass": "13/256",
+    "integral_loss": "195993/20000000",
+    "integral_mass": "51227/1250000",
+    "first_reduced_mass": "581177533/62500000000",
+    "final_loss": "268980237/62500000000",
+    "final_mass": "19512331/3906250000",
+    "first_keta": "75/76",
+    "first_eta": "75/304",
+    "second_eta": "127/240",
+    "final_mass_after_intrinsic_error": "11699831/3906250000"
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "active_files": [
+    {
+      "bytes": 25612,
+      "path": "check.py",
+      "sha256": "c3d715e36f558259af982caee1f900a207946b68895103cf92ca226164be4ee4"
+    },
+    {
+      "bytes": 6274,
+      "path": "data/tail-table.txt",
+      "sha256": "cf099030989aec77d758502de7d6b4a7b58e54b6cbc26df8057ebe0f08579d14"
+    },
+    {
+      "bytes": 264180,
+      "path": "data/three-profile.txt",
+      "sha256": "b349fc1c6d7989cf21ce63107387da52e81f8a8f964de86854c288147f4e8676"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-14-double-geometry.json",
+  "families": [
+    {
+      "data_files": [
+        "data/tail-table.txt"
+      ],
+      "id": "14-double-geometry/tail-table",
+      "specification": {
+        "canonical_data_path": "data/tail-table.txt",
+        "counts": {
+          "affine_lines": 253,
+          "states": 71,
+          "successor_vertex_checks": 34839
+        },
+        "coverage": "Independently enumerate all states and moments; minimal upward thousandth radii; every compatible successor including dimension skips, both interval endpoints, every distinct-slope affine intersection, empty and zero-cap cases",
+        "dataset_id": "14-double-geometry/tail-table",
+        "domain": "State_7 with every degree floor one; 1<=d<=6, d<=e<=7 and positive deficit cap; curve (1,1,1)",
+        "format": "Exact eight-column Markdown table; ordered IDs 1..71; complete affine-pair lists",
+        "labels": [
+          "lem:double-geometry-two-tails",
+          "eq:double-geometry-tail-test"
+        ],
+        "sha256": "cf099030989aec77d758502de7d6b4a7b58e54b6cbc26df8057ebe0f08579d14",
+        "source_fact_ids": [
+          "4f892d3c92b38b34"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/three-profile.txt"
+      ],
+      "id": "14-double-geometry/three-profile",
+      "specification": {
+        "canonical_data_path": "data/three-profile.txt",
+        "constants": {
+          "Dhi": "138259/900000",
+          "T": "29/25",
+          "anchors": [
+            "9/10",
+            "26/25",
+            "27/25"
+          ],
+          "crossing_brackets": [
+            "16020581569/90194313216",
+            "8010290789/45097156608"
+          ],
+          "earlier_reserve": "760031169920421/10000000000000000",
+          "earlier_reserve_floor": "3/40",
+          "epsilon": "1/100000",
+          "final_anchor_reserve_floor": "1/32",
+          "finite_source_coefficient": "1/(2000*7!)",
+          "h0": "131/1000",
+          "h_star": "1609/5000",
+          "hmin": {
+            "D": "189/1000",
+            "M": "41/200",
+            "Q": "37/200"
+          },
+          "minimum_bounded_margin": "364805/10000000000",
+          "rounding_denominator": 10000000000,
+          "source_gain": "1/1000",
+          "strict_rounding": "floor(10000000000 * exact_integral) + 1",
+          "target": "999/1000"
+        },
+        "counts": {
+          "D": {
+            "bounded_integration_records": 1442,
+            "first_slope_tail_records": 5,
+            "maximum_numerator": 9796511857,
+            "parameter_boxes": 150,
+            "root_boxes": 150,
+            "splits": 0
+          },
+          "M": {
+            "bounded_integration_records": 1827,
+            "first_slope_tail_records": 5,
+            "maximum_numerator": 9989635195,
+            "parameter_boxes": 188,
+            "root_boxes": 150,
+            "splits": 38
+          },
+          "Q": {
+            "bounded_integration_records": 1445,
+            "first_slope_tail_records": 5,
+            "maximum_numerator": 9986634132,
+            "parameter_boxes": 172,
+            "root_boxes": 150,
+            "splits": 22
+          },
+          "all_integration_records": 4729,
+          "bounded_integration_records_total": 4714,
+          "domain_subinterval_checks": 8050,
+          "nonblank_lines_consumed": 5833,
+          "parameter_boxes_total": 510
+        },
+        "dataset_id": "14-double-geometry/three-profile",
+        "domain": {
+          "boundaries": "All root/split boxes are closed; empty feasible intersections are not discarded; segment/point intersections and linked-height ties are covered",
+          "bounded": "a0 in [131/900,16], a1 in [hmin/(26/25),8], a2 in [1609/5400,8]; whole rectangular relaxation includes linked feasible domain",
+          "integration": "[0,29/25], or post-anchor tails with the stated reserves",
+          "linked_constraints": [
+            "a0>=h0/r0",
+            "a1>=h1/r1",
+            "a2>=h2/r2"
+          ],
+          "root_grids": {
+            "a0": [
+              "131/900",
+              "1/2",
+              "1",
+              "2",
+              "4",
+              "8",
+              "16"
+            ],
+            "a1": [
+              "hmin/(26/25)",
+              "1/2",
+              "1",
+              "2",
+              "4",
+              "8"
+            ],
+            "a2": [
+              "1609/5400",
+              "1/2",
+              "1",
+              "2",
+              "4",
+              "8"
+            ]
+          },
+          "unbounded": [
+            "a0>=16",
+            "a1>=8",
+            "a2>=8"
+          ]
+        },
+        "format": "Strict ordered Q/M/D stream: grids, splits, leaf boxes with linked heights/totals, polynomial intervals, three unbounded cases",
+        "labels": [
+          "def:double-geometry-comparison-data",
+          "lem:double-geometry-rational-loss",
+          "eq:double-geometry-rounding",
+          "lem:double-geometry-source-transfer"
+        ],
+        "parameter_mapping": {
+          "notation": "Ej=(1-jc)_+^6; all capacities use the complete original images",
+          "profile0": {
+            "anchor": "9/10",
+            "capacity": "E_{7,5}",
+            "height": "h0"
+          },
+          "profile1_D": {
+            "anchor": "26/25",
+            "capacity": "6E2-8E3+3E4; min with 138259/900000 for c>=1/6",
+            "height": "max(hmin,h0+(r1-r0)*a0-epsilon)"
+          },
+          "profile1_M": {
+            "anchor": "26/25",
+            "capacity": "min(E1+3E2-5E3+2E4,E_{7,3},1,256/729+18*(1/6-c)_+; also E1+E2-E3 for c>=2/11)",
+            "height": "max(hmin,h0+(r1-r0)*a0-epsilon)"
+          },
+          "profile1_Q": {
+            "anchor": "26/25",
+            "capacity": "max(E1,(1-2c)_+^5*(1+10c))",
+            "height": "max(hmin,h0+(r1-r0)*a0-epsilon)"
+          },
+          "profile2": {
+            "anchor": "27/25",
+            "capacity": "Q (not D)",
+            "height": "max(h_star,h0+(r2-r0)*a0-epsilon,h1+(r2-r1)*a1-epsilon)"
+          }
+        },
+        "sha256": "b349fc1c6d7989cf21ce63107387da52e81f8a8f964de86854c288147f4e8676",
+        "source_fact_ids": [
+          "7056b715ec02be71"
+        ]
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "dependencies": [
+      "Python standard library"
+    ],
+    "runtime_input_files": [
+      "data/tail-table.txt",
+      "data/three-profile.txt"
+    ],
+    "shared_statement": "prop:reduced-double-and-cubic-gain"
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "14-double-geometry",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/tail-table.txt"
+      ],
+      "family": "14-double-geometry/tail-table",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:4f892d3c92b38b34"
+      ],
+      "source_version": "4f892d3c92b38b34@sha256:2d2d6899d6541186c6c06e6721009a90c97f9f62f4a2f9b8e17ba03952c33c39"
+    },
+    {
+      "data_files": [
+        "data/three-profile.txt"
+      ],
+      "family": "14-double-geometry/three-profile",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:7056b715ec02be71"
+      ],
+      "source_version": "7056b715ec02be71@sha256:69132a71e865092825703b651018d8eb8b7624456981551276c272c20c5b0761; 7056b715ec02be71@sha256:d675d06a82699945c7ff148b698aac4c1ba3be7e79aad911c389c4e7dcbc5e29"
+    }
+  ],
+  "source_owner_manifest_sha256": "732bfd299b4a444308bef3e8affda436c4381dcfc1fce4a44e251dc30e3a0801"
+}

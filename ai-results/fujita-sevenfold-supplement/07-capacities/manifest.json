@@ -1,0 +1,390 @@
+{
+  "active_files": [
+    {
+      "bytes": 22300,
+      "path": "check.py",
+      "sha256": "14287a8f416542bd09c441c73e892729f6e80bfe74886efe4bb67849a05e50a7"
+    },
+    {
+      "bytes": 39538,
+      "path": "data/bindings.json",
+      "sha256": "3803d057133485487ff95c303ecd9a8eb12fe7a02e3ae992ea86e9cdc0fa87b6"
+    },
+    {
+      "bytes": 17543,
+      "path": "data/certificate.json",
+      "sha256": "a573b710614dd59fee42b6780e00816bb061418544d70f25f946b4409fc76580"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-07-capacities.json",
+  "families": [
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/baseline",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/baseline",
+        "records": 9
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/constants",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/constants",
+        "records": 13
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/crossings",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/crossings",
+        "records": 2
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/envelopes",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/envelopes",
+        "records": 12
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/fourfold-majorant",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/fourfold-majorant",
+        "records": 22
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/integrals",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/integrals",
+        "records": 5
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/pairs",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/pairs",
+        "records": 4
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/polynomial",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/polynomial",
+        "records": 3
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/source-tables",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/source-tables",
+        "records": 17
+      }
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "id": "07-capacities/spanning",
+      "specification": {
+        "data": "data/certificate.json",
+        "dataset_id": "07-capacities/spanning",
+        "records": 4
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "canonical_data_path": "data/certificate.json",
+    "complete_expected_domain": "check.py expected_ids(); README family table; no sampled-weight or global-census claim",
+    "constants": {
+      "C4": "138259/900000",
+      "K5_switch": "4/25",
+      "ambient_dimension": 7,
+      "auxiliary_pair_dimension": 6,
+      "five_normal_endpoint": "1/3",
+      "retained_strip_rate": "3/8",
+      "shell_rates": [
+        "11/25",
+        "17/50"
+      ],
+      "source_orders": [
+        "51/50",
+        "26/25",
+        "29/25"
+      ],
+      "source_slack_gates": [
+        "1/2",
+        "1"
+      ],
+      "source_split": "b=9/4 for early (4,7,4)"
+    },
+    "counts": {
+      "baseline": 9,
+      "constants": 13,
+      "crossings": 2,
+      "envelopes": 12,
+      "fourfold-majorant": 22,
+      "integrals": 5,
+      "pairs": 4,
+      "polynomial": 3,
+      "source-tables": 17,
+      "spanning": 4
+    },
+    "dependencies": {
+      "packages": [],
+      "python": ">=3.10",
+      "tested_python": "3.10.19"
+    },
+    "domain": {
+      "baseline": "six divisor rows for u>=1; all three full-fivefold branches on [29/25,34/25]",
+      "complete_specification": "README.md and lem:capacities-finite-certificate",
+      "envelopes": "six B joins; all 8 five-normal competitors at 1/6,1/3,1/2; all 3 K5 competitors at 0,4/25,1/2",
+      "fourfold-majorant": "all rows 28..49 on their closed deficit intervals",
+      "integrals": "j=0..4; every coefficient and zero-at-knot condition; eta>0 by scaling",
+      "pairs": "both branches at all four specified (n,c) points",
+      "source-tables": "all 8 early, 5 later and 4 own-29 rows at their own source orders",
+      "spanning": "all j for the four specified (7,t,s) rows"
+    },
+    "error_allowances": {
+      "arithmetic": "0 (exact)",
+      "cutting": "both original cutting errors retained and consumed only by their assigned strict gaps",
+      "layer": "uniform O((ell+1)^5), retained in article",
+      "sum": "uniform O(q^6), retained in article"
+    },
+    "format": "strict JSON, exact rational strings, ascending coefficients",
+    "section_and_theorem_labels": [
+      "sec:07-capacities",
+      "lem:capacities-finite-certificate",
+      "thm:full-primary-capacity",
+      "thm:spanning-primary-capacity",
+      "prop:refined-primary-capacities",
+      "prop:three-normal-and-linear-four-normal-capacities",
+      "prop:sharper-five-normal-capacity",
+      "prop:ambient-shells",
+      "prop:own-twentynine-tangent",
+      "prop:original-layer-baseline",
+      "cor:capacities-retained-shells"
+    ],
+    "strict_targets": {
+      "early_rounded_envelope": "77/40000",
+      "early_three_normal": "161/18225",
+      "five_normal_endpoint_integer_gap": "13423",
+      "later_full_fourfold": "793689/390625000",
+      "later_linear_fourfold": "886448873/125000000000",
+      "retained_three_eighths": "4253/729000"
+    },
+    "total_records": 91
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "07-capacities",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/baseline",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:1009b7f676e83212",
+        "fact:fdb9cecb401b3cbf",
+        "fact:35523aa031bc3c4a",
+        "fact:792e655d9187087f",
+        "fact:7eecd680dfe55c4c"
+      ],
+      "source_version": "792e655d9187087f@sha256:81fff4c95ee535b2fb4b95865a12a0260fd4e6a8c10f1ac70f46f114b682a4a8; 1009b7f676e83212@sha256:6810ebf2af96fe759bfe5404bdbd4ba1980e0750ee232f8d341c9c7e2800f74c; 7eecd680dfe55c4c@sha256:bd79ab2db2c8ab4d541f044f15050a4a93c88ec97fa1595d00b08208689ccc94; fdb9cecb401b3cbf@sha256:1c74b9201c5d428815c85be0eb3dce6488a71e80d521da2e7ecdc13ee62e22c5; 35523aa031bc3c4a@sha256:f06e2e892e4c166a08dd4b051fc313e0028a8b91951f65c7f77acb8f752b0197"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/constants",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:531ea3ff6560ed07",
+        "fact:6c2482a6a78fbc16",
+        "fact:c4deadd672e499ef",
+        "fact:7eecd680dfe55c4c",
+        "fact:8b5f2c9e4a4e2bca",
+        "fact:792e655d9187087f",
+        "fact:f50b3ffd55bd47d2"
+      ],
+      "source_version": "792e655d9187087f@sha256:81fff4c95ee535b2fb4b95865a12a0260fd4e6a8c10f1ac70f46f114b682a4a8; 7eecd680dfe55c4c@sha256:bd79ab2db2c8ab4d541f044f15050a4a93c88ec97fa1595d00b08208689ccc94; 6c2482a6a78fbc16@sha256:325f998b18c736fd16654243d9f06b39656c90a60c095e18189b44b4b4db84e2; f50b3ffd55bd47d2@sha256:ccdce1b80593fa19c284ab7b676434d993931ab1c2b5462ef7a85aa7ff3cfc1f; 8b5f2c9e4a4e2bca@sha256:13c2b2008d7f83a898cd09c835af1493b472ecb8d2d4d0997ca2068027f16298; 531ea3ff6560ed07@sha256:908a7265f5f44098425483e8fe7aed18650f1053ba9b0ef4121ada770a043bd4; c4deadd672e499ef@sha256:c89e5cb343a022c346c01be3566e747dfbd0b6fbd527cb34544650c361d5c6c6"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/crossings",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:fac001a8b326def5"
+      ],
+      "source_version": "fac001a8b326def5@sha256:63c24edf595540a955baea004de168012d92083a2b0280d562ddca621a658e0d"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/envelopes",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:2f8857010691e0be",
+        "fact:3a8bd86ed898b630",
+        "fact:51d09d76a7640f95",
+        "fact:792e655d9187087f"
+      ],
+      "source_version": "2f8857010691e0be@sha256:0de8fd15750e6b802f7a4316e4820a52924aab81c0015a45612c2065b477980b; 792e655d9187087f@sha256:81fff4c95ee535b2fb4b95865a12a0260fd4e6a8c10f1ac70f46f114b682a4a8; 3a8bd86ed898b630@sha256:679d025b1b42086683c7b3fc34e1056ce431a744359451d5922f5343dd1eca6e; 51d09d76a7640f95@sha256:92c38263f1843362fe2a95e4f393233093533b5e26afc892ffb14e5bdea32e40"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/fourfold-majorant",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:35523aa031bc3c4a",
+        "fact:7eecd680dfe55c4c"
+      ],
+      "source_version": "7eecd680dfe55c4c@sha256:bd79ab2db2c8ab4d541f044f15050a4a93c88ec97fa1595d00b08208689ccc94; 35523aa031bc3c4a@sha256:f06e2e892e4c166a08dd4b051fc313e0028a8b91951f65c7f77acb8f752b0197"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/integrals",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:792e655d9187087f",
+        "fact:7eecd680dfe55c4c"
+      ],
+      "source_version": "792e655d9187087f@sha256:81fff4c95ee535b2fb4b95865a12a0260fd4e6a8c10f1ac70f46f114b682a4a8; 7eecd680dfe55c4c@sha256:bd79ab2db2c8ab4d541f044f15050a4a93c88ec97fa1595d00b08208689ccc94"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/pairs",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:fac001a8b326def5"
+      ],
+      "source_version": "fac001a8b326def5@sha256:63c24edf595540a955baea004de168012d92083a2b0280d562ddca621a658e0d"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/polynomial",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:7eecd680dfe55c4c"
+      ],
+      "source_version": "7eecd680dfe55c4c@sha256:bd79ab2db2c8ab4d541f044f15050a4a93c88ec97fa1595d00b08208689ccc94"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/source-tables",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f16b1702b0065238",
+        "fact:f50b3ffd55bd47d2",
+        "fact:1009b7f676e83212"
+      ],
+      "source_version": "f16b1702b0065238@sha256:b2316a9a6dd86e7ba244fc94934a602efdd1beea8ab95f6d530ac16ff55ca670; 1009b7f676e83212@sha256:6810ebf2af96fe759bfe5404bdbd4ba1980e0750ee232f8d341c9c7e2800f74c; f50b3ffd55bd47d2@sha256:ccdce1b80593fa19c284ab7b676434d993931ab1c2b5462ef7a85aa7ff3cfc1f"
+    },
+    {
+      "data_files": [
+        "data/certificate.json",
+        "data/bindings.json"
+      ],
+      "family": "07-capacities/spanning",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:792e655d9187087f",
+        "fact:fdb9cecb401b3cbf"
+      ],
+      "source_version": "792e655d9187087f@sha256:81fff4c95ee535b2fb4b95865a12a0260fd4e6a8c10f1ac70f46f114b682a4a8; fdb9cecb401b3cbf@sha256:1c74b9201c5d428815c85be0eb3dce6488a71e80d521da2e7ecdc13ee62e22c5"
+    }
+  ],
+  "source_owner_manifest_sha256": "6bc9a005eee0832d093630884c40ff4af04f38e0e1fb7a008e389242a2631310"
+}

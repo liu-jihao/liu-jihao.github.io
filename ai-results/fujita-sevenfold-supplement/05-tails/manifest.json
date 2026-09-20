@@ -1,0 +1,294 @@
+{
+  "active_files": [
+    {
+      "bytes": 19520,
+      "path": "check.py",
+      "sha256": "88332b2a0bb1b8771e118bb3023f3a58d27f0550d007843bb806c239d2a11da2"
+    },
+    {
+      "bytes": 27013,
+      "path": "data/ambient71.json",
+      "sha256": "7a9cac10c4771a85af6edb76879c63299eb1dc187927101d0b54ea9b4ed21345"
+    },
+    {
+      "bytes": 7049,
+      "path": "data/double-fivefold28.json",
+      "sha256": "cadf27fa20af1121cff897ab625ecc9163a041e00984fcb18f0a88ca00edec19"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-05-tails.json",
+  "families": [
+    {
+      "data_files": [
+        "data/ambient71.json"
+      ],
+      "id": "05-tails/ambient71",
+      "specification": {
+        "correctness_labels": [
+          "lem:tails-sevenfold-certificate",
+          "eq:tails-line-test"
+        ],
+        "coverage": {
+          "affine_pairs": 253,
+          "allowed_edges": 1377,
+          "endpoint_intersection_evaluations": 34839,
+          "line_successor_tests": 6889,
+          "per_row_pair_counts": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            4,
+            1,
+            4,
+            3,
+            1,
+            1,
+            4,
+            2,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            1,
+            1,
+            1,
+            1,
+            4,
+            4,
+            3,
+            3,
+            7,
+            4,
+            5,
+            5,
+            3,
+            3,
+            3,
+            5,
+            5,
+            4,
+            5,
+            3,
+            3,
+            4,
+            4,
+            3,
+            3,
+            4,
+            4,
+            7,
+            6,
+            6,
+            4,
+            7,
+            6,
+            6,
+            7,
+            6,
+            5,
+            6,
+            5,
+            3,
+            2,
+            1,
+            7,
+            7,
+            7,
+            6,
+            6,
+            4
+          ]
+        },
+        "data": "data/ambient71.json",
+        "expected_states": 71,
+        "id": "05-tails/ambient71",
+        "parameters": {
+          "ambient_dimension": 7,
+          "cap_rule": "intrinsic",
+          "curve": "smooth-only",
+          "degree_floor": "1",
+          "root_grid": 1000
+        },
+        "row_fields": [
+          "id",
+          "state",
+          "moment",
+          "cap",
+          "radius",
+          "lines"
+        ],
+        "row_order": "lexicographic state; consecutive id",
+        "schema_version": 1,
+        "states_by_dimension": {
+          "1": 1,
+          "2": 6,
+          "3": 20,
+          "4": 22,
+          "5": 16,
+          "6": 6
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/double-fivefold28.json"
+      ],
+      "id": "05-tails/double-fivefold28",
+      "specification": {
+        "correctness_labels": [
+          "lem:tails-support-recursion",
+          "lem:tails-double-fivefold-certificate"
+        ],
+        "coverage": {
+          "allowed_descendant_edges": 170,
+          "ambient_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "chains": 739,
+          "excluded_by_first_cap": [
+            [
+              4,
+              6,
+              8
+            ],
+            [
+              4,
+              6,
+              9
+            ]
+          ],
+          "intrinsic_states_before_parent_cap": 30,
+          "support_values": 28
+        },
+        "data": "data/double-fivefold28.json",
+        "expected_states": 28,
+        "id": "05-tails/double-fivefold28",
+        "parameters": {
+          "cap_rule": "first-successor-only",
+          "curve": "smooth-only",
+          "degree_floor": "1",
+          "parent_moment": 1,
+          "parent_state": [
+            5,
+            6,
+            2
+          ],
+          "root_grid": 1000,
+          "support_slope": "50/49"
+        },
+        "row_fields": [
+          "id",
+          "ambient_id",
+          "state",
+          "moment",
+          "intrinsic_cap",
+          "first_cap",
+          "radius",
+          "support"
+        ],
+        "row_order": "lexicographic state; consecutive id",
+        "schema_version": 1,
+        "states_by_dimension": {
+          "1": 1,
+          "2": 5,
+          "3": 13,
+          "4": 9
+        }
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "article": {
+      "rendered_views": {
+        "double-fivefold-certificate.tex": {
+          "byte_identical": true,
+          "bytes": 2366,
+          "sha256": "627a53adc20e3b8abbfcc171a5528c7ee5214443b70cd7381edcf016fd765c2d"
+        },
+        "sevenfold-certificate.tex": {
+          "byte_identical": true,
+          "bytes": 13117,
+          "sha256": "8551a33398c30e007567cf46fe747f24fb02773917df6cf4d8e2d25bf74b39cf"
+        }
+      },
+      "section_path": "src/sections/05-tails/section.tex",
+      "section_sha256": "a0b861d5ba2482d2003af3f309ddc06c0c75567340ea8bb2be2564c2d172f1c9"
+    },
+    "requires": {
+      "dependencies": "standard library only",
+      "python": ">=3.9",
+      "tested": "3.10.19"
+    }
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "05-tails",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/ambient71.json"
+      ],
+      "family": "05-tails/ambient71",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:4f892d3c92b38b34",
+        "fact:35523aa031bc3c4a",
+        "fact:e90ebe0551ce2c0f"
+      ],
+      "source_version": "4f892d3c92b38b34@sha256:2d2d6899d6541186c6c06e6721009a90c97f9f62f4a2f9b8e17ba03952c33c39; 35523aa031bc3c4a@sha256:f06e2e892e4c166a08dd4b051fc313e0028a8b91951f65c7f77acb8f752b0197; e90ebe0551ce2c0f@sha256:f1f0805990723c783a1d5b7475247deabe7f8a77085a2dbd713e72ac31d8cb1e"
+    },
+    {
+      "data_files": [
+        "data/double-fivefold28.json"
+      ],
+      "family": "05-tails/double-fivefold28",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f11d050017547cce"
+      ],
+      "source_version": "f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7"
+    }
+  ],
+  "source_owner_manifest_sha256": "9c88fc3e04352c8245e1a8a1671bc2c43260960a71399f82167d7eb0801b43f4"
+}

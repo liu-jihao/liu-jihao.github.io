@@ -1,0 +1,258 @@
+{
+  "active_files": [
+    {
+      "bytes": 24098,
+      "path": "check.py",
+      "sha256": "c60b2a227a1d67dc201c6dcc85b8e9f28efc128879b0512935addabf01d7927b"
+    },
+    {
+      "bytes": 2996,
+      "path": "contract.py",
+      "sha256": "cfadf12a54ce5f708c66e271ec4c274e02ceeffc52516d850a9b111303e7b789"
+    },
+    {
+      "bytes": 2192,
+      "path": "data/arithmetic.json",
+      "sha256": "def082ce5d74cecff09bb24e78a0f64f5aaa6b96e08ed16d1b063bef59adc6d0"
+    },
+    {
+      "bytes": 41774,
+      "path": "data/flags.json",
+      "sha256": "7a05ba61cfed3c1820e481a29cc53bbdd918f2a647093e5a41c2d480fd18b8c9"
+    },
+    {
+      "bytes": 167123,
+      "path": "data/queries.json",
+      "sha256": "aa169a56799f73012129f6e452d6bedbb5421f0d3bee8a5c71588e78148b6e6d"
+    },
+    {
+      "bytes": 9247,
+      "path": "data/tables.json",
+      "sha256": "c582f10d1f7b27a6a1c0862de8ab453acf49d78cc55d948575475899dfb13eb0"
+    },
+    {
+      "bytes": 3822,
+      "path": "render.py",
+      "sha256": "e9d88473f6e8fff40bc92fcaf29d5b3a99fcf3b3f68be65e8e848c2c925ca873"
+    },
+    {
+      "bytes": 161,
+      "path": "views/affine.tex",
+      "sha256": "5784df65e747875c8e6f6288449fab96f06f02d20aceab486dbd3cfd0511d48a"
+    },
+    {
+      "bytes": 232,
+      "path": "views/generic-orders.tex",
+      "sha256": "407f86018311a364fb2c9070156ddbf1de2350ee8471e6e40123675d11be41be"
+    },
+    {
+      "bytes": 539,
+      "path": "views/generic.tex",
+      "sha256": "34cf733e02300c430388acb3d9c9079de42e138af1e5375bc236360ec1d67034"
+    },
+    {
+      "bytes": 185,
+      "path": "views/power-orders.tex",
+      "sha256": "10b4cd72e904337129baa9aa5914badb7d3dd4cb55706769edb4e3d079ff4774"
+    },
+    {
+      "bytes": 190,
+      "path": "views/replacements.tex",
+      "sha256": "e6a17459b931047928687ca5dd67c7fca8de5b2336bdb0418d5be24370c69ed9"
+    },
+    {
+      "bytes": 271,
+      "path": "views/singular-reserves.tex",
+      "sha256": "d462f758d3823455e89afcdba902b8fa89480fe824e70c1740f85fb18f59331c"
+    },
+    {
+      "bytes": 392,
+      "path": "views/square.tex",
+      "sha256": "9ce707769a1544d32c91f071d1c06c5868bca109567400c1e71db18c998a3e3f"
+    },
+    {
+      "bytes": 1888,
+      "path": "views/states.tex",
+      "sha256": "9be320b0311c68d2b243b7023bc31f3808871e20ee56ac8d40bfcb787dd9fbcc"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-16-double-twentynine.json",
+  "families": [
+    {
+      "data_files": [
+        "data/tables.json",
+        "data/flags.json"
+      ],
+      "id": "16-double-twentynine/states",
+      "specification": {
+        "algorithm": "Cumulative-binomial moment enumeration, least upward thousandth roots, exhaustive directed flags; every delivered terminal J checked by all flag vertices",
+        "canonical_data_path": [
+          "data/tables.json",
+          "data/flags.json"
+        ],
+        "counts": {
+          "edges": 170,
+          "flags": 739,
+          "states": 28,
+          "terminal_j_entries": 28
+        },
+        "domain": "d=1..4, e<=6, all positive intrinsic/parent-cap states, all compatible lower-dimensional successors and skips",
+        "id": "16-double-twentynine/states"
+      }
+    },
+    {
+      "data_files": [
+        "data/queries.json"
+      ],
+      "id": "16-double-twentynine/prices",
+      "specification": {
+        "algorithm": "Full feasible cap-grid enumeration for every flag, independently compared with Bellman optimization and the delivered attaining flag/tuple",
+        "canonical_data_path": "data/queries.json",
+        "counts": {
+          "empty": 1,
+          "feasible_grid_tuples": 23365,
+          "flag_cap_grids": 1830,
+          "generic_entries": 26,
+          "positive_cap": 590,
+          "queries": 596,
+          "replacement_entries": 8,
+          "square_entries": 12,
+          "zero_cap": 5
+        },
+        "domain": "21 scenarios times all 28 states, plus three affine queries, two quartic queries and empty/point/segment diagnostics; exact definition in contract.query_domain",
+        "id": "16-double-twentynine/prices"
+      }
+    },
+    {
+      "data_files": [
+        "data/arithmetic.json"
+      ],
+      "id": "16-double-twentynine/arithmetic",
+      "specification": {
+        "algorithm": "Exact rational expression evaluation and strict price/mass/error comparisons; all-D and geometric proofs remain in article",
+        "canonical_data_path": "data/arithmetic.json",
+        "counts": {
+          "finite_character_comparisons": 20,
+          "finite_small_exponent_intervals": 8,
+          "identities": 45
+        },
+        "domain": "All displayed source, scalar, fixed-order, interval-loss and reserve identities; finite supporting checks of the article analytic endpoints",
+        "id": "16-double-twentynine/arithmetic"
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "constants": {
+      "fixed_order_epsilon": "1/500",
+      "generic_error": "1/10000",
+      "intrinsic_reserve": "1/100000",
+      "lambda": "1731/2000",
+      "mu": "23/25",
+      "old_price": "25/29",
+      "scalar_margin": "1/2000",
+      "square": "87/100",
+      "terminal": "49/50",
+      "terminal_error": "1/1000",
+      "terminal_margin": "1/100",
+      "theta": "19/20"
+    },
+    "error_allowances": {
+      "cutting": "sum (1+rho_i)*epsilon_i < 1/10000 generally, <1/1000 for terminal source",
+      "intrinsic": "uniform O(p^4) errors absorbed into the stated reserve before degree/prime/place choices; common reserve 1/100000",
+      "lifting": "ordinary Serre cutoff separate from intrinsic errors",
+      "numerical": "exact integer/rational arithmetic, no floating-point error",
+      "table_rounding": "strict floor(D*v)+1, D=10000 or 100000; radii rounded upward at denominator 1000"
+    },
+    "format": "double-twentynine-v1",
+    "rendered_views": [
+      "views/affine.tex",
+      "views/generic-orders.tex",
+      "views/generic.tex",
+      "views/power-orders.tex",
+      "views/replacements.tex",
+      "views/singular-reserves.tex",
+      "views/square.tex",
+      "views/states.tex"
+    ],
+    "section_and_theorem_labels": [
+      "sec:16-double-twentynine",
+      "thm:double-twentynine",
+      "lem:double-twentynine-certificate"
+    ],
+    "strict_targets": {
+      "cubic_source_reserve": "126108747621/320000000000000",
+      "integral_final_mass": "4343146775241/320000000000000",
+      "smooth_final_mass": "8665174751849/2880000000000000",
+      "square_scalar_gap": "373/261000",
+      "terminal_j_upper": "131/100",
+      "terminal_scalar_gap": "3149/142100"
+    }
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "16-double-twentynine",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/tables.json",
+        "data/flags.json"
+      ],
+      "family": "16-double-twentynine/states",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f11d050017547cce",
+        "fact:c0527ea0979b60d1"
+      ],
+      "source_version": "c0527ea0979b60d1@sha256:7bd88df54631aa53d459f20bc5118f221036a17a305c391a58b2c370399bde2b; c0527ea0979b60d1@sha256:a3e0575b551c09316b2627c69f48e0cb3b9585909aaa195705ec14e0b5a2d1ad; f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7; c0527ea0979b60d1@sha256:a3e0575b551c09316b2627c69f48e0cb3b9585909aaa195705ec14e0b5a2d1ad; f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7"
+    },
+    {
+      "data_files": [
+        "data/queries.json"
+      ],
+      "family": "16-double-twentynine/prices",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c0527ea0979b60d1",
+        "fact:f11d050017547cce",
+        "fact:1fb465cbd439b2f1",
+        "fact:07e7392d2ca33599",
+        "fact:4ccb7788cb947d78",
+        "fact:fbce22a9afb7cc54",
+        "fact:fc49b9a0bac4b08d",
+        "fact:ef55e89ddf8409aa",
+        "fact:cbf299f284a1168b",
+        "fact:575c9cbeeddb56c9"
+      ],
+      "source_version": "07e7392d2ca33599@sha256:c3af375b57e7957392c539f4274a6cd15950ce6aa2e43183d8e32d35ebe89aa8; ef55e89ddf8409aa@sha256:100de383a8dcb3d7b52a7ed33bd3b2fc827eef3d77c56cadc4aefebde2cfb314; c0527ea0979b60d1@sha256:7bd88df54631aa53d459f20bc5118f221036a17a305c391a58b2c370399bde2b; c0527ea0979b60d1@sha256:a3e0575b551c09316b2627c69f48e0cb3b9585909aaa195705ec14e0b5a2d1ad; f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7; 1fb465cbd439b2f1@sha256:9485fc56313b78a7ef9b4c77db98d4800c8824380fd10f4290b149be6ba218b6; 07e7392d2ca33599@sha256:252a02a95abef9a6eab46f84720eb58bd204e0106f9c19616d7321046056279a; 4ccb7788cb947d78@sha256:d2fd056375e4510a65a65405e465811d3b6ca9a908ecfd972d5afac1bf61e768; fbce22a9afb7cc54@sha256:2d5646d31204f1c8e777dff5e988dbcf5457adc50787dad12f30db156ac8a07f; fc49b9a0bac4b08d@sha256:7d04aab214c8131fdb9fc7b338116cde0da6b181db965c0247d32770c5e5e021; ef55e89ddf8409aa@sha256:b0a089c5c43ec3b400aff3e5510b0d9eafc356fa9598d7d4883676b0e630a2c5; cbf299f284a1168b@sha256:4f62dfd1e0a1f40cbd3002e31913c44231eee7c18244090fc3c1b6b40ee60321; 575c9cbeeddb56c9@sha256:c9d843ba8876bff983ffb4fb0959d2c1589f5bf4e0f34adf37e11d873cee1c30; c0527ea0979b60d1@sha256:a3e0575b551c09316b2627c69f48e0cb3b9585909aaa195705ec14e0b5a2d1ad; f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7; 1fb465cbd439b2f1@sha256:9485fc56313b78a7ef9b4c77db98d4800c8824380fd10f4290b149be6ba218b6; 07e7392d2ca33599@sha256:252a02a95abef9a6eab46f84720eb58bd204e0106f9c19616d7321046056279a; 4ccb7788cb947d78@sha256:d2fd056375e4510a65a65405e465811d3b6ca9a908ecfd972d5afac1bf61e768; fbce22a9afb7cc54@sha256:2d5646d31204f1c8e777dff5e988dbcf5457adc50787dad12f30db156ac8a07f; fc49b9a0bac4b08d@sha256:7d04aab214c8131fdb9fc7b338116cde0da6b181db965c0247d32770c5e5e021; ef55e89ddf8409aa@sha256:b0a089c5c43ec3b400aff3e5510b0d9eafc356fa9598d7d4883676b0e630a2c5; cbf299f284a1168b@sha256:4f62dfd1e0a1f40cbd3002e31913c44231eee7c18244090fc3c1b6b40ee60321; 575c9cbeeddb56c9@sha256:c9d843ba8876bff983ffb4fb0959d2c1589f5bf4e0f34adf37e11d873cee1c30"
+    },
+    {
+      "data_files": [
+        "data/arithmetic.json"
+      ],
+      "family": "16-double-twentynine/arithmetic",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c0527ea0979b60d1",
+        "fact:f11d050017547cce",
+        "fact:1fb465cbd439b2f1",
+        "fact:07e7392d2ca33599",
+        "fact:4ccb7788cb947d78",
+        "fact:fbce22a9afb7cc54",
+        "fact:fc49b9a0bac4b08d",
+        "fact:ef55e89ddf8409aa",
+        "fact:cbf299f284a1168b",
+        "fact:575c9cbeeddb56c9"
+      ],
+      "source_version": "07e7392d2ca33599@sha256:c3af375b57e7957392c539f4274a6cd15950ce6aa2e43183d8e32d35ebe89aa8; ef55e89ddf8409aa@sha256:100de383a8dcb3d7b52a7ed33bd3b2fc827eef3d77c56cadc4aefebde2cfb314; c0527ea0979b60d1@sha256:7bd88df54631aa53d459f20bc5118f221036a17a305c391a58b2c370399bde2b; c0527ea0979b60d1@sha256:a3e0575b551c09316b2627c69f48e0cb3b9585909aaa195705ec14e0b5a2d1ad; f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7; 1fb465cbd439b2f1@sha256:9485fc56313b78a7ef9b4c77db98d4800c8824380fd10f4290b149be6ba218b6; 07e7392d2ca33599@sha256:252a02a95abef9a6eab46f84720eb58bd204e0106f9c19616d7321046056279a; 4ccb7788cb947d78@sha256:d2fd056375e4510a65a65405e465811d3b6ca9a908ecfd972d5afac1bf61e768; fbce22a9afb7cc54@sha256:2d5646d31204f1c8e777dff5e988dbcf5457adc50787dad12f30db156ac8a07f; fc49b9a0bac4b08d@sha256:7d04aab214c8131fdb9fc7b338116cde0da6b181db965c0247d32770c5e5e021; ef55e89ddf8409aa@sha256:b0a089c5c43ec3b400aff3e5510b0d9eafc356fa9598d7d4883676b0e630a2c5; cbf299f284a1168b@sha256:4f62dfd1e0a1f40cbd3002e31913c44231eee7c18244090fc3c1b6b40ee60321; 575c9cbeeddb56c9@sha256:c9d843ba8876bff983ffb4fb0959d2c1589f5bf4e0f34adf37e11d873cee1c30; c0527ea0979b60d1@sha256:a3e0575b551c09316b2627c69f48e0cb3b9585909aaa195705ec14e0b5a2d1ad; f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7; 1fb465cbd439b2f1@sha256:9485fc56313b78a7ef9b4c77db98d4800c8824380fd10f4290b149be6ba218b6; 07e7392d2ca33599@sha256:252a02a95abef9a6eab46f84720eb58bd204e0106f9c19616d7321046056279a; 4ccb7788cb947d78@sha256:d2fd056375e4510a65a65405e465811d3b6ca9a908ecfd972d5afac1bf61e768; fbce22a9afb7cc54@sha256:2d5646d31204f1c8e777dff5e988dbcf5457adc50787dad12f30db156ac8a07f; fc49b9a0bac4b08d@sha256:7d04aab214c8131fdb9fc7b338116cde0da6b181db965c0247d32770c5e5e021; ef55e89ddf8409aa@sha256:b0a089c5c43ec3b400aff3e5510b0d9eafc356fa9598d7d4883676b0e630a2c5; cbf299f284a1168b@sha256:4f62dfd1e0a1f40cbd3002e31913c44231eee7c18244090fc3c1b6b40ee60321; 575c9cbeeddb56c9@sha256:c9d843ba8876bff983ffb4fb0959d2c1589f5bf4e0f34adf37e11d873cee1c30"
+    }
+  ],
+  "source_owner_manifest_sha256": "c08c267af985878b17ce885e260fd7a290f7af7fd72ca2632a847d0f34189172"
+}

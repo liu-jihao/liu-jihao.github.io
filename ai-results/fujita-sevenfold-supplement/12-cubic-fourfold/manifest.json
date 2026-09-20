@@ -1,0 +1,380 @@
+{
+  "active_files": [
+    {
+      "bytes": 22147,
+      "path": "check.py",
+      "sha256": "27b08903741a7c75dbac42ec56c6049956960dfac45feac272df0a21bd78251d"
+    },
+    {
+      "bytes": 1777,
+      "path": "data/affine.json",
+      "sha256": "eab1bf81d586403d5503c3f1a19c00b6c9d62ec62a03b1746f1b32404d82502f"
+    },
+    {
+      "bytes": 340,
+      "path": "data/affine.tex",
+      "sha256": "5d63d6a97d4ffa312cc4fa5090c0086a735c24eb00e8147f12552ec957a83153"
+    },
+    {
+      "bytes": 1026,
+      "path": "data/claims.json",
+      "sha256": "860547a3dbae47998c87c77f16bf2e9033f76f1520e01a5ce8143e57b67ef5a3"
+    },
+    {
+      "bytes": 4536,
+      "path": "data/integral-prices.json",
+      "sha256": "81179cdbcaca2cac813f8eefecf84d8caafdea664b7eb6b59ec3f71c9497358a"
+    },
+    {
+      "bytes": 570,
+      "path": "data/integral-prices.tex",
+      "sha256": "6e2dd0a23a7df4f5f348f833a4fe4afed2bd71468d588cef0cba2df75f807760"
+    },
+    {
+      "bytes": 4466,
+      "path": "data/reduced-prices.json",
+      "sha256": "06fa2ef9c057687e5a6d6f436e6c92eba74339c712dfe7fe44aaca79873ccf30"
+    },
+    {
+      "bytes": 566,
+      "path": "data/reduced-prices.tex",
+      "sha256": "ecac569ae4a7ca843182422a737382e654df85f40f970254b99b8e31fbb678ae"
+    },
+    {
+      "bytes": 4302,
+      "path": "data/states.json",
+      "sha256": "6f2479f0335dd3afe6e114aa9925021ba63899c16469f495991ba9da25acbed1"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-12-cubic-fourfold.json",
+  "families": [
+    {
+      "data_files": [
+        "data/affine.json",
+        "data/affine.tex"
+      ],
+      "id": "12-cubic-fourfold/affine",
+      "specification": {
+        "data": "data/affine.json",
+        "id": "12-cubic-fourfold/affine",
+        "owner_coverage": {
+          "entry_margin": "1357633/107919000",
+          "high_deficit_domain": "1<z<=4/3",
+          "nonquartic_rows": 16,
+          "quartic_low_deficit_cases": 1
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/claims.json"
+      ],
+      "id": "12-cubic-fourfold/claims",
+      "specification": {
+        "data": "data/claims.json",
+        "id": "12-cubic-fourfold/claims",
+        "owner_coverage": {
+          "identities": 26,
+          "paid_prices": [
+            "43171/5400",
+            "129563/16200",
+            "1015757/127000",
+            "93433/11700",
+            "21173/2700",
+            "2644079/332100"
+          ],
+          "post_error_gaps_to_endpoint": [
+            "161/33750",
+            "341/202500",
+            "417/317500",
+            "7999/585000",
+            "21269/135000",
+            "626087/16605000"
+          ],
+          "values": {
+            "A_4": "4469/6750",
+            "A_5": "2117/2700",
+            "D_4": "35411/27000",
+            "D_5": "39407/27000",
+            "affine_entry_margin": "1357633/107919000",
+            "affine_low_quartic_post_error_margin": "1/80",
+            "affine_nonquartic_max": "451/1000",
+            "affine_nonquartic_post_error_margin": "1/1000",
+            "dimension_margin_slope": "2/27",
+            "eta_4": "15471/36775",
+            "eta_5": "45765/102278",
+            "final_loss": "268980237/62500000000",
+            "final_mass": "19512331/3906250000",
+            "final_mass_after_intrinsic_error": "11699831/3906250000",
+            "first_eta": "75/304",
+            "first_keta": "75/76",
+            "first_reduced_mass": "581177533/62500000000",
+            "initial_mass": "13/256",
+            "integral_loss": "195993/20000000",
+            "integral_mass": "51227/1250000",
+            "large_sigma_price": "129563/16200",
+            "later_low_deficit_price": "1015757/127000",
+            "low_b_price": "43171/5400",
+            "second_eta": "127/240",
+            "tail_4": "103/500",
+            "tail_5": "29/500"
+          }
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/integral-prices.json",
+        "data/integral-prices.tex"
+      ],
+      "id": "12-cubic-fourfold/integral-prices",
+      "specification": {
+        "data": "data/integral-prices.json",
+        "id": "12-cubic-fourfold/integral-prices",
+        "owner_coverage": {
+          "entries": 51,
+          "maxima": [
+            "21173/2700",
+            "65719/8100",
+            "2644079/332100"
+          ],
+          "rows": 17,
+          "unpaid_states_at_7999_over_1000": [
+            [],
+            [
+              [
+                3,
+                6,
+                4
+              ],
+              [
+                3,
+                6,
+                5
+              ]
+            ],
+            []
+          ]
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/reduced-prices.json",
+        "data/reduced-prices.tex"
+      ],
+      "id": "12-cubic-fourfold/reduced-prices",
+      "specification": {
+        "data": "data/reduced-prices.json",
+        "id": "12-cubic-fourfold/reduced-prices",
+        "owner_coverage": {
+          "entries": 51,
+          "maxima": [
+            "7241/900",
+            "916807/114300",
+            "93433/11700"
+          ],
+          "rows": 17,
+          "unpaid_states_at_7999_over_1000": [
+            [
+              [
+                3,
+                6,
+                4
+              ]
+            ],
+            [
+              [
+                3,
+                6,
+                4
+              ]
+            ],
+            []
+          ]
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/states.json"
+      ],
+      "id": "12-cubic-fourfold/states",
+      "specification": {
+        "data": "data/states.json",
+        "id": "12-cubic-fourfold/states",
+        "owner_coverage": {
+          "embedding_seven_comparisons": 2,
+          "first_excluded": 7,
+          "multiplicities_eight_nine_full_tails_checked": true,
+          "positive_roots": 17,
+          "positive_states": 19
+        }
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "canonical_data_path": "data",
+    "constants": {
+      "affine_input_intercept": "51/100",
+      "affine_slope": "1317/1000",
+      "price_dimension_slope": "25/27",
+      "quartic_entry_intercept": "49267/107919",
+      "quartic_entry_slope": "5000/3997",
+      "radius_grid_denominator": 1000,
+      "rounding_denominator": 10000
+    },
+    "counts": {
+      "distinct_paths": 145,
+      "empty_domains": 64,
+      "path_domains": 332,
+      "point_domains": 119,
+      "segment_domains": 40,
+      "surplus_requests": 114,
+      "vertex_records": 755
+    },
+    "dependencies": [
+      "Python >=3.10; standard library only"
+    ],
+    "domain": {
+      "affine_quartic_domains": [
+        "0<=z<=1",
+        "1<z<=4/3"
+      ],
+      "degeneracies": "negative-cap empty domains; zero deficits/caps; segments; points; all endpoints and ties",
+      "integral_columns": [
+        [
+          "3/4",
+          "2"
+        ],
+        [
+          "3/4",
+          "8/3"
+        ],
+        [
+          "41/50",
+          "8/3"
+        ]
+      ],
+      "local_states": "d=1 smooth curve; 2<=d<=3, d<=e<=6; every positive intrinsic cap",
+      "parameter_reduction": "n>=7; full allowed deficit/slack domains as proved in article",
+      "price_rows": "all 17 states with positive cubic parent cap; all decreasing-dimension/nonincreasing-embedding paths",
+      "reduced_columns": [
+        [
+          "3/4",
+          "5/2"
+        ],
+        [
+          "381/500",
+          "5/2"
+        ],
+        [
+          "39/50",
+          "5/2"
+        ]
+      ]
+    },
+    "error_allowances": {
+      "affine_weighted_cutting": "1/2000",
+      "arithmetic": "Exact rational, no floating-point error",
+      "final_intrinsic_normalized_error": "1/500",
+      "geometric_uniformity": "Proved in the article; includes original-degree ceilings and separate lifting cutoff",
+      "multiplicity_weighted_cutting": "1/10000"
+    },
+    "format": "Five strict JSON families (schema 1); canonical reduced rational strings; three deterministic TeX views",
+    "proof_boundary": "Finite arithmetic conditional on article geometry, continuous-domain reductions and source/error hypotheses; fresh native verification required",
+    "section_and_theorem_labels": [
+      "sec:12-cubic-fourfold",
+      "thm:cubic-fourfold-affine",
+      "thm:cubic-fourfold-multiplicity",
+      "lem:cubic-fourfold-certificate"
+    ],
+    "strict_targets": {
+      "affine_entry_margin": "1357633/107919000",
+      "affine_margin": "1/400000",
+      "multiplicity_margin": "1/2000",
+      "paid_price_at_n7": "7999/1000",
+      "reduced_final_price": "93433/11700"
+    }
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "12-cubic-fourfold",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/affine.json",
+        "data/affine.tex"
+      ],
+      "family": "12-cubic-fourfold/affine",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3672c410c8058c7d"
+      ],
+      "source_version": "3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138"
+    },
+    {
+      "data_files": [
+        "data/claims.json"
+      ],
+      "family": "12-cubic-fourfold/claims",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3f324251f4e516dc",
+        "fact:b91939f353891a96",
+        "fact:3672c410c8058c7d"
+      ],
+      "source_version": "3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; 3f324251f4e516dc@sha256:f53ea4bdd318e1163e02943659bea33b8be59e627a8daef5229bf81f4f985710; b91939f353891a96@sha256:2a57f98b1f8c41baba20aeb553d353e933a2a00320e56402b9908c0e051c4d50; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; 3f324251f4e516dc@sha256:f53ea4bdd318e1163e02943659bea33b8be59e627a8daef5229bf81f4f985710; b91939f353891a96@sha256:2a57f98b1f8c41baba20aeb553d353e933a2a00320e56402b9908c0e051c4d50"
+    },
+    {
+      "data_files": [
+        "data/integral-prices.json",
+        "data/integral-prices.tex"
+      ],
+      "family": "12-cubic-fourfold/integral-prices",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:b91939f353891a96"
+      ],
+      "source_version": "b91939f353891a96@sha256:2a57f98b1f8c41baba20aeb553d353e933a2a00320e56402b9908c0e051c4d50; b91939f353891a96@sha256:2a57f98b1f8c41baba20aeb553d353e933a2a00320e56402b9908c0e051c4d50"
+    },
+    {
+      "data_files": [
+        "data/reduced-prices.json",
+        "data/reduced-prices.tex"
+      ],
+      "family": "12-cubic-fourfold/reduced-prices",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3f324251f4e516dc"
+      ],
+      "source_version": "3f324251f4e516dc@sha256:f53ea4bdd318e1163e02943659bea33b8be59e627a8daef5229bf81f4f985710; 3f324251f4e516dc@sha256:f53ea4bdd318e1163e02943659bea33b8be59e627a8daef5229bf81f4f985710"
+    },
+    {
+      "data_files": [
+        "data/states.json"
+      ],
+      "family": "12-cubic-fourfold/states",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3f324251f4e516dc",
+        "fact:b91939f353891a96",
+        "fact:3672c410c8058c7d"
+      ],
+      "source_version": "3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; 3f324251f4e516dc@sha256:f53ea4bdd318e1163e02943659bea33b8be59e627a8daef5229bf81f4f985710; b91939f353891a96@sha256:2a57f98b1f8c41baba20aeb553d353e933a2a00320e56402b9908c0e051c4d50; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; 3f324251f4e516dc@sha256:f53ea4bdd318e1163e02943659bea33b8be59e627a8daef5229bf81f4f985710; b91939f353891a96@sha256:2a57f98b1f8c41baba20aeb553d353e933a2a00320e56402b9908c0e051c4d50"
+    }
+  ],
+  "source_owner_manifest_sha256": "c5c9b15530477f1018312f95f8c300190f726a19152efade5aab0ff58008148f"
+}

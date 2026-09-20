@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computational supplement: Fujita freeness on sevenfolds — Jihao Liu</title>
+  <meta name="description" content="Exact rational certificates and independently executable checkers for the finite inequalities in the AI-generated paper Fujita freeness on complex projective sevenfolds." />
+  <!-- META:START -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png" />
+  <link rel="canonical" href="https://jihaoliu.org/fujita-sevenfold-supplement.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Jihao Liu" />
+  <meta property="og:title" content="Computational supplement: Fujita freeness on sevenfolds — Jihao Liu" />
+  <meta property="og:description" content="Exact rational certificates and independently executable checkers for the finite inequalities in the AI-generated paper Fujita freeness on complex projective sevenfolds." />
+  <meta property="og:url" content="https://jihaoliu.org/fujita-sevenfold-supplement.html" />
+  <meta property="og:image" content="https://jihaoliu.org/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Computational supplement: Fujita freeness on sevenfolds — Jihao Liu" />
+  <meta name="twitter:description" content="Exact rational certificates and independently executable checkers for the finite inequalities in the AI-generated paper Fujita freeness on complex projective sevenfolds." />
+  <meta name="twitter:image" content="https://jihaoliu.org/assets/og-image.png" />
+  <!-- META:END -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="site-title"><a href="index.html">Jihao Liu&nbsp;<span style="font-weight: 400; color: var(--color-text-muted);">(刘济豪)</span></a></div>
+      <div class="site-subtitle">Peking University · School of Mathematical Sciences</div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="notes.html">Notes</a>
+        <a href="ai-results.html" class="active">AI-generated Results</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="talks.html">Invited Talks</a>
+        <a href="conferences.html">Conferences &amp; Seminars</a>
+        <a href="collaborators.html">Collaborators</a>
+        <a href="pku-ag-seminar.html">PKU AG Seminar</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Computational supplement</h1>
+      <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+        For the AI-generated paper
+        <a href="ai-results.html#paper-4"><em>Fujita freeness on complex projective sevenfolds</em></a>
+        (<a href="ai-results/fujita-freeness-on-sevenfolds-2026-09-20.pdf">PDF</a>) · posted here 2026-09-20 06:51:18 UTC
+      </p>
+      <p>
+        This supplement contains the complete finite-arithmetic data and the independent checkers
+        for the thirteen certificate packages (75 certificate families) described in
+        Appendix&nbsp;A.4 of the paper. The definitions, the geometric arguments showing that the
+        certificates apply, the uniform error estimates, and the analytic reductions are in the
+        paper itself; a successful computation does not replace those proofs, and it is not a
+        formal verification of the paper.
+      </p>
+
+      <h2>Download</h2>
+      <p>
+        <a href="ai-results/fujita-sevenfold-supplement-2026-09-20.zip">fujita-sevenfold-supplement-2026-09-20.zip</a>
+        (12.6&nbsp;MB, 166 files).<br>
+        <span style="font-size: 0.85rem; color: var(--color-text-muted); font-family: var(--font-sans);">SHA-256:
+        a54bfd927c95cb78996b6edab1c830acc0fbc698ed068ffbe5e9c47b5cd4a52d</span>
+      </p>
+      <p>
+        Individual files:
+        <a href="ai-results/fujita-sevenfold-supplement/README.md">README</a> ·
+        <a href="ai-results/fujita-sevenfold-supplement/manifest.json">manifest.json</a> (byte counts and SHA-256 of every file) ·
+        <a href="ai-results/fujita-sevenfold-supplement/check.py">check.py</a> (the dispatcher) ·
+        <a href="ai-results/fujita-sevenfold-supplement/validation-summary.json">validation-summary.json</a> (the recorded full run).
+      </p>
+
+      <h2>How to run the checkers</h2>
+      <p>
+        Use Python&nbsp;3.10 or later with its standard library only. After unpacking, run from the
+        directory of the supplement:
+      </p>
+      <pre style="font-size: 0.85rem; overflow-x: auto; background: var(--color-bg-alt, #f5f2ec); padding: 0.75rem 1rem;">python3 -B check.py --manifest manifest.json --report runs/full-001/aggregate.json</pre>
+      <p>
+        The dispatcher verifies the delivered inventories, runs every section, and checks that the
+        inputs remain unchanged. No network, external package, or optimizer is needed. A zero exit
+        code and <code>status: pass</code> with <code>full_package_run: true</code> mean that every
+        declared arithmetic package passed. The recorded fresh full run of this release took
+        341&nbsp;seconds and passed all thirteen sections. Do not use Python&rsquo;s
+        <code>-O</code> option.
+      </p>
+
+      <h2>Contents</h2>
+      <table style="font-size: 0.95rem; border-collapse: collapse;">
+        <tr><th style="text-align:left; padding-right: 2rem;">Section package</th><th style="text-align:right; padding-right: 2rem;">Certificate families</th><th style="text-align:right;">Files</th></tr>
+        <tr><td>05-tails</td><td style="text-align:right; padding-right: 2rem;">2</td><td style="text-align:right;">3</td></tr>
+        <tr><td>07-capacities</td><td style="text-align:right; padding-right: 2rem;">10</td><td style="text-align:right;">3</td></tr>
+        <tr><td>09-original-sources</td><td style="text-align:right; padding-right: 2rem;">5</td><td style="text-align:right;">13</td></tr>
+        <tr><td>10-ledger</td><td style="text-align:right; padding-right: 2rem;">7</td><td style="text-align:right;">3</td></tr>
+        <tr><td>11-quartic-threefold</td><td style="text-align:right; padding-right: 2rem;">4</td><td style="text-align:right;">5</td></tr>
+        <tr><td>12-cubic-fourfold</td><td style="text-align:right; padding-right: 2rem;">5</td><td style="text-align:right;">9</td></tr>
+        <tr><td>13-triple-fivefold</td><td style="text-align:right; padding-right: 2rem;">4</td><td style="text-align:right;">6</td></tr>
+        <tr><td>14-double-geometry</td><td style="text-align:right; padding-right: 2rem;">2</td><td style="text-align:right;">3</td></tr>
+        <tr><td>16-double-twentynine</td><td style="text-align:right; padding-right: 2rem;">3</td><td style="text-align:right;">15</td></tr>
+        <tr><td>17-ambient-endpoints</td><td style="text-align:right; padding-right: 2rem;">25</td><td style="text-align:right;">49</td></tr>
+        <tr><td>18-intrinsic-double</td><td style="text-align:right; padding-right: 2rem;">5</td><td style="text-align:right;">8</td></tr>
+        <tr><td>19-large-deficit</td><td style="text-align:right; padding-right: 2rem;">1</td><td style="text-align:right;">2</td></tr>
+        <tr><td>20-rank-two-feedback</td><td style="text-align:right; padding-right: 2rem;">2</td><td style="text-align:right;">3</td></tr>
+      </table>
+      <p style="font-size: 0.95rem;">
+        The data and the checkers were produced by the Danus system together with the paper and,
+        like the paper, have not been verified by a human.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Jihao Liu. Last updated September 2026.</p>
+    </footer>
+  </div>
+</body>
+</html>

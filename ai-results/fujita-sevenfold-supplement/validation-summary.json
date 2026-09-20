@@ -1,0 +1,312 @@
+{
+  "elapsed_seconds": 341.326578,
+  "errors": [],
+  "evidence_archive": "Section 09 report.evidence.tar.gz contains only fresh computed arithmetic output, byte-identical after extraction; historical archives are not distributed.",
+  "exit_code": 0,
+  "expected_sections": [
+    "05-tails",
+    "07-capacities",
+    "09-original-sources",
+    "10-ledger",
+    "11-quartic-threefold",
+    "12-cubic-fourfold",
+    "13-triple-fivefold",
+    "14-double-geometry",
+    "16-double-twentynine",
+    "17-ambient-endpoints",
+    "18-intrinsic-double",
+    "19-large-deficit",
+    "20-rank-two-feedback"
+  ],
+  "finished_at": "2026-09-20T04:17:53.718818+00:00",
+  "full_package_run": true,
+  "package_version": "public-active-20260920",
+  "python_version": "3.9.6 (default, Apr  7 2026, 02:38:40) \n[Clang 21.0.0 (clang-2100.0.123.102)]",
+  "ran_sections": [
+    "05-tails",
+    "07-capacities",
+    "09-original-sources",
+    "10-ledger",
+    "11-quartic-threefold",
+    "12-cubic-fourfold",
+    "13-triple-fivefold",
+    "14-double-geometry",
+    "16-double-twentynine",
+    "17-ambient-endpoints",
+    "18-intrinsic-double",
+    "19-large-deficit",
+    "20-rank-two-feedback"
+  ],
+  "root_checker": {
+    "bytes": 25039,
+    "path": "check.py",
+    "sha256": "d7c67f9f63580928e47c83d9ccdf2e7d85b9bd009929ee305180a50c342871a9"
+  },
+  "root_manifest": {
+    "bytes": 1893925,
+    "path": "manifest.json",
+    "sha256": "06a19dde6edd34f9065948af66014b14494d2f81881711b9e35702eb720c9a8a"
+  },
+  "schema": "fujita-public-validation-summary-v1",
+  "scope": "Fresh complete run of the public package. Exact arithmetic, coverage, and record consistency only; geometric applicability and analytic reductions remain in the article.",
+  "sections": [
+    {
+      "elapsed_seconds": 0.732184,
+      "errors": [],
+      "exit_code": 0,
+      "id": "05-tails",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 86443,
+        "path": "validation/05-tails/report.json",
+        "sha256": "2ed724f601ee476e9520863e9804ebeefa673ca6b312b901e695646ee56a82f3"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 0.128731,
+      "errors": [],
+      "exit_code": 0,
+      "id": "07-capacities",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 17768,
+        "path": "validation/07-capacities/report.json",
+        "sha256": "496b0beef93cc641558d7d88816415cedb98308721f1dedfcc8e77a982b62df6"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 13.938465,
+      "errors": [],
+      "exit_code": 0,
+      "id": "09-original-sources",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 28939,
+        "path": "validation/09-original-sources/report.json",
+        "sha256": "e35996e01b8e03b0d28db809ed899a6f4c77e4d0c26e7a0d188b061baf8823a3"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 0.624935,
+      "errors": [],
+      "exit_code": 0,
+      "id": "10-ledger",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 469978,
+        "path": "validation/10-ledger/report.json",
+        "sha256": "d1f33183e9fcf2502b7b66df7fef613aebf83f2814aed7902993a8b3075f5e9c"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 8.874598,
+      "errors": [],
+      "exit_code": 0,
+      "id": "11-quartic-threefold",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 111875,
+        "path": "validation/11-quartic-threefold/report.json",
+        "sha256": "515fd544754486097344f25c0d02c70f33040085d996ffa9db8c8badcf7d150f"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 0.457469,
+      "errors": [],
+      "exit_code": 0,
+      "id": "12-cubic-fourfold",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 330723,
+        "path": "validation/12-cubic-fourfold/report.json",
+        "sha256": "c696227fa74ecb7cc423c33ec2e96062700299642efc944d4968f51ce9987e4f"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 0.460732,
+      "errors": [],
+      "exit_code": 0,
+      "id": "13-triple-fivefold",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 3957,
+        "path": "validation/13-triple-fivefold/report.json",
+        "sha256": "12f60e74ba34c8b3e753b31e8fd85da60858822f447b53c3b11b6502465d2aba"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 1.641537,
+      "errors": [],
+      "exit_code": 0,
+      "id": "14-double-geometry",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 5702,
+        "path": "validation/14-double-geometry/report.json",
+        "sha256": "0b5234fbb9c5e7bc268f742e0776b985dca2f38284779d1d7ed8f43d9ac5ad1c"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 0.783088,
+      "errors": [],
+      "exit_code": 0,
+      "id": "16-double-twentynine",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 16227,
+        "path": "validation/16-double-twentynine/report.json",
+        "sha256": "bc5df8e056c2c955647876c52ad7af9be104dd95ea7e249bf3abd89b170b61be"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 304.803002,
+      "errors": [],
+      "exit_code": 0,
+      "id": "17-ambient-endpoints",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 65756,
+        "path": "validation/17-ambient-endpoints/report.json",
+        "sha256": "8573e5881a68f2692e11f14c1e88f7811114016cb9662b953f3691328cd37a88"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 8.021992,
+      "errors": [],
+      "exit_code": 0,
+      "id": "18-intrinsic-double",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 30058,
+        "path": "validation/18-intrinsic-double/report.json",
+        "sha256": "3b2beaa78dcccfb9d03bd4a1fac482b654661281de90603b31898aa838887e14"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 0.618337,
+      "errors": [],
+      "exit_code": 0,
+      "id": "19-large-deficit",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 3101,
+        "path": "validation/19-large-deficit/report.json",
+        "sha256": "7471e87a20df43007597abf6c8c88723afcb96e95b462633dbded95c52db838f"
+      },
+      "status": "pass"
+    },
+    {
+      "elapsed_seconds": 0.128348,
+      "errors": [],
+      "exit_code": 0,
+      "id": "20-rank-two-feedback",
+      "inputs_unchanged": true,
+      "report": {
+        "bytes": 3707,
+        "path": "validation/20-rank-two-feedback/report.json",
+        "sha256": "e6d6baadca18cd239885f7318074fe3595d08a2ecf7694a13cadfe2c5ee6343e"
+      },
+      "status": "pass"
+    }
+  ],
+  "selected_sections": [
+    "05-tails",
+    "07-capacities",
+    "09-original-sources",
+    "10-ledger",
+    "11-quartic-threefold",
+    "12-cubic-fourfold",
+    "13-triple-fivefold",
+    "14-double-geometry",
+    "16-double-twentynine",
+    "17-ambient-endpoints",
+    "18-intrinsic-double",
+    "19-large-deficit",
+    "20-rank-two-feedback"
+  ],
+  "started_at": "2026-09-20T04:12:12.392240+00:00",
+  "status": "pass",
+  "validation_files": [
+    {
+      "bytes": 86443,
+      "path": "validation/05-tails/report.json",
+      "sha256": "2ed724f601ee476e9520863e9804ebeefa673ca6b312b901e695646ee56a82f3"
+    },
+    {
+      "bytes": 17768,
+      "path": "validation/07-capacities/report.json",
+      "sha256": "496b0beef93cc641558d7d88816415cedb98308721f1dedfcc8e77a982b62df6"
+    },
+    {
+      "bytes": 10038146,
+      "path": "validation/09-original-sources/report.evidence.tar.gz",
+      "sha256": "deeb7883dd9dc03452c4d2b5394c2d3cd70f43b7d6cd706a2fb33e7e4f0a5a89"
+    },
+    {
+      "bytes": 28939,
+      "path": "validation/09-original-sources/report.json",
+      "sha256": "e35996e01b8e03b0d28db809ed899a6f4c77e4d0c26e7a0d188b061baf8823a3"
+    },
+    {
+      "bytes": 469978,
+      "path": "validation/10-ledger/report.json",
+      "sha256": "d1f33183e9fcf2502b7b66df7fef613aebf83f2814aed7902993a8b3075f5e9c"
+    },
+    {
+      "bytes": 111875,
+      "path": "validation/11-quartic-threefold/report.json",
+      "sha256": "515fd544754486097344f25c0d02c70f33040085d996ffa9db8c8badcf7d150f"
+    },
+    {
+      "bytes": 330723,
+      "path": "validation/12-cubic-fourfold/report.json",
+      "sha256": "c696227fa74ecb7cc423c33ec2e96062700299642efc944d4968f51ce9987e4f"
+    },
+    {
+      "bytes": 3957,
+      "path": "validation/13-triple-fivefold/report.json",
+      "sha256": "12f60e74ba34c8b3e753b31e8fd85da60858822f447b53c3b11b6502465d2aba"
+    },
+    {
+      "bytes": 5702,
+      "path": "validation/14-double-geometry/report.json",
+      "sha256": "0b5234fbb9c5e7bc268f742e0776b985dca2f38284779d1d7ed8f43d9ac5ad1c"
+    },
+    {
+      "bytes": 16227,
+      "path": "validation/16-double-twentynine/report.json",
+      "sha256": "bc5df8e056c2c955647876c52ad7af9be104dd95ea7e249bf3abd89b170b61be"
+    },
+    {
+      "bytes": 65756,
+      "path": "validation/17-ambient-endpoints/report.json",
+      "sha256": "8573e5881a68f2692e11f14c1e88f7811114016cb9662b953f3691328cd37a88"
+    },
+    {
+      "bytes": 30058,
+      "path": "validation/18-intrinsic-double/report.json",
+      "sha256": "3b2beaa78dcccfb9d03bd4a1fac482b654661281de90603b31898aa838887e14"
+    },
+    {
+      "bytes": 3101,
+      "path": "validation/19-large-deficit/report.json",
+      "sha256": "7471e87a20df43007597abf6c8c88723afcb96e95b462633dbded95c52db838f"
+    },
+    {
+      "bytes": 3707,
+      "path": "validation/20-rank-two-feedback/report.json",
+      "sha256": "e6d6baadca18cd239885f7318074fe3595d08a2ecf7694a13cadfe2c5ee6343e"
+    }
+  ]
+}

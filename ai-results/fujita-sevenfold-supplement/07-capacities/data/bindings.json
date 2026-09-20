@@ -1,0 +1,558 @@
+{
+  "schema": "fujita-capacities-bindings-v1",
+  "article_sha256": {
+    "section.tex": "8f3e304b7a16b48cb37a7a2b77cde06b947cee5dcedb5034cb6d6292f10fa66c",
+    "capacity-numerics.tex": "3506a20d13694f52273942722be05bf535b0ed283155a56f1693830d00779d69",
+    "capacity-refinements.tex": "1ea3d20906a8d1e48729ddcf3e4495f06f4c2ff6b994e7294090484f7f939970",
+    "source-layers.tex": "cbb65b0e472d3c77a978e6eff725b134dc246859b2550f9580f21e545991fba7",
+    "finite-certificate.tex": "83f75920c7480bdec662cb9f52d6eb922c91e98e5eab3fe05bc2001b0f2de8a0"
+  },
+  "bindings": [
+    {
+      "id": "linear-fivefold",
+      "file": "section.tex",
+      "formula": "thm:spanning-primary-capacity; every j=1,...,t+s, including zero coefficients",
+      "snippet": "\\SpanCap_{7,1,2}(c)\n  &=(1-c)_+^6+(1-2c)_+^6-(1-3c)_+^6."
+    },
+    {
+      "id": "linear-fourfold",
+      "file": "section.tex",
+      "formula": "thm:spanning-primary-capacity; every j=1,...,t+s, including zero coefficients",
+      "snippet": "\\SpanCap_{7,1,3}(c)\n  &=(1-c)_+^6+3(1-2c)_+^6-5(1-3c)_+^6+2(1-4c)_+^6,\\\\"
+    },
+    {
+      "id": "full-fourfold",
+      "file": "section.tex",
+      "formula": "thm:spanning-primary-capacity; every j=1,...,t+s, including zero coefficients",
+      "snippet": "D_4(c)=6(1-2c)_+^6-8(1-3c)_+^6+3(1-4c)_+^6,"
+    },
+    {
+      "id": "full-fivefold",
+      "file": "section.tex",
+      "formula": "thm:spanning-primary-capacity; every j=1,...,t+s, including zero coefficients",
+      "snippet": "\\min\\{3(1-2c)_+^6-2(1-3c)_+^6,"
+    },
+    {
+      "id": "six-fifth",
+      "file": "capacity-numerics.tex",
+      "formula": "Q_n: coordinate branch, then balanced branch",
+      "snippet": "Q_6(h)\\), whose two branches are\n\\(1053/3125\\) and \\(1024/3125\\)"
+    },
+    {
+      "id": "seven-sixth",
+      "file": "capacity-refinements.tex",
+      "formula": "Q_n: coordinate branch, then balanced branch",
+      "snippet": "Q_7(h)=\\max\\left\\{\\frac{15625}{46656},\n                 \\frac{16384}{46656}\\right\\}"
+    },
+    {
+      "id": "early-pair",
+      "file": "source-layers.tex",
+      "formula": "Q_n: coordinate branch, then balanced branch",
+      "snippet": "Q_7(3/20)=\\max\\{24137569/64000000,16807/40000\\}"
+    },
+    {
+      "id": "later-pair",
+      "file": "source-layers.tex",
+      "formula": "Q_n: coordinate branch, then balanced branch",
+      "snippet": "Q_7(7/40)=\\max\\{1291467969/4096000000,\n                             4084223/12800000\\}"
+    },
+    {
+      "id": "six-interior",
+      "file": "capacity-numerics.tex",
+      "formula": "lem:capacities-three-normal-six",
+      "snippet": "Its value is \\(992/3125>5/16\\)"
+    },
+    {
+      "id": "six-boundary",
+      "file": "capacity-numerics.tex",
+      "formula": "lem:capacities-three-normal-six",
+      "snippet": "Its maximum is \\(5/16\\)"
+    },
+    {
+      "id": "seven-interior",
+      "file": "capacity-refinements.tex",
+      "formula": "lem:capacities-three-normal-seven",
+      "snippet": "Its maximum is \\(F(12,8)=11/32\\)"
+    },
+    {
+      "id": "seven-boundary",
+      "file": "capacity-refinements.tex",
+      "formula": "lem:capacities-three-normal-seven",
+      "snippet": "This boundary maximum is \\(1053/3125\\)"
+    },
+    {
+      "id": "four-row-constant",
+      "file": "capacity-numerics.tex",
+      "formula": "lem:capacities-four-rows",
+      "snippet": "\\frac{13}{96}+\\left(\\frac23\\right)^5\\frac{432}{3125}\n       =\\frac{138259}{900000}"
+    },
+    {
+      "id": "strip-derivative",
+      "file": "capacity-numerics.tex",
+      "formula": "lem:capacities-four-rows; w=2/5",
+      "snippet": "4w^2(1-w)^3\\le432/3125"
+    },
+    {
+      "id": "disjoint-correction",
+      "file": "capacity-numerics.tex",
+      "formula": "lem:capacities-disjoint-pairs",
+      "snippet": "E(1/4,1/4)=1/972"
+    },
+    {
+      "id": "disjoint-square",
+      "file": "capacity-numerics.tex",
+      "formula": "lem:capacities-disjoint-pairs",
+      "snippet": "31/243+1/972=125/972<13/96"
+    },
+    {
+      "id": "three-cut-anchor",
+      "file": "capacity-numerics.tex",
+      "formula": "lem:capacities-three-cuts",
+      "snippet": "(5/6)^5(1053/3125)=13/96"
+    },
+    {
+      "id": "envelope-rounding",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; both rounded factors increase the bound",
+      "snippet": "31/200+(169/200)(67/200)\n                     =17523/40000<11/25"
+    },
+    {
+      "id": "linear-endpoint",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; full signed M_7",
+      "snippet": "M_7(2/11)=\\frac{9^6+7^6-5^6}{11^6}\n               =\\frac{633465}{1771561}<2/5"
+    },
+    {
+      "id": "linear-later",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; denominator 10^12",
+      "snippet": "M_7(19/100)=\\frac{332908409016}{10^{12}}<17/50"
+    },
+    {
+      "id": "full-later",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; full signed D_4",
+      "snippet": "D_4(9/50)=\\frac{5280752440}{15625000000}<17/50"
+    },
+    {
+      "id": "quartic",
+      "file": "capacity-refinements.tex",
+      "formula": "lem:capacities-three-normal-seven; derivative factorization of F on (x,x,6-2x)",
+      "snippet": "R(z)=40z^4-200z^3+315z^2-162z+27."
+    },
+    {
+      "id": "quartic-derivative",
+      "file": "capacity-refinements.tex",
+      "formula": "R prime at all four monotonicity breakpoints",
+      "snippet": "Its first derivative at \\(1/2,3/4,7/4,2\\) is respectively\n\\(23,81/2,-79/2,-22\\)"
+    },
+    {
+      "id": "quartic-endpoints",
+      "file": "capacity-refinements.tex",
+      "formula": "R on [1/2,2]",
+      "snippet": "Its endpoint\nvalues are \\(9/4\\) and \\(3\\)"
+    },
+    {
+      "id": "early-375",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "early-452",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "early-463",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "early-464",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "early-474",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "early-475",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "early-476",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "early-477",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; beta=((8-p)u-7)/(au-1), sigma=7-cap+u(a cap+p-8)",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\n(d,e,m)&\\beta(u_*)&\\text{upper bound for }\\sigma\\\\ \\hline\n (3,7,5)&47239/37210&971/10000\\\\\n (4,5,2)&14363/5345&209/3125\\\\\n (4,6,3)&29032/17167&628/1875\\\\\n (4,6,4)&38671/22165&5659/50000\\\\\n (4,7,4)&5684/4433&10797/20000\\\\\n (4,7,5)&36325/26296&16267/50000\\\\\n (4,7,6)&41119/29866&25973/150000\\\\\n (4,7,7)&43975/32977&4389/70000\n\\end{array}"
+    },
+    {
+      "id": "later-463",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; same early complete-tail row at u=26/25",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\nThe five remaining types and their exact slack caps are\n\\[\n\\begin{array}{c|c}\n (e,m)&\\text{upper bound for }\\sigma\\\\ \\hline\n (6,3)&481/1875\\\\\n (6,4)&217/12500\\\\\n (7,4)&2311/5000\\\\\n (7,5)&2921/12500\\\\\n (7,6)&2699/37500\n\\end{array}"
+    },
+    {
+      "id": "later-464",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; same early complete-tail row at u=26/25",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\nThe five remaining types and their exact slack caps are\n\\[\n\\begin{array}{c|c}\n (e,m)&\\text{upper bound for }\\sigma\\\\ \\hline\n (6,3)&481/1875\\\\\n (6,4)&217/12500\\\\\n (7,4)&2311/5000\\\\\n (7,5)&2921/12500\\\\\n (7,6)&2699/37500\n\\end{array}"
+    },
+    {
+      "id": "later-474",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; same early complete-tail row at u=26/25",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\nThe five remaining types and their exact slack caps are\n\\[\n\\begin{array}{c|c}\n (e,m)&\\text{upper bound for }\\sigma\\\\ \\hline\n (6,3)&481/1875\\\\\n (6,4)&217/12500\\\\\n (7,4)&2311/5000\\\\\n (7,5)&2921/12500\\\\\n (7,6)&2699/37500\n\\end{array}"
+    },
+    {
+      "id": "later-475",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; same early complete-tail row at u=26/25",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\nThe five remaining types and their exact slack caps are\n\\[\n\\begin{array}{c|c}\n (e,m)&\\text{upper bound for }\\sigma\\\\ \\hline\n (6,3)&481/1875\\\\\n (6,4)&217/12500\\\\\n (7,4)&2311/5000\\\\\n (7,5)&2921/12500\\\\\n (7,6)&2699/37500\n\\end{array}"
+    },
+    {
+      "id": "later-476",
+      "file": "section.tex",
+      "formula": "prop:ambient-shells; same early complete-tail row at u=26/25",
+      "snippet": "(d,e,m)&\\beta_v&a&p\\\\ \\hline\n (3,7,5)&7/5&171/100&211/1000\\\\\n (4,5,2)&3&119/100&287/500\\\\\n (4,6,3)&8/3&1317/1000&71/125\\\\\n (4,6,4)&2&283/200&379/1000\\\\\n (4,7,4)&5/2&283/200&29/50\\\\\n (4,7,5)&2&187/125&17/40\\\\\n (4,7,6)&5/3&783/500&331/1000\\\\\n (4,7,7)&10/7&1627/1000&11/40\n\\end{array}\nThe five remaining types and their exact slack caps are\n\\[\n\\begin{array}{c|c}\n (e,m)&\\text{upper bound for }\\sigma\\\\ \\hline\n (6,3)&481/1875\\\\\n (6,4)&217/12500\\\\\n (7,4)&2311/5000\\\\\n (7,5)&2921/12500\\\\\n (7,6)&2699/37500\n\\end{array}"
+    },
+    {
+      "id": "own-562",
+      "file": "source-layers.tex",
+      "formula": "prop:own-twentynine-tangent; same source, cap, full tail and ordinary Hilbert series",
+      "snippet": "(e,m)&\\beta_v&a&p&a\\beta_v+p\\\\ \\hline\n (6,2)&4&1149/1000&247/250&698/125\\\\\n (7,3)&11/3&623/500&39/40&16631/3000\\\\\n (7,4)&3&33/25&77/100&473/100\\\\\n (7,5)&13/5&69/50&673/1000&4261/1000\n\\end{array}\n\\text{upper bound for }\\sigma\\\\ \\hline\n6&2&1+z&1&617/3125\\\\\n7&3&1+2z&2&36299/75000\\\\\n7&4&1+2z+z^2&4&517/2500\\\\\n7&5&1+2z+2z^2&6&1569/25000\n\\end{array}\n\\frac{28348}{8321},\\quad\\frac{28725}{11134},\\quad\n \\frac{3467}{1328}>\\frac52,\\quad\n \\frac{37483}{15020}"
+    },
+    {
+      "id": "own-573",
+      "file": "source-layers.tex",
+      "formula": "prop:own-twentynine-tangent; same source, cap, full tail and ordinary Hilbert series",
+      "snippet": "(e,m)&\\beta_v&a&p&a\\beta_v+p\\\\ \\hline\n (6,2)&4&1149/1000&247/250&698/125\\\\\n (7,3)&11/3&623/500&39/40&16631/3000\\\\\n (7,4)&3&33/25&77/100&473/100\\\\\n (7,5)&13/5&69/50&673/1000&4261/1000\n\\end{array}\n\\text{upper bound for }\\sigma\\\\ \\hline\n6&2&1+z&1&617/3125\\\\\n7&3&1+2z&2&36299/75000\\\\\n7&4&1+2z+z^2&4&517/2500\\\\\n7&5&1+2z+2z^2&6&1569/25000\n\\end{array}\n\\frac{28348}{8321},\\quad\\frac{28725}{11134},\\quad\n \\frac{3467}{1328}>\\frac52,\\quad\n \\frac{37483}{15020}"
+    },
+    {
+      "id": "own-574",
+      "file": "source-layers.tex",
+      "formula": "prop:own-twentynine-tangent; same source, cap, full tail and ordinary Hilbert series",
+      "snippet": "(e,m)&\\beta_v&a&p&a\\beta_v+p\\\\ \\hline\n (6,2)&4&1149/1000&247/250&698/125\\\\\n (7,3)&11/3&623/500&39/40&16631/3000\\\\\n (7,4)&3&33/25&77/100&473/100\\\\\n (7,5)&13/5&69/50&673/1000&4261/1000\n\\end{array}\n\\text{upper bound for }\\sigma\\\\ \\hline\n6&2&1+z&1&617/3125\\\\\n7&3&1+2z&2&36299/75000\\\\\n7&4&1+2z+z^2&4&517/2500\\\\\n7&5&1+2z+2z^2&6&1569/25000\n\\end{array}\n\\frac{28348}{8321},\\quad\\frac{28725}{11134},\\quad\n \\frac{3467}{1328}>\\frac52,\\quad\n \\frac{37483}{15020}"
+    },
+    {
+      "id": "own-575",
+      "file": "source-layers.tex",
+      "formula": "prop:own-twentynine-tangent; same source, cap, full tail and ordinary Hilbert series",
+      "snippet": "(e,m)&\\beta_v&a&p&a\\beta_v+p\\\\ \\hline\n (6,2)&4&1149/1000&247/250&698/125\\\\\n (7,3)&11/3&623/500&39/40&16631/3000\\\\\n (7,4)&3&33/25&77/100&473/100\\\\\n (7,5)&13/5&69/50&673/1000&4261/1000\n\\end{array}\n\\text{upper bound for }\\sigma\\\\ \\hline\n6&2&1+z&1&617/3125\\\\\n7&3&1+2z&2&36299/75000\\\\\n7&4&1+2z+z^2&4&517/2500\\\\\n7&5&1+2z+2z^2&6&1569/25000\n\\end{array}\n\\frac{28348}{8321},\\quad\\frac{28725}{11134},\\quad\n \\frac{3467}{1328}>\\frac52,\\quad\n \\frac{37483}{15020}"
+    },
+    {
+      "id": "fourfold-29",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-30",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-31",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-32",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-33",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-34",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-35",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-36",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-39",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-40",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-41",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-42",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-45",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; a<=5/3 and p<=42/125",
+      "snippet": "\\text{rows}&(a,p)\\\\ \\hline\n 29,30,31&(3/2,1/4)\\\\\n 32&(5/3,229/1000)\\\\\n 33,34&(3/2,59/200)\\\\\n 35&(783/500,269/1000)\\\\\n 36&(1627/1000,61/250)\\\\\n 39&(5/3,133/500)\\\\\n 40,41&(5/3,131/500)\\\\\n 42&(1627/1000,11/40)\\\\\n 45&(5/3,42/125)\n\\end{array}"
+    },
+    {
+      "id": "fourfold-28",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-37",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-38",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-43",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-44",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-46",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-47",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-48",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "fourfold-49",
+      "file": "source-layers.tex",
+      "formula": "lem:capacities-early-source-types; (a-5/3)_+ cap+p<42/125",
+      "snippet": "\\text{row}&\\beta_v&a&p&(a-a_0)_+\\beta_v+p\\\\ \\hline\n 28&4&7/4&0&1/3\\\\\n 37&1/2&841/500&111/500&689/3000\\\\\n 38&2/9&1733/1000&14/125&1711/13500\\\\\n 43&5/4&841/500&32/125&1651/6000\\\\\n 44&10/9&1733/1000&239/1000&8443/27000\\\\\n 46&8/11&7/4&131/500&5323/16500\\\\\n 47&1/2&931/500&49/250&881/3000\\\\\n 48&4/13&1899/1000&17/100&4709/19500\\\\\n 49&1/7&7/4&1/10&47/420\n\\end{array}"
+    },
+    {
+      "id": "divisor-1",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; m(au-1)/(7a+p-8)>=125(u-1)/73 for u>=1",
+      "snippet": "m&a&p\\\\ \\hline\n 1&1&198/125\\\\\n 2&1123/1000&703/500\\\\\n 3&1201/1000&223/200\\\\\n 4&63/50&121/125\\\\\n 5&327/250&801/1000\\\\\n 6&5/3&42/125\n\\end{array}"
+    },
+    {
+      "id": "divisor-2",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; m(au-1)/(7a+p-8)>=125(u-1)/73 for u>=1",
+      "snippet": "m&a&p\\\\ \\hline\n 1&1&198/125\\\\\n 2&1123/1000&703/500\\\\\n 3&1201/1000&223/200\\\\\n 4&63/50&121/125\\\\\n 5&327/250&801/1000\\\\\n 6&5/3&42/125\n\\end{array}"
+    },
+    {
+      "id": "divisor-3",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; m(au-1)/(7a+p-8)>=125(u-1)/73 for u>=1",
+      "snippet": "m&a&p\\\\ \\hline\n 1&1&198/125\\\\\n 2&1123/1000&703/500\\\\\n 3&1201/1000&223/200\\\\\n 4&63/50&121/125\\\\\n 5&327/250&801/1000\\\\\n 6&5/3&42/125\n\\end{array}"
+    },
+    {
+      "id": "divisor-4",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; m(au-1)/(7a+p-8)>=125(u-1)/73 for u>=1",
+      "snippet": "m&a&p\\\\ \\hline\n 1&1&198/125\\\\\n 2&1123/1000&703/500\\\\\n 3&1201/1000&223/200\\\\\n 4&63/50&121/125\\\\\n 5&327/250&801/1000\\\\\n 6&5/3&42/125\n\\end{array}"
+    },
+    {
+      "id": "divisor-5",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; m(au-1)/(7a+p-8)>=125(u-1)/73 for u>=1",
+      "snippet": "m&a&p\\\\ \\hline\n 1&1&198/125\\\\\n 2&1123/1000&703/500\\\\\n 3&1201/1000&223/200\\\\\n 4&63/50&121/125\\\\\n 5&327/250&801/1000\\\\\n 6&5/3&42/125\n\\end{array}"
+    },
+    {
+      "id": "divisor-6",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; m(au-1)/(7a+p-8)>=125(u-1)/73 for u>=1",
+      "snippet": "m&a&p\\\\ \\hline\n 1&1&198/125\\\\\n 2&1123/1000&703/500\\\\\n 3&1201/1000&223/200\\\\\n 4&63/50&121/125\\\\\n 5&327/250&801/1000\\\\\n 6&5/3&42/125\n\\end{array}"
+    },
+    {
+      "id": "fivefold-3",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; all three branches on [29/25,34/25]",
+      "snippet": "1-2c=\\frac{2000-795u}{1697u},\\qquad\n       \\frac{200-63u}{201u},\\qquad\n       \\frac{2000-427u}{2333u}\n383000-183637u>0,\\qquad69600-42225u>0,\\qquad\n 1019000-689989u>0"
+    },
+    {
+      "id": "fivefold-4",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; all three branches on [29/25,34/25]",
+      "snippet": "1-2c=\\frac{2000-795u}{1697u},\\qquad\n       \\frac{200-63u}{201u},\\qquad\n       \\frac{2000-427u}{2333u}\n383000-183637u>0,\\qquad69600-42225u>0,\\qquad\n 1019000-689989u>0"
+    },
+    {
+      "id": "fivefold-5",
+      "file": "source-layers.tex",
+      "formula": "prop:original-layer-baseline; all three branches on [29/25,34/25]",
+      "snippet": "1-2c=\\frac{2000-795u}{1697u},\\qquad\n       \\frac{200-63u}{201u},\\qquad\n       \\frac{2000-427u}{2333u}\n383000-183637u>0,\\qquad69600-42225u>0,\\qquad\n 1019000-689989u>0"
+    },
+    {
+      "id": "primitive-0",
+      "file": "section.tex",
+      "formula": "cor:capacities-retained-shells; n=7, eta=1 after scaling; j=0 covers the constant part",
+      "snippet": "The leading upper bound is\n\\[\n \\frac{k^n}{n!}\\sum_{j=1}^{t+s}a_j\n            \\big((v-j\\eta)_+^n-(u-j\\eta)_+^n\\big).\n\\]"
+    },
+    {
+      "id": "primitive-1",
+      "file": "section.tex",
+      "formula": "cor:capacities-retained-shells; n=7, eta=1 after scaling; j=0 covers the constant part",
+      "snippet": "The leading upper bound is\n\\[\n \\frac{k^n}{n!}\\sum_{j=1}^{t+s}a_j\n            \\big((v-j\\eta)_+^n-(u-j\\eta)_+^n\\big).\n\\]"
+    },
+    {
+      "id": "primitive-2",
+      "file": "section.tex",
+      "formula": "cor:capacities-retained-shells; n=7, eta=1 after scaling; j=0 covers the constant part",
+      "snippet": "The leading upper bound is\n\\[\n \\frac{k^n}{n!}\\sum_{j=1}^{t+s}a_j\n            \\big((v-j\\eta)_+^n-(u-j\\eta)_+^n\\big).\n\\]"
+    },
+    {
+      "id": "primitive-3",
+      "file": "section.tex",
+      "formula": "cor:capacities-retained-shells; n=7, eta=1 after scaling; j=0 covers the constant part",
+      "snippet": "The leading upper bound is\n\\[\n \\frac{k^n}{n!}\\sum_{j=1}^{t+s}a_j\n            \\big((v-j\\eta)_+^n-(u-j\\eta)_+^n\\big).\n\\]"
+    },
+    {
+      "id": "primitive-4",
+      "file": "section.tex",
+      "formula": "cor:capacities-retained-shells; n=7, eta=1 after scaling; j=0 covers the constant part",
+      "snippet": "The leading upper bound is\n\\[\n \\frac{k^n}{n!}\\sum_{j=1}^{t+s}a_j\n            \\big((v-j\\eta)_+^n-(u-j\\eta)_+^n\\big).\n\\]"
+    },
+    {
+      "id": "crossing-left",
+      "file": "finite-certificate.tex",
+      "formula": "thm:full-primary-capacity; balanced minus coordinate, n=7",
+      "snippet": "c_- =\\frac{16020581569}{90194313216},\\qquad\n c_+ =\\frac{8010290789}{45097156608}"
+    },
+    {
+      "id": "crossing-right",
+      "file": "finite-certificate.tex",
+      "formula": "thm:full-primary-capacity; balanced minus coordinate, n=7",
+      "snippet": "c_- =\\frac{16020581569}{90194313216},\\qquad\n c_+ =\\frac{8010290789}{45097156608}"
+    },
+    {
+      "id": "join-1",
+      "file": "section.tex",
+      "formula": "def:simplex-capacity; n=7, u=1/7, BOTH B branches, not the c=1 override in E",
+      "snippet": "B_{n,c}(u)=\n \\begin{cases}\n 1-(ncu/(c+1))^c,&0\\le u\\le1/n,\\\\\n 1-\\left(\\dfrac{c(n-1)+nu-1}{(c+1)(n-1)}\\right)^c,\n       &1/n\\le u\\le1,\\\\\n 0,&u\\ge1.\n \\end{cases}"
+    },
+    {
+      "id": "join-2",
+      "file": "section.tex",
+      "formula": "def:simplex-capacity; n=7, u=1/7, BOTH B branches, not the c=1 override in E",
+      "snippet": "B_{n,c}(u)=\n \\begin{cases}\n 1-(ncu/(c+1))^c,&0\\le u\\le1/n,\\\\\n 1-\\left(\\dfrac{c(n-1)+nu-1}{(c+1)(n-1)}\\right)^c,\n       &1/n\\le u\\le1,\\\\\n 0,&u\\ge1.\n \\end{cases}"
+    },
+    {
+      "id": "join-3",
+      "file": "section.tex",
+      "formula": "def:simplex-capacity; n=7, u=1/7, BOTH B branches, not the c=1 override in E",
+      "snippet": "B_{n,c}(u)=\n \\begin{cases}\n 1-(ncu/(c+1))^c,&0\\le u\\le1/n,\\\\\n 1-\\left(\\dfrac{c(n-1)+nu-1}{(c+1)(n-1)}\\right)^c,\n       &1/n\\le u\\le1,\\\\\n 0,&u\\ge1.\n \\end{cases}"
+    },
+    {
+      "id": "join-4",
+      "file": "section.tex",
+      "formula": "def:simplex-capacity; n=7, u=1/7, BOTH B branches, not the c=1 override in E",
+      "snippet": "B_{n,c}(u)=\n \\begin{cases}\n 1-(ncu/(c+1))^c,&0\\le u\\le1/n,\\\\\n 1-\\left(\\dfrac{c(n-1)+nu-1}{(c+1)(n-1)}\\right)^c,\n       &1/n\\le u\\le1,\\\\\n 0,&u\\ge1.\n \\end{cases}"
+    },
+    {
+      "id": "join-5",
+      "file": "section.tex",
+      "formula": "def:simplex-capacity; n=7, u=1/7, BOTH B branches, not the c=1 override in E",
+      "snippet": "B_{n,c}(u)=\n \\begin{cases}\n 1-(ncu/(c+1))^c,&0\\le u\\le1/n,\\\\\n 1-\\left(\\dfrac{c(n-1)+nu-1}{(c+1)(n-1)}\\right)^c,\n       &1/n\\le u\\le1,\\\\\n 0,&u\\ge1.\n \\end{cases}"
+    },
+    {
+      "id": "join-6",
+      "file": "section.tex",
+      "formula": "def:simplex-capacity; n=7, u=1/7, BOTH B branches, not the c=1 override in E",
+      "snippet": "B_{n,c}(u)=\n \\begin{cases}\n 1-(ncu/(c+1))^c,&0\\le u\\le1/n,\\\\\n 1-\\left(\\dfrac{c(n-1)+nu-1}{(c+1)(n-1)}\\right)^c,\n       &1/n\\le u\\le1,\\\\\n 0,&u\\ge1.\n \\end{cases}"
+    },
+    {
+      "id": "five-normal-sixth",
+      "file": "capacity-refinements.tex",
+      "formula": "prop:sharper-five-normal-capacity; ordered coordinate,chord,call,B,moment,E,Q5,T5",
+      "snippet": "Q_5(c)=\\max\\left\\{(1-c)^6,\n  1-\\left(\\frac{29-28c}{36-42c}\\right)^5\\right\\},\n\\qquad\nT_5(c)=\\max\\left\\{(1-c)^6,\n \\left(\\frac76\\right)^6\n \\left(\\frac{1-2c}{1-c}\\right)^5\\right\\}.\n\\]"
+    },
+    {
+      "id": "five-normal-third",
+      "file": "capacity-refinements.tex",
+      "formula": "prop:sharper-five-normal-capacity; ordered coordinate,chord,call,B,moment,E,Q5,T5",
+      "snippet": "Q_5(c)=\\max\\left\\{(1-c)^6,\n  1-\\left(\\frac{29-28c}{36-42c}\\right)^5\\right\\},\n\\qquad\nT_5(c)=\\max\\left\\{(1-c)^6,\n \\left(\\frac76\\right)^6\n \\left(\\frac{1-2c}{1-c}\\right)^5\\right\\}.\n\\]"
+    },
+    {
+      "id": "five-normal-half",
+      "file": "capacity-refinements.tex",
+      "formula": "prop:sharper-five-normal-capacity; ordered coordinate,chord,call,B,moment,E,Q5,T5",
+      "snippet": "Q_5(c)=\\max\\left\\{(1-c)^6,\n  1-\\left(\\frac{29-28c}{36-42c}\\right)^5\\right\\},\n\\qquad\nT_5(c)=\\max\\left\\{(1-c)^6,\n \\left(\\frac76\\right)^6\n \\left(\\frac{1-2c}{1-c}\\right)^5\\right\\}.\n\\]"
+    },
+    {
+      "id": "K5-zero",
+      "file": "section.tex",
+      "formula": "thm:spanning-primary-capacity; signed sum, factor two, single-pair; endpoint inclusion explicit",
+      "snippet": "K_5(c)=\n \\begin{cases}\n \\min\\{3(1-2c)_+^6-2(1-3c)_+^6,\\ 2(1-2c)_+^6\\},\n       &0\\le c<4/25,\\\\\n (1-2c)_+^6,&c\\ge4/25.\n \\end{cases}"
+    },
+    {
+      "id": "K5-switch",
+      "file": "section.tex",
+      "formula": "thm:spanning-primary-capacity; signed sum, factor two, single-pair; endpoint inclusion explicit",
+      "snippet": "K_5(c)=\n \\begin{cases}\n \\min\\{3(1-2c)_+^6-2(1-3c)_+^6,\\ 2(1-2c)_+^6\\},\n       &0\\le c<4/25,\\\\\n (1-2c)_+^6,&c\\ge4/25.\n \\end{cases}"
+    },
+    {
+      "id": "K5-half",
+      "file": "section.tex",
+      "formula": "thm:spanning-primary-capacity; signed sum, factor two, single-pair; endpoint inclusion explicit",
+      "snippet": "K_5(c)=\n \\begin{cases}\n \\min\\{3(1-2c)_+^6-2(1-3c)_+^6,\\ 2(1-2c)_+^6\\},\n       &0\\le c<4/25,\\\\\n (1-2c)_+^6,&c\\ge4/25.\n \\end{cases}"
+    }
+  ]
+}

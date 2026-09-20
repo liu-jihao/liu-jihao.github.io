@@ -1,0 +1,320 @@
+{
+  "active_files": [
+    {
+      "bytes": 24123,
+      "path": "check.py",
+      "sha256": "f23c1dfe6ebd41f88bf8f4b372f21ebf4ad7bea5b459d7636af5e2b72157a1ae"
+    },
+    {
+      "bytes": 18186,
+      "path": "data/ambient-boxes.tsv",
+      "sha256": "d9f4d6f3aa324db985a4e662ec9198d928a378cbcefb31b7f74922385bccea86"
+    },
+    {
+      "bytes": 708,
+      "path": "data/ambient-prefix.tsv",
+      "sha256": "2bd4620e828526639a3e89e2b9fddb203db6546b67530958a49436083785aec0"
+    },
+    {
+      "bytes": 1784,
+      "path": "data/identities.tsv",
+      "sha256": "3395e78815ac3c7c8cbaae51ce5264631cafc965ef0edba74d29c14e3b7c8a38"
+    },
+    {
+      "bytes": 260,
+      "path": "data/rank-two-powers.tsv",
+      "sha256": "be297dd7cd1b2e54b9f679f1e93173dced7c297a39db34d113d87078a3e24a34"
+    },
+    {
+      "bytes": 1951,
+      "path": "data/rank-two-prices.tsv",
+      "sha256": "2c2afc2fa7ceafb3d9a6eb143bddc54189df75e11d968a08abdada9abadb58c9"
+    },
+    {
+      "bytes": 1698,
+      "path": "data/states.tsv",
+      "sha256": "8a94c4ad6d64f8e222aff5af93e7ba4fe2023a1bf242efe19153f26449108fe8"
+    },
+    {
+      "bytes": 1230,
+      "path": "data/transitions.tsv",
+      "sha256": "2af14743d19b370a252327d36a4dd54b0a1a47bf827c1fac75abaeb4e90ce5e8"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-18-intrinsic-double.json",
+  "families": [
+    {
+      "data_files": [
+        "data/states.tsv"
+      ],
+      "id": "18-intrinsic-double/scalar",
+      "specification": {
+        "domain": "All 28 positive first-cap states with 1<=d<=4 and e<=6; full dimension skips and moment restrictions.",
+        "files": [
+          "data/states.tsv"
+        ],
+        "finite_reduction": "T(c,m)>=L(m-H), L=floor(d/2)+1, H=binomial(c+L-1,L-1), so positive cap implies m<LH/(L-d/2).",
+        "id": "18-intrinsic-double/scalar",
+        "labels": [
+          "lem:intrinsic-double-prices",
+          "thm:intrinsic-double-sources"
+        ],
+        "numeric_columns_checked": 6,
+        "special_cases": [
+          "cubic P_theta is the whole affine price",
+          "direct quartic-threefold P_lambda uses cap one",
+          "embedding-six multiplicities eight and nine retained"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/transitions.tsv"
+      ],
+      "id": "18-intrinsic-double/transitions",
+      "specification": {
+        "additional_checked_cases": [
+          "degree-two interval",
+          "degree-at-least-three kernel"
+        ],
+        "endpoints": [
+          "1731/2000",
+          "22/25",
+          "9/10",
+          "23/25",
+          "47/50",
+          "24/25",
+          "49/50",
+          "1",
+          "21/20"
+        ],
+        "files": [
+          "data/transitions.tsv"
+        ],
+        "id": "18-intrinsic-double/transitions",
+        "labels": [
+          "thm:intrinsic-double-sources"
+        ],
+        "reserve_at_every_reached_source": ">1/1000"
+      }
+    },
+    {
+      "data_files": [
+        "data/rank-two-prices.tsv",
+        "data/rank-two-powers.tsv"
+      ],
+      "id": "18-intrinsic-double/rank-two",
+      "specification": {
+        "all_exponent_reduction": "Smooth-power M>=10 is already paid by y<=2+1/M<=21/10; on [3,9], (9-M)(7M-17)>=0 gives the exact uniform shift. Other factorization cases and quartic shifts are described in README and the archived full source.",
+        "exceptional_exponents": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "files": [
+          "data/rank-two-prices.tsv",
+          "data/rank-two-powers.tsv"
+        ],
+        "id": "18-intrinsic-double/rank-two",
+        "labels": [
+          "thm:factorial-double-endpoint",
+          "thm:rank-two-symbolic"
+        ],
+        "mass_margins": {
+          "companion": ">1/250",
+          "factorial": ">1/250"
+        },
+        "price_columns_checked": 4,
+        "principal_interval_scope": "Every fixed analytic D>=3, all principal primes and integer fixed orders, both positive weights summing to two; uniform error at fixed D."
+      }
+    },
+    {
+      "data_files": [
+        "data/ambient-prefix.tsv",
+        "data/ambient-boxes.tsv"
+      ],
+      "id": "18-intrinsic-double/ambient",
+      "specification": {
+        "bounded_domain": [
+          [
+            "263/1800",
+            "3"
+          ],
+          [
+            "5399983/18360000",
+            "20"
+          ]
+        ],
+        "coverage": "Containment, disjoint interiors, exact area, every open strip and every endpoint fiber; all rectangles are closed.",
+        "coverage_fibers": 29,
+        "denominator": 1000000000,
+        "files": [
+          "data/ambient-prefix.tsv",
+          "data/ambient-boxes.tsv"
+        ],
+        "geometric_scope": "Volume >1/10 is earned in the actual nongeneration/own-27-large-deficit initial-fourfold history only; all finite-degree errors remain in the article.",
+        "id": "18-intrinsic-double/ambient",
+        "integration_cells_reconstructed": 31627,
+        "labels": [
+          "def:intrinsic-double-ambient-certificate",
+          "lem:intrinsic-double-ambient-certificate",
+          "prop:initial-fourfold-history"
+        ],
+        "margin_below_nine_tenths": "107077/1000000000",
+        "maximum_numerator": 899892923,
+        "prefix_domain": [
+          "263/1800",
+          "3"
+        ],
+        "rounding": "N=floor(10^9*U)+1; strict even at an integral scaled value",
+        "unbounded_numerators": [
+          627860905,
+          898876676
+        ],
+        "unbounded_ranges": [
+          "a0>=3",
+          "a0<=3,a1>=20"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/identities.tsv"
+      ],
+      "id": "18-intrinsic-double/identities",
+      "specification": {
+        "count": 40,
+        "eta_grouped_price": "7982791/999000",
+        "eta_post_error_margin": "821/99900",
+        "files": [
+          "data/identities.tsv"
+        ],
+        "id": "18-intrinsic-double/identities",
+        "other_terminal_margins": [
+          "incoming <2/3",
+          "outgoing <7/50",
+          "large-slope loss <1/100",
+          "divisorial loss <3/50",
+          "new height >341/1000"
+        ],
+        "verification": "Exact key set and each value recomputed independently"
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "article_label": "sec:18-intrinsic-double",
+    "format": {
+      "allowed_bytes": "TAB (09), LF (0a), and printable ASCII (20--7e) only; field grammars impose their additional canonical restrictions.",
+      "delimiter": "tab",
+      "duplicate_or_conflicting_keys": "reject",
+      "encoding": "ASCII",
+      "integers": "canonical nonnegative decimal",
+      "line_endings": "LF, including final record",
+      "non_lf_separators": "Reject every other control/non-ASCII byte before parsing; split records only on LF, with a required final LF.",
+      "rational": "canonical reduced numerator/positive-denominator, or integer",
+      "unknown_files_rows_columns_or_names": "reject"
+    },
+    "parameters": {
+      "ambient_anchors": [
+        "9/10",
+        "27/25",
+        "29/25"
+      ],
+      "ambient_epsilon": "1/1000000",
+      "ambient_feasibility": "a0>=263/1800 and a1>=eta(a0)/(27/25)",
+      "ambient_h0": "263/2000",
+      "ambient_h1": "5399983/17000000",
+      "ambient_link": "eta(a0)=max(h1,h0+(27/25-9/10)*a0-epsilon)",
+      "factorial_terminal": "999/1000",
+      "lambda": "1731/2000",
+      "main_deficit_cap": "18/5",
+      "r0": "25/27",
+      "rank_two_companion_deficit_cap": "3",
+      "rank_two_companion_terminal": "19/20",
+      "theta_main": "21/20"
+    }
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "18-intrinsic-double",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/states.tsv"
+      ],
+      "family": "18-intrinsic-double/scalar",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3672c410c8058c7d",
+        "fact:f11d050017547cce",
+        "fact:76985786d28d48fb"
+      ],
+      "source_version": "3672c410c8058c7d@sha256:441964c68b6375ac186b3370a40ac692d89c7f2c8de7d9a0624d25a49b4eb424; 3672c410c8058c7d@sha256:49ad0ffc421e5198acdbf779de25648b74583eeefc4ba0c76672f38f86f6ee0d; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; 76985786d28d48fb@sha256:6f44efd5c3557a590272937ba8ad0f0523458ebf19a631ac51c44f5d120ce766; f11d050017547cce@sha256:1798cfda8ed68a70bc3ff8f25acefc9965b37c0429b23be3842f3816d9637da7"
+    },
+    {
+      "data_files": [
+        "data/transitions.tsv"
+      ],
+      "family": "18-intrinsic-double/transitions",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3672c410c8058c7d",
+        "fact:76985786d28d48fb"
+      ],
+      "source_version": "3672c410c8058c7d@sha256:441964c68b6375ac186b3370a40ac692d89c7f2c8de7d9a0624d25a49b4eb424; 3672c410c8058c7d@sha256:49ad0ffc421e5198acdbf779de25648b74583eeefc4ba0c76672f38f86f6ee0d; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; 76985786d28d48fb@sha256:6f44efd5c3557a590272937ba8ad0f0523458ebf19a631ac51c44f5d120ce766"
+    },
+    {
+      "data_files": [
+        "data/rank-two-prices.tsv",
+        "data/rank-two-powers.tsv"
+      ],
+      "family": "18-intrinsic-double/rank-two",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:18f1709d5500eb00"
+      ],
+      "source_version": "18f1709d5500eb00@sha256:8a05c6adac443271e3b8ca396d279c4f1dc62ef07e3924e7b99289ebb9ed84d4"
+    },
+    {
+      "data_files": [
+        "data/ambient-prefix.tsv",
+        "data/ambient-boxes.tsv"
+      ],
+      "family": "18-intrinsic-double/ambient",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3672c410c8058c7d"
+      ],
+      "source_version": "3672c410c8058c7d@sha256:441964c68b6375ac186b3370a40ac692d89c7f2c8de7d9a0624d25a49b4eb424; 3672c410c8058c7d@sha256:49ad0ffc421e5198acdbf779de25648b74583eeefc4ba0c76672f38f86f6ee0d; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138"
+    },
+    {
+      "data_files": [
+        "data/identities.tsv"
+      ],
+      "family": "18-intrinsic-double/identities",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:3672c410c8058c7d",
+        "fact:18f1709d5500eb00"
+      ],
+      "source_version": "3672c410c8058c7d@sha256:441964c68b6375ac186b3370a40ac692d89c7f2c8de7d9a0624d25a49b4eb424; 3672c410c8058c7d@sha256:49ad0ffc421e5198acdbf779de25648b74583eeefc4ba0c76672f38f86f6ee0d; 18f1709d5500eb00@sha256:8a05c6adac443271e3b8ca396d279c4f1dc62ef07e3924e7b99289ebb9ed84d4; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138"
+    }
+  ],
+  "source_owner_manifest_sha256": "f07e2928f5a588ecf7c2da62efc781e454daded4137b8df682ade6ca71559727"
+}

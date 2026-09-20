@@ -1,0 +1,286 @@
+{
+  "active_files": [
+    {
+      "bytes": 24994,
+      "path": "check.py",
+      "sha256": "5e19d8a7dafe8e9cc2236516f865e440b22ea5607863a06b1b99fb9453692dfd"
+    },
+    {
+      "bytes": 2772,
+      "path": "data/incidence.json",
+      "sha256": "acc60fc0ed3d5583718bcc91a74012b742a6889ba3a28fb0ed2a8965e266832f"
+    },
+    {
+      "bytes": 283469,
+      "path": "data/retained-divisor.json",
+      "sha256": "afe24768776500f986f7a00a71529b9c17ef5426a8d712f70dbee6a2d3b3bc27"
+    },
+    {
+      "bytes": 25729,
+      "path": "data/scalar-tail.json",
+      "sha256": "e89215da768c69cb85702a135c7797c2d011dd172d472b4af1687cd2d67a0c1c"
+    },
+    {
+      "bytes": 160840,
+      "path": "data/two-profile.json",
+      "sha256": "39bf60adcf91126c31cca733b72da2b3c6c2f8592f1081adb4886e6a12791d8c"
+    },
+    {
+      "bytes": 6846,
+      "path": "data/volume-two.json",
+      "sha256": "bdb75829c584d5289b3bc1844ded6854dc06d0a78d08864d4d96f83fed971eee"
+    },
+    {
+      "bytes": 7657,
+      "path": "incidence.py",
+      "sha256": "a73b4704c7c77eb5cc42e530999d3a16403d1f88fc2cdac4390e08fb45b73688"
+    },
+    {
+      "bytes": 8319,
+      "path": "retained.py",
+      "sha256": "71728000597a623eacd1134a6760f889ef0a7a81fc6e7940ea4a280ebfba5e13"
+    },
+    {
+      "bytes": 8870,
+      "path": "two_profile.py",
+      "sha256": "c2ac3ccd47604ee64c780b442c4b4bc287ae370f80762fdd323b6f3625155c45"
+    },
+    {
+      "bytes": 378,
+      "path": "views/incidence-incoming.tex",
+      "sha256": "ec604abe06de221fcc959a08b777d2447440506951baf2feeff00045f9c73a96"
+    },
+    {
+      "bytes": 1099,
+      "path": "views/incidence-outgoing.tex",
+      "sha256": "f7bcb69e2b17a146fdeb1f94185e57efe20b1584886e7f264bec03641533dfc1"
+    },
+    {
+      "bytes": 296,
+      "path": "views/retained-totals.tex",
+      "sha256": "53c12142bc636e3426f04732abfdd1997e8a7239518d36bf1c98310f8ba78ad4"
+    },
+    {
+      "bytes": 13844,
+      "path": "volume_scalar.py",
+      "sha256": "81055e4ef177e961b7e6ca6c1dca39d1d0603a7d5fedc0e16ee9f865d8020d9f"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-09-original-sources.json",
+  "families": [
+    {
+      "data_files": [
+        "data/scalar-tail.json"
+      ],
+      "id": "09-original-sources/scalar-tail",
+      "specification": {
+        "article_label": "lem:original-sources-smooth-tail",
+        "bytes": 25729,
+        "domain": "All positive-deficit seven-dimensional ambient scalar states; all adjacent and skipped-dimensional successors.",
+        "expected_counts": {
+          "affine_lines": 253,
+          "states": 71
+        },
+        "file": "data/scalar-tail.json",
+        "id": "09-original-sources/scalar-tail",
+        "sha256": "e89215da768c69cb85702a135c7797c2d011dd172d472b4af1687cd2d67a0c1c"
+      }
+    },
+    {
+      "data_files": [
+        "data/volume-two.json"
+      ],
+      "id": "09-original-sources/volume-two",
+      "specification": {
+        "article_label": "lem:original-sources-larger-loss",
+        "bytes": 6846,
+        "domain": "D: [0,7/10]; H: [0,17/25]; L: [17/25,infinity); all shared endpoints and endpoint comparisons.",
+        "expected_counts": {
+          "coefficients": 90,
+          "endpoint_differences": 4,
+          "identities": 7,
+          "rounding_differences": 4
+        },
+        "file": "data/volume-two.json",
+        "id": "09-original-sources/volume-two",
+        "sha256": "bdb75829c584d5289b3bc1844ded6854dc06d0a78d08864d4d96f83fed971eee"
+      }
+    },
+    {
+      "data_files": [
+        "data/two-profile.json"
+      ],
+      "id": "09-original-sources/two-profile",
+      "specification": {
+        "article_label": "lem:original-sources-two-profile-loss",
+        "bytes": 160840,
+        "domain": "Order [0,27/25]; full positive old/new supporting slope domains including both unbounded half-lines; Q/M/D separately.",
+        "expected_counts": {
+          "bounded_cells": 999,
+          "cells": 1031,
+          "families": 3,
+          "rectangles": 119,
+          "splits": 44,
+          "unbounded_cells": 32
+        },
+        "file": "data/two-profile.json",
+        "id": "09-original-sources/two-profile",
+        "sha256": "39bf60adcf91126c31cca733b72da2b3c6c2f8592f1081adb4886e6a12791d8c"
+      }
+    },
+    {
+      "data_files": [
+        "data/incidence.json"
+      ],
+      "id": "09-original-sources/incidence",
+      "specification": {
+        "article_label": "lem:original-sources-prime-incidence",
+        "bytes": 2772,
+        "domain": "a in [263/1800,3]; incoming d=241/100; outgoing d in [241/100,5]; full affine order partitions.",
+        "expected_counts": {
+          "incoming_rows": 9,
+          "outgoing_rows": 21
+        },
+        "file": "data/incidence.json",
+        "id": "09-original-sources/incidence",
+        "sha256": "acc60fc0ed3d5583718bcc91a74012b742a6889ba3a28fb0ed2a8965e266832f"
+      }
+    },
+    {
+      "data_files": [
+        "data/retained-divisor.json"
+      ],
+      "id": "09-original-sources/retained-divisor",
+      "specification": {
+        "article_label": "lem:original-sources-twentysix-nondivisorial",
+        "bytes": 283469,
+        "domain": "Both floors F3 and zero, all a in [263/1800,3], beta in [3/5,1], order in [0,26/25].",
+        "expected_counts": {
+          "B_cells": 622,
+          "S_cells": 477,
+          "beta_intervals": 16,
+          "cells": 1099,
+          "coefficient_inequalities": 69664,
+          "slope_rows": 14
+        },
+        "file": "data/retained-divisor.json",
+        "id": "09-original-sources/retained-divisor",
+        "sha256": "afe24768776500f986f7a00a71529b9c17ef5426a8d712f70dbee6a2d3b3bc27"
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "checker_modules": {
+      "check.py": {
+        "bytes": 24994,
+        "sha256": "5e19d8a7dafe8e9cc2236516f865e440b22ea5607863a06b1b99fb9453692dfd"
+      },
+      "incidence.py": {
+        "bytes": 7657,
+        "sha256": "a73b4704c7c77eb5cc42e530999d3a16403d1f88fc2cdac4390e08fb45b73688"
+      },
+      "retained.py": {
+        "bytes": 8319,
+        "sha256": "71728000597a623eacd1134a6760f889ef0a7a81fc6e7940ea4a280ebfba5e13"
+      },
+      "two_profile.py": {
+        "bytes": 8870,
+        "sha256": "c2ac3ccd47604ee64c780b442c4b4bc287ae370f80762fdd323b6f3625155c45"
+      },
+      "volume_scalar.py": {
+        "bytes": 13844,
+        "sha256": "81055e4ef177e961b7e6ca6c1dca39d1d0603a7d5fedc0e16ee9f865d8020d9f"
+      }
+    },
+    "dependencies": "Python standard library only",
+    "derived_views": {
+      "views/incidence-incoming.tex": {
+        "bytes": 378,
+        "sha256": "ec604abe06de221fcc959a08b777d2447440506951baf2feeff00045f9c73a96"
+      },
+      "views/incidence-outgoing.tex": {
+        "bytes": 1099,
+        "sha256": "f7bcb69e2b17a146fdeb1f94185e57efe20b1584886e7f264bec03641533dfc1"
+      },
+      "views/retained-totals.tex": {
+        "bytes": 296,
+        "sha256": "53c12142bc636e3426f04732abfdd1997e8a7239518d36bf1c98310f8ba78ad4"
+      }
+    }
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "09-original-sources",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/scalar-tail.json"
+      ],
+      "family": "09-original-sources/scalar-tail",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:35523aa031bc3c4a",
+        "fact:4f892d3c92b38b34",
+        "fact:e90ebe0551ce2c0f"
+      ],
+      "source_version": "35523aa031bc3c4a@sha256:f06e2e892e4c166a08dd4b051fc313e0028a8b91951f65c7f77acb8f752b0197; 4f892d3c92b38b34@sha256:2d2d6899d6541186c6c06e6721009a90c97f9f62f4a2f9b8e17ba03952c33c39; e90ebe0551ce2c0f@sha256:f1f0805990723c783a1d5b7475247deabe7f8a77085a2dbd713e72ac31d8cb1e"
+    },
+    {
+      "data_files": [
+        "data/volume-two.json"
+      ],
+      "family": "09-original-sources/volume-two",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:2f4a6067dfb919f9"
+      ],
+      "source_version": "2f4a6067dfb919f9@sha256:26129968d3a25f6ebbf2c7c49abcc4464145412b5518f374da6a68e3e9b4e450"
+    },
+    {
+      "data_files": [
+        "data/two-profile.json"
+      ],
+      "family": "09-original-sources/two-profile",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:5e2539183abea272"
+      ],
+      "source_version": "5e2539183abea272@sha256:2581c0e2ac124009818ba76416ea2d677879136b5727dec0afc23bcfe9b45b34; 5e2539183abea272@sha256:e4c0982f75920ea30dbd9c0d1bda62049544f29e4261f2e47cb277ca993280b3"
+    },
+    {
+      "data_files": [
+        "data/incidence.json"
+      ],
+      "family": "09-original-sources/incidence",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:93800b479bb382ce"
+      ],
+      "source_version": "93800b479bb382ce@sha256:9cbb196d88c8668e65d69fa0cf0e7bb62ed073f73b6e87896a7b9e8bc5d99783"
+    },
+    {
+      "data_files": [
+        "data/retained-divisor.json"
+      ],
+      "family": "09-original-sources/retained-divisor",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:29467d401ea8b3df"
+      ],
+      "source_version": "29467d401ea8b3df@sha256:55e1e0295fa5ae8f40330437b0971b1a89b6435d4f3461fa801ac7eee6b40698"
+    }
+  ],
+  "source_owner_manifest_sha256": "03a6ee37da3fa44ef2901babcd0ea8466ca7eb021a586e689654138a5b798dcc"
+}

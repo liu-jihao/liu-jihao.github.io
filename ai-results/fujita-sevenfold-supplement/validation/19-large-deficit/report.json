@@ -1,0 +1,86 @@
+{
+  "arithmetic": "exact rational",
+  "checker": "19-large-deficit/paired-profile-v1",
+  "data_sha256": "7254df1bd63b5fe3cb2761eadfc9e3919e36b05d83e14c594a308012ec75ba23",
+  "families": [
+    {
+      "boxes": 301,
+      "branch_differences": [
+        "18435717794342529388192664900022111/302231454903657293676544000000000000000000",
+        "-2065795968585910646530153649/79228162514264337593543950336000000"
+      ],
+      "call_pairs": 9,
+      "chord_pairs": 6,
+      "closed_feasible_dimensions": {
+        "area": 301
+      },
+      "degenerate_clipping_checks": [
+        "empty",
+        "segment",
+        "point"
+      ],
+      "density_counts": {
+        "B1": 294,
+        "B11/25": 276,
+        "B17/50": 448,
+        "Nb": 321,
+        "Ne": 593,
+        "Ns": 284,
+        "Oc": 2,
+        "Oe": 3,
+        "Oh": 585,
+        "Ok2": 34,
+        "Ok3": 97,
+        "Ok4": 158,
+        "Ok5": 28,
+        "Ok6": 9,
+        "Ok7": 6,
+        "Ok8": 4,
+        "Ol": 292,
+        "Oq0": 284,
+        "Oq1": 284,
+        "Oq2": 267
+      },
+      "excess_over_1_10000": "5597523/1000000000000",
+      "finite_rows": 4258,
+      "id": "19-large-deficit/paired-profile-v1",
+      "incoming_caps": 7,
+      "linked_height_floor": "19574881/57375000",
+      "max_total": "999894402477/1000000000000",
+      "min_box_gap_to_9999_10000": "5597523/1000000000000",
+      "min_row_rounding_gap": "75990598027612630309836934928978022130569248471669048136306252040011060146827559757037459156377854059720352555037660947628145649/60058620600456259767471391823725907289755859768766549652788952288939085967320938255019896164317903244492800000000000000000000000000000000000000",
+      "root": [
+        "263/1800",
+        "3",
+        "5399983/18360000",
+        "20"
+      ],
+      "root_area": "1858566687329/33048000000",
+      "small_slope_incoming": "315891331947925570507/500000000000000000000",
+      "small_slope_outgoing": "7860756587864860626248390838442045303558341047/59119162918550643946713187123828125000000000000",
+      "source_reserve": "105597523/1000000000000",
+      "tested_interface": [
+        "strict total parsing, exact expected indices and counts",
+        "all row domains and positive parts, rational integrals and upper rounding",
+        "incoming/outgoing partitions, same-height reserve, all box sums",
+        "closed root bisection and complete unique leaves, feasible boundary strata",
+        "both unbounded slope ranges and terminal source inequalities"
+      ],
+      "total_integral_records": 4269,
+      "tree_internal_nodes": 300,
+      "tree_leaves": 301,
+      "tree_max_depth": 18,
+      "unbounded_a_bound": "133409848899/200000000000",
+      "unbounded_a_rows": 11,
+      "unbounded_delta_bound": "7614206185920496342652890748751684889673075870018673/7796434787000000000000000000000000000000000000000000",
+      "worst_boxes": [
+        215
+      ],
+      "zero_integrals": 0,
+      "zero_reserves": 1
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Certificate arithmetic and coverage; geometric applicability is proved in the article.",
+  "status": "pass"
+}

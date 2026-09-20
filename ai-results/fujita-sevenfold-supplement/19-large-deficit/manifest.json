@@ -1,0 +1,159 @@
+{
+  "active_files": [
+    {
+      "bytes": 24494,
+      "path": "check.py",
+      "sha256": "2d1ce3045c9464ce2a0a8effca14e412f13227880d38114abd2cbdd6b8d83955"
+    },
+    {
+      "bytes": 292661,
+      "path": "data/paired-profile.txt",
+      "sha256": "7254df1bd63b5fe3cb2761eadfc9e3919e36b05d83e14c594a308012ec75ba23"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-19-large-deficit.json",
+  "families": [
+    {
+      "data_files": [
+        "data/paired-profile.txt"
+      ],
+      "id": "19-large-deficit/paired-profile-v1",
+      "specification": {
+        "conclusions": {
+          "consumed_reserve": "strictly greater than 1/10000",
+          "gap_below_9999_10000": "5597523/1000000000000",
+          "maximum_total": "999894402477/1000000000000",
+          "source_reserve": "105597523/1000000000000",
+          "unbounded_a_printed_rounding": "667049244496/1000000000000",
+          "unbounded_a_row_upper_sum": "667049244495/1000000000000",
+          "worst_box": 215
+        },
+        "constants": {
+          "H": "5399983/17000000",
+          "R": "13/5",
+          "T": "29/25",
+          "epsilon": "1/1000000",
+          "h": "263/2000",
+          "r": "9/10",
+          "v": "27/25"
+        },
+        "data": "data/paired-profile.txt",
+        "degeneracies": "Closed endpoints retained; no empty leaf is discarded; all 301 feasible intersections have area; empty/segment/point clipping conventions explicitly checked.",
+        "density_dictionary": [
+          "B0",
+          "B1",
+          "B61/100",
+          "B11/25",
+          "B17/50",
+          "Ol",
+          "Oh",
+          "Oc",
+          "Oe",
+          "Oq0",
+          "Oq1",
+          "Oq2",
+          "Oq3",
+          "Oq4",
+          "Oq5",
+          "Ok0",
+          "Ok1",
+          "Ok2",
+          "Ok3",
+          "Ok4",
+          "Ok5",
+          "Ok6",
+          "Ok7",
+          "Ok8",
+          "Nb",
+          "Ne",
+          "Ns",
+          "Z"
+        ],
+        "error_policy": {
+          "geometric_layer_error": "uniform O(q^6), proved in the article",
+          "integral": "strict exact rational upper bound N/10^12",
+          "numerical_tolerance": "none",
+          "profile_epsilon": "1/1000000, retained in eta and full linked height",
+          "reserve": "weak exact rational upper bound R_Q/10^12"
+        },
+        "feasible_constraints": [
+          "a>=h/r",
+          "v*delta>=H",
+          "v*delta>=h+(v-r)*a-epsilon"
+        ],
+        "finite_root": [
+          [
+            "263/1800",
+            "3"
+          ],
+          [
+            "5399983/18360000",
+            "20"
+          ]
+        ],
+        "format": "strict ordered UTF-8 LF rational certificate, version 1",
+        "id": "19-large-deficit/paired-profile-v1",
+        "legacy_notation": {
+          "B0": "7t^6, the same density as B1",
+          "d": "delta",
+          "d_lower": "delta_-",
+          "eta": "eta_-"
+        },
+        "record_counts": {
+          "boxes": 301,
+          "call_pairs": 9,
+          "chord_pairs": 6,
+          "finite_integral_rows": 4258,
+          "incoming_caps": 7,
+          "total_integral_rows": 4269,
+          "tree_internal_nodes": 300,
+          "tree_leaves": 301,
+          "unbounded_a_rows": 11
+        },
+        "tails": [
+          "a>=3",
+          "delta>=20"
+        ],
+        "terminal_checks": [
+          "initial 5/38 height slack",
+          "full linked height above 341/1000",
+          "both small-slope exact integrals and crossing/positive-part conditions"
+        ]
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "article": {
+      "correctness_label": "lem:large-deficit-certificate-correctness",
+      "definition_label": "def:large-deficit-certificate",
+      "inequality_label": "lem:large-deficit-integral-certificate",
+      "path": "../../src/sections/19-large-deficit/section.tex",
+      "row_rule_label": "eq:large-deficit-row-rule",
+      "shared_labels": [
+        "thm:large-deficit-original",
+        "prop:linked-volume-reserve"
+      ]
+    }
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "19-large-deficit",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/paired-profile.txt"
+      ],
+      "family": "19-large-deficit/paired-profile-v1",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:d1365094ccce72cf"
+      ],
+      "source_version": "d1365094ccce72cf@sha256:7254df1bd63b5fe3cb2761eadfc9e3919e36b05d83e14c594a308012ec75ba23; d1365094ccce72cf@sha256:850db86ff379b839972a61f25bcb6545aadecd5125888ee7b5df68ce91a9b919"
+    }
+  ],
+  "source_owner_manifest_sha256": "c548216bce2ac29bb4a0472e895cbf29121a32f6764f4699694566d01a2724de"
+}

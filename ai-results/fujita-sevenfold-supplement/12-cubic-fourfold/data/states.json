@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "family": "12-cubic-fourfold/states",
+  "rows": [
+    {
+      "state": [
+        1,
+        1,
+        1
+      ],
+      "moment": 0,
+      "intrinsic_cap": "1",
+      "root_cap": "1",
+      "radius": "1"
+    },
+    {
+      "state": [
+        2,
+        2,
+        1
+      ],
+      "moment": 0,
+      "intrinsic_cap": "2",
+      "root_cap": "2",
+      "radius": "1"
+    },
+    {
+      "state": [
+        2,
+        3,
+        2
+      ],
+      "moment": 1,
+      "intrinsic_cap": "1",
+      "root_cap": "1",
+      "radius": "283/200"
+    },
+    {
+      "state": [
+        2,
+        4,
+        3
+      ],
+      "moment": 2,
+      "intrinsic_cap": "2/3",
+      "root_cap": "2/3",
+      "radius": "1733/1000"
+    },
+    {
+      "state": [
+        2,
+        5,
+        4
+      ],
+      "moment": 3,
+      "intrinsic_cap": "1/2",
+      "root_cap": "1/2",
+      "radius": "2"
+    },
+    {
+      "state": [
+        2,
+        6,
+        5
+      ],
+      "moment": 4,
+      "intrinsic_cap": "2/5",
+      "root_cap": "2/5",
+      "radius": "2237/1000"
+    },
+    {
+      "state": [
+        3,
+        3,
+        1
+      ],
+      "moment": 0,
+      "intrinsic_cap": "3",
+      "root_cap": "7/3",
+      "radius": "1"
+    },
+    {
+      "state": [
+        3,
+        4,
+        2
+      ],
+      "moment": 1,
+      "intrinsic_cap": "2",
+      "root_cap": "2",
+      "radius": "63/50"
+    },
+    {
+      "state": [
+        3,
+        4,
+        3
+      ],
+      "moment": 3,
+      "intrinsic_cap": "1",
+      "root_cap": "1",
+      "radius": "1443/1000"
+    },
+    {
+      "state": [
+        3,
+        5,
+        3
+      ],
+      "moment": 2,
+      "intrinsic_cap": "5/3",
+      "root_cap": "5/3",
+      "radius": "1443/1000"
+    },
+    {
+      "state": [
+        3,
+        5,
+        4
+      ],
+      "moment": 4,
+      "intrinsic_cap": "1",
+      "root_cap": "1",
+      "radius": "397/250"
+    },
+    {
+      "state": [
+        3,
+        5,
+        5
+      ],
+      "moment": 6,
+      "intrinsic_cap": "3/5",
+      "root_cap": "3/5",
+      "radius": "171/100"
+    },
+    {
+      "state": [
+        3,
+        5,
+        6
+      ],
+      "moment": 8,
+      "intrinsic_cap": "1/3",
+      "root_cap": "1/3",
+      "radius": "909/500"
+    },
+    {
+      "state": [
+        3,
+        6,
+        4
+      ],
+      "moment": 3,
+      "intrinsic_cap": "3/2",
+      "root_cap": "4/3",
+      "radius": "397/250"
+    },
+    {
+      "state": [
+        3,
+        6,
+        5
+      ],
+      "moment": 5,
+      "intrinsic_cap": "1",
+      "root_cap": "1",
+      "radius": "171/100"
+    },
+    {
+      "state": [
+        3,
+        6,
+        6
+      ],
+      "moment": 7,
+      "intrinsic_cap": "2/3",
+      "root_cap": "2/3",
+      "radius": "909/500"
+    },
+    {
+      "state": [
+        3,
+        6,
+        7
+      ],
+      "moment": 9,
+      "intrinsic_cap": "3/7",
+      "root_cap": "1/3",
+      "radius": "1913/1000"
+    },
+    {
+      "state": [
+        3,
+        6,
+        8
+      ],
+      "moment": 11,
+      "intrinsic_cap": "1/4",
+      "root_cap": "0",
+      "radius": "2"
+    },
+    {
+      "state": [
+        3,
+        6,
+        9
+      ],
+      "moment": 13,
+      "intrinsic_cap": "1/9",
+      "root_cap": "-1/3",
+      "radius": "2081/1000"
+    }
+  ],
+  "first_excluded": [
+    {
+      "state": [
+        2,
+        3,
+        3
+      ],
+      "moment": 3,
+      "cap": "0"
+    },
+    {
+      "state": [
+        2,
+        4,
+        4
+      ],
+      "moment": 4,
+      "cap": "0"
+    },
+    {
+      "state": [
+        2,
+        5,
+        5
+      ],
+      "moment": 5,
+      "cap": "0"
+    },
+    {
+      "state": [
+        2,
+        6,
+        6
+      ],
+      "moment": 6,
+      "cap": "0"
+    },
+    {
+      "state": [
+        3,
+        4,
+        4
+      ],
+      "moment": 6,
+      "cap": "0"
+    },
+    {
+      "state": [
+        3,
+        5,
+        7
+      ],
+      "moment": 11,
+      "cap": "-1/7"
+    },
+    {
+      "state": [
+        3,
+        6,
+        10
+      ],
+      "moment": 15,
+      "cap": "0"
+    }
+  ],
+  "embedding_seven": [
+    {
+      "state": [
+        3,
+        7,
+        8
+      ],
+      "moment": 10,
+      "cap": "1/2"
+    },
+    {
+      "state": [
+        3,
+        7,
+        9
+      ],
+      "moment": 12,
+      "cap": "1/3"
+    }
+  ]
+}

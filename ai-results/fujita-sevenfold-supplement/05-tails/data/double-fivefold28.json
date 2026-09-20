@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "family": "05-tails/double-fivefold28",
+  "parameters": {
+    "degree_floor": "1",
+    "root_grid": 1000,
+    "curve": "smooth-only",
+    "parent_state": [
+      5,
+      6,
+      2
+    ],
+    "parent_moment": 1,
+    "support_slope": "50/49",
+    "cap_rule": "first-successor-only"
+  },
+  "rows": [
+    {
+      "id": 1,
+      "ambient_id": 1,
+      "state": [
+        1,
+        1,
+        1
+      ],
+      "moment": 0,
+      "intrinsic_cap": "1",
+      "first_cap": "1",
+      "radius": "1",
+      "support": "0"
+    },
+    {
+      "id": 2,
+      "ambient_id": 2,
+      "state": [
+        2,
+        2,
+        1
+      ],
+      "moment": 0,
+      "intrinsic_cap": "2",
+      "first_cap": "2",
+      "radius": "1",
+      "support": "0"
+    },
+    {
+      "id": 3,
+      "ambient_id": 3,
+      "state": [
+        2,
+        3,
+        2
+      ],
+      "moment": 1,
+      "intrinsic_cap": "1",
+      "first_cap": "1",
+      "radius": "283/200",
+      "support": "3867/9800"
+    },
+    {
+      "id": 4,
+      "ambient_id": 4,
+      "state": [
+        2,
+        4,
+        3
+      ],
+      "moment": 2,
+      "intrinsic_cap": "2/3",
+      "first_cap": "2/3",
+      "radius": "1733/1000",
+      "support": "11639/24500"
+    },
+    {
+      "id": 5,
+      "ambient_id": 5,
+      "state": [
+        2,
+        5,
+        4
+      ],
+      "moment": 3,
+      "intrinsic_cap": "1/2",
+      "first_cap": "1/2",
+      "radius": "2",
+      "support": "24/49"
+    },
+    {
+      "id": 6,
+      "ambient_id": 6,
+      "state": [
+        2,
+        6,
+        5
+      ],
+      "moment": 4,
+      "intrinsic_cap": "2/5",
+      "first_cap": "2/5",
+      "radius": "2237/1000",
+      "support": "59613/122500"
+    },
+    {
+      "id": 7,
+      "ambient_id": 8,
+      "state": [
+        3,
+        3,
+        1
+      ],
+      "moment": 0,
+      "intrinsic_cap": "3",
+      "first_cap": "3",
+      "radius": "1",
+      "support": "3867/9800"
+    },
+    {
+      "id": 8,
+      "ambient_id": 9,
+      "state": [
+        3,
+        4,
+        2
+      ],
+      "moment": 1,
+      "intrinsic_cap": "2",
+      "first_cap": "2",
+      "radius": "63/50",
+      "support": "70137/98000"
+    },
+    {
+      "id": 9,
+      "ambient_id": 10,
+      "state": [
+        3,
+        4,
+        3
+      ],
+      "moment": 3,
+      "intrinsic_cap": "1",
+      "first_cap": "1",
+      "radius": "1443/1000",
+      "support": "20707/49000"
+    },
+    {
+      "id": 10,
+      "ambient_id": 11,
+      "state": [
+        3,
+        5,
+        3
+      ],
+      "moment": 2,
+      "intrinsic_cap": "5/3",
+      "first_cap": "5/3",
+      "radius": "1443/1000",
+      "support": "8797/9800"
+    },
+    {
+      "id": 11,
+      "ambient_id": 12,
+      "state": [
+        3,
+        5,
+        4
+      ],
+      "moment": 4,
+      "intrinsic_cap": "1",
+      "first_cap": "1",
+      "radius": "397/250",
+      "support": "118353/196000"
+    },
+    {
+      "id": 12,
+      "ambient_id": 13,
+      "state": [
+        3,
+        5,
+        5
+      ],
+      "moment": 6,
+      "intrinsic_cap": "3/5",
+      "first_cap": "3/5",
+      "radius": "171/100",
+      "support": "10137/24500"
+    },
+    {
+      "id": 13,
+      "ambient_id": 14,
+      "state": [
+        3,
+        5,
+        6
+      ],
+      "moment": 8,
+      "intrinsic_cap": "1/3",
+      "first_cap": "1/3",
+      "radius": "909/500",
+      "support": "19541/73500"
+    },
+    {
+      "id": 14,
+      "ambient_id": 15,
+      "state": [
+        3,
+        6,
+        4
+      ],
+      "moment": 3,
+      "intrinsic_cap": "3/2",
+      "first_cap": "3/2",
+      "radius": "397/250",
+      "support": "12953/12250"
+    },
+    {
+      "id": 15,
+      "ambient_id": 16,
+      "state": [
+        3,
+        6,
+        5
+      ],
+      "moment": 5,
+      "intrinsic_cap": "1",
+      "first_cap": "1",
+      "radius": "171/100",
+      "support": "4579/6125"
+    },
+    {
+      "id": 16,
+      "ambient_id": 17,
+      "state": [
+        3,
+        6,
+        6
+      ],
+      "moment": 7,
+      "intrinsic_cap": "2/3",
+      "first_cap": "2/3",
+      "radius": "909/500",
+      "support": "19541/36750"
+    },
+    {
+      "id": 17,
+      "ambient_id": 18,
+      "state": [
+        3,
+        6,
+        7
+      ],
+      "moment": 9,
+      "intrinsic_cap": "3/7",
+      "first_cap": "3/7",
+      "radius": "1913/1000",
+      "support": "131211/343000"
+    },
+    {
+      "id": 18,
+      "ambient_id": 19,
+      "state": [
+        3,
+        6,
+        8
+      ],
+      "moment": 11,
+      "intrinsic_cap": "1/4",
+      "first_cap": "1/4",
+      "radius": "2",
+      "support": "12/49"
+    },
+    {
+      "id": 19,
+      "ambient_id": 20,
+      "state": [
+        3,
+        6,
+        9
+      ],
+      "moment": 13,
+      "intrinsic_cap": "1/9",
+      "first_cap": "1/9",
+      "radius": "2081/1000",
+      "support": "17323/147000"
+    },
+    {
+      "id": 20,
+      "ambient_id": 28,
+      "state": [
+        4,
+        4,
+        1
+      ],
+      "moment": 0,
+      "intrinsic_cap": "4",
+      "first_cap": "7/2",
+      "radius": "1",
+      "support": "70137/98000"
+    },
+    {
+      "id": 21,
+      "ambient_id": 29,
+      "state": [
+        4,
+        5,
+        2
+      ],
+      "moment": 1,
+      "intrinsic_cap": "3",
+      "first_cap": "3",
+      "radius": "119/100",
+      "support": "317993/294000"
+    },
+    {
+      "id": 22,
+      "ambient_id": 30,
+      "state": [
+        4,
+        5,
+        3
+      ],
+      "moment": 3,
+      "intrinsic_cap": "2",
+      "first_cap": "2",
+      "radius": "1317/1000",
+      "support": "91599/98000"
+    },
+    {
+      "id": 23,
+      "ambient_id": 31,
+      "state": [
+        4,
+        5,
+        4
+      ],
+      "moment": 6,
+      "intrinsic_cap": "1",
+      "first_cap": "1",
+      "radius": "283/200",
+      "support": "13467/19600"
+    },
+    {
+      "id": 24,
+      "ambient_id": 32,
+      "state": [
+        4,
+        6,
+        3
+      ],
+      "moment": 2,
+      "intrinsic_cap": "8/3",
+      "first_cap": "5/2",
+      "radius": "1317/1000",
+      "support": "384791/294000"
+    },
+    {
+      "id": 25,
+      "ambient_id": 33,
+      "state": [
+        4,
+        6,
+        4
+      ],
+      "moment": 4,
+      "intrinsic_cap": "2",
+      "first_cap": "2",
+      "radius": "283/200",
+      "support": "57241/49000"
+    },
+    {
+      "id": 26,
+      "ambient_id": 34,
+      "state": [
+        4,
+        6,
+        5
+      ],
+      "moment": 6,
+      "intrinsic_cap": "8/5",
+      "first_cap": "3/2",
+      "radius": "187/125",
+      "support": "123699/122500"
+    },
+    {
+      "id": 27,
+      "ambient_id": 35,
+      "state": [
+        4,
+        6,
+        6
+      ],
+      "moment": 8,
+      "intrinsic_cap": "4/3",
+      "first_cap": "1",
+      "radius": "783/500",
+      "support": "49857/61250"
+    },
+    {
+      "id": 28,
+      "ambient_id": 36,
+      "state": [
+        4,
+        6,
+        7
+      ],
+      "moment": 11,
+      "intrinsic_cap": "6/7",
+      "first_cap": "1/2",
+      "radius": "1627/1000",
+      "support": "10727/19600"
+    }
+  ]
+}

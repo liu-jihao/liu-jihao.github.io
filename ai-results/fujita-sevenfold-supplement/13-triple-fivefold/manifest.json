@@ -1,0 +1,490 @@
+{
+  "active_files": [
+    {
+      "bytes": 29616,
+      "path": "check.py",
+      "sha256": "1e6826e9e3ff2eed726bfe12158afd668ad4debd55eb090e64d15b837b1af93e"
+    },
+    {
+      "bytes": 90766,
+      "path": "data/first-source.json",
+      "sha256": "e03eeb65f5ab16057079bd10767a18919801386073a92c3be1cad05e98f38815"
+    },
+    {
+      "bytes": 47343,
+      "path": "data/integral.json",
+      "sha256": "841420fe95dceaacd330a392d98c79143bb0589e9f80f7532f406c4676f60d36"
+    },
+    {
+      "bytes": 26304,
+      "path": "data/slopes.json",
+      "sha256": "fa80deed326cc30972bb2c7b436e8a57abe9264f4c8fd98a1e7564b873dc80ca"
+    },
+    {
+      "bytes": 5031,
+      "path": "data/tail-view.tex",
+      "sha256": "de9ea0cd4851fb46abad20c3c100a840404a98f9db8263c31efc6ca3888add38"
+    },
+    {
+      "bytes": 9681,
+      "path": "data/tails.json",
+      "sha256": "85912352cdf7fc6ee8f1c1cb773ccbaaf8637655fce035b1cc36dae69893488a"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-13-triple-fivefold.json",
+  "families": [
+    {
+      "data_files": [
+        "data/tails.json",
+        "data/tail-view.tex"
+      ],
+      "id": "13-triple-fivefold/tails",
+      "specification": {
+        "canonical_data_path": "data/tails.json",
+        "checked_interface": {
+          "affine_recurrences": 77,
+          "degree_two_margin": "251/27000",
+          "rendered_rows": 30,
+          "rows": 30
+        },
+        "dataset_id": "13-triple-fivefold/tails",
+        "schema": "triple-fivefold-tails-v1",
+        "source_fact_ids": [
+          "55b9a828de3cbc56"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/first-source.json"
+      ],
+      "id": "13-triple-fivefold/first-source",
+      "specification": {
+        "canonical_data_path": "data/first-source.json",
+        "checked_interface": {
+          "closed_domain_dimensions": {
+            "-1": 0,
+            "0": 1,
+            "1": 1,
+            "2": 39
+          },
+          "empty_positive_domains": 2,
+          "initial_mass": "64502732955140729/3125000000000000000",
+          "mass_above_one_over_200": "2520162291861493/3125000000000000000",
+          "normal_roots": [
+            {
+              "descendants": 19,
+              "gap": "1332337/53959500",
+              "mu": 3,
+              "nonpositive_caps": 5
+            },
+            {
+              "descendants": 19,
+              "gap": "27314239/539595000",
+              "mu": 4,
+              "nonpositive_caps": 9
+            },
+            {
+              "descendants": 19,
+              "gap": "13768373/269797500",
+              "mu": 5,
+              "nonpositive_caps": 9
+            },
+            {
+              "descendants": 19,
+              "gap": "2506823/38542500",
+              "mu": 6,
+              "nonpositive_caps": 9
+            }
+          ],
+          "polygons": 39,
+          "quartic_low_margin": "22657/53959500",
+          "reached_mass": "18145162291861493/3125000000000000000",
+          "restricted_price_margin": "1369/54000",
+          "summaries": 39,
+          "written_witnesses": 466
+        },
+        "dataset_id": "13-triple-fivefold/first-source",
+        "schema": "triple-fivefold-first-source-v1",
+        "source_fact_ids": [
+          "55b9a828de3cbc56"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/integral.json"
+      ],
+      "id": "13-triple-fivefold/integral",
+      "specification": {
+        "canonical_data_path": "data/integral.json",
+        "checked_interface": {
+          "constrained_comparisons": 170,
+          "final_mass": "51447479205198179/45000000000000000000",
+          "first_rows": 19,
+          "intervals": 17,
+          "price_margin": "5471/53001000",
+          "recomputed_candidates": 2886,
+          "terminal_margin": "2279/310500",
+          "terminal_max": "2481721/310500",
+          "terminal_rows": 30,
+          "zero_cap_closures": 17
+        },
+        "dataset_id": "13-triple-fivefold/integral",
+        "schema": "triple-fivefold-integral-v1",
+        "source_fact_ids": [
+          "cf55756912296ffa"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/slopes.json"
+      ],
+      "id": "13-triple-fivefold/slopes",
+      "specification": {
+        "canonical_data_path": "data/slopes.json",
+        "checked_interface": {
+          "bins": 39,
+          "families": [
+            {
+              "bins": 4,
+              "ceiling": "49884763/50000000",
+              "gap_below_one": "115237/50000000",
+              "maximum": "85460451140050849559665955747417/85657870936139062500000000000000",
+              "mu": 3,
+              "strict_target_gap": "112737/50000000"
+            },
+            {
+              "bins": 11,
+              "ceiling": "24992633/25000000",
+              "gap_below_one": "7367/25000000",
+              "maximum": "20107826999401693925165837673185293687225545181869396762371898616887254136751/20113754218181665976737515428498460871562500000000000000000000000000000000000",
+              "mu": 4,
+              "strict_target_gap": "6117/25000000"
+            },
+            {
+              "bins": 11,
+              "ceiling": "99899271/100000000",
+              "gap_below_one": "100729/100000000",
+              "maximum": "1536747919261867143105547287342205173253408546902986587/1538297444948710432490271301269531250000000000000000000",
+              "mu": 5,
+              "strict_target_gap": "95729/100000000"
+            },
+            {
+              "bins": 13,
+              "ceiling": "19998699/20000000",
+              "gap_below_one": "1301/20000000",
+              "maximum": "21233893019265612364729234609898734299023898890071155702502317428192011/21235274412360969438177066680320000000000000000000000000000000000000000",
+              "mu": 6,
+              "strict_target_gap": "301/20000000"
+            }
+          ],
+          "height_rows": 4,
+          "own_source_rows": 58,
+          "pattern_integrals": 47
+        },
+        "dataset_id": "13-triple-fivefold/slopes",
+        "schema": "triple-fivefold-slopes-v1",
+        "source_fact_ids": [
+          "4eb3e7397b007c3f"
+        ]
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "constants": {
+      "final_integral_level": "23/25",
+      "first_fixed_order": "27/25",
+      "gamma": "3997/5000",
+      "original_parent_deficit": [
+        "21587/8642",
+        "3"
+      ],
+      "source_degree_divisibility": 5000,
+      "strict_slope_target": "19999/20000",
+      "theta": "803/1000"
+    },
+    "counts": {
+      "affine_pairs": 77,
+      "constrained_comparisons": 170,
+      "height_rows": 4,
+      "local_pattern_integrals": 47,
+      "normal_descendant_rows": 76,
+      "normal_roots": 4,
+      "original_intervals": 17,
+      "quartic_low_witnesses": 8,
+      "reconstructed_comparison_candidates": 2886,
+      "slope_bins": 39,
+      "source_polygons": 39,
+      "source_summaries": 39,
+      "source_witnesses": 466,
+      "states": 30,
+      "terminal_rows": 30,
+      "zero_cap_source_records": 2
+    },
+    "dependencies": {
+      "network": false,
+      "packages": [],
+      "private_project_state": false,
+      "python": ">=3.9"
+    },
+    "domain": {
+      "allocation_patterns": {
+        "3": [
+          [
+            [
+              1,
+              "0"
+            ],
+            [
+              1,
+              "1"
+            ],
+            [
+              1,
+              "2"
+            ]
+          ],
+          [
+            [
+              1,
+              "0"
+            ],
+            [
+              2,
+              "3/2"
+            ]
+          ],
+          [
+            [
+              1,
+              "2"
+            ],
+            [
+              2,
+              "1/2"
+            ]
+          ]
+        ],
+        "4,5,6": "[(2,0),(1,mu)]"
+      },
+      "degenerate_cases": "Empty positive domains, their closed segment/point faces, nonpositive normal caps, zero/negative affine slopes, zero shifts and endpoint ties.",
+      "intervals": [
+        {
+          "interval": 1,
+          "left": "3997/5000",
+          "order": "2829/2500",
+          "right": "4/5"
+        },
+        {
+          "interval": 2,
+          "left": "4/5",
+          "order": "11367/10000",
+          "right": "161/200"
+        },
+        {
+          "interval": 3,
+          "left": "161/200",
+          "order": "11793/10000",
+          "right": "81/100"
+        },
+        {
+          "interval": 4,
+          "left": "81/100",
+          "order": "611/500",
+          "right": "163/200"
+        },
+        {
+          "interval": 5,
+          "left": "163/200",
+          "order": "6323/5000",
+          "right": "41/50"
+        },
+        {
+          "interval": 6,
+          "left": "41/50",
+          "order": "817/625",
+          "right": "33/40"
+        },
+        {
+          "interval": 7,
+          "left": "33/40",
+          "order": "6749/5000",
+          "right": "83/100"
+        },
+        {
+          "interval": 8,
+          "left": "83/100",
+          "order": "557/400",
+          "right": "167/200"
+        },
+        {
+          "interval": 9,
+          "left": "167/200",
+          "order": "14351/10000",
+          "right": "21/25"
+        },
+        {
+          "interval": 10,
+          "left": "21/25",
+          "order": "14777/10000",
+          "right": "169/200"
+        },
+        {
+          "interval": 11,
+          "left": "169/200",
+          "order": "3801/2500",
+          "right": "17/20"
+        },
+        {
+          "interval": 12,
+          "left": "17/20",
+          "order": "16083/10000",
+          "right": "171/200"
+        },
+        {
+          "interval": 13,
+          "left": "171/200",
+          "order": "1697/1000",
+          "right": "43/50"
+        },
+        {
+          "interval": 14,
+          "left": "43/50",
+          "order": "1116/625",
+          "right": "87/100"
+        },
+        {
+          "interval": 15,
+          "left": "87/100",
+          "order": "1963/1000",
+          "right": "22/25"
+        },
+        {
+          "interval": 16,
+          "left": "22/25",
+          "order": "21403/10000",
+          "right": "9/10"
+        },
+        {
+          "interval": 17,
+          "left": "9/10",
+          "order": "24949/10000",
+          "right": "23/25"
+        }
+      ],
+      "normal_roots": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "price": "0<=z<=b<=3, z<=C_v; constrained: (3*gamma-u)*b+u*z<=gamma*(9-mu)",
+      "slopes": {
+        "3": [
+          "1885/3997",
+          "104"
+        ],
+        "4": [
+          "2000/3997",
+          "104"
+        ],
+        "5": [
+          "2000/3997",
+          "104"
+        ],
+        "6": [
+          "1875/3997",
+          "115/9"
+        ]
+      },
+      "states": "All d<=4,e<=6 positive-deficit Hilbert states, including every eligible skip"
+    },
+    "error_allowances": {
+      "approximate_cuts": "Both errors charged with (1+r_i)*epsilon_i; total <1/100000.",
+      "arithmetic": "Exact rational/integer arithmetic; no floating tolerance",
+      "finite_profile": "Selected complete-source degree makes error <1/10000 before both primes.",
+      "symbolic_and_Hilbert": "Uniform O(p^4) on the original fivefold; one cutoff before adaptive primes."
+    },
+    "format": "Strict UTF-8 JSON with exact rational strings; a checked derived TeX scalar view.",
+    "section_and_theorem_labels": [
+      "sec:13-triple-fivefold",
+      "thm:original-triple-fivefold",
+      "lem:triple-fivefold-polygon-check",
+      "lem:triple-fivefold-scalar",
+      "lem:triple-fivefold-first-source",
+      "lem:triple-fivefold-integral",
+      "lem:triple-fivefold-component-caps"
+    ],
+    "strict_targets": {
+      "integral_price": "79999/10000",
+      "normal_root_gap": "1/100",
+      "slope_target": "19999/20000",
+      "source_fixedness_margin": "1369/54000",
+      "source_mass_floor": "1/200",
+      "terminal_price": "7997/1000"
+    }
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "13-triple-fivefold",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/tails.json",
+        "data/tail-view.tex"
+      ],
+      "family": "13-triple-fivefold/tails",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:55b9a828de3cbc56"
+      ],
+      "source_version": "55b9a828de3cbc56@sha256:636a82d79854ed99897ff1c5ad1bdcd82470c85bcdd07894a840212edd880682"
+    },
+    {
+      "data_files": [
+        "data/first-source.json"
+      ],
+      "family": "13-triple-fivefold/first-source",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:55b9a828de3cbc56"
+      ],
+      "source_version": "55b9a828de3cbc56@sha256:636a82d79854ed99897ff1c5ad1bdcd82470c85bcdd07894a840212edd880682"
+    },
+    {
+      "data_files": [
+        "data/integral.json"
+      ],
+      "family": "13-triple-fivefold/integral",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:cf55756912296ffa"
+      ],
+      "source_version": "cf55756912296ffa@sha256:26a3df7c982a501afd4b61b9daff81d6053972d1abce976f9411a0a32dac8577"
+    },
+    {
+      "data_files": [
+        "data/slopes.json"
+      ],
+      "family": "13-triple-fivefold/slopes",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:4eb3e7397b007c3f"
+      ],
+      "source_version": "4eb3e7397b007c3f@sha256:45d36d04731ea2253f503cb5533a4511d751b964467fd4ff4e2a1511fec8f674"
+    }
+  ],
+  "source_owner_manifest_sha256": "71f1e85281eb91a87f62eaad79e71585577fd412a527cb508dd5cfab2d5ae7c2"
+}

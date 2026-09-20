@@ -1,0 +1,1771 @@
+{
+  "active_files": [
+    {
+      "bytes": 4019,
+      "path": "check.py",
+      "sha256": "1a4ed68e9ba32e2ed42c1e366ba690782d3f46c607a6f2beb5c917bcc6220ca6"
+    },
+    {
+      "bytes": 2369,
+      "path": "data/distinct-divisors.txt",
+      "sha256": "0b3cfc84a1c3802cdd0591bc750fa762ba6ba66ad1b640ec99f394f7dfdc034c"
+    },
+    {
+      "bytes": 46244,
+      "path": "data/initial-fivefold-fivefold.txt",
+      "sha256": "7781458517b234cc45ed40f0fd3d7fdc9bfe7e9b05c023f44d0abf80fe187da1"
+    },
+    {
+      "bytes": 12347,
+      "path": "data/initial-fivefold-incidence.txt",
+      "sha256": "fb9d9c2265c987cde83ccf304a4f6666fa3272e4cabc9c77cc81d073017f53aa"
+    },
+    {
+      "bytes": 7793,
+      "path": "data/initial-fivefold-nonsmooth.txt",
+      "sha256": "a9ecb47dedf66409fb5a9032b2fbea8e384b8834b69d98f545d4335a59c8cfb6"
+    },
+    {
+      "bytes": 3601,
+      "path": "data/initial-fivefold-reserve.txt",
+      "sha256": "66b6054837e7cb2c0b145d170cc45ad54be9b9ca467525250fd548b66e30c2c7"
+    },
+    {
+      "bytes": 122170,
+      "path": "data/initial-fivefold-smooth.txt",
+      "sha256": "925ac4bbacdce9e125469b9edbb23ebf6922a0de98e9faded82f6412697aa1d0"
+    },
+    {
+      "bytes": 558014,
+      "path": "data/persistent-fivefold.txt",
+      "sha256": "8b1f92b788443cea581b9792af6c820ac05c07cf93d3a92d2e89ad6fbfdcd0b0"
+    },
+    {
+      "bytes": 696968,
+      "path": "data/persistent-fourfold.txt",
+      "sha256": "c41cf761fc7f05e329ec79882177b4cf2c096da993b8d5afe5bc4d7692863c9f"
+    },
+    {
+      "bytes": 797900,
+      "path": "data/persistent-small-surface.txt",
+      "sha256": "b8506f4ba9317e5311487146130ff2dc11ce79d143be8ee6c8536ce849c2dea4"
+    },
+    {
+      "bytes": 11639,
+      "path": "data/point-c27.txt",
+      "sha256": "7dde161b01499687d012e0510f8ebdde42fb224e1d590b188b9f33c73f4dac3e"
+    },
+    {
+      "bytes": 16925,
+      "path": "data/point-d26.txt",
+      "sha256": "09c8ea0ebfcba5a1ab0d93089ef2a664efefec955193878f87e7c05c13f6a406"
+    },
+    {
+      "bytes": 72086,
+      "path": "data/point-d27.txt",
+      "sha256": "ff95ff1a6b35bbb44f277161bb03aecb589530987fd720c6f67679ea3d2fb372"
+    },
+    {
+      "bytes": 27985,
+      "path": "data/reserve-d26.txt",
+      "sha256": "1a5118d7ee5d426d15ac6318ac0024c834604579971f3ecb7ce3369593df7f65"
+    },
+    {
+      "bytes": 73790,
+      "path": "data/reserve-m26-c27.txt",
+      "sha256": "b6c8b8493377339a9424487291a0bbaf07fa02377c3d473f46bb4f0a0d309ae2"
+    },
+    {
+      "bytes": 51111,
+      "path": "data/reserve-m26-d27.txt",
+      "sha256": "d9ef1fadc795cc77f287d3e6d36e9fc71c6fa7cf085f14175003f93083d6bc6a"
+    },
+    {
+      "bytes": 50888,
+      "path": "data/reserve-q26-c27.txt",
+      "sha256": "bb3315ffb774108a09c71dcbe0b47164ee58acd69c11af4a21482ce00d027a81"
+    },
+    {
+      "bytes": 183451,
+      "path": "data/reserve-q26-d27.txt",
+      "sha256": "c497260154ef75a7dab69dd1d83b5dea7e793a8dc251cd1535da12288d790a66"
+    },
+    {
+      "bytes": 94413,
+      "path": "data/retained-parameter.txt",
+      "sha256": "9b53ea66340f2d6bc9d745e20449a0b8d2560681935cae625a9b38606c522ec1"
+    },
+    {
+      "bytes": 32614,
+      "path": "data/source-initial-fourfold.txt",
+      "sha256": "b51c1e34730cf7b5cc9cb370ac5feab1e0135ab43c88644d0521e0c10a36f35b"
+    },
+    {
+      "bytes": 702595,
+      "path": "data/source-initial-surface.txt",
+      "sha256": "b8fbf336b50eb173ecaa9a07e0956ca8db9fdf73af155112e862b38daaf0c179"
+    },
+    {
+      "bytes": 451073,
+      "path": "data/source-initial-threefold.txt",
+      "sha256": "e5a28fc20166eb10fd526b4f2d51672362719fdc6ffd64b16039bbbfbbee5688"
+    },
+    {
+      "bytes": 29579,
+      "path": "data/source-noncontained-initial.txt",
+      "sha256": "3b3d4a78d22a24914476adb1b3d7a09d0fe2d55ee5fa0e3a13e3d11b5fd76de2"
+    },
+    {
+      "bytes": 4609,
+      "path": "data/source-noncontained26.txt",
+      "sha256": "74957055a52aff9494fedc994b508d89ad211e333e4045a179c7629e8378a16d"
+    },
+    {
+      "bytes": 1033294,
+      "path": "data/source-quintuple-surface.txt",
+      "sha256": "ad2b333e436ed87c40432d556208189f00c4217787772d1c10a4a9e52c55895c"
+    },
+    {
+      "bytes": 1316,
+      "path": "data/source-regular26.txt",
+      "sha256": "a81b9b36d9181b8fff5747d9a4f1656e6cefa767e699d833f409035c2a4d6576"
+    },
+    {
+      "bytes": 4945,
+      "path": "modules/bc74_ops.py",
+      "sha256": "0b2d089134564a560e8e2687af83c6e77946fe81b73e541ed072cd57c427c626"
+    },
+    {
+      "bytes": 1113,
+      "path": "modules/common.py",
+      "sha256": "34dbf281f367c1b4df62f3c46d1737241236c37ed8a18100b5c545390e31439d"
+    },
+    {
+      "bytes": 6232,
+      "path": "modules/compact.py",
+      "sha256": "85c61718b5ab0fd1ece390995d72aabac37c5fc2c9ffac17868a8ec8fb0cd307"
+    },
+    {
+      "bytes": 5954,
+      "path": "modules/distinct_ops.py",
+      "sha256": "ba536f2e6e4fa284ffc3c6acc83d4f34ed1d71de49b9a90359029015c64afb1f"
+    },
+    {
+      "bytes": 12370,
+      "path": "modules/e09_ops.py",
+      "sha256": "48317d207f3a6fd299b86926df4ab3c912ed04909cd3bff106b848b0afa39102"
+    },
+    {
+      "bytes": 6121,
+      "path": "modules/f08_ops.py",
+      "sha256": "1596cdd326de6b447b79c8dac2a72a66c067368473e2f7dc2b1ab29d71420323"
+    },
+    {
+      "bytes": 8045,
+      "path": "modules/incidence_ops.py",
+      "sha256": "efd63cfbb2461dfadb1fbaa5698db1f067e90141f49514b34f62d23af80b91d1"
+    },
+    {
+      "bytes": 1442,
+      "path": "modules/initial_smooth.py",
+      "sha256": "f5d1a208d5067f4b94081f58247d05b74a79c6d59c60db722299231b7f88cbd4"
+    },
+    {
+      "bytes": 8324,
+      "path": "modules/nonsmooth_ops.py",
+      "sha256": "89bfa136234ae1ac11a7ecc447ebd8c0d982d2ee610af0723d35b562951b8f88"
+    },
+    {
+      "bytes": 9879,
+      "path": "modules/payment_ops.py",
+      "sha256": "c098bb4e39e4d2b5cfdd13676eae3a9ee4cbc8e0ec3997c4fca4b20d05c740f5"
+    },
+    {
+      "bytes": 8689,
+      "path": "modules/persistent.py",
+      "sha256": "9ab2aaf81f00f2967a7857353fc2b7187ba1f99bb06c03a385480cdfa599501c"
+    },
+    {
+      "bytes": 8327,
+      "path": "modules/persistent_ops.py",
+      "sha256": "9a9c7b04a2fec73a6379babf7f0cda6f728da479d0bd733bcd13b63293a7a6cf"
+    },
+    {
+      "bytes": 5457,
+      "path": "modules/point_ops.py",
+      "sha256": "e8442cad1ea05e3e74a5d29692542264e329708697f7f0c98fe8ab3c5a318fe0"
+    },
+    {
+      "bytes": 14463,
+      "path": "modules/quintuple.py",
+      "sha256": "ca67dfe962c72379873257f045f6a9369c7b12ad3d46bca44a59643702be37e5"
+    },
+    {
+      "bytes": 4292,
+      "path": "modules/reserve_ops.py",
+      "sha256": "33f47047e0f01ecab579081bb9b9c43fa9c466d3dcb2d33b5a255dfe5e86e29c"
+    },
+    {
+      "bytes": 4727,
+      "path": "modules/retained.py",
+      "sha256": "1571702aadf50cde83edac2cd5eea6cde53deb5dafbf5607118be568d4ee8999"
+    },
+    {
+      "bytes": 8955,
+      "path": "modules/retained_ops.py",
+      "sha256": "23bad5270d910cb994d523992c8297e6939b11de69332bf80d0792adfceb4cd3"
+    },
+    {
+      "bytes": 5318,
+      "path": "modules/smooth_ops.py",
+      "sha256": "ca61aece1170fc77b56bdf2d087272bdefacdbc42f67f18cd8c0c6773b0d94bb"
+    },
+    {
+      "bytes": 7283,
+      "path": "modules/sources.py",
+      "sha256": "a09c4c0074137da84cca0a9b591642ec1e8515d6464ef3cf9872ab31fdbab471"
+    },
+    {
+      "bytes": 11989,
+      "path": "modules/surface_ops.py",
+      "sha256": "8a3ae86d7353626035f238fefa14d6f2765d804c27899b20b37c119094805700"
+    },
+    {
+      "bytes": 5049,
+      "path": "modules/surfaces.py",
+      "sha256": "8414945d2a52687bd98e77a6c5fb122b06400cb2115d233c07ccf1b4f2aae580"
+    },
+    {
+      "bytes": 10687,
+      "path": "modules/threefold_ops.py",
+      "sha256": "c3f39e15e6b5c3059e995389e9c9f2352371145367d238261906b4fc6c290712"
+    },
+    {
+      "bytes": 7171,
+      "path": "modules/trees.py",
+      "sha256": "9a44ba2db0786ce4294c0179ca5f6c7305cbd9a2598b0938c1b746e42e4d136a"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-17-ambient-endpoints.json",
+  "families": [
+    {
+      "data_files": [
+        "data/reserve-d26.txt"
+      ],
+      "id": "17-ambient-endpoints/reserve-d26",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-reserve-d26.tex",
+        "article_owner": "thm:embedding-source-reserve",
+        "article_proof": "sections/17-ambient-endpoints/reserve-proof.tex",
+        "bytes": 27985,
+        "cells": 1310,
+        "checker": "reserve",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "1a5118d7ee5d426d15ac6318ac0024c834604579971f3ecb7ce3369593df7f65",
+        "fact_ids": [
+          "f08b42519c786d54"
+        ],
+        "family": "D26",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "5b611f918530444dcbb04daf625a4885f6fb0356bcb8772bd723735454326a68"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_source64_D26.py"
+        ],
+        "id": "17-ambient-endpoints/reserve-d26",
+        "key": "reserve-d26",
+        "leaves": 133,
+        "max_numerator": "9842943211",
+        "original_certificate_tex": "certificate-reserve-d26.tex",
+        "path": "data/reserve-d26.txt",
+        "predicate": "I(T) < 63/64; analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/reserve-q26-d27.txt"
+      ],
+      "id": "17-ambient-endpoints/reserve-q26-d27",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-reserve-q26-d27.tex",
+        "article_owner": "thm:embedding-source-reserve",
+        "article_proof": "sections/17-ambient-endpoints/reserve-proof.tex",
+        "bytes": 183451,
+        "cells": 8590,
+        "checker": "reserve",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "c497260154ef75a7dab69dd1d83b5dea7e793a8dc251cd1535da12288d790a66",
+        "fact_ids": [
+          "f08b42519c786d54"
+        ],
+        "family": "Q26_D27",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "54ccdcd8922e8ce23937425762cbdf55f42a4d58f039fb8c40cc008c98325f5a"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_source64_Q26_D27.py"
+        ],
+        "id": "17-ambient-endpoints/reserve-q26-d27",
+        "key": "reserve-q26-d27",
+        "leaves": 787,
+        "max_numerator": "9843582362",
+        "original_certificate_tex": "certificate-reserve-q26-d27.tex",
+        "path": "data/reserve-q26-d27.txt",
+        "predicate": "I(T) < 63/64; analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/reserve-m26-d27.txt"
+      ],
+      "id": "17-ambient-endpoints/reserve-m26-d27",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-reserve-m26-d27.tex",
+        "article_owner": "thm:embedding-source-reserve",
+        "article_proof": "sections/17-ambient-endpoints/reserve-proof.tex",
+        "bytes": 51111,
+        "cells": 2694,
+        "checker": "reserve",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "d9ef1fadc795cc77f287d3e6d36e9fc71c6fa7cf085f14175003f93083d6bc6a",
+        "fact_ids": [
+          "f08b42519c786d54"
+        ],
+        "family": "M26_D27",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "6d2220643201be5a5040fbd1c64d9a235a358ae7797b8e01cee2b4e1de27e3ca"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_source64_M26_D27.py"
+        ],
+        "id": "17-ambient-endpoints/reserve-m26-d27",
+        "key": "reserve-m26-d27",
+        "leaves": 237,
+        "max_numerator": "9843027297",
+        "original_certificate_tex": "certificate-reserve-m26-d27.tex",
+        "path": "data/reserve-m26-d27.txt",
+        "predicate": "I(T) < 63/64; analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/reserve-q26-c27.txt"
+      ],
+      "id": "17-ambient-endpoints/reserve-q26-c27",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-reserve-q26-c27.tex",
+        "article_owner": "thm:embedding-source-reserve",
+        "article_proof": "sections/17-ambient-endpoints/reserve-proof.tex",
+        "bytes": 50888,
+        "cells": 2489,
+        "checker": "reserve",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "bb3315ffb774108a09c71dcbe0b47164ee58acd69c11af4a21482ce00d027a81",
+        "fact_ids": [
+          "f08b42519c786d54"
+        ],
+        "family": "Q26_C27",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "ea15a8eb53175c696d59c2b941d6cff8efb4351e1041210cf215236c973e6c72"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_source64_Q26_C27.py"
+        ],
+        "id": "17-ambient-endpoints/reserve-q26-c27",
+        "key": "reserve-q26-c27",
+        "leaves": 277,
+        "max_numerator": "9843540583",
+        "original_certificate_tex": "certificate-reserve-q26-c27.tex",
+        "path": "data/reserve-q26-c27.txt",
+        "predicate": "I(T) < 63/64; analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/reserve-m26-c27.txt"
+      ],
+      "id": "17-ambient-endpoints/reserve-m26-c27",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-reserve-m26-c27.tex",
+        "article_owner": "thm:embedding-source-reserve",
+        "article_proof": "sections/17-ambient-endpoints/reserve-proof.tex",
+        "bytes": 73790,
+        "cells": 3821,
+        "checker": "reserve",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "b6c8b8493377339a9424487291a0bbaf07fa02377c3d473f46bb4f0a0d309ae2",
+        "fact_ids": [
+          "f08b42519c786d54"
+        ],
+        "family": "M26_C27",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "ab7db785c74fc6552ed1bf859ee8a976a873b923c4e37dbc2068f762af5fc701"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_source64_M26_C27.py"
+        ],
+        "id": "17-ambient-endpoints/reserve-m26-c27",
+        "key": "reserve-m26-c27",
+        "leaves": 371,
+        "max_numerator": "9843229660",
+        "original_certificate_tex": "certificate-reserve-m26-c27.tex",
+        "path": "data/reserve-m26-c27.txt",
+        "predicate": "I(T) < 63/64; analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/point-d26.txt"
+      ],
+      "id": "17-ambient-endpoints/point-d26",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-point-d26.tex",
+        "article_owner": "thm:embedding-nonsmooth-later",
+        "article_proof": "sections/17-ambient-endpoints/nonsmooth-proof.tex",
+        "bytes": 16925,
+        "cells": 826,
+        "checker": "point",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "09c8ea0ebfcba5a1ab0d93089ef2a664efefec955193878f87e7c05c13f6a406",
+        "fact_ids": [
+          "9814791a3b835060"
+        ],
+        "family": "D26",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "0b1fa656368597d9d2314d4385904c4a4e17dee1d1986edb78575e24f9b44584"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_point_D26.py"
+        ],
+        "id": "17-ambient-endpoints/point-d26",
+        "key": "point-d26",
+        "leaves": 76,
+        "max_numerator": "9948845674",
+        "original_certificate_tex": "certificate-point-d26.tex",
+        "path": "data/point-d26.txt",
+        "predicate": "I(13/5) < 999/1000; zero terminal source and analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/point_ops.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/point-d27.txt"
+      ],
+      "id": "17-ambient-endpoints/point-d27",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-point-d27.tex",
+        "article_owner": "thm:embedding-nonsmooth-later",
+        "article_proof": "sections/17-ambient-endpoints/nonsmooth-proof.tex",
+        "bytes": 72086,
+        "cells": 3538,
+        "checker": "point",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "ff95ff1a6b35bbb44f277161bb03aecb589530987fd720c6f67679ea3d2fb372",
+        "fact_ids": [
+          "9814791a3b835060"
+        ],
+        "family": "D27",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "fbd25656a9b8c093fa6b38701f801fbdba0b79a37d85be536dae44f541d1b158"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_point_D27.py"
+        ],
+        "id": "17-ambient-endpoints/point-d27",
+        "key": "point-d27",
+        "leaves": 279,
+        "max_numerator": "9989986795",
+        "original_certificate_tex": "certificate-point-d27.tex",
+        "path": "data/point-d27.txt",
+        "predicate": "I(13/5) < 999/1000; zero terminal source and analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/point_ops.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/point-c27.txt"
+      ],
+      "id": "17-ambient-endpoints/point-c27",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-point-c27.tex",
+        "article_owner": "thm:embedding-nonsmooth-later",
+        "article_proof": "sections/17-ambient-endpoints/nonsmooth-proof.tex",
+        "bytes": 11639,
+        "cells": 606,
+        "checker": "point",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "7dde161b01499687d012e0510f8ebdde42fb224e1d590b188b9f33c73f4dac3e",
+        "fact_ids": [
+          "9814791a3b835060"
+        ],
+        "family": "C27",
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "a8952c1ddc1a89cc767841cd1b9cac274b3f492a61e7b93d5840c5e77fe8f901"
+        },
+        "format": "linked_trace",
+        "generator_group": "linked",
+        "generator_paths": [
+          "C/max4_earned29_point_C27.py"
+        ],
+        "id": "17-ambient-endpoints/point-c27",
+        "key": "point-c27",
+        "leaves": 60,
+        "max_numerator": "8870441956",
+        "original_certificate_tex": "certificate-point-c27.tex",
+        "path": "data/point-c27.txt",
+        "predicate": "I(13/5) < 999/1000; zero terminal source and analytic tails required",
+        "reader_modules": [
+          "modules/compact.py",
+          "modules/point_ops.py",
+          "modules/f08_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/retained-parameter.txt"
+      ],
+      "id": "17-ambient-endpoints/retained-parameter",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-retained-parameter.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-ceiling",
+        "article_proof": "sections/17-ambient-endpoints/smooth-prime-ceiling.tex",
+        "bytes": 94413,
+        "cells": 1099,
+        "certificate_id": "early1099",
+        "checker": "early1099",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "9b53ea66340f2d6bc9d745e20449a0b8d2560681935cae625a9b38606c522ec1",
+        "fact_ids": [
+          "29467d401ea8b3df"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "fd45b7275295cf00f67a51e69fe6c5e120ba6f2e7a293a192fb3329aed66e350"
+        },
+        "format": "early_bernstein",
+        "generator_paths": [
+          "C/sub8_strong_incidence_certificate.py",
+          "C/max4_strong_incidence_written_cells_20260912.py"
+        ],
+        "id": "17-ambient-endpoints/retained-parameter",
+        "key": "retained-parameter",
+        "original_certificate_tex": "certificate-retained-parameter.tex",
+        "path": "data/retained-parameter.txt",
+        "predicate": "Two incoming bounds: 78813928/10^8 < 789/1000 and 84492074/10^8 < 169/200; combine with their respective mass/tail tests.",
+        "reader_modules": [
+          "modules/retained.py",
+          "modules/retained_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Never substitute final1031. Small-incidence ceiling tables remain in narrative."
+      }
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-reserve.txt"
+      ],
+      "id": "17-ambient-endpoints/initial-fivefold-reserve",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-initial-fivefold-reserve.tex",
+        "article_owner": "lem:ambient-endpoints-initial-fivefold-reserve",
+        "article_proof": "sections/17-ambient-endpoints/initial-fivefold-source.tex",
+        "base_leaves": [
+          47,
+          31,
+          147
+        ],
+        "bytes": 3601,
+        "checker": "initial_reserve",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "66b6054837e7cb2c0b145d170cc45ad54be9b9ca467525250fd548b66e30c2c7",
+        "fact_ids": [
+          "eb6cbcb03f4bae6c",
+          "b2d5df5d2504b1d5"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "753f9f3e65abb0c385cf0c8201ea171544105f065fc3e493391e392867354849"
+        },
+        "final_leaves": [
+          47,
+          31,
+          163
+        ],
+        "format": "deterministic_tree",
+        "generator_paths": [
+          "C/xhigh_joint_profile_exact_260912.py",
+          "C/xhigh_joint_profile_certificate_print_260912.py",
+          "C/xhigh_joint_profile_refinements_260912.py"
+        ],
+        "id": "17-ambient-endpoints/initial-fivefold-reserve",
+        "key": "initial-fivefold-reserve",
+        "max_numerators": [
+          "997781",
+          "997970",
+          "997987"
+        ],
+        "original_certificate_tex": "certificate-initial-fivefold-reserve.tex",
+        "path": "data/initial-fivefold-reserve.txt",
+        "predicate": "I(T) < 499/500; leaf ceiling denominator 10^6",
+        "reader_modules": [
+          "modules/trees.py",
+          "modules/reserve_ops.py",
+          "modules/common.py"
+        ],
+        "replacement_subtrees": 15
+      }
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-nonsmooth.txt"
+      ],
+      "id": "17-ambient-endpoints/initial-fivefold-nonsmooth",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-initial-fivefold-nonsmooth.tex",
+        "article_owner": "lem:ambient-endpoints-initial-fivefold-nonsmooth",
+        "article_proof": "sections/17-ambient-endpoints/initial-fivefold-nonsmooth.tex",
+        "bytes": 7793,
+        "checker": "initial_nonsmooth",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "a9ecb47dedf66409fb5a9032b2fbea8e384b8834b69d98f545d4335a59c8cfb6",
+        "fact_ids": [
+          "c5e4d763b03998ce"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "7c4d9a183aa04a7b7b33797a576843337670b977f789296c02d63ef04c9b7925"
+        },
+        "format": "deterministic_tree",
+        "generator_paths": [
+          "C/xhigh_singular29_exact_260912.py"
+        ],
+        "id": "17-ambient-endpoints/initial-fivefold-nonsmooth",
+        "key": "initial-fivefold-nonsmooth",
+        "leaves": [
+          380,
+          195,
+          172
+        ],
+        "original_certificate_tex": "certificate-initial-fivefold-nonsmooth.tex",
+        "path": "data/initial-fivefold-nonsmooth.txt",
+        "predicate": "min(I,499/500)+O < 9999/10000; denominator 10^6",
+        "reader_modules": [
+          "modules/trees.py",
+          "modules/nonsmooth_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Degree-two branch has third height 257/500 and K2 switch 8/25; preserve rational majorant switch 1/10 and slope tails."
+      }
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-incidence.txt"
+      ],
+      "id": "17-ambient-endpoints/initial-fivefold-incidence",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-initial-fivefold-incidence.tex",
+        "article_owner": "lem:ambient-endpoints-initial-fivefold-incidence",
+        "article_proof": "sections/17-ambient-endpoints/initial-fivefold-incidence.tex",
+        "bytes": 12347,
+        "checker": "initial_incidence",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "fb9d9c2265c987cde83ccf304a4f6666fa3272e4cabc9c77cc81d073017f53aa",
+        "fact_ids": [
+          "b7b52fa8c778247e"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "013500e4984731dcc679310734f5727569d55a55dafab1200b68f750ec868b3d"
+        },
+        "format": "deterministic_tree",
+        "generator_group": "initial_incidence",
+        "id": "17-ambient-endpoints/initial-fivefold-incidence",
+        "key": "initial-fivefold-incidence",
+        "leaves": [
+          556,
+          292,
+          195,
+          77,
+          40,
+          15
+        ],
+        "original_certificate_tex": "certificate-initial-fivefold-incidence.tex",
+        "path": "data/initial-fivefold-incidence.txt",
+        "predicate": "min(I,499/500)+O < 9999/10000; 6 old/new zero-incidence trees",
+        "reader_modules": [
+          "modules/trees.py",
+          "modules/incidence_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Do not confuse reconstructed generator with later retained-joint generation."
+      }
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-fivefold.txt"
+      ],
+      "id": "17-ambient-endpoints/initial-fivefold-fivefold",
+      "specification": {
+        "additional_evidence": "Two-leaf degree-12 Bernstein incidence proof in initial-fivefold-contained.tex, minima 16429905/10^9 and 893426/10^9; full companion debit and cyclic degree 6.",
+        "article_input": "sections/17-ambient-endpoints/certificate-initial-fivefold-fivefold.tex",
+        "article_owner": "lem:ambient-endpoints-initial-fivefold-contained",
+        "article_proof": "sections/17-ambient-endpoints/initial-fivefold-contained.tex",
+        "bytes": 46244,
+        "checker": "initial_contained",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "7781458517b234cc45ed40f0fd3d7fdc9bfe7e9b05c023f44d0abf80fe187da1",
+        "fact_ids": [
+          "138fd7a05c1323ca"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "df8b5075362526668fb9aab7d3038503d2fb0a19f823984a087af223658eef25"
+        },
+        "format": "deterministic_tree",
+        "generator_paths": [
+          "C/xhigh_smooth29_bootstrap_exact_260912.py",
+          "C/xhigh_smooth29_bootstrap_certificate_print_260912.py"
+        ],
+        "id": "17-ambient-endpoints/initial-fivefold-fivefold",
+        "key": "initial-fivefold-fivefold",
+        "leaves": [
+          1773,
+          2315
+        ],
+        "max_numerators": [
+          "9998961",
+          "9998999"
+        ],
+        "original_certificate_tex": "certificate-initial-fivefold-fivefold.tex",
+        "path": "data/initial-fivefold-fivefold.txt",
+        "predicate": "min(I+(1-hP)^7, min(I,499/500)+O) < 9999/10000; denominator 10^7",
+        "reader_modules": [
+          "modules/trees.py",
+          "modules/payment_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-smooth.txt"
+      ],
+      "id": "17-ambient-endpoints/initial-fivefold-smooth",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-initial-fivefold-smooth.tex",
+        "article_owner": "lem:ambient-endpoints-initial-fivefold-smooth",
+        "article_proof": "sections/17-ambient-endpoints/initial-fivefold-smooth.tex",
+        "bytes": 122170,
+        "checker": "initial_smooth",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "925ac4bbacdce9e125469b9edbb23ebf6922a0de98e9faded82f6412697aa1d0",
+        "fact_ids": [
+          "e09c1121aa0615c4"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "685bac6ba4d3310f89dc1441834ceb3014167a7582f90f75aa0aad28dd376080"
+        },
+        "format": "deterministic_tree",
+        "generator_paths": [
+          "C/xhigh_smooth29_retained_joint_exact_260912.py",
+          "C/xhigh_smooth29_retained_certificate_print_260912.py"
+        ],
+        "id": "17-ambient-endpoints/initial-fivefold-smooth",
+        "key": "initial-fivefold-smooth",
+        "leaves": [
+          592,
+          507,
+          1891,
+          1756,
+          480,
+          457,
+          2449,
+          2624
+        ],
+        "original_certificate_tex": "certificate-initial-fivefold-smooth.tex",
+        "path": "data/initial-fivefold-smooth.txt",
+        "predicate": "min(I+(1-hP)^7, min(I,499/500)+O) < 9999/10000; denominator 10^7; four separate, four partial, two joint competitors",
+        "reader_modules": [
+          "modules/initial_smooth.py",
+          "modules/e09_ops.py",
+          "modules/common.py"
+        ],
+        "total_leaves": 10756,
+        "warning": "Generator uses numerical search heuristics; independent leaf reader uses exact rational evaluation. Preserve actual alpha<1, special zero integration coefficient, and all analytic slope tails."
+      }
+    },
+    {
+      "data_files": [
+        "data/source-noncontained26.txt"
+      ],
+      "id": "17-ambient-endpoints/source-noncontained26",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-source-noncontained26.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-source-easy-histories",
+        "article_proof": "sections/17-ambient-endpoints/smooth-source-comparisons.tex",
+        "bytes": 4609,
+        "cells": 78,
+        "checker": "smooth_base",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "74957055a52aff9494fedc994b508d89ad211e333e4045a179c7629e8378a16d",
+        "fact_ids": [
+          "55cf5ca7a5348bdb"
+        ],
+        "families": {
+          "M": {
+            "leaves": 3
+          },
+          "Q": {
+            "leaves": 4
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "23873664feeaffb78b71b434778640bc9fc983b648460c6074c910e4b657aa5b"
+        },
+        "format": "affine_trace",
+        "generator_paths": [
+          "C/xhigh_smooth27_nonincident_exact_260912.py"
+        ],
+        "id": "17-ambient-endpoints/source-noncontained26",
+        "key": "source-noncontained26",
+        "original_certificate_tex": "certificate-source-noncontained26.tex",
+        "path": "data/source-noncontained26.txt",
+        "predicate": "I(T) < 99/100",
+        "reader_modules": [
+          "modules/sources.py",
+          "modules/smooth_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Zero NEW valuation debit; old capacity N5."
+      }
+    },
+    {
+      "data_files": [
+        "data/source-regular26.txt"
+      ],
+      "id": "17-ambient-endpoints/source-regular26",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-source-regular26.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-source-easy-histories",
+        "article_proof": "sections/17-ambient-endpoints/smooth-source-comparisons.tex",
+        "bytes": 1316,
+        "cells": 20,
+        "checker": "smooth_base",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "a81b9b36d9181b8fff5747d9a4f1656e6cefa767e699d833f409035c2a4d6576",
+        "fact_ids": [
+          "e1931f5132e0ca4d"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "630da96ca1065a2f4809ccd42e7ae103ae7ea0d49d88f0d07c33a6216162b8ff"
+        },
+        "format": "affine_trace",
+        "generator_paths": [
+          "C/xhigh_smooth27_regular26_prime_exact_260912.py"
+        ],
+        "id": "17-ambient-endpoints/source-regular26",
+        "key": "source-regular26",
+        "leaves": 2,
+        "original_certificate_tex": "certificate-source-regular26.tex",
+        "path": "data/source-regular26.txt",
+        "predicate": "I(T) < 19/20; two numerators 896490743,933062965 over 10^9",
+        "reader_modules": [
+          "modules/sources.py",
+          "modules/smooth_ops.py",
+          "modules/common.py"
+        ],
+        "root_lambda": [
+          "36/125",
+          "2/5"
+        ],
+        "warning": "Generic printed footer <99/100 is weaker; checker uses19/20. xhigh_smooth27_regular26_exact_260912.txt is an unsuccessful different candidate (1066458379/10^9). No zero-debit incidence assumption."
+      }
+    },
+    {
+      "data_files": [
+        "data/source-noncontained-initial.txt"
+      ],
+      "id": "17-ambient-endpoints/source-noncontained-initial",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-source-noncontained-initial.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-source-easy-histories",
+        "article_proof": "sections/17-ambient-endpoints/smooth-source-comparisons.tex",
+        "bytes": 29579,
+        "checker": "smooth_old",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "3b3d4a78d22a24914476adb1b3d7a09d0fe2d55ee5fa0e3a13e3d11b5fd76de2",
+        "fact_ids": [
+          "bc74f9bc7c0fc216"
+        ],
+        "families": {
+          "M": {
+            "cells": 324,
+            "leaves": 27
+          },
+          "Q": {
+            "cells": 148,
+            "leaves": 13
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "e7b770f46107f679ad23f1d83d550d20c67489f176c2d516482c132f22ba83ac"
+        },
+        "format": "affine_trace",
+        "generator_paths": [
+          "C/xhigh_smooth27_old_nonincident_exact_260912.py"
+        ],
+        "id": "17-ambient-endpoints/source-noncontained-initial",
+        "key": "source-noncontained-initial",
+        "original_certificate_tex": "certificate-source-noncontained-initial.tex",
+        "path": "data/source-noncontained-initial.txt",
+        "predicate": "I(T) < 999/1000",
+        "reader_modules": [
+          "modules/sources.py",
+          "modules/bc74_ops.py",
+          "modules/smooth_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Zero OLD valuation debit; source-compatible linked height h(a)."
+      }
+    },
+    {
+      "data_files": [
+        "data/source-initial-fourfold.txt"
+      ],
+      "id": "17-ambient-endpoints/source-initial-fourfold",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-source-initial-fourfold.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-source-easy-histories",
+        "article_proof": "sections/17-ambient-endpoints/smooth-source-comparisons.tex",
+        "bytes": 32614,
+        "checker": "smooth_base",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "b51c1e34730cf7b5cc9cb370ac5feab1e0135ab43c88644d0521e0c10a36f35b",
+        "fact_ids": [
+          "d9363b99f849506e"
+        ],
+        "families": {
+          "M": {
+            "cells": 354,
+            "leaves": 36
+          },
+          "Q": {
+            "cells": 132,
+            "leaves": 13
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "59cadf18c27054928630d1d83a030067b05e9d3ab6865a0eeb5460fad569b36c"
+        },
+        "format": "affine_trace",
+        "generator_paths": [
+          "C/xhigh_smooth27_initial4_exact_260912.py"
+        ],
+        "id": "17-ambient-endpoints/source-initial-fourfold",
+        "key": "source-initial-fourfold",
+        "original_certificate_tex": "certificate-source-initial-fourfold.tex",
+        "path": "data/source-initial-fourfold.txt",
+        "predicate": "I(r)+(1-lambda_lower)^7 < 999/1000",
+        "reader_modules": [
+          "modules/sources.py",
+          "modules/smooth_ops.py",
+          "modules/common.py"
+        ],
+        "support_fact_ids": [
+          "64fd6b9d2ea113da"
+        ],
+        "warning": "Initial N3/H3lip capacities; supporting V(r)>21/250 keeps its own source history."
+      }
+    },
+    {
+      "data_files": [
+        "data/source-initial-threefold.txt"
+      ],
+      "id": "17-ambient-endpoints/source-initial-threefold",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-source-initial-threefold.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-source-incidence",
+        "article_proof": "sections/17-ambient-endpoints/smooth-source-incidence.tex",
+        "bytes": 451073,
+        "checker": "initial_threefold",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "e5a28fc20166eb10fd526b4f2d51672362719fdc6ffd64b16039bbbfbbee5688",
+        "fact_ids": [
+          "c2bf557226f876e0"
+        ],
+        "families": {
+          "M": {
+            "cells": 2467,
+            "empty": 36,
+            "leaves": 213
+          },
+          "Q": {
+            "cells": 3065,
+            "empty": 43,
+            "leaves": 281
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "8a259b40bab95f1a88be1da1ebb7a2688176860a6764db15b5611323e4e89381"
+        },
+        "format": "affine_trace",
+        "generator_group": "incident_source",
+        "generator_paths": [
+          "C/xhigh_smooth27_threefold_assemble_260912.py"
+        ],
+        "id": "17-ambient-endpoints/source-initial-threefold",
+        "key": "source-initial-threefold",
+        "original_certificate_tex": "certificate-source-initial-threefold.tex",
+        "path": "data/source-initial-threefold.txt",
+        "predicate": "I(T)<999/1000 OR I(r)+(1-lambda_lower)^7<1 (recorded mass rows even satisfy <999/1000)",
+        "reader_modules": [
+          "modules/sources.py",
+          "modules/threefold_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Physical four-coordinate box, source-compatible linked height, old N4."
+      }
+    },
+    {
+      "data_files": [
+        "data/source-initial-surface.txt"
+      ],
+      "id": "17-ambient-endpoints/source-initial-surface",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-source-initial-surface.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-source-incidence",
+        "article_proof": "sections/17-ambient-endpoints/smooth-source-incidence.tex",
+        "bytes": 702595,
+        "checker": "initial_surface",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "b8fbf336b50eb173ecaa9a07e0956ca8db9fdf73af155112e862b38daaf0c179",
+        "fact_ids": [
+          "98b877c53e1cfdf5"
+        ],
+        "families": {
+          "M": {
+            "cells": 6722,
+            "empty": 112,
+            "leaves": 611
+          },
+          "Q": {
+            "cells": 12408,
+            "empty": 278,
+            "leaves": 1075
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "994479e6117cbf737900f5db2af8dac32d06956b1fc36ee7b0b57639dced2475"
+        },
+        "format": "indexed_trace",
+        "generator_group": "incident_source",
+        "generator_paths": [
+          "C/xhigh_smooth27_surface_assemble_260912.py",
+          "C/xhigh_smooth27_surface_compact_260912.py"
+        ],
+        "id": "17-ambient-endpoints/source-initial-surface",
+        "key": "source-initial-surface",
+        "original_certificate_tex": "certificate-source-initial-surface.tex",
+        "path": "data/source-initial-surface.txt",
+        "predicate": "I(T)<999/1000 OR I(r)+(1-lambda_lower)^7<1",
+        "reader_modules": [
+          "modules/surfaces.py",
+          "modules/surface_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Keep old height 13333/100000 for Q vs1323/10000 for M. Near-boundary mass rows require <1, not<999/1000; full two source histories."
+      }
+    },
+    {
+      "data_files": [
+        "data/source-quintuple-surface.txt"
+      ],
+      "id": "17-ambient-endpoints/source-quintuple-surface",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-source-quintuple-surface.tex",
+        "article_owner": "lem:ambient-endpoints-smooth-source-quintuple",
+        "article_proof": "sections/17-ambient-endpoints/smooth-source-quintuple.tex",
+        "bytes": 1033294,
+        "cells": 10922,
+        "checker": "quintuple",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "ad2b333e436ed87c40432d556208189f00c4217787772d1c10a4a9e52c55895c",
+        "empty": 105,
+        "fact_ids": [
+          "e07262ecb01cfa55"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "2c160358fae695aa13827866ca66b4dade0d7403aa041677f8b1e49aca267487"
+        },
+        "format": "extended_affine_trace",
+        "generator_paths": [
+          "C/xhigh_smooth27_s5_full_exact_260912.py"
+        ],
+        "id": "17-ambient-endpoints/source-quintuple-surface",
+        "key": "source-quintuple-surface",
+        "leaves": 812,
+        "method_leaves": {
+          "T": 573,
+          "r": 236,
+          "u": 3
+        },
+        "original_certificate_tex": "certificate-source-quintuple-surface.tex",
+        "path": "data/source-quintuple-surface.txt",
+        "predicate": "I(T)<999/1000 OR I(r)+(1-lambda_lower)^7<1 OR I(u)+M_u<1",
+        "reader_modules": [
+          "modules/quintuple.py",
+          "modules/common.py"
+        ],
+        "warning": "Six coordinates(a,b,lambda,theta,z,alpha), ten bounds, same-degree full original ideals. Empty only by geometric reversal or M_u<3/40. Residual error1/10^6 is separate from volume error1/10^6; retain companion fixed terms and root degree."
+      }
+    },
+    {
+      "data_files": [
+        "data/distinct-divisors.txt"
+      ],
+      "id": "17-ambient-endpoints/distinct-divisors",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-distinct-divisors.tex",
+        "article_owner": "lem:ambient-endpoints-distinct-divisors",
+        "article_proof": "sections/17-ambient-endpoints/smooth-endpoint-distinct.tex",
+        "bytes": 2369,
+        "cells": 31,
+        "checker": "distinct",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "0b3cfc84a1c3802cdd0591bc750fa762ba6ba66ad1b640ec99f394f7dfdc034c",
+        "fact_ids": [
+          "f4c2b2b35e9ad7b8"
+        ],
+        "families": [
+          "NQ",
+          "NE",
+          "IQ",
+          "IM"
+        ],
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "e032130ed60da160b09e6db1d4a14374ce63c641c6a22af14494b9c6ea391c82"
+        },
+        "format": "affine_trace",
+        "generator_paths": [
+          "C/xhigh_distinct_smooth_exact_260913.py"
+        ],
+        "horizons": [
+          "r",
+          "r",
+          "u",
+          "u"
+        ],
+        "id": "17-ambient-endpoints/distinct-divisors",
+        "key": "distinct-divisors",
+        "original_certificate_tex": "certificate-distinct-divisors.tex",
+        "path": "data/distinct-divisors.txt",
+        "predicate": "Integral at declared horizon plus its corresponding full mass ceiling <999/1000",
+        "reader_modules": [
+          "modules/surfaces.py",
+          "modules/distinct_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "Article allows the later distinct divisor to be singular. Never substitute same-prime incidence or earlier price."
+      }
+    },
+    {
+      "data_files": [
+        "data/persistent-fourfold.txt"
+      ],
+      "id": "17-ambient-endpoints/persistent-fourfold",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-persistent-fourfold.tex",
+        "article_owner": "lem:ambient-endpoints-persistent-divisor",
+        "article_proof": "sections/17-ambient-endpoints/smooth-endpoint-persistent.tex",
+        "bytes": 696968,
+        "checker": "persistent_fourfold",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "c41cf761fc7f05e329ec79882177b4cf2c096da993b8d5afe5bc4d7692863c9f",
+        "fact_ids": [
+          "d9f987121a65ccb8"
+        ],
+        "families": {
+          "M": {
+            "cells": 9642,
+            "empty": 0,
+            "leaves": 898,
+            "version": 5
+          },
+          "NE": {
+            "cells": 3907,
+            "empty": 9,
+            "leaves": 344,
+            "version": 1
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "46e2147d948f32b8ffcc990417580cae5a423cf0583f0022a502b89ee008db3c"
+        },
+        "format": "persistent_literal",
+        "generator_group": "persistent",
+        "id": "17-ambient-endpoints/persistent-fourfold",
+        "key": "persistent-fourfold",
+        "original_certificate_tex": "certificate-persistent-fourfold.tex",
+        "path": "data/persistent-fourfold.txt",
+        "predicate": "min(I(u)+(1-F(u))^7, I(r)+(1-lambda_lower)^7, I(T)+(1-Lambda_lower)^7) <9999/10000",
+        "reader_modules": [
+          "modules/persistent.py",
+          "modules/persistent_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/persistent-small-surface.txt"
+      ],
+      "id": "17-ambient-endpoints/persistent-small-surface",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-persistent-small-surface.tex",
+        "article_owner": "lem:ambient-endpoints-persistent-divisor",
+        "article_proof": "sections/17-ambient-endpoints/smooth-endpoint-persistent.tex",
+        "bytes": 797900,
+        "checker": "persistent_small_surface",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "b8506f4ba9317e5311487146130ff2dc11ce79d143be8ee6c8536ce849c2dea4",
+        "fact_ids": [
+          "312da282b62909bd"
+        ],
+        "families": {
+          "Q4": {
+            "cells": 12422,
+            "empty": 0,
+            "leaves": 1331,
+            "version": 5
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "6ca3680c52afff324b65c17bd232e48166efdc4c184c69d623a40841df14a32d"
+        },
+        "format": "persistent_literal",
+        "generator_group": "persistent",
+        "id": "17-ambient-endpoints/persistent-small-surface",
+        "key": "persistent-small-surface",
+        "original_certificate_tex": "certificate-persistent-small-surface.tex",
+        "path": "data/persistent-small-surface.txt",
+        "predicate": "min(I(u)+(1-F(u))^7, I(r)+(1-lambda_lower)^7, I(T)+(1-Lambda_lower)^7) <9999/10000",
+        "reader_modules": [
+          "modules/persistent.py",
+          "modules/persistent_ops.py",
+          "modules/common.py"
+        ]
+      }
+    },
+    {
+      "data_files": [
+        "data/persistent-fivefold.txt"
+      ],
+      "id": "17-ambient-endpoints/persistent-fivefold",
+      "specification": {
+        "article_input": "sections/17-ambient-endpoints/certificate-persistent-fivefold.tex",
+        "article_owner": "lem:ambient-endpoints-persistent-divisor",
+        "article_proof": "sections/17-ambient-endpoints/smooth-endpoint-persistent.tex",
+        "bytes": 558014,
+        "checker": "persistent_fivefold",
+        "correctness_lemma": "lem:ambient-endpoints-certificate-correctness",
+        "data_sha256": "8b1f92b788443cea581b9792af6c820ac05c07cf93d3a92d2e89ad6fbfdcd0b0",
+        "fact_ids": [
+          "634334230e75ff30"
+        ],
+        "families": {
+          "NQ": {
+            "cells": 57,
+            "empty": 0,
+            "leaves": 5,
+            "version": 1
+          },
+          "Q5": {
+            "cells": 5683,
+            "empty": 0,
+            "leaves": 479,
+            "version": 5
+          },
+          "QN": {
+            "cells": 361,
+            "empty": 0,
+            "leaves": 33,
+            "version": 5
+          },
+          "QT": {
+            "cells": 3771,
+            "empty": 0,
+            "leaves": 372,
+            "version": 5
+          }
+        },
+        "fidelity": {
+          "all_original_verbatim_blocks_exact": true,
+          "original_tex_sha256": "7575d15e3057c9262b8cc141e2260e6181e6bb145dc46faf04e4f736416ef463"
+        },
+        "format": "persistent_literal",
+        "generator_group": "persistent",
+        "id": "17-ambient-endpoints/persistent-fivefold",
+        "key": "persistent-fivefold",
+        "original_certificate_tex": "certificate-persistent-fivefold.tex",
+        "path": "data/persistent-fivefold.txt",
+        "predicate": "min(I(u)+(1-F(u))^7, I(r)+(1-lambda_lower)^7, I(T)+(1-Lambda_lower)^7) <9999/10000",
+        "reader_modules": [
+          "modules/persistent.py",
+          "modules/persistent_ops.py",
+          "modules/common.py"
+        ],
+        "warning": "QT old codimension4, Q5 full quintuple/old-joint bound, QN old division debit0; preserve family-specific competitors."
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "certificate_objects": 25,
+    "decoding": "Complete verbatim blocks concatenated in order; all interior bytes preserved. Family readers decode physical wrapping and validate every mathematical record.",
+    "format_definitions": {
+      "affine_trace": {
+        "cell_denominator": "1000000000",
+        "factor7": "outside polynomials",
+        "grammar": "Explicit rational scalar/rectangle root and split records, declared empty leaves, complete adjacent cells with branch names and upper numerators. Add source-specific mass term before testing."
+      },
+      "deterministic_tree": {
+        "grammar": "Prescribed bisection tree; reconstruct each physical box and evaluate the narrative enclosure algorithm at its leaf. Integral-cell data cannot be inferred from a leaf ceiling alone.",
+        "rounding": "Source-specific ceilings: 10^6 or 10^7; preserve separate incoming cap and outgoing/mass branches."
+      },
+      "early_bernstein": {
+        "coverage": "14 slope ranges times 16 beta intervals covering [3/5,1]; exact subdivisions, coefficient bounds and both incoming tests.",
+        "grammar": "B rows: seven Bernstein coefficient bounds M_i/10^6, contribution bound D/10^8; S rows: rational shell rate and seventh-power endpoint difference; 16-character choices 0=BB,1=BC,2=CB,3=CC,X=empty,-=no middle slice."
+      },
+      "indexed_trace": {
+        "cell_denominator": "1000000000",
+        "factor7": "outside polynomials",
+        "grammar": "Indexed rationals i:value and polynomials i:label; ROOT endpoints; S tag axis index; E tag; L tag method height-index numerator upper-index; C endpoint-index polynomial-index numerator. Root/leaf dimension is source-specific."
+      },
+      "linked_trace": {
+        "cell_denominator": "10000000000",
+        "coverage": "Concatenate wrapped tokens losslessly; root grid and split coverage plus every trace from 0 to its declared horizon; full capacity branches and positive-part roots.",
+        "factor7": "inside polynomials",
+        "grammar": "Local q_j rational and p_j polynomial dictionaries; one-based dotted root tags; zero-based split axes; binary child suffixes; rows hold 2n endpoints,n linked heights,total,ordered right-endpoint/polynomial trace.",
+        "height_error": "1/100000"
+      },
+      "persistent_literal": {
+        "cell_denominator": "1000000000",
+        "coverage": "v1 physical and v5 normalized maps are distinct; same tightening order; check b-bound interior kink; zero-width coordinate represented by 0, not automatically empty.",
+        "factor7": "outside polynomials",
+        "grammar": "Tree [axis,left,right], E empty, integer leaf ceiling. Each literal witness includes 12 effective physical endpoints,height,horizon26/27/29,mass,local z_j dictionary and full endpoint:polynomial:numerator cells.",
+        "leaf_denominator": "10000000"
+      }
+    },
+    "requirements": {
+      "arithmetic": "fractions.Fraction",
+      "assertions": "required; -O is rejected",
+      "python": ">=3.10",
+      "third_party": []
+    },
+    "scope": "Independent exact audit of the 25 delivered finite certificates, plus implemented scalar/branch identities. Article geometry and earlier-section results remain proof obligations. No whole fact-graph or formal-proof claim."
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "17-ambient-endpoints",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/reserve-d26.txt"
+      ],
+      "family": "17-ambient-endpoints/reserve-d26",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f08b42519c786d54"
+      ],
+      "source_version": "f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93"
+    },
+    {
+      "data_files": [
+        "data/reserve-q26-d27.txt"
+      ],
+      "family": "17-ambient-endpoints/reserve-q26-d27",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f08b42519c786d54"
+      ],
+      "source_version": "f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93"
+    },
+    {
+      "data_files": [
+        "data/reserve-m26-d27.txt"
+      ],
+      "family": "17-ambient-endpoints/reserve-m26-d27",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f08b42519c786d54"
+      ],
+      "source_version": "f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93"
+    },
+    {
+      "data_files": [
+        "data/reserve-q26-c27.txt"
+      ],
+      "family": "17-ambient-endpoints/reserve-q26-c27",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f08b42519c786d54"
+      ],
+      "source_version": "f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93"
+    },
+    {
+      "data_files": [
+        "data/reserve-m26-c27.txt"
+      ],
+      "family": "17-ambient-endpoints/reserve-m26-c27",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f08b42519c786d54"
+      ],
+      "source_version": "f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93; f08b42519c786d54@sha256:cde6b8424ba4b0fd7ab7efd5e73946657799e001ab1a65f8bc4a55c01d8abd93"
+    },
+    {
+      "data_files": [
+        "data/point-d26.txt"
+      ],
+      "family": "17-ambient-endpoints/point-d26",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:9814791a3b835060"
+      ],
+      "source_version": "9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c; 9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c; 9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c"
+    },
+    {
+      "data_files": [
+        "data/point-d27.txt"
+      ],
+      "family": "17-ambient-endpoints/point-d27",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:9814791a3b835060"
+      ],
+      "source_version": "9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c; 9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c; 9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c"
+    },
+    {
+      "data_files": [
+        "data/point-c27.txt"
+      ],
+      "family": "17-ambient-endpoints/point-c27",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:9814791a3b835060"
+      ],
+      "source_version": "9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c; 9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c; 9814791a3b835060@sha256:a798b8d23a4a3c0edb09b9cae6c9d72578adb5e86ac8a8900dfbfb9790a1a85c"
+    },
+    {
+      "data_files": [
+        "data/retained-parameter.txt"
+      ],
+      "family": "17-ambient-endpoints/retained-parameter",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:29467d401ea8b3df"
+      ],
+      "source_version": "29467d401ea8b3df@sha256:55e1e0295fa5ae8f40330437b0971b1a89b6435d4f3461fa801ac7eee6b40698"
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-reserve.txt"
+      ],
+      "family": "17-ambient-endpoints/initial-fivefold-reserve",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:eb6cbcb03f4bae6c",
+        "fact:b2d5df5d2504b1d5"
+      ],
+      "source_version": "eb6cbcb03f4bae6c@sha256:9e8b3ce8b1d4828043bbd0a3173bee2cf0a7b4d4ed9135d8413bb905c45544c7; b2d5df5d2504b1d5@sha256:fac66a18dad9ca7a2acc2e7752af14892236c16bab36f31bf8c447b74afca05f"
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-nonsmooth.txt"
+      ],
+      "family": "17-ambient-endpoints/initial-fivefold-nonsmooth",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c5e4d763b03998ce"
+      ],
+      "source_version": "c5e4d763b03998ce@sha256:1eadf75edf8f496ac8772f5036a71fcf8d70e7f9b103a255c6b2c5133d2d2362"
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-incidence.txt"
+      ],
+      "family": "17-ambient-endpoints/initial-fivefold-incidence",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:b7b52fa8c778247e"
+      ],
+      "source_version": "b7b52fa8c778247e@sha256:3d62b0ac99d8b4dfadb2d429a9d4bfa90a5c815ecf5496497cbeb4db2e3a45e4"
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-fivefold.txt"
+      ],
+      "family": "17-ambient-endpoints/initial-fivefold-fivefold",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:138fd7a05c1323ca"
+      ],
+      "source_version": "138fd7a05c1323ca@sha256:7b85f3b1247ecf859725dd5bb3ebe87ef98a9f20c025d39854397bf9338ef7fb"
+    },
+    {
+      "data_files": [
+        "data/initial-fivefold-smooth.txt"
+      ],
+      "family": "17-ambient-endpoints/initial-fivefold-smooth",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:e09c1121aa0615c4"
+      ],
+      "source_version": "e09c1121aa0615c4@sha256:657b71c61d35463aec2d2e4cd5f9823d25e55fc9300339f8967ff757d411ec4f"
+    },
+    {
+      "data_files": [
+        "data/source-noncontained26.txt"
+      ],
+      "family": "17-ambient-endpoints/source-noncontained26",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:55cf5ca7a5348bdb"
+      ],
+      "source_version": "55cf5ca7a5348bdb@sha256:47932203203a69d23705d3543fa4dfb9231e9c7cf197e541e1bd97025a38ef3a"
+    },
+    {
+      "data_files": [
+        "data/source-regular26.txt"
+      ],
+      "family": "17-ambient-endpoints/source-regular26",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:e1931f5132e0ca4d"
+      ],
+      "source_version": "e1931f5132e0ca4d@sha256:9afff32753ae8c10348ae07178034ca876cdea7b6339e5a8c23245431c80966f"
+    },
+    {
+      "data_files": [
+        "data/source-noncontained-initial.txt"
+      ],
+      "family": "17-ambient-endpoints/source-noncontained-initial",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:bc74f9bc7c0fc216"
+      ],
+      "source_version": "bc74f9bc7c0fc216@sha256:d5dcb33ef037cff53ee15d186d4ca002f07fddbe8c89184bca8cdfc55cc8da0d"
+    },
+    {
+      "data_files": [
+        "data/source-initial-fourfold.txt"
+      ],
+      "family": "17-ambient-endpoints/source-initial-fourfold",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:d9363b99f849506e",
+        "fact:64fd6b9d2ea113da"
+      ],
+      "source_version": "d9363b99f849506e@sha256:fe6db552afac3e6397778154aee34ac21c2dfc0488380e36bd87f5ea6426ee40"
+    },
+    {
+      "data_files": [
+        "data/source-initial-threefold.txt"
+      ],
+      "family": "17-ambient-endpoints/source-initial-threefold",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c2bf557226f876e0"
+      ],
+      "source_version": "c2bf557226f876e0@sha256:c6decf204ac9546c9b65f940bcdce17a10ce16d867214679a3707dcd04e57a7c"
+    },
+    {
+      "data_files": [
+        "data/source-initial-surface.txt"
+      ],
+      "family": "17-ambient-endpoints/source-initial-surface",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:98b877c53e1cfdf5"
+      ],
+      "source_version": "98b877c53e1cfdf5@sha256:cf8c309173d2849b36fd701458b9097fc9cb1b0cc7b3677fcd1b7cf5793701bc"
+    },
+    {
+      "data_files": [
+        "data/source-quintuple-surface.txt"
+      ],
+      "family": "17-ambient-endpoints/source-quintuple-surface",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:e07262ecb01cfa55"
+      ],
+      "source_version": "e07262ecb01cfa55@sha256:67ba2d389492a6e8b1538fe64451b6346fc4d65fd3711b1147ce351ab9a211dd"
+    },
+    {
+      "data_files": [
+        "data/distinct-divisors.txt"
+      ],
+      "family": "17-ambient-endpoints/distinct-divisors",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f4c2b2b35e9ad7b8"
+      ],
+      "source_version": "f4c2b2b35e9ad7b8@sha256:4016dd74e02fd9bc631caca05fa83d34452838682424bb920cd2905a75f1c67c"
+    },
+    {
+      "data_files": [
+        "data/persistent-fourfold.txt"
+      ],
+      "family": "17-ambient-endpoints/persistent-fourfold",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:d9f987121a65ccb8"
+      ],
+      "source_version": "d9f987121a65ccb8@sha256:9e934e659f84490ba57b9fd31a1b9be2a659aeaf82bae8b74534d10a6ef021c8"
+    },
+    {
+      "data_files": [
+        "data/persistent-small-surface.txt"
+      ],
+      "family": "17-ambient-endpoints/persistent-small-surface",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:312da282b62909bd"
+      ],
+      "source_version": "312da282b62909bd@sha256:5b227a2c75ce0a1f72b4382721e632414577b7d291948d95feed4b4f92fb5d1c"
+    },
+    {
+      "data_files": [
+        "data/persistent-fivefold.txt"
+      ],
+      "family": "17-ambient-endpoints/persistent-fivefold",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:634334230e75ff30"
+      ],
+      "source_version": "634334230e75ff30@sha256:924d28784f03889cd4239b89bbd3ef06f02dcf86a6c1bbaa23cf6cbf38ea77dd"
+    }
+  ],
+  "source_owner_manifest_sha256": "d7801120e4a9947d3cdb5ae54819084f21713f7c05592881768951d46d01543a"
+}

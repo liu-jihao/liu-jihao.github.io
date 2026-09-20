@@ -1,0 +1,1809 @@
+[
+  {
+    "state": [
+      1,
+      1,
+      1
+    ],
+    "T": 0,
+    "intrinsic_cap": "1",
+    "root_cap": "1",
+    "radius": "1",
+    "lambda_price": "113845/15579",
+    "theta_price": "180755/26541",
+    "theta_kind": "complete scalar tail",
+    "descendants": []
+  },
+  {
+    "state": [
+      2,
+      2,
+      1
+    ],
+    "T": 0,
+    "intrinsic_cap": "2",
+    "root_cap": "2",
+    "radius": "1",
+    "lambda_price": "113845/15579",
+    "theta_price": "180755/26541",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      }
+    ]
+  },
+  {
+    "state": [
+      2,
+      3,
+      2
+    ],
+    "T": 1,
+    "intrinsic_cap": "1",
+    "root_cap": "1",
+    "radius": "283/200",
+    "lambda_price": "23577857/3115800",
+    "theta_price": "38262103/5308200",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1/2"
+      }
+    ]
+  },
+  {
+    "state": [
+      2,
+      4,
+      3
+    ],
+    "T": 2,
+    "intrinsic_cap": "2/3",
+    "root_cap": "2/3",
+    "radius": "1733/1000",
+    "lambda_price": "59921969/7789500",
+    "theta_price": "96709351/13270500",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1/3"
+      }
+    ]
+  },
+  {
+    "state": [
+      2,
+      5,
+      4
+    ],
+    "T": 3,
+    "intrinsic_cap": "1/2",
+    "root_cap": "1/2",
+    "radius": "2",
+    "lambda_price": "120424/15579",
+    "theta_price": "193796/26541",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1/4"
+      }
+    ]
+  },
+  {
+    "state": [
+      2,
+      6,
+      5
+    ],
+    "T": 4,
+    "intrinsic_cap": "2/5",
+    "root_cap": "2/5",
+    "radius": "2237/1000",
+    "lambda_price": "301462723/38947500",
+    "theta_price": "484259717/66352500",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1/5"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      3,
+      1
+    ],
+    "T": 0,
+    "intrinsic_cap": "3",
+    "root_cap": "3",
+    "radius": "1",
+    "lambda_price": "23577857/3115800",
+    "theta_price": "38262103/5308200",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      4,
+      2
+    ],
+    "T": 1,
+    "intrinsic_cap": "2",
+    "root_cap": "2",
+    "radius": "63/50",
+    "lambda_price": "241577027/31158000",
+    "theta_price": "399830533/53082000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "3/2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "1/2"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      4,
+      3
+    ],
+    "T": 3,
+    "intrinsic_cap": "1",
+    "root_cap": "1",
+    "radius": "1443/1000",
+    "lambda_price": "118325497/15579000",
+    "theta_price": "192053663/26541000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1/3"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      5,
+      3
+    ],
+    "T": 2,
+    "intrinsic_cap": "5/3",
+    "root_cap": "5/3",
+    "radius": "1443/1000",
+    "lambda_price": "24864887/3115800",
+    "theta_price": "40943473/5308200",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "4/3"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/3"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      5,
+      4
+    ],
+    "T": 4,
+    "intrinsic_cap": "1",
+    "root_cap": "1",
+    "radius": "397/250",
+    "lambda_price": "484596763/62316000",
+    "theta_price": "787456877/106164000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "3/4"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "1/4"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      5,
+      5
+    ],
+    "T": 6,
+    "intrinsic_cap": "3/5",
+    "root_cap": "3/5",
+    "radius": "171/100",
+    "lambda_price": "59514527/7789500",
+    "theta_price": "95893033/13270500",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1/5"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      5,
+      6
+    ],
+    "T": 8,
+    "intrinsic_cap": "1/3",
+    "root_cap": "1/3",
+    "radius": "909/500",
+    "lambda_price": "58642937/7789500",
+    "theta_price": "93919423/13270500",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "1/6"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      6,
+      4
+    ],
+    "T": 3,
+    "intrinsic_cap": "3/2",
+    "root_cap": "3/2",
+    "radius": "397/250",
+    "lambda_price": "61896863/7789500",
+    "theta_price": "52235777/6635250",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "5/4"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          6,
+          5
+        ],
+        "cap": "1/4"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      6,
+      5
+    ],
+    "T": 5,
+    "intrinsic_cap": "1",
+    "root_cap": "1",
+    "radius": "171/100",
+    "lambda_price": "15423584/1947375",
+    "theta_price": "25084936/3317625",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "4/5"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "3/5"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/5"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      6,
+      6
+    ],
+    "T": 7,
+    "intrinsic_cap": "2/3",
+    "root_cap": "2/3",
+    "radius": "909/500",
+    "lambda_price": "30181687/3894750",
+    "theta_price": "48730673/6635250",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1/3"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "1/6"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      6,
+      7
+    ],
+    "T": 9,
+    "intrinsic_cap": "3/7",
+    "root_cap": "3/7",
+    "radius": "1913/1000",
+    "lambda_price": "832322881/109053000",
+    "theta_price": "1336603799/185787000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2/7"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1/7"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      6,
+      8
+    ],
+    "T": 11,
+    "intrinsic_cap": "1/4",
+    "root_cap": "1/4",
+    "radius": "2",
+    "lambda_price": "234269/31158",
+    "theta_price": "374551/53082",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "1/8"
+      }
+    ]
+  },
+  {
+    "state": [
+      3,
+      6,
+      9
+    ],
+    "T": 13,
+    "intrinsic_cap": "1/9",
+    "root_cap": "1/9",
+    "radius": "2081/1000",
+    "lambda_price": "115447211/15579000",
+    "theta_price": "183891869/26541000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      4,
+      1
+    ],
+    "T": 0,
+    "intrinsic_cap": "4",
+    "root_cap": "7/2",
+    "radius": "1",
+    "lambda_price": "241577027/31158000",
+    "theta_price": "399830533/53082000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "3"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "1"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      5,
+      2
+    ],
+    "T": 1,
+    "intrinsic_cap": "3",
+    "root_cap": "3",
+    "radius": "119/100",
+    "lambda_price": "248772401/31158000",
+    "theta_price": "419419879/53082000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "5/2"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "3/2"
+      },
+      {
+        "state": [
+          3,
+          5,
+          4
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          5
+        ],
+        "cap": "1/2"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      5,
+      3
+    ],
+    "T": 3,
+    "intrinsic_cap": "2",
+    "root_cap": "2",
+    "radius": "1317/1000",
+    "lambda_price": "248400629/31158000",
+    "theta_price": "411455491/53082000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "5/3"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "4/3"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          4
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          3,
+          5,
+          5
+        ],
+        "cap": "1/3"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      5,
+      4
+    ],
+    "T": 6,
+    "intrinsic_cap": "1",
+    "root_cap": "1",
+    "radius": "283/200",
+    "lambda_price": "48978457/6231600",
+    "theta_price": "79629503/10616400",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "3/4"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "1/4"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "1/4"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      6,
+      3
+    ],
+    "T": 2,
+    "intrinsic_cap": "8/3",
+    "root_cap": "5/2",
+    "radius": "1317/1000",
+    "lambda_price": "257954687/31158000",
+    "theta_price": "199315493/26541000",
+    "theta_kind": "cubic affine endpoint",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          6,
+          5
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "7/3"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "5/3"
+      },
+      {
+        "state": [
+          3,
+          5,
+          4
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          5
+        ],
+        "cap": "3/5"
+      },
+      {
+        "state": [
+          3,
+          5,
+          6
+        ],
+        "cap": "1/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          4
+        ],
+        "cap": "4/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          5
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          6,
+          6
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          7
+        ],
+        "cap": "1/3"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      6,
+      4
+    ],
+    "T": 4,
+    "intrinsic_cap": "2",
+    "root_cap": "2",
+    "radius": "283/200",
+    "lambda_price": "127838011/15579000",
+    "theta_price": "211925069/26541000",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          6,
+          5
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "7/4"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "3/2"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "5/4"
+      },
+      {
+        "state": [
+          3,
+          5,
+          4
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          5
+        ],
+        "cap": "3/5"
+      },
+      {
+        "state": [
+          3,
+          5,
+          6
+        ],
+        "cap": "1/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          4
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          6,
+          5
+        ],
+        "cap": "3/4"
+      },
+      {
+        "state": [
+          3,
+          6,
+          6
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          3,
+          6,
+          7
+        ],
+        "cap": "1/4"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      6,
+      5
+    ],
+    "T": 6,
+    "intrinsic_cap": "8/5",
+    "root_cap": "3/2",
+    "radius": "187/125",
+    "lambda_price": "316054729/38947500",
+    "theta_price": "519199391/66352500",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          6,
+          5
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "7/5"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "6/5"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          5,
+          4
+        ],
+        "cap": "4/5"
+      },
+      {
+        "state": [
+          3,
+          5,
+          5
+        ],
+        "cap": "3/5"
+      },
+      {
+        "state": [
+          3,
+          5,
+          6
+        ],
+        "cap": "1/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          4
+        ],
+        "cap": "4/5"
+      },
+      {
+        "state": [
+          3,
+          6,
+          5
+        ],
+        "cap": "3/5"
+      },
+      {
+        "state": [
+          3,
+          6,
+          6
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          3,
+          6,
+          7
+        ],
+        "cap": "1/5"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      6,
+      6
+    ],
+    "T": 8,
+    "intrinsic_cap": "4/3",
+    "root_cap": "1",
+    "radius": "783/500",
+    "lambda_price": "155528897/19473750",
+    "theta_price": "253052263/33176250",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          6,
+          5
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "7/6"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "5/6"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "5/6"
+      },
+      {
+        "state": [
+          3,
+          5,
+          4
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          3,
+          5,
+          5
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          3,
+          5,
+          6
+        ],
+        "cap": "1/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          4
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          5
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          3,
+          6,
+          6
+        ],
+        "cap": "1/3"
+      },
+      {
+        "state": [
+          3,
+          6,
+          7
+        ],
+        "cap": "1/6"
+      }
+    ]
+  },
+  {
+    "state": [
+      4,
+      6,
+      7
+    ],
+    "T": 11,
+    "intrinsic_cap": "6/7",
+    "root_cap": "1/2",
+    "radius": "1627/1000",
+    "lambda_price": "48527917/6231600",
+    "theta_price": "78128843/10616400",
+    "theta_kind": "complete scalar tail",
+    "descendants": [
+      {
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          2,
+          1
+        ],
+        "cap": "2"
+      },
+      {
+        "state": [
+          2,
+          3,
+          2
+        ],
+        "cap": "1"
+      },
+      {
+        "state": [
+          2,
+          4,
+          3
+        ],
+        "cap": "2/3"
+      },
+      {
+        "state": [
+          2,
+          5,
+          4
+        ],
+        "cap": "1/2"
+      },
+      {
+        "state": [
+          2,
+          6,
+          5
+        ],
+        "cap": "2/5"
+      },
+      {
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "cap": "5/7"
+      },
+      {
+        "state": [
+          3,
+          4,
+          2
+        ],
+        "cap": "4/7"
+      },
+      {
+        "state": [
+          3,
+          4,
+          3
+        ],
+        "cap": "3/7"
+      },
+      {
+        "state": [
+          3,
+          5,
+          3
+        ],
+        "cap": "3/7"
+      },
+      {
+        "state": [
+          3,
+          5,
+          4
+        ],
+        "cap": "2/7"
+      },
+      {
+        "state": [
+          3,
+          5,
+          5
+        ],
+        "cap": "1/7"
+      },
+      {
+        "state": [
+          3,
+          6,
+          4
+        ],
+        "cap": "2/7"
+      },
+      {
+        "state": [
+          3,
+          6,
+          5
+        ],
+        "cap": "1/7"
+      }
+    ]
+  }
+]

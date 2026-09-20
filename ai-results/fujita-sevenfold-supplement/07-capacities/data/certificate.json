@@ -1,0 +1,944 @@
+{
+  "schema": "fujita-capacities-v1",
+  "records": [
+    {
+      "id": "linear-fivefold",
+      "family": "spanning",
+      "n": 7,
+      "t": 1,
+      "s": 2,
+      "coefficients": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "id": "linear-fourfold",
+      "family": "spanning",
+      "n": 7,
+      "t": 1,
+      "s": 3,
+      "coefficients": [
+        1,
+        3,
+        -5,
+        2
+      ]
+    },
+    {
+      "id": "full-fourfold",
+      "family": "spanning",
+      "n": 7,
+      "t": 0,
+      "s": 4,
+      "coefficients": [
+        0,
+        6,
+        -8,
+        3
+      ]
+    },
+    {
+      "id": "full-fivefold",
+      "family": "spanning",
+      "n": 7,
+      "t": 0,
+      "s": 3,
+      "coefficients": [
+        0,
+        3,
+        -2
+      ]
+    },
+    {
+      "id": "six-fifth",
+      "family": "pairs",
+      "n": 6,
+      "c": "1/5",
+      "values": [
+        "1024/3125",
+        "1053/3125"
+      ]
+    },
+    {
+      "id": "seven-sixth",
+      "family": "pairs",
+      "n": 7,
+      "c": "1/6",
+      "values": [
+        "15625/46656",
+        "16384/46656"
+      ]
+    },
+    {
+      "id": "early-pair",
+      "family": "pairs",
+      "n": 7,
+      "c": "3/20",
+      "values": [
+        "24137569/64000000",
+        "16807/40000"
+      ]
+    },
+    {
+      "id": "later-pair",
+      "family": "pairs",
+      "n": 7,
+      "c": "7/40",
+      "values": [
+        "1291467969/4096000000",
+        "4084223/12800000"
+      ]
+    },
+    {
+      "id": "six-interior",
+      "family": "constants",
+      "value": "992/3125"
+    },
+    {
+      "id": "six-boundary",
+      "family": "constants",
+      "value": "5/16"
+    },
+    {
+      "id": "seven-interior",
+      "family": "constants",
+      "value": "11/32"
+    },
+    {
+      "id": "seven-boundary",
+      "family": "constants",
+      "value": "1053/3125"
+    },
+    {
+      "id": "four-row-constant",
+      "family": "constants",
+      "value": "138259/900000"
+    },
+    {
+      "id": "strip-derivative",
+      "family": "constants",
+      "value": "432/3125"
+    },
+    {
+      "id": "disjoint-correction",
+      "family": "constants",
+      "value": "1/972"
+    },
+    {
+      "id": "disjoint-square",
+      "family": "constants",
+      "value": "125/972"
+    },
+    {
+      "id": "three-cut-anchor",
+      "family": "constants",
+      "value": "13/96"
+    },
+    {
+      "id": "envelope-rounding",
+      "family": "constants",
+      "value": "17523/40000"
+    },
+    {
+      "id": "linear-endpoint",
+      "family": "constants",
+      "value": "633465/1771561"
+    },
+    {
+      "id": "linear-later",
+      "family": "constants",
+      "value": "332908409016/1000000000000"
+    },
+    {
+      "id": "full-later",
+      "family": "constants",
+      "value": "5280752440/15625000000"
+    },
+    {
+      "id": "quartic",
+      "family": "polynomial",
+      "coefficients": [
+        27,
+        -162,
+        315,
+        -200,
+        40
+      ]
+    },
+    {
+      "id": "quartic-derivative",
+      "family": "polynomial",
+      "values": [
+        "23",
+        "81/2",
+        "-79/2",
+        "-22"
+      ]
+    },
+    {
+      "id": "quartic-endpoints",
+      "family": "polynomial",
+      "values": [
+        "9/4",
+        "3"
+      ]
+    },
+    {
+      "id": "early-375",
+      "family": "source-tables",
+      "d": 3,
+      "e": 7,
+      "m": 5,
+      "u": "51/50",
+      "cap": "7/5",
+      "a": "171/100",
+      "p": "211/1000",
+      "beta": "47239/37210",
+      "sigma": "971/10000",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "early-452",
+      "family": "source-tables",
+      "d": 4,
+      "e": 5,
+      "m": 2,
+      "u": "51/50",
+      "cap": "3",
+      "a": "119/100",
+      "p": "287/500",
+      "beta": "14363/5345",
+      "sigma": "209/3125",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "early-463",
+      "family": "source-tables",
+      "d": 4,
+      "e": 6,
+      "m": 3,
+      "u": "51/50",
+      "cap": "8/3",
+      "a": "1317/1000",
+      "p": "71/125",
+      "beta": "29032/17167",
+      "sigma": "628/1875",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "early-464",
+      "family": "source-tables",
+      "d": 4,
+      "e": 6,
+      "m": 4,
+      "u": "51/50",
+      "cap": "2",
+      "a": "283/200",
+      "p": "379/1000",
+      "beta": "38671/22165",
+      "sigma": "5659/50000",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "early-474",
+      "family": "source-tables",
+      "d": 4,
+      "e": 7,
+      "m": 4,
+      "u": "51/50",
+      "cap": "5/2",
+      "a": "283/200",
+      "p": "29/50",
+      "beta": "5684/4433",
+      "sigma": "10797/20000",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "early-475",
+      "family": "source-tables",
+      "d": 4,
+      "e": 7,
+      "m": 5,
+      "u": "51/50",
+      "cap": "2",
+      "a": "187/125",
+      "p": "17/40",
+      "beta": "36325/26296",
+      "sigma": "16267/50000",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "early-476",
+      "family": "source-tables",
+      "d": 4,
+      "e": 7,
+      "m": 6,
+      "u": "51/50",
+      "cap": "5/3",
+      "a": "783/500",
+      "p": "331/1000",
+      "beta": "41119/29866",
+      "sigma": "25973/150000",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "early-477",
+      "family": "source-tables",
+      "d": 4,
+      "e": 7,
+      "m": 7,
+      "u": "51/50",
+      "cap": "10/7",
+      "a": "1627/1000",
+      "p": "11/40",
+      "beta": "43975/32977",
+      "sigma": "4389/70000",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "later-463",
+      "family": "source-tables",
+      "d": 4,
+      "e": 6,
+      "m": 3,
+      "u": "26/25",
+      "cap": "8/3",
+      "a": "1317/1000",
+      "p": "71/125",
+      "beta": null,
+      "sigma": "481/1875",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "later-464",
+      "family": "source-tables",
+      "d": 4,
+      "e": 6,
+      "m": 4,
+      "u": "26/25",
+      "cap": "2",
+      "a": "283/200",
+      "p": "379/1000",
+      "beta": null,
+      "sigma": "217/12500",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "later-474",
+      "family": "source-tables",
+      "d": 4,
+      "e": 7,
+      "m": 4,
+      "u": "26/25",
+      "cap": "5/2",
+      "a": "283/200",
+      "p": "29/50",
+      "beta": null,
+      "sigma": "2311/5000",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "later-475",
+      "family": "source-tables",
+      "d": 4,
+      "e": 7,
+      "m": 5,
+      "u": "26/25",
+      "cap": "2",
+      "a": "187/125",
+      "p": "17/40",
+      "beta": null,
+      "sigma": "2921/12500",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "later-476",
+      "family": "source-tables",
+      "d": 4,
+      "e": 7,
+      "m": 6,
+      "u": "26/25",
+      "cap": "5/3",
+      "a": "783/500",
+      "p": "331/1000",
+      "beta": null,
+      "sigma": "2699/37500",
+      "tail": null,
+      "hilbert": null,
+      "e1": null
+    },
+    {
+      "id": "own-562",
+      "family": "source-tables",
+      "d": 5,
+      "e": 6,
+      "m": 2,
+      "u": "29/25",
+      "cap": "4",
+      "a": "1149/1000",
+      "p": "247/250",
+      "beta": "28348/8321",
+      "sigma": "617/3125",
+      "tail": "698/125",
+      "hilbert": "1+z",
+      "e1": "1"
+    },
+    {
+      "id": "own-573",
+      "family": "source-tables",
+      "d": 5,
+      "e": 7,
+      "m": 3,
+      "u": "29/25",
+      "cap": "11/3",
+      "a": "623/500",
+      "p": "39/40",
+      "beta": "28725/11134",
+      "sigma": "36299/75000",
+      "tail": "16631/3000",
+      "hilbert": "1+2z",
+      "e1": "2"
+    },
+    {
+      "id": "own-574",
+      "family": "source-tables",
+      "d": 5,
+      "e": 7,
+      "m": 4,
+      "u": "29/25",
+      "cap": "3",
+      "a": "33/25",
+      "p": "77/100",
+      "beta": "3467/1328",
+      "sigma": "517/2500",
+      "tail": "473/100",
+      "hilbert": "1+2z+z^2",
+      "e1": "4"
+    },
+    {
+      "id": "own-575",
+      "family": "source-tables",
+      "d": 5,
+      "e": 7,
+      "m": 5,
+      "u": "29/25",
+      "cap": "13/5",
+      "a": "69/50",
+      "p": "673/1000",
+      "beta": "37483/15020",
+      "sigma": "1569/25000",
+      "tail": "4261/1000",
+      "hilbert": "1+2z+2z^2",
+      "e1": "6"
+    },
+    {
+      "id": "fourfold-29",
+      "family": "fourfold-majorant",
+      "row": 29,
+      "a": "3/2",
+      "p": "1/4",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-30",
+      "family": "fourfold-majorant",
+      "row": 30,
+      "a": "3/2",
+      "p": "1/4",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-31",
+      "family": "fourfold-majorant",
+      "row": 31,
+      "a": "3/2",
+      "p": "1/4",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-32",
+      "family": "fourfold-majorant",
+      "row": 32,
+      "a": "5/3",
+      "p": "229/1000",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-33",
+      "family": "fourfold-majorant",
+      "row": 33,
+      "a": "3/2",
+      "p": "59/200",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-34",
+      "family": "fourfold-majorant",
+      "row": 34,
+      "a": "3/2",
+      "p": "59/200",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-35",
+      "family": "fourfold-majorant",
+      "row": 35,
+      "a": "783/500",
+      "p": "269/1000",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-36",
+      "family": "fourfold-majorant",
+      "row": 36,
+      "a": "1627/1000",
+      "p": "61/250",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-39",
+      "family": "fourfold-majorant",
+      "row": 39,
+      "a": "5/3",
+      "p": "133/500",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-40",
+      "family": "fourfold-majorant",
+      "row": 40,
+      "a": "5/3",
+      "p": "131/500",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-41",
+      "family": "fourfold-majorant",
+      "row": 41,
+      "a": "5/3",
+      "p": "131/500",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-42",
+      "family": "fourfold-majorant",
+      "row": 42,
+      "a": "1627/1000",
+      "p": "11/40",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-45",
+      "family": "fourfold-majorant",
+      "row": 45,
+      "a": "5/3",
+      "p": "42/125",
+      "cap": null,
+      "value": null
+    },
+    {
+      "id": "fourfold-28",
+      "family": "fourfold-majorant",
+      "row": 28,
+      "a": "7/4",
+      "p": "0",
+      "cap": "4",
+      "value": "1/3"
+    },
+    {
+      "id": "fourfold-37",
+      "family": "fourfold-majorant",
+      "row": 37,
+      "a": "841/500",
+      "p": "111/500",
+      "cap": "1/2",
+      "value": "689/3000"
+    },
+    {
+      "id": "fourfold-38",
+      "family": "fourfold-majorant",
+      "row": 38,
+      "a": "1733/1000",
+      "p": "14/125",
+      "cap": "2/9",
+      "value": "1711/13500"
+    },
+    {
+      "id": "fourfold-43",
+      "family": "fourfold-majorant",
+      "row": 43,
+      "a": "841/500",
+      "p": "32/125",
+      "cap": "5/4",
+      "value": "1651/6000"
+    },
+    {
+      "id": "fourfold-44",
+      "family": "fourfold-majorant",
+      "row": 44,
+      "a": "1733/1000",
+      "p": "239/1000",
+      "cap": "10/9",
+      "value": "8443/27000"
+    },
+    {
+      "id": "fourfold-46",
+      "family": "fourfold-majorant",
+      "row": 46,
+      "a": "7/4",
+      "p": "131/500",
+      "cap": "8/11",
+      "value": "5323/16500"
+    },
+    {
+      "id": "fourfold-47",
+      "family": "fourfold-majorant",
+      "row": 47,
+      "a": "931/500",
+      "p": "49/250",
+      "cap": "1/2",
+      "value": "881/3000"
+    },
+    {
+      "id": "fourfold-48",
+      "family": "fourfold-majorant",
+      "row": 48,
+      "a": "1899/1000",
+      "p": "17/100",
+      "cap": "4/13",
+      "value": "4709/19500"
+    },
+    {
+      "id": "fourfold-49",
+      "family": "fourfold-majorant",
+      "row": 49,
+      "a": "7/4",
+      "p": "1/10",
+      "cap": "1/7",
+      "value": "47/420"
+    },
+    {
+      "id": "divisor-1",
+      "family": "baseline",
+      "m": 1,
+      "a": "1",
+      "p": "198/125"
+    },
+    {
+      "id": "divisor-2",
+      "family": "baseline",
+      "m": 2,
+      "a": "1123/1000",
+      "p": "703/500"
+    },
+    {
+      "id": "divisor-3",
+      "family": "baseline",
+      "m": 3,
+      "a": "1201/1000",
+      "p": "223/200"
+    },
+    {
+      "id": "divisor-4",
+      "family": "baseline",
+      "m": 4,
+      "a": "63/50",
+      "p": "121/125"
+    },
+    {
+      "id": "divisor-5",
+      "family": "baseline",
+      "m": 5,
+      "a": "327/250",
+      "p": "801/1000"
+    },
+    {
+      "id": "divisor-6",
+      "family": "baseline",
+      "m": 6,
+      "a": "5/3",
+      "p": "42/125"
+    },
+    {
+      "id": "fivefold-3",
+      "family": "baseline",
+      "m": 3,
+      "affine": [
+        2000,
+        795,
+        1697
+      ],
+      "comparison": [
+        383000,
+        183637
+      ]
+    },
+    {
+      "id": "fivefold-4",
+      "family": "baseline",
+      "m": 4,
+      "affine": [
+        200,
+        63,
+        201
+      ],
+      "comparison": [
+        69600,
+        42225
+      ]
+    },
+    {
+      "id": "fivefold-5",
+      "family": "baseline",
+      "m": 5,
+      "affine": [
+        2000,
+        427,
+        2333
+      ],
+      "comparison": [
+        1019000,
+        689989
+      ]
+    },
+    {
+      "id": "primitive-0",
+      "family": "integrals",
+      "j": 0,
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": "primitive-1",
+      "family": "integrals",
+      "j": 1,
+      "coefficients": [
+        -1,
+        7,
+        -21,
+        35,
+        -35,
+        21,
+        -7,
+        1
+      ]
+    },
+    {
+      "id": "primitive-2",
+      "family": "integrals",
+      "j": 2,
+      "coefficients": [
+        -128,
+        448,
+        -672,
+        560,
+        -280,
+        84,
+        -14,
+        1
+      ]
+    },
+    {
+      "id": "primitive-3",
+      "family": "integrals",
+      "j": 3,
+      "coefficients": [
+        -2187,
+        5103,
+        -5103,
+        2835,
+        -945,
+        189,
+        -21,
+        1
+      ]
+    },
+    {
+      "id": "primitive-4",
+      "family": "integrals",
+      "j": 4,
+      "coefficients": [
+        -16384,
+        28672,
+        -21504,
+        8960,
+        -2240,
+        336,
+        -28,
+        1
+      ]
+    },
+    {
+      "id": "crossing-left",
+      "family": "crossings",
+      "c": "16020581569/90194313216",
+      "difference": "4865740123725896038673655217583412067773349000784246293/179454222322161348059837579933782975323690321811637054727071465472"
+    },
+    {
+      "id": "crossing-right",
+      "family": "crossings",
+      "c": "8010290789/45097156608",
+      "difference": "-323125344487580445770647099643374454926106706581777027/2803972223783771063434962186465358989432661278306828980110491648"
+    },
+    {
+      "id": "join-1",
+      "family": "envelopes",
+      "r": 1,
+      "value": "1/2"
+    },
+    {
+      "id": "join-2",
+      "family": "envelopes",
+      "r": 2,
+      "value": "5/9"
+    },
+    {
+      "id": "join-3",
+      "family": "envelopes",
+      "r": 3,
+      "value": "37/64"
+    },
+    {
+      "id": "join-4",
+      "family": "envelopes",
+      "r": 4,
+      "value": "369/625"
+    },
+    {
+      "id": "join-5",
+      "family": "envelopes",
+      "r": 5,
+      "value": "4651/7776"
+    },
+    {
+      "id": "join-6",
+      "family": "envelopes",
+      "r": 6,
+      "value": "70993/117649"
+    },
+    {
+      "id": "five-normal-sixth",
+      "family": "envelopes",
+      "c": "1/6",
+      "values": [
+        "15625/46656",
+        "2911137614/4984209207",
+        "1882384/2278125",
+        "275920739675/470184984576",
+        "1838265625/2176782336",
+        "275920739675/470184984576",
+        "2911137614/4984209207",
+        "1882384/2278125"
+      ]
+    },
+    {
+      "id": "five-normal-third",
+      "family": "envelopes",
+      "c": "1/3",
+      "values": [
+        "64/729",
+        "537408277/1252332576",
+        "117649/1492992",
+        "229820017/459165024",
+        "117649/531441",
+        "117649/531441",
+        "537408277/1252332576",
+        "64/729"
+      ]
+    },
+    {
+      "id": "five-normal-half",
+      "family": "envelopes",
+      "c": "1/2",
+      "values": [
+        "1/64",
+        "0",
+        "0",
+        "774627007/1934917632",
+        "117649/2985984",
+        "1/64",
+        "1/64",
+        "1/64"
+      ]
+    },
+    {
+      "id": "K5-zero",
+      "family": "envelopes",
+      "c": "0",
+      "values": [
+        "1",
+        "2",
+        "1"
+      ],
+      "single_enabled": false
+    },
+    {
+      "id": "K5-switch",
+      "family": "envelopes",
+      "c": "4/25",
+      "values": [
+        "62759089/244140625",
+        "48275138/244140625",
+        "24137569/244140625"
+      ],
+      "single_enabled": true
+    },
+    {
+      "id": "K5-half",
+      "family": "envelopes",
+      "c": "1/2",
+      "values": [
+        "0",
+        "0",
+        "0"
+      ],
+      "single_enabled": true
+    }
+  ]
+}

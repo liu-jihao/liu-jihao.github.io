@@ -1,0 +1,453 @@
+{
+  "active_files": [
+    {
+      "bytes": 22033,
+      "path": "check.py",
+      "sha256": "ed70357ab3687ab95e2a8c1fecbd4d8da025e226c9b79667ef3d71fc3fc1fd22"
+    },
+    {
+      "bytes": 198077,
+      "path": "data/profiles.json",
+      "sha256": "c0ca585892a2b79f887451932d81a3f34a1bd19494aea5b104e969f62d614d4e"
+    },
+    {
+      "bytes": 25700,
+      "path": "data/scalar.json",
+      "sha256": "c00dc24fc34ecbbf6d35322372b2963db37170e7aa38fb6c5ec34b5d253c0c34"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-10-ledger.json",
+  "families": [
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "id": "10-ledger/P2",
+      "specification": {
+        "article_labels": [
+          "lem:ledger-profile-exclusion",
+          "lem:ledger-certificate-checking",
+          "subsec:ledger-profile-data"
+        ],
+        "data": "data/profiles.json",
+        "id": "10-ledger/P2",
+        "verified_summary": {
+          "initial_rectangles": 20,
+          "integration_cells": 340,
+          "leaves": 44,
+          "margin_below_target": "13863/500000000",
+          "maximum_tags": [
+            "2.4"
+          ],
+          "maximum_upper_numerator": 999872274,
+          "root": [
+            "131/900",
+            "16",
+            "8/45",
+            "5"
+          ],
+          "splits": 24,
+          "target": "9999/10000",
+          "volume_lower_margin": "63863/500000000"
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "id": "10-ledger/P2-new-tail",
+      "specification": {
+        "article_labels": [
+          "lem:ledger-profile-exclusion",
+          "lem:ledger-certificate-checking",
+          "subsec:ledger-profile-data"
+        ],
+        "data": "data/profiles.json",
+        "id": "10-ledger/P2-new-tail",
+        "verified_summary": {
+          "branch_margin": "4/225",
+          "denominator_lower": "9",
+          "interface": "all a1 in the unbounded ray, all t>=27/25; denominator increases with a1",
+          "loss_upper": "4191719943087/476837158203125",
+          "margin_below_one_hundredth": "2306606555777/1907348632812500",
+          "normalized_height_lower": "8/45",
+          "slope_domain": ">=5",
+          "volume_lower_margin": "342702120024341/15258789062500000",
+          "zero_at_minimum_slope": "434/375"
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "id": "10-ledger/T",
+      "specification": {
+        "article_labels": [
+          "lem:ledger-profile-exclusion",
+          "lem:ledger-certificate-checking",
+          "subsec:ledger-profile-data"
+        ],
+        "data": "data/profiles.json",
+        "id": "10-ledger/T",
+        "verified_summary": {
+          "initial_rectangles": 20,
+          "integration_cells": 717,
+          "leaves": 82,
+          "margin_below_target": "121161/1000000000",
+          "maximum_tags": [
+            "2.400"
+          ],
+          "maximum_upper_numerator": 999778839,
+          "root": [
+            "131/900",
+            "16",
+            "103/540",
+            "4"
+          ],
+          "splits": 62,
+          "target": "9999/10000",
+          "volume_lower_margin": "221161/1000000000"
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "id": "10-ledger/T-new-tail",
+      "specification": {
+        "article_labels": [
+          "lem:ledger-profile-exclusion",
+          "lem:ledger-certificate-checking",
+          "subsec:ledger-profile-data"
+        ],
+        "data": "data/profiles.json",
+        "id": "10-ledger/T-new-tail",
+        "verified_summary": {
+          "branch_margin": "83/2700",
+          "denominator_lower": "7",
+          "interface": "all a1 in the unbounded ray, all t>=27/25; denominator increases with a1",
+          "loss_upper": "3622557586593623/427246093750000000",
+          "margin_below_one_hundredth": "649903350906377/427246093750000000",
+          "normalized_height_lower": "103/540",
+          "slope_domain": ">=4",
+          "volume_lower_margin": "9728882843093877/427246093750000000",
+          "zero_at_minimum_slope": "2057/1750"
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "id": "10-ledger/old-tail",
+      "specification": {
+        "article_labels": [
+          "lem:ledger-profile-exclusion",
+          "lem:ledger-certificate-checking",
+          "subsec:ledger-profile-data"
+        ],
+        "data": "data/profiles.json",
+        "id": "10-ledger/old-tail",
+        "verified_summary": {
+          "exact_total": "302187086791651959279690170031310457055944263343/601927131401434017073954080000000000000000000000",
+          "integration_cells": 5,
+          "interface": "all a1; rate one before 9/10 and old slope sixteen thereafter",
+          "rounding_gap": "2344740721950810703726161702944055736657/601927131401434017073954080000000000000000000000",
+          "slope_domain": ">=16",
+          "upper": 502032677,
+          "volume_lower_margin": "497967323/1000000000"
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/scalar.json"
+      ],
+      "id": "10-ledger/scalar",
+      "specification": {
+        "article_labels": [
+          "lem:ledger-complete-scalar",
+          "eq:ledger-line-test"
+        ],
+        "data": "data/scalar.json",
+        "id": "10-ledger/scalar",
+        "verified_summary": {
+          "affine_witnesses": 253,
+          "first_excluded_multiplicities": [
+            {
+              "d": 2,
+              "e": 3,
+              "first_excluded_m": 3,
+              "moment": 3
+            },
+            {
+              "d": 2,
+              "e": 4,
+              "first_excluded_m": 4,
+              "moment": 4
+            },
+            {
+              "d": 2,
+              "e": 5,
+              "first_excluded_m": 5,
+              "moment": 5
+            },
+            {
+              "d": 2,
+              "e": 6,
+              "first_excluded_m": 6,
+              "moment": 6
+            },
+            {
+              "d": 2,
+              "e": 7,
+              "first_excluded_m": 7,
+              "moment": 7
+            },
+            {
+              "d": 3,
+              "e": 4,
+              "first_excluded_m": 4,
+              "moment": 6
+            },
+            {
+              "d": 3,
+              "e": 5,
+              "first_excluded_m": 7,
+              "moment": 11
+            },
+            {
+              "d": 3,
+              "e": 6,
+              "first_excluded_m": 10,
+              "moment": 15
+            },
+            {
+              "d": 3,
+              "e": 7,
+              "first_excluded_m": 12,
+              "moment": 18
+            },
+            {
+              "d": 4,
+              "e": 5,
+              "first_excluded_m": 5,
+              "moment": 10
+            },
+            {
+              "d": 4,
+              "e": 6,
+              "first_excluded_m": 10,
+              "moment": 20
+            },
+            {
+              "d": 4,
+              "e": 7,
+              "first_excluded_m": 15,
+              "moment": 30
+            },
+            {
+              "d": 5,
+              "e": 6,
+              "first_excluded_m": 6,
+              "moment": 15
+            },
+            {
+              "d": 5,
+              "e": 7,
+              "first_excluded_m": 14,
+              "moment": 36
+            },
+            {
+              "d": 6,
+              "e": 7,
+              "first_excluded_m": 7,
+              "moment": 21
+            }
+          ],
+          "interface": "all degree-floor-one descendants, including adjacent and skipped dimensions and the direct point successor",
+          "states": 71,
+          "states_by_dimension": [
+            1,
+            6,
+            20,
+            22,
+            16,
+            6
+          ]
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "id": "10-ledger/source-margins",
+      "specification": {
+        "article_labels": [
+          "lem:ledger-profile-exclusion",
+          "lem:ledger-certificate-checking",
+          "subsec:ledger-profile-data"
+        ],
+        "data": "data/profiles.json",
+        "id": "10-ledger/source-margins",
+        "verified_summary": {
+          "comparisons": [
+            {
+              "available": "5/38",
+              "error": "1/1000000",
+              "height": "131/1000",
+              "profile": "old",
+              "strict_margin": "10981/19000000"
+            },
+            {
+              "available": "27/140",
+              "error": "1/1000000",
+              "height": "24/125",
+              "profile": "P2",
+              "strict_margin": "5993/7000000"
+            },
+            {
+              "available": "124/601",
+              "error": "1/1000000",
+              "height": "103/500",
+              "profile": "T",
+              "strict_margin": "193399/601000000"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "canonical_inputs": [
+      "data/scalar.json",
+      "data/profiles.json"
+    ],
+    "constants": {
+      "bounded_target": "9999/10000",
+      "comparison_error": "1/1000000",
+      "endpoint": "13/5",
+      "new_anchor": "27/25",
+      "old_anchor": "9/10",
+      "old_height": "131/1000",
+      "rounding_denominator": 1000000000
+    },
+    "coverage": {
+      "bounded": "complete closed roots by exact binary trees, both children at each split, every leaf once, full [0,13/5] on every leaf",
+      "degeneracies": "nonpositive scalar successor caps discarded; point successor separate; parallel lines need no crossing; closed rectangle edges and vertices retained; no empty leaves or order cells; zero polynomials integrated with strict rounding",
+      "scalar": "all 71 positive-cap states, all 253 affine witnesses and every allowed successor",
+      "unbounded": "a0>=16, P2 a1>=5, T a1>=4, with endpoint overlap allowed"
+    },
+    "formats": {
+      "objects": "exact keys; no duplicate keys; no floats or booleans in integer fields",
+      "profiles": "10-ledger/profiles/v1; constants,families,old_tail",
+      "rationals": "canonical reduced signed numerator/positive denominator strings, or integer strings",
+      "rounding": "floor(10^9 * exact cell integral)+1, including zero integrals",
+      "scalar": "10-ledger/scalar/v1; rows: id,d,e,m,moment,cap,radius,lines"
+    },
+    "main_theorem": "thm:original-center-ledger"
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "10-ledger",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "family": "10-ledger/P2",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c86485072f437879"
+      ],
+      "source_version": "c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2; c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2"
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "family": "10-ledger/P2-new-tail",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c86485072f437879"
+      ],
+      "source_version": "c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2; c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2"
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "family": "10-ledger/T",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c86485072f437879"
+      ],
+      "source_version": "c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2; c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2"
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "family": "10-ledger/T-new-tail",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c86485072f437879"
+      ],
+      "source_version": "c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2; c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2"
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "family": "10-ledger/old-tail",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c86485072f437879"
+      ],
+      "source_version": "c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2; c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2"
+    },
+    {
+      "data_files": [
+        "data/scalar.json"
+      ],
+      "family": "10-ledger/scalar",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:4f892d3c92b38b34"
+      ],
+      "source_version": "4f892d3c92b38b34@sha256:6565b4b77adf6e0b79ef1a6b1cf79a115da022b7977f2b82b89b1ab5b7e9f68a; 4f892d3c92b38b34@sha256:6565b4b77adf6e0b79ef1a6b1cf79a115da022b7977f2b82b89b1ab5b7e9f68a"
+    },
+    {
+      "data_files": [
+        "data/profiles.json"
+      ],
+      "family": "10-ledger/source-margins",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:c86485072f437879"
+      ],
+      "source_version": "c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2; c86485072f437879@sha256:49cfd93effa64449ab286263f41dae5951ec035a2bb661dc0f089f96008ccfa2"
+    }
+  ],
+  "source_owner_manifest_sha256": "1746309f233f8715541533bcd03c0f9a6cf1dbd43a9a974b7859647a69843b5d"
+}

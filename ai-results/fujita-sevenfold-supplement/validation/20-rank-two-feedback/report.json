@@ -1,0 +1,146 @@
+{
+  "Y_lambda": {
+    "3": "450470/359649",
+    "4": "4851401/4044285",
+    "5": "7672783/6632730"
+  },
+  "Y_theta": {
+    "3": "18567910/7954497",
+    "4": "21460879/10555515",
+    "5": "29566457/15881670"
+  },
+  "active_family_index_ranges": {
+    "cartier_quartic": [
+      1731,
+      1950
+    ],
+    "cartier_quintic": [
+      1731,
+      1818
+    ],
+    "distinct_quartic": [
+      1731,
+      1788
+    ],
+    "other_cubic": [
+      1731,
+      1852
+    ],
+    "power_quartic": [
+      1731,
+      1950
+    ],
+    "power_quintic": [
+      1731,
+      1818
+    ],
+    "smooth_cubic_balanced": [
+      1731,
+      1965
+    ],
+    "smooth_cubic_extreme": [
+      1731,
+      1965
+    ]
+  },
+  "all_checks_pass": true,
+  "all_printed_E_are_exact_ceilings": true,
+  "allowed_state_edges": 170,
+  "continuous_extinction_gammas": {
+    "m3_cap2": "10800/11663",
+    "m3_cap7/3": "34200/34799",
+    "m4_cap2": "43200/44303",
+    "m4_cap3/2": "113400/126811",
+    "m5_cap3/2": "70875/77944"
+  },
+  "cubic_nonquartic_max_correction": "451/1000",
+  "dependencies": "Python >=3.9 standard library; only the two declared JSON inputs.",
+  "direct_quartic_affine_max": "463961965/62269263",
+  "direct_quartic_entry_slack": "116645/20756421",
+  "families": {
+    "20-rank-two-feedback/mesh": {
+      "candidate_formulas": 8,
+      "enabled_candidate_records": 1266,
+      "endpoints": 236,
+      "first_index": 1731,
+      "interface": "Exact active-key set, every candidate value, maximum and all ties, E-1 < 10^9 L < E, every reserve and terminal mass.",
+      "last_index": 1965,
+      "prefix_reserves": 235,
+      "records": 235,
+      "strict_ceiling_brackets": 235
+    },
+    "20-rank-two-feedback/states": {
+      "interface": "Complete positive-cap census, 170 successor caps, moments, radii, full recurrence, both whole-price columns; theta cubic is affine.",
+      "lambda_prices": 28,
+      "records": 28,
+      "successor_records": 170,
+      "theta_prices": 28
+    }
+  },
+  "final_rounded_reserve": "8402435542349/16000000000000000",
+  "geometric_scope": "Conditional on the full symbolic/principal estimates, continuous reductions and complete-source injection proved in the article; no geometric proof is executed.",
+  "initial_mass": "458771731542349/16000000000000000",
+  "lambda_paid_max": "155528897/19473750",
+  "lambda_paid_max_state": [
+    [
+      4,
+      6,
+      6
+    ]
+  ],
+  "margin_over_1_over_2000": "402435542349/16000000000000000",
+  "maximizer_index_ranges": [
+    {
+      "end": 1734,
+      "names": [
+        "power_quartic"
+      ],
+      "start": 1731
+    },
+    {
+      "end": 1761,
+      "names": [
+        "smooth_cubic_extreme"
+      ],
+      "start": 1735
+    },
+    {
+      "end": 1788,
+      "names": [
+        "distinct_quartic"
+      ],
+      "start": 1762
+    },
+    {
+      "end": 1965,
+      "names": [
+        "smooth_cubic_extreme"
+      ],
+      "start": 1789
+    }
+  ],
+  "mesh_intervals": 235,
+  "mesh_points": 236,
+  "minimum_fixed_coefficients_at_lambda": {
+    "3": "20499993/73160000",
+    "4": "2426571/8412500",
+    "5": "41786199/140425000"
+  },
+  "rounding": "Ordinary ceiling is the rule; all 235 supplied maxima are nonintegral after scaling, so floor-plus-one agrees here.",
+  "schema": "fujita-rank-two-check-v1",
+  "scope": "Finite source/whole-price arithmetic; local geometric premises imported only at read scopes.",
+  "state_count": 28,
+  "status": "pass",
+  "sum_E": 28148081,
+  "theta_cubic_affine_max": "199315493/26541000",
+  "theta_cubic_entry_slack": "7417/26541000",
+  "theta_noncubic_gap_to_8": "402931/26541000",
+  "theta_noncubic_max": "211925069/26541000",
+  "theta_noncubic_max_state": [
+    [
+      4,
+      6,
+      4
+    ]
+  ]
+}

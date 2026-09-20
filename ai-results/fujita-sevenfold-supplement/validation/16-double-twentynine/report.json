@@ -1,0 +1,599 @@
+{
+  "status": "PASS",
+  "schema": "double-twentynine-v1",
+  "families": {
+    "16-double-twentynine/states": {
+      "states": 28,
+      "edges": 170,
+      "flags": 739,
+      "terminal_entries": 28,
+      "maximum_terminal_J": "384791/294000",
+      "first_exclusions": [
+        {
+          "state": "2-3-3",
+          "beta": "0",
+          "cap": "0"
+        },
+        {
+          "state": "2-4-4",
+          "beta": "0",
+          "cap": "0"
+        },
+        {
+          "state": "2-5-5",
+          "beta": "0",
+          "cap": "0"
+        },
+        {
+          "state": "2-6-6",
+          "beta": "0",
+          "cap": "0"
+        },
+        {
+          "state": "3-4-4",
+          "beta": "0",
+          "cap": "0"
+        },
+        {
+          "state": "3-5-7",
+          "beta": "-1/7",
+          "cap": "-1/7"
+        },
+        {
+          "state": "3-6-10",
+          "beta": "0",
+          "cap": "0"
+        },
+        {
+          "state": "4-5-5",
+          "beta": "0",
+          "cap": "0"
+        },
+        {
+          "state": "4-6-8",
+          "beta": "1/2",
+          "cap": "0"
+        }
+      ]
+    },
+    "16-double-twentynine/prices": {
+      "queries": 596,
+      "domain_kinds": {
+        "empty": 1,
+        "point": 5,
+        "positive_cap": 590
+      },
+      "flag_grids": 1830,
+      "feasible_grid_points": 23365,
+      "generic_entries": 26,
+      "square_entries": 12,
+      "replacement_entries": 8,
+      "grouped": {
+        "generic": [
+          {
+            "group": "d<=2",
+            "column": "generic-lambda",
+            "maximum": "319619221/41832500",
+            "strict_ceiling": "76405/10000"
+          },
+          {
+            "group": "d<=2",
+            "column": "generic-mu",
+            "maximum": "12329579/1667500",
+            "strict_ceiling": "73941/10000"
+          },
+          {
+            "group": "d3e3",
+            "column": "generic-lambda",
+            "maximum": "24990439/3346600",
+            "strict_ceiling": "74675/10000"
+          },
+          {
+            "group": "d3e3",
+            "column": "generic-mu",
+            "maximum": "968761/133400",
+            "strict_ceiling": "72621/10000"
+          },
+          {
+            "group": "d3e4",
+            "column": "generic-lambda",
+            "maximum": "768397087/100398000",
+            "strict_ceiling": "76536/10000"
+          },
+          {
+            "group": "d3e4",
+            "column": "generic-mu",
+            "maximum": "10027171/1334000",
+            "strict_ceiling": "75167/10000"
+          },
+          {
+            "group": "d3e5",
+            "column": "generic-lambda",
+            "maximum": "237355241/30119400",
+            "strict_ceiling": "78805/10000"
+          },
+          {
+            "group": "d3e5",
+            "column": "generic-mu",
+            "maximum": "1029951/133400",
+            "strict_ceiling": "77208/10000"
+          },
+          {
+            "group": "d3e6m4",
+            "column": "generic-lambda",
+            "maximum": "101185003/12549750",
+            "strict_ceiling": "80628/10000"
+          },
+          {
+            "group": "d3e6m4",
+            "column": "generic-mu",
+            "maximum": "657962/83375",
+            "strict_ceiling": "78916/10000"
+          },
+          {
+            "group": "d3e6m5to9",
+            "column": "generic-lambda",
+            "maximum": "16357368/2091625",
+            "strict_ceiling": "78205/10000"
+          },
+          {
+            "group": "d3e6m5to9",
+            "column": "generic-mu",
+            "maximum": "634907/83375",
+            "strict_ceiling": "76151/10000"
+          },
+          {
+            "group": "d4e4",
+            "column": "generic-lambda",
+            "maximum": "768397087/100398000",
+            "strict_ceiling": "76536/10000"
+          },
+          {
+            "group": "d4e4",
+            "column": "generic-mu",
+            "maximum": "10027171/1334000",
+            "strict_ceiling": "75167/10000"
+          },
+          {
+            "group": "d4e5",
+            "column": "generic-lambda",
+            "maximum": "263860727/33466000",
+            "strict_ceiling": "78845/10000"
+          },
+          {
+            "group": "d4e5",
+            "column": "generic-mu",
+            "maximum": "31279619/4002000",
+            "strict_ceiling": "78160/10000"
+          },
+          {
+            "group": "d4e6m3",
+            "column": "generic-lambda",
+            "maximum": "821169547/100398000",
+            "strict_ceiling": "81792/10000"
+          },
+          {
+            "group": "d4e6m3",
+            "column": "generic-mu",
+            "maximum": "32322053/4002000",
+            "strict_ceiling": "80765/10000"
+          },
+          {
+            "group": "d4e6m4",
+            "column": "generic-lambda",
+            "maximum": "406913591/50199000",
+            "strict_ceiling": "81061/10000"
+          },
+          {
+            "group": "d4e6m4",
+            "column": "generic-mu",
+            "maximum": "5315403/667000",
+            "strict_ceiling": "79692/10000"
+          },
+          {
+            "group": "d4e6m5",
+            "column": "generic-lambda",
+            "maximum": "1005876349/125497500",
+            "strict_ceiling": "80152/10000"
+          },
+          {
+            "group": "d4e6m5",
+            "column": "generic-mu",
+            "maximum": "13079867/1667500",
+            "strict_ceiling": "78440/10000"
+          },
+          {
+            "group": "d4e6m6",
+            "column": "generic-lambda",
+            "maximum": "164962519/20916250",
+            "strict_ceiling": "78869/10000"
+          },
+          {
+            "group": "d4e6m6",
+            "column": "generic-mu",
+            "maximum": "6404431/833750",
+            "strict_ceiling": "76815/10000"
+          },
+          {
+            "group": "d4e6m7",
+            "column": "generic-lambda",
+            "maximum": "154364177/20079600",
+            "strict_ceiling": "76877/10000"
+          },
+          {
+            "group": "d4e6m7",
+            "column": "generic-mu",
+            "maximum": "1987141/266800",
+            "strict_ceiling": "74481/10000"
+          }
+        ],
+        "square": [
+          {
+            "group": "d<=2",
+            "column": "square",
+            "maximum": "1625869/217500",
+            "strict_ceiling": "747526/100000"
+          },
+          {
+            "group": "d3e3",
+            "column": "square",
+            "maximum": "127121/17400",
+            "strict_ceiling": "730581/100000"
+          },
+          {
+            "group": "d3e4",
+            "column": "square",
+            "maximum": "434877/58000",
+            "strict_ceiling": "749788/100000"
+          },
+          {
+            "group": "d3e5",
+            "column": "square",
+            "maximum": "403133/52200",
+            "strict_ceiling": "772286/100000"
+          },
+          {
+            "group": "d3e6",
+            "column": "square",
+            "maximum": "226039/29000",
+            "strict_ceiling": "779445/100000"
+          },
+          {
+            "group": "d4e4",
+            "column": "square",
+            "maximum": "434877/58000",
+            "strict_ceiling": "749788/100000"
+          },
+          {
+            "group": "d4e5",
+            "column": "square",
+            "maximum": "1345853/174000",
+            "strict_ceiling": "773479/100000"
+          },
+          {
+            "group": "d4e6m3",
+            "column": "square",
+            "maximum": "2087627/261000",
+            "strict_ceiling": "799858/100000"
+          },
+          {
+            "group": "d4e6m4",
+            "column": "square",
+            "maximum": "230561/29000",
+            "strict_ceiling": "795038/100000"
+          },
+          {
+            "group": "d4e6m5",
+            "column": "square",
+            "maximum": "1708787/217500",
+            "strict_ceiling": "785650/100000"
+          },
+          {
+            "group": "d4e6m6",
+            "column": "square",
+            "maximum": "420058/54375",
+            "strict_ceiling": "772521/100000"
+          },
+          {
+            "group": "d4e6m7",
+            "column": "square",
+            "maximum": "87267/11600",
+            "strict_ceiling": "752302/100000"
+          }
+        ]
+      },
+      "cutting_gaps": {
+        "generic-lambda": "2367481/20916250",
+        "generic-mu": "20597/667000",
+        "square": "373/261000",
+        "low-b": "11464453/100398000",
+        "factorial-mu": "20597/667000",
+        "factorial-lambda": "10926929/125497500",
+        "distinct-mu": "20597/667000",
+        "distinct-lambda": "2367481/20916250",
+        "singular-mu": "20597/667000",
+        "singular-lambda": "2367481/20916250",
+        "smooth-7-mu": "79607/14007000",
+        "smooth-3-theta": "31529/1653000",
+        "factorial-lambda-n8": "1602409/50199000",
+        "distinct-lambda-n8": "1602409/50199000",
+        "singular-lambda-n8": "1602409/50199000"
+      }
+    },
+    "16-double-twentynine/arithmetic": {
+      "identities": 45,
+      "values": {
+        "initial_mass": "458771731542349/16000000000000000",
+        "square_mass": "15790793/5000000000",
+        "terminal_gap": "3149/142100",
+        "generic_lambda_cubic": "821169547/100398000",
+        "generic_mu_cubic": "32322053/4002000",
+        "generic_lambda_quartic": "406913591/50199000",
+        "generic_mu_quartic": "5315403/667000",
+        "generic_lambda_quintic": "1005876349/125497500",
+        "generic_lambda_quartic_threefold": "101185003/12549750",
+        "low_b_price": "791719547/100398000",
+        "quartic_low_price": "120336203/15059700",
+        "quartic_retained_price": "1054271/150597",
+        "square_maximum": "2087627/261000",
+        "square_quartic": "230561/29000",
+        "square_quintic": "1708787/217500",
+        "square_threefolds": "226039/29000",
+        "square_gap": "373/261000",
+        "factorial_quintic_price": "993053071/125497500",
+        "factorial_shell_loss": "161051/156250000",
+        "noncartier_quartic_price": "800795597/100398000",
+        "distinct_cubic_lambda_price": "101632183/12549750",
+        "singular_septic_lambda_price": "154364177/20079600",
+        "smooth_large_mu_price": "111976393/14007000",
+        "smooth_theta_price": "13192471/1653000",
+        "affine_3": "851/1500",
+        "generic_order_3": "3476607/10528000",
+        "mu_order_3": "460317/921200",
+        "power_order_3": "24336249/73348000",
+        "affine_4": "379/1000",
+        "generic_order_4": "2606317/7275600",
+        "power_order_4": "2606317/7252400",
+        "affine_5": "741/2500",
+        "generic_order_5": "2137213/6297400",
+        "power_order_5": "164401/483300",
+        "power_order_5_excess": "79/483300",
+        "integral_first_loss": "220301263580299/16000000000000000",
+        "integral_second_loss": "53282823/40000000000",
+        "integral_reserve": "4343146775241/320000000000000",
+        "cubic_reserve": "126108747621/320000000000000",
+        "cartier_reserve": "446253304953/16000000000000",
+        "singular_quartic_reserve": "157041436918849/32000000000000000",
+        "singular_quintic_reserve": "99572486514949/32000000000000000",
+        "smooth_first_loss": "360271187894299/16000000000000000",
+        "smooth_second_loss": "11331153881/3600000000000",
+        "smooth_reserve": "8665174751849/2880000000000000"
+      },
+      "fixed_order_conditions": [
+        {
+          "family": "generic",
+          "m": 3,
+          "lower": "33/100",
+          "excess": "2367/10528000"
+        },
+        {
+          "family": "power",
+          "m": 3,
+          "lower": "33/100",
+          "excess": "131409/73348000"
+        },
+        {
+          "family": "generic",
+          "m": 4,
+          "lower": "33/100",
+          "excess": "205369/7275600"
+        },
+        {
+          "family": "power",
+          "m": 4,
+          "lower": "7/20",
+          "excess": "67977/7252400"
+        },
+        {
+          "family": "generic",
+          "m": 5,
+          "lower": "33/100",
+          "excess": "59071/6297400"
+        },
+        {
+          "family": "power",
+          "m": 5,
+          "lower": "17/50",
+          "excess": "79/483300"
+        }
+      ],
+      "finite_character_checks": [
+        {
+          "exponent": 3,
+          "character": 1,
+          "cap": "7/3"
+        },
+        {
+          "exponent": 3,
+          "character": 2,
+          "cap": "7/3"
+        },
+        {
+          "exponent": 4,
+          "character": 1,
+          "cap": "9/4"
+        },
+        {
+          "exponent": 4,
+          "character": 2,
+          "cap": "2"
+        },
+        {
+          "exponent": 4,
+          "character": 3,
+          "cap": "9/4"
+        },
+        {
+          "exponent": 5,
+          "character": 1,
+          "cap": "11/5"
+        },
+        {
+          "exponent": 5,
+          "character": 2,
+          "cap": "9/5"
+        },
+        {
+          "exponent": 5,
+          "character": 3,
+          "cap": "9/5"
+        },
+        {
+          "exponent": 5,
+          "character": 4,
+          "cap": "11/5"
+        },
+        {
+          "exponent": 6,
+          "character": 1,
+          "cap": "13/6"
+        },
+        {
+          "exponent": 6,
+          "character": 2,
+          "cap": "5/3"
+        },
+        {
+          "exponent": 6,
+          "character": 3,
+          "cap": "3/2"
+        },
+        {
+          "exponent": 6,
+          "character": 4,
+          "cap": "5/3"
+        },
+        {
+          "exponent": 6,
+          "character": 5,
+          "cap": "13/6"
+        },
+        {
+          "exponent": 7,
+          "character": 1,
+          "cap": "15/7"
+        },
+        {
+          "exponent": 7,
+          "character": 2,
+          "cap": "11/7"
+        },
+        {
+          "exponent": 7,
+          "character": 3,
+          "cap": "9/7"
+        },
+        {
+          "exponent": 7,
+          "character": 4,
+          "cap": "9/7"
+        },
+        {
+          "exponent": 7,
+          "character": 5,
+          "cap": "11/7"
+        },
+        {
+          "exponent": 7,
+          "character": 6,
+          "cap": "15/7"
+        }
+      ],
+      "finite_endpoint_checks": [
+        {
+          "exponent": 3,
+          "eta": "33/100",
+          "interval": [
+            "1731/2000",
+            "23/25"
+          ],
+          "loss": "283361605067299/16000000000000000"
+        },
+        {
+          "exponent": 3,
+          "eta": "49/100",
+          "interval": [
+            "23/25",
+            "19/20"
+          ],
+          "loss": "256362161/180000000000"
+        },
+        {
+          "exponent": 4,
+          "eta": "33/100",
+          "interval": [
+            "1731/2000",
+            "23/25"
+          ],
+          "loss": "319995473682049/16000000000000000"
+        },
+        {
+          "exponent": 4,
+          "eta": "49/100",
+          "interval": [
+            "23/25",
+            "19/20"
+          ],
+          "loss": "1390606461/640000000000"
+        },
+        {
+          "exponent": 5,
+          "eta": "33/100",
+          "interval": [
+            "1731/2000",
+            "23/25"
+          ],
+          "loss": "343712390480899/16000000000000000"
+        },
+        {
+          "exponent": 5,
+          "eta": "49/100",
+          "interval": [
+            "23/25",
+            "19/20"
+          ],
+          "loss": "2728597773/1000000000000"
+        },
+        {
+          "exponent": 6,
+          "eta": "33/100",
+          "interval": [
+            "1731/2000",
+            "23/25"
+          ],
+          "loss": "360271187894299/16000000000000000"
+        },
+        {
+          "exponent": 6,
+          "eta": "49/100",
+          "interval": [
+            "23/25",
+            "19/20"
+          ],
+          "loss": "11331153881/3600000000000"
+        }
+      ]
+    }
+  },
+  "rendered_views": [
+    "affine.tex",
+    "generic-orders.tex",
+    "generic.tex",
+    "power-orders.tex",
+    "replacements.tex",
+    "singular-reserves.tex",
+    "square.tex",
+    "states.tex"
+  ],
+  "scope": "Exact finite arithmetic conditional on the article's geometric, analytic all-parameter, and uniform-error proofs; not formal or whole-graph verification."
+}

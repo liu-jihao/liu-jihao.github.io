@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "schema": "triple-fivefold-check-report-v1",
+  "predicates": 11472,
+  "families": {
+    "13-triple-fivefold/tails": {
+      "rows": 30,
+      "affine_recurrences": 77,
+      "rendered_rows": 30,
+      "degree_two_margin": "251/27000"
+    },
+    "13-triple-fivefold/first-source": {
+      "polygons": 39,
+      "written_witnesses": 466,
+      "summaries": 39,
+      "empty_positive_domains": 2,
+      "closed_domain_dimensions": {
+        "-1": 0,
+        "0": 1,
+        "1": 1,
+        "2": 39
+      },
+      "normal_roots": [
+        {
+          "mu": 3,
+          "descendants": 19,
+          "nonpositive_caps": 5,
+          "gap": "1332337/53959500"
+        },
+        {
+          "mu": 4,
+          "descendants": 19,
+          "nonpositive_caps": 9,
+          "gap": "27314239/539595000"
+        },
+        {
+          "mu": 5,
+          "descendants": 19,
+          "nonpositive_caps": 9,
+          "gap": "13768373/269797500"
+        },
+        {
+          "mu": 6,
+          "descendants": 19,
+          "nonpositive_caps": 9,
+          "gap": "2506823/38542500"
+        }
+      ],
+      "initial_mass": "64502732955140729/3125000000000000000",
+      "reached_mass": "18145162291861493/3125000000000000000",
+      "mass_above_one_over_200": "2520162291861493/3125000000000000000",
+      "restricted_price_margin": "1369/54000",
+      "quartic_low_margin": "22657/53959500"
+    },
+    "13-triple-fivefold/integral": {
+      "first_rows": 19,
+      "intervals": 17,
+      "constrained_comparisons": 170,
+      "recomputed_candidates": 2886,
+      "zero_cap_closures": 17,
+      "terminal_rows": 30,
+      "final_mass": "51447479205198179/45000000000000000000",
+      "price_margin": "5471/53001000",
+      "terminal_max": "2481721/310500",
+      "terminal_margin": "2279/310500"
+    },
+    "13-triple-fivefold/slopes": {
+      "bins": 39,
+      "pattern_integrals": 47,
+      "own_source_rows": 58,
+      "height_rows": 4,
+      "families": [
+        {
+          "mu": 3,
+          "bins": 4,
+          "maximum": "85460451140050849559665955747417/85657870936139062500000000000000",
+          "ceiling": "49884763/50000000",
+          "strict_target_gap": "112737/50000000",
+          "gap_below_one": "115237/50000000"
+        },
+        {
+          "mu": 4,
+          "bins": 11,
+          "maximum": "20107826999401693925165837673185293687225545181869396762371898616887254136751/20113754218181665976737515428498460871562500000000000000000000000000000000000",
+          "ceiling": "24992633/25000000",
+          "strict_target_gap": "6117/25000000",
+          "gap_below_one": "7367/25000000"
+        },
+        {
+          "mu": 5,
+          "bins": 11,
+          "maximum": "1536747919261867143105547287342205173253408546902986587/1538297444948710432490271301269531250000000000000000000",
+          "ceiling": "99899271/100000000",
+          "strict_target_gap": "95729/100000000",
+          "gap_below_one": "100729/100000000"
+        },
+        {
+          "mu": 6,
+          "bins": 13,
+          "maximum": "21233893019265612364729234609898734299023898890071155702502317428192011/21235274412360969438177066680320000000000000000000000000000000000000000",
+          "ceiling": "19998699/20000000",
+          "strict_target_gap": "301/20000000",
+          "gap_below_one": "1301/20000000"
+        }
+      ]
+    }
+  },
+  "input_sha256": {
+    "first-source.json": "e03eeb65f5ab16057079bd10767a18919801386073a92c3be1cad05e98f38815",
+    "integral.json": "841420fe95dceaacd330a392d98c79143bb0589e9f80f7532f406c4676f60d36",
+    "slopes.json": "fa80deed326cc30972bb2c7b436e8a57abe9264f4c8fd98a1e7564b873dc80ca",
+    "tail-view.tex": "de9ea0cd4851fb46abad20c3c100a840404a98f9db8263c31efc6ca3888add38",
+    "tails.json": "85912352cdf7fc6ee8f1c1cb773ccbaaf8637655fce035b1cc36dae69893488a"
+  },
+  "scope": "Exact finite arithmetic and exhaustive data coverage, conditional on the article's geometric and asymptotic arguments."
+}

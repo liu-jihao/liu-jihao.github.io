@@ -1,0 +1,240 @@
+{
+  "active_files": [
+    {
+      "bytes": 22731,
+      "path": "check.py",
+      "sha256": "c01ce74af6853e1f45bf802b11a9145df6cfdfca867be58c28ceccf52bc2c3f1"
+    },
+    {
+      "bytes": 228186,
+      "path": "data/mesh_rows.json",
+      "sha256": "b7c1ca69371306003a01f7da0066ee2a189d0720c87b437de81905b46afcc7d2"
+    },
+    {
+      "bytes": 26028,
+      "path": "data/state_rows.json",
+      "sha256": "601de82d1246b7224235d9a63cf79323f9a2c5654f989217a1620c24a6958ec5"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-20-rank-two-feedback.json",
+  "families": [
+    {
+      "data_files": [
+        "data/state_rows.json"
+      ],
+      "id": "20-rank-two-feedback/states",
+      "specification": {
+        "domain": {
+          "curve_state_only": [
+            1,
+            1,
+            1
+          ],
+          "dimensions": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "embedding_dimension_max": 6,
+          "multiplicity_census": "c=0: m=1. c>0: c+1<=m<=floor((2 ell binom(c+ell-1,ell-1)-1)/(2 ell-d)), ell=floor(d/2)+1; retain only positive intrinsic and first fourfold caps.",
+          "successors": "Every f<d, h<=e with positive cap; adjacent cap min(beta_w,(d*m-2*T_v-m_w)/m); skips beta_w."
+        },
+        "expected_counts": {
+          "lambda_prices": 28,
+          "states": 28,
+          "successor_records": 170,
+          "theta_prices": 28
+        },
+        "format": "Strict JSON array; full schema and column conventions in README.md",
+        "id": "20-rank-two-feedback/states",
+        "path": "data/state_rows.json",
+        "source_fact_ids": [
+          "e13f0b95444068e1",
+          "3672c410c8058c7d",
+          "f11d050017547cce",
+          "0e74bd1477141fb6"
+        ],
+        "special_prices": {
+          "lambda_state_3_6_4": "First deficit <=1 only; descendants keep their own caps.",
+          "other_theta_states": "Complete scalar tail at 983/1000",
+          "theta_state_4_6_3": "Affine endpoint at deficit 7/3, not a scalar tail."
+        }
+      }
+    },
+    {
+      "data_files": [
+        "data/mesh_rows.json"
+      ],
+      "id": "20-rank-two-feedback/mesh",
+      "specification": {
+        "active_family_index_ranges": {
+          "cartier_quartic": [
+            1731,
+            1950
+          ],
+          "cartier_quintic": [
+            1731,
+            1818
+          ],
+          "distinct_quartic": [
+            1731,
+            1788
+          ],
+          "other_cubic": [
+            1731,
+            1852
+          ],
+          "power_quartic": [
+            1731,
+            1950
+          ],
+          "power_quintic": [
+            1731,
+            1818
+          ],
+          "smooth_cubic_balanced": [
+            1731,
+            1965
+          ],
+          "smooth_cubic_extreme": [
+            1731,
+            1965
+          ]
+        },
+        "domain": {
+          "beta_parameter": "[1+1/D,mu/2], or [1+1/M,3/2] for smooth cubics; empty and singleton cases retained by the article",
+          "factor_parameter": "1/D in (0,1/3], with continuous extension at 0",
+          "first_index": 1731,
+          "last_index": 1965,
+          "left": "j/2000",
+          "right": "(j+1)/2000",
+          "smooth_power_parameter": "1/M in (0,1/3], with continuous extension at 0"
+        },
+        "expected_counts": {
+          "candidate_formulas": 8,
+          "enabled_candidate_records": 1266,
+          "endpoints": 236,
+          "intervals": 235,
+          "prefix_reserves": 235,
+          "strict_ceiling_brackets": 235
+        },
+        "format": "Strict JSON array; one complete record per j, all active expressions and exact witnesses retained",
+        "id": "20-rank-two-feedback/mesh",
+        "path": "data/mesh_rows.json",
+        "source_fact_ids": [
+          "e13f0b95444068e1"
+        ]
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "constants": {
+      "A_mu": {
+        "3": "10559/27000",
+        "4": "2641/5400",
+        "5": "1924/3375"
+      },
+      "B_star": "18/5",
+      "C_mu": {
+        "3": "2777/2700",
+        "4": "30713/27000",
+        "5": "41179/33750"
+      },
+      "D_mu": {
+        "3": "12803/33750",
+        "4": "673/1080",
+        "5": "5617/6750"
+      },
+      "T_mu": {
+        "3": "751/100",
+        "4": "8-1/500-379/1000",
+        "5": "8-1/500-741/2500"
+      },
+      "degree": "One original degree p divisible by 2000, above both separately fixed cutoffs",
+      "lambda": "1731/2000",
+      "loss_denominator": 1000000000,
+      "mesh_width": "1/2000",
+      "p_mu": {
+        "3": "0",
+        "4": "379/1000",
+        "5": "741/2500"
+      },
+      "q_mu": {
+        "3": "1317/1000",
+        "4": "283/200",
+        "5": "187/125"
+      },
+      "r_0": "25/27",
+      "source_normalization": "120/p^5",
+      "theta": "983/1000"
+    },
+    "errors": {
+      "arithmetic": "Exact integers/rationals; no floating-point error.",
+      "cutting": "sum_i(1+rho_i) epsilon_i<1/1000 across at most four cuts, with both published errors",
+      "final_point_margin": ">1/400000",
+      "intrinsic_cutoff": "120(C_0+235 C_1_prime)/p<1/4000, fixed uniformly before every prime",
+      "lifting": "Separate ordinary Serre restriction cutoff before p"
+    },
+    "local_correctness_lemma": "lem:rank-two-feedback-finite-certificate",
+    "rounding": {
+      "delivered_strict_bracket": "E_j-1<10^9 L_j<E_j",
+      "integral_exception": "Ordinary ceiling and floor-plus-one are not interchangeable at an integral scaled maximum; every delivered maximum is checked nonintegral.",
+      "rule": "E_j=ceil(10^9 L_j)"
+    },
+    "scope_limit": "Arithmetic and documentary evidence for these two families only. Geometric premises and all asymptotic/uniformity proofs remain in the article; no formal or whole-graph certification.",
+    "section_label": "sec:20-rank-two-feedback",
+    "strict_margins": {
+      "direct_quartic_entry_slack": "116645/20756421",
+      "final_rounded_reserve": "8402435542349/16000000000000000",
+      "initial_mass": "458771731542349/16000000000000000",
+      "lambda_paid_max": "155528897/19473750",
+      "margin_over_1_over_2000": "402435542349/16000000000000000",
+      "sum_E": 28148081,
+      "theta_cubic_affine_max": "199315493/26541000",
+      "theta_cubic_entry_slack": "7417/26541000",
+      "theta_noncubic_max": "211925069/26541000"
+    },
+    "theorem_labels": [
+      "thm:rank-two-twentyseven",
+      "prop:rank-two-source-induction"
+    ]
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "20-rank-two-feedback",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/state_rows.json"
+      ],
+      "family": "20-rank-two-feedback/states",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:e13f0b95444068e1",
+        "fact:3672c410c8058c7d",
+        "fact:f11d050017547cce",
+        "fact:0e74bd1477141fb6"
+      ],
+      "source_version": "e13f0b95444068e1@sha256:4724ab13f68bc38eda05a45f26a61983787ef791697675e098fcc61514014366; 3672c410c8058c7d@sha256:441964c68b6375ac186b3370a40ac692d89c7f2c8de7d9a0624d25a49b4eb424; e13f0b95444068e1@sha256:43ba4fa7e9dfb356a88c68bceb4b14fd64c8463c57fd41e47e8db70c92fefcb9; 3672c410c8058c7d@sha256:4bdbc99bf07cffe9c1db716da136b9beaa80c88e75e79ab7ae3087ef48e14138; e13f0b95444068e1@sha256:ba574a4dc2dd53108264774864d6575ec879a327a6ca5c672c2ee88c57e2c355"
+    },
+    {
+      "data_files": [
+        "data/mesh_rows.json"
+      ],
+      "family": "20-rank-two-feedback/mesh",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:e13f0b95444068e1"
+      ],
+      "source_version": "e13f0b95444068e1@sha256:4724ab13f68bc38eda05a45f26a61983787ef791697675e098fcc61514014366; e13f0b95444068e1@sha256:43ba4fa7e9dfb356a88c68bceb4b14fd64c8463c57fd41e47e8db70c92fefcb9; e13f0b95444068e1@sha256:ba574a4dc2dd53108264774864d6575ec879a327a6ca5c672c2ee88c57e2c355"
+    }
+  ],
+  "source_owner_manifest_sha256": "8e287e98c2cb0c76a634d820cba85beb75f746da1108f008a188a61f56d68697"
+}

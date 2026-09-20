@@ -1,0 +1,206 @@
+{
+  "active_files": [
+    {
+      "bytes": 37452,
+      "path": "check.py",
+      "sha256": "86d68339b10385201258fa870c6e8c35c8b3ef4f60d51a62f9f55fd8330b26b2"
+    },
+    {
+      "bytes": 40802,
+      "path": "data/cubic-plane.txt",
+      "sha256": "d23bfbee18cfdf11a17d00e372456cb410fa584105c0156f4925411f92fed956"
+    },
+    {
+      "bytes": 1324712,
+      "path": "data/remaining.txt",
+      "sha256": "bd95476c69d8ae256b17aaf288d4b72b208d422c8626739a15025a3e89ad378f"
+    },
+    {
+      "bytes": 1016484,
+      "path": "data/simple-chains.txt",
+      "sha256": "1bc49f765c01308c782207ede128bbd78c25c6050287aaa7dcd7b5dc519dfc5c"
+    },
+    {
+      "bytes": 63912,
+      "path": "data/two-quadrics.txt",
+      "sha256": "3b76961004821c5795dcfdfd30e61009f020024b53aa786f6757bc3017070fc0"
+    }
+  ],
+  "entry_point": "python3 -B check.py --data data --report ../fresh-11-quartic-threefold.json",
+  "families": [
+    {
+      "data_files": [
+        "data/two-quadrics.txt"
+      ],
+      "id": "11-quartic-threefold/two-quadrics",
+      "specification": {
+        "bins": 25,
+        "checked_counts": {
+          "all_boundary_row_pairs": 3150,
+          "competing_endpoint_evaluations": 8984,
+          "empty_source_pieces": 82,
+          "feasible_row_pair_intervals": 506,
+          "infeasible_row_pairs": 2640,
+          "isolated_row_pairs": 4,
+          "two_component_domains": 150,
+          "two_component_endpoint_bounds": 1386
+        },
+        "data": "data/two-quadrics.txt",
+        "format": "two-component-markdown-v1",
+        "id": "11-quartic-threefold/two-quadrics",
+        "maximum_mass_ceiling": "49900103/50000000",
+        "minimum_gap_to_999_1000": "49897/50000000",
+        "pieces": 693,
+        "source_fact": "dba84f29c5ad299d"
+      }
+    },
+    {
+      "data_files": [
+        "data/cubic-plane.txt"
+      ],
+      "id": "11-quartic-threefold/cubic-plane",
+      "specification": {
+        "bins": 14,
+        "checked_counts": {
+          "all_boundary_row_pairs": 6048,
+          "competing_endpoint_evaluations": 12376,
+          "empty_source_pieces": 56,
+          "feasible_row_pair_intervals": 560,
+          "infeasible_row_pairs": 5452,
+          "parallel_row_pairs": 36,
+          "two_component_domains": 168,
+          "two_component_endpoint_bounds": 872
+        },
+        "data": "data/cubic-plane.txt",
+        "format": "two-component-markdown-v1",
+        "id": "11-quartic-threefold/cubic-plane",
+        "maximum_mass_ceiling": "19979391/20000000",
+        "minimum_gap_to_999_1000": "609/20000000",
+        "pieces": 436,
+        "source_fact": "341f092d6e9267b2"
+      }
+    },
+    {
+      "data_files": [
+        "data/simple-chains.txt"
+      ],
+      "id": "11-quartic-threefold/simple-chains",
+      "specification": {
+        "bins": 46,
+        "checked_counts": {
+          "candidates": 7489,
+          "empty": 2176,
+          "farkas_identities": 2271,
+          "isolated_clipping_intervals": 2960,
+          "parallel_or_existing_clipping_edges": 1434,
+          "points": 3,
+          "polygons": 1455,
+          "rounding_witnesses": 14504,
+          "segments": 92
+        },
+        "data": "data/simple-chains.txt",
+        "format": "conductor-records-v1",
+        "id": "11-quartic-threefold/simple-chains",
+        "maximum_mass_ceiling": "24966091/25000000",
+        "minimum_gap_to_999_1000": "8909/25000000",
+        "pieces": 1618,
+        "source_fact": "f3cf22c388e2a45f"
+      }
+    },
+    {
+      "data_files": [
+        "data/remaining.txt"
+      ],
+      "id": "11-quartic-threefold/remaining",
+      "specification": {
+        "bins": 40,
+        "checked_counts": {
+          "candidates": 10222,
+          "coincident_endpoint_points": 10,
+          "empty": 3461,
+          "farkas_identities": 3471,
+          "isolated_clipping_intervals": 3916,
+          "parallel_or_existing_clipping_edges": 1958,
+          "polygons": 2001,
+          "rounding_witnesses": 15062,
+          "segments": 10
+        },
+        "data": "data/remaining.txt",
+        "format": "conductor-records-v1",
+        "id": "11-quartic-threefold/remaining",
+        "maximum_mass_ceiling": "19975087/20000000",
+        "minimum_gap_to_999_1000": "4913/20000000",
+        "pieces": 2481,
+        "source_fact": "df38774bd15b66b8"
+      }
+    }
+  ],
+  "mathematical_specification": {
+    "article_labels": [
+      "thm:quartic-threefold-affine",
+      "def:quartic-threefold-certificate",
+      "lem:quartic-threefold-certificate-correctness",
+      "subsec:quartic-threefold-data"
+    ]
+  },
+  "release": "public-active-20260920",
+  "runtime": "Python >=3.10, standard library; do not use -O; no network or historical archive required.",
+  "schema": "fujita-public-active-owner-v1",
+  "scope": "Exact finite arithmetic, coverage and record consistency. Geometric applicability and analytic reductions are proved in the article.",
+  "section": "11-quartic-threefold",
+  "source_mappings": [
+    {
+      "data_files": [
+        "data/two-quadrics.txt"
+      ],
+      "family": "11-quartic-threefold/two-quadrics",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:dba84f29c5ad299d"
+      ],
+      "source_version": "dba84f29c5ad299d@sha256:19310c670a9d8f2982636862beba4f23ead8db3790bd4f883b454670639aa3c9"
+    },
+    {
+      "data_files": [
+        "data/cubic-plane.txt"
+      ],
+      "family": "11-quartic-threefold/cubic-plane",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:341f092d6e9267b2"
+      ],
+      "source_version": "341f092d6e9267b2@sha256:5b6852a0d7be9f7fa40f0d0ac6a30fabd0bbfabff0a29d3fe9020169fd339391"
+    },
+    {
+      "data_files": [
+        "data/simple-chains.txt"
+      ],
+      "family": "11-quartic-threefold/simple-chains",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:f3cf22c388e2a45f"
+      ],
+      "source_version": "f3cf22c388e2a45f@sha256:23c3d6c77d9ae9f60a162512c648094386205cfc9730af88b2c13366b0685fa3"
+    },
+    {
+      "data_files": [
+        "data/remaining.txt"
+      ],
+      "family": "11-quartic-threefold/remaining",
+      "metadata": {
+        "source_refs_role": "Documentary identifiers and hashes of separately retained original sources; not runtime paths or correctness claims."
+      },
+      "source_refs": [
+        "fact:df38774bd15b66b8"
+      ],
+      "source_version": "df38774bd15b66b8@sha256:d9af55f3972faefa1f435ad81e38b72ac417a575a3cb9d011c6b57ecf2b41387"
+    }
+  ],
+  "source_owner_manifest_sha256": "009584c568c3765ae5e98dd2626074cd5707d0d458954f5849bb3e353a65b4da"
+}

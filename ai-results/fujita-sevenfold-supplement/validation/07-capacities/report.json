@@ -1,0 +1,798 @@
+{
+  "status": "pass",
+  "schema": "fujita-capacities-report-v1",
+  "record_count": 91,
+  "family_counts": {
+    "baseline": 9,
+    "constants": 13,
+    "crossings": 2,
+    "envelopes": 12,
+    "fourfold-majorant": 22,
+    "integrals": 5,
+    "pairs": 4,
+    "polynomial": 3,
+    "source-tables": 17,
+    "spanning": 4
+  },
+  "integral_partition": [
+    "[0,1]",
+    "[1,2]",
+    "[2,3]",
+    "[3,4]",
+    "[4,infinity)"
+  ],
+  "signed_integral_polynomial_cells": 20,
+  "arithmetic": "integer and Fraction only; no numerical error",
+  "strict_margins": {
+    "early_rounded_envelope": "77/40000",
+    "later_full_fourfold": "793689/390625000",
+    "later_linear_fourfold": "886448873/125000000000",
+    "retained_three_eighths": "4253/729000",
+    "early_three_normal": "161/18225",
+    "five_normal_endpoint_integer_gap": "13423"
+  },
+  "records": [
+    {
+      "id": "linear-fivefold",
+      "family": "spanning",
+      "values": {
+        "coefficient_count": "3",
+        "coefficients": "[1, 1, -1]"
+      }
+    },
+    {
+      "id": "linear-fourfold",
+      "family": "spanning",
+      "values": {
+        "coefficient_count": "4",
+        "coefficients": "[1, 3, -5, 2]"
+      }
+    },
+    {
+      "id": "full-fourfold",
+      "family": "spanning",
+      "values": {
+        "coefficient_count": "4",
+        "coefficients": "[0, 6, -8, 3]"
+      }
+    },
+    {
+      "id": "full-fivefold",
+      "family": "spanning",
+      "values": {
+        "coefficient_count": "3",
+        "coefficients": "[0, 3, -2]"
+      }
+    },
+    {
+      "id": "six-fifth",
+      "family": "pairs",
+      "values": {
+        "coordinate": "1024/3125",
+        "balanced": "1053/3125",
+        "target": "1053/3125",
+        "gap": "0"
+      }
+    },
+    {
+      "id": "seven-sixth",
+      "family": "pairs",
+      "values": {
+        "coordinate": "15625/46656",
+        "balanced": "256/729",
+        "target": "256/729",
+        "gap": "0"
+      }
+    },
+    {
+      "id": "early-pair",
+      "family": "pairs",
+      "values": {
+        "coordinate": "24137569/64000000",
+        "balanced": "16807/40000",
+        "target": "11/25",
+        "gap": "793/40000"
+      }
+    },
+    {
+      "id": "later-pair",
+      "family": "pairs",
+      "values": {
+        "coordinate": "1291467969/4096000000",
+        "balanced": "4084223/12800000",
+        "target": "17/50",
+        "gap": "267777/12800000"
+      }
+    },
+    {
+      "id": "six-interior",
+      "family": "constants",
+      "values": {
+        "value": "992/3125"
+      }
+    },
+    {
+      "id": "six-boundary",
+      "family": "constants",
+      "values": {
+        "value": "5/16"
+      }
+    },
+    {
+      "id": "seven-interior",
+      "family": "constants",
+      "values": {
+        "value": "11/32"
+      }
+    },
+    {
+      "id": "seven-boundary",
+      "family": "constants",
+      "values": {
+        "value": "1053/3125"
+      }
+    },
+    {
+      "id": "four-row-constant",
+      "family": "constants",
+      "values": {
+        "value": "138259/900000"
+      }
+    },
+    {
+      "id": "strip-derivative",
+      "family": "constants",
+      "values": {
+        "value": "432/3125"
+      }
+    },
+    {
+      "id": "disjoint-correction",
+      "family": "constants",
+      "values": {
+        "value": "1/972"
+      }
+    },
+    {
+      "id": "disjoint-square",
+      "family": "constants",
+      "values": {
+        "value": "125/972"
+      }
+    },
+    {
+      "id": "three-cut-anchor",
+      "family": "constants",
+      "values": {
+        "value": "13/96"
+      }
+    },
+    {
+      "id": "envelope-rounding",
+      "family": "constants",
+      "values": {
+        "value": "17523/40000"
+      }
+    },
+    {
+      "id": "linear-endpoint",
+      "family": "constants",
+      "values": {
+        "value": "633465/1771561"
+      }
+    },
+    {
+      "id": "linear-later",
+      "family": "constants",
+      "values": {
+        "value": "41613551127/125000000000"
+      }
+    },
+    {
+      "id": "full-later",
+      "family": "constants",
+      "values": {
+        "value": "132018811/390625000"
+      }
+    },
+    {
+      "id": "quartic",
+      "family": "polynomial",
+      "values": {
+        "identity": "coefficient equality",
+        "degree": "4"
+      }
+    },
+    {
+      "id": "quartic-derivative",
+      "family": "polynomial",
+      "values": {
+        "values": "[Fraction(23, 1), Fraction(81, 2), Fraction(-79, 2), Fraction(-22, 1)]"
+      }
+    },
+    {
+      "id": "quartic-endpoints",
+      "family": "polynomial",
+      "values": {
+        "values": "[Fraction(9, 4), Fraction(3, 1)]",
+        "minimum": "9/4"
+      }
+    },
+    {
+      "id": "early-375",
+      "family": "source-tables",
+      "values": {
+        "beta": "47239/37210",
+        "sigma": "971/10000",
+        "gate": "1/2",
+        "gap": "4029/10000"
+      }
+    },
+    {
+      "id": "early-452",
+      "family": "source-tables",
+      "values": {
+        "beta": "14363/5345",
+        "sigma": "209/3125",
+        "gate": "1/2",
+        "gap": "2707/6250"
+      }
+    },
+    {
+      "id": "early-463",
+      "family": "source-tables",
+      "values": {
+        "beta": "29032/17167",
+        "sigma": "628/1875",
+        "gate": "1/2",
+        "gap": "619/3750"
+      }
+    },
+    {
+      "id": "early-464",
+      "family": "source-tables",
+      "values": {
+        "beta": "38671/22165",
+        "sigma": "5659/50000",
+        "gate": "1/2",
+        "gap": "19341/50000"
+      }
+    },
+    {
+      "id": "early-474",
+      "family": "source-tables",
+      "values": {
+        "beta": "5684/4433",
+        "sigma": "10797/20000",
+        "gate": "1",
+        "gap": "9203/20000"
+      }
+    },
+    {
+      "id": "early-475",
+      "family": "source-tables",
+      "values": {
+        "beta": "36325/26296",
+        "sigma": "16267/50000",
+        "gate": "1/2",
+        "gap": "8733/50000"
+      }
+    },
+    {
+      "id": "early-476",
+      "family": "source-tables",
+      "values": {
+        "beta": "41119/29866",
+        "sigma": "25973/150000",
+        "gate": "1/2",
+        "gap": "49027/150000"
+      }
+    },
+    {
+      "id": "early-477",
+      "family": "source-tables",
+      "values": {
+        "beta": "43975/32977",
+        "sigma": "627/10000",
+        "gate": "1/2",
+        "gap": "4373/10000"
+      }
+    },
+    {
+      "id": "later-463",
+      "family": "source-tables",
+      "values": {
+        "beta": "9116/4621",
+        "sigma": "481/1875",
+        "gate": "1/2",
+        "gap": "913/3750"
+      }
+    },
+    {
+      "id": "later-464",
+      "family": "source-tables",
+      "values": {
+        "beta": "11573/5895",
+        "sigma": "217/12500",
+        "gate": "1/2",
+        "gap": "6033/12500"
+      }
+    },
+    {
+      "id": "later-474",
+      "family": "source-tables",
+      "values": {
+        "beta": "1792/1179",
+        "sigma": "2311/5000",
+        "gate": "1/2",
+        "gap": "189/5000"
+      }
+    },
+    {
+      "id": "later-475",
+      "family": "source-tables",
+      "values": {
+        "beta": "10975/6948",
+        "sigma": "2921/12500",
+        "gate": "1/2",
+        "gap": "3329/12500"
+      }
+    },
+    {
+      "id": "later-476",
+      "family": "source-tables",
+      "values": {
+        "beta": "12197/7858",
+        "sigma": "2699/37500",
+        "gate": "1/2",
+        "gap": "16051/37500"
+      }
+    },
+    {
+      "id": "own-562",
+      "family": "source-tables",
+      "values": {
+        "beta": "28348/8321",
+        "sigma": "617/3125",
+        "gate": "1/2",
+        "gap": "1891/6250"
+      }
+    },
+    {
+      "id": "own-573",
+      "family": "source-tables",
+      "values": {
+        "beta": "28725/11134",
+        "sigma": "36299/75000",
+        "gate": "1/2",
+        "gap": "1201/75000"
+      }
+    },
+    {
+      "id": "own-574",
+      "family": "source-tables",
+      "values": {
+        "beta": "3467/1328",
+        "sigma": "517/2500",
+        "gate": "1/2",
+        "gap": "733/2500"
+      }
+    },
+    {
+      "id": "own-575",
+      "family": "source-tables",
+      "values": {
+        "beta": "37483/15020",
+        "sigma": "1569/25000",
+        "gate": "1/2",
+        "gap": "10931/25000"
+      }
+    },
+    {
+      "id": "fourfold-28",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "1/3",
+        "gap": "1/375"
+      }
+    },
+    {
+      "id": "fourfold-29",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "1/4",
+        "gap": "43/500"
+      }
+    },
+    {
+      "id": "fourfold-30",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "1/4",
+        "gap": "43/500"
+      }
+    },
+    {
+      "id": "fourfold-31",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "1/4",
+        "gap": "43/500"
+      }
+    },
+    {
+      "id": "fourfold-32",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "229/1000",
+        "gap": "107/1000"
+      }
+    },
+    {
+      "id": "fourfold-33",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "59/200",
+        "gap": "41/1000"
+      }
+    },
+    {
+      "id": "fourfold-34",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "59/200",
+        "gap": "41/1000"
+      }
+    },
+    {
+      "id": "fourfold-35",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "269/1000",
+        "gap": "67/1000"
+      }
+    },
+    {
+      "id": "fourfold-36",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "61/250",
+        "gap": "23/250"
+      }
+    },
+    {
+      "id": "fourfold-37",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "689/3000",
+        "gap": "319/3000"
+      }
+    },
+    {
+      "id": "fourfold-38",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "1711/13500",
+        "gap": "113/540"
+      }
+    },
+    {
+      "id": "fourfold-39",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "133/500",
+        "gap": "7/100"
+      }
+    },
+    {
+      "id": "fourfold-40",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "131/500",
+        "gap": "37/500"
+      }
+    },
+    {
+      "id": "fourfold-41",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "131/500",
+        "gap": "37/500"
+      }
+    },
+    {
+      "id": "fourfold-42",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "11/40",
+        "gap": "61/1000"
+      }
+    },
+    {
+      "id": "fourfold-43",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "1651/6000",
+        "gap": "73/1200"
+      }
+    },
+    {
+      "id": "fourfold-44",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "8443/27000",
+        "gap": "629/27000"
+      }
+    },
+    {
+      "id": "fourfold-45",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "42/125",
+        "gap": "0"
+      }
+    },
+    {
+      "id": "fourfold-46",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "5323/16500",
+        "gap": "221/16500"
+      }
+    },
+    {
+      "id": "fourfold-47",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "881/3000",
+        "gap": "127/3000"
+      }
+    },
+    {
+      "id": "fourfold-48",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "4709/19500",
+        "gap": "1843/19500"
+      }
+    },
+    {
+      "id": "fourfold-49",
+      "family": "fourfold-majorant",
+      "values": {
+        "intercept_bound": "47/420",
+        "gap": "2353/10500"
+      }
+    },
+    {
+      "id": "divisor-1",
+      "family": "baseline",
+      "values": {
+        "denominator": "73/125",
+        "slope_difference": "0",
+        "value_at_one": "0"
+      }
+    },
+    {
+      "id": "divisor-2",
+      "family": "baseline",
+      "values": {
+        "denominator": "1267/1000",
+        "slope_difference": "5583/92491",
+        "value_at_one": "246/1267"
+      }
+    },
+    {
+      "id": "divisor-3",
+      "family": "baseline",
+      "values": {
+        "denominator": "761/500",
+        "slope_difference": "72769/111106",
+        "value_at_one": "603/1522"
+      }
+    },
+    {
+      "id": "divisor-4",
+      "family": "baseline",
+      "values": {
+        "denominator": "447/250",
+        "slope_difference": "12035/10877",
+        "value_at_one": "260/447"
+      }
+    },
+    {
+      "id": "divisor-5",
+      "family": "baseline",
+      "values": {
+        "denominator": "1957/1000",
+        "slope_difference": "232795/142861",
+        "value_at_one": "1540/1957"
+      }
+    },
+    {
+      "id": "divisor-6",
+      "family": "baseline",
+      "values": {
+        "denominator": "1501/375",
+        "slope_difference": "86125/109573",
+        "value_at_one": "1500/1501"
+      }
+    },
+    {
+      "id": "fivefold-3",
+      "family": "baseline",
+      "values": {
+        "endpoint_numerator": "3331342/25",
+        "interval": "[29/25,34/25]"
+      }
+    },
+    {
+      "id": "fivefold-4",
+      "family": "baseline",
+      "values": {
+        "endpoint_numerator": "12174",
+        "interval": "[29/25,34/25]"
+      }
+    },
+    {
+      "id": "fivefold-5",
+      "family": "baseline",
+      "values": {
+        "endpoint_numerator": "2015374/25",
+        "interval": "[29/25,34/25]"
+      }
+    },
+    {
+      "id": "primitive-0",
+      "family": "integrals",
+      "values": {
+        "coefficient_count": "8",
+        "zero_at_knot": "True",
+        "active_interval": "[0,infinity)"
+      }
+    },
+    {
+      "id": "primitive-1",
+      "family": "integrals",
+      "values": {
+        "coefficient_count": "8",
+        "zero_at_knot": "True",
+        "active_interval": "[1,infinity)"
+      }
+    },
+    {
+      "id": "primitive-2",
+      "family": "integrals",
+      "values": {
+        "coefficient_count": "8",
+        "zero_at_knot": "True",
+        "active_interval": "[2,infinity)"
+      }
+    },
+    {
+      "id": "primitive-3",
+      "family": "integrals",
+      "values": {
+        "coefficient_count": "8",
+        "zero_at_knot": "True",
+        "active_interval": "[3,infinity)"
+      }
+    },
+    {
+      "id": "primitive-4",
+      "family": "integrals",
+      "values": {
+        "coefficient_count": "8",
+        "zero_at_knot": "True",
+        "active_interval": "[4,infinity)"
+      }
+    },
+    {
+      "id": "crossing-left",
+      "family": "crossings",
+      "values": {
+        "c": "16020581569/90194313216",
+        "balanced_minus_coordinate": "4865740123725896038673655217583412067773349000784246293/179454222322161348059837579933782975323690321811637054727071465472"
+      }
+    },
+    {
+      "id": "crossing-right",
+      "family": "crossings",
+      "values": {
+        "c": "8010290789/45097156608",
+        "balanced_minus_coordinate": "-323125344487580445770647099643374454926106706581777027/2803972223783771063434962186465358989432661278306828980110491648"
+      }
+    },
+    {
+      "id": "join-1",
+      "family": "envelopes",
+      "values": {
+        "join": "1/2"
+      }
+    },
+    {
+      "id": "join-2",
+      "family": "envelopes",
+      "values": {
+        "join": "5/9"
+      }
+    },
+    {
+      "id": "join-3",
+      "family": "envelopes",
+      "values": {
+        "join": "37/64"
+      }
+    },
+    {
+      "id": "join-4",
+      "family": "envelopes",
+      "values": {
+        "join": "369/625"
+      }
+    },
+    {
+      "id": "join-5",
+      "family": "envelopes",
+      "values": {
+        "join": "4651/7776"
+      }
+    },
+    {
+      "id": "join-6",
+      "family": "envelopes",
+      "values": {
+        "join": "70993/117649"
+      }
+    },
+    {
+      "id": "five-normal-sixth",
+      "family": "envelopes",
+      "values": {
+        "values": "[Fraction(15625, 46656), Fraction(2911137614, 4984209207), Fraction(1882384, 2278125), Fraction(275920739675, 470184984576), Fraction(1838265625, 2176782336), Fraction(275920739675, 470184984576), Fraction(2911137614, 4984209207), Fraction(1882384, 2278125)]",
+        "full_minimum": "2911137614/4984209207"
+      }
+    },
+    {
+      "id": "five-normal-third",
+      "family": "envelopes",
+      "values": {
+        "values": "[Fraction(64, 729), Fraction(537408277, 1252332576), Fraction(117649, 1492992), Fraction(229820017, 459165024), Fraction(117649, 531441), Fraction(117649, 531441), Fraction(537408277, 1252332576), Fraction(64, 729)]",
+        "full_minimum": "64/729"
+      }
+    },
+    {
+      "id": "five-normal-half",
+      "family": "envelopes",
+      "values": {
+        "values": "[Fraction(1, 64), Fraction(0, 1), Fraction(0, 1), Fraction(774627007, 1934917632), Fraction(117649, 2985984), Fraction(1, 64), Fraction(1, 64), Fraction(1, 64)]",
+        "full_minimum": "1/64"
+      }
+    },
+    {
+      "id": "K5-zero",
+      "family": "envelopes",
+      "values": {
+        "values": "[Fraction(1, 1), Fraction(2, 1), Fraction(1, 1)]",
+        "enabled": "signed and factor-two"
+      }
+    },
+    {
+      "id": "K5-switch",
+      "family": "envelopes",
+      "values": {
+        "values": "[Fraction(62759089, 244140625), Fraction(48275138, 244140625), Fraction(24137569, 244140625)]",
+        "enabled": "all"
+      }
+    },
+    {
+      "id": "K5-half",
+      "family": "envelopes",
+      "values": {
+        "values": "[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]",
+        "enabled": "all"
+      }
+    }
+  ],
+  "scope": "Finite article identities, values, coefficient witnesses and affine endpoint reductions. Continuum maxima, geometric applicability, full scalar census and asymptotic errors remain article proofs."
+}

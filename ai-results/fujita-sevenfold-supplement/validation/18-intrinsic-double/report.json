@@ -1,0 +1,1377 @@
+{
+  "families": {
+    "18-intrinsic-double/ambient": {
+      "closed_rectangles": 237,
+      "coverage_fibers": 29,
+      "denominator": 1000000000,
+      "integration_cells_reconstructed": 31627,
+      "margin_below_nine_tenths": "107077/1000000000",
+      "maximum_numerator": 899892923,
+      "prefix_intervals": 19,
+      "records": [
+        {
+          "id": 1,
+          "kind": "prefix",
+          "numerator": 803246545
+        },
+        {
+          "id": 2,
+          "kind": "prefix",
+          "numerator": 859272763
+        },
+        {
+          "id": 3,
+          "kind": "prefix",
+          "numerator": 882052888
+        },
+        {
+          "id": 4,
+          "kind": "prefix",
+          "numerator": 885935330
+        },
+        {
+          "id": 5,
+          "kind": "prefix",
+          "numerator": 866928992
+        },
+        {
+          "id": 6,
+          "kind": "prefix",
+          "numerator": 887953848
+        },
+        {
+          "id": 7,
+          "kind": "prefix",
+          "numerator": 883830025
+        },
+        {
+          "id": 8,
+          "kind": "prefix",
+          "numerator": 887126681
+        },
+        {
+          "id": 9,
+          "kind": "prefix",
+          "numerator": 887909716
+        },
+        {
+          "id": 10,
+          "kind": "prefix",
+          "numerator": 889764971
+        },
+        {
+          "id": 11,
+          "kind": "prefix",
+          "numerator": 889559100
+        },
+        {
+          "id": 12,
+          "kind": "prefix",
+          "numerator": 890323724
+        },
+        {
+          "id": 13,
+          "kind": "prefix",
+          "numerator": 890605634
+        },
+        {
+          "id": 14,
+          "kind": "prefix",
+          "numerator": 890847313
+        },
+        {
+          "id": 15,
+          "kind": "prefix",
+          "numerator": 890891718
+        },
+        {
+          "id": 16,
+          "kind": "prefix",
+          "numerator": 890380829
+        },
+        {
+          "id": 17,
+          "kind": "prefix",
+          "numerator": 890359892
+        },
+        {
+          "id": 18,
+          "kind": "prefix",
+          "numerator": 890281142
+        },
+        {
+          "id": 19,
+          "kind": "prefix",
+          "numerator": 881945390
+        },
+        {
+          "id": 1,
+          "kind": "box",
+          "numerator": 861923898
+        },
+        {
+          "id": 2,
+          "kind": "box",
+          "numerator": 865534401
+        },
+        {
+          "id": 3,
+          "kind": "box",
+          "numerator": 872606719
+        },
+        {
+          "id": 4,
+          "kind": "box",
+          "numerator": 879830962
+        },
+        {
+          "id": 5,
+          "kind": "box",
+          "numerator": 897322255
+        },
+        {
+          "id": 6,
+          "kind": "box",
+          "numerator": 889338719
+        },
+        {
+          "id": 7,
+          "kind": "box",
+          "numerator": 899076501
+        },
+        {
+          "id": 8,
+          "kind": "box",
+          "numerator": 894016511
+        },
+        {
+          "id": 9,
+          "kind": "box",
+          "numerator": 891573091
+        },
+        {
+          "id": 10,
+          "kind": "box",
+          "numerator": 893675727
+        },
+        {
+          "id": 11,
+          "kind": "box",
+          "numerator": 894445355
+        },
+        {
+          "id": 12,
+          "kind": "box",
+          "numerator": 890766600
+        },
+        {
+          "id": 13,
+          "kind": "box",
+          "numerator": 876528296
+        },
+        {
+          "id": 14,
+          "kind": "box",
+          "numerator": 721193103
+        },
+        {
+          "id": 15,
+          "kind": "box",
+          "numerator": 880097035
+        },
+        {
+          "id": 16,
+          "kind": "box",
+          "numerator": 889834817
+        },
+        {
+          "id": 17,
+          "kind": "box",
+          "numerator": 884774827
+        },
+        {
+          "id": 18,
+          "kind": "box",
+          "numerator": 892481223
+        },
+        {
+          "id": 19,
+          "kind": "box",
+          "numerator": 885203671
+        },
+        {
+          "id": 20,
+          "kind": "box",
+          "numerator": 881524916
+        },
+        {
+          "id": 21,
+          "kind": "box",
+          "numerator": 891798821
+        },
+        {
+          "id": 22,
+          "kind": "box",
+          "numerator": 879993000
+        },
+        {
+          "id": 23,
+          "kind": "box",
+          "numerator": 889730782
+        },
+        {
+          "id": 24,
+          "kind": "box",
+          "numerator": 884670792
+        },
+        {
+          "id": 25,
+          "kind": "box",
+          "numerator": 892377187
+        },
+        {
+          "id": 26,
+          "kind": "box",
+          "numerator": 885099636
+        },
+        {
+          "id": 27,
+          "kind": "box",
+          "numerator": 881420881
+        },
+        {
+          "id": 28,
+          "kind": "box",
+          "numerator": 891694786
+        },
+        {
+          "id": 29,
+          "kind": "box",
+          "numerator": 874214822
+        },
+        {
+          "id": 30,
+          "kind": "box",
+          "numerator": 883952604
+        },
+        {
+          "id": 31,
+          "kind": "box",
+          "numerator": 897133292
+        },
+        {
+          "id": 32,
+          "kind": "box",
+          "numerator": 895209320
+        },
+        {
+          "id": 33,
+          "kind": "box",
+          "numerator": 885916608
+        },
+        {
+          "id": 34,
+          "kind": "box",
+          "numerator": 872193818
+        },
+        {
+          "id": 35,
+          "kind": "box",
+          "numerator": 881931601
+        },
+        {
+          "id": 36,
+          "kind": "box",
+          "numerator": 895112289
+        },
+        {
+          "id": 37,
+          "kind": "box",
+          "numerator": 893188317
+        },
+        {
+          "id": 38,
+          "kind": "box",
+          "numerator": 883871742
+        },
+        {
+          "id": 39,
+          "kind": "box",
+          "numerator": 885206861
+        },
+        {
+          "id": 40,
+          "kind": "box",
+          "numerator": 894944643
+        },
+        {
+          "id": 41,
+          "kind": "box",
+          "numerator": 889884653
+        },
+        {
+          "id": 42,
+          "kind": "box",
+          "numerator": 897591049
+        },
+        {
+          "id": 43,
+          "kind": "box",
+          "numerator": 890313498
+        },
+        {
+          "id": 44,
+          "kind": "box",
+          "numerator": 886634742
+        },
+        {
+          "id": 45,
+          "kind": "box",
+          "numerator": 880751230
+        },
+        {
+          "id": 46,
+          "kind": "box",
+          "numerator": 883804604
+        },
+        {
+          "id": 47,
+          "kind": "box",
+          "numerator": 895386268
+        },
+        {
+          "id": 48,
+          "kind": "box",
+          "numerator": 898698122
+        },
+        {
+          "id": 49,
+          "kind": "box",
+          "numerator": 881919969
+        },
+        {
+          "id": 50,
+          "kind": "box",
+          "numerator": 884117386
+        },
+        {
+          "id": 51,
+          "kind": "box",
+          "numerator": 895699050
+        },
+        {
+          "id": 52,
+          "kind": "box",
+          "numerator": 899010904
+        },
+        {
+          "id": 53,
+          "kind": "box",
+          "numerator": 882232752
+        },
+        {
+          "id": 54,
+          "kind": "box",
+          "numerator": 883451970
+        },
+        {
+          "id": 55,
+          "kind": "box",
+          "numerator": 895033634
+        },
+        {
+          "id": 56,
+          "kind": "box",
+          "numerator": 898345488
+        },
+        {
+          "id": 57,
+          "kind": "box",
+          "numerator": 881567336
+        },
+        {
+          "id": 58,
+          "kind": "box",
+          "numerator": 883621462
+        },
+        {
+          "id": 59,
+          "kind": "box",
+          "numerator": 895203126
+        },
+        {
+          "id": 60,
+          "kind": "box",
+          "numerator": 898514980
+        },
+        {
+          "id": 61,
+          "kind": "box",
+          "numerator": 881736827
+        },
+        {
+          "id": 62,
+          "kind": "box",
+          "numerator": 883876831
+        },
+        {
+          "id": 63,
+          "kind": "box",
+          "numerator": 895458495
+        },
+        {
+          "id": 64,
+          "kind": "box",
+          "numerator": 898770349
+        },
+        {
+          "id": 65,
+          "kind": "box",
+          "numerator": 881992197
+        },
+        {
+          "id": 66,
+          "kind": "box",
+          "numerator": 884269523
+        },
+        {
+          "id": 67,
+          "kind": "box",
+          "numerator": 895851187
+        },
+        {
+          "id": 68,
+          "kind": "box",
+          "numerator": 899163042
+        },
+        {
+          "id": 69,
+          "kind": "box",
+          "numerator": 882384889
+        },
+        {
+          "id": 70,
+          "kind": "box",
+          "numerator": 883527606
+        },
+        {
+          "id": 71,
+          "kind": "box",
+          "numerator": 895109270
+        },
+        {
+          "id": 72,
+          "kind": "box",
+          "numerator": 898421124
+        },
+        {
+          "id": 73,
+          "kind": "box",
+          "numerator": 881642971
+        },
+        {
+          "id": 74,
+          "kind": "box",
+          "numerator": 883745510
+        },
+        {
+          "id": 75,
+          "kind": "box",
+          "numerator": 895327174
+        },
+        {
+          "id": 76,
+          "kind": "box",
+          "numerator": 898639028
+        },
+        {
+          "id": 77,
+          "kind": "box",
+          "numerator": 881860876
+        },
+        {
+          "id": 78,
+          "kind": "box",
+          "numerator": 884035572
+        },
+        {
+          "id": 79,
+          "kind": "box",
+          "numerator": 895617236
+        },
+        {
+          "id": 80,
+          "kind": "box",
+          "numerator": 898929090
+        },
+        {
+          "id": 81,
+          "kind": "box",
+          "numerator": 882150938
+        },
+        {
+          "id": 82,
+          "kind": "box",
+          "numerator": 884424022
+        },
+        {
+          "id": 83,
+          "kind": "box",
+          "numerator": 896005686
+        },
+        {
+          "id": 84,
+          "kind": "box",
+          "numerator": 899317540
+        },
+        {
+          "id": 85,
+          "kind": "box",
+          "numerator": 882539388
+        },
+        {
+          "id": 86,
+          "kind": "box",
+          "numerator": 884945815
+        },
+        {
+          "id": 87,
+          "kind": "box",
+          "numerator": 896527479
+        },
+        {
+          "id": 88,
+          "kind": "box",
+          "numerator": 899839334
+        },
+        {
+          "id": 89,
+          "kind": "box",
+          "numerator": 883061181
+        },
+        {
+          "id": 90,
+          "kind": "box",
+          "numerator": 884210788
+        },
+        {
+          "id": 91,
+          "kind": "box",
+          "numerator": 895774614
+        },
+        {
+          "id": 92,
+          "kind": "box",
+          "numerator": 899104306
+        },
+        {
+          "id": 93,
+          "kind": "box",
+          "numerator": 882326154
+        },
+        {
+          "id": 94,
+          "kind": "box",
+          "numerator": 884490210
+        },
+        {
+          "id": 95,
+          "kind": "box",
+          "numerator": 896071874
+        },
+        {
+          "id": 96,
+          "kind": "box",
+          "numerator": 899383728
+        },
+        {
+          "id": 97,
+          "kind": "box",
+          "numerator": 882605576
+        },
+        {
+          "id": 98,
+          "kind": "box",
+          "numerator": 884813614
+        },
+        {
+          "id": 99,
+          "kind": "box",
+          "numerator": 896395278
+        },
+        {
+          "id": 100,
+          "kind": "box",
+          "numerator": 899707133
+        },
+        {
+          "id": 101,
+          "kind": "box",
+          "numerator": 882928980
+        },
+        {
+          "id": 102,
+          "kind": "box",
+          "numerator": 885185420
+        },
+        {
+          "id": 103,
+          "kind": "box",
+          "numerator": 896767084
+        },
+        {
+          "id": 104,
+          "kind": "box",
+          "numerator": 897964942
+        },
+        {
+          "id": 105,
+          "kind": "box",
+          "numerator": 891636537
+        },
+        {
+          "id": 106,
+          "kind": "box",
+          "numerator": 883300786
+        },
+        {
+          "id": 107,
+          "kind": "box",
+          "numerator": 885596948
+        },
+        {
+          "id": 108,
+          "kind": "box",
+          "numerator": 897178612
+        },
+        {
+          "id": 109,
+          "kind": "box",
+          "numerator": 898376470
+        },
+        {
+          "id": 110,
+          "kind": "box",
+          "numerator": 892048065
+        },
+        {
+          "id": 111,
+          "kind": "box",
+          "numerator": 883712313
+        },
+        {
+          "id": 112,
+          "kind": "box",
+          "numerator": 886087573
+        },
+        {
+          "id": 113,
+          "kind": "box",
+          "numerator": 897669237
+        },
+        {
+          "id": 114,
+          "kind": "box",
+          "numerator": 898867095
+        },
+        {
+          "id": 115,
+          "kind": "box",
+          "numerator": 892538691
+        },
+        {
+          "id": 116,
+          "kind": "box",
+          "numerator": 884202939
+        },
+        {
+          "id": 117,
+          "kind": "box",
+          "numerator": 885368636
+        },
+        {
+          "id": 118,
+          "kind": "box",
+          "numerator": 896942030
+        },
+        {
+          "id": 119,
+          "kind": "box",
+          "numerator": 898148158
+        },
+        {
+          "id": 120,
+          "kind": "box",
+          "numerator": 891819754
+        },
+        {
+          "id": 121,
+          "kind": "box",
+          "numerator": 883484002
+        },
+        {
+          "id": 122,
+          "kind": "box",
+          "numerator": 885582769
+        },
+        {
+          "id": 123,
+          "kind": "box",
+          "numerator": 897164433
+        },
+        {
+          "id": 124,
+          "kind": "box",
+          "numerator": 898362291
+        },
+        {
+          "id": 125,
+          "kind": "box",
+          "numerator": 892033886
+        },
+        {
+          "id": 126,
+          "kind": "box",
+          "numerator": 883698135
+        },
+        {
+          "id": 127,
+          "kind": "box",
+          "numerator": 885804112
+        },
+        {
+          "id": 128,
+          "kind": "box",
+          "numerator": 897385776
+        },
+        {
+          "id": 129,
+          "kind": "box",
+          "numerator": 898583635
+        },
+        {
+          "id": 130,
+          "kind": "box",
+          "numerator": 892255230
+        },
+        {
+          "id": 131,
+          "kind": "box",
+          "numerator": 883919478
+        },
+        {
+          "id": 132,
+          "kind": "box",
+          "numerator": 886030983
+        },
+        {
+          "id": 133,
+          "kind": "box",
+          "numerator": 897612647
+        },
+        {
+          "id": 134,
+          "kind": "box",
+          "numerator": 898810505
+        },
+        {
+          "id": 135,
+          "kind": "box",
+          "numerator": 892482100
+        },
+        {
+          "id": 136,
+          "kind": "box",
+          "numerator": 884146348
+        },
+        {
+          "id": 137,
+          "kind": "box",
+          "numerator": 886261130
+        },
+        {
+          "id": 138,
+          "kind": "box",
+          "numerator": 897842794
+        },
+        {
+          "id": 139,
+          "kind": "box",
+          "numerator": 899040652
+        },
+        {
+          "id": 140,
+          "kind": "box",
+          "numerator": 892712248
+        },
+        {
+          "id": 141,
+          "kind": "box",
+          "numerator": 884376496
+        },
+        {
+          "id": 142,
+          "kind": "box",
+          "numerator": 886491613
+        },
+        {
+          "id": 143,
+          "kind": "box",
+          "numerator": 898073277
+        },
+        {
+          "id": 144,
+          "kind": "box",
+          "numerator": 899271135
+        },
+        {
+          "id": 145,
+          "kind": "box",
+          "numerator": 892942731
+        },
+        {
+          "id": 146,
+          "kind": "box",
+          "numerator": 884606979
+        },
+        {
+          "id": 147,
+          "kind": "box",
+          "numerator": 886718642
+        },
+        {
+          "id": 148,
+          "kind": "box",
+          "numerator": 898300306
+        },
+        {
+          "id": 149,
+          "kind": "box",
+          "numerator": 899498164
+        },
+        {
+          "id": 150,
+          "kind": "box",
+          "numerator": 893169759
+        },
+        {
+          "id": 151,
+          "kind": "box",
+          "numerator": 884834008
+        },
+        {
+          "id": 152,
+          "kind": "box",
+          "numerator": 886937385
+        },
+        {
+          "id": 153,
+          "kind": "box",
+          "numerator": 898519049
+        },
+        {
+          "id": 154,
+          "kind": "box",
+          "numerator": 899716907
+        },
+        {
+          "id": 155,
+          "kind": "box",
+          "numerator": 893388502
+        },
+        {
+          "id": 156,
+          "kind": "box",
+          "numerator": 885052751
+        },
+        {
+          "id": 157,
+          "kind": "box",
+          "numerator": 887113401
+        },
+        {
+          "id": 158,
+          "kind": "box",
+          "numerator": 898695065
+        },
+        {
+          "id": 159,
+          "kind": "box",
+          "numerator": 899892923
+        },
+        {
+          "id": 160,
+          "kind": "box",
+          "numerator": 893564519
+        },
+        {
+          "id": 161,
+          "kind": "box",
+          "numerator": 885228767
+        },
+        {
+          "id": 162,
+          "kind": "box",
+          "numerator": 887323993
+        },
+        {
+          "id": 163,
+          "kind": "box",
+          "numerator": 898905656
+        },
+        {
+          "id": 164,
+          "kind": "box",
+          "numerator": 897406010
+        },
+        {
+          "id": 165,
+          "kind": "box",
+          "numerator": 895990768
+        },
+        {
+          "id": 166,
+          "kind": "box",
+          "numerator": 893775110
+        },
+        {
+          "id": 167,
+          "kind": "box",
+          "numerator": 885439358
+        },
+        {
+          "id": 168,
+          "kind": "box",
+          "numerator": 886421454
+        },
+        {
+          "id": 169,
+          "kind": "box",
+          "numerator": 898003118
+        },
+        {
+          "id": 170,
+          "kind": "box",
+          "numerator": 899200976
+        },
+        {
+          "id": 171,
+          "kind": "box",
+          "numerator": 892872571
+        },
+        {
+          "id": 172,
+          "kind": "box",
+          "numerator": 884536820
+        },
+        {
+          "id": 173,
+          "kind": "box",
+          "numerator": 886450872
+        },
+        {
+          "id": 174,
+          "kind": "box",
+          "numerator": 898032536
+        },
+        {
+          "id": 175,
+          "kind": "box",
+          "numerator": 899217643
+        },
+        {
+          "id": 176,
+          "kind": "box",
+          "numerator": 892889238
+        },
+        {
+          "id": 177,
+          "kind": "box",
+          "numerator": 884553487
+        },
+        {
+          "id": 178,
+          "kind": "box",
+          "numerator": 886466753
+        },
+        {
+          "id": 179,
+          "kind": "box",
+          "numerator": 898048417
+        },
+        {
+          "id": 180,
+          "kind": "box",
+          "numerator": 898921892
+        },
+        {
+          "id": 181,
+          "kind": "box",
+          "numerator": 892593488
+        },
+        {
+          "id": 182,
+          "kind": "box",
+          "numerator": 884257736
+        },
+        {
+          "id": 183,
+          "kind": "box",
+          "numerator": 886467096
+        },
+        {
+          "id": 184,
+          "kind": "box",
+          "numerator": 898012091
+        },
+        {
+          "id": 185,
+          "kind": "box",
+          "numerator": 898515210
+        },
+        {
+          "id": 186,
+          "kind": "box",
+          "numerator": 892186805
+        },
+        {
+          "id": 187,
+          "kind": "box",
+          "numerator": 883851053
+        },
+        {
+          "id": 188,
+          "kind": "box",
+          "numerator": 886449662
+        },
+        {
+          "id": 189,
+          "kind": "box",
+          "numerator": 897822520
+        },
+        {
+          "id": 190,
+          "kind": "box",
+          "numerator": 897990610
+        },
+        {
+          "id": 191,
+          "kind": "box",
+          "numerator": 891662205
+        },
+        {
+          "id": 192,
+          "kind": "box",
+          "numerator": 883326454
+        },
+        {
+          "id": 193,
+          "kind": "box",
+          "numerator": 886411952
+        },
+        {
+          "id": 194,
+          "kind": "box",
+          "numerator": 897502709
+        },
+        {
+          "id": 195,
+          "kind": "box",
+          "numerator": 899419617
+        },
+        {
+          "id": 196,
+          "kind": "box",
+          "numerator": 882641465
+        },
+        {
+          "id": 197,
+          "kind": "box",
+          "numerator": 886351170
+        },
+        {
+          "id": 198,
+          "kind": "box",
+          "numerator": 897042462
+        },
+        {
+          "id": 199,
+          "kind": "box",
+          "numerator": 898361423
+        },
+        {
+          "id": 200,
+          "kind": "box",
+          "numerator": 881583271
+        },
+        {
+          "id": 201,
+          "kind": "box",
+          "numerator": 886264185
+        },
+        {
+          "id": 202,
+          "kind": "box",
+          "numerator": 896430414
+        },
+        {
+          "id": 203,
+          "kind": "box",
+          "numerator": 897297410
+        },
+        {
+          "id": 204,
+          "kind": "box",
+          "numerator": 880519258
+        },
+        {
+          "id": 205,
+          "kind": "box",
+          "numerator": 886108085
+        },
+        {
+          "id": 206,
+          "kind": "box",
+          "numerator": 895614462
+        },
+        {
+          "id": 207,
+          "kind": "box",
+          "numerator": 896184834
+        },
+        {
+          "id": 208,
+          "kind": "box",
+          "numerator": 879406682
+        },
+        {
+          "id": 209,
+          "kind": "box",
+          "numerator": 885822467
+        },
+        {
+          "id": 210,
+          "kind": "box",
+          "numerator": 894666551
+        },
+        {
+          "id": 211,
+          "kind": "box",
+          "numerator": 895138637
+        },
+        {
+          "id": 212,
+          "kind": "box",
+          "numerator": 878360485
+        },
+        {
+          "id": 213,
+          "kind": "box",
+          "numerator": 885479985
+        },
+        {
+          "id": 214,
+          "kind": "box",
+          "numerator": 893677403
+        },
+        {
+          "id": 215,
+          "kind": "box",
+          "numerator": 894120999
+        },
+        {
+          "id": 216,
+          "kind": "box",
+          "numerator": 877342846
+        },
+        {
+          "id": 217,
+          "kind": "box",
+          "numerator": 899435548
+        },
+        {
+          "id": 218,
+          "kind": "box",
+          "numerator": 892727811
+        },
+        {
+          "id": 219,
+          "kind": "box",
+          "numerator": 875949659
+        },
+        {
+          "id": 220,
+          "kind": "box",
+          "numerator": 898168749
+        },
+        {
+          "id": 221,
+          "kind": "box",
+          "numerator": 891103153
+        },
+        {
+          "id": 222,
+          "kind": "box",
+          "numerator": 874325000
+        },
+        {
+          "id": 223,
+          "kind": "box",
+          "numerator": 896628232
+        },
+        {
+          "id": 224,
+          "kind": "box",
+          "numerator": 889172888
+        },
+        {
+          "id": 225,
+          "kind": "box",
+          "numerator": 872394736
+        },
+        {
+          "id": 226,
+          "kind": "box",
+          "numerator": 894798966
+        },
+        {
+          "id": 227,
+          "kind": "box",
+          "numerator": 887343622
+        },
+        {
+          "id": 228,
+          "kind": "box",
+          "numerator": 870565469
+        },
+        {
+          "id": 229,
+          "kind": "box",
+          "numerator": 893070977
+        },
+        {
+          "id": 230,
+          "kind": "box",
+          "numerator": 885615633
+        },
+        {
+          "id": 231,
+          "kind": "box",
+          "numerator": 868837481
+        },
+        {
+          "id": 232,
+          "kind": "box",
+          "numerator": 899466038
+        },
+        {
+          "id": 233,
+          "kind": "box",
+          "numerator": 897014696
+        },
+        {
+          "id": 234,
+          "kind": "box",
+          "numerator": 896020131
+        },
+        {
+          "id": 235,
+          "kind": "box",
+          "numerator": 894908193
+        },
+        {
+          "id": 236,
+          "kind": "box",
+          "numerator": 873119003
+        },
+        {
+          "id": 237,
+          "kind": "box",
+          "numerator": 869511340
+        }
+      ],
+      "unbounded_ranges": [
+        "a0>=3",
+        "a0<=3,a1>=20"
+      ]
+    },
+    "18-intrinsic-double/identities": {
+      "count": 40,
+      "values": {
+        "ambient_a_tail_numerator": "627860905",
+        "ambient_area": "1858566687329/33048000000",
+        "ambient_d_tail_numerator": "898876676",
+        "ambient_divisorial_bound": "53975652627753217019/1000000000000000000000",
+        "ambient_incoming": "315891331947925570507/500000000000000000000",
+        "ambient_large_slope_loss": "44543599279432079/7812500000000000000",
+        "ambient_max_numerator": "899892923",
+        "ambient_new_height": "19574881/57375000",
+        "ambient_outgoing": "7860756587864860626248390838442045303558341047/59119162918550643946713187123828125000000000000",
+        "cubic_affine_entry_slack": "1357633/107919000",
+        "cubic_correction_max": "451/1000",
+        "cubic_quartic_low_correction": "477/1000",
+        "degree_three_mass": "715899/1600000",
+        "degree_two_mass": "1689744238069707817908429553/173005058827473920000000000000",
+        "degree_two_shift": "8523441/9644000",
+        "direct_quartic_price": "463961965/62269263",
+        "eta_grouped_price": "7982791/999000",
+        "eta_noncubic_max": "1205791/999000",
+        "eta_post_error_margin": "821/99900",
+        "factorial_mass": "188420987150292742295489880001/32053856100156250000000000000000",
+        "factorial_quartic_shift": "2426571/4206250",
+        "factorial_quintic_shift": "41786199/70212500",
+        "initial_mass": "458771731542349/16000000000000000",
+        "quartic_intercept": "379/1000",
+        "quintic_intercept": "741/2500",
+        "rank_two_cubic_ratio": "7552629/7814000",
+        "rank_two_cubic_uniform_shift": "839181/1660475",
+        "rank_two_distinct_factor_quartic": "247341737/31158000",
+        "rank_two_initial_price": "310692229/38947500",
+        "rank_two_mass": "15402539679/3200000000000",
+        "rank_two_quartic_coefficient": "2426571/7121600",
+        "rank_two_quartic_deficit": "6996401/4044285",
+        "rank_two_quartic_shift": "20989203/35608000",
+        "rank_two_small_deficit_affine": "1169868403/155790000",
+        "rank_two_terminal_affine": "3836449/513000",
+        "rank_two_terminal_price": "4086217/513000",
+        "shift_factor_3": "37125/12803",
+        "shift_factor_4": "1728/673",
+        "shift_factor_5": "14175/5617",
+        "terminal_mesh_mass": "541084214040859614275582771919703/70434738071778049392640000000000000"
+      }
+    },
+    "18-intrinsic-double/rank-two": {
+      "all_power_reduction": "M>=10 paid by y<=2+1/M<=21/10; [3,9] factored inequality",
+      "companion_deficit_cap": "3",
+      "companion_order": "19/20",
+      "exceptional_power_rows": 7,
+      "geometry_scope": "the article and README retain the analytic family hypotheses",
+      "price_columns": 4,
+      "price_rows": 28
+    },
+    "18-intrinsic-double/scalar": {
+      "checked_numeric_columns": 6,
+      "rows": 28,
+      "scalar_domain": "all 28 positive-cap states and all dimension skips",
+      "theta_cubic_interpretation": "whole affine price"
+    },
+    "18-intrinsic-double/transitions": {
+      "endpoint_count": 9,
+      "minimum_partial_reserve": "541084214040859614275582771919703/70434738071778049392640000000000000",
+      "reserved_error": "1/1000",
+      "rows": 8
+    }
+  },
+  "files": {
+    "ambient-boxes.tsv": "d9f4d6f3aa324db985a4e662ec9198d928a378cbcefb31b7f74922385bccea86",
+    "ambient-prefix.tsv": "2bd4620e828526639a3e89e2b9fddb203db6546b67530958a49436083785aec0",
+    "identities.tsv": "3395e78815ac3c7c8cbaae51ce5264631cafc965ef0edba74d29c14e3b7c8a38",
+    "rank-two-powers.tsv": "be297dd7cd1b2e54b9f679f1e93173dced7c297a39db34d113d87078a3e24a34",
+    "rank-two-prices.tsv": "2c2afc2fa7ceafb3d9a6eb143bddc54189df75e11d968a08abdada9abadb58c9",
+    "states.tsv": "8a94c4ad6d64f8e222aff5af93e7ba4fe2023a1bf242efe19153f26449108fe8",
+    "transitions.tsv": "2af14743d19b370a252327d36a4dd54b0a1a47bf827c1fac75abaeb4e90ce5e8"
+  },
+  "schema": "intrinsic-double-check-report-v1",
+  "scope": "Exact arithmetic and complete declared data coverage; geometric implications require the article.",
+  "success": true
+}

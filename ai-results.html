@@ -51,114 +51,84 @@
 
     <main>
       <h1>AI-generated results not verified by a human</h1>
-      <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-        Papers obtained with the <a href="https://arxiv.org/abs/2607.06447">Danus</a> system that have
-        been checked by machines but not yet by a human. The papers are listed
-        <a href="#papers">below</a>, after an explanation of why this page exists and how I handle
-        <a href="#credit">credit and corrections</a>.
-      </p>
-
-      <h2 id="why">Why this page exists</h2>
       <p>
-        I think of myself as a mathematician, and as a mathematician I still believe, in a certain
-        sense, that a paper should be verified by a human before it is posted to arXiv. However,
-        revising a paper carefully takes a long time, and in the meantime the credit for the result
-        may be lost, both for me and for our system, Danus.
+        Papers obtained with the <a href="https://arxiv.org/abs/2607.06447">Danus</a> system that
+        have been checked by machines but not yet by a human. I post them because I believe the
+        results are important enough that experts would rather see a proof not verified by a human
+        than no proof at all. Why I do this, and how I handle credit, priority, and corrections,
+        is explained on a separate page:
+        <a href="ai-results-about.html">About this page</a>.
       </p>
-      <p>
-        Consider the following situation. I use AI to produce a paper whose result is important.
-        What should I do?
-      </p>
-      <ol>
-        <li>
-          I post the paper to arXiv. Then I am criticized for not having verified the paper in
-          detail. This goes against my values as a mathematician.
-        </li>
-        <li>
-          I do not post the paper anywhere. But what if someone else obtains the result and posts
-          it before me? In that case I lose the credit. Even if I use a Bitcoin timestamp, the
-          credit for the result has to be shared with others.
-        </li>
-      </ol>
-      <p>
-        This is a dilemma. I would also like to say a word to those who are not yet aware of how
-        reliable AI has become: things have changed significantly in the past few months. A good
-        AI system may now verify a paper better than a human could, even without Lean
-        verification. Because of this, there are, and there will be, a great many proofs that are
-        &ldquo;not human-verified, not Lean-verified, but (essentially) correct&rdquo;.
-      </p>
-      <p>
-        So here is what I plan to do. On this page I will post some of my papers that have not
-        been verified by a human (but have been verified by machines). I believe that the results
-        posted here are important enough to attract the attention of experts.
-      </p>
-      <p>
-        For example, the first papers posted here include Fujita&rsquo;s base-point-freeness
-        conjecture in dimensions 6 and&nbsp;7 (my own research field before all this AI work; to be
-        posted shortly) and the existence of a non-hyperlinear group. I believe these results are
-        of enough interest to experts in the related fields that they would prefer to see proofs
-        not verified by a human than to see no proofs at all. Besides, even if the papers are not
-        so well written, experts can use their own AI to digest and understand the proofs, and
-        use them to obtain stronger results. In particular, I would be happy to see a proof of
-        Fujita&rsquo;s base-point-freeness conjecture in all dimensions at this point.
-      </p>
-
-      <h2 id="credit">Credit and corrections</h2>
-      <ol>
-        <li>
-          <strong>Sharing credit.</strong> For any paper posted here, provided that the paper is
-          correct and has no fatal mistake, I will be happy to share credit with any person or
-          organization who obtained the same or stronger results, by whatever method, before I
-          posted the paper. Here &ldquo;fatal mistake&rdquo; is meant in the traditional sense: in
-          particular, bad writing does not count, and neither do mistakes that do not affect the
-          main results of the paper, for example in the roll call of references. The result may be
-          written in Lean or in natural language. Please be aware that I will ask for a timestamp.
-          A nearly finished draft does not count, because AI can find my result and generate the
-          rest of the paper within hours. If you cannot show me a timestamp, I will not grant you
-          credit.
-        </li>
-        <li>
-          <strong>Fatal gaps and minor mistakes.</strong> I will be happy if anyone points out a
-          fatal gap in a paper posted here. For the record, one fatal mistake was pointed out in
-          May&nbsp;2026, when I was using a very embryonic version of Danus; that paper was
-          corrected before it was submitted to arXiv. Since then, no one has pointed out a fatal
-          mistake in any of my papers. If you point out a fatal gap in one of these papers and fix
-          it, I will be very happy to collaborate. Anyone who points out minor mistakes or typos
-          will be acknowledged when the paper is posted to arXiv or submitted.
-        </li>
-        <li>
-          <strong>Credit to other people&rsquo;s work.</strong> I am aware that AI is bad at giving
-          credit to other people and to their results. Things like &ldquo;someone did 95% of the
-          work and AI did the last 5%&rdquo; appear every day. Because of the limitations of
-          generative AI and of our writing system, I cannot guarantee proper attribution
-          everywhere in these papers either. But, as I explained above, this should not prevent
-          these papers from being posted: they are expected to be of enough interest to experts in
-          the related fields that a proof not verified by a human is better than no proof at all.
-          In any case, if you are a human author of a related article and feel that your paper is
-          not given enough credit in my writing, please let me know. I will update the paper
-          before submitting it to arXiv, and I will acknowledge you.
-        </li>
-        <li>
-          <strong>Credit to humans or to AI systems.</strong> Some argue that the credit for
-          mathematical work of this kind should go not to the person who wrote the prompt but to
-          the AI system. I do not give my personal opinion on this argument here, but I would like
-          to point out that all the works on this page were obtained by the Danus system, and I am
-          one of the developers of Danus: I am the first author of
-          <a href="https://arxiv.org/abs/2607.06447">the report on the Danus system</a>. So even if
-          you think that the credit should go to the AI system, it should go to the Danus system
-          (the Rethlas/Danus team), and hence I still have the credit.
-        </li>
-      </ol>
 
       <h2 id="papers">Papers</h2>
       <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-        Numbered in the order in which they were posted; most recent first.
+        Numbered in the order in which they were posted; most recent first. Posting times are
+        given to the second, in UTC: they are the commit times in the
+        <a href="https://github.com/liu-jihao/liu-jihao.github.io/commits/main/">public repository
+        of this website</a>.
       </p>
+
+      <div class="entry" id="paper-4">
+        <div class="entry-title"><span class="entry-number">4.</span> Fujita freeness on complex projective sevenfolds</div>
+        <div class="entry-authors">Jihao Liu</div>
+        <div class="entry-venue">AI-generated paper · proof accepted by the Danus verifier 2026-09-13 09:15:13 UTC · posted here 2026-09-20 06:51:18 UTC · not yet submitted to arXiv</div>
+        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+          This paper proves Fujita&rsquo;s base-point-freeness conjecture in dimension seven:
+          <em>K<sub>X</sub></em>&nbsp;+&nbsp;8<em>L</em> is globally generated for every smooth complex
+          projective sevenfold <em>X</em> and every ample Cartier divisor <em>L</em>. It builds on
+          the six-dimensional proof below. The proof constructs complete spaces of sections with
+          prescribed order at a point and controls the entire sequence of log canonical centers
+          arising from their thresholds. The finite inequalities used in the proof come with exact
+          rational certificates and independently executable checkers, collected in a
+          <a href="fujita-sevenfold-supplement.html">computational supplement</a>. Danus obtained
+          the sevenfold theorem 28&nbsp;hours after it started working beyond dimension six; the
+          conjecture in arbitrary dimension remains open.
+        </p>
+        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+          <strong>Disclaimer:</strong> This is an AI-generated manuscript. The proof has been
+          checked by machines (the internal verifier of Danus and the writer&ndash;verifier reviews
+          of the manuscript; the thirteen certificate packages of the supplement pass a fresh
+          full run of their checkers), but it has not been verified by a human, and none of this
+          is formal verification. Readers should independently check every mathematical claim
+          before relying on or citing it.
+        </p>
+        <div class="entry-links">
+          <a href="ai-results/fujita-freeness-on-sevenfolds-2026-09-20.pdf">PDF</a>
+          <a href="fujita-sevenfold-supplement.html">Computational supplement</a>
+        </div>
+      </div>
+
+      <div class="entry" id="paper-3">
+        <div class="entry-title"><span class="entry-number">3.</span> Fujita freeness in dimension six</div>
+        <div class="entry-authors">Jihao Liu</div>
+        <div class="entry-venue">AI-generated paper · proof accepted by the Danus verifier 2026-09-09 08:56:09 UTC · posted here 2026-09-20 06:51:18 UTC · not yet submitted to arXiv</div>
+        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+          This paper proves Fujita&rsquo;s base-point-freeness conjecture in dimension six:
+          <em>K<sub>X</sub></em>&nbsp;+&nbsp;7<em>L</em> is globally generated for every smooth complex
+          projective sixfold <em>X</em> and every ample Cartier divisor <em>L</em>. The conjecture
+          was previously known in dimensions at most five, by Reider, Ein&ndash;Lazarsfeld,
+          Kawamata, and Ye&ndash;Zhu. At each point, the proof constructs an effective rational
+          boundary of coefficient strictly less than seven with that point as its minimal log
+          canonical center. It combines bounds for complete cutting chains with uniform local
+          dimension estimates and amplification of complete spaces of sections. Danus ran with
+          seven workers; from the creation of the project to the acceptance of the theorem took
+          about 47&nbsp;hours of calendar time, including an interruption.
+        </p>
+        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+          <strong>Disclaimer:</strong> This is an AI-generated manuscript. The proof has been
+          checked by machines (the internal verifier of Danus, and an independent AI cold review
+          on 9&nbsp;September 2026, which found one incomplete enumeration, completed in this
+          version, and reported no other unresolved objection), but it has not been verified by a
+          human. Readers should independently check every mathematical claim before relying on or
+          citing it.
+        </p>
+        <div class="entry-links"><a href="ai-results/fujita-freeness-in-dimension-six-2026-09-20.pdf">PDF</a></div>
+      </div>
 
       <div class="entry" id="paper-2">
         <div class="entry-title"><span class="entry-number">2.</span> Nonhyperlinear groups exist</div>
         <div class="entry-authors">Jihao Liu</div>
-        <div class="entry-venue">AI-generated paper · obtained by Danus on 19 September 2026 · posted here 20 September 2026 · not yet submitted to arXiv</div>
+        <div class="entry-venue">AI-generated paper · proof accepted by the Danus verifier 2026-09-19 22:29:37 UTC · posted here 2026-09-20 06:24:54 UTC · not yet submitted to arXiv</div>
         <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
           This paper constructs a countable discrete group that is not hyperlinear. Equivalently,
           its group von Neumann algebra, with its canonical trace, does not embed into an
@@ -198,7 +168,7 @@
       <div class="entry" id="paper-1">
         <div class="entry-title"><span class="entry-number">1.</span> Syzygy bundles on Picard rank one varieties need not be stable</div>
         <div class="entry-authors">Jihao Liu</div>
-        <div class="entry-venue">AI-generated note · first shared privately with Supravat Sarkar on 14 July 2026 · posted here 21 July 2026 · not submitted to arXiv</div>
+        <div class="entry-venue">AI-generated note · first shared privately with Supravat Sarkar on 14 July 2026 · posted here 21 July 2026 (2026-07-22 03:25:21 UTC) · not submitted to arXiv</div>
         <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
           <a href="https://arxiv.org/abs/2607.10585v1">Version&nbsp;1 of Supravat
           Sarkar&rsquo;s paper</a> brought Question&nbsp;1.1 to my attention. Here

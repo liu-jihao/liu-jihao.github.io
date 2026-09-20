@@ -16,6 +16,8 @@ Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
 ├── publications.html                # Publications and preprints (74 arXiv records)
 ├── notes.html                       # Short notes (human-verified or otherwise annotated)
 ├── ai-results.html                  # AI-generated papers not verified by a human (+ ai-results/*.pdf)
+├── ai-results-about.html            # Why these papers are posted; credit and correction policy
+├── fujita-sevenfold-supplement.html # Computational supplement page (+ ai-results/fujita-sevenfold-supplement*)
 ├── teaching.html                    # Teaching experience
 ├── talks.html                       # Invited talks (conferences + seminars)
 ├── conferences.html                 # Conferences and seminars co-organized
