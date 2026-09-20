@@ -269,6 +269,29 @@ ul.topic-list li {
   color: var(--color-text-muted);
 }
 
+/* ---------- Collapsible entries (Notes, AI-generated results) ---------- */
+details.entry-details > summary {
+  cursor: pointer;
+  padding: 0.1rem 0;
+}
+
+details.entry-details > summary .entry-title {
+  font-weight: 600;
+}
+
+details.entry-details > summary:hover .entry-title {
+  color: var(--color-link);
+}
+
+details.entry-details > summary .entry-links {
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+details.entry-details[open] > summary {
+  margin-bottom: 0.35rem;
+}
+
 /* ---------- Publication / Talk lists ---------- */
 .entry {
   margin-bottom: var(--space-md);

@@ -52,134 +52,135 @@
     <main>
       <h1>Notes</h1>
       <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-        Short mathematical notes and results. Longer AI-generated papers that have not been
+        Short mathematical notes and results; click a title to see the abstract and the status. Longer AI-generated papers that have not been
         verified by a human are collected on a <a href="ai-results.html">separate page</a>.
       </p>
 
       <div class="entry">
-        <div class="entry-title">The equality case of Ehrhart&rsquo;s volume conjecture</div>
-        <div class="entry-authors">Jihao Liu</div>
-        <div class="entry-venue">AI-generated note · posted here 1 August 2026 · revised version posted to arXiv 2 August 2026</div>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          On August&nbsp;1, 2026, OpenAI released the report
-          <a href="https://cdn.openai.com/pdf/ten-proofs-oai.pdf"><em>Ten Advances in Mathematics
-          and Theoretical Computer Science</em></a>, in which an internal version of its Astra
-          model proved the inequality part of Ehrhart&rsquo;s volume conjecture (1964), the eighth
-          of the ten results. The conjecture concerns a very intuitive statement: an
-          <em>n</em>-dimensional convex body whose barycenter is its unique interior lattice point
-          has volume at most (<em>n</em>+1)<sup><em>n</em></sup>/<em>n</em>!. OpenAI proved that
-          the volume indeed cannot exceed this number; which bodies attain the maximal volume
-          &mdash; the equality part of the conjecture &mdash; was explicitly left open in the
-          report.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          We noticed that the core idea of OpenAI&rsquo;s proof transports Fujita&rsquo;s proof of
-          the volume upper bound for K-semistable Fano varieties to convex geometry, and that the
-          same paper of Fujita also settled the equality case on the Fano side: only the
-          projective space attains the bound. The core of Fujita&rsquo;s equality analysis is the
-          Seshadri constant: equality forces the Seshadri constants to equal <em>n</em>+1 at every
-          point, and the projective space attains this value exactly. The convex-geometric
-          counterpart of the Seshadri constant is the lattice width: Seshadri&nbsp;=&nbsp;<em>n</em>+1
-          corresponds to lattice width at least <em>n</em>+1 in every integer direction, and the
-          extremal simplex attains the bound exactly, its minimal lattice width being
-          <em>n</em>+1. The plan of attack therefore centered on the width saturation.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          This idea was given to our Danus system. Running with 8&nbsp;agents, Danus carried out
-          the first half of the proof along this correspondence; the second half has no
-          complex-geometric counterpart, and Danus found it on its own. The total run took
-          3&nbsp;hours and 16&nbsp;minutes. Combined with the result of OpenAI, both the
-          inequality part and the equality part of Ehrhart&rsquo;s volume conjecture are now
-          resolved.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          The manuscript has passed the author&rsquo;s preliminary verification and is posted here
-          as a note. A more detailed revision is in progress, and the note will be posted to
-          arXiv upon its completion. Comments are very welcome.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          <strong>Update (August 1, 2026):</strong> Following discussions with Kewei Zhang, the
-          note now includes a dictionary of the Fano&ndash;convex correspondences behind the
-          proof, relating its first half to Zhang&rsquo;s
-          <a href="https://doi.org/10.1093/imrn/rnaa295">IMRN 2022</a> and
-          <a href="https://doi.org/10.1090/proc/17325">Proc.&nbsp;AMS 2025</a> papers on the
-          Fano side; each section is now annotated with its Fano-side counterpart, and the
-          second half of the proof has no Fano-side antecedent. I thank Kewei Zhang for pointing
-          out these references and for useful discussions on the correspondences.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          <strong>Update (August 2, 2026):</strong> A revised version of this note has now been
-          posted to arXiv as <a href="https://arxiv.org/abs/2608.01040">arXiv:2608.01040</a>.
-        </p>
-        <div class="entry-links">
-          <a href="notes/ehrhart-equality-2026-08-01.pdf">PDF</a>
-          <a href="https://arxiv.org/abs/2608.01040">arXiv:2608.01040</a>
-        </div>
+        <details class="entry-details">
+          <summary><span class="entry-title">The equality case of Ehrhart&rsquo;s volume conjecture</span> <span class="entry-links"><a href="notes/ehrhart-equality-2026-08-01.pdf">PDF</a> <a href="https://arxiv.org/abs/2608.01040">arXiv:2608.01040</a></span></summary>
+          <div class="entry-authors">Jihao Liu</div>
+          <div class="entry-venue">AI-generated note · posted here 1 August 2026 · revised version posted to arXiv 2 August 2026</div>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            On August&nbsp;1, 2026, OpenAI released the report
+            <a href="https://cdn.openai.com/pdf/ten-proofs-oai.pdf"><em>Ten Advances in Mathematics
+            and Theoretical Computer Science</em></a>, in which an internal version of its Astra
+            model proved the inequality part of Ehrhart&rsquo;s volume conjecture (1964), the eighth
+            of the ten results. The conjecture concerns a very intuitive statement: an
+            <em>n</em>-dimensional convex body whose barycenter is its unique interior lattice point
+            has volume at most (<em>n</em>+1)<sup><em>n</em></sup>/<em>n</em>!. OpenAI proved that
+            the volume indeed cannot exceed this number; which bodies attain the maximal volume
+            &mdash; the equality part of the conjecture &mdash; was explicitly left open in the
+            report.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            We noticed that the core idea of OpenAI&rsquo;s proof transports Fujita&rsquo;s proof of
+            the volume upper bound for K-semistable Fano varieties to convex geometry, and that the
+            same paper of Fujita also settled the equality case on the Fano side: only the
+            projective space attains the bound. The core of Fujita&rsquo;s equality analysis is the
+            Seshadri constant: equality forces the Seshadri constants to equal <em>n</em>+1 at every
+            point, and the projective space attains this value exactly. The convex-geometric
+            counterpart of the Seshadri constant is the lattice width: Seshadri&nbsp;=&nbsp;<em>n</em>+1
+            corresponds to lattice width at least <em>n</em>+1 in every integer direction, and the
+            extremal simplex attains the bound exactly, its minimal lattice width being
+            <em>n</em>+1. The plan of attack therefore centered on the width saturation.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            This idea was given to our Danus system. Running with 8&nbsp;agents, Danus carried out
+            the first half of the proof along this correspondence; the second half has no
+            complex-geometric counterpart, and Danus found it on its own. The total run took
+            3&nbsp;hours and 16&nbsp;minutes. Combined with the result of OpenAI, both the
+            inequality part and the equality part of Ehrhart&rsquo;s volume conjecture are now
+            resolved.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            The manuscript has passed the author&rsquo;s preliminary verification and is posted here
+            as a note. A more detailed revision is in progress, and the note will be posted to
+            arXiv upon its completion. Comments are very welcome.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            <strong>Update (August 1, 2026):</strong> Following discussions with Kewei Zhang, the
+            note now includes a dictionary of the Fano&ndash;convex correspondences behind the
+            proof, relating its first half to Zhang&rsquo;s
+            <a href="https://doi.org/10.1093/imrn/rnaa295">IMRN 2022</a> and
+            <a href="https://doi.org/10.1090/proc/17325">Proc.&nbsp;AMS 2025</a> papers on the
+            Fano side; each section is now annotated with its Fano-side counterpart, and the
+            second half of the proof has no Fano-side antecedent. I thank Kewei Zhang for pointing
+            out these references and for useful discussions on the correspondences.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            <strong>Update (August 2, 2026):</strong> A revised version of this note has now been
+            posted to arXiv as <a href="https://arxiv.org/abs/2608.01040">arXiv:2608.01040</a>.
+          </p>
+        </details>
       </div>
 
       <div class="entry">
-        <div class="entry-title">Syzygy bundles on Picard rank one varieties need not be stable</div>
-        <div class="entry-authors">Jihao Liu</div>
-        <div class="entry-venue">AI-generated note · first shared privately with Supravat Sarkar on 14 July 2026 · posted here 21 July 2026 · not submitted to arXiv</div>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          <a href="https://arxiv.org/abs/2607.10585v1">Version&nbsp;1 of Supravat
-          Sarkar&rsquo;s paper</a> brought Question&nbsp;1.1 to my attention. Here
-          &ldquo;independently&rdquo; refers specifically to the construction: the counterexample
-          in this PDF was independently generated using the Danus system and sent to Supravat
-          Sarkar on 14&nbsp;July&nbsp;2026, before I saw or received a description of the distinct
-          counterexample or proof later included in
-          <a href="https://arxiv.org/abs/2607.10585v2">version&nbsp;2 of Sarkar&rsquo;s paper</a>.
-          Since Sarkar&rsquo;s v2 now gives a different counterexample to the same question,
-          I will not submit this note to arXiv. I am instead making the PDF available on my
-          personal webpage as a dated note, for the benefit of the community and for future
-          reference.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          <strong>Disclaimer:</strong> This is an AI-generated manuscript. The proof has not
-          been verified by a human; readers should independently check every mathematical
-          claim before relying on or citing it.
-        </p>
-        <div class="entry-links"><a href="notes/SyzygyBundleCounterexample.pdf">PDF</a></div>
+        <details class="entry-details">
+          <summary><span class="entry-title">Syzygy bundles on Picard rank one varieties need not be stable</span> <span class="entry-links"><a href="notes/SyzygyBundleCounterexample.pdf">PDF</a></span></summary>
+          <div class="entry-authors">Jihao Liu</div>
+          <div class="entry-venue">AI-generated note · first shared privately with Supravat Sarkar on 14 July 2026 · posted here 21 July 2026 · not submitted to arXiv</div>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            <a href="https://arxiv.org/abs/2607.10585v1">Version&nbsp;1 of Supravat
+            Sarkar&rsquo;s paper</a> brought Question&nbsp;1.1 to my attention. Here
+            &ldquo;independently&rdquo; refers specifically to the construction: the counterexample
+            in this PDF was independently generated using the Danus system and sent to Supravat
+            Sarkar on 14&nbsp;July&nbsp;2026, before I saw or received a description of the distinct
+            counterexample or proof later included in
+            <a href="https://arxiv.org/abs/2607.10585v2">version&nbsp;2 of Sarkar&rsquo;s paper</a>.
+            Since Sarkar&rsquo;s v2 now gives a different counterexample to the same question,
+            I will not submit this note to arXiv. I am instead making the PDF available on my
+            personal webpage as a dated note, for the benefit of the community and for future
+            reference.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            <strong>Disclaimer:</strong> This is an AI-generated manuscript. The proof has not
+            been verified by a human; readers should independently check every mathematical
+            claim before relying on or citing it.
+          </p>
+        </details>
       </div>
 
       <div class="entry">
-        <div class="entry-title">Factorial asymptotics of the Matryoshka numbers</div>
-        <div class="entry-authors">Jihao Liu</div>
-        <div class="entry-venue">Note · June 2026 · not posted to arXiv</div>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          This note proves the conjecture of Kotěšovec on the factorial growth of the
-          Matryoshka numbers (OEIS&nbsp;A177384), which arise from the combinatorics of the
-          cosmohedron: the limit <em>S</em>&nbsp;=&nbsp;lim&nbsp;<em>a<sub>n</sub></em>/(<em>n</em>+4)!
-          exists and is finite and positive, so
-          <em>a<sub>n</sub></em>&nbsp;&sim;&nbsp;<em>S</em>&thinsp;<em>n</em>!&thinsp;<em>n</em><sup>4</sup>,
-          and <em>S</em> is certified to lie in an explicit interval of width below&nbsp;10<sup>&minus;9</sup>.
-          The proof is elementary and independent of the resurgence approach, and the note was
-          produced by an automated proof system. It is made available here following a suggestion
-          of Professor Federico Ardila.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          <strong>Status:</strong> Verified by a human before July&nbsp;7, 2026. This note will
-          not be posted to arXiv.
-        </p>
-        <div class="entry-links"><a href="notes/Matryoshka.pdf">PDF</a></div>
+        <details class="entry-details">
+          <summary><span class="entry-title">Factorial asymptotics of the Matryoshka numbers</span> <span class="entry-links"><a href="notes/Matryoshka.pdf">PDF</a></span></summary>
+          <div class="entry-authors">Jihao Liu</div>
+          <div class="entry-venue">Note · June 2026 · not posted to arXiv</div>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            This note proves the conjecture of Kotěšovec on the factorial growth of the
+            Matryoshka numbers (OEIS&nbsp;A177384), which arise from the combinatorics of the
+            cosmohedron: the limit <em>S</em>&nbsp;=&nbsp;lim&nbsp;<em>a<sub>n</sub></em>/(<em>n</em>+4)!
+            exists and is finite and positive, so
+            <em>a<sub>n</sub></em>&nbsp;&sim;&nbsp;<em>S</em>&thinsp;<em>n</em>!&thinsp;<em>n</em><sup>4</sup>,
+            and <em>S</em> is certified to lie in an explicit interval of width below&nbsp;10<sup>&minus;9</sup>.
+            The proof is elementary and independent of the resurgence approach, and the note was
+            produced by an automated proof system. It is made available here following a suggestion
+            of Professor Federico Ardila.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            <strong>Status:</strong> Verified by a human before July&nbsp;7, 2026. This note will
+            not be posted to arXiv.
+          </p>
+        </details>
       </div>
 
       <div class="entry">
-        <div class="entry-title">On a conjecture of Esser, Totaro, and Wang</div>
-        <div class="entry-authors">Jihao Liu</div>
-        <div class="entry-venue">Note · May 2026 · not posted to arXiv</div>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          This note disproves a conjecture of Esser and Totaro on the relative primeness
-          of two explicitly constructible integers. As a consequence, the large-index
-          conjecture of Esser, Totaro, and Wang fails in dimension&nbsp;159: the prime&nbsp;53
-          divides both <em>E</em><sub>159</sub> and <em>m</em>&prime;<sub>159</sub>.
-          The note will not be posted to arXiv.
-        </p>
-        <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
-          <strong>Status:</strong> I have been informed by Burt Totaro that this is essentially
-          a counterexample, and that it has been verified by Louis Esser.
-        </p>
-        <div class="entry-links"><a href="notes/ET74.pdf">PDF</a></div>
+        <details class="entry-details">
+          <summary><span class="entry-title">On a conjecture of Esser, Totaro, and Wang</span> <span class="entry-links"><a href="notes/ET74.pdf">PDF</a></span></summary>
+          <div class="entry-authors">Jihao Liu</div>
+          <div class="entry-venue">Note · May 2026 · not posted to arXiv</div>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            This note disproves a conjecture of Esser and Totaro on the relative primeness
+            of two explicitly constructible integers. As a consequence, the large-index
+            conjecture of Esser, Totaro, and Wang fails in dimension&nbsp;159: the prime&nbsp;53
+            divides both <em>E</em><sub>159</sub> and <em>m</em>&prime;<sub>159</sub>.
+            The note will not be posted to arXiv.
+          </p>
+          <p style="font-size: 0.95rem; margin-top: 0.4rem; margin-bottom: 0.4rem;">
+            <strong>Status:</strong> I have been informed by Burt Totaro that this is essentially
+            a counterexample, and that it has been verified by Louis Esser.
+          </p>
+        </details>
       </div>
     </main>
 

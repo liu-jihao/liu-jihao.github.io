@@ -162,3 +162,19 @@ python3 scripts/build_research_topics.py
 
 After adding a paper to `publications.html`, add its number to `TOPICS_OF` in that script (one or more of
 `mmp`, `gpairs`, `fol`, `sing`, `fano`, `cy`, `bdd`, `explicit`, `surf`, `generalag`, `groups`, `comb`, `danus`) and rerun. Algebraic geometry that fits nowhere else goes under `generalag`; work outside algebraic geometry gets its own field.
+
+### Entries on the Notes and AI-results pages
+
+Each entry is collapsible (no JavaScript). Collapsed, it shows only the title and the PDF link(s); opened, it shows
+authors, status line, abstract, disclaimers and dated updates:
+
+```html
+<div class="entry" id="paper-N">
+  <details class="entry-details">
+    <summary><span class="entry-title"><span class="entry-number">N.</span> Title</span> <span class="entry-links"><a href="...pdf">PDF</a></span></summary>
+    <div class="entry-authors">Jihao Liu</div>
+    <div class="entry-venue">status · posted here YYYY-MM-DD hh:mm:ss UTC</div>
+    <p>abstract…</p>
+  </details>
+</div>
+```
