@@ -7,7 +7,9 @@ Each topic is a <details> block (no JavaScript): the keyword is the <summary>, a
 shows Jihao's papers on that topic, newest first, taken verbatim from publications.html, together with
 the notes and the AI-generated papers listed in EXTRAS below.
 To file a new paper under topics, add its publication number to TOPICS_OF below and rerun.
-Papers that fit no other topic go under `general`; the Danus system report has its own topic `danus`.
+Algebraic geometry that fits no other topic goes under `generalag`; work outside algebraic geometry is
+filed under its own field (`groups`, `comb`, ...; add a new field to TOPICS when needed); the Danus system
+report has its own topic `danus`.
 A paper with no entry in TOPICS_OF is not listed here; it stays on the Publications page.
 """
 import html
@@ -25,7 +27,9 @@ TOPICS = [
     ("bdd", "Boundedness"),
     ("explicit", "Explicit birational geometry"),
     ("surf", "Surfaces"),
-    ("general", "General"),
+    ("generalag", "General algebraic geometry"),
+    ("groups", "Group theory and operator algebras"),
+    ("comb", "Combinatorics and number theory"),
     ("danus", "Danus"),
 ]
 
@@ -45,7 +49,7 @@ TOPICS_OF = {
     "8": "bdd", "7": "sing explicit", "6": "sing bdd", "5": "sing", "4": "sing gpairs",
     "3": "sing", "2": "gpairs mmp", "1": "fol surf",
     "66": "danus",
-    "52": "surf", "68": "general", "67": "general", "65": "general", "63": "general", "59": "general",
+    "52": "surf", "68": "generalag", "67": "generalag", "65": "generalag", "63": "generalag", "59": "comb",
 }
 
 # Items that are not on publications.html: notes (notes.html) and AI-generated papers that no human
@@ -53,14 +57,14 @@ TOPICS_OF = {
 # (title, link, label shown after the title, arXiv-style yymm used only for sorting, topics)
 EXTRAS = [
     ("Nonhyperlinear groups exist", "ai-results/nonhyperlinear-groups-exist-2026-09-20.pdf",
-     "AI-generated, not verified by a human", 2609, "general"),
+     "AI-generated, not verified by a human", 2609, "groups"),
     ("Fujita freeness on complex projective sevenfolds", "ai-results/fujita-freeness-on-sevenfolds-2026-09-20.pdf",
      "AI-generated, not verified by a human", 2609, "explicit"),
     ("Fujita freeness in dimension six", "ai-results/fujita-freeness-in-dimension-six-2026-09-20.pdf",
      "AI-generated, not verified by a human", 2609, "explicit"),
     ("Syzygy bundles on Picard rank one varieties need not be stable", "notes/SyzygyBundleCounterexample.pdf",
-     "Note; AI-generated, not verified by a human", 2607, "general"),
-    ("Factorial asymptotics of the Matryoshka numbers", "notes/Matryoshka.pdf", "Note", 2606, "general"),
+     "Note; AI-generated, not verified by a human", 2607, "generalag"),
+    ("Factorial asymptotics of the Matryoshka numbers", "notes/Matryoshka.pdf", "Note", 2606, "comb"),
     ("On a conjecture of Esser, Totaro, and Wang", "notes/ET74.pdf", "Note", 2605, "explicit"),
 ]
 
