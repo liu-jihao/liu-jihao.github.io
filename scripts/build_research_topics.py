@@ -62,7 +62,7 @@ EXTRAS = [
      "AI-generated, not verified by a human", 2609, "fano"),
     ("Singular points of rank-one del Pezzo surfaces in characteristic three",
      "notes/del-pezzo-characteristic-three-2026-09-20.pdf",
-     "Note; AI-generated, not verified by a human", 2609, "surf sing"),
+     "Note", 2609, "surf sing"),
     ("Nonhyperlinear groups exist", "ai-results/nonhyperlinear-groups-exist-2026-09-20.pdf",
      "AI-generated, not verified by a human", 2609, "groups"),
     ("Fujita freeness on complex projective sevenfolds", "ai-results/fujita-freeness-on-sevenfolds-2026-09-20.pdf",

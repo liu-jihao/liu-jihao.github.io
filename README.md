@@ -23,6 +23,7 @@ Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
 ├── conferences.html                 # Conferences and seminars co-organized
 ├── collaborators.html               # Mathematical collaborators
 ├── pku-ag-seminar.html              # PKU Algebraic Geometry Seminar (current schedule)
+├── pku-ag-seminar-2026-spring.html  # Spring 2026 archive
 ├── pku-ag-seminar-2025-fall.html    # Fall 2025 archive
 ├── pku-ag-seminar-2025-spring.html  # Spring 2025 archive
 ├── pku-ag-seminar-2024-fall.html    # Fall 2024 archive
