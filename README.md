@@ -151,3 +151,14 @@ GitHub Pages serves the site at `https://liu-jihao.github.io` within ~1 minute o
 ## License
 
 Site content © Jihao Liu. Source code (HTML/CSS templates) free to reuse.
+
+### Research topics on the home page
+
+The collapsible topic lists under **Research** on `index.html` are generated from `publications.html`:
+
+```bash
+python3 scripts/build_research_topics.py
+```
+
+After adding a paper to `publications.html`, add its number to `TOPICS_OF` in that script (one or more of
+`mmp`, `gpairs`, `fol`, `sing`, `fano`, `explicit`) and rerun. Papers outside birational geometry are left unfiled.
