@@ -161,4 +161,4 @@ python3 scripts/build_research_topics.py
 ```
 
 After adding a paper to `publications.html`, add its number to `TOPICS_OF` in that script (one or more of
-`mmp`, `gpairs`, `fol`, `sing`, `fano`, `bdd`, `explicit`) and rerun. Papers outside birational geometry are left unfiled.
+`mmp`, `gpairs`, `fol`, `sing`, `fano`, `bdd`, `explicit`, `surf`, `general`) and rerun. Papers that fit nowhere else go under `general`.

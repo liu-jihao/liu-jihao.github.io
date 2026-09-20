@@ -6,8 +6,8 @@
 Each topic is a <details> block (no JavaScript): the keyword is the <summary>, and opening it
 shows Jihao's papers on that topic, newest first, taken verbatim from publications.html.
 To file a new paper under topics, add its publication number to TOPICS_OF below and rerun.
-Papers with no entry in TOPICS_OF (work outside birational geometry) are simply not listed here;
-they stay on the Publications page.
+Papers that fit no other topic go under `general`. A paper with no entry in TOPICS_OF (currently only
+the Danus system report, which is not a mathematics paper) is not listed here; it stays on the Publications page.
 """
 import html
 import re
@@ -23,23 +23,26 @@ TOPICS = [
     ("fano", "Fano varieties and K-stability"),
     ("bdd", "Boundedness"),
     ("explicit", "Explicit birational geometry"),
+    ("surf", "Surfaces"),
+    ("general", "General"),
 ]
 
 TOPICS_OF = {
-    "72": "fano", "71": "mmp", "70": "gpairs mmp", "69": "fano", "64": "fano sing",
-    "62": "fano", "61": "fano", "60a": "sing", "60b": "sing", "58": "mmp",
+    "72": "fano", "71": "surf", "70": "gpairs mmp", "69": "fano", "64": "fano sing",
+    "62": "fano", "61": "fano", "60a": "sing", "60b": "sing", "58": "surf",
     "57": "sing bdd", "56": "fol bdd", "55": "sing", "54": "fano", "53": "fol explicit",
-    "51": "sing", "50": "explicit", "49": "bdd fol", "48": "mmp gpairs", "47": "fano sing",
+    "51": "sing", "50": "explicit surf", "49": "bdd fol", "48": "mmp gpairs", "47": "fano sing",
     "46": "fol mmp", "45": "fol", "44a": "mmp bdd explicit", "44b": "mmp explicit", "43": "fol mmp",
-    "42": "mmp", "41": "fol mmp bdd", "40": "sing explicit", "39": "gpairs mmp", "38": "fol mmp",
+    "42": "mmp", "41": "fol mmp bdd", "40": "sing explicit", "39": "gpairs mmp surf", "38": "fol mmp",
     "37": "sing fano", "36": "fol mmp", "35": "fol bdd", "34": "fano sing explicit",
-    "33": "fol mmp", "32": "mmp", "31": "fano explicit", "30": "fol gpairs mmp", "29": "explicit",
-    "28": "fol sing", "27": "fol sing", "26": "explicit sing", "25": "gpairs", "24": "fol sing",
+    "33": "fol mmp", "32": "mmp", "31": "fano explicit", "30": "fol gpairs mmp", "29": "explicit surf",
+    "28": "fol sing", "27": "fol sing", "26": "explicit sing surf", "25": "gpairs", "24": "fol sing surf",
     "23": "fol sing", "22": "bdd mmp", "21": "gpairs mmp", "20": "mmp sing", "19": "sing",
-    "18": "sing bdd", "17": "mmp bdd", "16": "gpairs mmp", "15": "sing explicit", "14": "explicit",
-    "13": "gpairs mmp", "12": "sing", "11": "gpairs mmp", "10": "sing explicit", "9": "sing",
+    "18": "sing bdd surf", "17": "mmp bdd", "16": "gpairs mmp", "15": "sing explicit", "14": "explicit surf",
+    "13": "gpairs mmp", "12": "sing", "11": "gpairs mmp", "10": "sing explicit surf", "9": "sing surf",
     "8": "bdd", "7": "sing explicit", "6": "sing bdd", "5": "sing", "4": "sing gpairs",
-    "3": "sing", "2": "gpairs mmp", "1": "fol",
+    "3": "sing", "2": "gpairs mmp", "1": "fol surf",
+    "52": "surf", "68": "general", "67": "general", "65": "general", "63": "general", "59": "general",
 }
 
 
