@@ -4,7 +4,8 @@
     python3 scripts/build_research_topics.py
 
 Each topic is a <details> block (no JavaScript): the keyword is the <summary>, and opening it
-shows Jihao's papers on that topic, newest first, taken verbatim from publications.html.
+shows Jihao's papers on that topic, newest first, taken verbatim from publications.html, together with
+the notes and the AI-generated papers listed in EXTRAS below.
 To file a new paper under topics, add its publication number to TOPICS_OF below and rerun.
 Papers that fit no other topic go under `general`; the Danus system report has its own topic `danus`.
 A paper with no entry in TOPICS_OF is not listed here; it stays on the Publications page.
@@ -47,6 +48,22 @@ TOPICS_OF = {
     "52": "surf", "68": "general", "67": "general", "65": "general", "63": "general", "59": "general",
 }
 
+# Items that are not on publications.html: notes (notes.html) and AI-generated papers that no human
+# has verified yet (ai-results.html). The Ehrhart note is publication 69 and is not repeated here.
+# (title, link, label shown after the title, arXiv-style yymm used only for sorting, topics)
+EXTRAS = [
+    ("Nonhyperlinear groups exist", "ai-results/nonhyperlinear-groups-exist-2026-09-20.pdf",
+     "AI-generated, not verified by a human", 2609, "general"),
+    ("Fujita freeness on complex projective sevenfolds", "ai-results/fujita-freeness-on-sevenfolds-2026-09-20.pdf",
+     "AI-generated, not verified by a human", 2609, "explicit"),
+    ("Fujita freeness in dimension six", "ai-results/fujita-freeness-in-dimension-six-2026-09-20.pdf",
+     "AI-generated, not verified by a human", 2609, "explicit"),
+    ("Syzygy bundles on Picard rank one varieties need not be stable", "notes/SyzygyBundleCounterexample.pdf",
+     "Note; AI-generated, not verified by a human", 2607, "general"),
+    ("Factorial asymptotics of the Matryoshka numbers", "notes/Matryoshka.pdf", "Note", 2606, "general"),
+    ("On a conjecture of Esser, Totaro, and Wang", "notes/ET74.pdf", "Note", 2605, "explicit"),
+]
+
 
 def parse_publications():
     s = (ROOT / "publications.html").read_text(encoding="utf-8")
@@ -68,7 +85,12 @@ def parse_publications():
             venue = ""
         links = re.findall(r'href="([^"]+)"', b)
         link = next((l for l in links if "arxiv.org" in l), links[0] if links else "")
-        out.append({"num": num, "title": title, "co": co, "venue": venue.rstrip(". "), "link": link})
+        ym = re.search(r"arxiv\.org/abs/(\d{4})\.", link)
+        out.append({"num": num, "title": title, "co": co, "venue": venue.rstrip(". "), "link": link,
+                    "yymm": int(ym.group(1)) if ym else None})
+    last = 9999
+    for q in out:                       # publications are listed newest first
+        q["yymm"] = last = q["yymm"] if q["yymm"] is not None else last
     return out
 
 
@@ -81,7 +103,13 @@ def render(pubs):
              "        Open a topic to see my papers on it.",
              "      </p>"]
     for key, label in TOPICS:
-        items = [p for p in pubs if key in TOPICS_OF.get(p["num"], "").split()]
+        items = [(p["yymm"], 0, -i, p) for i, p in enumerate(pubs) if key in TOPICS_OF.get(p["num"], "").split()]
+        for j, (title, link, tag, yymm, topics) in enumerate(EXTRAS):
+            if key in topics.split():
+                if not (ROOT / link).exists():
+                    raise SystemExit("EXTRAS link does not exist: %s" % link)
+                items.append((yymm, 1, -j, {"title": title, "link": link, "co": [], "venue": tag}))
+        items = [it[3] for it in sorted(items, key=lambda t: t[:3], reverse=True)]
         lines.append('      <details class="topic">')
         count = "%d paper%s" % (len(items), "" if len(items) == 1 else "s")
         lines.append('        <summary>%s <span class="topic-count">(%s)</span></summary>' % (label, count))
