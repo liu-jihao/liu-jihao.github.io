@@ -178,3 +178,7 @@ authors, status line, abstract, disclaimers and dated updates:
   </details>
 </div>
 ```
+
+Entries on both pages are numbered, newest first (`<span class="entry-number">N.</span>`; notes use `id="note-N"`).
+A one-line statement that must stay visible while the entry is collapsed (e.g. "This solves Problem 23 of …")
+goes inside the `<summary>`, after the links, as `<span class="entry-tagline">…</span>`.

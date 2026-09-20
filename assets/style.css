@@ -288,6 +288,14 @@ details.entry-details > summary .entry-links {
   white-space: nowrap;
 }
 
+details.entry-details > summary .entry-tagline {
+  display: block;
+  margin: 0.15rem 0 0 1.05rem;
+  font-size: 0.93rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
 details.entry-details[open] > summary {
   margin-bottom: 0.35rem;
 }
