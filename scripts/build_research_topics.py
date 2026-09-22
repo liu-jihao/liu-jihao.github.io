@@ -36,7 +36,7 @@ TOPICS = [
 ]
 
 TOPICS_OF = {
-    "72": "fano", "71": "surf", "70": "gpairs mmp", "69": "fano", "64": "fano sing",
+    "72": "fano diffgeo", "71": "surf", "70": "gpairs mmp", "69": "fano", "64": "fano sing",
     "62": "fano", "61": "fano", "60a": "sing", "60b": "sing", "58": "surf",
     "57": "sing bdd", "56": "fol bdd", "55": "sing", "54": "cy", "53": "fol explicit",
     "51": "sing", "50": "explicit surf", "49": "bdd fol", "48": "mmp gpairs", "47": "fano sing cy",
