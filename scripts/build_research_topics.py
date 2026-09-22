@@ -31,6 +31,7 @@ TOPICS = [
     ("generalag", "General algebraic geometry"),
     ("groups", "Group theory and operator algebras"),
     ("comb", "Combinatorics and number theory"),
+    ("diffgeo", "Differential geometry"),
     ("danus", "Danus"),
 ]
 
@@ -51,6 +52,7 @@ TOPICS_OF = {
     "3": "sing", "2": "gpairs mmp", "1": "fol surf",
     "66": "danus",
     "52": "surf", "68": "generalag", "67": "generalag", "65": "cy", "63": "generalag", "59": "comb",
+    "73": "diffgeo",
 }
 
 # Items that are not on publications.html: notes (notes.html) and AI-generated papers that no human
