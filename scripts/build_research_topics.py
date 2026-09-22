@@ -57,6 +57,9 @@ TOPICS_OF = {
 # has verified yet (ai-results.html). The Ehrhart note is publication 69 and is not repeated here.
 # (title, link, label shown after the title, arXiv-style yymm used only for sorting, topics)
 EXTRAS = [
+    ("Proof of the tropical Hodge conjecture for tropical abelian varieties",
+     "ai-results/tropical-hodge-conjecture-for-tropical-abelian-varieties-2026-09-22.pdf",
+     "AI-generated, not verified by a human", 2609, "generalag"),
     ("K-polystability of nilpotent orbit and Slodowy slice bases",
      "ai-results/k-polystability-of-nilpotent-orbit-and-slodowy-slice-bases-2026-09-20.pdf",
      "AI-generated, not verified by a human", 2609, "fano"),
