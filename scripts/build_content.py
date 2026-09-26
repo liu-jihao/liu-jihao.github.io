@@ -72,7 +72,6 @@ def render_publications(data):
                       f'        <div class="entry-authors">{escape(", ".join(p["authors"]))}</div>'])
         if p['venue_html']: lines.append(f'        <div class="entry-venue">{p["venue_html"]}</div>')
         anchors=' '.join(f'<a href="{escape(l["url"],quote=True)}">{escape(l["label"])}</a>' for l in p['links'])
-        anchors+=f' <a class="entry-permalink" href="#{p["id"]}" aria-label="Permanent link to publication {p["number"]}">Permalink</a>'
         lines.extend([f'        <div class="entry-links">{anchors}</div>','      </article>'])
     lines.append('      </section>')
     return '\n'.join(lines)+'\n'
