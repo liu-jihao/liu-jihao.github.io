@@ -1,0 +1,50 @@
+{
+  "primary": [
+    [
+      "index.html",
+      "Home"
+    ],
+    [
+      "publications.html",
+      "Publications"
+    ],
+    [
+      "teaching.html",
+      "Teaching"
+    ],
+    [
+      "talks.html",
+      "Invited Talks"
+    ],
+    [
+      "search.html",
+      "Search"
+    ],
+    [
+      "cv/cv.pdf",
+      "CV (PDF)"
+    ]
+  ],
+  "secondary": [
+    [
+      "notes.html",
+      "Notes"
+    ],
+    [
+      "ai-results.html",
+      "AI-generated Results Not Verified by a Human"
+    ],
+    [
+      "conferences.html",
+      "Conferences & Seminars"
+    ],
+    [
+      "collaborators.html",
+      "Collaborators"
+    ],
+    [
+      "pku-ag-seminar.html",
+      "PKU AG Seminar"
+    ]
+  ]
+}

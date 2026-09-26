@@ -1,185 +1,59 @@
 # Jihao Liu — Personal Academic Website
 
-Source for [https://liu-jihao.github.io](https://liu-jihao.github.io).
+Source for [jihaoliu.org](https://jihaoliu.org/), hosted on GitHub Pages from the `main` branch.
 
-## Stack
+## Site and local preview
 
-- Pure static HTML + CSS (no build step, no JavaScript dependencies)
-- Hosted on GitHub Pages
-- Custom academic design system in `assets/style.css`
+The site uses static HTML and CSS, with a local JavaScript enhancement for publication filtering and site search. Crimson Pro is hosted in `assets/fonts/`, with its SIL Open Font License. All publications remain readable without JavaScript; the search page provides a page directory when JavaScript is disabled.
 
-## Site Structure
+From the repository root:
 
-```
-.
-├── index.html                       # Home / About
-├── publications.html                # Publications and preprints (74 arXiv records)
-├── notes.html                       # Short notes (human-verified or otherwise annotated)
-├── ai-results.html                  # AI-generated papers not verified by a human (+ ai-results/*.pdf)
-├── ai-results-about.html            # Why these papers are posted; credit and correction policy
-├── fujita-sevenfold-supplement.html # Computational supplement page (+ ai-results/fujita-sevenfold-supplement*)
-├── teaching.html                    # Teaching experience
-├── talks.html                       # Invited talks (conferences + seminars)
-├── conferences.html                 # Conferences and seminars co-organized
-├── collaborators.html               # Mathematical collaborators
-├── pku-ag-seminar.html              # PKU Algebraic Geometry Seminar (current schedule)
-├── pku-ag-seminar-2026-spring.html  # Spring 2026 archive
-├── pku-ag-seminar-2025-fall.html    # Fall 2025 archive
-├── pku-ag-seminar-2025-spring.html  # Spring 2025 archive
-├── pku-ag-seminar-2024-fall.html    # Fall 2024 archive
-├── ffm-conference.html              # Conference on Foliation, Fibration, and Moduli (2026)
-├── cv/                              # CV: cv.pdf (published) + cv.tex, Makefile (repo only)
-└── assets/
-    └── style.css                    # All site styles
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-## Local Preview
+Open [localhost:8000](http://localhost:8000/).
 
-To preview the site locally, you can use any static file server. The simplest options:
+## Edit and rebuild
 
-```bash
-# Using Python (built-in on macOS)
-python3 -m http.server 8000
+Shared content is maintained in:
 
-# Or using Node
-npx serve .
+- `data/content.json`: profile, publications, research topics, teaching, talks, organized events, and CV content.
+- `data/navigation.json`: shared primary and secondary navigation.
+- `data/seminar-current.json`: current seminar dates, times, venues, and source URLs.
+- `cv/template.tex`: CV layout.
+- `templates/search.html`, `assets/discovery.js`: site search and publication filters.
+- `assets/style.css`: shared website layout and typography.
+
+The generated `assets/search-index.js` contains public content only. Searches run locally in the visitor's browser.
+
+```sh
+make
+make check
 ```
 
-Then open [http://localhost:8000](http://localhost:8000) in your browser.
+Python generation uses only the standard library. Building the CV requires XeLaTeX with EB Garamond, xurl and bookmark. Songti SC is used when installed; Fandol Song is the fallback. `make` builds the CV before the website and search index. `make check` verifies that generated content matches its sources and checks local links and anchors.
 
-## How to Edit
+To place CV compilation intermediates in a separate directory:
 
-All content lives in plain HTML files. To update:
-
-1. Open the relevant `.html` file in any text editor (or in Cursor)
-2. Edit the content between the `<main>` tags
-3. Save the file
-4. Commit and push to GitHub — the site updates automatically within ~1 minute
-
-To change the site-wide style, edit `assets/style.css`.
-
-## Common Updates
-
-### Adding a new publication
-
-Open `publications.html`, find the year heading, and add a new entry block:
-
-```html
-<div class="entry">
-  <div class="entry-title"><span class="entry-number">53.</span> Title of the paper</div>
-  <div class="entry-authors">Author 1, Author 2</div>
-  <div class="entry-venue">Journal name, year, pages.</div>
-  <div class="entry-links">
-    <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a>
-    <a href="https://doi.org/...">DOI</a>
-  </div>
-</div>
+```sh
+make BUILD_DIR=/absolute/path/to/cv-build
 ```
 
-### Adding a seminar talk
+`cv/cv.tex` is generated but remains a self-contained editable LaTeX file. Direct edits to generated pages or CV source will be overwritten by the next build. Update the shared data or templates instead. The explicit `updated` review date and seminar records determine upcoming/past seminar placement.
 
-Open `talks.html`, find the right section (Conferences or Seminars), and add an `<li>`:
+Notes, AI-result papers, collaborators, conference details and seminar archives retain their established content and files. Specialized content remains in the corresponding HTML unless represented in shared data. Preserve the author's accounts of priority, sharing dates, external verification and publication decisions, including their attribution and qualifications. Neither a private source nor a failed independent search is by itself grounds to omit or downgrade these accounts. Preserve original talk hyperlinks and the separate Northwestern Winter 2024 course/section records.
 
-```html
-<li>
-  <div class="course-name"><span class="entry-number">N.</span> Talk title</div>
-  <div class="course-meta">Date · Venue · <a href="...">link</a></div>
-</li>
-```
+## Other site assets
 
-## Regenerating favicons / OG image
+`scripts/make_favicon.py` generates favicon and social sharing images; it requires Pillow. `scripts/inject_head_tags.py` maintains the shared metadata blocks. Notes and AI-result entries retain their expandable details and visible status lines.
 
-The favicons (`assets/favicon.{svg,ico}`, `assets/favicon-{32,180,512}.png`)
-and the social sharing card (`assets/og-image.png`) are generated from a
-single Python script. To rebuild them after changing the design:
+## Publishing
 
-```bash
-python3 -m venv .venv
-.venv/bin/pip install Pillow
-.venv/bin/python3 scripts/make_favicon.py
-```
+Review the generated files and `make check` results before committing. Pushing the reviewed commit to `main` triggers the existing GitHub Pages deployment. `CNAME` retains `jihaoliu.org`.
 
-## Updating site-wide head tags
-
-The `<!-- META:START --> ... <!-- META:END -->` block in each HTML file
-(favicon links, canonical URL, Open Graph + Twitter card meta tags) is
-managed by `scripts/inject_head_tags.py`. To add a new page or change
-the tags everywhere at once:
-
-1. Edit the `PAGES` list (or the block template) in `scripts/inject_head_tags.py`
-2. Run `.venv/bin/python3 scripts/inject_head_tags.py`
-
-The script is idempotent — it replaces an existing block in place if found,
-and inserts after the `<meta name="description">` tag otherwise.
-
-## Rebuilding the CV
-
-The CV (`cv/cv.pdf`) is compiled from `cv/cv.tex` with XeLaTeX. After editing
-the `.tex`, regenerate the PDF with:
-
-```bash
-cd cv && make
-```
-
-Two passes are run automatically (the second pass settles the
-"page X / Y" footer). The Makefile cleans up `.aux/.log/.out` afterwards
-via `make clean`. EB Garamond and Songti SC are required (both ship with
-TeX Live / macOS by default).
-
-Note: `cv/cv.tex` and `cv/Makefile` live in the repository for
-reproducibility but are excluded from the published site by `_config.yml`.
-Only `cv/cv.pdf` is served at `https://jihaoliu.org/cv/cv.pdf`.
-
-## What `_config.yml` does
-
-The site is plain static HTML — there is no Jekyll templating. `_config.yml`
-exists only to tell GitHub Pages which files in the repo should NOT be
-copied into the deployed site (LaTeX source, helper scripts, README, etc.).
-Edit its `exclude:` list to publish or unpublish files.
-
-## Deployment
-
-The site auto-deploys to GitHub Pages from the `main` branch. To deploy:
-
-```bash
-git add .
-git commit -m "Update content"
-git push
-```
-
-GitHub Pages serves the site at `https://liu-jihao.github.io` within ~1 minute of pushing.
+`_config.yml` excludes source data, scripts, templates, LaTeX inputs, build files and this documentation from the deployed website. These files remain versioned in the repository for reproducibility. Only the compiled `cv/cv.pdf` is served as the CV.
 
 ## License
 
-Site content © Jihao Liu. Source code (HTML/CSS templates) free to reuse.
-
-### Research topics on the home page
-
-The collapsible topic lists under **Research** on `index.html` are generated from `publications.html`:
-
-```bash
-python3 scripts/build_research_topics.py
-```
-
-After adding a paper to `publications.html`, add its number to `TOPICS_OF` in that script (one or more of
-`mmp`, `gpairs`, `fol`, `sing`, `fano`, `cy`, `bdd`, `explicit`, `surf`, `generalag`, `groups`, `comb`, `danus`) and rerun. Algebraic geometry that fits nowhere else goes under `generalag`; work outside algebraic geometry gets its own field.
-
-### Entries on the Notes and AI-results pages
-
-Each entry is collapsible (no JavaScript). Collapsed, it shows only the title and the PDF link(s); opened, it shows
-authors, status line, abstract, disclaimers and dated updates:
-
-```html
-<div class="entry" id="paper-N">
-  <details class="entry-details">
-    <summary><span class="entry-title"><span class="entry-number">N.</span> Title</span> <span class="entry-links"><a href="...pdf">PDF</a></span></summary>
-    <div class="entry-authors">Jihao Liu</div>
-    <div class="entry-venue">status · posted here YYYY-MM-DD hh:mm:ss UTC</div>
-    <p>abstract…</p>
-  </details>
-</div>
-```
-
-Entries on both pages are numbered, newest first (`<span class="entry-number">N.</span>`; notes use `id="note-N"`).
-A one-line statement that must stay visible while the entry is collapsed (e.g. "This solves Problem 23 of …")
-goes inside the `<summary>`, after the links, as `<span class="entry-tagline">…</span>`.
+Site content © Jihao Liu. Source code (HTML/CSS templates) is free to reuse. Crimson Pro is distributed under its included SIL Open Font License.

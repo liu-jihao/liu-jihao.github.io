@@ -14,9 +14,15 @@
 
 exclude:
   - cv/cv.tex
+  - cv/template.tex
   - cv/Makefile
   - scripts/
   - .venv/
   - .gitignore
   - README.md
   - texput.log
+  - data/
+  - templates/
+  - AGENTS.md
+  - Makefile
+  - cv/.build/

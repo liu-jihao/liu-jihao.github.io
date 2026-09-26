@@ -1,0 +1,4301 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-26",
+  "profile": {
+    "name": "Jihao Liu",
+    "name_zh": "刘济豪",
+    "email": "liujihao@math.pku.edu.cn",
+    "website": "https://jihaoliu.org",
+    "affiliation_lines": [
+      "Beijing International Center",
+      "for Mathematical Research",
+      "Peking University, Beijing"
+    ],
+    "research_interests": "Birational geometry, singularities, foliations, and explicit birational geometry.",
+    "employment": [
+      {
+        "dates": "2024 -- present",
+        "institution": "Peking University",
+        "unit": "School of Mathematical Sciences",
+        "details": "Assistant Professor / Researcher."
+      },
+      {
+        "dates": "2021 -- 2024",
+        "institution": "Northwestern University",
+        "unit": "Department of Mathematics",
+        "details": "Boas Assistant Professor. Mentor: Yuchen Liu."
+      }
+    ],
+    "education": [
+      {
+        "dates": "2015 -- 2021",
+        "institution": "University of Utah",
+        "unit": "Salt Lake City, USA",
+        "details": "Ph.D. in Mathematics. Advisor: Christopher D. Hacon FRS."
+      },
+      {
+        "dates": "2011 -- 2015",
+        "institution": "Peking University",
+        "unit": "Beijing, China",
+        "details": "B.S. in Mathematics. Undergraduate advisor: Gang Tian."
+      }
+    ],
+    "email_display": "liujihao [at] math.pku.edu.cn",
+    "office_en": "Beijing International Center for Mathematical Research, Peking University, Jingchunyuan 78402",
+    "office_zh": "北京大学北京国际数学研究中心镜春园 78402",
+    "scholar_url": "https://scholar.google.com/citations?user=8cyDda8AAAAJ&hl=en",
+    "pku_seminar_coorganizers": [
+      "Fumiaki Suzuki",
+      "Zhiyu Tian",
+      "Qizheng Yin"
+    ],
+    "source_urls": [
+      "https://math.pku.edu.cn/jsdw/js_20180628175159671361/l_20180628175159671361/160787.htm",
+      "https://bicmr.pku.edu.cn/cn/content/lists/11_catid74_3.html"
+    ],
+    "checked_on": "2026-09-26",
+    "verification_scope": "Official university identity, affiliation, email and office; established public author biography retained.",
+    "scholar_citation_label": "(cited by 675)"
+  },
+  "publications": [
+    {
+      "id": "pub-74",
+      "number": "74",
+      "year": 2026,
+      "title_html": "The minimal volume of normal stable surface pairs with reduced boundary containing a zero-dimensional non-klt center",
+      "authors": [
+        "Jihao Liu",
+        "Weili Shao"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2609.27259",
+          "label": "arXiv:2609.27259"
+        }
+      ],
+      "topics": [
+        "explicit",
+        "surf"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "1",
+        "year": 2026,
+        "order": 1
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2609.27259",
+        "https://arxiv.org/abs/2609.27259v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-73",
+      "number": "73",
+      "year": 2026,
+      "title_html": "Embedded constant mean curvature tori in hemispheres of Berger spheres",
+      "authors": [
+        "Jihao Liu",
+        "Xiang Ma"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2609.23484",
+          "label": "arXiv:2609.23484"
+        }
+      ],
+      "topics": [
+        "diffgeo"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "2",
+        "year": 2026,
+        "order": 2
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2609.23484",
+        "https://arxiv.org/abs/2609.23484v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-72",
+      "number": "72",
+      "year": 2026,
+      "title_html": "Disproof of the Yau&ndash;Tian&ndash;Donaldson conjecture",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "Note. For general polarized varieties, this disproves Donaldson&rsquo;s 2002 cscK YTD conjecture even after the standard modern repairs to test configurations (normality and the product-in-codimension-two equality convention). The (log) Fano K&auml;hler&ndash;Einstein YTD theorem and recent uniform/completed cscK YTD results are unaffected.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2608.19301",
+          "label": "arXiv:2608.19301"
+        }
+      ],
+      "topics": [
+        "fano",
+        "diffgeo"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "3",
+        "year": 2026,
+        "order": 3
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2608.19301",
+        "https://arxiv.org/abs/2608.19301v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-71",
+      "number": "71",
+      "year": 2026,
+      "title_html": "Mori dream Jacobian elliptic surfaces of Kodaira dimension one",
+      "authors": [
+        "Antonio Laface",
+        "Sichen Li",
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2608.09002",
+          "label": "arXiv:2608.09002"
+        }
+      ],
+      "topics": [
+        "surf"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "4",
+        "year": 2026,
+        "order": 4
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2608.09002",
+        "https://arxiv.org/abs/2608.09002v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-70",
+      "number": "70",
+      "year": 2026,
+      "title_html": "A klt generalized pair with infinitely generated canonical ring",
+      "authors": [
+        "Jihao Liu",
+        "Yanze Wang"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2608.03258",
+          "label": "arXiv:2608.03258"
+        }
+      ],
+      "topics": [
+        "gpairs",
+        "mmp"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "5",
+        "year": 2026,
+        "order": 5
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2608.03258",
+        "https://arxiv.org/abs/2608.03258v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-69",
+      "number": "69",
+      "year": 2026,
+      "title_html": "The equality case of Ehrhart&rsquo;s volume conjecture",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2608.01040",
+          "label": "arXiv:2608.01040"
+        }
+      ],
+      "topics": [
+        "fano"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "6",
+        "year": 2026,
+        "order": 6
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2608.01040",
+        "https://arxiv.org/abs/2608.01040v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-68",
+      "number": "68",
+      "year": 2026,
+      "title_html": "Removing the Torsion-free Hypothesis in a Positivity Theorem on Deligne-Mumford Stacks",
+      "authors": [
+        "Shengyu Hou",
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.26989",
+          "label": "arXiv:2607.26989"
+        }
+      ],
+      "topics": [
+        "generalag"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "7",
+        "year": 2026,
+        "order": 7
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.26989",
+        "https://arxiv.org/abs/2607.26989v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-67",
+      "number": "67",
+      "year": 2026,
+      "title_html": "Twelve common flex lines in a general pencil of cubics",
+      "authors": [
+        "Jihao Liu",
+        "Yanze Wang"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.26396",
+          "label": "arXiv:2607.26396"
+        }
+      ],
+      "topics": [
+        "generalag"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "8",
+        "year": 2026,
+        "order": 8
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.26396",
+        "https://arxiv.org/abs/2607.26396v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-66",
+      "number": "66",
+      "year": 2026,
+      "title_html": "Danus: Orchestrating Mathematical Reasoning Agents with Fact-Graph Memory",
+      "authors": [
+        "Jihao Liu",
+        "Guoxiong Gao",
+        "Zeming Sun",
+        "Bin Wu",
+        "Shurui Liu",
+        "Jiedong Jiang",
+        "Haocheng Ju",
+        "Leheng Chen",
+        "Ronnie Cheng",
+        "Xiping Zhang",
+        "Bin Dong"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.06447",
+          "label": "arXiv:2607.06447"
+        }
+      ],
+      "topics": [
+        "danus"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "9",
+        "year": 2026,
+        "order": 9
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.06447",
+        "https://arxiv.org/abs/2607.06447v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-65",
+      "number": "65",
+      "year": 2026,
+      "title_html": "A counterexample to the odd-dimensional rank bound for abelian <i>p</i>-group actions",
+      "authors": [
+        "Jihao Liu",
+        "Yanze Wang"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.04891",
+          "label": "arXiv:2607.04891"
+        }
+      ],
+      "topics": [
+        "cy"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "10",
+        "year": 2026,
+        "order": 10
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.04891",
+        "https://arxiv.org/abs/2607.04891v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-64",
+      "number": "64",
+      "year": 2026,
+      "title_html": "On two questions of Qi on saturated filtrations",
+      "authors": [
+        "Jihao Liu",
+        "Haofeng Zhang"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.04831",
+          "label": "arXiv:2607.04831"
+        }
+      ],
+      "topics": [
+        "fano",
+        "sing"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "11",
+        "year": 2026,
+        "order": 11
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.04831",
+        "https://arxiv.org/abs/2607.04831v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-63",
+      "number": "63",
+      "year": 2026,
+      "title_html": "A slope-unstable bundle on a surface with 1-homogeneous projectivization",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.04376",
+          "label": "arXiv:2607.04376"
+        }
+      ],
+      "topics": [
+        "generalag"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "12",
+        "year": 2026,
+        "order": 12
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.04376",
+        "https://arxiv.org/abs/2607.04376v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-62",
+      "number": "62",
+      "year": 2026,
+      "title_html": "K-polystable toric Fano varieties with small alpha invariants",
+      "authors": [
+        "Jihao Liu",
+        "Ziwen Zhu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.04005",
+          "label": "arXiv:2607.04005"
+        }
+      ],
+      "topics": [
+        "fano"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "13",
+        "year": 2026,
+        "order": 13
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.04005",
+        "https://arxiv.org/abs/2607.04005v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-61",
+      "number": "61",
+      "year": 2026,
+      "title_html": "An equivariant fixed-level Demailly identity for Fano manifolds",
+      "authors": [
+        "Jihao Liu",
+        "Sheng Qin"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2607.00708",
+          "label": "arXiv:2607.00708"
+        }
+      ],
+      "topics": [
+        "fano",
+        "diffgeo"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "14",
+        "year": 2026,
+        "order": 14
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2607.00708",
+        "https://arxiv.org/abs/2607.00708v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-60a",
+      "number": "60a",
+      "year": 2026,
+      "title_html": "A Criteria of Weighted Homogeneity via Logarithmic Vector Fields",
+      "authors": [
+        "Jihao Liu",
+        "Xiping Zhang"
+      ],
+      "venue_html": "Not AI-generated. Presents the same result as no.&nbsp;60b; the mathematics is identical.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2606.29886",
+          "label": "arXiv:2606.29886"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "15a",
+        "year": 2026,
+        "order": 15
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2606.29886",
+        "https://arxiv.org/abs/2606.29886v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-60b",
+      "number": "60b",
+      "year": 2026,
+      "title_html": "Criteria of isolated weighted homogeneous hypersurface singularities using Logarithmic vector fields",
+      "authors": [
+        "Jihao Liu",
+        "Xiping Zhang"
+      ],
+      "venue_html": "AI-generated (human-verified). Presents the same result as no.&nbsp;60a; the mathematics is identical.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2606.29891",
+          "label": "arXiv:2606.29891"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "15b",
+        "year": 2026,
+        "order": 16
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2606.29891",
+        "https://arxiv.org/abs/2606.29891v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-59",
+      "number": "59",
+      "year": 2026,
+      "title_html": "A counterexample to the near-quadratic Elekes&ndash;R&oacute;nyai expander conjecture over &#8477;",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2606.16738",
+          "label": "arXiv:2606.16738"
+        }
+      ],
+      "topics": [
+        "comb"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "16",
+        "year": 2026,
+        "order": 17
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2606.16738",
+        "https://arxiv.org/abs/2606.16738v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-58",
+      "number": "58",
+      "year": 2026,
+      "title_html": "Examples of infinitely many (-1)-curves with higher genus on elliptic surfaces",
+      "authors": [
+        "Sichen Li",
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.27926",
+          "label": "arXiv:2605.27926"
+        }
+      ],
+      "topics": [
+        "surf"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "17",
+        "year": 2026,
+        "order": 18
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.27926",
+        "https://arxiv.org/abs/2605.27926v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-57",
+      "number": "57",
+      "year": 2026,
+      "title_html": "Boundedness of total Cartier indices for rational singularities in families",
+      "authors": [
+        "Jihao Liu",
+        "Ruicheng Hu",
+        "Sheng Qin"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.22782",
+          "label": "arXiv:2605.22782"
+        }
+      ],
+      "topics": [
+        "sing",
+        "bdd"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "18",
+        "year": 2026,
+        "order": 19
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.22782",
+        "https://arxiv.org/abs/2605.22782v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-56",
+      "number": "56",
+      "year": 2026,
+      "title_html": "Shokurov's global index conjecture for threefold foliations",
+      "authors": [
+        "Jihao Liu",
+        "Sheng Qin"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.22735",
+          "label": "arXiv:2605.22735"
+        }
+      ],
+      "topics": [
+        "fol",
+        "bdd"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "19",
+        "year": 2026,
+        "order": 20
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.22735",
+        "https://arxiv.org/abs/2605.22735v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-55",
+      "number": "55",
+      "year": 2026,
+      "title_html": "A question on klt type varieties of Han and Jiang",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.22250",
+          "label": "arXiv:2605.22250"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "20",
+        "year": 2026,
+        "order": 21
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.22250",
+        "https://arxiv.org/abs/2605.22250v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-54",
+      "number": "54",
+      "year": 2026,
+      "title_html": "On a question of Mauri and Moraga",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.22052",
+          "label": "arXiv:2605.22052"
+        }
+      ],
+      "topics": [
+        "cy"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "21",
+        "year": 2026,
+        "order": 22
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.22052",
+        "https://arxiv.org/abs/2605.22052v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-53",
+      "number": "53",
+      "year": 2026,
+      "title_html": "Optimal bend-and-break for foliations",
+      "authors": [
+        "Jihao Liu",
+        "Zeming Sun",
+        "Jiedong Jiang"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.20754",
+          "label": "arXiv:2605.20754"
+        }
+      ],
+      "topics": [
+        "fol",
+        "explicit"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "22",
+        "year": 2026,
+        "order": 23
+      },
+      "verified_updates": [
+        {
+          "field": "title",
+          "date": "2026-09-26",
+          "sources": [
+            "https://arxiv.org/abs/2605.20754v2"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.20754",
+        "https://arxiv.org/abs/2605.20754v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-52",
+      "number": "52",
+      "year": 2026,
+      "title_html": "An example of a very non-movable effective divisor",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.20594",
+          "label": "arXiv:2605.20594"
+        }
+      ],
+      "topics": [
+        "surf"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "23",
+        "year": 2026,
+        "order": 24
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.20594",
+        "https://arxiv.org/abs/2605.20594v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-51",
+      "number": "51",
+      "year": 2026,
+      "title_html": "On a question of Kollár and Kovács",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.20585",
+          "label": "arXiv:2605.20585"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "24",
+        "year": 2026,
+        "order": 25
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.20585",
+        "https://arxiv.org/abs/2605.20585v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-50",
+      "number": "50",
+      "year": 2026,
+      "title_html": "The minimal volume of stable surfaces of rank one",
+      "authors": [
+        "Jihao Liu",
+        "Wenfei Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2605.05641",
+          "label": "arXiv:2605.05641"
+        }
+      ],
+      "topics": [
+        "explicit",
+        "surf"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "25",
+        "year": 2026,
+        "order": 26
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2605.05641",
+        "https://arxiv.org/abs/2605.05641v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-49",
+      "number": "49",
+      "year": 2026,
+      "title_html": "Birational boundedness of stable families",
+      "authors": [
+        "Paolo Cascini",
+        "Jihao Liu",
+        "Calum Spicer",
+        "Roberto Svaldi"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2604.24106",
+          "label": "arXiv:2604.24106"
+        }
+      ],
+      "topics": [
+        "bdd",
+        "fol"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "26",
+        "year": 2026,
+        "order": 27
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2604.24106",
+        "https://arxiv.org/abs/2604.24106v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-48",
+      "number": "48",
+      "year": 2026,
+      "title_html": "Existence of the minimal model program for log canonical generalized pairs",
+      "authors": [
+        "Zhengyu Hu",
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2603.03817",
+          "label": "arXiv:2603.03817"
+        }
+      ],
+      "topics": [
+        "mmp",
+        "gpairs"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "27",
+        "year": 2026,
+        "order": 28
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2603.03817",
+        "https://arxiv.org/abs/2603.03817v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-47",
+      "number": "47",
+      "year": 2026,
+      "title_html": "Dual complexes of qdlt Fano type models and strong complete regularity",
+      "authors": [
+        "Jihao Liu",
+        "Konstantin Loginov"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2603.03588",
+          "label": "arXiv:2603.03588"
+        }
+      ],
+      "topics": [
+        "fano",
+        "sing",
+        "cy"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "28",
+        "year": 2026,
+        "order": 29
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2603.03588",
+        "https://arxiv.org/abs/2603.03588v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-46",
+      "number": "46",
+      "year": 2025,
+      "title_html": "Non-algebraicity of non-abundant foliations and abundance for adjoint foliated structures",
+      "authors": [
+        "Jihao Liu",
+        "Zheng Xu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2510.04419",
+          "label": "arXiv:2510.04419"
+        }
+      ],
+      "topics": [
+        "fol",
+        "mmp"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "29",
+        "year": 2025,
+        "order": 30
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2510.04419",
+        "https://arxiv.org/abs/2510.04419v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-45",
+      "number": "45",
+      "year": 2025,
+      "title_html": "Variation of algebraically integrable adjoint foliated structures",
+      "authors": [
+        "Paolo Cascini",
+        "Jihao Liu",
+        "Fanjun Meng",
+        "Roberto Svaldi",
+        "Lingyao Xie"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2510.02498",
+          "label": "arXiv:2510.02498"
+        }
+      ],
+      "topics": [
+        "fol"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "30",
+        "year": 2025,
+        "order": 31
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2510.02498",
+        "https://arxiv.org/abs/2510.02498v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-44a",
+      "number": "44a",
+      "year": 2025,
+      "title_html": "Boundedness in general type MMP and fivefold effective termination",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu",
+        "Lu Qi",
+        "Ziquan Zhuang"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2506.20183v1",
+          "label": "arXiv:2506.20183v1"
+        }
+      ],
+      "topics": [
+        "mmp",
+        "bdd",
+        "explicit"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "31a",
+        "year": 2025,
+        "order": 32
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2506.20183v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-44b",
+      "number": "44b",
+      "year": 2025,
+      "title_html": "Effective termination of general type MMPs in dimension at most five",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu",
+        "Ziquan Zhuang"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2509.01501",
+          "label": "arXiv:2509.01501"
+        }
+      ],
+      "topics": [
+        "mmp",
+        "explicit"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "31b",
+        "year": 2025,
+        "order": 33
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2509.01501",
+        "https://arxiv.org/abs/2509.01501v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-43",
+      "number": "43",
+      "year": 2025,
+      "title_html": "Sarkisov program for algebraically integrable and threefold foliations",
+      "authors": [
+        "Yifei Chen",
+        "Jihao Liu",
+        "Yanze Wang"
+      ],
+      "venue_html": "Int. Math. Res. Not. 2026, no. 6, rnag045.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2505.15115",
+          "label": "arXiv:2505.15115"
+        },
+        {
+          "url": "https://doi.org/10.1093/imrn/rnag045",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "4",
+        "year": 2026,
+        "order": 4
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1093/imrn/rnag045",
+            "https://api.crossref.org/works/10.1093/imrn/rnag045"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2505.15115",
+        "https://doi.org/10.1093/imrn/rnag045",
+        "https://api.crossref.org/works/10.1093/imrn/rnag045",
+        "https://arxiv.org/abs/2505.15115v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-42",
+      "number": "42",
+      "year": 2025,
+      "title_html": "Non-vanishing implies numerical dimension one abundance",
+      "authors": [
+        "Jihao Liu",
+        "Zheng Xu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2505.05250",
+          "label": "arXiv:2505.05250"
+        }
+      ],
+      "topics": [
+        "mmp"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "32",
+        "year": 2025,
+        "order": 34
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2505.05250",
+        "https://arxiv.org/abs/2505.05250v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-41",
+      "number": "41",
+      "year": 2025,
+      "title_html": "On finite generation and boundedness of adjoint foliated structures",
+      "authors": [
+        "Paolo Cascini",
+        "Jingjun Han",
+        "Jihao Liu",
+        "Fanjun Meng",
+        "Calum Spicer",
+        "Roberto Svaldi",
+        "Lingyao Xie"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2504.10737",
+          "label": "arXiv:2504.10737"
+        }
+      ],
+      "topics": [
+        "fol",
+        "mmp",
+        "bdd"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "33",
+        "year": 2025,
+        "order": 35
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2504.10737",
+        "https://arxiv.org/abs/2504.10737v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-40",
+      "number": "40",
+      "year": 2025,
+      "title_html": "Classification of threefold enc cDV quotient singularities",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2501.01024",
+          "label": "arXiv:2501.01024"
+        }
+      ],
+      "topics": [
+        "sing",
+        "explicit"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "34",
+        "year": 2025,
+        "order": 36
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2501.01024",
+        "https://arxiv.org/abs/2501.01024v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-39",
+      "number": "39",
+      "year": 2024,
+      "title_html": "A generalized non-vanishing theorem on surfaces",
+      "authors": [
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Pure Appl. Math. Q. (special volume in honor of Caucher Birkar), 22 (2026), no. 1, 235–244.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2410.15457",
+          "label": "arXiv:2410.15457"
+        },
+        {
+          "url": "https://dx.doi.org/10.4310/PAMQ.250306164159",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "gpairs",
+        "mmp",
+        "surf"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "5",
+        "year": 2026,
+        "order": 5
+      },
+      "verified_updates": [
+        {
+          "field": "title",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.4310/PAMQ.250306164159",
+            "https://api.crossref.org/works/10.4310/PAMQ.250306164159"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2410.15457",
+        "https://dx.doi.org/10.4310/PAMQ.250306164159",
+        "https://doi.org/10.4310/PAMQ.250306164159",
+        "https://api.crossref.org/works/10.4310/PAMQ.250306164159",
+        "https://arxiv.org/abs/2410.15457v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-38",
+      "number": "38",
+      "year": 2024,
+      "title_html": "Flop between algebraically integrable foliations on potentially klt varieties",
+      "authors": [
+        "Yifei Chen",
+        "Jihao Liu",
+        "Yanze Wang"
+      ],
+      "venue_html": "Int. J. Math. 36 (2025), no. 11, 2550035.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2410.05764",
+          "label": "arXiv:2410.05764"
+        },
+        {
+          "url": "https://doi.org/10.1142/S0129167X25500351",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "8",
+        "year": 2025,
+        "order": 8
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1142/S0129167X25500351",
+            "https://api.crossref.org/works/10.1142/S0129167X25500351"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2410.05764",
+        "https://doi.org/10.1142/S0129167X25500351",
+        "https://api.crossref.org/works/10.1142/S0129167X25500351",
+        "https://arxiv.org/abs/2410.05764v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-37",
+      "number": "37",
+      "year": 2024,
+      "title_html": "ACC for local volumes",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu",
+        "Lu Qi"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2408.15090",
+          "label": "arXiv:2408.15090"
+        }
+      ],
+      "topics": [
+        "sing",
+        "fano"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "35",
+        "year": 2024,
+        "order": 37
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2408.15090",
+        "https://arxiv.org/abs/2408.15090v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-36",
+      "number": "36",
+      "year": 2024,
+      "title_html": "Minimal model program for algebraically integrable adjoint foliated structures",
+      "authors": [
+        "Paolo Cascini",
+        "Jingjun Han",
+        "Jihao Liu",
+        "Fanjun Meng",
+        "Calum Spicer",
+        "Roberto Svaldi",
+        "Lingyao Xie"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2408.14258",
+          "label": "arXiv:2408.14258"
+        }
+      ],
+      "topics": [
+        "fol",
+        "mmp"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "36",
+        "year": 2024,
+        "order": 38
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2408.14258",
+        "https://arxiv.org/abs/2408.14258v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-35",
+      "number": "35",
+      "year": 2024,
+      "title_html": "Volume of algebraically integrable foliations and locally stable families",
+      "authors": [
+        "Jingjun Han",
+        "Junpeng Jiao",
+        "Mengchu Li",
+        "Jihao Liu"
+      ],
+      "venue_html": "Trans. Amer. Math. Soc. 379 (2026), no. 10, 6809–6832.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2406.16604",
+          "label": "arXiv:2406.16604"
+        },
+        {
+          "url": "https://doi.org/10.1090/tran/9740",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "bdd"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "1",
+        "year": 2026,
+        "order": 1
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2406.16604",
+        "https://doi.org/10.1090/tran/9740",
+        "https://arxiv.org/abs/2406.16604v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-34",
+      "number": "34",
+      "year": 2024,
+      "title_html": "Exceptional Fano varieties with small minimal log discrepancy",
+      "authors": [
+        "Louis Esser",
+        "Jihao Liu",
+        "Chengxi Wang"
+      ],
+      "venue_html": "Math. Res. Lett. 33 (2026), no. 1, 161–198.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2406.03570",
+          "label": "arXiv:2406.03570"
+        },
+        {
+          "url": "https://doi.org/10.4310/MRL.260502161650",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fano",
+        "sing",
+        "explicit"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "3",
+        "year": 2026,
+        "order": 3
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2406.03570",
+        "https://doi.org/10.4310/MRL.260502161650",
+        "https://arxiv.org/abs/2406.03570v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-33",
+      "number": "33",
+      "year": 2024,
+      "title_html": "Minimal model program for algebraically integrable foliations on klt varieties",
+      "authors": [
+        "Jihao Liu",
+        "Fanjun Meng",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Compos. Math. 161 (2025), no. 12, 3213–3276.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2404.01559",
+          "label": "arXiv:2404.01559"
+        },
+        {
+          "url": "https://doi.org/10.1112/S0010437X25102807",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "9",
+        "year": 2025,
+        "order": 9
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1112/S0010437X25102807",
+            "https://api.crossref.org/works/10.1112/S0010437X25102807"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2404.01559",
+        "https://doi.org/10.1112/S0010437X25102807",
+        "https://api.crossref.org/works/10.1112/S0010437X25102807",
+        "https://arxiv.org/abs/2404.01559v3"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-32",
+      "number": "32",
+      "year": 2023,
+      "title_html": "On the equivalence between the effective adjunction conjectures of Prokhorov–Shokurov and of Li",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu",
+        "Qingyuan Xue"
+      ],
+      "venue_html": "Algebra Number Theory 19 (2025), no. 11, 2261–2279.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2312.15397",
+          "label": "arXiv:2312.15397"
+        },
+        {
+          "url": "https://doi.org/10.2140/ant.2025.19.2261",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "10",
+        "year": 2025,
+        "order": 10
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.2140/ant.2025.19.2261",
+            "https://api.crossref.org/works/10.2140/ant.2025.19.2261"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2312.15397",
+        "https://doi.org/10.2140/ant.2025.19.2261",
+        "https://api.crossref.org/works/10.2140/ant.2025.19.2261",
+        "https://arxiv.org/abs/2312.15397v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-31",
+      "number": "31",
+      "year": 2023,
+      "title_html": "On explicit bounds of Fano threefolds",
+      "authors": [
+        "Caucher Birkar",
+        "Jihao Liu"
+      ],
+      "venue_html": "J. Reine Angew. Math. (Crelle's Journal) (2025).",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2311.06732",
+          "label": "arXiv:2311.06732"
+        },
+        {
+          "url": "https://doi.org/10.1515/crelle-2025-0056",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fano",
+        "explicit"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "11",
+        "year": 2025,
+        "order": 11
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2311.06732",
+        "https://doi.org/10.1515/crelle-2025-0056",
+        "https://arxiv.org/abs/2311.06732v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-30",
+      "number": "30",
+      "year": 2023,
+      "title_html": "Minimal model program for algebraically integrable foliations and generalized pairs",
+      "authors": [
+        "Guodu Chen",
+        "Jingjun Han",
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2309.15823",
+          "label": "arXiv:2309.15823"
+        }
+      ],
+      "topics": [
+        "fol",
+        "gpairs",
+        "mmp"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "37",
+        "year": 2023,
+        "order": 39
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2309.15823",
+        "https://arxiv.org/abs/2309.15823v3"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-29",
+      "number": "29",
+      "year": 2023,
+      "title_html": "The minimal volume of surfaces of log general type with non-empty non-klt locus",
+      "authors": [
+        "Jihao Liu",
+        "Wenfei Liu"
+      ],
+      "venue_html": "To appear in Algebr. Geom.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2308.14268",
+          "label": "arXiv:2308.14268"
+        }
+      ],
+      "topics": [
+        "explicit",
+        "surf"
+      ],
+      "cv": {
+        "section": "accepted",
+        "label": "1",
+        "year": 2023,
+        "order": 1
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2308.14268",
+        "https://arxiv.org/abs/2308.14268v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-28",
+      "number": "28",
+      "year": 2023,
+      "title_html": "ACC for lc thresholds for algebraically integrable foliations",
+      "authors": [
+        "Omprokash Das",
+        "Jihao Liu",
+        "Roktim Mascharak"
+      ],
+      "venue_html": "Selecta Math. (N.S.) 32 (2026), no. 4, Paper No. 70, 34 pp.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2307.07157",
+          "label": "arXiv:2307.07157"
+        },
+        {
+          "url": "https://doi.org/10.1007/s00029-026-01179-1",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "sing"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "2",
+        "year": 2026,
+        "order": 2
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2307.07157",
+        "https://doi.org/10.1007/s00029-026-01179-1",
+        "https://arxiv.org/abs/2307.07157v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-27",
+      "number": "27",
+      "year": 2023,
+      "title_html": "Uniform rational polytopes of foliated threefolds and the global ACC",
+      "authors": [
+        "Jihao Liu",
+        "Fanjun Meng",
+        "Lingyao Xie"
+      ],
+      "venue_html": "J. Lond. Math. Soc. 109 (2024), no. 6, e12950.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2306.00330",
+          "label": "arXiv:2306.00330"
+        },
+        {
+          "url": "https://doi.org/10.1112/jlms.12950",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "sing"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "18",
+        "year": 2024,
+        "order": 18
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2306.00330",
+        "https://doi.org/10.1112/jlms.12950",
+        "https://arxiv.org/abs/2306.00330v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-26",
+      "number": "26",
+      "year": 2023,
+      "title_html": "Optimal bounds on surfaces",
+      "authors": [
+        "Jihao Liu",
+        "Vyacheslav V. Shokurov"
+      ],
+      "venue_html": "To appear in Algebraic Geometry and Physics.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2305.19248",
+          "label": "arXiv:2305.19248"
+        }
+      ],
+      "topics": [
+        "explicit",
+        "sing",
+        "surf"
+      ],
+      "cv": {
+        "section": "accepted",
+        "label": "2",
+        "year": 2023,
+        "order": 2
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2305.19248",
+        "https://arxiv.org/abs/2305.19248v1",
+        "https://mi-ras.ru/index.php?c=show_dep_pubs&id=50&showmode=sci&filter=12&l=0"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims.",
+      "status_evidence": "Official coauthor institution publication list explicitly says to appear; checked 2026-09-26."
+    },
+    {
+      "id": "pub-25",
+      "number": "25",
+      "year": 2023,
+      "title_html": "Vanishing theorems for generalized pairs",
+      "authors": [
+        "Bingyi Chen",
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2305.12337",
+          "label": "arXiv:2305.12337"
+        }
+      ],
+      "topics": [
+        "gpairs"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "38",
+        "year": 2023,
+        "order": 40
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2305.12337",
+        "https://arxiv.org/abs/2305.12337v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-24",
+      "number": "24",
+      "year": 2023,
+      "title_html": "Complements, index theorem, and minimal log discrepancies of foliated surface singularities",
+      "authors": [
+        "Jihao Liu",
+        "Fanjun Meng",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Eur. J. Math. 10 (2024), no. 1, Paper No. 6.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2305.06493",
+          "label": "arXiv:2305.06493"
+        },
+        {
+          "url": "https://doi.org/10.1007/s40879-023-00719-9",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "sing",
+        "surf"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "19",
+        "year": 2024,
+        "order": 19
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1007/s40879-023-00719-9",
+            "https://api.crossref.org/works/10.1007/s40879-023-00719-9"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2305.06493",
+        "https://doi.org/10.1007/s40879-023-00719-9",
+        "https://api.crossref.org/works/10.1007/s40879-023-00719-9",
+        "https://arxiv.org/abs/2305.06493v3"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-23",
+      "number": "23",
+      "year": 2023,
+      "title_html": "On global ACC for foliated threefolds",
+      "authors": [
+        "Jihao Liu",
+        "Yujie Luo",
+        "Fanjun Meng"
+      ],
+      "venue_html": "Trans. Amer. Math. Soc. 376 (2023), no. 12, 8939–8972.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2303.13083",
+          "label": "arXiv:2303.13083"
+        },
+        {
+          "url": "https://doi.org/10.1090/tran/9053",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "fol",
+        "sing"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "23",
+        "year": 2023,
+        "order": 23
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2303.13083",
+        "https://doi.org/10.1090/tran/9053",
+        "https://arxiv.org/abs/2303.13083v3"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-22",
+      "number": "22",
+      "year": 2023,
+      "title_html": "On effective log Iitaka fibrations and existence of complements",
+      "authors": [
+        "Guodu Chen",
+        "Jingjun Han",
+        "Jihao Liu"
+      ],
+      "venue_html": "Int. Math. Res. Not. (2024), no. 10, 8329–8349.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2301.04813",
+          "label": "arXiv:2301.04813"
+        },
+        {
+          "url": "https://doi.org/10.1093/imrn/rnad253",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "bdd",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "17",
+        "year": 2024,
+        "order": 17
+      },
+      "verified_updates": [
+        {
+          "field": "title",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1093/imrn/rnad253",
+            "https://api.crossref.org/works/10.1093/imrn/rnad253"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2301.04813",
+        "https://doi.org/10.1093/imrn/rnad253",
+        "https://api.crossref.org/works/10.1093/imrn/rnad253",
+        "https://arxiv.org/abs/2301.04813v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-21",
+      "number": "21",
+      "year": 2022,
+      "title_html": "Semi-ampleness of NQC generalized log canonical pairs",
+      "authors": [
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Adv. Math. 427 (2023), 109126.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2210.01731",
+          "label": "arXiv:2210.01731"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.aim.2023.109126",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "gpairs",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "21",
+        "year": 2023,
+        "order": 21
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2210.01731",
+        "https://doi.org/10.1016/j.aim.2023.109126",
+        "https://arxiv.org/abs/2210.01731v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-20",
+      "number": "20",
+      "year": 2022,
+      "title_html": "On termination of flips and exceptionally non-canonical singularities",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu"
+      ],
+      "venue_html": "Geom. Topol. 29 (2025), no. 1, 399–441.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2209.13122",
+          "label": "arXiv:2209.13122"
+        },
+        {
+          "url": "https://doi.org/10.2140/gt.2025.29.399",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "mmp",
+        "sing"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "12",
+        "year": 2025,
+        "order": 12
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2209.13122",
+        "https://doi.org/10.2140/gt.2025.29.399",
+        "https://arxiv.org/abs/2209.13122v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-19",
+      "number": "19",
+      "year": 2022,
+      "title_html": "Infinitesimal structure of log canonical thresholds",
+      "authors": [
+        "Jihao Liu",
+        "Fanjun Meng",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Doc. Math. 29 (2024), no. 3, 703–732.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2209.11369",
+          "label": "arXiv:2209.11369"
+        },
+        {
+          "url": "https://doi.org/10.4171/dm/952",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "20",
+        "year": 2024,
+        "order": 20
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2209.11369",
+        "https://doi.org/10.4171/dm/952",
+        "https://arxiv.org/abs/2209.11369v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-18",
+      "number": "18",
+      "year": 2022,
+      "title_html": "Remark on complements on surfaces",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "Forum Math. Sigma 11 (2023), e42.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2208.09184",
+          "label": "arXiv:2208.09184"
+        },
+        {
+          "url": "https://doi.org/10.1017/fms.2023.35",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "sing",
+        "bdd",
+        "surf"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "25",
+        "year": 2023,
+        "order": 25
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2208.09184",
+        "https://doi.org/10.1017/fms.2023.35",
+        "https://arxiv.org/abs/2208.09184v3"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-17",
+      "number": "17",
+      "year": 2022,
+      "title_html": "Uniform rational polytopes for Iitaka dimensions",
+      "authors": [
+        "Guodu Chen",
+        "Jingjun Han",
+        "Jihao Liu"
+      ],
+      "venue_html": "In: Higher Dimensional Algebraic Geometry: A Volume in Honor of V. V. Shokurov (C. D. Hacon, C. Xu eds.), London Math. Soc. Lecture Note Series, Cambridge University Press (2025), 43–68.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2208.04663",
+          "label": "arXiv:2208.04663"
+        },
+        {
+          "url": "https://doi.org/10.1017/9781009396233.006",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "mmp",
+        "bdd"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "13",
+        "year": 2025,
+        "order": 13
+      },
+      "verified_updates": [
+        {
+          "field": "doi",
+          "date": "2026-09-26",
+          "sources": [
+            "https://www.cambridge.org/core/books/abs/higher-dimensional-algebraic-geometry/uniform-rational-polytopes-for-iitaka-dimensions/1B1812500FF30CC70A6C5F7496DD0776",
+            "https://api.crossref.org/works/10.1017/9781009396233.006"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2208.04663",
+        "https://doi.org/10.1017/9781009396233.006",
+        "https://www.cambridge.org/core/books/abs/higher-dimensional-algebraic-geometry/uniform-rational-polytopes-for-iitaka-dimensions/1B1812500FF30CC70A6C5F7496DD0776",
+        "https://api.crossref.org/works/10.1017/9781009396233.006",
+        "https://arxiv.org/abs/2208.04663v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-16",
+      "number": "16",
+      "year": 2022,
+      "title_html": "Relative Nakayama–Zariski decomposition and minimal models of generalized pairs",
+      "authors": [
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Peking Math. J. 8 (2025), no. 2, 299–349.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2207.09576",
+          "label": "arXiv:2207.09576"
+        },
+        {
+          "url": "https://doi.org/10.1007/s42543-023-00076-2",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "gpairs",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "14",
+        "year": 2025,
+        "order": 14
+      },
+      "verified_updates": [
+        {
+          "field": "title",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1007/s42543-023-00076-2",
+            "https://api.crossref.org/works/10.1007/s42543-023-00076-2"
+          ]
+        },
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1007/s42543-023-00076-2",
+            "https://api.crossref.org/works/10.1007/s42543-023-00076-2"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2207.09576",
+        "https://doi.org/10.1007/s42543-023-00076-2",
+        "https://api.crossref.org/works/10.1007/s42543-023-00076-2",
+        "https://arxiv.org/abs/2207.09576v4"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-15",
+      "number": "15",
+      "year": 2022,
+      "title_html": "Second largest accumulation point of minimal log discrepancies of threefolds",
+      "authors": [
+        "Jihao Liu",
+        "Yujie Luo"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2207.04610",
+          "label": "arXiv:2207.04610"
+        }
+      ],
+      "topics": [
+        "sing",
+        "explicit"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "39",
+        "year": 2022,
+        "order": 41
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2207.04610",
+        "https://arxiv.org/abs/2207.04610v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-14",
+      "number": "14",
+      "year": 2022,
+      "title_html": "On the fixed part of pluricanonical systems for surfaces",
+      "authors": [
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Math. Nachr. 296 (2023), no. 5, 2046–2069.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2202.11260",
+          "label": "arXiv:2202.11260"
+        },
+        {
+          "url": "https://doi.org/10.1002/mana.202200088",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "explicit",
+        "surf"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "24",
+        "year": 2023,
+        "order": 24
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1002/mana.202200088",
+            "https://api.crossref.org/works/10.1002/mana.202200088"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2202.11260",
+        "https://doi.org/10.1002/mana.202200088",
+        "https://api.crossref.org/works/10.1002/mana.202200088",
+        "https://arxiv.org/abs/2202.11260v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-13",
+      "number": "13",
+      "year": 2022,
+      "title_html": "On generalized lc pairs with b-log abundant nef part (with an Appendix by J. Han)",
+      "authors": [
+        "Junpeng Jiao",
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Front. Math. 21 (2026), no. 4, 769–799.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2202.11256",
+          "label": "arXiv:2202.11256"
+        },
+        {
+          "url": "https://doi.org/10.1007/s11464-025-0033-0",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "gpairs",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "6",
+        "year": 2026,
+        "order": 6
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1007/s11464-025-0033-0",
+            "https://api.crossref.org/works/10.1007/s11464-025-0033-0"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2202.11256",
+        "https://doi.org/10.1007/s11464-025-0033-0",
+        "https://api.crossref.org/works/10.1007/s11464-025-0033-0",
+        "https://arxiv.org/abs/2202.11256v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-12",
+      "number": "12",
+      "year": 2022,
+      "title_html": "ACC for minimal log discrepancies of terminal threefolds",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu",
+        "Yujie Luo"
+      ],
+      "venue_html": "Adv. Math. 480 (2025), 110457.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2202.05287",
+          "label": "arXiv:2202.05287"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.aim.2025.110457",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "15",
+        "year": 2025,
+        "order": 15
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2202.05287",
+        "https://doi.org/10.1016/j.aim.2025.110457",
+        "https://arxiv.org/abs/2202.05287v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-11",
+      "number": "11",
+      "year": 2021,
+      "title_html": "Existence of flips for generalized lc pairs",
+      "authors": [
+        "Christopher D. Hacon",
+        "Jihao Liu"
+      ],
+      "venue_html": "Camb. J. Math. 11 (2023), no. 4, 795–828.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2105.13590",
+          "label": "arXiv:2105.13590"
+        },
+        {
+          "url": "https://dx.doi.org/10.4310/CJM.2023.v11.n4.a1",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "gpairs",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "22",
+        "year": 2023,
+        "order": 22
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2105.13590",
+        "https://dx.doi.org/10.4310/CJM.2023.v11.n4.a1",
+        "https://arxiv.org/abs/2105.13590v3"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-10",
+      "number": "10",
+      "year": 2021,
+      "title_html": "Number of singular points on projective surfaces",
+      "authors": [
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Chin. Ann. Math. Ser. B 46 (2025), no. 5, 713–724.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2103.04522",
+          "label": "arXiv:2103.04522"
+        },
+        {
+          "url": "https://doi.org/10.1007/s11401-025-0035-y",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "sing",
+        "explicit",
+        "surf"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "16",
+        "year": 2025,
+        "order": 16
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1007/s11401-025-0035-y",
+            "https://api.crossref.org/works/10.1007/s11401-025-0035-y"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2103.04522",
+        "https://doi.org/10.1007/s11401-025-0035-y",
+        "https://api.crossref.org/works/10.1007/s11401-025-0035-y",
+        "https://arxiv.org/abs/2103.04522v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-9",
+      "number": "9",
+      "year": 2021,
+      "title_html": "Divisors computing minimal log discrepancies on lc surfaces",
+      "authors": [
+        "Jihao Liu",
+        "Lingyao Xie"
+      ],
+      "venue_html": "Math. Proc. Camb. Philos. Soc. 175 (2023), no. 1, 107–128.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2101.00138",
+          "label": "arXiv:2101.00138"
+        },
+        {
+          "url": "https://doi.org/10.1017/S0305004123000051",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "sing",
+        "surf"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "26",
+        "year": 2023,
+        "order": 26
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2101.00138",
+        "https://doi.org/10.1017/S0305004123000051",
+        "https://arxiv.org/abs/2101.00138v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-8",
+      "number": "8",
+      "year": 2020,
+      "title_html": "On effective birationality for sub-pairs",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu"
+      ],
+      "venue_html": "Int. J. Math. 34 (2023), no. 6, Article No. 2350029.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2007.01849",
+          "label": "arXiv:2007.01849"
+        },
+        {
+          "url": "https://doi.org/10.1142/S0129167X23500295",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "bdd"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "27",
+        "year": 2023,
+        "order": 27
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/2007.01849",
+        "https://doi.org/10.1142/S0129167X23500295",
+        "https://arxiv.org/abs/2007.01849v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-7",
+      "number": "7",
+      "year": 2019,
+      "title_html": "An optimal gap of minimal log discrepancies of threefold non-canonical singularities",
+      "authors": [
+        "Jihao Liu",
+        "Liudan Xiao"
+      ],
+      "venue_html": "J. Pure Appl. Algebra 225 (2021), no. 9, 106674.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1909.08759",
+          "label": "arXiv:1909.08759"
+        },
+        {
+          "url": "https://doi.org/10.1016/j.jpaa.2021.106674",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "sing",
+        "explicit"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "28",
+        "year": 2021,
+        "order": 28
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1016/j.jpaa.2021.106674",
+            "https://api.crossref.org/works/10.1016/j.jpaa.2021.106674"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/1909.08759",
+        "https://doi.org/10.1016/j.jpaa.2021.106674",
+        "https://api.crossref.org/works/10.1016/j.jpaa.2021.106674",
+        "https://arxiv.org/abs/1909.08759v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-6",
+      "number": "6",
+      "year": 2019,
+      "title_html": "Bounded deformations of (ε, δ)-log canonical singularities",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu",
+        "Joaquín Moraga"
+      ],
+      "venue_html": "J. Math. Sci. Univ. Tokyo 27 (2020), no. 1, 1–28.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1903.07202",
+          "label": "arXiv:1903.07202"
+        },
+        {
+          "url": "https://www.ms.u-tokyo.ac.jp/journal/27-1-1.pdf",
+          "label": "PDF"
+        }
+      ],
+      "topics": [
+        "sing",
+        "bdd"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "30",
+        "year": 2020,
+        "order": 30
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/1903.07202",
+        "https://www.ms.u-tokyo.ac.jp/journal/27-1-1.pdf",
+        "https://arxiv.org/abs/1903.07202v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-5",
+      "number": "5",
+      "year": 2019,
+      "title_html": "ACC for minimal log discrepancies of exceptional singularities",
+      "authors": [
+        "Jingjun Han",
+        "Jihao Liu",
+        "Vyacheslav V. Shokurov"
+      ],
+      "venue_html": "Peking Math. J. 9 (2026), no. 2, 225–257.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1903.04338",
+          "label": "arXiv:1903.04338"
+        },
+        {
+          "url": "https://doi.org/10.1007/s42543-024-00091-x",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "7",
+        "year": 2026,
+        "order": 7
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://doi.org/10.1007/s42543-024-00091-x",
+            "https://api.crossref.org/works/10.1007/s42543-024-00091-x"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/1903.04338",
+        "https://doi.org/10.1007/s42543-024-00091-x",
+        "https://api.crossref.org/works/10.1007/s42543-024-00091-x",
+        "https://arxiv.org/abs/1903.04338v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-4",
+      "number": "4",
+      "year": 2018,
+      "title_html": "Accumulation point theorem for generalized log canonical thresholds",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1810.12381",
+          "label": "arXiv:1810.12381"
+        }
+      ],
+      "topics": [
+        "sing",
+        "gpairs"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "40",
+        "year": 2018,
+        "order": 42
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/1810.12381",
+        "https://arxiv.org/abs/1810.12381v1"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-3",
+      "number": "3",
+      "year": 2018,
+      "title_html": "Toward the equivalence of the ACC for a-log canonical thresholds and the ACC for minimal log discrepancies",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "To appear in Algebraic Geometry and Physics.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1809.04839",
+          "label": "arXiv:1809.04839"
+        }
+      ],
+      "topics": [
+        "sing"
+      ],
+      "cv": {
+        "section": "accepted",
+        "label": "3",
+        "year": 2018,
+        "order": 3
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/1809.04839",
+        "https://arxiv.org/abs/1809.04839v3"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims.",
+      "status_evidence": {
+        "basis": "Restored verbatim from the author’s original public website and CV.",
+        "independent_search": "No independent institutional or publisher confirmation found in this review; absence of a search result is not contrary evidence and does not justify downgrading the author’s stated acceptance.",
+        "source_urls": [
+          "https://jihaoliu.org/publications.html",
+          "https://jihaoliu.org/cv/cv.pdf"
+        ]
+      }
+    },
+    {
+      "id": "pub-2",
+      "number": "2",
+      "year": 2018,
+      "title_html": "Sarkisov program for generalized pairs",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "Osaka J. Math. 58 (2021), no. 4, 899–920.",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1802.03926",
+          "label": "arXiv:1802.03926"
+        },
+        {
+          "url": "https://doi.org/10.18910/84956",
+          "label": "DOI"
+        }
+      ],
+      "topics": [
+        "gpairs",
+        "mmp"
+      ],
+      "cv": {
+        "section": "published",
+        "label": "29",
+        "year": 2021,
+        "order": 29
+      },
+      "verified_updates": [
+        {
+          "field": "venue",
+          "date": "2026-09-26",
+          "sources": [
+            "https://ir.library.osaka-u.ac.jp/repo/ouka/all/84956/",
+            "https://doi.org/10.18910/84956"
+          ]
+        }
+      ],
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/1802.03926",
+        "https://doi.org/10.18910/84956",
+        "https://ir.library.osaka-u.ac.jp/repo/ouka/all/84956/",
+        "https://arxiv.org/abs/1802.03926v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-1",
+      "number": "1",
+      "year": 2017,
+      "title_html": "On invariance of plurigenera for foliated surface pairs",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/1707.07092",
+          "label": "arXiv:1707.07092"
+        }
+      ],
+      "topics": [
+        "fol",
+        "surf"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "41",
+        "year": 2017,
+        "order": 43
+      },
+      "source_urls": [
+        "https://jihaoliu.org/publications.html",
+        "https://arxiv.org/abs/1707.07092",
+        "https://arxiv.org/abs/1707.07092v2"
+      ],
+      "checked_on": "2026-09-26",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    }
+  ],
+  "teaching": [
+    {
+      "id": "teaching-peking-university",
+      "heading": "Peking University",
+      "items": [
+        {
+          "id": "teaching-peking-university-1",
+          "number": "1",
+          "title_html": "代数几何 I (Algebraic Geometry I)",
+          "meta_html": "Fall 2026 · Instructor",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-peking-university-2",
+          "number": "2",
+          "title_html": "代数几何 II (Algebraic Geometry II)",
+          "meta_html": "Spring 2026 · Instructor",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-peking-university-3",
+          "number": "3",
+          "title_html": "代数几何 I (Algebraic Geometry I)",
+          "meta_html": "Fall 2025 · Instructor",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-peking-university-4",
+          "number": "4",
+          "title_html": "代数几何专题 (Topics in Algebraic Geometry)",
+          "meta_html": "Spring 2025 · Instructor",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaching-northwestern-university",
+      "heading": "Northwestern University",
+      "items": [
+        {
+          "id": "teaching-northwestern-university-1",
+          "number": "1",
+          "title_html": "Math 230-2 — Multivariable Integral Calculus",
+          "meta_html": "Winter 2024 · Instructor &amp; Course Coordinator · Section 31",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html",
+            "https://www.registrar.northwestern.edu/documents/registration/class-schedule-pdf/nwsrwcasdist_4930_winter24.pdf"
+          ],
+          "checked_on": "2026-09-26",
+          "verification_scope": "User confirmed on 2026-09-26 that both Math 230-2 and Math 220-2, and both original sections 31 and 41, were taught; retain the original course-section pairing.",
+          "author_confirmed_on": "2026-09-26"
+        },
+        {
+          "id": "teaching-northwestern-university-2",
+          "number": "2",
+          "title_html": "Math 220-2 — Single-Variable Integral Calculus",
+          "meta_html": "Winter 2024 · Instructor &amp; Course Coordinator · Section 41",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ],
+          "author_confirmed_on": "2026-09-26",
+          "verification_scope": "User confirmed on 2026-09-26 that both Math 230-2 and Math 220-2, and both original sections 31 and 41, were taught; retain the original course-section pairing. Course title uses the established Math 220-2 title already present for Winter 2023."
+        },
+        {
+          "id": "teaching-northwestern-university-3",
+          "number": "3",
+          "title_html": "Math 220-1 — Single-Variable Differential Calculus",
+          "meta_html": "Fall 2023 · Instructor · Sections 71, 81",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-northwestern-university-4",
+          "number": "4",
+          "title_html": "Math 220-2 — Single-Variable Integral Calculus",
+          "meta_html": "Winter 2023 · Instructor · Sections 31, 41",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-northwestern-university-5",
+          "number": "5",
+          "title_html": "Math 228-1 — Multivariable Differential Calculus for Engineering",
+          "meta_html": "Fall 2022 · Instructor · Sections 71, 81",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-northwestern-university-6",
+          "number": "6",
+          "title_html": "Math 228-1 — Multivariable Differential Calculus for Engineering",
+          "meta_html": "Winter 2022 · Instructor &amp; Course Coordinator · Sections 41, 51",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-northwestern-university-7",
+          "number": "7",
+          "title_html": "Math 220-1 — Single-Variable Differential Calculus",
+          "meta_html": "Fall 2021 · Instructor · Sections 41, 53",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teaching-university-of-utah",
+      "heading": "University of Utah",
+      "items": [
+        {
+          "id": "teaching-university-of-utah-1",
+          "number": "1",
+          "title_html": "Math 1090 — Business Algebra",
+          "meta_html": "Spring 2021 · Instructor",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html",
+            "https://class-tools.app.utah.edu/syllabus/1214/1147/Math%201090-003%20Syllabus.pdf"
+          ],
+          "resources": [
+            {
+              "label": "Archived syllabus (Spring 2021, PDF)",
+              "url": "https://class-tools.app.utah.edu/syllabus/1214/1147/Math%201090-003%20Syllabus.pdf"
+            }
+          ]
+        },
+        {
+          "id": "teaching-university-of-utah-2",
+          "number": "2",
+          "title_html": "Math 1090 — Business Algebra",
+          "meta_html": "Fall 2020 · Instructor",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html"
+          ]
+        },
+        {
+          "id": "teaching-university-of-utah-3",
+          "number": "3",
+          "title_html": "Math 1090 — Business Algebra",
+          "meta_html": "Fall 2019 · Instructor",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html",
+            "https://class-tools.app.utah.edu/syllabus/1198/1198/Math1090-003Syllabus.pdf"
+          ],
+          "resources": [
+            {
+              "label": "Archived syllabus (Fall 2019, PDF)",
+              "url": "https://class-tools.app.utah.edu/syllabus/1198/1198/Math1090-003Syllabus.pdf"
+            }
+          ]
+        },
+        {
+          "id": "teaching-university-of-utah-4",
+          "number": "4",
+          "title_html": "Math 2250 — Differential Equations and Linear Algebra",
+          "meta_html": "Fall 2018 · Teaching Assistant",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html",
+            "https://www.math.utah.edu/~zhu/2250.18s/syl2250_18s.pdf"
+          ]
+        },
+        {
+          "id": "teaching-university-of-utah-5",
+          "number": "5",
+          "title_html": "Math 2250 — Differential Equations and Linear Algebra",
+          "meta_html": "Spring 2018 · Teaching Assistant",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html",
+            "https://www.math.utah.edu/~zhu/2250.18s/syl2250_18s.pdf"
+          ]
+        },
+        {
+          "id": "teaching-university-of-utah-6",
+          "number": "6",
+          "title_html": "Math 1320 — Engineering Calculus II",
+          "meta_html": "Spring 2017 · Teaching Assistant",
+          "source_urls": [
+            "https://jihaoliu.org/teaching.html",
+            "https://math.utah.edu/schedule/spring17/"
+          ]
+        }
+      ]
+    }
+  ],
+  "talks": [
+    {
+      "id": "talks-conferences-and-workshops",
+      "heading": "Conferences and Workshops",
+      "items": [
+        {
+          "id": "talks-conferences-and-workshops-22",
+          "number": "22",
+          "title_html": "常数数量曲率度量的 Yau–Tian–Donaldson 猜想 (The Yau–Tian–Donaldson conjecture for constant scalar curvature metrics)",
+          "meta_html": "September 19, 2026 · AI for Math Workshop · Sun Yat-sen University · <a href=\"https://math.sysu.edu.cn/gagp/article/126\">link</a>",
+          "cv_title_language": "english_parentheses",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://math.sysu.edu.cn/gagp/article/126"
+          ],
+          "checked_on": "2026-09-26",
+          "verification_scope": "Event title, speaker and date corroborated by public organizer or university source."
+        },
+        {
+          "id": "talks-conferences-and-workshops-21",
+          "number": "21",
+          "title_html": "Foliations, fibrations, and moduli: connections and perspectives <span style=\"color: var(--color-text-muted); font-weight: 400;\">(introductory talk)</span>",
+          "meta_html": "August 24, 2026 · Conference on Foliation, Fibration, and Moduli · Institute for Theoretical Sciences, Westlake University · <a href=\"ffm-conference.html\">link</a>",
+          "resources": [
+            {
+              "label": "Westlake announcement",
+              "url": "https://its.westlake.edu.cn/info/1017/4084.htm"
+            }
+          ],
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-20",
+          "number": "20",
+          "title_html": "用人工智能求解双有理几何问题 (Solving birational geometry questions using AI)",
+          "meta_html": "June 19–22, 2026 · 第十届东南代数几何研讨会 (Southeastern Algebraic Geometry Symposium X) · Xiamen University · <a href=\"https://tianyuan.xmu.edu.cn/cn/Workshop/4115.html\">link</a>",
+          "cv_title_language": "english_parentheses",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://tianyuan.xmu.edu.cn/cn/Workshop/4115.html"
+          ],
+          "unavailable_links": [
+            {
+              "url": "https://tianyuan.xmu.edu.cn/cn/Workshop/4115.html",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://tianyuan.xmu.edu.cn/cn/Workshop/4115.html"
+          }
+        },
+        {
+          "id": "talks-conferences-and-workshops-19",
+          "number": "19",
+          "title_html": "Solving birational geometry questions using AI",
+          "meta_html": "June 5, 2026 · Modern Algebraic Geometry Workshop · YMSC, Tsinghua University · <a href=\"https://ymsc.tsinghua.edu.cn/en/info/1385/3982.htm\">link</a>",
+          "resources": [
+            {
+              "label": "Workshop recordings",
+              "url": "https://cloud.tsinghua.edu.cn/d/c17fbe549ec94dd2aa42/"
+            }
+          ],
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://ymsc.tsinghua.edu.cn/en/info/1385/3982.htm"
+          ],
+          "checked_on": "2026-09-26",
+          "verification_scope": "Event title, speaker and date corroborated by public organizer or university source."
+        },
+        {
+          "id": "talks-conferences-and-workshops-18",
+          "number": "18",
+          "title_html": "Boundedness of algebraically integrable foliations and fibrations",
+          "meta_html": "May 24, 2026 · Summer school and workshop &ldquo;Foliations and Birational Geometry&rdquo; · University of Michigan, Ann Arbor · <a href=\"https://simonsmoduli.com/events/ann-arbor/\">link</a>",
+          "resources": [
+            {
+              "label": "Workshop abstracts (PDF)",
+              "url": "https://websites.umich.edu/~mmustata/AbstractsFoliations.pdf"
+            }
+          ],
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://websites.umich.edu/~mmustata/AbstractsFoliations.pdf"
+          ],
+          "checked_on": "2026-09-26",
+          "verification_scope": "Event title, speaker and date corroborated by public organizer or university source."
+        },
+        {
+          "id": "talks-conferences-and-workshops-17",
+          "number": "17",
+          "title_html": "Existence of the minimal model program for log canonical generalized pairs",
+          "meta_html": "April 24, 2026 · Algebraic Geometry Workshop 2026 · YMSC, Tsinghua University · <a href=\"http://ymsc.tsinghua.edu.cn/en/info/1060/3751.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-16",
+          "number": "16",
+          "title_html": "Boundedness of algebraically integrable foliations",
+          "meta_html": "February 10, 2026 · Algebraic Geometry Workshop · Sydney Mathematical Research Institute · <a href=\"https://sites.google.com/view/ag-workshop-sydney-2026/schedule\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-15",
+          "number": "15",
+          "title_html": "Birational geometry of algebraically integrable adjoint foliated structures",
+          "meta_html": "January 26, 2026 · Workshop on Algebraic Geometry and Complex Geometry in Osaka · The University of Osaka · <a href=\"https://masataka123.github.io/AGCG_Osaka_2026/\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-14",
+          "number": "14",
+          "title_html": "Boundedness of Fano algebraically integrable foliations",
+          "meta_html": "December 28, 2025 · Conference on Algebraic Geometry · TSIMF, Sanya · <a href=\"https://tsimf.tsinghua.edu.cn/info/1477/1636.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-13",
+          "number": "13",
+          "title_html": "Boundedness of Fano algebraically integrable foliations <span style=\"color: var(--color-text-muted); font-weight: 400;\">(online)</span>",
+          "meta_html": "December 26, 2025 · Birational Geometry and Related Topics · XJTLU, Suzhou · <a href=\"assets/posters/xjtlu-2025-bgrt.pdf\">poster</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-12",
+          "number": "12",
+          "title_html": "Adjoint Foliated Structures in Birational Geometry",
+          "meta_html": "June 16, 2025 · Higher Dimensional Geometry and Foliations · Imperial College London · <a href=\"https://simonsmoduli.com/events/london/\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-11",
+          "number": "11",
+          "title_html": "Abundance conjecture when ν ≤ 1",
+          "meta_html": "June 9, 2025 · Southeastern Algebraic Geometry Symposium VIII · <a href=\"https://math.sustech.edu.cn/conference/13283.html?lang=en\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-10",
+          "number": "10",
+          "title_html": "Birational geometry of adjoint foliated structures",
+          "meta_html": "December 23, 2024 · Sanya Algebraic Geometry Workshop · <a href=\"https://www.tsimf.cn/meeting/agenda?id=390\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-9",
+          "number": "9",
+          "title_html": "Adjoint Foliated Structures on Surfaces",
+          "meta_html": "December 15, 2024 · 2024 代数几何研讨会 · Tongji University · <a href=\"https://math.tongji.edu.cn/info/1019/11822.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-8",
+          "number": "8",
+          "title_html": "Some Optimal Bounds in Explicit Birational Geometry",
+          "meta_html": "November 30, 2024 · 2024 重庆理工大学代数几何会议 · Chongqing University of Technology · <a href=\"https://msrc.cqut.edu.cn/info/1014/2602.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-7",
+          "number": "7",
+          "title_html": "Minimal model program for algebraically integrable foliations",
+          "meta_html": "December 25, 2023 · Sanya Algebraic Geometry Workshop · <a href=\"https://www.tsimf.cn/meeting/report?id=360&rid=609\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-6",
+          "number": "6",
+          "title_html": "Multiplicities on lc places",
+          "meta_html": "June 29, 2023 · Birational Geometry Workshop · Tsinghua University · <a href=\"https://qzc.tsinghua.edu.cn/en/info/1122/2509.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-5",
+          "number": "5",
+          "title_html": "Optimal Bounds for Algebraic Invariants of Surfaces",
+          "meta_html": "May 8, 2023 · Simons Conference on Higher Dimensional Geometry · Simons Center · <a href=\"https://sites.google.com/view/simonsconferences/simons-centre/higher-dimensional-geometry_1?authuser=0\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-4",
+          "number": "4",
+          "title_html": "ACC for mlds for terminal threefolds",
+          "meta_html": "August 11, 2022 · Midwest Algebraic Geometry Graduate Conference · UIC · <a href=\"https://sites.google.com/uic.edu/maggc-2022/schedule?authuser=0\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-3",
+          "number": "3",
+          "title_html": "On Shokurov's ACC conjecture for mlds in dimension 3",
+          "meta_html": "May 6, 2022 · JAMI Conference 2022: Higher Dimensional Geometry (in honor of Shokurov's 70th birthday) · Johns Hopkins University · <a href=\"https://sites.google.com/view/jami2022/schedule?authuser=0\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-conferences-and-workshops-2",
+          "number": "2",
+          "title_html": "Existence of flips for generalized pairs",
+          "meta_html": "August 26, 2021 · 2021 Workshop on Algebraic Geometry: Generalised Pairs and Applications (online) · <a href=\"http://www.mcm.ac.cn/events/programs/202106/t20210615_643460.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "http://www.mcm.ac.cn/events/programs/202106/t20210615_643460.html"
+          ],
+          "unavailable_links": [
+            {
+              "url": "http://www.mcm.ac.cn/events/programs/202106/t20210615_643460.html",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "http://www.mcm.ac.cn/events/programs/202106/t20210615_643460.html"
+          }
+        },
+        {
+          "id": "talks-conferences-and-workshops-1",
+          "number": "1",
+          "title_html": "Complements and ACC for minimal log discrepancies",
+          "meta_html": "July 28, 2020 · Simons Conference on Rationality, New York (online) · <a href=\"https://sites.google.com/view/simonsconferences/simons-foundation/rationality?authuser=0\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "talks-seminar-talks",
+      "heading": "Seminar Talks",
+      "items": [
+        {
+          "id": "talks-seminar-talks-36",
+          "number": "36",
+          "title_html": "Using AI to solve algebraic geometry problems",
+          "meta_html": "September 18, 2026 · Sun Yat-sen University",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-35",
+          "number": "35",
+          "title_html": "The Yau–Tian–Donaldson conjecture for constant scalar curvature metrics <span style=\"color: var(--color-text-muted); font-weight: 400;\">(online)</span>",
+          "meta_html": "September 16, 2026 · University of Connecticut Algebra Seminar · <a href=\"https://events.uconn.edu/mathematics-department/event/2358763-algebra-seminar-the-yau-tian-donaldson\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-34",
+          "number": "34",
+          "title_html": "Boundedness of stable families and algebraically integrable foliations",
+          "meta_html": "May 26, 2026 · University of Washington Algebra and Algebraic Geometry Seminar · <a href=\"https://math.washington.edu/events/2026-05-26/boundedness-stable-families-and-algebraically-integrable-foliations\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://math.washington.edu/events/2026-05-26/boundedness-stable-families-and-algebraically-integrable-foliations"
+          ],
+          "checked_on": "2026-09-26",
+          "verification_scope": "Event title, speaker and date corroborated by public organizer or university source."
+        },
+        {
+          "id": "talks-seminar-talks-33",
+          "number": "33",
+          "title_html": "On the termination of flips for varieties of general type",
+          "meta_html": "September 29, 2025 · UCSD Algebraic Geometry Seminar (Math 208) · <a href=\"https://www.math.ucsd.edu/news-events/seminars/weekly/2025/40\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-32",
+          "number": "32",
+          "title_html": "Abundance conjecture when ν ≤ 1",
+          "meta_html": "May 17, 2025 · USTC",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-31",
+          "number": "31",
+          "title_html": "Boundedness of Algebraically Integrable Fano Foliations",
+          "meta_html": "March 19, 2025 · Xiamen University · <a href=\"https://tianyuan.xmu.edu.cn/Seminars/3236.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://tianyuan.xmu.edu.cn/Seminars/3236.html"
+          ],
+          "unavailable_links": [
+            {
+              "url": "https://tianyuan.xmu.edu.cn/Seminars/3236.html",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://tianyuan.xmu.edu.cn/Seminars/3236.html"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-30",
+          "number": "30",
+          "title_html": "Boundedness of Algebraically Integrable Fano Foliations",
+          "meta_html": "March 5, 2025 · Zhejiang University · <a href=\"https://zuma-talks.github.io/gt/index.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-29",
+          "number": "29",
+          "title_html": "Adjoint Foliated Structures on Surfaces",
+          "meta_html": "November 14, 2024 · Xiamen University · <a href=\"https://tianyuan.xmu.edu.cn/cn/letures/3607.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://tianyuan.xmu.edu.cn/cn/letures/3607.html"
+          ],
+          "unavailable_links": [
+            {
+              "url": "https://tianyuan.xmu.edu.cn/cn/letures/3607.html",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://tianyuan.xmu.edu.cn/cn/letures/3607.html"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-28",
+          "number": "28",
+          "title_html": "How Are Generalized Pairs Applied in Foliation Theory?",
+          "meta_html": "November 1, 2024 · East China Normal University · <a href=\"https://math.ecnu.edu.cn/~xlv/AGS/present.html#jihaoliu\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://math.ecnu.edu.cn/~xlv/AGS/present.html#jihaoliu",
+            "https://math.ecnu.edu.cn/xlv/AGS/2024-Autumn.html"
+          ],
+          "link_updates": [
+            {
+              "old_url": "https://math.ecnu.edu.cn/~xlv/AGS/present.html#jihaoliu",
+              "url": "https://math.ecnu.edu.cn/xlv/AGS/2024-Autumn.html",
+              "checked_on": "2026-09-26",
+              "current_action": "Replacement superseded; original hyperlink restored per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://math.ecnu.edu.cn/~xlv/AGS/present.html#jihaoliu"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-27",
+          "number": "27",
+          "title_html": "How Are Generalized Pairs Applied in Foliation Theory?",
+          "meta_html": "October 29, 2024 · Chinese Academy of Sciences · <a href=\"http://www.amss.ac.cn/mzxsbg/202410/t20241016_7400754.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-26",
+          "number": "26",
+          "title_html": "Optimal Bounds for Algebraic Invariants of Surfaces",
+          "meta_html": "May 17, 2024 · Zhongshan University (online) · <a href=\"https://math.sysu.edu.cn/event/3472\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-25",
+          "number": "25",
+          "title_html": "Minimal model program for algebraically integrable foliations",
+          "meta_html": "January 8, 2024 · UIC · <a href=\"https://www.math.uic.edu/persisting_utilities/seminars/view_seminar?id=7399\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-24",
+          "number": "24",
+          "title_html": "Minimal model program for algebraically integrable foliations and generalized pairs",
+          "meta_html": "October 10, 2023 · Johns Hopkins University · <a href=\"https://sites.google.com/view/jhuagseminar/fall-2023?authuser=0\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://sites.google.com/view/jhuagseminar/fall-2023?authuser=0"
+          ],
+          "unavailable_links": [
+            {
+              "url": "https://sites.google.com/view/jhuagseminar/fall-2023?authuser=0",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://sites.google.com/view/jhuagseminar/fall-2023?authuser=0"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-23",
+          "number": "23",
+          "title_html": "Minimal model program for algebraically integrable foliations and generalized pairs",
+          "meta_html": "September 12, 2023 · University of Utah · <a href=\"https://www.math.utah.edu/agseminar/archive/fall23.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://www.math.utah.edu/agseminar/archive/fall23.html",
+            "https://www2.math.utah.edu/agseminar/2023-fall/"
+          ],
+          "link_updates": [
+            {
+              "old_url": "https://www.math.utah.edu/agseminar/archive/fall23.html",
+              "url": "https://www2.math.utah.edu/agseminar/2023-fall/",
+              "checked_on": "2026-09-26",
+              "current_action": "Replacement superseded; original hyperlink restored per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://www.math.utah.edu/agseminar/archive/fall23.html"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-22",
+          "number": "22",
+          "title_html": "Minimal model program for generalized pairs",
+          "meta_html": "August 1, 2023 · PKU Algebra &amp; Geometry mini-forum · BICMR · <a href=\"https://bicmr.pku.edu.cn/upload/file/2023/20230728/20230728111017_33239.pdf\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-21",
+          "number": "21",
+          "title_html": "Minimal model program for generalized pairs",
+          "meta_html": "June 21, 2023 · Xiamen University · <a href=\"https://math.xmu.edu.cn/info/1034/23269.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-20",
+          "number": "20",
+          "title_html": "Minimal model program for generalized pairs",
+          "meta_html": "June 9, 2023 · Mini-workshop in Algebraic Geometry · Fudan University · <a href=\"https://scms.fudan.edu.cn/info/4502/5777.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-19",
+          "number": "19",
+          "title_html": "Canonical bundle formula",
+          "meta_html": "June 8, 2023 · Fudan University · <a href=\"https://chenjiangfudan.github.io/home/conferences/XBGS.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-18",
+          "number": "18",
+          "title_html": "Symphony of generalized pairs, foliations, and Kähler manifolds",
+          "meta_html": "June 7, 2023 · Fudan University · <a href=\"https://chenjiangfudan.github.io/home/conferences/XBGS.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-17",
+          "number": "17",
+          "title_html": "Minimal model program for foliations",
+          "meta_html": "May 16, 2023 · Johns Hopkins University · <a href=\"https://sites.google.com/view/jhuagseminar/spring-2023?authuser=0\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://sites.google.com/view/jhuagseminar/spring-2023?authuser=0"
+          ],
+          "unavailable_links": [
+            {
+              "url": "https://sites.google.com/view/jhuagseminar/spring-2023?authuser=0",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://sites.google.com/view/jhuagseminar/spring-2023?authuser=0"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-16",
+          "number": "16",
+          "title_html": "Minimal model program for generalised pairs",
+          "meta_html": "April 20, 2023 · Tsinghua University · <a href=\"https://qzc.tsinghua.edu.cn/en/info/1122/2307.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-15",
+          "number": "15",
+          "title_html": "Minimal model program for generalized pairs",
+          "meta_html": "April 18, 2023 · Chinese Academy of Sciences · <a href=\"http://www.mcm.ac.cn/events/lectures/202303/t20230328_737644.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "http://www.mcm.ac.cn/events/lectures/202303/t20230328_737644.html"
+          ],
+          "unavailable_links": [
+            {
+              "url": "http://www.mcm.ac.cn/events/lectures/202303/t20230328_737644.html",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "http://www.mcm.ac.cn/events/lectures/202303/t20230328_737644.html"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-14",
+          "number": "14",
+          "title_html": "Optimal Bounds for Algebraic Invariants of Surfaces",
+          "meta_html": "April 12, 2023 · Xiamen University · <a href=\"https://math.xmu.edu.cn/info/1034/21029.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-13",
+          "number": "13",
+          "title_html": "Optimal Bounds for Algebraic Invariants of Surfaces",
+          "meta_html": "April 10, 2023 · Westlake University · <a href=\"https://its.westlake.edu.cn/info/1135/1726.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-12",
+          "number": "12",
+          "title_html": "Minimal model program for generalized pairs",
+          "meta_html": "November 29, 2022 · Algebra and Algebraic Geometry Seminar · University of Washington · <a href=\"https://math.washington.edu/events/2022-11-29/minimal-model-program-generalized-pairs\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://math.washington.edu/events/2022-11-29/minimal-model-program-generalized-pairs"
+          ],
+          "checked_on": "2026-09-26",
+          "verification_scope": "Event title, speaker and date corroborated by public organizer or university source."
+        },
+        {
+          "id": "talks-seminar-talks-11",
+          "number": "11",
+          "title_html": "1-gap of R-complementary thresholds on surfaces and its applications",
+          "meta_html": "November 18, 2022 · Explicit Birational Geometry Seminar · Fudan University · <a href=\"https://chenjiangfudan.github.io/home/conferences/XBGS.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-10",
+          "number": "10",
+          "title_html": "Threefold log discrepancies that are close to 1",
+          "meta_html": "September 6, 2022 · Johns Hopkins University · <a href=\"https://sites.google.com/view/jhuagseminar/fall-2022?authuser=0\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://sites.google.com/view/jhuagseminar/fall-2022?authuser=0"
+          ],
+          "unavailable_links": [
+            {
+              "url": "https://sites.google.com/view/jhuagseminar/fall-2022?authuser=0",
+              "status": 404,
+              "checked_on": "2026-09-26",
+              "current_action": "Original hyperlink restored and retained per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://sites.google.com/view/jhuagseminar/fall-2022?authuser=0"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-9",
+          "number": "9",
+          "title_html": "ACC for mlds for terminal threefolds",
+          "meta_html": "May 19, 2022 · Explicit Birational Geometry Seminar · Fudan University (online) · <a href=\"https://chenjiangfudan.github.io/home/conferences/XBGS.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-8",
+          "number": "8",
+          "title_html": "Minimal model program for generalized lc pairs",
+          "meta_html": "September 29, 2021 · Northwestern University · <a href=\"https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2021-2022.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-7",
+          "number": "7",
+          "title_html": "Recent progress towards Shokurov's ascending chain condition conjecture for minimal log discrepancies",
+          "meta_html": "August 19, 2021 · Tsinghua University (online) · <a href=\"https://qzc.tsinghua.edu.cn/info/1192/1939.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-6",
+          "number": "6",
+          "title_html": "Minimal model program for generalized lc pairs",
+          "meta_html": "August 13, 2021 · Seminar of Algebraic Geometry in East Asia (online) · <a href=\"https://www.youtube.com/watch?v=w7S6ruOnAG8\">video</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-5",
+          "number": "5",
+          "title_html": "Recent progress towards Shokurov's ascending chain condition conjecture for minimal log discrepancies",
+          "meta_html": "July 14, 2021 · Chinese Academy of Sciences · <a href=\"https://amss.cas.cn/mzxsbg/202107/t20210709_6129564.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-4",
+          "number": "4",
+          "title_html": "Recent progress on the ACC conjecture for minimal log discrepancies",
+          "meta_html": "October 20, 2020 · University of Utah (online) · <a href=\"https://www.math.utah.edu/agseminar/archive/fall20.php\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html",
+            "https://www.math.utah.edu/agseminar/archive/fall20.php",
+            "https://www2.math.utah.edu/agseminar/2020-fall/"
+          ],
+          "link_updates": [
+            {
+              "old_url": "https://www.math.utah.edu/agseminar/archive/fall20.php",
+              "url": "https://www2.math.utah.edu/agseminar/2020-fall/",
+              "checked_on": "2026-09-26",
+              "current_action": "Replacement superseded; original hyperlink restored per user instruction on 2026-09-26."
+            }
+          ],
+          "link_preservation": {
+            "user_confirmed_on": "2026-09-26",
+            "instruction": "Preserve the original clickable talk URL and label, including its fragment; historical availability checks do not justify removing or replacing it.",
+            "original_url": "https://www.math.utah.edu/agseminar/archive/fall20.php"
+          }
+        },
+        {
+          "id": "talks-seminar-talks-3",
+          "number": "3",
+          "title_html": "ACC for MLDs and ACC for a-LCTs",
+          "meta_html": "October 16, 2018 · Johns Hopkins University · <a href=\"https://math.jhu.edu/~jhan/Algebraic%20Geometry%20Seminar%202018%20Fall.htm\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-2",
+          "number": "2",
+          "title_html": "Generalized Sarkisov Program",
+          "meta_html": "December 25, 2017 · Beijing International Center for Mathematical Research · <a href=\"https://bicmr.pku.edu.cn/content/show/35-1917.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        },
+        {
+          "id": "talks-seminar-talks-1",
+          "number": "1",
+          "title_html": "Birational geometry for foliated surfaces",
+          "meta_html": "June 13, 2017 · Beijing International Center for Mathematical Research · <a href=\"https://bicmr.pku.edu.cn/content/show/47-1848.html\">link</a>",
+          "source_urls": [
+            "https://jihaoliu.org/talks.html"
+          ]
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "mmp",
+      "label": "Minimal model program"
+    },
+    {
+      "id": "gpairs",
+      "label": "Generalized pairs"
+    },
+    {
+      "id": "fol",
+      "label": "Foliations"
+    },
+    {
+      "id": "sing",
+      "label": "Singularities: minimal log discrepancies, thresholds, ACC"
+    },
+    {
+      "id": "fano",
+      "label": "Fano varieties and K-stability"
+    },
+    {
+      "id": "cy",
+      "label": "Calabi–Yau varieties and log Calabi–Yau pairs"
+    },
+    {
+      "id": "bdd",
+      "label": "Boundedness"
+    },
+    {
+      "id": "explicit",
+      "label": "Explicit birational geometry"
+    },
+    {
+      "id": "surf",
+      "label": "Surfaces"
+    },
+    {
+      "id": "generalag",
+      "label": "General algebraic geometry"
+    },
+    {
+      "id": "groups",
+      "label": "Group theory and operator algebras"
+    },
+    {
+      "id": "comb",
+      "label": "Combinatorics and number theory"
+    },
+    {
+      "id": "diffgeo",
+      "label": "Differential geometry"
+    },
+    {
+      "id": "danus",
+      "label": "Danus"
+    }
+  ],
+  "research_extras": [
+    {
+      "title_html": "Proof of the tropical Hodge conjecture for tropical abelian varieties",
+      "url": "ai-results/tropical-hodge-conjecture-for-tropical-abelian-varieties-2026-09-22.pdf",
+      "disclaimer": "AI-generated, not verified by a human",
+      "yymm": 2609,
+      "topics": [
+        "generalag"
+      ]
+    },
+    {
+      "title_html": "K-polystability of nilpotent orbit and Slodowy slice bases",
+      "url": "ai-results/k-polystability-of-nilpotent-orbit-and-slodowy-slice-bases-2026-09-20.pdf",
+      "disclaimer": "AI-generated, not verified by a human",
+      "yymm": 2609,
+      "topics": [
+        "fano"
+      ]
+    },
+    {
+      "title_html": "Singular points of rank-one del Pezzo surfaces in characteristic three",
+      "url": "notes/del-pezzo-characteristic-three-2026-09-20.pdf",
+      "disclaimer": "Note",
+      "yymm": 2609,
+      "topics": [
+        "surf",
+        "sing"
+      ]
+    },
+    {
+      "title_html": "Nonhyperlinear groups exist",
+      "url": "ai-results/nonhyperlinear-groups-exist-2026-09-20.pdf",
+      "disclaimer": "AI-generated, not verified by a human",
+      "yymm": 2609,
+      "topics": [
+        "groups"
+      ]
+    },
+    {
+      "title_html": "Fujita freeness on complex projective sevenfolds",
+      "url": "ai-results/fujita-freeness-on-sevenfolds-2026-09-20.pdf",
+      "disclaimer": "AI-generated, not verified by a human",
+      "yymm": 2609,
+      "topics": [
+        "explicit"
+      ]
+    },
+    {
+      "title_html": "Fujita freeness in dimension six",
+      "url": "ai-results/fujita-freeness-in-dimension-six-2026-09-20.pdf",
+      "disclaimer": "AI-generated, not verified by a human",
+      "yymm": 2609,
+      "topics": [
+        "explicit"
+      ]
+    },
+    {
+      "title_html": "Syzygy bundles on Picard rank one varieties need not be stable",
+      "url": "notes/SyzygyBundleCounterexample.pdf",
+      "disclaimer": "Note; AI-generated, not verified by a human",
+      "yymm": 2607,
+      "topics": [
+        "generalag"
+      ]
+    },
+    {
+      "title_html": "Factorial asymptotics of the Matryoshka numbers",
+      "url": "notes/Matryoshka.pdf",
+      "disclaimer": "Note",
+      "yymm": 2606,
+      "topics": [
+        "comb"
+      ]
+    },
+    {
+      "title_html": "On a conjecture of Esser, Totaro, and Wang",
+      "url": "notes/ET74.pdf",
+      "disclaimer": "Note",
+      "yymm": 2605,
+      "topics": [
+        "explicit",
+        "cy"
+      ]
+    }
+  ],
+  "cv_only_sections": {
+    "refereeing_latex": "\\section*{Refereeing}\n\\noindent\nRefereed for the following journals (in alphabetical order):\\\\[2pt]\n{\\small\nActa Mathematica Sinica (English Series)\n\\sep Advances in Mathematics\n\\sep Algebra and Number Theory\n\\sep Algebraic Geometry and Physics\n\\sep Annals of Mathematics\n\\sep Communications in Analysis and Geometry\n\\sep Compositio Mathematica\n\\sep Electronic Research Archive\n\\sep \\'Epijournal de G\\'eom\\'etrie Alg\\'ebrique\n\\sep European Journal of Mathematics\n\\sep Forum of Mathematics, Sigma\n\\sep International Journal of Mathematics\n\\sep International Mathematics Research Notices\n\\sep Journal f\\\"ur die reine und angewandte Mathematik (Crelle's Journal)\n\\sep Journal of Algebra\n\\sep Journal of Algebraic Geometry\n\\sep Journal of Differential Geometry\n\\sep Journal of the European Mathematical Society\n\\sep Journal of the Institute of Mathematics of Jussieu\n\\sep Journal of the London Mathematical Society\n\\sep Manuscripta Mathematica\n\\sep Mathematische Annalen\n\\sep Michigan Mathematical Journal\n\\sep Pacific Journal of Mathematics\n\\sep Peking Mathematical Journal\n\\sep Proceedings of the American Mathematical Society\n\\sep Proceedings of the London Mathematical Society\n\\sep Pure and Applied Mathematics Quarterly\n\\sep Selecta Mathematica\n\\sep Surveys in Differential Geometry.\\par}\n\\vspace{3pt}\n\\noindent Also refereed for \\emph{Higher Dimensional Algebraic Geometry: A Volume in Honor of V.\\,V.\\ Shokurov} (London Math.\\ Soc.\\ Lecture Note Ser.).\n\\vspace{3pt}\n\\noindent Formerly a reviewer for Mathematical Reviews."
+  },
+  "maintenance_notes": [
+    "Inherited public metadata is preserved unless supported by the source audit. See the local confirmation list for unresolved items.",
+    "The website publication numbers are stable identifiers, independent of section-local CV labels.",
+    "60a and 60b are two presentations of one result; keep the disclaimer and cross-references.",
+    "44a and 44b have distinct titles and author lists; render both without conflating Lu Qi authorship.",
+    "Northwestern Winter 2024: user confirmed both Math 230-2 (Section 31) and Math 220-2 (Section 41); keep separate entries and preserve teaching/coordinator roles. Do not merge the two courses or omit their sections.",
+    "Preserve author-stated priority, sharing dates, external verification accounts, reasons for arXiv decisions and existing publication status. Do not remove or downgrade them solely because the source is personal communication or an independent web search did not confirm them.",
+    "Keep original talk hyperlinks, including fragments, unchanged; user confirmed this on 2026-09-26. Availability checks are provenance and are not grounds to remove or replace these URLs."
+  ],
+  "organized": [
+    {
+      "id": "ffm-2026",
+      "title_html": "<a href=\"ffm-conference.html\">Conference on Foliation, Fibration, and Moduli</a>",
+      "date_html": "August 24–29, 2026",
+      "details_html": [
+        "Westlake University, Hangzhou",
+        "with Chuanhao Wei (local organizer) and Paolo Cascini"
+      ],
+      "website_extra_html": [],
+      "cv_date": "Aug 2026",
+      "cv_order": 0,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html"
+      ]
+    },
+    {
+      "id": "national-ag-2026",
+      "title_html": "<a href=\"https://www.math.pku.edu.cn/kxyj/xzky/171823.htm\">5th National Algebraic Geometry Conference</a>",
+      "date_html": "July 6–10, 2026",
+      "details_html": [
+        "Peking University",
+        "Local organizer with Ruochuan Liu, Zhiyu Tian, Qizheng Yin"
+      ],
+      "website_extra_html": [
+        "Academic committee: Meng Chen, Baohua Fu, Jun Li, Zhiyuan Li, Xiaotao Sun, Shengli Tan, Zhiyu Tian, Chenyang Xu"
+      ],
+      "cv_date": "Jul 2026",
+      "cv_order": 1,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html"
+      ]
+    },
+    {
+      "id": "foliations-school-2025",
+      "title_html": "<a href=\"https://www.math.pku.edu.cn/kxyj/xzky/168546.htm\">Summer School on Birational Geometry of Foliations</a>",
+      "date_html": "August 18–22, 2025",
+      "details_html": [
+        "Peking University",
+        "with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie"
+      ],
+      "website_extra_html": [],
+      "cv_date": "Aug 2025",
+      "cv_order": 2,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html"
+      ]
+    },
+    {
+      "id": "explicit-2025",
+      "title_html": "<a href=\"https://www.math.pku.edu.cn/kxyj/xzky/164429.htm\">Conference on Explicit Birational Geometry</a>",
+      "date_html": "May 28 – June 1, 2025",
+      "details_html": [
+        "Peking University"
+      ],
+      "website_extra_html": [],
+      "cv_date": "May 2025",
+      "cv_order": 3,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html"
+      ]
+    },
+    {
+      "id": "beijing-ag-6",
+      "title_html": "<a href=\"https://bicmr.pku.edu.cn/content/show/17-3613.html\">6th Beijing Algebraic Geometry Day</a>",
+      "date_html": "May 9, 2025",
+      "details_html": [
+        "Peking University",
+        "Local organizer"
+      ],
+      "website_extra_html": [
+        "With Zhiyu Tian and Qizheng Yin. Other organizers: Baohua Fu, Jie Liu, Jian Xiao, Yao Yuan, Zhixian Zhu"
+      ],
+      "cv_date": "May 2025",
+      "cv_order": 4,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html"
+      ]
+    },
+    {
+      "id": "pku-seminar",
+      "title_html": "<a href=\"pku-ag-seminar.html\">Peking University Algebraic Geometry Seminar</a>",
+      "date_html": "2024 Fall – present",
+      "details_html": [],
+      "website_extra_html": [],
+      "cv_date": "2024 -- present",
+      "cv_order": 7,
+      "coorganizers_profile_key": "pku_seminar_coorganizers",
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html",
+        "https://jihaoliu.org/"
+      ],
+      "cv_details_html": [
+        "With Fumiaki Suzuki (from 2025), Zhiyu Tian, Qizheng Yin"
+      ]
+    },
+    {
+      "id": "beijing-ag-2",
+      "title_html": "<a href=\"https://bicmr.pku.edu.cn/content/show/17-3499.html\">2nd Beijing Algebraic Geometry Day</a>",
+      "date_html": "November 23, 2024",
+      "details_html": [
+        "Peking University",
+        "Local organizer"
+      ],
+      "website_extra_html": [
+        "With Zhiyu Tian and Qizheng Yin. Other organizers: Baohua Fu, Jie Liu, Jian Xiao, Yao Yuan, Zhixian Zhu"
+      ],
+      "cv_date": "Nov 2024",
+      "cv_order": 5,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html"
+      ]
+    },
+    {
+      "id": "foliation-2024",
+      "title_html": "1st Conference on <a href=\"https://scms.fudan.edu.cn/info/4589/7021.htm\">Foliation and Birational Geometry</a>",
+      "date_html": "August 26–30, 2024",
+      "details_html": [
+        "Fudan University",
+        "with Meng Chen, Chen Jiang, and Jingjun Han"
+      ],
+      "website_extra_html": [],
+      "cv_date": "Aug 2024",
+      "cv_order": 6,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html"
+      ]
+    },
+    {
+      "id": "northwestern-seminar",
+      "title_html": "<a href=\"https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar.html\">Northwestern Algebraic Geometry Seminar</a>",
+      "date_html": "2021 Fall – 2024 Spring",
+      "details_html": [
+        "Co-organized with Yuchen Liu and rotating co-organizers (Charles Stibitz, Kai Huang, Ananth Shankar)"
+      ],
+      "website_extra_html": [
+        "with Yuchen Liu and Charles Stibitz (2021 Fall–2022 Spring), Yuchen Liu and Kai Huang (2022 Fall), Yuchen Liu (2023 Winter–Spring), Yuchen Liu and Ananth Shankar (2023 Fall–2024 Spring)",
+        "<a href=\"https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2021-2022.html\">2021–2022 archive</a>",
+        "<a href=\"https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2022-2023.html\">2022–2023 archive</a>",
+        "<a href=\"https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2023-2024.html\">2023–2024 archive</a>"
+      ],
+      "cv_date": "2021 -- 2024",
+      "cv_order": 9,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html",
+        "https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2021-2022.html",
+        "https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2022-2023.html",
+        "https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2023-2024.html"
+      ]
+    },
+    {
+      "id": "utah-seminar-2020",
+      "title_html": "Utah Algebraic Geometry Reading Seminar",
+      "date_html": "Spring 2020",
+      "details_html": [
+        "University of Utah"
+      ],
+      "website_extra_html": [],
+      "cv_date": "Spring 2020",
+      "cv_order": 10,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html",
+        "http://www.math.utah.edu/~jliu/utahagpreprintseminar2020Spring.html"
+      ],
+      "unavailable_links": [
+        {
+          "url": "http://www.math.utah.edu/~jliu/utahagpreprintseminar2020Spring.html",
+          "status": 404,
+          "checked_on": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "utah-seminar-2019",
+      "title_html": "Utah Algebraic Geometry Reading Seminar",
+      "date_html": "Fall 2019",
+      "details_html": [
+        "University of Utah"
+      ],
+      "website_extra_html": [],
+      "cv_date": "Fall 2019",
+      "cv_order": 11,
+      "source_urls": [
+        "https://jihaoliu.org/conferences.html",
+        "http://www.math.utah.edu/~jliu/utahagpreprintseminar2019fall.html"
+      ],
+      "unavailable_links": [
+        {
+          "url": "http://www.math.utah.edu/~jliu/utahagpreprintseminar2019fall.html",
+          "status": 404,
+          "checked_on": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "beijing-ag-series",
+      "title_html": "Beijing Algebraic Geometry Day",
+      "date_html": "2024 – present",
+      "details_html": [
+        "Joint workshop series with the Chinese Academy of Sciences, Tsinghua University, and Capital Normal University"
+      ],
+      "website_extra_html": [],
+      "cv_date": "2024 -- present",
+      "cv_order": 8,
+      "show_on_web": false,
+      "source_urls": [
+        "https://jihaoliu.org/cv/cv.pdf"
+      ]
+    }
+  ]
+}
