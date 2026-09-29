@@ -1,0 +1,25 @@
+{
+  "semester": "Fall 2026",
+  "records": [
+    {
+      "id": "song-yan-xie-2026",
+      "date": "2026-10-08",
+      "time": "13:30–14:30",
+      "timezone": "Asia/Shanghai",
+      "venue": "Room 77201, Jingchunyuan 78, BICMR",
+      "body_html": "        <div class=\"seminar-speaker\">谢松晏 (Song-Yan Xie) — Chinese Academy of Sciences</div>\n        <div class=\"seminar-title\">From complex hyperbolicity and Oka geometry to rational curves on Fano manifolds</div>\n        <div class=\"seminar-abstract\">\n          Constructing rational curves on complex Fano manifolds by analytic methods has been a major challenge in complex geometry for nearly half a century. For decades, the only known construction in this generality was Mori's bend-and-break method, combined with reduction to positive characteristic and Frobenius.<br><br>\n          We have proved that every rationally connected smooth complex projective manifold is Oka–1. The known rational connectedness of Fano manifolds implies that they too are Oka–1. This gives us confidence in their analytic flexibility, but cannot serve as the starting point for an independent construction of rational curves: the known proof of rational connectedness already requires the construction of such curves.<br><br>\n          Drawing on methods for constructing entire curves in Oka geometry and on Brody's lemma, I will explain an analytic construction of rational curves on Fano manifolds. Starting from a small holomorphic disk, we seek maps on successively larger disks, with uniformly bounded area and a fixed nonzero derivative normalization at the center. Positive Ricci curvature supplies an area-decreasing deformation that makes room for further enlargement. The guiding picture comes from the traditional Chinese technique of making baozi: a dough wrapper is stretched and gathered before being sealed. Analytically, a nonconstant entire limit of finite area extends across infinity to a rational curve; a suitable rational curve may also appear earlier through bubbling.<br><br>\n          Combined with classical algebraic arguments, this construction gives new proofs in characteristic zero of two known results: rational connectedness of Fano manifolds, due to Campana and Kollár–Miyaoka–Mori, and Mori's solution of Hartshorne's conjecture on ample tangent bundles.<br><br>\n          This talk is based on joint work with Yun-Heng Du and Bin Guo.\n        </div>",
+      "source_url": "https://bicmr.pku.edu.cn/content/show/35-4012.html",
+      "note": "Rescheduled from September 24."
+    },
+    {
+      "id": "federico-scavia-2026",
+      "date": "2026-09-03",
+      "time": "13:30–14:30",
+      "timezone": "Asia/Shanghai",
+      "venue": "Room 77201, Jingchunyuan 78, BICMR",
+      "body_html": "        <div class=\"seminar-speaker\">Federico Scavia — CNRS, Université Sorbonne Paris Nord</div>\n        <div class=\"seminar-title\">Splitting Brauer classes by genus one curves</div>\n        <div class=\"seminar-abstract\">\n          Let F be a field. A basic way to study a Brauer class over F is through its splitting fields, that is, field extensions of F over which the class becomes trivial. I will discuss a question of Clark and Saltman: is every Brauer class over F split by a smooth projective genus one curve over F? Equivalently, does every Severi–Brauer variety X/F admit a morphism C → X, with C a smooth projective curve of genus one? I will present joint work with Zinovy Reichstein showing that the answer is no in general. I will then discuss joint work with Ben Antieau and Asher Auel showing that, in contrast, the answer is yes over number fields.\n        </div>",
+      "source_url": "https://jihaoliu.org/pku-ag-seminar.html",
+      "note": ""
+    }
+  ]
+}

@@ -26,30 +26,40 @@
   <meta name="twitter:description" content="Algebraic geometer at Peking University (BICMR). Birational geometry: minimal model program, generalized pairs, foliations, singularities, Fano varieties and K-stability, boundedness, explicit birational geometry." />
   <meta name="twitter:image" content="https://jihaoliu.org/assets/og-image.png" />
   <!-- META:END -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/discovery.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="container">
     <header class="site-header">
       <div class="site-title"><a href="index.html">Jihao Liu&nbsp;<span style="font-weight: 400; color: var(--color-text-muted);">(刘济豪)</span></a></div>
       <div class="site-subtitle">Peking University · School of Mathematical Sciences</div>
-      <nav class="main-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="publications.html">Publications</a>
-        <a href="notes.html">Notes</a>
-        <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="talks.html">Invited Talks</a>
-        <a href="conferences.html">Conferences &amp; Seminars</a>
-        <a href="collaborators.html">Collaborators</a>
-        <a href="pku-ag-seminar.html">PKU AG Seminar</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-primary">
+          <a href="index.html" class="active" aria-current="page">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="talks.html">Invited Talks</a>
+          <a href="search.html">Search</a>
+          <a href="cv/cv.pdf">CV (PDF)</a>
+        </div>
+        <details class="nav-more">
+          <summary>Research &amp; community</summary>
+          <div class="nav-secondary">
+          <a href="notes.html">Notes</a>
+          <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
+          <a href="conferences.html">Conferences &amp; Seminars</a>
+          <a href="collaborators.html">Collaborators</a>
+          <a href="pku-ag-seminar.html">PKU AG Seminar</a>
+          </div>
+        </details>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
+      <h1 class="visually-hidden">About Jihao Liu</h1>
       <p class="intro">
         Algebraic geometer at the
         <a href="https://www.math.pku.edu.cn/">School of Mathematical Sciences</a>,
@@ -68,14 +78,37 @@
         My Ph.D. (Utah, 2021) was supervised by
         <a href="https://www.math.utah.edu/~hacon/">Christopher Hacon</a>;
         before that, my undergraduate years at PKU were spent under
-        <a href="http://www.bicmr.org/~tian/">Gang Tian</a>.
+        <a href="https://tian.bicmr.pku.edu.cn/">Gang Tian</a>.
       </p>
 
-      <h2>Research</h2>
+      <!-- CONTACT:START -->
+      <div class="contact-block contact-grid">
+        <div class="contact-label">Email:</div>
+        <div class="contact-value">liujihao [at] math.pku.edu.cn</div>
+
+        <div class="contact-label">Office:</div>
+        <div class="contact-value">
+          <span class="office-en">Beijing International Center for Mathematical Research, Peking University, Jingchunyuan&nbsp;78402</span><br>
+          <span class="office-cn">北京大学北京国际数学研究中心镜春园&nbsp;78402</span>
+        </div>
+
+        <div class="contact-label">CV:</div>
+        <div class="contact-value">
+          <a href="cv/cv.pdf">cv.pdf</a>
+          &nbsp;<span style="color: var(--color-text-muted); font-size: 0.9em;">(updated 26 September 2026)</span>
+        </div>
+
+        <div class="contact-label">Google Scholar:</div>
+        <div class="contact-value">
+          <a href="https://scholar.google.com/citations?user=8cyDda8AAAAJ&amp;hl=en">profile</a>
+          &nbsp;<span style="color: var(--color-text-muted); font-size: 0.9em;">(cited by 675)</span>
+        </div>
+      </div>
+      <!-- CONTACT:END -->
+
+      <h2 id="research">Research</h2>
       <!-- RESEARCH:START -->
-      <p class="research-interests">
-        Open a topic to see my papers on it.
-      </p>
+      <p class="research-interests">Open a topic to see my papers on it.</p>
       <details class="topic">
         <summary>Minimal model program <span class="topic-count">(22 papers)</span></summary>
         <ul class="topic-list">
@@ -84,23 +117,23 @@
           <li><a href="https://arxiv.org/abs/2510.04419">Non-algebraicity of non-abundant foliations and abundance for adjoint foliated structures</a> (with Zheng Xu).</li>
           <li><a href="https://arxiv.org/abs/2509.01501">Effective termination of general type MMPs in dimension at most five</a> (with Jingjun Han, Ziquan Zhuang).</li>
           <li><a href="https://arxiv.org/abs/2506.20183v1">Boundedness in general type MMP and fivefold effective termination</a> (with Jingjun Han, Lu Qi, Ziquan Zhuang).</li>
-          <li><a href="https://arxiv.org/abs/2505.15115">Sarkisov program for algebraically integrable and threefold foliations</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. Math. Res. Not. 2026, no. 6, 1–19.</span></li>
+          <li><a href="https://arxiv.org/abs/2505.15115">Sarkisov program for algebraically integrable and threefold foliations</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. Math. Res. Not. 2026, no. 6, rnag045.</span></li>
           <li><a href="https://arxiv.org/abs/2505.05250">Non-vanishing implies numerical dimension one abundance</a> (with Zheng Xu).</li>
           <li><a href="https://arxiv.org/abs/2504.10737">On finite generation and boundedness of adjoint foliated structures</a> (with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie).</li>
-          <li><a href="https://arxiv.org/abs/2410.15457">A generalized non-vanishing theorem for surfaces</a> (with Lingyao Xie). <span class="topic-venue">Pure Appl. Math. Q. (special volume in honor of Caucher Birkar), 22 (2026), no. 1, 235–244.</span></li>
-          <li><a href="https://arxiv.org/abs/2410.05764">Flop between algebraically integrable foliations on potentially klt varieties</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. J. Math. (2025), 2550035.</span></li>
+          <li><a href="https://arxiv.org/abs/2410.15457">A generalized non-vanishing theorem on surfaces</a> (with Lingyao Xie). <span class="topic-venue">Pure Appl. Math. Q. (special volume in honor of Caucher Birkar), 22 (2026), no. 1, 235–244.</span></li>
+          <li><a href="https://arxiv.org/abs/2410.05764">Flop between algebraically integrable foliations on potentially klt varieties</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. J. Math. 36 (2025), no. 11, 2550035.</span></li>
           <li><a href="https://arxiv.org/abs/2408.14258">Minimal model program for algebraically integrable adjoint foliated structures</a> (with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie).</li>
-          <li><a href="https://arxiv.org/abs/2404.01559">Minimal model program for algebraically integrable foliations on klt varieties</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Compos. Math. 161 (2025), 3213–3276.</span></li>
-          <li><a href="https://arxiv.org/abs/2312.15397">On the equivalence between the effective adjunction conjectures of Prokhorov–Shokurov and of Li</a> (with Jingjun Han, Qingyuan Xue). <span class="topic-venue">Algebra Number Theory 19 (2025), no. 11.</span></li>
+          <li><a href="https://arxiv.org/abs/2404.01559">Minimal model program for algebraically integrable foliations on klt varieties</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Compos. Math. 161 (2025), no. 12, 3213–3276.</span></li>
+          <li><a href="https://arxiv.org/abs/2312.15397">On the equivalence between the effective adjunction conjectures of Prokhorov–Shokurov and of Li</a> (with Jingjun Han, Qingyuan Xue). <span class="topic-venue">Algebra Number Theory 19 (2025), no. 11, 2261–2279.</span></li>
           <li><a href="https://arxiv.org/abs/2309.15823">Minimal model program for algebraically integrable foliations and generalized pairs</a> (with Guodu Chen, Jingjun Han, Lingyao Xie).</li>
-          <li><a href="https://arxiv.org/abs/2301.04813">On effective Iitaka fibrations and existence of complements</a> (with Guodu Chen, Jingjun Han). <span class="topic-venue">Int. Math. Res. Not. (2024), no. 10, 8329–8349.</span></li>
+          <li><a href="https://arxiv.org/abs/2301.04813">On effective log Iitaka fibrations and existence of complements</a> (with Guodu Chen, Jingjun Han). <span class="topic-venue">Int. Math. Res. Not. (2024), no. 10, 8329–8349.</span></li>
           <li><a href="https://arxiv.org/abs/2210.01731">Semi-ampleness of NQC generalized log canonical pairs</a> (with Lingyao Xie). <span class="topic-venue">Adv. Math. 427 (2023), 109126.</span></li>
           <li><a href="https://arxiv.org/abs/2209.13122">On termination of flips and exceptionally non-canonical singularities</a> (with Jingjun Han). <span class="topic-venue">Geom. Topol. 29 (2025), no. 1, 399–441.</span></li>
           <li><a href="https://arxiv.org/abs/2208.04663">Uniform rational polytopes for Iitaka dimensions</a> (with Guodu Chen, Jingjun Han). <span class="topic-venue">In: Higher Dimensional Algebraic Geometry: A Volume in Honor of V. V. Shokurov (C. D. Hacon, C. Xu eds.), London Math. Soc. Lecture Note Series, Cambridge University Press (2025), 43–68.</span></li>
-          <li><a href="https://arxiv.org/abs/2207.09576">Relative Nakayama–Zariski decomposition and minimal models for generalized pairs</a> (with Lingyao Xie). <span class="topic-venue">Peking Math. J. (2025), no. 8, 299–349.</span></li>
-          <li><a href="https://arxiv.org/abs/2202.11256">On generalized lc pairs with b-log abundant nef part (with an Appendix by J. Han)</a> (with Junpeng Jiao, Lingyao Xie). <span class="topic-venue">Front. Math. (2025).</span></li>
+          <li><a href="https://arxiv.org/abs/2207.09576">Relative Nakayama–Zariski decomposition and minimal models of generalized pairs</a> (with Lingyao Xie). <span class="topic-venue">Peking Math. J. 8 (2025), no. 2, 299–349.</span></li>
+          <li><a href="https://arxiv.org/abs/2202.11256">On generalized lc pairs with b-log abundant nef part (with an Appendix by J. Han)</a> (with Junpeng Jiao, Lingyao Xie). <span class="topic-venue">Front. Math. 21 (2026), no. 4, 769–799.</span></li>
           <li><a href="https://arxiv.org/abs/2105.13590">Existence of flips for generalized lc pairs</a> (with Christopher D. Hacon). <span class="topic-venue">Camb. J. Math. 11 (2023), no. 4, 795–828.</span></li>
-          <li><a href="https://arxiv.org/abs/1802.03926">Sarkisov program for generalized pairs</a>. <span class="topic-venue">Osaka J. Math. 58 (2021), no. 4.</span></li>
+          <li><a href="https://arxiv.org/abs/1802.03926">Sarkisov program for generalized pairs</a>. <span class="topic-venue">Osaka J. Math. 58 (2021), no. 4, 899–920.</span></li>
         </ul>
       </details>
       <details class="topic">
@@ -108,35 +141,35 @@
         <ul class="topic-list">
           <li><a href="https://arxiv.org/abs/2608.03258">A klt generalized pair with infinitely generated canonical ring</a> (with Yanze Wang).</li>
           <li><a href="https://arxiv.org/abs/2603.03817">Existence of the minimal model program for log canonical generalized pairs</a> (with Zhengyu Hu).</li>
-          <li><a href="https://arxiv.org/abs/2410.15457">A generalized non-vanishing theorem for surfaces</a> (with Lingyao Xie). <span class="topic-venue">Pure Appl. Math. Q. (special volume in honor of Caucher Birkar), 22 (2026), no. 1, 235–244.</span></li>
+          <li><a href="https://arxiv.org/abs/2410.15457">A generalized non-vanishing theorem on surfaces</a> (with Lingyao Xie). <span class="topic-venue">Pure Appl. Math. Q. (special volume in honor of Caucher Birkar), 22 (2026), no. 1, 235–244.</span></li>
           <li><a href="https://arxiv.org/abs/2309.15823">Minimal model program for algebraically integrable foliations and generalized pairs</a> (with Guodu Chen, Jingjun Han, Lingyao Xie).</li>
           <li><a href="https://arxiv.org/abs/2305.12337">Vanishing theorems for generalized pairs</a> (with Bingyi Chen, Lingyao Xie).</li>
           <li><a href="https://arxiv.org/abs/2210.01731">Semi-ampleness of NQC generalized log canonical pairs</a> (with Lingyao Xie). <span class="topic-venue">Adv. Math. 427 (2023), 109126.</span></li>
-          <li><a href="https://arxiv.org/abs/2207.09576">Relative Nakayama–Zariski decomposition and minimal models for generalized pairs</a> (with Lingyao Xie). <span class="topic-venue">Peking Math. J. (2025), no. 8, 299–349.</span></li>
-          <li><a href="https://arxiv.org/abs/2202.11256">On generalized lc pairs with b-log abundant nef part (with an Appendix by J. Han)</a> (with Junpeng Jiao, Lingyao Xie). <span class="topic-venue">Front. Math. (2025).</span></li>
+          <li><a href="https://arxiv.org/abs/2207.09576">Relative Nakayama–Zariski decomposition and minimal models of generalized pairs</a> (with Lingyao Xie). <span class="topic-venue">Peking Math. J. 8 (2025), no. 2, 299–349.</span></li>
+          <li><a href="https://arxiv.org/abs/2202.11256">On generalized lc pairs with b-log abundant nef part (with an Appendix by J. Han)</a> (with Junpeng Jiao, Lingyao Xie). <span class="topic-venue">Front. Math. 21 (2026), no. 4, 769–799.</span></li>
           <li><a href="https://arxiv.org/abs/2105.13590">Existence of flips for generalized lc pairs</a> (with Christopher D. Hacon). <span class="topic-venue">Camb. J. Math. 11 (2023), no. 4, 795–828.</span></li>
           <li><a href="https://arxiv.org/abs/1810.12381">Accumulation point theorem for generalized log canonical thresholds</a>.</li>
-          <li><a href="https://arxiv.org/abs/1802.03926">Sarkisov program for generalized pairs</a>. <span class="topic-venue">Osaka J. Math. 58 (2021), no. 4.</span></li>
+          <li><a href="https://arxiv.org/abs/1802.03926">Sarkisov program for generalized pairs</a>. <span class="topic-venue">Osaka J. Math. 58 (2021), no. 4, 899–920.</span></li>
         </ul>
       </details>
       <details class="topic">
         <summary>Foliations <span class="topic-count">(17 papers)</span></summary>
         <ul class="topic-list">
           <li><a href="https://arxiv.org/abs/2605.22735">Shokurov's global index conjecture for threefold foliations</a> (with Sheng Qin).</li>
-          <li><a href="https://arxiv.org/abs/2605.20754">Optimal bounds in bend-and-break for foliations</a> (with Zeming Sun, Jiedong Jiang).</li>
+          <li><a href="https://arxiv.org/abs/2605.20754">Optimal bend-and-break for foliations</a> (with Zeming Sun, Jiedong Jiang).</li>
           <li><a href="https://arxiv.org/abs/2604.24106">Birational boundedness of stable families</a> (with Paolo Cascini, Calum Spicer, Roberto Svaldi).</li>
           <li><a href="https://arxiv.org/abs/2510.04419">Non-algebraicity of non-abundant foliations and abundance for adjoint foliated structures</a> (with Zheng Xu).</li>
           <li><a href="https://arxiv.org/abs/2510.02498">Variation of algebraically integrable adjoint foliated structures</a> (with Paolo Cascini, Fanjun Meng, Roberto Svaldi, Lingyao Xie).</li>
-          <li><a href="https://arxiv.org/abs/2505.15115">Sarkisov program for algebraically integrable and threefold foliations</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. Math. Res. Not. 2026, no. 6, 1–19.</span></li>
+          <li><a href="https://arxiv.org/abs/2505.15115">Sarkisov program for algebraically integrable and threefold foliations</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. Math. Res. Not. 2026, no. 6, rnag045.</span></li>
           <li><a href="https://arxiv.org/abs/2504.10737">On finite generation and boundedness of adjoint foliated structures</a> (with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie).</li>
-          <li><a href="https://arxiv.org/abs/2410.05764">Flop between algebraically integrable foliations on potentially klt varieties</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. J. Math. (2025), 2550035.</span></li>
+          <li><a href="https://arxiv.org/abs/2410.05764">Flop between algebraically integrable foliations on potentially klt varieties</a> (with Yifei Chen, Yanze Wang). <span class="topic-venue">Int. J. Math. 36 (2025), no. 11, 2550035.</span></li>
           <li><a href="https://arxiv.org/abs/2408.14258">Minimal model program for algebraically integrable adjoint foliated structures</a> (with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie).</li>
           <li><a href="https://arxiv.org/abs/2406.16604">Volume of algebraically integrable foliations and locally stable families</a> (with Jingjun Han, Junpeng Jiao, Mengchu Li). <span class="topic-venue">Trans. Amer. Math. Soc. 379 (2026), no. 10, 6809–6832.</span></li>
-          <li><a href="https://arxiv.org/abs/2404.01559">Minimal model program for algebraically integrable foliations on klt varieties</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Compos. Math. 161 (2025), 3213–3276.</span></li>
+          <li><a href="https://arxiv.org/abs/2404.01559">Minimal model program for algebraically integrable foliations on klt varieties</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Compos. Math. 161 (2025), no. 12, 3213–3276.</span></li>
           <li><a href="https://arxiv.org/abs/2309.15823">Minimal model program for algebraically integrable foliations and generalized pairs</a> (with Guodu Chen, Jingjun Han, Lingyao Xie).</li>
           <li><a href="https://arxiv.org/abs/2307.07157">ACC for lc thresholds for algebraically integrable foliations</a> (with Omprokash Das, Roktim Mascharak). <span class="topic-venue">Selecta Math. (N.S.) 32 (2026), no. 4, Paper No. 70, 34 pp.</span></li>
           <li><a href="https://arxiv.org/abs/2306.00330">Uniform rational polytopes of foliated threefolds and the global ACC</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">J. Lond. Math. Soc. 109 (2024), no. 6, e12950.</span></li>
-          <li><a href="https://arxiv.org/abs/2305.06493">Complements, index theorem, and minimal log discrepancies of foliated surface singularities</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Eur. J. Math. 10 (2024), no. 6.</span></li>
+          <li><a href="https://arxiv.org/abs/2305.06493">Complements, index theorem, and minimal log discrepancies of foliated surface singularities</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Eur. J. Math. 10 (2024), no. 1, Paper No. 6.</span></li>
           <li><a href="https://arxiv.org/abs/2303.13083">On global ACC for foliated threefolds</a> (with Yujie Luo, Fanjun Meng). <span class="topic-venue">Trans. Amer. Math. Soc. 376 (2023), no. 12, 8939–8972.</span></li>
           <li><a href="https://arxiv.org/abs/1707.07092">On invariance of plurigenera for foliated surface pairs</a>.</li>
         </ul>
@@ -158,18 +191,18 @@
           <li><a href="https://arxiv.org/abs/2307.07157">ACC for lc thresholds for algebraically integrable foliations</a> (with Omprokash Das, Roktim Mascharak). <span class="topic-venue">Selecta Math. (N.S.) 32 (2026), no. 4, Paper No. 70, 34 pp.</span></li>
           <li><a href="https://arxiv.org/abs/2306.00330">Uniform rational polytopes of foliated threefolds and the global ACC</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">J. Lond. Math. Soc. 109 (2024), no. 6, e12950.</span></li>
           <li><a href="https://arxiv.org/abs/2305.19248">Optimal bounds on surfaces</a> (with Vyacheslav V. Shokurov). <span class="topic-venue">To appear in Algebraic Geometry and Physics.</span></li>
-          <li><a href="https://arxiv.org/abs/2305.06493">Complements, index theorem, and minimal log discrepancies of foliated surface singularities</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Eur. J. Math. 10 (2024), no. 6.</span></li>
+          <li><a href="https://arxiv.org/abs/2305.06493">Complements, index theorem, and minimal log discrepancies of foliated surface singularities</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Eur. J. Math. 10 (2024), no. 1, Paper No. 6.</span></li>
           <li><a href="https://arxiv.org/abs/2303.13083">On global ACC for foliated threefolds</a> (with Yujie Luo, Fanjun Meng). <span class="topic-venue">Trans. Amer. Math. Soc. 376 (2023), no. 12, 8939–8972.</span></li>
           <li><a href="https://arxiv.org/abs/2209.13122">On termination of flips and exceptionally non-canonical singularities</a> (with Jingjun Han). <span class="topic-venue">Geom. Topol. 29 (2025), no. 1, 399–441.</span></li>
           <li><a href="https://arxiv.org/abs/2209.11369">Infinitesimal structure of log canonical thresholds</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Doc. Math. 29 (2024), no. 3, 703–732.</span></li>
           <li><a href="https://arxiv.org/abs/2208.09184">Remark on complements on surfaces</a>. <span class="topic-venue">Forum Math. Sigma 11 (2023), e42.</span></li>
           <li><a href="https://arxiv.org/abs/2207.04610">Second largest accumulation point of minimal log discrepancies of threefolds</a> (with Yujie Luo).</li>
           <li><a href="https://arxiv.org/abs/2202.05287">ACC for minimal log discrepancies of terminal threefolds</a> (with Jingjun Han, Yujie Luo). <span class="topic-venue">Adv. Math. 480 (2025), 110457.</span></li>
-          <li><a href="https://arxiv.org/abs/2103.04522">Number of singular points on projective surfaces</a> (with Lingyao Xie). <span class="topic-venue">Chin. Ann. Math. Ser. B 46 (2025), 713–724.</span></li>
+          <li><a href="https://arxiv.org/abs/2103.04522">Number of singular points on projective surfaces</a> (with Lingyao Xie). <span class="topic-venue">Chin. Ann. Math. Ser. B 46 (2025), no. 5, 713–724.</span></li>
           <li><a href="https://arxiv.org/abs/2101.00138">Divisors computing minimal log discrepancies on lc surfaces</a> (with Lingyao Xie). <span class="topic-venue">Math. Proc. Camb. Philos. Soc. 175 (2023), no. 1, 107–128.</span></li>
-          <li><a href="https://arxiv.org/abs/1909.08759">An optimal gap of minimal log discrepancies of threefold non-canonical singularities</a> (with Liudan Xiao). <span class="topic-venue">J. Pure Appl. Algebra 225 (2021), no. 9.</span></li>
+          <li><a href="https://arxiv.org/abs/1909.08759">An optimal gap of minimal log discrepancies of threefold non-canonical singularities</a> (with Liudan Xiao). <span class="topic-venue">J. Pure Appl. Algebra 225 (2021), no. 9, 106674.</span></li>
           <li><a href="https://arxiv.org/abs/1903.07202">Bounded deformations of (ε, δ)-log canonical singularities</a> (with Jingjun Han, Joaquín Moraga). <span class="topic-venue">J. Math. Sci. Univ. Tokyo 27 (2020), no. 1, 1–28.</span></li>
-          <li><a href="https://arxiv.org/abs/1903.04338">ACC for minimal log discrepancies of exceptional singularities</a> (with Jingjun Han, Vyacheslav V. Shokurov). <span class="topic-venue">Peking Math. J. (2024), 1–33.</span></li>
+          <li><a href="https://arxiv.org/abs/1903.04338">ACC for minimal log discrepancies of exceptional singularities</a> (with Jingjun Han, Vyacheslav V. Shokurov). <span class="topic-venue">Peking Math. J. 9 (2026), no. 2, 225–257.</span></li>
           <li><a href="https://arxiv.org/abs/1810.12381">Accumulation point theorem for generalized log canonical thresholds</a>.</li>
           <li><a href="https://arxiv.org/abs/1809.04839">Toward the equivalence of the ACC for a-log canonical thresholds and the ACC for minimal log discrepancies</a>. <span class="topic-venue">To appear in Algebraic Geometry and Physics.</span></li>
         </ul>
@@ -207,7 +240,7 @@
           <li><a href="https://arxiv.org/abs/2506.20183v1">Boundedness in general type MMP and fivefold effective termination</a> (with Jingjun Han, Lu Qi, Ziquan Zhuang).</li>
           <li><a href="https://arxiv.org/abs/2504.10737">On finite generation and boundedness of adjoint foliated structures</a> (with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie).</li>
           <li><a href="https://arxiv.org/abs/2406.16604">Volume of algebraically integrable foliations and locally stable families</a> (with Jingjun Han, Junpeng Jiao, Mengchu Li). <span class="topic-venue">Trans. Amer. Math. Soc. 379 (2026), no. 10, 6809–6832.</span></li>
-          <li><a href="https://arxiv.org/abs/2301.04813">On effective Iitaka fibrations and existence of complements</a> (with Guodu Chen, Jingjun Han). <span class="topic-venue">Int. Math. Res. Not. (2024), no. 10, 8329–8349.</span></li>
+          <li><a href="https://arxiv.org/abs/2301.04813">On effective log Iitaka fibrations and existence of complements</a> (with Guodu Chen, Jingjun Han). <span class="topic-venue">Int. Math. Res. Not. (2024), no. 10, 8329–8349.</span></li>
           <li><a href="https://arxiv.org/abs/2208.09184">Remark on complements on surfaces</a>. <span class="topic-venue">Forum Math. Sigma 11 (2023), e42.</span></li>
           <li><a href="https://arxiv.org/abs/2208.04663">Uniform rational polytopes for Iitaka dimensions</a> (with Guodu Chen, Jingjun Han). <span class="topic-venue">In: Higher Dimensional Algebraic Geometry: A Volume in Honor of V. V. Shokurov (C. D. Hacon, C. Xu eds.), London Math. Soc. Lecture Note Series, Cambridge University Press (2025), 43–68.</span></li>
           <li><a href="https://arxiv.org/abs/2007.01849">On effective birationality for sub-pairs</a> (with Jingjun Han). <span class="topic-venue">Int. J. Math. 34 (2023), no. 6, Article No. 2350029.</span></li>
@@ -221,7 +254,7 @@
           <li><a href="ai-results/fujita-freeness-in-dimension-six-2026-09-20.pdf">Fujita freeness in dimension six</a>. <span class="topic-venue">AI-generated, not verified by a human.</span></li>
           <li><a href="https://arxiv.org/abs/2609.27259">The minimal volume of normal stable surface pairs with reduced boundary containing a zero-dimensional non-klt center</a> (with Weili Shao).</li>
           <li><a href="notes/ET74.pdf">On a conjecture of Esser, Totaro, and Wang</a>. <span class="topic-venue">Note.</span></li>
-          <li><a href="https://arxiv.org/abs/2605.20754">Optimal bounds in bend-and-break for foliations</a> (with Zeming Sun, Jiedong Jiang).</li>
+          <li><a href="https://arxiv.org/abs/2605.20754">Optimal bend-and-break for foliations</a> (with Zeming Sun, Jiedong Jiang).</li>
           <li><a href="https://arxiv.org/abs/2605.05641">The minimal volume of stable surfaces of rank one</a> (with Wenfei Liu).</li>
           <li><a href="https://arxiv.org/abs/2509.01501">Effective termination of general type MMPs in dimension at most five</a> (with Jingjun Han, Ziquan Zhuang).</li>
           <li><a href="https://arxiv.org/abs/2506.20183v1">Boundedness in general type MMP and fivefold effective termination</a> (with Jingjun Han, Lu Qi, Ziquan Zhuang).</li>
@@ -231,9 +264,9 @@
           <li><a href="https://arxiv.org/abs/2308.14268">The minimal volume of surfaces of log general type with non-empty non-klt locus</a> (with Wenfei Liu). <span class="topic-venue">To appear in Algebr. Geom.</span></li>
           <li><a href="https://arxiv.org/abs/2305.19248">Optimal bounds on surfaces</a> (with Vyacheslav V. Shokurov). <span class="topic-venue">To appear in Algebraic Geometry and Physics.</span></li>
           <li><a href="https://arxiv.org/abs/2207.04610">Second largest accumulation point of minimal log discrepancies of threefolds</a> (with Yujie Luo).</li>
-          <li><a href="https://arxiv.org/abs/2202.11260">On the fixed part of pluricanonical systems for surfaces</a> (with Lingyao Xie). <span class="topic-venue">Math. Nachr. 296 (2023), 2046–2069.</span></li>
-          <li><a href="https://arxiv.org/abs/2103.04522">Number of singular points on projective surfaces</a> (with Lingyao Xie). <span class="topic-venue">Chin. Ann. Math. Ser. B 46 (2025), 713–724.</span></li>
-          <li><a href="https://arxiv.org/abs/1909.08759">An optimal gap of minimal log discrepancies of threefold non-canonical singularities</a> (with Liudan Xiao). <span class="topic-venue">J. Pure Appl. Algebra 225 (2021), no. 9.</span></li>
+          <li><a href="https://arxiv.org/abs/2202.11260">On the fixed part of pluricanonical systems for surfaces</a> (with Lingyao Xie). <span class="topic-venue">Math. Nachr. 296 (2023), no. 5, 2046–2069.</span></li>
+          <li><a href="https://arxiv.org/abs/2103.04522">Number of singular points on projective surfaces</a> (with Lingyao Xie). <span class="topic-venue">Chin. Ann. Math. Ser. B 46 (2025), no. 5, 713–724.</span></li>
+          <li><a href="https://arxiv.org/abs/1909.08759">An optimal gap of minimal log discrepancies of threefold non-canonical singularities</a> (with Liudan Xiao). <span class="topic-venue">J. Pure Appl. Algebra 225 (2021), no. 9, 106674.</span></li>
         </ul>
       </details>
       <details class="topic">
@@ -245,13 +278,13 @@
           <li><a href="https://arxiv.org/abs/2605.27926">Examples of infinitely many (-1)-curves with higher genus on elliptic surfaces</a> (with Sichen Li).</li>
           <li><a href="https://arxiv.org/abs/2605.20594">An example of a very non-movable effective divisor</a>.</li>
           <li><a href="https://arxiv.org/abs/2605.05641">The minimal volume of stable surfaces of rank one</a> (with Wenfei Liu).</li>
-          <li><a href="https://arxiv.org/abs/2410.15457">A generalized non-vanishing theorem for surfaces</a> (with Lingyao Xie). <span class="topic-venue">Pure Appl. Math. Q. (special volume in honor of Caucher Birkar), 22 (2026), no. 1, 235–244.</span></li>
+          <li><a href="https://arxiv.org/abs/2410.15457">A generalized non-vanishing theorem on surfaces</a> (with Lingyao Xie). <span class="topic-venue">Pure Appl. Math. Q. (special volume in honor of Caucher Birkar), 22 (2026), no. 1, 235–244.</span></li>
           <li><a href="https://arxiv.org/abs/2308.14268">The minimal volume of surfaces of log general type with non-empty non-klt locus</a> (with Wenfei Liu). <span class="topic-venue">To appear in Algebr. Geom.</span></li>
           <li><a href="https://arxiv.org/abs/2305.19248">Optimal bounds on surfaces</a> (with Vyacheslav V. Shokurov). <span class="topic-venue">To appear in Algebraic Geometry and Physics.</span></li>
-          <li><a href="https://arxiv.org/abs/2305.06493">Complements, index theorem, and minimal log discrepancies of foliated surface singularities</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Eur. J. Math. 10 (2024), no. 6.</span></li>
+          <li><a href="https://arxiv.org/abs/2305.06493">Complements, index theorem, and minimal log discrepancies of foliated surface singularities</a> (with Fanjun Meng, Lingyao Xie). <span class="topic-venue">Eur. J. Math. 10 (2024), no. 1, Paper No. 6.</span></li>
           <li><a href="https://arxiv.org/abs/2208.09184">Remark on complements on surfaces</a>. <span class="topic-venue">Forum Math. Sigma 11 (2023), e42.</span></li>
-          <li><a href="https://arxiv.org/abs/2202.11260">On the fixed part of pluricanonical systems for surfaces</a> (with Lingyao Xie). <span class="topic-venue">Math. Nachr. 296 (2023), 2046–2069.</span></li>
-          <li><a href="https://arxiv.org/abs/2103.04522">Number of singular points on projective surfaces</a> (with Lingyao Xie). <span class="topic-venue">Chin. Ann. Math. Ser. B 46 (2025), 713–724.</span></li>
+          <li><a href="https://arxiv.org/abs/2202.11260">On the fixed part of pluricanonical systems for surfaces</a> (with Lingyao Xie). <span class="topic-venue">Math. Nachr. 296 (2023), no. 5, 2046–2069.</span></li>
+          <li><a href="https://arxiv.org/abs/2103.04522">Number of singular points on projective surfaces</a> (with Lingyao Xie). <span class="topic-venue">Chin. Ann. Math. Ser. B 46 (2025), no. 5, 713–724.</span></li>
           <li><a href="https://arxiv.org/abs/2101.00138">Divisors computing minimal log discrepancies on lc surfaces</a> (with Lingyao Xie). <span class="topic-venue">Math. Proc. Camb. Philos. Soc. 175 (2023), no. 1, 107–128.</span></li>
           <li><a href="https://arxiv.org/abs/1707.07092">On invariance of plurigenera for foliated surface pairs</a>.</li>
         </ul>
@@ -267,7 +300,7 @@
         </ul>
       </details>
       <details class="topic">
-        <summary>Group theory and operator algebras <span class="topic-count">(1 paper)</span></summary>
+        <summary>Group theory and operator algebras <span class="topic-count">(1 papers)</span></summary>
         <ul class="topic-list">
           <li><a href="ai-results/nonhyperlinear-groups-exist-2026-09-20.pdf">Nonhyperlinear groups exist</a>. <span class="topic-venue">AI-generated, not verified by a human.</span></li>
         </ul>
@@ -288,14 +321,14 @@
         </ul>
       </details>
       <details class="topic">
-        <summary>Danus <span class="topic-count">(1 paper)</span></summary>
+        <summary>Danus <span class="topic-count">(1 papers)</span></summary>
         <ul class="topic-list">
           <li><a href="https://arxiv.org/abs/2607.06447">Danus: Orchestrating Mathematical Reasoning Agents with Fact-Graph Memory</a> (with Guoxiong Gao, Zeming Sun, Bin Wu, Shurui Liu, Jiedong Jiang, Haocheng Ju, Leheng Chen, Ronnie Cheng, Xiping Zhang, Bin Dong).</li>
         </ul>
       </details>
       <!-- RESEARCH:END -->
 
-      <h2>Currently</h2>
+      <h2 id="activities">Currently</h2>
       <p>
         Co-organizing the
         <a href="pku-ag-seminar.html">Peking University Algebraic Geometry Seminar</a>
@@ -309,32 +342,12 @@
         <a href="https://bicmr.pku.edu.cn/content/lists/35.html">BICMR's site</a>.
       </p>
 
-      <div class="contact-block contact-grid">
-        <div class="contact-label">Email:</div>
-        <div class="contact-value">liujihao [at] math.pku.edu.cn</div>
 
-        <div class="contact-label">Office:</div>
-        <div class="contact-value">
-          <span class="office-en">Beijing International Center for Mathematical Research, Peking University, Jingchunyuan&nbsp;78402</span><br>
-          <span class="office-cn">北京大学北京国际数学研究中心静春园&nbsp;78402</span>
-        </div>
-
-        <div class="contact-label">CV:</div>
-        <div class="contact-value">
-          <a href="cv/cv.pdf">cv.pdf</a>
-          &nbsp;<span style="color: var(--color-text-muted); font-size: 0.9em;">(last updated August 2026)</span>
-        </div>
-
-        <div class="contact-label">Google Scholar:</div>
-        <div class="contact-value">
-          <a href="https://scholar.google.com/citations?user=8cyDda8AAAAJ&amp;hl=en">profile</a>
-          &nbsp;<span style="color: var(--color-text-muted); font-size: 0.9em;">(cited by 675)</span>
-        </div>
-      </div>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Jihao Liu. Last updated September 2026.</p>
+      <p><a href="#main-content">Back to top</a> &middot; <a href="cv/cv.pdf">Curriculum vitae (PDF)</a></p>
+      <p>&copy; 2026 Jihao Liu. Updated September 2026.</p>
     </footer>
   </div>
 </body>

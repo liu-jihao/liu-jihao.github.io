@@ -26,30 +26,39 @@
   <meta name="twitter:description" content="Schedule of the Peking University Algebraic Geometry Seminar, Fall 2026." />
   <meta name="twitter:image" content="https://jihaoliu.org/assets/og-image.png" />
   <!-- META:END -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/discovery.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="container">
     <header class="site-header">
       <div class="site-title"><a href="index.html">Jihao Liu&nbsp;<span style="font-weight: 400; color: var(--color-text-muted);">(刘济豪)</span></a></div>
       <div class="site-subtitle">Peking University · School of Mathematical Sciences</div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="publications.html">Publications</a>
-        <a href="notes.html">Notes</a>
-        <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="talks.html">Invited Talks</a>
-        <a href="conferences.html">Conferences &amp; Seminars</a>
-        <a href="collaborators.html">Collaborators</a>
-        <a href="pku-ag-seminar.html" class="active">PKU AG Seminar</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-primary">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="talks.html">Invited Talks</a>
+          <a href="search.html">Search</a>
+          <a href="cv/cv.pdf">CV (PDF)</a>
+        </div>
+        <details class="nav-more">
+          <summary>Research &amp; community</summary>
+          <div class="nav-secondary">
+          <a href="notes.html">Notes</a>
+          <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
+          <a href="conferences.html">Conferences &amp; Seminars</a>
+          <a href="collaborators.html">Collaborators</a>
+          <a href="pku-ag-seminar.html" class="active" aria-current="page">PKU AG Seminar</a>
+          </div>
+        </details>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <h1>Peking University Algebraic Geometry Seminar</h1>
       <p style="color: var(--color-text-muted); font-size: 0.95rem;">Fall 2026</p>
 
@@ -70,10 +79,12 @@
         </p>
       </div>
 
-      <h2 style="margin-top: 1.5rem;">Upcoming</h2>
+      <h2 id="upcoming">Upcoming</h2>
 
-      <div class="seminar-entry">
-        <div class="seminar-date">September 24</div>
+      <div class="seminar-entry" id="song-yan-xie-2026">
+
+        <div class="seminar-date"><time datetime="2026-10-08">October 8, 2026</time> · 13:30–14:30 (Beijing time)</div>
+
         <div class="seminar-speaker">谢松晏 (Song-Yan Xie) — Chinese Academy of Sciences</div>
         <div class="seminar-title">From complex hyperbolicity and Oka geometry to rational curves on Fano manifolds</div>
         <div class="seminar-abstract">
@@ -83,22 +94,33 @@
           Combined with classical algebraic arguments, this construction gives new proofs in characteristic zero of two known results: rational connectedness of Fano manifolds, due to Campana and Kollár–Miyaoka–Mori, and Mori's solution of Hartshorne's conjecture on ample tangent bundles.<br><br>
           This talk is based on joint work with Yun-Heng Du and Bin Guo.
         </div>
+
+        <p class="course-meta">Room 77201, Jingchunyuan 78, BICMR · <a href="https://bicmr.pku.edu.cn/content/show/35-4012.html">Official announcement</a></p>
+
+        <p class="schedule-note">Rescheduled from September 24.</p>
+
       </div>
 
-      <h2 style="margin-top: 2.5rem;">Past talks this semester</h2>
+      <h2 id="past-talks">Past talks this semester</h2>
 
-      <div class="seminar-entry">
-        <div class="seminar-date">September 3</div>
+      <div class="seminar-entry" id="federico-scavia-2026">
+
+        <div class="seminar-date"><time datetime="2026-09-03">September 3, 2026</time> · 13:30–14:30 (Beijing time)</div>
+
         <div class="seminar-speaker">Federico Scavia — CNRS, Université Sorbonne Paris Nord</div>
         <div class="seminar-title">Splitting Brauer classes by genus one curves</div>
         <div class="seminar-abstract">
           Let F be a field. A basic way to study a Brauer class over F is through its splitting fields, that is, field extensions of F over which the class becomes trivial. I will discuss a question of Clark and Saltman: is every Brauer class over F split by a smooth projective genus one curve over F? Equivalently, does every Severi–Brauer variety X/F admit a morphism C → X, with C a smooth projective curve of genus one? I will present joint work with Zinovy Reichstein showing that the answer is no in general. I will then discuss joint work with Ben Antieau and Asher Auel showing that, in contrast, the answer is yes over number fields.
         </div>
+
+        <p class="course-meta">Room 77201, Jingchunyuan 78, BICMR</p>
+
       </div>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Jihao Liu. Last updated September 2026.</p>
+      <p><a href="#main-content">Back to top</a> &middot; <a href="cv/cv.pdf">Curriculum vitae (PDF)</a></p>
+      <p>&copy; 2026 Jihao Liu. Updated September 2026.</p>
     </footer>
   </div>
 </body>

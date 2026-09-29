@@ -26,106 +26,101 @@
   <meta name="twitter:description" content="Conferences and seminars co-organized by Jihao Liu." />
   <meta name="twitter:image" content="https://jihaoliu.org/assets/og-image.png" />
   <!-- META:END -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/discovery.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="container">
     <header class="site-header">
       <div class="site-title"><a href="index.html">Jihao Liu&nbsp;<span style="font-weight: 400; color: var(--color-text-muted);">(刘济豪)</span></a></div>
       <div class="site-subtitle">Peking University · School of Mathematical Sciences</div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="publications.html">Publications</a>
-        <a href="notes.html">Notes</a>
-        <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="talks.html">Invited Talks</a>
-        <a href="conferences.html" class="active">Conferences &amp; Seminars</a>
-        <a href="collaborators.html">Collaborators</a>
-        <a href="pku-ag-seminar.html">PKU AG Seminar</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-primary">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="talks.html">Invited Talks</a>
+          <a href="search.html">Search</a>
+          <a href="cv/cv.pdf">CV (PDF)</a>
+        </div>
+        <details class="nav-more">
+          <summary>Research &amp; community</summary>
+          <div class="nav-secondary">
+          <a href="notes.html">Notes</a>
+          <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
+          <a href="conferences.html" class="active" aria-current="page">Conferences &amp; Seminars</a>
+          <a href="collaborators.html">Collaborators</a>
+          <a href="pku-ag-seminar.html">PKU AG Seminar</a>
+          </div>
+        </details>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <h1>Conferences and Seminars</h1>
-      <p style="color: var(--color-text-muted); font-size: 0.95rem;">In reverse chronological order.</p>
-
+      <p class="page-intro">Conferences and seminar series I have co-organized, including ongoing series and past events.</p>
       <ul class="conferences-list">
-        <li>
-          <div class="course-name">
-            <a href="ffm-conference.html">Conference on Foliation, Fibration, and Moduli</a>
-          </div>
+        <li id="organized-ffm-2026">
+          <div class="course-name"><a href="ffm-conference.html">Conference on Foliation, Fibration, and Moduli</a></div>
           <div class="course-meta">August 24–29, 2026 · Westlake University, Hangzhou · with Chuanhao Wei (local organizer) and Paolo Cascini</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="https://www.math.pku.edu.cn/kxyj/xzky/171823.htm">5th National Algebraic Geometry Conference</a>
-          </div>
+        <li id="organized-national-ag-2026">
+          <div class="course-name"><a href="https://www.math.pku.edu.cn/kxyj/xzky/171823.htm">5th National Algebraic Geometry Conference</a></div>
           <div class="course-meta">July 6–10, 2026 · Peking University · Local organizer with Ruochuan Liu, Zhiyu Tian, Qizheng Yin</div>
           <div class="course-meta">Academic committee: Meng Chen, Baohua Fu, Jun Li, Zhiyuan Li, Xiaotao Sun, Shengli Tan, Zhiyu Tian, Chenyang Xu</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="https://www.math.pku.edu.cn/kxyj/xzky/168546.htm">Summer School on Birational Geometry of Foliations</a>
-          </div>
-          <div class="course-meta">August 18–22, 2025 · with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie</div>
+        <li id="organized-foliations-school-2025">
+          <div class="course-name"><a href="https://www.math.pku.edu.cn/kxyj/xzky/168546.htm">Summer School on Birational Geometry of Foliations</a></div>
+          <div class="course-meta">August 18–22, 2025 · Peking University · with Paolo Cascini, Jingjun Han, Fanjun Meng, Calum Spicer, Roberto Svaldi, Lingyao Xie</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="https://www.math.pku.edu.cn/kxyj/xzky/164429.htm">Conference on Explicit Birational Geometry</a>
-          </div>
-          <div class="course-meta">May 28 – June 1, 2025</div>
+        <li id="organized-explicit-2025">
+          <div class="course-name"><a href="https://www.math.pku.edu.cn/kxyj/xzky/164429.htm">Conference on Explicit Birational Geometry</a></div>
+          <div class="course-meta">May 28 – June 1, 2025 · Peking University</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="https://bicmr.pku.edu.cn/content/show/17-3613.html">6th Beijing Algebraic Geometry Day</a>
-          </div>
-          <div class="course-meta">May 9, 2025 · Local organizer with Zhiyu Tian and Qizheng Yin · Other organizers: Baohua Fu, Jie Liu, Jian Xiao, Yao Yuan, Zhixian Zhu</div>
+        <li id="organized-beijing-ag-6">
+          <div class="course-name"><a href="https://bicmr.pku.edu.cn/content/show/17-3613.html">6th Beijing Algebraic Geometry Day</a></div>
+          <div class="course-meta">May 9, 2025 · Peking University · Local organizer</div>
+          <div class="course-meta">With Zhiyu Tian and Qizheng Yin. Other organizers: Baohua Fu, Jie Liu, Jian Xiao, Yao Yuan, Zhixian Zhu</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="http://faculty.bicmr.pku.edu.cn/~qizheng/#three">Peking University's Algebraic Geometry Seminar</a>
-          </div>
-          <div class="course-meta">2024 Fall – present · with Zhiyu Tian and Qizheng Yin</div>
+        <li id="organized-pku-seminar">
+          <div class="course-name"><a href="pku-ag-seminar.html">Peking University Algebraic Geometry Seminar</a></div>
+          <div class="course-meta">2024 Fall – present · With Fumiaki Suzuki, Zhiyu Tian, Qizheng Yin</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="https://bicmr.pku.edu.cn/content/show/17-3499.html">2nd Beijing Algebraic Geometry Day</a>
-          </div>
-          <div class="course-meta">November 23, 2024 · Local organizer with Zhiyu Tian and Qizheng Yin · Other organizers: Baohua Fu, Jie Liu, Jian Xiao, Yao Yuan, Zhixian Zhu</div>
+        <li id="organized-beijing-ag-2">
+          <div class="course-name"><a href="https://bicmr.pku.edu.cn/content/show/17-3499.html">2nd Beijing Algebraic Geometry Day</a></div>
+          <div class="course-meta">November 23, 2024 · Peking University · Local organizer</div>
+          <div class="course-meta">With Zhiyu Tian and Qizheng Yin. Other organizers: Baohua Fu, Jie Liu, Jian Xiao, Yao Yuan, Zhixian Zhu</div>
         </li>
-        <li>
-          <div class="course-name">
-            1st Conference on <a href="https://scms.fudan.edu.cn/info/4589/7021.htm">Foliation and Birational Geometry</a>
-          </div>
-          <div class="course-meta">August 26–30, 2024 · with Meng Chen, Chen Jiang, and Jingjun Han</div>
+        <li id="organized-foliation-2024">
+          <div class="course-name">1st Conference on <a href="https://scms.fudan.edu.cn/info/4589/7021.htm">Foliation and Birational Geometry</a></div>
+          <div class="course-meta">August 26–30, 2024 · Fudan University · with Meng Chen, Chen Jiang, and Jingjun Han</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar.html">Northwestern Algebraic Geometry Seminar</a>
-          </div>
-          <div class="course-meta">2021 Fall – 2024 Spring · with Yuchen Liu and Charles Stibitz (2021 Fall–2022 Spring), Yuchen Liu and Kai Huang (2022 Fall), Yuchen Liu (2023 Winter–Spring), Yuchen Liu and Ananth Shankar (2023 Fall–2024 Spring)</div>
+        <li id="organized-northwestern-seminar">
+          <div class="course-name"><a href="https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar.html">Northwestern Algebraic Geometry Seminar</a></div>
+          <div class="course-meta">2021 Fall – 2024 Spring · Co-organized with Yuchen Liu and rotating co-organizers (Charles Stibitz, Kai Huang, Ananth Shankar)</div>
+          <div class="course-meta">with Yuchen Liu and Charles Stibitz (2021 Fall–2022 Spring), Yuchen Liu and Kai Huang (2022 Fall), Yuchen Liu (2023 Winter–Spring), Yuchen Liu and Ananth Shankar (2023 Fall–2024 Spring)</div>
+          <div class="course-meta"><a href="https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2021-2022.html">2021–2022 archive</a></div>
+          <div class="course-meta"><a href="https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2022-2023.html">2022–2023 archive</a></div>
+          <div class="course-meta"><a href="https://faculty.wcas.northwestern.edu/yuchenl/AG_Seminar_2023-2024.html">2023–2024 archive</a></div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="http://www.math.utah.edu/~jliu/utahagpreprintseminar2020Spring.html">Utah Algebraic Geometry Reading Seminar</a>
-          </div>
-          <div class="course-meta">Spring 2020</div>
+        <li id="organized-utah-seminar-2020">
+          <div class="course-name">Utah Algebraic Geometry Reading Seminar</div>
+          <div class="course-meta">Spring 2020 · University of Utah</div>
+          <div class="course-meta">Historical link unavailable.</div>
         </li>
-        <li>
-          <div class="course-name">
-            <a href="http://www.math.utah.edu/~jliu/utahagpreprintseminar2019fall.html">Utah Algebraic Geometry Reading Seminar</a>
-          </div>
-          <div class="course-meta">Fall 2019</div>
+        <li id="organized-utah-seminar-2019">
+          <div class="course-name">Utah Algebraic Geometry Reading Seminar</div>
+          <div class="course-meta">Fall 2019 · University of Utah</div>
+          <div class="course-meta">Historical link unavailable.</div>
         </li>
       </ul>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Jihao Liu. Last updated May 2026.</p>
+      <p><a href="#main-content">Back to top</a> &middot; <a href="cv/cv.pdf">Curriculum vitae (PDF)</a></p>
+      <p>&copy; 2026 Jihao Liu. Updated September 2026.</p>
     </footer>
   </div>
 </body>

@@ -3,32 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page not found — Jihao Liu</title>
-  <meta name="description" content="The page you're looking for doesn't exist on jihaoliu.org." />
+  <title>Search — Jihao Liu</title>
+  <meta name="description" content="Search publications, teaching, talks and seminar archives of Jihao Liu." />
   <!-- META:START -->
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png" />
-  <link rel="canonical" href="https://jihaoliu.org/404.html" />
+  <link rel="canonical" href="https://jihaoliu.org/search.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Jihao Liu" />
-  <meta property="og:title" content="Page not found — Jihao Liu" />
-  <meta property="og:description" content="The page you&#x27;re looking for doesn&#x27;t exist on jihaoliu.org." />
-  <meta property="og:url" content="https://jihaoliu.org/404.html" />
+  <meta property="og:title" content="Search — Jihao Liu" />
+  <meta property="og:description" content="Search publications, teaching, talks and seminar archives of Jihao Liu." />
+  <meta property="og:url" content="https://jihaoliu.org/search.html" />
   <meta property="og:image" content="https://jihaoliu.org/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Page not found — Jihao Liu" />
-  <meta name="twitter:description" content="The page you&#x27;re looking for doesn&#x27;t exist on jihaoliu.org." />
+  <meta name="twitter:title" content="Search — Jihao Liu" />
+  <meta name="twitter:description" content="Search publications, teaching, talks and seminar archives of Jihao Liu." />
   <meta name="twitter:image" content="https://jihaoliu.org/assets/og-image.png" />
   <!-- META:END -->
   <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="/assets/style.css" />
+  <script src="assets/search-index.js" defer></script>
   <script src="assets/discovery.js" defer></script>
 </head>
 <body>
@@ -43,7 +44,7 @@
           <a href="publications.html">Publications</a>
           <a href="teaching.html">Teaching</a>
           <a href="talks.html">Invited Talks</a>
-          <a href="search.html">Search</a>
+          <a href="search.html" class="active" aria-current="page">Search</a>
           <a href="cv/cv.pdf">CV (PDF)</a>
         </div>
         <details class="nav-more">
@@ -60,18 +61,16 @@
     </header>
 
     <main id="main-content" tabindex="-1">
-      <h1 style="font-size: 4rem; margin-bottom: 0.5rem;">404</h1>
-      <p class="intro" style="margin-top: 0;">
-        That page isn't here. It may have moved, or the link may be a typo.
-      </p>
-
-      <p>
-        Try one of the pages above, or head back to the
-        <a href="/index.html">homepage</a>.
-        If you followed a link from somewhere and think it should work,
-        please let me know at
-        <span>liujihao [at] math.pku.edu.cn</span>.
-      </p>
+      <h1>Search the site</h1>
+      <p>Find papers, authors, courses, talks and seminar archives. Search runs in your browser.</p>
+      <div id="site-search"></div>
+      <noscript><p>Search requires JavaScript. You can still browse every page below.</p></noscript>
+      <nav class="section-jump" aria-label="Browse the site">
+        <a href="publications.html">Publications</a><a href="teaching.html">Teaching</a>
+        <a href="talks.html">Invited talks</a><a href="conferences.html">Conferences &amp; seminars</a>
+        <a href="pku-ag-seminar.html">PKU seminar archive</a><a href="notes.html">Notes</a>
+        <a href="ai-results.html">AI results — not human-verified</a>
+      </nav>
     </main>
 
     <footer class="site-footer">

@@ -26,30 +26,39 @@
   <meta name="twitter:description" content="Archive: Peking University Algebraic Geometry Seminar, Spring 2026." />
   <meta name="twitter:image" content="https://jihaoliu.org/assets/og-image.png" />
   <!-- META:END -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/fonts.css" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/discovery.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="container">
     <header class="site-header">
       <div class="site-title"><a href="index.html">Jihao Liu&nbsp;<span style="font-weight: 400; color: var(--color-text-muted);">(刘济豪)</span></a></div>
       <div class="site-subtitle">Peking University · School of Mathematical Sciences</div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="publications.html">Publications</a>
-        <a href="notes.html">Notes</a>
-        <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="talks.html">Invited Talks</a>
-        <a href="conferences.html">Conferences &amp; Seminars</a>
-        <a href="collaborators.html">Collaborators</a>
-        <a href="pku-ag-seminar.html" class="active">PKU AG Seminar</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <div class="nav-primary">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="talks.html">Invited Talks</a>
+          <a href="search.html">Search</a>
+          <a href="cv/cv.pdf">CV (PDF)</a>
+        </div>
+        <details class="nav-more">
+          <summary>Research &amp; community</summary>
+          <div class="nav-secondary">
+          <a href="notes.html">Notes</a>
+          <a href="ai-results.html">AI-generated Results Not Verified by a Human</a>
+          <a href="conferences.html">Conferences &amp; Seminars</a>
+          <a href="collaborators.html">Collaborators</a>
+          <a href="pku-ag-seminar.html" class="active">PKU AG Seminar</a>
+          </div>
+        </details>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
       <h1>Peking University Algebraic Geometry Seminar</h1>
       <p style="color: var(--color-text-muted); font-size: 0.95rem;">Archive · Spring 2026</p>
 
@@ -71,7 +80,7 @@
         </p>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-97e90562fc27">
         <div class="seminar-date">March 12</div>
         <div class="seminar-speaker">范智庥 (Zhixiu Fan) — Fudan University</div>
         <div class="seminar-title">Volumes of foliations birationally bounded by algebraically integrable families</div>
@@ -80,7 +89,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-e2859cfaad58">
         <div class="seminar-date">March 19</div>
         <div class="seminar-speaker">龚挺 (Ting Gong) — University of Washington</div>
         <div class="seminar-title">Moduli of twisted vector bundles and the period index problem</div>
@@ -89,7 +98,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-174ac40dc125">
         <div class="seminar-date">March 26</div>
         <div class="seminar-speaker">Salvatore Floccari — Humboldt-Universität zu Berlin</div>
         <div class="seminar-title">Weil fourfolds with discriminant 1 and singular OG6-varieties</div>
@@ -98,7 +107,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-019eb482f6d3">
         <div class="seminar-date">April 2</div>
         <div class="seminar-speaker">André Belotto da Silva — Université Paris Cité, IMJ-PRG</div>
         <div class="seminar-title">Resolution of Singular Foliations via Principalization</div>
@@ -107,7 +116,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-ae0800d861fc">
         <div class="seminar-date">April 9</div>
         <div class="seminar-speaker">Lena Ji — University of Illinois at Urbana-Champaign</div>
         <div class="seminar-title">On rational multisections of conic bundles</div>
@@ -116,7 +125,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-22b8be51b67b">
         <div class="seminar-date">April 16</div>
         <div class="seminar-speaker">袁瑶 (Yao Yuan) — Capital Normal University</div>
         <div class="seminar-title">Lefschetz filtration and perverse filtration on the compactified Jacobian</div>
@@ -125,7 +134,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-cf4ce7a5137f">
         <div class="seminar-date">April 22 <span style="color: var(--color-text-muted); font-weight: 400;">(special time · Wednesday, 10:30 a.m.)</span></div>
         <div class="seminar-speaker">Eric Riedl — University of Notre Dame</div>
         <div class="seminar-title">An improved Bend-and-Break</div>
@@ -134,7 +143,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-8d741c6434df">
         <div class="seminar-date">April 23</div>
         <div class="seminar-speaker">Jefferson Baudin — École Polytechnique Fédérale de Lausanne</div>
         <div class="seminar-title">A Grauert–Riemenschneider vanishing theorem for Witt canonical sheaves</div>
@@ -144,7 +153,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-255b7a7b0e3f">
         <div class="seminar-date">June 4</div>
         <div class="seminar-speaker">Joaquin Moraga — University of California, Los Angeles</div>
         <div class="seminar-title">Cluster type varieties</div>
@@ -153,7 +162,7 @@
         </div>
       </div>
 
-      <div class="seminar-entry">
+      <div class="seminar-entry" id="seminar-afe4586d6a93">
         <div class="seminar-date">June 11</div>
         <div class="seminar-speaker">松澤陽介 (Yohsuke Matsuzawa) — Osaka Metropolitan University</div>
         <div class="seminar-title">Height boundedness of periodic points of dominant rational self-maps</div>
@@ -164,7 +173,8 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Jihao Liu. Last updated September 2026.</p>
+      <p><a href="#main-content">Back to top</a> &middot; <a href="cv/cv.pdf">Curriculum vitae (PDF)</a></p>
+      <p>&copy; 2026 Jihao Liu. Updated September 2026.</p>
     </footer>
   </div>
 </body>

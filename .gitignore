@@ -19,3 +19,6 @@ cv/preview-*.png
 
 # stray xelatex log when run from the wrong directory
 texput.log
+
+# Local CV build directory
+cv/.build/
