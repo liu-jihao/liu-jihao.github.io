@@ -60,8 +60,9 @@ def build(check=False):
         if f'id="{row["id"]}"' not in (ROOT/'conferences.html').read_text():continue
         add('organized-'+row['id'],row['title_html'],row['date_html']+' '+' '.join(row['details_html']),'conferences.html#'+row['id'],'activities',year(row['date_html']))
     structured={'publications.html','teaching.html','talks.html','conferences.html'}
+    unpublished=set(re.findall(r'^\s*-\s*(\S+\.html)\s*$',(ROOT/'_config.yml').read_text(),re.M))  # pages GitHub Pages does not serve
     for page in sorted(ROOT.glob('*.html')):
-        if page.name in structured|{'search.html','404.html'}:continue
+        if page.name in structured|{'search.html','404.html'}|unpublished:continue
         source=page.read_text();tree=Tree(source).root;main=next(iter(tree.all(lambda n:n.tag=='main')),None)
         if not main:continue
         replacements=[]
