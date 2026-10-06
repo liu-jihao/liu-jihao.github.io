@@ -26,3 +26,4 @@ exclude:
   - AGENTS.md
   - Makefile
   - cv/.build/
+  - ai-results-about.html
