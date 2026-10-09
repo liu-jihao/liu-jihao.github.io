@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-07",
+  "updated": "2026-10-09",
   "profile": {
     "name": "Jihao Liu",
     "name_zh": "刘济豪",
@@ -4025,6 +4025,15 @@
     }
   ],
   "research_extras": [
+    {
+      "title_html": "Upper bound of minimal log discrepancies",
+      "url": "notes/upper-bound-of-minimal-log-discrepancies-2026-10-09.pdf",
+      "disclaimer": "Note",
+      "yymm": 2610,
+      "topics": [
+        "sing"
+      ]
+    },
     {
       "title_html": "Proof of the tropical Hodge conjecture for tropical abelian varieties",
       "url": "ai-results/tropical-hodge-conjecture-for-tropical-abelian-varieties-2026-09-22.pdf",
