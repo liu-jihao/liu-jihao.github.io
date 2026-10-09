@@ -442,6 +442,11 @@ footer.site-footer {
   text-align: center;
 }
 
+footer.site-footer .site-notice {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
 footer.site-footer a {
   color: var(--color-text-muted);
   border-bottom-color: rgba(85, 85, 85, 0.3);
