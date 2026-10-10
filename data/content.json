@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-09",
+  "updated": "2026-10-11",
   "profile": {
     "name": "Jihao Liu",
     "name_zh": "刘济豪",
@@ -4025,6 +4025,24 @@
     }
   ],
   "research_extras": [
+    {
+      "title_html": "Proof of Serrano&rsquo;s conjecture",
+      "url": "notes/proof-of-serrano-conjecture-2026-10-11.pdf",
+      "disclaimer": "Note",
+      "yymm": 2610,
+      "topics": [
+        "mmp"
+      ]
+    },
+    {
+      "title_html": "Boundedness of complements of log canonical pairs",
+      "url": "notes/boundedness-of-complements-of-log-canonical-pairs-2026-10-11.pdf",
+      "disclaimer": "Note",
+      "yymm": 2610,
+      "topics": [
+        "bdd"
+      ]
+    },
     {
       "title_html": "Upper bound of minimal log discrepancies",
       "url": "notes/upper-bound-of-minimal-log-discrepancies-2026-10-09.pdf",
