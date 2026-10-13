@@ -59,6 +59,37 @@
   },
   "publications": [
     {
+      "id": "pub-77",
+      "number": "77",
+      "year": 2026,
+      "title_html": "A counterexample to the Popa–Schnell global generation conjecture",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://zenodo.org/records/23334837",
+          "label": "Zenodo:23334837"
+        }
+      ],
+      "topics": [
+        "generalag"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "1",
+        "year": 2026,
+        "order": 1
+      },
+      "source_urls": [
+        "https://zenodo.org/records/23334837",
+        "https://doi.org/10.5281/zenodo.23334837"
+      ],
+      "checked_on": "2026-10-13",
+      "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
       "id": "pub-76",
       "number": "76",
       "year": 2026,
@@ -78,9 +109,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "1",
+        "label": "2",
         "year": 2026,
-        "order": 1
+        "order": 2
       },
       "source_urls": [
         "https://zenodo.org/records/23329513",
@@ -111,9 +142,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "2",
+        "label": "3",
         "year": 2026,
-        "order": 2
+        "order": 3
       },
       "source_urls": [
         "https://arxiv.org/abs/2609.37761",
@@ -144,9 +175,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "3",
+        "label": "4",
         "year": 2026,
-        "order": 3
+        "order": 4
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -177,9 +208,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "4",
+        "label": "5",
         "year": 2026,
-        "order": 4
+        "order": 5
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -210,9 +241,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "5",
+        "label": "6",
         "year": 2026,
-        "order": 5
+        "order": 6
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -244,9 +275,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "6",
+        "label": "7",
         "year": 2026,
-        "order": 6
+        "order": 7
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -278,9 +309,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "7",
+        "label": "8",
         "year": 2026,
-        "order": 7
+        "order": 8
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -310,9 +341,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "8",
+        "label": "9",
         "year": 2026,
-        "order": 8
+        "order": 9
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -343,9 +374,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "9",
+        "label": "10",
         "year": 2026,
-        "order": 9
+        "order": 10
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -376,9 +407,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "10",
+        "label": "11",
         "year": 2026,
-        "order": 10
+        "order": 11
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -418,9 +449,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "11",
+        "label": "12",
         "year": 2026,
-        "order": 11
+        "order": 12
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -451,9 +482,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "12",
+        "label": "13",
         "year": 2026,
-        "order": 12
+        "order": 13
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -485,9 +516,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "13",
+        "label": "14",
         "year": 2026,
-        "order": 13
+        "order": 14
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -517,9 +548,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "14",
+        "label": "15",
         "year": 2026,
-        "order": 14
+        "order": 15
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -550,9 +581,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "15",
+        "label": "16",
         "year": 2026,
-        "order": 15
+        "order": 16
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -584,9 +615,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "16",
+        "label": "17",
         "year": 2026,
-        "order": 16
+        "order": 17
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -617,9 +648,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "17a",
+        "label": "18a",
         "year": 2026,
-        "order": 17
+        "order": 18
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -650,9 +681,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "17b",
+        "label": "18b",
         "year": 2026,
-        "order": 18
+        "order": 19
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -682,9 +713,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "18",
+        "label": "19",
         "year": 2026,
-        "order": 19
+        "order": 20
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -715,9 +746,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "19",
+        "label": "20",
         "year": 2026,
-        "order": 20
+        "order": 21
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -750,9 +781,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "20",
+        "label": "21",
         "year": 2026,
-        "order": 21
+        "order": 22
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -784,9 +815,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "21",
+        "label": "22",
         "year": 2026,
-        "order": 22
+        "order": 23
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -816,9 +847,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "22",
+        "label": "23",
         "year": 2026,
-        "order": 23
+        "order": 24
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -848,9 +879,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "23",
+        "label": "24",
         "year": 2026,
-        "order": 24
+        "order": 25
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -883,9 +914,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "24",
+        "label": "25",
         "year": 2026,
-        "order": 25
+        "order": 26
       },
       "verified_updates": [
         {
@@ -924,9 +955,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "25",
+        "label": "26",
         "year": 2026,
-        "order": 26
+        "order": 27
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -956,9 +987,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "26",
+        "label": "27",
         "year": 2026,
-        "order": 27
+        "order": 28
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -990,9 +1021,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "27",
+        "label": "28",
         "year": 2026,
-        "order": 28
+        "order": 29
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1026,9 +1057,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "28",
+        "label": "29",
         "year": 2026,
-        "order": 29
+        "order": 30
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1060,9 +1091,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "29",
+        "label": "30",
         "year": 2026,
-        "order": 30
+        "order": 31
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1095,9 +1126,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "30",
+        "label": "31",
         "year": 2026,
-        "order": 31
+        "order": 32
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1129,9 +1160,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "31",
+        "label": "32",
         "year": 2025,
-        "order": 32
+        "order": 33
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1165,9 +1196,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "32",
+        "label": "33",
         "year": 2025,
-        "order": 33
+        "order": 34
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1202,9 +1233,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "33a",
+        "label": "34a",
         "year": 2025,
-        "order": 34
+        "order": 35
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1236,9 +1267,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "33b",
+        "label": "34b",
         "year": 2025,
-        "order": 35
+        "order": 36
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1320,9 +1351,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "34",
+        "label": "35",
         "year": 2025,
-        "order": 36
+        "order": 37
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1360,9 +1391,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "35",
+        "label": "36",
         "year": 2025,
-        "order": 37
+        "order": 38
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1394,9 +1425,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "36",
+        "label": "37",
         "year": 2025,
-        "order": 38
+        "order": 39
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1532,9 +1563,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "37",
+        "label": "38",
         "year": 2024,
-        "order": 39
+        "order": 40
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1571,9 +1602,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "38",
+        "label": "39",
         "year": 2024,
-        "order": 40
+        "order": 41
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -1830,9 +1861,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "39",
+        "label": "40",
         "year": 2023,
-        "order": 41
+        "order": 42
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -2015,9 +2046,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "40",
+        "label": "41",
         "year": 2023,
-        "order": 42
+        "order": 43
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -2458,9 +2489,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "41",
+        "label": "42",
         "year": 2022,
-        "order": 43
+        "order": 44
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -2938,9 +2969,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "42",
+        "label": "43",
         "year": 2018,
-        "order": 44
+        "order": 45
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
@@ -3060,9 +3091,9 @@
       ],
       "cv": {
         "section": "preprint",
-        "label": "43",
+        "label": "44",
         "year": 2017,
-        "order": 45
+        "order": 46
       },
       "source_urls": [
         "https://jihaoliu.org/publications.html",
