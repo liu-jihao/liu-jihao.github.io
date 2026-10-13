@@ -59,7 +59,7 @@ def jump(items,label):
 def render_publications(data):
     pubs=data['publications']; years=list(dict.fromkeys(p['year'] for p in pubs))
     lines=['      <h1>Publications and Preprints</h1>',
-           '      <p class="page-intro">In reverse chronological order by arXiv posting date. Related versions retain their shared publication number.</p>',
+           '      <p class="page-intro">In reverse chronological order by posting date on arXiv or Zenodo. Related versions retain their shared publication number.</p>',
            jump([(f'publications-{year}',str(year)) for year in years],'Publication years').rstrip()]
     current=None
     for p in pubs:
@@ -189,7 +189,7 @@ def render_cv(data):
         lines.append(r'\cvsection{'+title+'}{'+key+'}')
         for e in p[key]:
             lines.append(r'\entry{'+escape_tex(e['dates'])+r'}{\textbf{'+escape_tex(e['institution'])+'}, '+escape_tex(e['unit'])+r'\\ '+escape_tex(e['details'])+'}')
-    for key,title,note in [('published','Published Papers','Listed by year of journal publication, most recent first.'),('accepted','Papers to Appear','Accepted but not yet published. Listed by arXiv posting date, most recent first.'),('preprint','Preprints','Listed by arXiv posting date, most recent first; related versions are grouped together.')]:
+    for key,title,note in [('published','Published Papers','Listed by year of journal publication, most recent first.'),('accepted','Papers to Appear','Accepted but not yet published. Listed by arXiv posting date, most recent first.'),('preprint','Preprints','Listed by posting date on arXiv or Zenodo, most recent first; related versions are grouped together.')]:
         entries=sorted((p for p in data['publications'] if p['cv']['section']==key),key=lambda p:(p['cv']['order'],p['number']))
         if not entries: continue
         labels=[p['cv']['label'] for p in entries]
