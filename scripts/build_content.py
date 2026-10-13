@@ -60,6 +60,7 @@ def render_publications(data):
     pubs=data['publications']; years=list(dict.fromkeys(p['year'] for p in pubs))
     lines=['      <h1>Publications and Preprints</h1>',
            '      <p class="page-intro">In reverse chronological order by posting date on arXiv or Zenodo. Related versions retain their shared publication number.</p>',
+           '      <p class="page-intro">arXiv now limits each author to two new submissions per month. This limit would have been too strict for me much of the time even before AI, and recently too many arXiv submissions have been put on hold. For these reasons I am trying to post some of my papers on Zenodo.</p>',
            jump([(f'publications-{year}',str(year)) for year in years],'Publication years').rstrip()]
     current=None
     for p in pubs:
