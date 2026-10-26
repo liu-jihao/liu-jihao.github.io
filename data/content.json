@@ -4088,6 +4088,15 @@
   ],
   "research_extras": [
     {
+      "title_html": "Normalized volumes are not lower semi-continuous in valuation spaces",
+      "url": "papers/normalized-volumes-are-not-lower-semi-continuous-in-valuation-spaces.html",
+      "disclaimer": "Note",
+      "yymm": 2610,
+      "topics": [
+        "sing"
+      ]
+    },
+    {
       "title_html": "Proof of Serrano&rsquo;s conjecture",
       "url": "notes/proof-of-serrano-conjecture-2026-10-11.pdf",
       "disclaimer": "Note",
