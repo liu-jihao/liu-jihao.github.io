@@ -59,36 +59,6 @@
   },
   "publications": [
     {
-      "id": "pub-78",
-      "number": "78",
-      "year": 2026,
-      "title_html": "Nonvanishing implies abundance",
-      "authors": [
-        "Jihao Liu"
-      ],
-      "venue_html": "",
-      "links": [
-        {
-          "url": "https://arxiv.org/abs/2610.35913",
-          "label": "arXiv:2610.35913"
-        }
-      ],
-      "topics": [
-        "mmp"
-      ],
-      "cv": {
-        "section": "preprint",
-        "label": "3",
-        "year": 2026,
-        "order": 3
-      },
-      "source_urls": [
-        "https://arxiv.org/abs/2610.35913",
-        "https://arxiv.org/abs/2610.35913v1"
-      ],
-      "checked_on": "2026-10-29"
-    },
-    {
       "id": "pub-77",
       "number": "77",
       "year": 2026,
@@ -149,6 +119,36 @@
       ],
       "checked_on": "2026-10-13",
       "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
+    },
+    {
+      "id": "pub-78",
+      "number": "78",
+      "year": 2026,
+      "title_html": "Nonvanishing implies abundance",
+      "authors": [
+        "Jihao Liu"
+      ],
+      "venue_html": "",
+      "links": [
+        {
+          "url": "https://arxiv.org/abs/2610.35913",
+          "label": "arXiv:2610.35913"
+        }
+      ],
+      "topics": [
+        "mmp"
+      ],
+      "cv": {
+        "section": "preprint",
+        "label": "3",
+        "year": 2026,
+        "order": 3
+      },
+      "source_urls": [
+        "https://arxiv.org/abs/2610.35913",
+        "https://arxiv.org/abs/2610.35913v1"
+      ],
+      "checked_on": "2026-10-29"
     },
     {
       "id": "pub-75",
