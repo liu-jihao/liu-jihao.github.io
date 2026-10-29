@@ -59,8 +59,8 @@
   },
   "publications": [
     {
-      "id": "pub-77",
-      "number": "77",
+      "id": "pub-78",
+      "number": "78",
       "year": 2026,
       "title_html": "A counterexample to the Popa–Schnell global generation conjecture",
       "authors": [
@@ -90,8 +90,8 @@
       "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
     },
     {
-      "id": "pub-76",
-      "number": "76",
+      "id": "pub-77",
+      "number": "77",
       "year": 2026,
       "title_html": "Upper bound of minimal log discrepancies",
       "authors": [
@@ -121,8 +121,8 @@
       "verification_scope": "Bibliographic metadata and record identity; not a verification of mathematical claims."
     },
     {
-      "id": "pub-78",
-      "number": "78",
+      "id": "pub-76",
+      "number": "76",
       "year": 2026,
       "title_html": "Nonvanishing implies abundance",
       "authors": [
@@ -4242,7 +4242,7 @@
   },
   "maintenance_notes": [
     "Inherited public metadata is preserved unless supported by the source audit. See the local confirmation list for unresolved items.",
-    "The website publication numbers are stable identifiers, independent of section-local CV labels.",
+    "The website publication numbers follow the posting date on arXiv or Zenodo and are independent of section-local CV labels. A paper posted earlier but added later takes the number of its date position and the later numbers shift by one, together with any reference to them (2026-10-29: Jihao found the order 77, 76, 78, 75 strange; Nonvanishing implies abundance, posted 2026-10-07, became no. 76).",
     "60a and 60b are two presentations of one result; keep the disclaimer and cross-references.",
     "44a and 44b have distinct titles and author lists; render both without conflating Lu Qi authorship.",
     "Northwestern Winter 2024: user confirmed both Math 230-2 (Section 31) and Math 220-2 (Section 41); keep separate entries and preserve teaching/coordinator roles. Do not merge the two courses or omit their sections.",
