@@ -72,6 +72,7 @@ def render_publications(data):
                       f'        <h3 class="entry-title" id="{titleid}"><span class="entry-number">{p["number"]}.</span> {p["title_html"]}</h3>',
                       f'        <div class="entry-authors">{escape(", ".join(p["authors"]))}</div>'])
         if p['venue_html']: lines.append(f'        <div class="entry-venue">{p["venue_html"]}</div>')
+        if p.get('web_note_html'): lines.append(f'        <div class="entry-venue">{p["web_note_html"]}</div>')   # 只上网页、不进简历（10-29）
         anchors=' '.join(f'<a href="{escape(l["url"],quote=True)}">{escape(l["label"])}</a>' for l in p['links'])
         lines.extend([f'        <div class="entry-links">{anchors}</div>','      </article>'])
     lines.append('      </section>')
