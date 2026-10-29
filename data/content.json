@@ -4115,9 +4115,9 @@
       ]
     },
     {
-      "title_html": "Boundedness of complements for log canonical pairs",
-      "url": "papers/boundedness-of-complements-for-log-canonical-pairs.html",
-      "disclaimer": "AI-generated; first version verified by a human, new theorems not verified by a human",
+      "title_html": "Boundedness of complements of log canonical pairs",
+      "url": "notes/boundedness-of-complements-of-log-canonical-pairs-2026-10-11.pdf",
+      "disclaimer": "Note",
       "yymm": 2610,
       "topics": [
         "bdd"
