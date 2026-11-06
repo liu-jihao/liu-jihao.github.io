@@ -1,0 +1,14 @@
+{
+  "checker_source_matches_pinned_upstream": true,
+  "source_sha256": "1ac2c9f174f2eaf3420f4fc9a6ffebcc2583196be497e9ae5a9a52ff8dfcde56",
+  "all_branch_assumptions_integral": true,
+  "all_references_backward_and_distinct": true,
+  "assumptions": 454,
+  "derivation_counts": {
+    "asm": 454,
+    "lin": 90960,
+    "rnd": 45066,
+    "uns": 227
+  },
+  "seconds": 16.795853693969548
+}

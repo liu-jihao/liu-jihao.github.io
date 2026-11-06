@@ -1,0 +1,11 @@
+{
+  "complete_local_rows": 1368,
+  "variables": 1396,
+  "integer_variables": 1396,
+  "base_constraints": 111,
+  "bounds": 2792,
+  "certificate_constraints": 2903,
+  "exact_model_match": true,
+  "source": "independently regenerated finite theorem36a parameter list and rational Q/RR ledgers",
+  "seconds": 6.164841318503022
+}

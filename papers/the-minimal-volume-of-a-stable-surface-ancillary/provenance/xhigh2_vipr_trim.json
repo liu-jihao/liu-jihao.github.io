@@ -1,0 +1,16 @@
+{
+  "source_derivations": 416688,
+  "kept_derivations": 136710,
+  "original_constraints": 2903,
+  "source_bytes": 3915388670,
+  "trimmed_bytes": 1267398525,
+  "kinds": {
+    "lin": 279489,
+    "weak": 371,
+    "asm": 454,
+    "rnd": 136518,
+    "uns": 227
+  },
+  "seconds": 89.73585347272456,
+  "validated": false
+}

@@ -1,0 +1,2 @@
+#define VIPR_VERSION_MAJOR 1
+#define VIPR_VERSION_MINOR 1
