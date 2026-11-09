@@ -1,0 +1,185 @@
+#!/usr/bin/env python3
+"""Case n3 (normal form N3, orbit B1, distinguished generator special, c = 1).
+Light generator (no CAS): writes
+  n3_build.sing      common Singular code: ring R, the matrix A, the lambda ansatz LAMB, unknown orders,
+                     the equations EQ (all coefficient equations with w-orders and tags)
+  n3_unknowns.txt    table of the 393 unknowns: index, name, type, monomial, w-order
+and prints the recount of the ansatz (compare plan/scripts/out_counts.txt).
+Notation of plan/case_common.md: w (wt 1, sigma -), y1 (wt 2, +), y2, y3 (wt 2, -); y0 = w^2;
+generators v0..v5 of degrees c = (0,3,3,3,3,4), sigma-signs d = (+,-,-,+,+,-)."""
+import os
+from collections import Counter
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+c = [0, 3, 3, 3, 3, 4]
+dl = [1, -1, -1, 1, 1, -1]
+r = [8 - x for x in c]
+
+
+def mons(n, s):
+    """monomials w^a y1^b y2^e y3^f of weight n = a + 2(b+e+f) and sigma-sign s = (-1)^(a+e+f)"""
+    out = []
+    for a in range(n + 1):
+        if (n - a) % 2:
+            continue
+        m = (n - a) // 2
+        for b in range(m + 1):
+            for e in range(m - b + 1):
+                f = m - b - e
+                if (-1) ** (a + e + f) == s:
+                    out.append((a, b, e, f))
+    return out
+
+
+def mstr(ex):
+    a, b, e, f = ex
+    parts = []
+    for v, p in (('w', a), ('y1', b), ('y2', e), ('y3', f)):
+        if p == 1:
+            parts.append(v)
+        elif p > 1:
+            parts.append('%s^%d' % (v, p))
+    return '*'.join(parts) if parts else '1'
+
+
+# ---------------- lambda ansatz ----------------
+pairs = [(i, j) for i in range(1, 6) for j in range(i, 6)]
+lam = []          # (n, i, j, k, ex)
+LP = {}           # (pair index, k) -> [(n, ex)]
+n = 0
+for pi, (i, j) in enumerate(pairs):
+    for k in range(6):
+        wt = c[i] + c[j] - c[k]
+        s = dl[i] * dl[j] * dl[k]
+        L = []
+        for ex in mons(wt, s):
+            n += 1
+            lam.append((n, i, j, k, ex))
+            L.append((n, ex))
+        LP[(pi, k)] = L
+NL = n
+byk = Counter(t[3] for t in lam)
+byo = Counter(t[4][0] for t in lam)
+
+# ---------------- A-unknowns ----------------
+# G = g1 y3^3 + g2 y1^2y3 + g3 y2y3^2 + g4 y1^2y2 + g5 y2^2y3 + g6 y2^3 + g7 y0y1y3 + g8 y0y1y2 + g9 y0^2y3 + g10 y0^2y2
+Gm = [(0, 0, 0, 3), (0, 2, 0, 1), (0, 0, 1, 2), (0, 2, 1, 0), (0, 0, 2, 1), (0, 0, 3, 0),
+      (1, 1, 0, 1), (1, 1, 1, 0), (2, 0, 0, 1), (2, 0, 1, 0)]          # exponents of (y0, y1, y2, y3)
+# kept q-monomials (case_n3.md): (q index, exponents of (y0,y1,y2,y3))
+Bm = [(2, (1, 0, 1, 0)), (2, (1, 0, 0, 1)),
+      (3, (2, 0, 0, 0)), (3, (1, 1, 0, 0)), (3, (0, 2, 0, 0)), (3, (0, 0, 2, 0)), (3, (0, 0, 1, 1)), (3, (0, 0, 0, 2)),
+      (4, (2, 0, 0, 0)), (4, (0, 0, 2, 0)), (4, (0, 0, 1, 1)), (4, (0, 0, 0, 2))]
+
+
+def ystr(ex):
+    k0, k1, k2, k3 = ex
+    parts = []
+    for v, p in (('y0', k0), ('y1', k1), ('y2', k2), ('y3', k3)):
+        if p == 1:
+            parts.append(v)
+        elif p > 1:
+            parts.append('%s^%d' % (v, p))
+    return '*'.join(parts) if parts else '1'
+
+
+# sanity of the A-ansatz signs: G anti-invariant (k2+k3 odd), q2 anti-invariant, q3, q4 invariant
+for ex in Gm:
+    assert sum(ex) == 3 and (ex[2] + ex[3]) % 2 == 1
+for qi, ex in Bm:
+    assert sum(ex) == 2
+    assert (ex[2] + ex[3]) % 2 == (1 if qi in (1, 2) else 0)
+
+# unknown table: index in ring S = (lam(1..371), g(1..10), b(1..12))
+rows = []
+for (nn, i, j, k, ex) in lam:
+    rows.append((nn, 'lam(%d)' % nn, 'lambda_{%d%d,%d}' % (i, j, k), mstr(ex), ex[0]))
+for t, ex in enumerate(Gm):
+    rows.append((NL + t + 1, 'g(%d)' % (t + 1), 'g (A_00 = y0*G)', 'y0*(' + ystr(ex) + ')', 2 + 2 * ex[0]))
+for t, (qi, ex) in enumerate(Bm):
+    rows.append((NL + 10 + t + 1, 'b(%d)' % (t + 1), 'b (q%d)' % qi, ystr(ex), 1 + 2 * ex[0]))
+ORD = [x[4] for x in rows]
+assert len(rows) == NL + 22
+
+# ---------------- RC slot counts ----------------
+eqo = Counter()
+eqt = 0
+for (i, j) in pairs:
+    ms = mons(8 + c[i] + c[j], -dl[i] * dl[j])
+    eqt += len(ms)
+    for m in ms:
+        eqo[m[0]] += 1
+syz = 0
+for (i, j) in pairs:
+    for m in range(1, 6):
+        nn = c[i] + c[j] - r[m]
+        if nn >= 0:
+            syz += len(mons(nn, -dl[i] * dl[j] * dl[m]))
+
+# ---------------- write the unknown table ----------------
+with open(os.path.join(HERE, 'n3_unknowns.txt'), 'w') as f:
+    f.write('# case n3: unknowns (index in ring S = (lam(1..371), g(1..10), b(1..12)); name; type; monomial; w-order)\n')
+    f.write('# lambda_{ij,k}: coefficient of the monomial in lambda_{ij,k} (weight c_i+c_j-c_k, sign d_i d_j d_k)\n')
+    f.write('# g: coefficient of y0*monomial in A_00 = y0*G; b: coefficient of the monomial in q_i (entry A_0i = w*q_i)\n')
+    for x in rows:
+        f.write('%3d  %-8s  %-18s  %-14s  %d\n' % x)
+
+# ---------------- write n3_build.sing ----------------
+L = []
+L.append('// n3_build.sing (generated by gen_n3.py): system of case n3 = normal form N3, c = 1.')
+L.append('// Ring R: unknowns lam(1..371), g(1..10), b(1..12) (indices 1..393), then w, y1, y2, y3 (394..397).')
+L.append('ring R = 0, (lam(1..%d), g(1..10), b(1..12), w, y1, y2, y3), dp;' % NL)
+L.append('poly y0 = w^2;')
+L.append('poly G = ' + ' + '.join('g(%d)*%s' % (t + 1, ystr(ex)) for t, ex in enumerate(Gm)) + ';')
+qpoly = {1: [], 2: [], 3: [], 4: []}
+for t, (qi, ex) in enumerate(Bm):
+    qpoly[qi].append('b(%d)*%s' % (t + 1, ystr(ex)))
+for qi in (1, 2, 3, 4):
+    L.append('poly q%d = %s;' % (qi, ' + '.join(qpoly[qi]) if qpoly[qi] else '0'))
+L.append('poly Q = y2^2 - y1^2;')
+L.append('matrix A[6][6] = y0*G, w*q1, w*q2, w*q3, w*q4, Q,')
+L.append('                 w*q1, y3, y2, y1, 0, w,')
+L.append('                 w*q2, y2, 0, y0, y1, 0,')
+L.append('                 w*q3, y1, y0, 0, y2, 0,')
+L.append('                 w*q4, 0, y1, y2, -y3, 0,')
+L.append('                 Q, w, 0, 0, 0, 0;')
+L.append('proc cofac(matrix M, int rr, int cc) { matrix S5[5][5]; int a, bb, p, q; a = 0; for (p=1; p<=6; p++) { if (p != rr) { a++; bb = 0; for (q=1; q<=6; q++) { if (q != cc) { bb++; S5[a,bb] = M[p,q]; } } } } return((-1)^(rr+cc) * det(S5)); }')
+L.append('// lambda ansatz: LAMB[p, k+1] = lambda_{ij,k} for the p-th pair (i,j), pairs in the order ' + ' '.join('(%d,%d)' % pq for pq in pairs))
+L.append('matrix LAMB[15][6];')
+for pi in range(15):
+    for k in range(6):
+        terms = ' + '.join('lam(%d)*%s' % (nn, mstr(ex)) for nn, ex in LP[(pi, k)])
+        L.append('LAMB[%d,%d] = %s;' % (pi + 1, k + 1, terms if terms else '0'))
+L.append('intvec PI = ' + ','.join(str(p[0]) for p in pairs) + ';')
+L.append('intvec PJ = ' + ','.join(str(p[1]) for p in pairs) + ';')
+L.append('intvec ORD = ' + ','.join(str(o) for o in ORD) + ';   // w-order of unknown 1..393')
+L.append('int NLAM = %d; int NUNK = %d;' % (NL, NL + 22))
+L.append('intvec CDEG = 0,3,3,3,3,4; intvec DSG = 1,-1,-1,1,1,-1;')
+# equations
+L.append('// ---- all coefficient equations of E_ij = B_ij - sum_k lambda_{ij,k} B_0k (1 <= i <= j <= 5) ----')
+L.append('matrix B0[1][6]; int k; for (k=1;k<=6;k++){ B0[1,k] = cofac(A,1,k); }   // B0[1,k] = B_{0,k-1}')
+L.append('list EQ; intvec EQO; intvec EQP; list EQM; int nEQ = 0; int i, j, u, p; poly pol; matrix C; int badhom = 0;')
+L.append('intvec WTV = intvec(0:%d), 1, 2, 2, 2;' % (NL + 22))
+L.append('for (p=1; p<=15; p++) {')
+L.append('  i = PI[p]; j = PJ[p];')
+L.append('  pol = cofac(A, i+1, j+1); for (k=1;k<=6;k++) { pol = pol - LAMB[p,k]*B0[1,k]; }')
+L.append('  C = coef(pol, w*y1*y2*y3);')
+L.append('  for (u=1; u<=ncols(C); u++) {')
+L.append('    if (C[2,u] != 0) {')
+L.append('      nEQ++; EQ[nEQ] = C[2,u]; EQO[nEQ] = leadexp(C[1,u])[%d]; EQP[nEQ] = p; EQM[nEQ] = string(C[1,u]);' % (NL + 23))
+L.append('      if (deg(C[1,u], WTV) != 8 + CDEG[i+1] + CDEG[j+1]) { badhom++; }')
+L.append('      if ((-1)^(leadexp(C[1,u])[%d] + leadexp(C[1,u])[%d] + leadexp(C[1,u])[%d]) != -DSG[i+1]*DSG[j+1]) { badhom++; }' % (NL + 23, NL + 25, NL + 26))
+L.append('    }')
+L.append('  }')
+L.append('}')
+with open(os.path.join(HERE, 'n3_build.sing'), 'w') as f:
+    f.write('\n'.join(L) + '\n')
+
+# ---------------- report ----------------
+print('lambda coefficients:', NL, ' by k:', dict(sorted(byk.items())), ' by w-order:', dict(sorted(byo.items())))
+print('A-unknowns: g 10, b 12; unknowns total:', NL + 22)
+print('A-unknown w-orders:', dict(sorted(Counter(ORD[NL:]).items())))
+print('RC monomial slots:', eqt, ' by w-order:', dict(sorted(eqo.items())))
+print('trivial-syzygy directions:', syz)
+print('lambda monomials per (i,j,k):')
+for pi, (i, j) in enumerate(pairs):
+    print('  (%d,%d):' % (i, j), [len(LP[(pi, k)]) for k in range(6)])

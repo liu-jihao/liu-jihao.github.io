@@ -1,0 +1,27 @@
+// v8_doubleline.sing -- identities behind a direct exclusion of double lines in the sigma-equivariant
+// setting (kappa = 0, Q = y2^2, M of rank 1 normalized to E11), independent of CCO94 Prop. 5.1.
+< "vlib.sing";
+ring R = 0, (y1, y2, y3, a2, a3, b2, b3, d2, d3, p2, p3, q2, q3, r2, r3), dp;
+poly a = a2*y2 + a3*y3; poly b = b2*y2 + b3*y3; poly d = d2*y2 + d3*y3;
+poly p = p2*y2 + p3*y3; poly q = q2*y2 + q3*y3; poly r = r2*y2 + r3*y3;
+matrix D1[2][2] = a, b, b, d;
+matrix D2[2][2] = p, q, q, r;
+matrix E11[2][2] = 1, 0, 0, 0;
+matrix al = vblk(D1, vsc(y1, E11), vsc(y1, E11), D2);
+"(1) det alpha = det D1 det D2 - y1^2 d r:"; det(al) - (det(D1)*det(D2) - y1^2*d*r) == 0;
+// branch d = 0 (then b = beta*y2): at y2 = 0 the rows of v2 vanish; 3x3 minor on (v1, v3, v4)
+matrix al0 = al;
+int i; int j;
+for (i = 1; i <= 4; i++) { for (j = 1; j <= 4; j++) { al0[i, j] = subst(subst(subst(al[i, j], d2, 0), d3, 0), b3, 0); al0[i, j] = subst(al0[i, j], y2, 0); } }
+"(2) d = 0, b in (y2), at y2 = 0: row v2 of alpha is zero:"; (al0[2,1] == 0) && (al0[2,2] == 0) && (al0[2,3] == 0) && (al0[2,4] == 0);
+intvec s134 = 1, 3, 4;
+poly m134 = det(submat(al0, s134, s134));
+"    3x3 minor on (v1, v3, v4) = y3^3 a3 (p3 r3 - q3^2) - y1^2 y3 r3:"; m134 - (y3^3*a3*(p3*r3 - q3^2) - y1^2*y3*r3) == 0;
+// branch r = 0 (then q = beta*y2): at y2 = 0 row v4 vanishes; 3x3 minor on (v1, v2, v3)
+matrix al1 = al;
+for (i = 1; i <= 4; i++) { for (j = 1; j <= 4; j++) { al1[i, j] = subst(subst(subst(al[i, j], r2, 0), r3, 0), q3, 0); al1[i, j] = subst(al1[i, j], y2, 0); } }
+"(3) r = 0, q in (y2), at y2 = 0: row v4 of alpha is zero:"; (al1[4,1] == 0) && (al1[4,2] == 0) && (al1[4,3] == 0) && (al1[4,4] == 0);
+intvec s123 = 1, 2, 3;
+poly m123 = det(submat(al1, s123, s123));
+"    3x3 minor on (v1, v2, v3) = y3^3 p3 (a3 d3 - b3^2) - y1^2 y3 d3:"; m123 - (y3^3*p3*(a3*d3 - b3^2) - y1^2*y3*d3) == 0;
+quit;

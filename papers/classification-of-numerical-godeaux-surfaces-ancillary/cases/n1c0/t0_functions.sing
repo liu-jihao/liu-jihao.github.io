@@ -1,0 +1,36 @@
+// t0: tiny test of the Singular functions used by the n1c0 scripts (no mathematics).
+system("--ticks-per-sec", 1000);
+ring R = 0, (l(1..3), g(1..2), b(1..2), D, w, y1, y2, y3, t), dp;
+poly f = 3*l(2) + 2*b(1)*l(1) - 5*D + 7;
+"variables(f):", variables(f);
+"rvar of leadmonom of term 1 of f:", rvar(leadmonom(f[1])), " term:", f[1], " deg:", deg(f[1]);
+ideal I = l(1), 2*l(1), -3*l(1), l(2), l(1)+l(2), 0, -1/2*l(1)-1/2*l(2);
+"simplify(I,2+8):", simplify(I, 2+8);
+"simplify(I,2+4+8):", simplify(I, 2+4+8);
+poly p = 2*w^3*y1*b(1) + 5*w^3*y1*l(1) - w*y2*y3*g(1) + 4;
+matrix C = coef(p, w*y1*y2*y3);
+"coef matrix:"; print(C);
+"leadexp of C[1,1]:", leadexp(C[1,1]);
+"w-exponent of C[1,1]:", leadexp(C[1,1])[9];
+intvec wt = 0,0,1,0,0,3,0,0,0,0,0,0,0;
+"deg(f, wt) (l1->0,l2->0,l3->1,g1->0,g2->0,b1->3):", deg(2*b(1)*l(1) + l(3)^2, wt);
+matrix CW = coeffs(w^2*y1 + 3*w*y2 + y3, w);
+"coeffs in w:"; print(CW);
+"factorize:"; factorize(6*b(1)^2*l(1) - 6*b(2)^2*l(1));
+write(":w t0_state.txt", "poly ff = " + string(p) + ";");
+execute(read("t0_state.txt"));
+"read back equal:", ff == p;
+"diff const:", deg(diff(f, l(2))), " diff nonconst:", deg(diff(f, l(1)));
+"subst:", subst(f, l(2), b(2)*l(3));
+intvec iv = 0:5; iv[3] = 7; "intvec:", iv;
+list LL = list(); LL[3] = 5; "list size after LL[3]=5:", size(LL);
+// char p rank of a constant matrix via imap
+matrix M[3][3] = 1, 2, 3, 2, 4, 6, 1/3, 0, 1;
+ring Rp = 32003, (x), dp;
+matrix Mp = imap(R, M);
+"rank mod p:", rank(Mp);
+setring R;
+"rank over Q:", rank(M);
+"memory(1) (KB):", memory(1) div 1024, " memory(2):", memory(2) div 1024;
+"ticks:", rtimer;
+quit;

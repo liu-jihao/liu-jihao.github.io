@@ -1,0 +1,32 @@
+=== (a) source: N2 with column (c1,c2) = (1,1);  target: N1(1) with column (1,0)
+change: w -> -w/8, y1 -> (i/2)*y1, y2 -> (y3 - y2)/2, y3 -> (y2 + y3)/2;  gI = [[1,-1],[1,1]], gII = -i*[[1,-1],[1,1]], g0 = 1, g5 = -4
+   net:     gI^t*D1_N2(hy)*gI - D1_N1(1) == 0 : 1
+            gII^t*D2_N2(hy)*gII - D2_N1(1) == 0 : 1
+            gI^t*((i/2) y1 I)*gII - y1 I == 0 : 1
+   Q_N2(hy) = 1/4*y1^2-1/4*y2^2+1/4*y3^2   = -(1/4)*Q_N1(1) : 1   so g0*g5 = -4 restores A_05 = Q
+   column: gI^t*(1,1)^t = (2, 0)^t, times s_w*g5 = (-1/8)*(-4) = 1/2 gives (1, 0)
+   P^t * A_N2,(1,1)(phi) * P - A_N1(1),(1,0) == 0 : 1
+   the change commutes with sigma (diagonal in the sigma-eigenspaces): P block-diagonal, h = diag(i/2, h23), w -> -w/8.
+=== N2: an arbitrary column (c1, c2) with c1*c2 != 0 is moved to (1, 1) by the torus (m1, m2) = (1/c1, 1/c2)
+   P = diag((m1 m2)^2, m1, m2, m2, m1, 1), h = (y1/(m1 m2), y2/m1^2, y3/m2^2), w fixed:
+   P^t * A_N2,(c1,c2)(phi) * P - A_N2,(1,1) == 0 : 1
+=== N2: the column (0, 1) is moved to (1, 0) by the swap y2 <-> y3, v1 <-> v2, v3 <-> v4
+   P^t * A_N2,(0,1)(phi) * P - A_N2,(1,0) == 0 : 1
+=== N3: an arbitrary column (c1, c2) with c2 != 0 is moved to (0, 1) by the shear e = 2*c1/c2 and the scaling g0 = c2, g5 = 1/c2
+   P^t * A_N3,(c1,c2)(phi) * P - A_N3,(0,1) == 0 : 1
+=== (b) source: N3 with column (0,1);  target: N1(0) with column (1,0);  P = diag(1, (v1 v2), (v3 v4), 1), no coordinate change
+   P^t * A_N3,(0,1) * P - A_N1(0),(1,0) == 0 : 1
+   (with the order-2 entry: c*y0 at (v2,v3) of N3 goes to (v1,v4); it is re-normalized by T6)
+=== (c) version 1 (P = diag(1, gI, gII, 1)): y3 -> y3/sqrt(D) = y3/r^2, gI = diag(D^(-1/4), D^(1/4)), gII = diag(D^(1/4), D^(-1/4)), w -> D^(1/4) w
+   pair (net, Q, column):  P^t * A_N1(D),(1,0)(phi) * P - A_N1(1),(1,0) == 0 : 1
+   Q_N1(D)(hy) - Q_N1(1) == 0 : 1    [A_05 = g0*g5*Q(hy) = Q_N1(1) with g0 = g5 = 1]
+   A_15: w -> s_w*w*gI[1,1]*g5 = (r*w)*(1/r)*1 = w  [restored by w -> D^(1/4) w]
+   with the order-2 entry c*y0 at (v2,v3):  P^t * A_N1(D),c(phi) * P - A_N1(1),c*D == 0 : 1
+   [so version 1 multiplies c by D; c is restored by the torus s of T6 (weight 2 on c)]
+=== (c) version 2 (PLAN's torus, u = sqrt(D) = r^2): y3 -> y3/u, w -> u^(-1/2) w, P = diag(1/u, u^(-1/2), u^(1/2), u^(1/2), u^(-1/2), u)
+   P^t * A_N1(D),c(phi) * P - A_N1(1),c == 0 : 1
+   [here A_05: g0*g5 = (1/u)*u = 1;  A_15: u^(-1/2)*u^(-1/2)*u = 1;  c: u^(1/2)*u^(1/2)*u^(-1) = 1;  P = u^(-1)*diag(1, u^(1/2), u^(3/2), u^(3/2), u^(1/2), u^2), i.e. a congruence with g0 = 1 times the overall scalar u^(-2), which does not change coker A]
+   general torus check on N1(D): the same change maps N1(D) to N1(D/u^2) for any D:
+   P^t * A_N1(D),c(phi) * P - A_N1(D/u^2),c == 0 (u = r^2) : 1
+total time (s): 0
+peak memory (KB, Singular memory(2)): 4176

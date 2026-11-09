@@ -1,0 +1,39 @@
+CHECK entries of A: symmetric, sigma-sign -d_j d_k, weight 8-c_j-c_k; failures = 0
+CHECK det(alpha) - Q^2 == 0: 1
+CHECK Q divides every entry of adj(alpha): failures = 0
+CHECK alpha*adj(alpha) == det(alpha)*I: 1
+CHECK A*B == det(A)*I: 1
+CHECK B symmetric: 1
+det A sigma-invariant: 1  weight 16: 1
+leading terms: B05 + Q^3 == 0 mod w: 1
+B0k mod w == 0 for k = 1 : 1
+B0k mod w == 0 for k = 2 : 1
+B0k mod w == 0 for k = 3 : 1
+B0k mod w == 0 for k = 4 : 1
+time (ms) after adjugate: 7
+CHECK lambda polys: sign d_i d_j d_k and weight c_i+c_j-c_k; failures = 0
+CHECK E_ij homogeneous of weight 8+c_i+c_j with sign -d_i d_j; failures = 0
+nonzero coefficient equations: 896
+nonzero equations by w-order 0..19: 180,72,156,56,120,42,84,30,58,20,34,12,18,6,6,2,0,0,0,0
+distinct equations up to scalar (global): 782  duplicates across different w-orders: 0
+distinct equations by w-order 0..19: 72,66,156,56,120,42,84,30,58,20,34,12,18,6,6,2,0,0,0,0
+time (ms) after equations: 656
+elimination done: substitutions = 291  equations reduced to zero = 491  inconsistent = 0
+LEFTOVER equations: 0
+time (ms) after elimination: 2494
+eliminated lambda: 277  eliminated A-coefficients: 14
+pivot constants: 1 1 1 1 1 1 1 1 1 1 -1 1 1 -1 -1 -2 1 1 -1 1 -1 1 -1 1 1 -1 -1 1 1 1 1 -1 -1 1 1 1 -1 1 1 -1 2 -2 1 -1 -2 2 -2 -2 2 2 2 -2 2 1 -1/2 1 -1 -1 1 2 -2 1 -1 2 -1 -1 1 1 1 1 -2 -1 -1 -2 -1 -1 -1 1 1 -2 2 2 -1 2 2 -1 -1/3 -1/3 1 -1/2 2 2 -1/3 -1/3 -1 -1 1 -1 2 2 2 -1 2 -2 2 1 -1/2 -2 -2 -1/3 -1/3 1 -1/2 1 -2 2 -2 1 2 2 -1 2 2 -1 1/3 1 -1/3 -1/3 -2 2 2 -1 -1 -1 -1/3 1/3 -1 2 -1 2 2 2 2 2 1 1 -2 -1/3 -1/3 -1 -1 -1 -1 -1 2 1 -2 -1 2 -1 -2 -1/3 -1/3 1 2 -1 1 -2 -1/3 -1 -1 -1 2 -2 -2 1 -2 -1 1/3 -1/3 -1 -2 2 2 -4 -2 1 2 2 2 -2 1 -4 -1/3 -1 1 -2 1 2 -1 -2 1 -2 -1 -1 -1 2 -2 2 2 2 -1 -1 -1 -1 2 -2 -1 2 -1 1 -1 -1 -2 1 1 1 -1 -1 -1 -1 -2 -2 2 -1 1 -1 -2 -1 -2 -1 -1 -1 -2 -2 2 2 1 -1/3 -1/2 2 -2 2 2 2 2 2 -1 -1 -2 1 1 1 2 2 -1 -1 2 2 -1 -1 2 -1 1 -1/3 1/2 1 2 1 2 -2 -2 2 2 -2 -2 -1 -1 2 1 1 
+eliminated A-coefficients (with step): qq(12)[step 278, eq w-order 2, pivot 2] gg(1)[step 279, eq w-order 8, pivot 1] qq(6)[step 280, eq w-order 6, pivot 2] qq(5)[step 281, eq w-order 4, pivot -2] qq(1)[step 282, eq w-order 4, pivot -2] qq(11)[step 283, eq w-order 4, pivot 2] qq(2)[step 284, eq w-order 2, pivot 2] qq(9)[step 285, eq w-order 4, pivot -2] qq(3)[step 286, eq w-order 4, pivot -2] gg(3)[step 287, eq w-order 4, pivot -1] gg(4)[step 288, eq w-order 6, pivot -1] gg(10)[step 289, eq w-order 6, pivot 2] gg(9)[step 290, eq w-order 6, pivot 1] gg(2)[step 291, eq w-order 8, pivot 1] 
+FREE A-coefficients (f, D included): 9 : qq(4) qq(7) qq(8) qq(10) gg(5) gg(6) gg(7) gg(8) D 
+FREE lambda-coefficients: 94
+time (ms) after back-substitution: 2598
+CHECK final expressions involve only free unknowns: failures = 0
+GRAPH CHECK (eliminated A-coefficients free of lambda): failures = 0
+VERIFY (ii-a) all nonzero coefficient equations vanish on the parametrization: failures = 0
+time (ms) after (ii-a): 2697
+VERIFY (iii) pivot k = image of original equation under substitutions 1..k-1, equal to c_k*(u_k - e_k): failures = 0
+VERIFY (iii) e_k free of u_1..u_k: failures = 0
+time (ms) after (iii): 3238
+VERIFY (ii-b) the 15 polynomials E_ij vanish identically on the parametrization: failures = 0
+time (ms) total: 3262
+memory (bytes) memory(1), memory(2): 54525952 54632600

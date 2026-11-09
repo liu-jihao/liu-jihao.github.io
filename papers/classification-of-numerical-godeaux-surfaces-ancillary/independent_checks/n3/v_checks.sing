@@ -1,0 +1,118 @@
+// v_checks.sing -- verifier's checks for case n3 that use the graph written by v_elim.sing.
+// Part A (exact, lambda-free): at rational points of the graph, test B_ij in (B_00,...,B_05)
+//   by a standard basis in Q[w,y1,y2,y3] (no lambda ansatz at all), with negative controls.
+// Part B (mod p, evidence): Jacobian ranks of the verifier's own coefficient equations at
+//   random points of the solution scheme over F_32003.
+LIB "matrix.lib";   // submat
+int T0 = rtimer;
+int k, v, t, r, c, i, j, nf, bad, cnt, num, den;
+// ======================= Part A =======================
+ring RG = 0,(w,y1,y2,y3,g(1..10),b(1..12),L(1..371)),dp;
+< "v_graph.sing";      // intvec SVr, ideal SEr (all eliminated unknowns as polynomials in the free ones)
+intvec iselim = 0:nvars(RG);
+for (k=1;k<=size(SVr);k++){ iselim[SVr[k]] = 1; }
+intvec freeAidx;  nf = 0;
+for (v=5;v<=26;v++){ if (iselim[v] == 0) { nf++; freeAidx[nf] = v; } }
+print("free A-unknowns read from v_graph.sing: " + string(nf));
+ideal img = maxideal(1);
+for (k=1;k<=size(SVr);k++){ img[SVr[k]] = SEr[k]; }
+map phi = RG, img;
+poly y0 = w^2;
+poly G = g(1)*y3^3 + g(2)*y1^2*y3 + g(3)*y2*y3^2 + g(4)*y1^2*y2 + g(5)*y2^2*y3 + g(6)*y2^3
+       + g(7)*y0*y1*y3 + g(8)*y0*y1*y2 + g(9)*y0^2*y3 + g(10)*y0^2*y2;
+poly q1 = 0;
+poly q2 = b(1)*y0*y2 + b(2)*y0*y3;
+poly q3 = b(3)*y0^2 + b(4)*y0*y1 + b(5)*y1^2 + b(6)*y2^2 + b(7)*y2*y3 + b(8)*y3^2;
+poly q4 = b(9)*y0^2 + b(10)*y2^2 + b(11)*y2*y3 + b(12)*y3^2;
+poly Q = y2^2 - y1^2;
+matrix A[6][6] =
+  y0*G, w*q1, w*q2, w*q3, w*q4, Q,
+  w*q1, y3,   y2,   y1,   0,    w,
+  w*q2, y2,   0,    y0,   y1,   0,
+  w*q3, y1,   y0,   0,    y2,   0,
+  w*q4, 0,    y1,   y2,   -y3,  0,
+  Q,    w,    0,    0,    0,    0;
+matrix Apar = phi(A);      // A restricted to the graph: entries in w, y and the free A-unknowns
+// points: list of value vectors for the 22 A-unknowns (index 1..22 = var 5..26)
+system("random", 314159);
+list PTS; list PTNAME;
+proc rq() { int nn = 0; while (nn == 0) { nn = random(-9,9); } int dd = random(1,4); return(number(nn)/number(dd)); }
+// three random rational points on the graph
+int pp;
+for (pp=1;pp<=3;pp++){
+  ideal ptA = maxideal(1);
+  for (t=1;t<=nf;t++){ ptA[freeAidx[t]] = rq(); }
+  map toA = RG, ptA;
+  matrix An = toA(Apar);
+  PTS = insert(PTS, An, size(PTS)); PTNAME = insert(PTNAME, "random graph point " + string(pp), size(PTNAME));
+  kill toA; kill ptA; kill An;
+}
+// the graph point with all free A-unknowns 0
+ideal ptA = maxideal(1); for (t=1;t<=nf;t++){ ptA[freeAidx[t]] = 0; }
+map toA = RG, ptA; matrix An = toA(Apar);
+PTS = insert(PTS, An, size(PTS)); PTNAME = insert(PTNAME, "graph point with free A-unknowns = 0", size(PTNAME));
+kill toA; kill ptA; kill An;
+// negative control 1: random graph point 1, then the first eliminated A-unknown shifted by 1
+int firstA = 0;
+for (k=1;k<=size(SVr);k++){ if ((SVr[k] >= 5) && (SVr[k] <= 26) && (firstA == 0)) { firstA = SVr[k]; } }
+system("random", 314159);
+ideal ptA = maxideal(1); for (t=1;t<=nf;t++){ ptA[freeAidx[t]] = rq(); }
+ideal imgc = img; imgc[firstA] = img[firstA] + 1;
+map phic = RG, imgc; matrix Ac = phic(A);
+map toA = RG, ptA; matrix An = toA(Ac);
+PTS = insert(PTS, An, size(PTS)); PTNAME = insert(PTNAME, "NEGATIVE control: graph point 1 with " + varstr(firstA) + " shifted by 1", size(PTNAME));
+kill toA; kill ptA; kill An;
+// negative control 2: all 22 A-coefficients random (off the graph)
+ideal ptA = maxideal(1); for (v=5;v<=26;v++){ ptA[v] = rq(); }
+map toA = RG, ptA; matrix An = toA(A);
+PTS = insert(PTS, An, size(PTS)); PTNAME = insert(PTNAME, "NEGATIVE control: all 22 A-coefficients random", size(PTNAME));
+kill toA; kill ptA; kill An;
+// ---- the test ring
+ring S = 0,(w,y1,y2,y3),wp(1,2,2,2);
+proc others(int rr) { intvec vv0; int ii; int first = 1;
+  for (ii=1; ii<=6; ii++) { if (ii != rr) { if (first) { vv0 = ii; first = 0; } else { vv0 = vv0, ii; } } }
+  return(vv0); }
+list PS = imap(RG, PTS);
+int np = size(PS);
+matrix M[6][6]; matrix BB[6][6]; ideal I0; ideal I0s; int fails; poly nfp;
+for (pp=1;pp<=np;pp++){
+  M = PS[pp];
+  for (r=1;r<=6;r++){ for (c=r;c<=6;c++){ BB[r,c] = (-1)^(r+c) * det(submat(M, others(c), others(r))); BB[c,r] = BB[r,c]; } }
+  I0 = BB[1,1], BB[1,2], BB[1,3], BB[1,4], BB[1,5], BB[1,6];
+  I0s = std(I0);
+  fails = 0;
+  for (i=2;i<=6;i++){ for (j=i;j<=6;j++){ nfp = reduce(BB[i,j], I0s); if (nfp != 0) { fails++; } } }
+  print(PTNAME[pp] + ": det A != 0: " + string(det(M) != 0) + "; pairs (i,j), 1<=i<=j<=5, with B_ij not in (B_00..B_05): " + string(fails) + " of 15");
+}
+print("Part A time (s): " + string(rtimer - T0));
+// ======================= Part B =======================
+string CHARSTR = "32003";
+< "v_build.sing";        // ring R over F_32003, EQ0 = all nonzero coefficient equations
+< "v_graph.sing";        // SVr, SEr read in characteristic 32003
+intvec iselimp = 0:nvars(R);
+for (k=1;k<=size(SVr);k++){ iselimp[SVr[k]] = 1; }
+matrix J = jacob(EQ0);
+if (nrows(J) != ncols(EQ0)) { J = transpose(J); }
+print("Jacobian size: " + string(nrows(J)) + " x " + string(ncols(J)));
+int seed; int rkJ, rkL, rkA, nunk; nunk = nvars(R) - 4; poly tmpq;
+for (seed=1;seed<=2;seed++){
+  system("random", 20261109 + 1000*seed);
+  ideal ptp = maxideal(1);
+  for (v=5;v<=nvars(R);v++){ if (iselimp[v] == 0) { ptp[v] = random(1, 32002); } else { ptp[v] = 0; } }
+  map e0 = R, ptp;
+  for (k=1;k<=size(SVr);k++){ tmpq = SEr[k]; ptp[SVr[k]] = e0(tmpq); }
+  map evp = R, ptp;
+  ideal chkp = evp(EQ0);
+  matrix Jp = evp(J);
+  matrix JpU = submat(Jp, 1..nrows(Jp), 5..nvars(R));
+  matrix JpL = submat(Jp, 1..nrows(Jp), 27..nvars(R));
+  rkJ = rank(JpU); rkL = rank(JpL);
+  print("mod-p point " + string(seed) + ": equations nonzero at the point: " + string(size(chkp))
+        + "; rank J = " + string(rkJ) + " (unknowns " + string(nunk) + ", corank " + string(nunk - rkJ) + ")"
+        + "; rank J_lambda = " + string(rkL) + " (lambda corank " + string(371 - rkL) + ")"
+        + "; rank of projection of ker J to the 22 A-coefficients = " + string((nunk - rkJ) - (371 - rkL)));
+  kill ptp; kill e0; kill evp; kill chkp; kill Jp; kill JpU; kill JpL;
+}
+print("total real time (s): " + string(rtimer - T0));
+print("memory (KB) " + string(memory(2) div 1024));
+quit;

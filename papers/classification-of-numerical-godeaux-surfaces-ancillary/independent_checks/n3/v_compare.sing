@@ -1,0 +1,65 @@
+// v_compare.sing -- comparison (made only after v_elim.sing) of the verifier's results with the case's.
+// (1) The case's full parametrization (cases/n3/n3_final.sing, all 393 unknowns in its 102 free ones)
+//     is substituted into the VERIFIER's own 710 coefficient equations.
+// (2) The two graphs in the space of the 22 A-coefficients are compared both ways.
+LIB "matrix.lib";
+int T0 = rtimer;
+string CHARSTR = "0";
+< "v_build.sing";          // ring R (verifier), EQ0
+< "v_graph.sing";          // SVr, SEr (verifier's elimination)
+// --- the case's ring and its final expressions
+ring T = 0,(lam(1..371),g(1..10),b(1..12)),dp;
+ideal FIN = maxideal(1);   // free unknowns: FIN[v] = var(v)  (the file only lists eliminated ones)
+< "../../cases/n3/n3_final.sing";
+< "../../cases/n3/n3_free.txt";   // intvec FREEV
+int nfix = 0; int v2;
+for (v2=1; v2<=393; v2++){ if (FIN[v2] != var(v2)) { nfix++; } }
+print("case: unknowns with FIN[v] != var(v): " + string(nfix) + "; size of FREEV: " + string(size(FREEV)));
+// --- back to the verifier's ring: rename the case's variables
+setring R;
+< "v_casemap.sing";        // ideal rho_img, intvec tau
+map rho = T, rho_img;
+ideal FINR = rho(FIN);     // case expressions written in the verifier's variables
+ideal imgC = maxideal(1);
+for (t=1;t<=10;t++){ imgC[4+t]  = FINR[371+t]; }
+for (t=1;t<=12;t++){ imgC[14+t] = FINR[381+t]; }
+for (n=1;n<=371;n++){ imgC[OFF+n] = FINR[tau[n]]; }
+map phiC = R, imgC;
+ideal chkC = phiC(EQ0);
+print("(1) verifier's coefficient equations not vanishing under the case's parametrization: " + string(size(chkC)) + " of " + string(ncols(EQ0)));
+// --- (2a) case graph inside the verifier's graph: for each A-unknown eliminated by the verifier,
+//          u - SE_u(free_mine) must vanish under the case's parametrization
+poly tmpp; poly lhs; int bad2 = 0; int cntA = 0;
+for (k=1;k<=size(SVr);k++){ if (SVr[k] <= OFF) {
+  cntA++;
+  lhs = var(SVr[k]) - SEr[k];
+  tmpp = phiC(lhs);
+  if (tmpp != 0) { bad2++; print("   mismatch (2a) at " + varstr(SVr[k]) + ": " + string(tmpp)); }
+}}
+print("(2a) verifier's " + string(cntA) + " A-relations violated on the case's graph: " + string(bad2));
+// --- (2b) verifier's graph inside the case's graph
+ideal imgM = maxideal(1);
+for (k=1;k<=size(SVr);k++){ imgM[SVr[k]] = SEr[k]; }
+map phiM = R, imgM;
+bad2 = 0; cntA = 0;
+for (v=5;v<=OFF;v++){
+  if (imgC[v] != var(v)) {   // A-unknown eliminated by the case
+    cntA++;
+    lhs = var(v) - imgC[v];
+    tmpp = phiM(lhs);
+    if (tmpp != 0) { bad2++; print("   mismatch (2b) at " + varstr(v) + ": " + string(tmpp)); }
+  }
+}
+print("(2b) case's " + string(cntA) + " A-relations violated on the verifier's graph: " + string(bad2));
+// --- print the case's free A-unknowns and eliminated A-expressions (for the record)
+string fA = "";
+for (v=5;v<=OFF;v++){ if (imgC[v] == var(v)) { fA = fA + varstr(v) + " "; } }
+print("case's free A-unknowns: " + fA);
+// --- (3) the case's lambda expressions are polynomial; the case's eliminated A-expressions are lambda-free
+ideal kl = maxideal(1); for (n=1;n<=371;n++){ kl[OFF+n] = 0; }
+map killL = R, kl;
+bad2 = 0;
+for (v=5;v<=OFF;v++){ tmpp = imgC[v]; if (killL(tmpp) != tmpp) { bad2++; } }
+print("(3) case's A-expressions depending on a lambda: " + string(bad2));
+print("real time (s): " + string(rtimer - T0));
+quit;

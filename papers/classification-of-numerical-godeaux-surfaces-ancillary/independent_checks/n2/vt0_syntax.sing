@@ -1,0 +1,30 @@
+// syntax test only (no mathematics)
+ring r = 0, (a, b, c, w, y1), dp;
+poly f = 3*a + 2*b*c + 5 + w^2*y1*a + w*b;
+matrix M = coef(f, w*y1);
+print(M);
+print(ncols(M));
+poly g = 2*a + b*c + c;
+poly lin = jet(g,1) - jet(g,0);
+poly hi = g - jet(g,1);
+print(variables(lin));
+print(variables(hi));
+ideal vv = variables(lin);
+int i;
+for (i=1; i<=size(vv); i++) { print(rvar(vv[i])); }
+ideal X = maxideal(1);
+X = subst(X, a, b+c);
+print(X);
+map phi = r, X;
+print(phi(g));
+print(deg(diff(g, a)));
+print(diff(g,a));
+print(leadcoef(2*a+3));
+int k = rvar(c); print(k);
+print(var(k));
+ideal I = g, 2*g, 0, f;
+print(simplify(I, 2+8));
+print(size(I));
+print(ncols(I));
+string s = "x" + string(3); print(s);
+quit;

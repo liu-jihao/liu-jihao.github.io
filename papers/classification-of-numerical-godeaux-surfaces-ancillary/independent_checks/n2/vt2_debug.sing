@@ -1,0 +1,30 @@
+// debug of the pivot loop logic on a toy system (no mathematics)
+ring r = 0, (x(1..4), a, b, y3, w), dp;
+print(rvar(x(2)));
+poly p = x(3); print(rvar(p));
+ideal vv = variables(x(1) + 2*x(4) + a);
+int i; for (i = 1; i <= ncols(vv); i++) { print(rvar(vv[i])); }
+int tt = timer; print(tt);
+ideal EQW = x(1) + 2*a*b + 3, x(2)*a + x(1) - b, 2*x(3) - x(4)*b;
+ideal X = maxideal(1);
+int t; int u; int v; int s; int best; int ok; poly f; poly lin; poly hi; ideal vl; ideal vh; poly cf; poly ex;
+for (t = 1; t <= ncols(EQW); t++) {
+  f = EQW[t];
+  lin = jet(f, 1) - jet(f, 0);
+  hi = f - jet(f, 1);
+  vl = variables(lin); vh = variables(hi);
+  best = 0;
+  for (u = 1; u <= ncols(vl); u++) {
+    ok = 1;
+    for (s = 1; s <= ncols(vh); s++) { if (vh[s] == vl[u]) { ok = 0; break; } }
+    if (ok) { v = rvar(vl[u]); "candidate " + string(vl[u]) + " index " + string(v); if (best == 0) { best = v; } }
+  }
+  if (best > 0) {
+    cf = diff(f, var(best)); ex = var(best) - f / cf;
+    "pivot " + varstr(best) + " = " + string(ex);
+    EQW = subst(EQW, var(best), ex);
+    X = subst(X, var(best), ex);
+    print(EQW);
+  }
+}
+quit;

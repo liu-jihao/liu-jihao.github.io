@@ -1,0 +1,11 @@
+ring R = 0, (x,y,z), dp;
+ideal E; E[1] = x+y; E[2] = y^2; E[3] = z; E[4] = x*z;
+E[4] = 0; E[2] = 0;
+"ncols after zeroing:", ncols(E);
+E = subst(E, x, y+z);
+"ncols after subst:", ncols(E); E;
+ideal IMG = maxideal(1);
+map ph = R, IMG; ideal F = 0, x, 0, y; "ncols F:", ncols(F); F = ph(F); "ncols F after map:", ncols(F); F;
+E[3] = 0; E = subst(E, z, 1); "ncols after zeroing last-but:", ncols(E); E;
+ideal H; H[1] = x; H[2] = 0; H[3] = 0; "ncols H trailing zeros:", ncols(H); H = subst(H, x, y); "after subst:", ncols(H);
+quit;

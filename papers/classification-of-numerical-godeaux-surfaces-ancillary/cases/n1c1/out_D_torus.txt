@@ -1,0 +1,24 @@
+conditions (fixed entries): 13
+dimension of the solution space (torus dimension, D allowed to move): 2
+reduced linear conditions:
+SCND[1]=2*P5+dD
+SCND[2]=2*P3-2*P4+dD
+SCND[3]=P2-P3
+SCND[4]=P1-P4
+SCND[5]=P0-4*P4+P5+dD
+SCND[6]=Y3+2*P3
+SCND[7]=2*Y2+4*P4-dD
+SCND[8]=2*Y1+4*P4-dD
+SCND[9]=2*W+2*P4-dD
+grading direction satisfies all conditions: 1  ; u satisfies all conditions: 1
+rank of (gr, u): 2
+coefficients with nonzero weight under the grading direction: 0
+u-weights (t-normalization, t^2 = u) of D, g, b: g(1):-12 g(2):-8 g(3):-10 g(4):-6 g(5):-8 g(6):-6 g(7):-10 g(8):-8 g(9):-12 g(10):-10 b(1):-4 b(2):-6 b(3):-4 b(4):-6 b(5):-2 b(6):-4 b(7):-6 b(8):-4 b(9):-2 b(10):-8 b(11):-6 b(12):-8 D:-4 
+u-weights of the free A-coefficients: g(5):-8 b(2):-6 b(5):-2 b(6):-4 b(8):-4 b(9):-2 b(11):-6 b(12):-8 D:-4 
+free lambda with nonzero u-weight: 91 of 94
+u-weights of l(1..371): -2 -2 -4 -6 -4 -4 -6 -8 -6 -8 -2 -4 0 -2 0 -2 -2 -4 2 0 -4 -4 -6 -8 -6 -6 -8 -10 -8 -10 -4 -6 -2 -4 -2 -4 -4 -6 0 -2 -4 -6 -4 -6 -8 -10 -6 -8 -8 -10 -4 -6 -2 -4 -2 -4 -4 -6 0 -2 -2 -4 -2 -4 -6 -8 -4 -6 -6 -8 -2 -4 0 -2 0 -2 -2 -4 2 0 -6 -8 -6 -8 -10 -12 -8 -10 -10 -12 -4 -6 -6 -8 -2 -4 -4 -6 -2 -2 -4 -6 -4 -6 -4 -4 -6 -8 -6 -8 -2 -4 -6 -6 -8 -10 -8 -8 -10 -12 -10 -12 -6 -8 -4 -6 -4 -6 -6 -8 -2 -4 -6 -8 -6 -8 -10 -12 -8 -10 -10 -12 -6 -8 -4 -6 -4 -6 -6 -8 -2 -4 -4 -6 -4 -6 -8 -10 -6 -8 -8 -10 -4 -6 -2 -4 -2 -4 -4 -6 0 -2 -8 -10 -8 -10 -12 -14 -10 -12 -12 -14 -6 -8 -8 -10 -4 -6 -6 -8 -4 -4 -6 -8 -6 -8 -6 -6 -8 -10 -8 -10 -4 -6 -6 -6 -8 -10 -8 -8 -10 -12 -10 -12 -6 -8 -4 -6 -4 -6 -6 -8 -2 -4 -4 -4 -6 -8 -6 -6 -8 -10 -8 -10 -4 -6 -2 -4 -2 -4 -4 -6 0 -2 -8 -8 -10 -12 -10 -10 -12 -14 -12 -14 -6 -6 -8 -10 -8 -10 -4 -4 -6 -8 -6 -8 -4 -6 -6 -8 -6 -8 -8 -10 -4 -6 -2 -2 -4 -6 -4 -4 -6 -8 -6 -8 -2 -4 0 -2 0 -2 -2 -4 2 0 -6 -6 -8 -10 -8 -8 -10 -12 -10 -12 -4 -4 -6 -8 -6 -8 -2 -2 -4 -6 -4 -6 -2 -4 -4 -6 -4 -6 -6 -8 -2 -4 -8 -8 -10 -12 -8 -10 -12 -14 -16 -10 -10 -12 -14 -12 -12 -14 -16 -14 -16 -8 -8 -10 -12 -10 -12 -6 -6 -8 -10 -8 -10 -6 -8 -8 -10 -8 -10 -10 -12 -4 -6 -6 -8 
+e = rank of the weight matrix on the free A-coefficients: 1  ; on all 103 free coordinates: 1
+P^t A(w/t, y1, y2, y3/t^2) P equals A with D, g, b scaled by t^weight: 1
+for comparison, the fixed entries after the change (row v1, row v4, A05): 1/(t^4)*D*y3 -1/(t^4)*D*y3 -1/(t^4)*D*y3^2-y1^2+y2^2
+coefficient equations (of 782 ) that are not weighted-homogeneous for the u-weights: 0
+total ms: 134  memory KB: 12592

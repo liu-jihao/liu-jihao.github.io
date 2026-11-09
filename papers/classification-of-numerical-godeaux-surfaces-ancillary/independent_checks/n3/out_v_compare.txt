@@ -1,0 +1,37 @@
+lambda coefficients: 371
+  by k = 0..5: 159,46,46,44,44,32
+  by w-order 0..8: 123,98,66,40,26,8,7,2,1
+trivial-syzygy directions: 94
+number of ring variables: 397
+lambda unknowns created: 371
+A symmetric: 1
+A: weight/sign violations: 0
+lambda: weight/sign violations: 0
+net alpha (w = 0):
+y3,y2,y1,0, 
+y2,0, 0, y1,
+y1,0, 0, y2,
+0, y1,y2,-y3
+det(alpha) - Q^2 = 0
+3x3 minors of alpha not divisible by Q: 0 of 10
+A*B = det(A)*I : violations 0
+B symmetric: 1
+B_00 mod w = 0
+B_01 mod w = 0
+B_02 mod w = 0
+B_03 mod w = 0
+B_04 mod w = 0
+B_05 mod w = y1^6-3*y1^4*y2^2+3*y1^2*y2^4-y2^6
+B_05 + Q^3 mod w = 0
+nonzero coefficient equations: 710
+  by w-order 0..15: 72,45,118,50,113,42,84,30,58,20,34,12,18,6,6,2
+  monomials of wrong weight/sign in E_ij: 0
+max total degree of an equation: 2
+unknowns not occurring in any equation: 0
+case: unknowns with FIN[v] != var(v): 291; size of FREEV: 102
+(1) verifier's coefficient equations not vanishing under the case's parametrization: 0 of 710
+(2a) verifier's 14 A-relations violated on the case's graph: 0
+(2b) case's 14 A-relations violated on the verifier's graph: 0
+case's free A-unknowns: g(4) g(5) g(6) g(8) b(4) b(6) b(9) b(11) 
+(3) case's A-expressions depending on a lambda: 0
+real time (s): 0

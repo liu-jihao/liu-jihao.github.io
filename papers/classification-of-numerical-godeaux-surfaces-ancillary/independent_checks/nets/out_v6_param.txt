@@ -1,0 +1,32 @@
+==== N2, column (c1, c2) with c1 c2 != 0 -> N2, column (1, 1) (torus, a = 1/c1, b = 1/c2) ====
+general shape with net N2 and column (1, 1):
+1
+==== N2, column (0, 1) -> N2, column (1, 0) (swap with y2 <-> y3) ====
+general shape with net N2 and column (1, 0):
+1
+==== N3, column (c1, c2) with c2 != 0 -> N3, column (0, 1) (shear e = 2 c1/c2, g0 = c2, g5 = 1/c2) ====
+general shape with net N3 and column (0, 1):
+1
+==== N1(D) -> N1(1), D = r^4 (version 1: w -> r w, y3 -> y3/r^2, g_I = diag(1/r, r), g_II = diag(r, 1/r), g0 = g5 = 1) ====
+general shape with net N1(1) and column (1, 0):
+1
+M' = c E_23 goes to (D c) E_23 (rows/columns v1..v5 equal):
+1
+==== N1(D) -> N1(D/u^2), u = r^2 (PLAN's torus: w -> w/r, y3 -> y3/r^2, P = diag(1/u, u^-1/2, u^1/2, u^1/2, u^-1/2, u)) ====
+general shape with net N1(D/u^2), column (1, 0):
+1
+c unchanged (rows/columns v1..v5 equal those of N1(D/u^2) with the same c):
+1
+==== scaling s: w -> s w, P = diag(s, 1, 1, 1, 1, 1/s): c -> s^2 c, net and Q unchanged ====
+  N1(D): rows/columns v1..v5 equal those with c replaced by s^2 c:
+1
+  N1(D): general shape:
+1
+  N2: rows/columns v1..v5 equal those with c replaced by s^2 c:
+1
+  N2: general shape:
+1
+  N3: rows/columns v1..v5 equal those with c replaced by s^2 c:
+1
+  N3: general shape:
+1

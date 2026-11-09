@@ -1,0 +1,22 @@
+// debug of Part 3 of v_nf.sing (stabilizer Lie algebra of the N3 net)
+LIB "matrix.lib";
+int r,c,t;
+ring H = 0,(x11,x12,x21,x22,x33,x34,x43,x44,e1,e22,e23,e32,e33,y1,y2,y3),dp;
+matrix al[4][4] = y3,y2,y1,0,  y2,0,0,y1,  y1,0,0,y2,  0,y1,y2,-y3;
+matrix X[4][4] = x11,x12,0,0,  x21,x22,0,0,  0,0,x33,x34,  0,0,x43,x44;
+matrix S1 = transpose(X)*al + al*X;
+matrix S2 = e1*y1*diff(al,y1);
+matrix d2 = diff(al,y2);
+matrix d3 = diff(al,y3);
+poly f2 = e22*y2+e23*y3;
+poly f3 = e32*y2+e33*y3;
+matrix S3 = f2*d2;
+matrix S4 = f3*d3;
+print(string(nrows(S1)) + "x" + string(ncols(S1)) + " " + string(nrows(S2)) + "x" + string(ncols(S2)) + " " + string(nrows(S3)) + "x" + string(ncols(S3)) + " " + string(nrows(S4)) + "x" + string(ncols(S4)));
+print(d2); print(S3); print(S4);
+matrix D = S1 + S2 + S3 + S4;
+print(string(nrows(D)) + "x" + string(ncols(D)));
+print(D[1,1]); print(D[1,2]); print(D[2,2]); print(D[3,4]); print(D[4,4]);
+matrix Dbad = transpose(X)*al + al*X + e1*y1*diff(al,y1) + (e22*y2+e23*y3)*diff(al,y2) + (e32*y2+e33*y3)*diff(al,y3);
+print(string(nrows(Dbad)) + "x" + string(ncols(Dbad)));
+quit;

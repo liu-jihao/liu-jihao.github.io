@@ -1,0 +1,19 @@
+rows/columns 1..5 unchanged (net, alpha', column 5, A_55): 1 ; A_05 = Q unchanged: 1
+delta q_k = sum_j u_j a_jk + delta_{k1} y0 u5: 1
+A'_00 - A_00 divisible by y0: 1
+delta G - (2 sum u_j q_j + sum u_a u_b a_ab + 2 u5 Q) = 0
+delta q1 = t2*w^2*y2+t3*w^2*y3+r2*y1*y2+r3*y1*y3
+delta q4 = p0*w^2*y1+p1*y1^2+s2*y2^2+s3*y2*y3
+delta q2 = (c)*r2*w^2*y2+p0*w^2*y3+(c)*r3*w^2*y3+s2*y1*y2+p1*y1*y3+s3*y1*y3
+delta q3 = (c)*p0*w^4+(c)*p1*w^2*y1+r2*y2*y3+r3*y3^2
+8x8 matrix (rows: killed q1 y0y2, y0y3, y1y2, y1y3, q4 y0y1, y1^2, y2^2, y2y3; columns p0,p1,r2,r3,s2,s3,t2,t3):
+0,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,1,
+0,0,1,0,0,0,0,0,
+0,0,0,1,0,0,0,0,
+1,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,0,0 
+determinant: 1
+ms: 1

@@ -1,0 +1,376 @@
+// vn2c_c1_fixed.sing -- copy of the build+elimination part of vn2b_c1.sing plus sigma-fixed-point coefficients (information only)
+ring RS = 0, (g10,g9,g8,g7,g6,g5,g4,g3,g2,g1,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,y3,y2,y1,w), dp;
+
+proc cofac(matrix M, int i, int j)
+{
+  int n = nrows(M);
+  matrix S[n-1][n-1];
+  int r, s, rr, ss;
+  rr = 0;
+  for (r = 1; r <= n; r++) {
+    if (r != i) {
+      rr++; ss = 0;
+      for (s = 1; s <= n; s++) {
+        if (s != j) { ss++; S[rr, ss] = M[r, s]; }
+      }
+    }
+  }
+  int sg = 1;
+  if (((i + j) mod 2) == 1) { sg = -1; }
+  return(sg * det(S));
+}
+proc iszero(matrix M)
+{
+  return(size(ideal(M)) == 0);
+}
+
+
+poly y0 = w^2;
+poly Q = y2*y3 - y1^2;
+poly G = g1*y3^3 + g2*y1^2*y3 + g3*y2*y3^2 + g4*y1^2*y2 + g5*y2^2*y3 + g6*y2^3 + g7*y0*y1*y3 + g8*y0*y1*y2 + g9*y0^2*y3 + g10*y0^2*y2;
+poly q1 = 0;
+poly q2 = b1*y0*y2 + b2*y0*y3 + b3*y1*y2 + b4*y1*y3;
+poly q3 = b5*y0^2 + b6*y0*y1 + b7*y1^2 + b8*y2^2 + b9*y2*y3 + b10*y3^2;
+poly q4 = b11*y0^2 + b12*y3^2;
+int cc = 1;
+matrix A[6][6] =
+  y0*G, w*q1, w*q2, w*q3, w*q4, Q,
+  w*q1, y2,   0,    y1,   0,    w,
+  w*q2, 0,    y3,   cc*y0, y1,  0,
+  w*q3, y1,   cc*y0, y3,  0,    0,
+  w*q4, 0,    y1,   0,    y2,   0,
+  Q,    w,    0,    0,    0,    0;
+
+
+int i, j, k, t, u, v;
+matrix B[6][6];
+for (i = 1; i <= 6; i++) { for (j = 1; j <= 6; j++) { B[i, j] = cofac(A, i, j); } }
+poly dA = det(A);
+matrix I6[6][6]; for (i = 1; i <= 6; i++) { I6[i, i] = 1; }
+"CHECK A symmetric: " + string(iszero(A - transpose(A)));
+"CHECK cofactor matrix symmetric: " + string(iszero(B - transpose(B)));
+"CHECK A*B = det(A)*I: " + string(iszero(A*B - dA*I6));
+ideal sv = maxideal(1);
+sv[nvars(RS)-3] = -y3; sv[nvars(RS)-2] = -y2; sv[nvars(RS)] = -w;
+map sig = RS, sv;
+intvec dl = 1, -1, -1, 1, 1, -1;
+int badA = 0; int badB = 0; poly tA; poly tB;
+for (i = 1; i <= 6; i++) { for (j = 1; j <= 6; j++) {
+  tA = A[i, j]; tB = B[i, j];
+  if (sig(tA) != -dl[i]*dl[j]*tA) { badA++; }
+  if (sig(tB) != -dl[i]*dl[j]*tB) { badB++; }
+} }
+"CHECK sigma(A_jk) = -d_j d_k A_jk, failures: " + string(badA);
+"CHECK sigma(B_ij) = -d_i d_j B_ij, failures: " + string(badB);
+"CHECK det A sigma-invariant: " + string(sig(dA) == dA);
+intvec cw = 0, 3, 3, 3, 3, 4;
+intvec wv = 0:(nvars(RS)-4), 2, 2, 2, 1;
+int badW = 0;
+for (i = 1; i <= 6; i++) { for (j = 1; j <= 6; j++) {
+  if (A[i, j] != 0) {
+    if (jet(A[i, j], 8 - cw[i] - cw[j], wv) - jet(A[i, j], 7 - cw[i] - cw[j], wv) != A[i, j]) { badW++; }
+  }
+} }
+"CHECK weights of A entries, failures: " + string(badW);
+matrix al[4][4];
+for (i = 1; i <= 4; i++) { for (j = 1; j <= 4; j++) { al[i, j] = subst(A[i+1, j+1], w, 0); } }
+"CHECK det(alpha) - Q^2 = " + string(det(al) - Q^2);
+matrix adjal[4][4];
+for (i = 1; i <= 4; i++) { for (j = 1; j <= 4; j++) { adjal[i, j] = cofac(al, i, j); } }
+int qdiv = 1;
+for (i = 1; i <= 4; i++) { for (j = 1; j <= 4; j++) { if (reduce(adjal[i, j], std(ideal(Q))) != 0) { qdiv = 0; } } }
+"CHECK Q divides adj(alpha): " + string(qdiv);
+"CHECK B_05 + Q^3 = 0 mod w: " + string(subst(B[1, 6], w, 0) + Q^3 == 0);
+int okb = 1;
+for (k = 2; k <= 5; k++) {
+  if (subst(B[1, k], w, 0) != 0) { okb = 0; }
+  if (subst(diff(B[1, k], w), w, 0) != Q*adjal[k-1, 1]) { okb = 0; }
+}
+"CHECK B_0k = 0 mod w and [w^1]B_0k = Q*adj(alpha)_{k1} (k=1..4): " + string(okb);
+matrix aa[4][4];
+for (i = 1; i <= 4; i++) { for (j = 1; j <= 4; j++) { aa[i, j] = A[i+1, j+1]; } }
+"CHECK B_00 = -y0*adj(a)_11: " + string(B[1, 1] == -y0*cofac(aa, 1, 1));
+"B_00 = " + string(B[1, 1]);
+
+ring RB = 0, (x(1..371),g10,g9,g8,g7,g6,g5,g4,g3,g2,g1,b12,b11,b10,b9,b8,b7,b6,b5,b4,b3,b2,b1,y3,y2,y1,w), dp;
+
+matrix B = imap(RS, B);
+poly y0 = w^2;
+int nv = nvars(RB);
+int NU = nv - 4;
+int NL = 371;
+ideal EQ; intvec ORD = 0:1000;
+int neq = 0; int badslot = 0;
+poly E; matrix C; intvec ev;
+
+E = B[6, 6] - (x(25)*w^8 + x(26)*w^6*y1 + x(27)*w^4*y3^2 + x(28)*w^4*y2*y3 + x(29)*w^4*y2^2 + x(30)*w^4*y1^2 + x(31)*w^2*y1*y3^2 + x(32)*w^2*y1*y2*y3 + x(33)*w^2*y1*y2^2 + x(34)*w^2*y1^3 + x(35)*y3^4 + x(36)*y2*y3^3 + x(37)*y2^2*y3^2 + x(38)*y1^2*y3^2 + x(39)*y2^3*y3 + x(40)*y1^2*y2*y3 + x(41)*y2^4 + x(42)*y1^2*y2^2 + x(43)*y1^4)*B[1, 1] - (x(19)*w^5 + x(20)*w^3*y1 + x(21)*w*y3^2 + x(22)*w*y2*y3 + x(23)*w*y2^2 + x(24)*w*y1^2)*B[1, 2] - (x(13)*w^5 + x(14)*w^3*y1 + x(15)*w*y3^2 + x(16)*w*y2*y3 + x(17)*w*y2^2 + x(18)*w*y1^2)*B[1, 3] - (x(9)*w^3*y3 + x(10)*w^3*y2 + x(11)*w*y1*y3 + x(12)*w*y1*y2)*B[1, 4] - (x(5)*w^3*y3 + x(6)*w^3*y2 + x(7)*w*y1*y3 + x(8)*w*y1*y2)*B[1, 5] - (x(1)*w^2*y3 + x(2)*w^2*y2 + x(3)*y1*y3 + x(4)*y1*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 16) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[5, 6] - (x(66)*w^7 + x(67)*w^5*y1 + x(68)*w^3*y3^2 + x(69)*w^3*y2*y3 + x(70)*w^3*y2^2 + x(71)*w^3*y1^2 + x(72)*w*y1*y3^2 + x(73)*w*y1*y2*y3 + x(74)*w*y1*y2^2 + x(75)*w*y1^3)*B[1, 1] - (x(60)*w^4 + x(61)*w^2*y1 + x(62)*y3^2 + x(63)*y2*y3 + x(64)*y2^2 + x(65)*y1^2)*B[1, 2] - (x(54)*w^4 + x(55)*w^2*y1 + x(56)*y3^2 + x(57)*y2*y3 + x(58)*y2^2 + x(59)*y1^2)*B[1, 3] - (x(50)*w^2*y3 + x(51)*w^2*y2 + x(52)*y1*y3 + x(53)*y1*y2)*B[1, 4] - (x(46)*w^2*y3 + x(47)*w^2*y2 + x(48)*y1*y3 + x(49)*y1*y2)*B[1, 5] - (x(44)*w*y3 + x(45)*w*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 15) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 0) { badslot++; }
+  }
+}
+E = B[5, 5] - (x(86)*w^6 + x(87)*w^4*y1 + x(88)*w^2*y3^2 + x(89)*w^2*y2*y3 + x(90)*w^2*y2^2 + x(91)*w^2*y1^2 + x(92)*y1*y3^2 + x(93)*y1*y2*y3 + x(94)*y1*y2^2 + x(95)*y1^3)*B[1, 1] - (x(84)*w^3 + x(85)*w*y1)*B[1, 2] - (x(82)*w^3 + x(83)*w*y1)*B[1, 3] - (x(80)*w*y3 + x(81)*w*y2)*B[1, 4] - (x(78)*w*y3 + x(79)*w*y2)*B[1, 5] - (x(76)*y3 + x(77)*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[4, 6] - (x(118)*w^7 + x(119)*w^5*y1 + x(120)*w^3*y3^2 + x(121)*w^3*y2*y3 + x(122)*w^3*y2^2 + x(123)*w^3*y1^2 + x(124)*w*y1*y3^2 + x(125)*w*y1*y2*y3 + x(126)*w*y1*y2^2 + x(127)*w*y1^3)*B[1, 1] - (x(112)*w^4 + x(113)*w^2*y1 + x(114)*y3^2 + x(115)*y2*y3 + x(116)*y2^2 + x(117)*y1^2)*B[1, 2] - (x(106)*w^4 + x(107)*w^2*y1 + x(108)*y3^2 + x(109)*y2*y3 + x(110)*y2^2 + x(111)*y1^2)*B[1, 3] - (x(102)*w^2*y3 + x(103)*w^2*y2 + x(104)*y1*y3 + x(105)*y1*y2)*B[1, 4] - (x(98)*w^2*y3 + x(99)*w^2*y2 + x(100)*y1*y3 + x(101)*y1*y2)*B[1, 5] - (x(96)*w*y3 + x(97)*w*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 15) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 0) { badslot++; }
+  }
+}
+E = B[4, 5] - (x(138)*w^6 + x(139)*w^4*y1 + x(140)*w^2*y3^2 + x(141)*w^2*y2*y3 + x(142)*w^2*y2^2 + x(143)*w^2*y1^2 + x(144)*y1*y3^2 + x(145)*y1*y2*y3 + x(146)*y1*y2^2 + x(147)*y1^3)*B[1, 1] - (x(136)*w^3 + x(137)*w*y1)*B[1, 2] - (x(134)*w^3 + x(135)*w*y1)*B[1, 3] - (x(132)*w*y3 + x(133)*w*y2)*B[1, 4] - (x(130)*w*y3 + x(131)*w*y2)*B[1, 5] - (x(128)*y3 + x(129)*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[4, 4] - (x(158)*w^6 + x(159)*w^4*y1 + x(160)*w^2*y3^2 + x(161)*w^2*y2*y3 + x(162)*w^2*y2^2 + x(163)*w^2*y1^2 + x(164)*y1*y3^2 + x(165)*y1*y2*y3 + x(166)*y1*y2^2 + x(167)*y1^3)*B[1, 1] - (x(156)*w^3 + x(157)*w*y1)*B[1, 2] - (x(154)*w^3 + x(155)*w*y1)*B[1, 3] - (x(152)*w*y3 + x(153)*w*y2)*B[1, 4] - (x(150)*w*y3 + x(151)*w*y2)*B[1, 5] - (x(148)*y3 + x(149)*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[3, 6] - (x(190)*w^5*y3 + x(191)*w^5*y2 + x(192)*w^3*y1*y3 + x(193)*w^3*y1*y2 + x(194)*w*y3^3 + x(195)*w*y2*y3^2 + x(196)*w*y2^2*y3 + x(197)*w*y1^2*y3 + x(198)*w*y2^3 + x(199)*w*y1^2*y2)*B[1, 1] - (x(186)*w^2*y3 + x(187)*w^2*y2 + x(188)*y1*y3 + x(189)*y1*y2)*B[1, 2] - (x(182)*w^2*y3 + x(183)*w^2*y2 + x(184)*y1*y3 + x(185)*y1*y2)*B[1, 3] - (x(176)*w^4 + x(177)*w^2*y1 + x(178)*y3^2 + x(179)*y2*y3 + x(180)*y2^2 + x(181)*y1^2)*B[1, 4] - (x(170)*w^4 + x(171)*w^2*y1 + x(172)*y3^2 + x(173)*y2*y3 + x(174)*y2^2 + x(175)*y1^2)*B[1, 5] - (x(168)*w^3 + x(169)*w*y1)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 15) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[3, 5] - (x(210)*w^4*y3 + x(211)*w^4*y2 + x(212)*w^2*y1*y3 + x(213)*w^2*y1*y2 + x(214)*y3^3 + x(215)*y2*y3^2 + x(216)*y2^2*y3 + x(217)*y1^2*y3 + x(218)*y2^3 + x(219)*y1^2*y2)*B[1, 1] - (x(208)*w*y3 + x(209)*w*y2)*B[1, 2] - (x(206)*w*y3 + x(207)*w*y2)*B[1, 3] - (x(204)*w^3 + x(205)*w*y1)*B[1, 4] - (x(202)*w^3 + x(203)*w*y1)*B[1, 5] - (x(200)*w^2 + x(201)*y1)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 0) { badslot++; }
+  }
+}
+E = B[3, 4] - (x(230)*w^4*y3 + x(231)*w^4*y2 + x(232)*w^2*y1*y3 + x(233)*w^2*y1*y2 + x(234)*y3^3 + x(235)*y2*y3^2 + x(236)*y2^2*y3 + x(237)*y1^2*y3 + x(238)*y2^3 + x(239)*y1^2*y2)*B[1, 1] - (x(228)*w*y3 + x(229)*w*y2)*B[1, 2] - (x(226)*w*y3 + x(227)*w*y2)*B[1, 3] - (x(224)*w^3 + x(225)*w*y1)*B[1, 4] - (x(222)*w^3 + x(223)*w*y1)*B[1, 5] - (x(220)*w^2 + x(221)*y1)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 0) { badslot++; }
+  }
+}
+E = B[3, 3] - (x(250)*w^6 + x(251)*w^4*y1 + x(252)*w^2*y3^2 + x(253)*w^2*y2*y3 + x(254)*w^2*y2^2 + x(255)*w^2*y1^2 + x(256)*y1*y3^2 + x(257)*y1*y2*y3 + x(258)*y1*y2^2 + x(259)*y1^3)*B[1, 1] - (x(248)*w^3 + x(249)*w*y1)*B[1, 2] - (x(246)*w^3 + x(247)*w*y1)*B[1, 3] - (x(244)*w*y3 + x(245)*w*y2)*B[1, 4] - (x(242)*w*y3 + x(243)*w*y2)*B[1, 5] - (x(240)*y3 + x(241)*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[2, 6] - (x(282)*w^5*y3 + x(283)*w^5*y2 + x(284)*w^3*y1*y3 + x(285)*w^3*y1*y2 + x(286)*w*y3^3 + x(287)*w*y2*y3^2 + x(288)*w*y2^2*y3 + x(289)*w*y1^2*y3 + x(290)*w*y2^3 + x(291)*w*y1^2*y2)*B[1, 1] - (x(278)*w^2*y3 + x(279)*w^2*y2 + x(280)*y1*y3 + x(281)*y1*y2)*B[1, 2] - (x(274)*w^2*y3 + x(275)*w^2*y2 + x(276)*y1*y3 + x(277)*y1*y2)*B[1, 3] - (x(268)*w^4 + x(269)*w^2*y1 + x(270)*y3^2 + x(271)*y2*y3 + x(272)*y2^2 + x(273)*y1^2)*B[1, 4] - (x(262)*w^4 + x(263)*w^2*y1 + x(264)*y3^2 + x(265)*y2*y3 + x(266)*y2^2 + x(267)*y1^2)*B[1, 5] - (x(260)*w^3 + x(261)*w*y1)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 15) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[2, 5] - (x(302)*w^4*y3 + x(303)*w^4*y2 + x(304)*w^2*y1*y3 + x(305)*w^2*y1*y2 + x(306)*y3^3 + x(307)*y2*y3^2 + x(308)*y2^2*y3 + x(309)*y1^2*y3 + x(310)*y2^3 + x(311)*y1^2*y2)*B[1, 1] - (x(300)*w*y3 + x(301)*w*y2)*B[1, 2] - (x(298)*w*y3 + x(299)*w*y2)*B[1, 3] - (x(296)*w^3 + x(297)*w*y1)*B[1, 4] - (x(294)*w^3 + x(295)*w*y1)*B[1, 5] - (x(292)*w^2 + x(293)*y1)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 0) { badslot++; }
+  }
+}
+E = B[2, 4] - (x(322)*w^4*y3 + x(323)*w^4*y2 + x(324)*w^2*y1*y3 + x(325)*w^2*y1*y2 + x(326)*y3^3 + x(327)*y2*y3^2 + x(328)*y2^2*y3 + x(329)*y1^2*y3 + x(330)*y2^3 + x(331)*y1^2*y2)*B[1, 1] - (x(320)*w*y3 + x(321)*w*y2)*B[1, 2] - (x(318)*w*y3 + x(319)*w*y2)*B[1, 3] - (x(316)*w^3 + x(317)*w*y1)*B[1, 4] - (x(314)*w^3 + x(315)*w*y1)*B[1, 5] - (x(312)*w^2 + x(313)*y1)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 0) { badslot++; }
+  }
+}
+E = B[2, 3] - (x(342)*w^6 + x(343)*w^4*y1 + x(344)*w^2*y3^2 + x(345)*w^2*y2*y3 + x(346)*w^2*y2^2 + x(347)*w^2*y1^2 + x(348)*y1*y3^2 + x(349)*y1*y2*y3 + x(350)*y1*y2^2 + x(351)*y1^3)*B[1, 1] - (x(340)*w^3 + x(341)*w*y1)*B[1, 2] - (x(338)*w^3 + x(339)*w*y1)*B[1, 3] - (x(336)*w*y3 + x(337)*w*y2)*B[1, 4] - (x(334)*w*y3 + x(335)*w*y2)*B[1, 5] - (x(332)*y3 + x(333)*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+E = B[2, 2] - (x(362)*w^6 + x(363)*w^4*y1 + x(364)*w^2*y3^2 + x(365)*w^2*y2*y3 + x(366)*w^2*y2^2 + x(367)*w^2*y1^2 + x(368)*y1*y3^2 + x(369)*y1*y2*y3 + x(370)*y1*y2^2 + x(371)*y1^3)*B[1, 1] - (x(360)*w^3 + x(361)*w*y1)*B[1, 2] - (x(358)*w^3 + x(359)*w*y1)*B[1, 3] - (x(356)*w*y3 + x(357)*w*y2)*B[1, 4] - (x(354)*w*y3 + x(355)*w*y2)*B[1, 5] - (x(352)*y3 + x(353)*y2)*B[1, 6];
+if (E != 0) {
+  C = coef(E, w*y1*y2*y3);
+  for (t = 1; t <= ncols(C); t++) {
+    neq++; EQ[neq] = C[2, t]; ev = leadexp(C[1, t]); ORD[neq] = ev[nv];
+    if (ev[nv] + 2*(ev[nv-1] + ev[nv-2] + ev[nv-3]) != 14) { badslot++; }
+    if (((ev[nv] + ev[nv-2] + ev[nv-3]) mod 2) != 1) { badslot++; }
+  }
+}
+
+"number of nonzero coefficient equations: " + string(neq);
+"monomials with wrong weight or sign: " + string(badslot);
+intvec NZ = 0:16;
+for (t = 1; t <= neq; t++) { NZ[ORD[t]+1] = NZ[ORD[t]+1] + 1; }
+"nonzero equations by w-order 0..15: " + string(NZ);
+int nconst = 0;
+for (t = 1; t <= neq; t++) { if (deg(EQ[t]) == 0) { nconst++; } }
+"constant equations: " + string(nconst);
+ideal KEPT; intvec KORD = 0:1000; int nk = 0; int found; poly pn;
+for (u = 0; u <= 15; u++) {
+  for (t = 1; t <= neq; t++) {
+    if (ORD[t] == u) {
+      pn = EQ[t] / leadcoef(EQ[t]);
+      found = 0;
+      for (v = 1; v <= nk; v++) { if (leadmonom(KEPT[v]) == leadmonom(pn)) { if (KEPT[v] == pn) { found = 1; break; } } }
+      if (!found) { nk++; KEPT[nk] = pn; KORD[nk] = u; }
+    }
+  }
+}
+intvec ND = 0:16;
+for (t = 1; t <= nk; t++) { ND[KORD[t]+1] = ND[KORD[t]+1] + 1; }
+"distinct up to scalar: " + string(nk);
+"distinct by w-order 0..15: " + string(ND);
+ideal EQ0 = KEPT;
+
+
+// ---------------- my constant-pivot elimination, stage by stage in the w-order of the equations ----------------
+// Stage m adds the (deduplicated) equations of w-order m; within a stage, sweeps look only at equations with at most
+// thr terms (thr reset to 2 after a sweep with a pivot, else thr grows), so short equations are used first.
+// Pivot variable of an equation: it occurs only in one degree-1 term, with constant coefficient;
+// priority: lambda (index <= NL) before A-unknowns; within a type, the LARGEST ring index (my numbering).
+ideal EQW;
+ideal X = maxideal(1);
+intvec ELI = 0:nv;  int npiv = 0;
+int best; int ok; int s; poly f; poly lin; poly hi; ideal vl; ideal vh; poly cf; poly ex;
+int incons = 0; int thr; int maxsz; int progress; int sweeps = 0; int stg; int nadd; int nrem; int pst;
+ideal NEWE;
+int tstart = timer;
+for (stg = 0; stg <= 15; stg++) {
+  // add the order-stg equations, with all earlier substitutions applied
+  NEWE = 0; nadd = 0;
+  for (t = 1; t <= nk; t++) { if (KORD[t] == stg) { nadd++; NEWE[nadd] = EQ0[t]; } }
+  map PHX = RB, X;
+  NEWE = PHX(NEWE);
+  kill PHX;
+  EQW = simplify(EQW + NEWE, 2);
+  pst = npiv;
+  thr = 2;
+  while (1) {
+    progress = 0; maxsz = 0; sweeps++;
+    for (t = 1; t <= ncols(EQW); t++) {
+      f = EQW[t];
+      if (f != 0) {
+        if (size(f) > maxsz) { maxsz = size(f); }
+        if (size(f) <= thr) {
+          if (deg(f) == 0) { incons++; }
+          else {
+            lin = jet(f, 1) - jet(f, 0);
+            if (lin != 0) {
+              hi = f - jet(f, 1);
+              vl = variables(lin); vh = variables(hi);
+              best = 0;
+              for (u = 1; u <= ncols(vl); u++) {
+                if (vl[u] != 0) {
+                  ok = 1;
+                  for (s = 1; s <= ncols(vh); s++) { if (vh[s] == vl[u]) { ok = 0; } }
+                  if (ok) {
+                    v = rvar(vl[u]);
+                    if (best == 0) { best = v; }
+                    else {
+                      if ((v <= NL) && (best > NL)) { best = v; }
+                      else { if (((v <= NL) == (best <= NL)) && (v > best)) { best = v; } }
+                    }
+                  }
+                }
+              }
+              if (best > 0) {
+                cf = diff(f, var(best));
+                if (deg(cf) != 0) { "ERROR nonconstant pivot"; }
+                ex = var(best) - f / cf;
+                EQW = subst(EQW, var(best), ex);
+                X = subst(X, var(best), ex);
+                npiv++; ELI[best] = npiv;
+                progress = 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    if (progress) { thr = 2; }
+    else { if (thr >= maxsz) { break; } thr = thr + 1; }
+  }
+  EQW = simplify(EQW, 2 + 8);
+  "stage " + string(stg) + ": equations added " + string(nadd) + ", pivots " + string(npiv - pst) + ", equations remaining " + string(size(EQW)) + ", max terms " + string(maxsz) + ", CPU s " + string(timer - tstart);
+}
+"elimination CPU seconds: " + string(timer - tstart) + "   sweeps: " + string(sweeps);
+EQW = simplify(EQW, 2 + 8);
+"pivots: " + string(npiv) + "   nonzero constant equations met: " + string(incons);
+int nlel = 0; int nael = 0;
+for (v = 1; v <= NU; v++) { if (ELI[v] > 0) { if (v <= NL) { nlel++; } else { nael++; } } }
+"eliminated lambda: " + string(nlel) + "   eliminated A: " + string(nael);
+"free lambda: " + string(NL - nlel) + "   free A: " + string(NU - NL - nael);
+string fa = "";
+for (v = NL + 1; v <= NU; v++) { if (ELI[v] == 0) { fa = fa + " " + varstr(v); } }
+"free A-unknowns:" + fa;
+string ea = "";
+for (v = NL + 1; v <= NU; v++) { if (ELI[v] > 0) { ea = ea + " " + varstr(v) + "(step " + string(ELI[v]) + ")"; } }
+"eliminated A-unknowns (with step number):" + ea;
+"leftover equations: " + string(size(EQW));
+map PHI = RB, X;
+ideal CHK = PHI(EQ);
+"original equations (all, with scalar multiples) not identically 0 after the final substitution: " + string(size(simplify(CHK, 2)));
+ideal CHKn = simplify(CHK, 1+2+4);
+ideal EQWn = simplify(EQW, 1+2+4);
+"distinct normalized substituted equations: " + string(size(CHKn)) + " ; leftover (normalized, distinct): " + string(size(EQWn)) + " ; union: " + string(size(simplify(EQWn + CHKn, 1+2+4)));
+int graphok = 1; ideal va;
+for (v = NL + 1; v <= NU; v++) {
+  if (ELI[v] > 0) {
+    va = variables(X[v]);
+    for (u = 1; u <= ncols(va); u++) { if (va[u] != 0) { if (rvar(va[u]) <= NL) { graphok = 0; } } }
+  }
+}
+"graph check (no lambda in the images of eliminated A-unknowns): " + string(graphok);
+for (v = NL + 1; v <= NU; v++) { if (ELI[v] > 0) { varstr(v) + " = " + string(X[v]); } }
+
+
+
+// ---- information only: deciding coefficients at the F3 points for c = 1 ----
+"(0:0:1:0|0): x(330)=l13,0[y2^3] -> " + string(X[330]) + " ; x(310)=l14,0[y2^3] -> " + string(X[310]) + " ; x(238)=l23,0[y2^3] -> " + string(X[238]) + " ; x(218)=l24,0[y2^3] -> " + string(X[218]) + " ; x(41)=l55,0[y2^4] -> " + string(X[41]);
+"(0:0:0:1|0): x(326)=l13,0[y3^3] -> " + string(X[326]) + " ; x(306)=l14,0[y3^3] -> " + string(X[306]) + " ; x(234)=l23,0[y3^3] -> " + string(X[234]) + " ; x(214)=l24,0[y3^3] -> " + string(X[214]) + " ; x(35)=l55,0[y3^4] -> " + string(X[35]);
+"b12 -> " + string(X[NL+11]);
+"(0:0:0:1|0) coefficients minus the case's (0, b12, 0, 0, b12^2), evaluated on my parametrization: " + string(X[326]) + " ; " + string(X[306] - X[NL+11]) + " ; " + string(X[234]) + " ; " + string(X[214]) + " ; " + string(X[35] - X[NL+11]^2);
+"memory MB: " + string(memory(2) div 1048576);
+quit;

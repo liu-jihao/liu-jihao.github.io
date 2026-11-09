@@ -1,0 +1,19 @@
+ncols after zeroing: 4
+ncols after subst: 4
+E[1]=2y+z
+E[2]=0
+E[3]=z
+E[4]=0
+ncols F: 4
+ncols F after map: 4
+F[1]=0
+F[2]=x
+F[3]=0
+F[4]=y
+ncols after zeroing last-but: 4
+E[1]=2y+1
+E[2]=0
+E[3]=0
+E[4]=0
+ncols H trailing zeros: 3
+after subst: 3

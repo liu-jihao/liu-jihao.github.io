@@ -1,0 +1,44 @@
+(1) U-change leaves rows/columns v1..v5 and A_05 unchanged: 1
+(1) 8x8 matrix (rows: killed q1[y0y2,y0y3,y1y2,y1y3], q2[y1y2,y1y3], q4[y0y1,y1^2]; columns p0,p1,r2,r3,s2,s3,t2,t3):
+1,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,1,
+0,1,1,0,0,0,0,0,
+0,0,0,1,0,0,0,0,
+0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,0,0,
+1,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0 
+(1) determinant: 1   (c is kept as a variable)
+(1) the killed coefficients change by linear forms in the 8 parameters (no dependence on G, q): 1
+(2) family matrix built (c = 1); ms: 12
+(2) shear steps: net, column v5 and A_05 restored after step b: 1; M' after step b = -1/2*e,-1/4*e^2,1,1/2*e; A_05 = Q after step c: 1; M' after step c = -e,-1/4*e^2,1,0; M' after step d = 0,0,1,0; U-system has constant matrix: 1, det 1; 
+(2) ms: 13
+(3) the sheared and re-normalized matrix is in the slice of N3, c = 1 (fixed entries, q1 = 0, killed q-coefficients 0, no other monomials): 1
+(3) the image lies on the graph of n3_final.sing (hence is a solution of the rank conditions): 1
+(4) the shear on the free coordinates (new value as polynomial in e and the old free coordinates):
+   g(4) -> -2*b(6)^2*e-4*b(6)*b(11)*e+1/2*b(6)*e^2+2*g(5)*e-2*b(4)*e+g(4)
+   g(5) -> 4*b(6)*e+3*b(11)*e+3/2*e^2+g(5)
+   g(6) -> 3/2*b(6)*e^2+3*b(11)*e^2+e^3+2*b(4)*e+g(6)
+   g(8) -> 2*b(6)^3*e+8*b(6)^2*b(11)*e+8*b(6)*b(11)^2*e+2*b(6)^2*e^2+4*b(6)*b(11)*e^2-b(6)*e^3-1/2*b(11)*e^3-1/8*e^4-2*g(5)*b(6)*e+2*b(4)*b(6)*e-4*g(5)*b(11)*e+4*b(4)*b(11)*e-5/2*g(5)*e^2+2*b(4)*e^2-1/2*g(4)*e-1/2*g(6)*e+g(8)
+   b(4) -> 3/2*b(6)*e+3*b(11)*e+3/2*e^2+b(4)
+   b(6) -> b(6)
+   b(9) -> -1/8*b(6)*e^3-1/4*b(11)*e^3-1/16*e^4-1/4*b(4)*e^2-1/4*g(6)*e+b(9)
+   b(11) -> b(11)+e
+(4) torus field (T1) and shear field at e = 0, on the free coordinates:
+6*g(4), 4*g(5), 6*g(6),8*g(8), 4*b(4), 2*b(6),8*b(9),   2*b(11),
+VV[2,1],VV[2,2],2*b(4),VV[2,4],VV[2,5],0,     -1/4*g(6),1       
+   shear field, component g(4): -2*b(6)^2-4*b(6)*b(11)+2*g(5)-2*b(4)
+   shear field, component g(5): 4*b(6)+3*b(11)
+   shear field, component g(6): 2*b(4)
+   shear field, component g(8): 2*b(6)^3+8*b(6)^2*b(11)+8*b(6)*b(11)^2-2*g(5)*b(6)+2*b(4)*b(6)-4*g(5)*b(11)+4*b(4)*b(11)-1/2*g(4)-1/2*g(6)
+   shear field, component b(4): 3/2*b(6)+3*b(11)
+   shear field, component b(6): 0
+   shear field, component b(9): -1/4*g(6)
+   shear field, component b(11): 1
+(4) number of nonzero 2x2 minors of [torus field; shear field]: 28  (> 0 means the two fields are independent at a general point)
+   one nonzero minor: -1/2*g(6)*b(11)-8*b(9)
+(4) the shear field is nonzero (number of nonzero components): 7
+(4) group law F(e1, F(e2, x)) = F(e1 + e2, x) on the free coordinates: 1
+(4) torus normalizes the shear, F(s^2 e, T1(s) x) = T1(s) F(e, x): 1
+(4) b(11) -> b(11) + e exactly: 1 ; b(6) invariant: 1
+== done; ms: 15 ; memory (KB): 4154 ; max: 4228

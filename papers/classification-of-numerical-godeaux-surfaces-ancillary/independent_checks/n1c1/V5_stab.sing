@@ -1,0 +1,32 @@
+// V5_stab.sing -- premise check for n1c1: the sigma-equivariant infinitesimal stabilizer of the nets N1(1) and N1(0)
+// (changes of generators X = diag(XI, XII) on (v1,v2 | v3,v4), coordinate changes Y = diag(y11 | Y23) on (y1 | y2,y3)),
+// condition  XI-part: X^t*alpha + alpha*X + sum_i (Y*y)_i * d(alpha)/d(y_i) = 0  (first order of (1+eX)^t alpha(y+eYy) (1+eX)).
+// Then the action on the w-column of rows v1, v2 (c -> XI^t c): which directions in P(span(v1,v2)) are fixed?
+// Expected (PLAN A5.2): N1(1): dim 2, fixed directions (1:1),(1:-1), so v1 = (1:0) is generic;
+//                       N1(0): dim 3, unique fixed direction (0:1), so v1 = (1:0) is generic.
+ring r = 0, (a11,a12,a21,a22, b11,b12,b21,b22, c11, d22,d23,d32,d33, y1,y2,y3), dp;
+int i, j, k, n;
+proc stab(poly Dv)
+{
+  matrix al[4][4] = Dv*y3, y2, y1, 0,
+                    y2, y3, 0, y1,
+                    y1, 0, -y3, y2,
+                    0, y1, y2, -Dv*y3;
+  matrix X[4][4] = a11,a12,0,0, a21,a22,0,0, 0,0,b11,b12, 0,0,b21,b22;
+  poly Yy1 = c11*y1; poly Yy2 = d22*y2 + d23*y3; poly Yy3 = d32*y2 + d33*y3;
+  matrix T = transpose(X)*al + al*X + Yy1*diff(al, y1) + Yy2*diff(al, y2) + Yy3*diff(al, y3);
+  ideal eqs; int i, j, n; matrix C; n = 0;
+  for (i=1;i<=4;i++) { for (j=1;j<=4;j++) { if (T[i,j] != 0) { C = coef(T[i,j], y1*y2*y3); for (int t=1;t<=ncols(C);t++) { n++; eqs[n] = C[2,t]; } kill t; } } }
+  ideal S = std(eqs);
+  // the 13 unknowns are a11..d33 (variables 1..13); dimension of the solution space = 13 - number of independent linear equations
+  int dimsol = 13 - size(S);
+  "  equations:", n, " independent:", size(S), " stabilizer dimension:", dimsol;
+  "  reduced equations:", S;
+  return(S);
+}
+"N1(1):";
+ideal S1 = stab(1);
+"N1(0):";
+ideal S0 = stab(0);
+// fixed directions: generic element of the stabilizer, read off XI from the reduced equations by hand below
+quit;

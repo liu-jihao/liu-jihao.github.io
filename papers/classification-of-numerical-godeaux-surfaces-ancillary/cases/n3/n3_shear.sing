@@ -1,0 +1,174 @@
+// n3_shear.sing -- case n3: (1) the 8x8 matrix of the q-normalization (nets T7) for N3 with c symbolic and c = 1;
+// (2) the shear y3 -> y3 + e*y2 of the B1 net with the compensating change of v1..v4 (nets T4), followed by the
+// re-normalizations of PLAN A5.4 (beta: y1 -> y1 + beta*y0 and v1 -> v1 + w(2 beta y1 + beta^2 y0); kappa_3, kappa_4:
+// v5 -> v5 + kappa_j w v_j) and A6 (the unipotent group U, 8 parameters), applied to the whole family
+// A(x), x = the 8 free A-coefficients (graph of n3_final.sing);
+// (3) checks: the result is again in the slice of N3, c = 1, and lies on the graph (so it is a solution);
+// (4) the induced map on the 8 free coordinates, its tangent vector at e = 0, comparison with the torus direction T1,
+//     and the group law F(e1, F(e2, x)) = F(e1 + e2, x).
+system("--ticks-per-sec", 1000); int T0 = rtimer;
+LIB "matrix.lib"; LIB "linalg.lib";
+ring S = 0, (lam(1..371), g(1..10), b(1..12)), dp;
+ideal FIN = maxideal(1);
+< "n3_final.sing";
+ideal FGB; int t; for (t=1;t<=22;t++){ FGB[t] = FIN[371+t]; }
+ring T = 0, (g(1..10), b(1..12), e, e1, e2, w, y1, y2, y3, p0, p1, r2, r3, s2, s3, t2, t3, c, s), dp;
+ideal FGB = imap(S, FGB);
+int i, j, k, u;
+poly y0 = w^2;
+proc cf(poly h, poly mon)
+{
+  if (h == 0) { return(poly(0)); }
+  matrix C = coef(h, w*y1*y2*y3); int ii;
+  for (ii=1; ii<=ncols(C); ii++) { if (C[1,ii] == mon) { return(C[2,ii]); } }
+  return(poly(0));
+}
+proc unit6() { matrix P[6][6]; int ii; for (ii=1;ii<=6;ii++){ P[ii,ii] = 1; } return(P); }
+// generic matrix of the ansatz (all g, b), normal form N3 with alpha' = c*E_23
+poly G = g(1)*y3^3 + g(2)*y1^2*y3 + g(3)*y2*y3^2 + g(4)*y1^2*y2 + g(5)*y2^2*y3 + g(6)*y2^3 + g(7)*y0*y1*y3 + g(8)*y0*y1*y2 + g(9)*y0^2*y3 + g(10)*y0^2*y2;
+poly q1 = 0;
+poly q2 = b(1)*y0*y2 + b(2)*y0*y3;
+poly q3 = b(3)*y0^2 + b(4)*y0*y1 + b(5)*y1^2 + b(6)*y2^2 + b(7)*y2*y3 + b(8)*y3^2;
+poly q4 = b(9)*y0^2 + b(10)*y2^2 + b(11)*y2*y3 + b(12)*y3^2;
+poly Q = y2^2 - y1^2;
+matrix NFM[6][6] = 0, 0, 0, 0, 0, Q,
+                  0, y3, y2, y1, 0, w,
+                  0, y2, 0, c*y0, y1, 0,
+                  0, y1, c*y0, 0, y2, 0,
+                  0, 0, y1, y2, -y3, 0,
+                  Q, w, 0, 0, 0, 0;
+matrix AG[6][6] = NFM; AG[1,1] = y0*G; AG[1,2] = w*q1; AG[1,3] = w*q2; AG[1,4] = w*q3; AG[1,5] = w*q4;
+AG[2,1] = AG[1,2]; AG[3,1] = AG[1,3]; AG[4,1] = AG[1,4]; AG[5,1] = AG[1,5];
+// monomials (in w, y) of the g's and b's inside the entries A_00 = y0*G and A_0k = w*q_k
+list GMON = y0*y3^3, y0*y1^2*y3, y0*y2*y3^2, y0*y1^2*y2, y0*y2^2*y3, y0*y2^3, y0^2*y1*y3, y0^2*y1*y2, y0^3*y3, y0^3*y2;
+list BMON = w*y0*y2, w*y0*y3, w*y0^2, w*y0*y1, w*y1^2, w*y2^2, w*y2*y3, w*y3^2, w*y0^2, w*y2^2, w*y2*y3, w*y3^2;
+intvec BCOL = 3,3,4,4,4,4,4,4,5,5,5,5;   // Singular column of the entry A_0k = w*q_k for each b
+list KMON = w*y0*y2, w*y0*y3, w*y1*y2, w*y1*y3, w*y1*y2, w*y1*y3, w*y0*y1, w*y1^2;   // killed: q1 (4), q2 (2), q4 (2)
+intvec KCOL = 2,2,2,2,3,3,5,5;
+
+// ---------------- (1) nets T7 for N3: the 8x8 matrix of the q-normalization ----------------
+matrix P4[6][6] = unit6();
+poly u2 = p0*y0 + p1*y1; poly u3 = r2*y2 + r3*y3; poly u4 = s2*y2 + s3*y3; poly u5 = t2*y2 + t3*y3;
+P4[3,1] = w*u2; P4[4,1] = w*u3; P4[5,1] = w*u4; P4[6,1] = y0*u5;
+matrix AU = transpose(P4)*AG*P4;
+int okfix = 1; for (i=2;i<=6;i++){ for (j=2;j<=6;j++){ if (AU[i,j] != AG[i,j]) { okfix = 0; } } } if (AU[1,6] != Q) { okfix = 0; }
+"(1) U-change leaves rows/columns v1..v5 and A_05 unchanged:", okfix;
+ideal PV = p0, p1, r2, r3, s2, s3, t2, t3;
+matrix M8[8][8]; poly dk;
+for (i=1;i<=8;i++){ dk = cf(AU[1,KCOL[i]], KMON[i]) - cf(AG[1,KCOL[i]], KMON[i]); for (j=1;j<=8;j++){ M8[i,j] = diff(dk, PV[j]); } }
+"(1) 8x8 matrix (rows: killed q1[y0y2,y0y3,y1y2,y1y3], q2[y1y2,y1y3], q4[y0y1,y1^2]; columns p0,p1,r2,r3,s2,s3,t2,t3):"; print(M8);
+"(1) determinant:", det(M8), "  (c is kept as a variable)";
+// delta q_k is linear in the u's, without constant term
+int lin = 1; for (i=1;i<=8;i++){ dk = cf(AU[1,KCOL[i]], KMON[i]) - cf(AG[1,KCOL[i]], KMON[i]); if (subst(dk, p0,0,p1,0,r2,0,r3,0,s2,0,s3,0,t2,0,t3,0) != 0) { lin = 0; } for (j=1;j<=8;j++){ if (deg(M8[i,j]) > 0) { lin = 0; } } }
+"(1) the killed coefficients change by linear forms in the 8 parameters (no dependence on G, q):", lin;
+
+// ---------------- (2) the family over the 8 free A-coefficients, c = 1 ----------------
+ideal SB = maxideal(1); for (t=1;t<=10;t++){ SB[t] = FGB[t]; } for (t=1;t<=12;t++){ SB[10+t] = FGB[10+t]; }
+map toFam = T, SB;
+matrix AF0 = toFam(AG);
+matrix AF = subst(AF0, c, 1);
+"(2) family matrix built (c = 1); ms:", rtimer - T0;
+proc shear(matrix A0, poly ee)
+{
+  // returns list(A6, report string); A0 in the slice of N3 with c = 1
+  poly yy0 = w^2; string rep = "";
+  // step a: coordinates y3 -> y3 + ee*y2
+  matrix A1 = subst(A0, y3, y3 + ee*y2);
+  // step b: congruence by diag(1, gI, gII, 1), gI = [[1,0],[tt,1]], gII = gI^(-t) = [[1,-tt],[0,1]], tt = -ee/2
+  poly tt = -ee/2;
+  matrix P1[6][6]; int ii; for (ii=1;ii<=6;ii++){ P1[ii,ii] = 1; } P1[3,2] = tt; P1[4,5] = -tt;
+  matrix A2 = transpose(P1)*A1*P1;
+  int oknet = 1; int a, bb;
+  matrix NN[6][6] = 0, 0, 0, 0, 0, y2^2-y1^2,  0, y3, y2, y1, 0, w,  0, y2, 0, 0, y1, 0,  0, y1, 0, 0, y2, 0,  0, 0, y1, y2, -y3, 0,  y2^2-y1^2, w, 0, 0, 0, 0;
+  for (a=2;a<=6;a++){ for (bb=2;bb<=6;bb++){ if (subst(A2[a,bb], w, 0) != subst(NN[a,bb], w, 0)) { oknet = 0; } } }
+  if (A2[1,6] != NN[1,6] || A2[2,6] != w) { oknet = 0; }
+  rep = rep + "net, column v5 and A_05 restored after step b: " + string(oknet) + "; ";
+  // the order-2 block M' (rows v1,v2; columns v3,v4)
+  matrix MP[2][2]; for (a=1;a<=2;a++){ for (bb=1;bb<=2;bb++){ MP[a,bb] = subst(diff(diff(A2[a+1,bb+3], w), w), w, 0)/2; } }
+  rep = rep + "M' after step b = " + string(MP) + "; ";
+  // step c: beta (kills the (v2,v4) entry): y1 -> y1 + beta*y0, then v1 -> v1 + w*(2 beta y1 + beta^2 y0)
+  poly beta = -MP[2,2];
+  matrix A3 = subst(A2, y1, y1 + beta*yy0);
+  matrix P2[6][6]; for (ii=1;ii<=6;ii++){ P2[ii,ii] = 1; } P2[2,1] = w*(2*beta*y1 + beta^2*yy0);
+  matrix A3b = transpose(P2)*A3*P2;
+  rep = rep + "A_05 = Q after step c: " + string(A3b[1,6] == y2^2 - y1^2) + "; ";
+  matrix MQ[2][2]; for (a=1;a<=2;a++){ for (bb=1;bb<=2;bb++){ MQ[a,bb] = subst(diff(diff(A3b[a+1,bb+3], w), w), w, 0)/2; } }
+  rep = rep + "M' after step c = " + string(MQ) + "; ";
+  // step d: kappa_3, kappa_4 (kill the (v1,v3), (v1,v4) entries): congruence by I + kappa_j w E_{5j}
+  matrix P3[6][6]; for (ii=1;ii<=6;ii++){ P3[ii,ii] = 1; } P3[6,4] = -MQ[1,1]*w; P3[6,5] = -MQ[1,2]*w;
+  matrix A4 = transpose(P3)*A3b*P3;
+  matrix MR[2][2]; for (a=1;a<=2;a++){ for (bb=1;bb<=2;bb++){ MR[a,bb] = subst(diff(diff(A4[a+1,bb+3], w), w), w, 0)/2; } }
+  rep = rep + "M' after step d = " + string(MR) + "; ";
+  // step e: U-normalization (kills the 8 killed q-coefficients)
+  matrix P4[6][6]; for (ii=1;ii<=6;ii++){ P4[ii,ii] = 1; }
+  P4[3,1] = w*(p0*yy0 + p1*y1); P4[4,1] = w*(r2*y2 + r3*y3); P4[5,1] = w*(s2*y2 + s3*y3); P4[6,1] = yy0*(t2*y2 + t3*y3);
+  matrix A5 = transpose(P4)*A4*P4;
+  list KMONl = w*yy0*y2, w*yy0*y3, w*y1*y2, w*y1*y3, w*y1*y2, w*y1*y3, w*yy0*y1, w*y1^2;
+  intvec KCOLl = 2,2,2,2,3,3,5,5;
+  ideal PVl = p0, p1, r2, r3, s2, s3, t2, t3;
+  matrix ML[8][8]; matrix CV[8][1]; poly kk;
+  for (a=1;a<=8;a++){ kk = cf(A5[1,KCOLl[a]], KMONl[a]); for (bb=1;bb<=8;bb++){ ML[a,bb] = diff(kk, PVl[bb]); } CV[a,1] = subst(kk, p0,0,p1,0,r2,0,r3,0,s2,0,s3,0,t2,0,t3,0); }
+  int constML = 1; for (a=1;a<=8;a++){ for (bb=1;bb<=8;bb++){ if (deg(ML[a,bb]) > 0) { constML = 0; } } }
+  rep = rep + "U-system has constant matrix: " + string(constML) + ", det " + string(det(ML)) + "; ";
+  matrix SOL = (-1)*inverse(ML)*CV;
+  matrix A6 = subst(A5, p0, SOL[1,1], p1, SOL[2,1], r2, SOL[3,1], r3, SOL[4,1], s2, SOL[5,1], s3, SOL[6,1], t2, SOL[7,1], t3, SOL[8,1]);
+  return(list(A6, rep));
+}
+proc readcoords(matrix A6)
+{
+  // returns list(ideal of the 22 coordinates g(1..10), b(1..12), flag: A6 is in the slice of N3 with c = 1)
+  poly yy0 = w^2; int ok = 1; int a, bb, ii;
+  matrix NN[6][6] = 0, 0, 0, 0, 0, y2^2-y1^2,  0, y3, y2, y1, 0, w,  0, y2, 0, yy0, y1, 0,  0, y1, yy0, 0, y2, 0,  0, 0, y1, y2, -y3, 0,  y2^2-y1^2, w, 0, 0, 0, 0;
+  for (a=2;a<=6;a++){ for (bb=2;bb<=6;bb++){ if (A6[a,bb] != NN[a,bb]) { ok = 0; } } }
+  if (A6[1,6] != NN[1,6]) { ok = 0; }
+  for (a=1;a<=6;a++){ if (A6[a,1] != A6[1,a]) { ok = 0; } }
+  list GM = yy0*y3^3, yy0*y1^2*y3, yy0*y2*y3^2, yy0*y1^2*y2, yy0*y2^2*y3, yy0*y2^3, yy0^2*y1*y3, yy0^2*y1*y2, yy0^3*y3, yy0^3*y2;
+  list BM = w*yy0*y2, w*yy0*y3, w*yy0^2, w*yy0*y1, w*y1^2, w*y2^2, w*y2*y3, w*y3^2, w*yy0^2, w*y2^2, w*y2*y3, w*y3^2;
+  intvec BC = 3,3,4,4,4,4,4,4,5,5,5,5;
+  ideal X; poly rest;
+  rest = A6[1,1]; for (ii=1;ii<=10;ii++){ X[ii] = cf(A6[1,1], GM[ii]); rest = rest - X[ii]*GM[ii]; } if (rest != 0) { ok = 0; }
+  if (A6[1,2] != 0) { ok = 0; }
+  for (ii=1;ii<=12;ii++){ X[10+ii] = cf(A6[1,BC[ii]], BM[ii]); }
+  for (a=3;a<=5;a++){ rest = A6[1,a]; for (ii=1;ii<=12;ii++){ if (BC[ii] == a) { rest = rest - X[10+ii]*BM[ii]; } } if (rest != 0) { ok = 0; } }
+  return(list(X, ok));
+}
+list RS = shear(AF, e);
+"(2) shear steps:", RS[2];
+"(2) ms:", rtimer - T0;
+list RC = readcoords(RS[1]);
+ideal XN = RC[1];
+"(3) the sheared and re-normalized matrix is in the slice of N3, c = 1 (fixed entries, q1 = 0, killed q-coefficients 0, no other monomials):", RC[2];
+// graph check: eliminated coordinates of the image = FIN(free coordinates of the image)
+ideal SBn = maxideal(1); for (t=1;t<=22;t++){ SBn[t] = XN[t]; }
+map toNew = T, SBn; ideal FGBn = toNew(FGB);
+int okgraph = 1; for (t=1;t<=22;t++){ if (XN[t] != FGBn[t]) { okgraph = 0; "   graph violated at coordinate", t; } }
+"(3) the image lies on the graph of n3_final.sing (hence is a solution of the rank conditions):", okgraph;
+intvec FREEA = 4, 5, 6, 8, 14, 16, 19, 21;   // positions in (g(1..10), b(1..12)): g4 g5 g6 g8 b4 b6 b9 b11
+intvec WT1 = 6, 4, 6, 8, 4, 2, 8, 2;          // their T1-weights (n3_checks.sing)
+"(4) the shear on the free coordinates (new value as polynomial in e and the old free coordinates):";
+for (t=1;t<=8;t++){ "   " + string(var(FREEA[t])) + " -> " + string(XN[FREEA[t]]); }
+matrix VV[2][8];
+for (t=1;t<=8;t++){ VV[1,t] = WT1[t]*var(FREEA[t]); VV[2,t] = subst(diff(XN[FREEA[t]], e), e, 0); }
+"(4) torus field (T1) and shear field at e = 0, on the free coordinates:"; print(VV);
+for (t=1;t<=8;t++){ "   shear field, component " + string(var(FREEA[t])) + ": " + string(VV[2,t]); }
+ideal MIN2 = minor(VV, 2); MIN2 = simplify(MIN2, 2);
+"(4) number of nonzero 2x2 minors of [torus field; shear field]:", size(MIN2), " (> 0 means the two fields are independent at a general point)";
+if (size(MIN2) > 0) { "   one nonzero minor:", MIN2[1]; }
+int nzsh = 0; for (t=1;t<=8;t++){ if (VV[2,t] != 0) { nzsh++; } } "(4) the shear field is nonzero (number of nonzero components):", nzsh;
+// group law: F(e1, F(e2, x)) = F(e1 + e2, x) on the free coordinates
+ideal F1 = maxideal(1); for (t=1;t<=8;t++){ F1[FREEA[t]] = subst(XN[FREEA[t]], e, e2); }
+ideal F2 = maxideal(1); for (t=1;t<=8;t++){ F2[FREEA[t]] = F1[FREEA[t]]; }
+ideal Fe1 = maxideal(1); for (t=1;t<=8;t++){ Fe1[FREEA[t]] = subst(XN[FREEA[t]], e, e1); }
+map comp = T, F2;     // substitutes x -> F(e2, x)
+int okgrp = 1; poly lhs; poly rhs; poly tmpf;
+for (t=1;t<=8;t++){ tmpf = Fe1[FREEA[t]]; lhs = comp(tmpf); rhs = subst(XN[FREEA[t]], e, e1 + e2); if (lhs != rhs) { okgrp = 0; } }
+"(4) group law F(e1, F(e2, x)) = F(e1 + e2, x) on the free coordinates:", okgrp;
+// the torus normalizes the shear: F(s^2 e, T1(s) x) = T1(s) F(e, x), with T1(s) x_v = s^(weight of v) x_v
+ideal TSI = maxideal(1); for (t=1;t<=8;t++){ TSI[FREEA[t]] = s^WT1[t]*var(FREEA[t]); } TSI[23] = s^2*e;
+map TS = T, TSI; int oknorm = 1;
+for (t=1;t<=8;t++){ tmpf = XN[FREEA[t]]; if (TS(tmpf) != s^WT1[t]*XN[FREEA[t]]) { oknorm = 0; } }
+"(4) torus normalizes the shear, F(s^2 e, T1(s) x) = T1(s) F(e, x):", oknorm;
+// the slice b(11) = 0 meets every shear orbit exactly once (b(11) -> b(11) + e); residual torus on it
+"(4) b(11) -> b(11) + e exactly:", XN[21] == b(11) + e, "; b(6) invariant:", XN[16] == b(6);
+"== done; ms:", rtimer - T0, "; memory (KB):", memory(1) div 1024, "; max:", memory(2) div 1024;
+quit;

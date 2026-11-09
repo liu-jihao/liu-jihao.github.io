@@ -1,0 +1,35 @@
+size check of alpha (4,4):
+4
+4
+number of terms of det alpha:
+62
+(1) det alpha = det(D1 D2 - y1^2 I):
+1
+(1') det alpha = det(D2 D1 - y1^2 I):
+1
+(1'') det N = det D1 det D2 - y1^2 tr(D1 D2) + y1^4:
+1
+alpha * adj(alpha) = det(alpha) I (convention check):
+1
+(2) adj alpha equals the block formula (all 16 entries):
+1
+(2') top-left block = D2((tr(D1D2) - y1^2) I - D1 D2):
+1
+(3a) det alpha - Q^2 = det E + Q tr E:
+1
+(3b) adj alpha - Q[[D2,-y1 I],[-y1 I,D1]] = [[D2 adjE, -y1 adjE'],[-y1 adjE, adjE D1]]:
+1
+(3c) E' = transpose(E):
+1
+number of coefficient equations in J:
+12
+standard basis of J computed, size:
+150
+(3d) det alpha - Q^2 reduces to 0 mod J:
+1
+(3e) adj alpha - Q[[D2,-y1 I],[-y1 I,D1]] reduces to 0 mod J:
+1
+(4) TL = D2(Q2 I - D1D2) + (tr(D1D2) - 2Q2) D2 + Q D2:
+1
+(5) det alpha_M at y2 = y3 = 0 equals det(M)^2 y1^4:
+1

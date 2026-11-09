@@ -1,0 +1,148 @@
+// v2_nets.sing -- independent check of the invariants of the five sigma-equivariant nets (case nets T2)
+// and of the rank condition on CCO94's eight normal forms (case nets T3), read from the page image p. 109.
+LIB "elim.lib";
+< "vlib.sing";
+
+// ---------- generic procedures (basering must contain y1, y2, y3) ----------
+proc rk2(matrix A)
+{
+  if (det(A) != 0) { return(2); }
+  if (viszero(A)) { return(0); }
+  return(1);
+}
+
+proc netcheck(string nm, matrix D1, matrix D2, poly Q2)
+{
+  matrix I2 = vid(2);
+  matrix Y1 = vsc(y1, I2);
+  matrix al = vblk(D1, Y1, Y1, D2);
+  poly Q = Q2 - y1^2;
+  "==== net " + nm + " ====";
+  "Q = "; Q;
+  "(i) det alpha - Q^2 == 0:"; det(al) - Q^2 == 0;
+  matrix B = vadj(al);
+  ideal GQ = std(ideal(Q));
+  "(ii) Q divides every entry of adj(alpha):"; viszero(vreducemat(B, GQ));
+  "(ii') D1*D2 - Q2*I == 0:"; viszero(vsubm(D1 * D2, vsc(Q2, I2)));
+  // sigma: y1 -> y1, y2 -> -y2, y3 -> -y3; required: sigma(alpha_jk) = -delta_j delta_k alpha_jk,
+  // delta(v1..v4) = (-,-,+,+)
+  intvec dl = -1, -1, 1, 1;
+  int j; int k; int okS = 1; poly sgf;
+  for (j = 1; j <= 4; j++) { for (k = 1; k <= 4; k++) {
+    sgf = subst(subst(al[j, k], y2, -y2), y3, -y3);
+    if (sgf != -dl[j]*dl[k]*al[j, k]) { okS = 0; }
+  } }
+  "(iii) sigma(alpha) = -Delta alpha Delta:"; okS;
+  ideal J = Q, minor(al, 2);
+  "(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):"; dim(std(J));
+  "     Krull dim of Q[y]/(entries of alpha):"; dim(std(ideal(al)));
+  "Q2 factorization:"; factorize(Q2);
+}
+
+proc fixcheck(string nm, matrix D1, matrix D2, poly Q2, poly p2, poly p3)
+{
+  // point p = (0 : p2 : p3) of P^2(y1:y2:y3)
+  poly qv = subst(subst(subst(Q2, y1, 0), y2, p2), y3, p3);
+  matrix A1[2][2]; matrix A2[2][2]; int i; int j;
+  for (i = 1; i <= 2; i++) { for (j = 1; j <= 2; j++) {
+    A1[i, j] = subst(subst(D1[i, j], y2, p2), y3, p3);
+    A2[i, j] = subst(subst(D2[i, j], y2, p2), y3, p3);
+  } }
+  int r1 = rk2(A1); int r2 = rk2(A2);
+  "  " + nm + " at (0 : " + string(p2) + " : " + string(p3) + "): Q(p) = " + string(qv) + ", rank D1(p) = " + string(r1) + ", rank D2(p) = " + string(r2) + ", t(p) = dim coker D2 - dim coker D1 = " + string(r1 - r2);
+}
+
+// ---------- ring over Q, variable order (y3, y2, y1) ----------
+ring R = 0, (y3, y2, y1), dp;
+
+matrix D1[2][2]; matrix D2[2][2]; poly Q2;
+
+// N1(D) at D = 0 and D = 1, with D1 = [[D y3, y2],[y2, y3]], D2 = [[-y3, y2],[y2, -D y3]], Q2 = y2^2 - D y3^2
+D1 = 0*y3, y2, y2, y3;   D2 = -y3, y2, y2, 0*y3;   Q2 = y2^2;
+netcheck("N1(0)", D1, D2, Q2);
+fixcheck("N1(0)", D1, D2, Q2, 0, 1);
+D1 = y3, y2, y2, y3;     D2 = -y3, y2, y2, -y3;    Q2 = y2^2 - y3^2;
+netcheck("N1(1)", D1, D2, Q2);
+fixcheck("N1(1)", D1, D2, Q2, 1, 1); fixcheck("N1(1)", D1, D2, Q2, -1, 1);
+// N2
+D1 = y2, 0, 0, y3;       D2 = y3, 0, 0, y2;        Q2 = y2*y3;
+netcheck("N2", D1, D2, Q2);
+fixcheck("N2", D1, D2, Q2, 1, 0); fixcheck("N2", D1, D2, Q2, 0, 1);
+// N3
+D1 = y3, y2, y2, 0;      D2 = 0, y2, y2, -y3;      Q2 = y2^2;
+netcheck("N3", D1, D2, Q2);
+fixcheck("N3", D1, D2, Q2, 0, 1);
+// T0: D1 = l1 I, D2 = l2 I with l1 = y2 + y3, l2 = y2 - y3, Q2 = l1 l2
+D1 = y2 + y3, 0, 0, y2 + y3;  D2 = y2 - y3, 0, 0, y2 - y3;  Q2 = y2^2 - y3^2;
+netcheck("T0", D1, D2, Q2);
+fixcheck("T0", D1, D2, Q2, 1, -1); fixcheck("T0", D1, D2, Q2, 1, 1);
+// B2: D1 = D2 = l I, Q2 = l^2
+D1 = y2, 0, 0, y2;       D2 = y2, 0, 0, y2;        Q2 = y2^2;
+netcheck("B2", D1, D2, Q2);
+fixcheck("B2", D1, D2, Q2, 0, 1);
+
+// ---------- N1(D) with D = s^2, s a transcendental parameter ----------
+ring Rs = (0, s), (y3, y2, y1), dp;
+matrix D1[2][2] = s^2*y3, y2, y2, y3;
+matrix D2[2][2] = -y3, y2, y2, -s^2*y3;
+poly Q2 = y2^2 - s^2*y3^2;
+netcheck("N1(s^2), s generic", D1, D2, Q2);
+fixcheck("N1(s^2)", D1, D2, Q2, s, 1); fixcheck("N1(s^2)", D1, D2, Q2, -s, 1);
+
+// ---------- N1(D) with D a ring variable: the D-values with a point of rank <= 1 on V(Q) ----------
+ring RD = 0, (t, y3, y2, y1, D), dp;
+matrix I2[2][2] = 1, 0, 0, 1;
+matrix D1[2][2] = D*y3, y2, y2, y3;
+matrix D2[2][2] = -y3, y2, y2, -D*y3;
+poly Q2 = y2^2 - D*y3^2;
+poly Q = Q2 - y1^2;
+matrix Y1 = vsc(y1, I2);
+matrix al = vblk(D1, Y1, Y1, D2);
+"==== N1(D), D a variable ====";
+"(i) det alpha - Q^2 == 0:"; det(al) - Q^2 == 0;
+"(ii) Q divides adj(alpha) in Q[D,y]:"; viszero(vreducemat(vadj(al), std(ideal(Q))));
+"(ii') D1 D2 = Q2 I:"; viszero(vsubm(D1 * D2, vsc(Q2, I2)));
+ideal J = Q, minor(al, 2);
+// for each i, the closure of the set of D such that V(J) has a point with y_i != 0
+ideal K1 = eliminate(J + ideal(1 - t*y1), t*y3*y2*y1);
+ideal K2 = eliminate(J + ideal(1 - t*y2), t*y3*y2*y1);
+ideal K3 = eliminate(J + ideal(1 - t*y3), t*y3*y2*y1);
+"elimination ideal in Q[D] (points with y1 != 0):"; K1;
+"elimination ideal in Q[D] (points with y2 != 0):"; K2;
+"elimination ideal in Q[D] (points with y3 != 0):"; K3;
+// the same for 3x3 minors would be (Q) itself; also: where is alpha of rank <= 1 at all (any point of P^2)?
+ideal J2 = minor(al, 2);
+"D-values with a point of P^2 where rank alpha <= 1 (y3 != 0 chart):"; eliminate(J2 + ideal(1 - t*y3), t*y3*y2*y1);
+
+// ---------- CCO94 Prop. 5.1 normal forms (page image p. 109), over Q(i) ----------
+ring Ri = (0, i), (y1, y2, y3), dp;
+minpoly = i^2 + 1;
+proc ccocheck(string nm, matrix al, poly Q)
+{
+  "==== CCO94 orbit " + nm + " ====";
+  "det - Q^2 == 0:"; det(al) - Q^2 == 0;
+  "symmetric:"; viszero(vsubm(al, transpose(al)));
+  "Q | adj:"; viszero(vreducemat(vadj(al), std(ideal(Q))));
+  "Krull dim of (Q) + I_2:"; dim(std(ideal(Q) + minor(al, 2)));
+  "Krull dim of (entries):"; dim(std(ideal(al)));
+}
+matrix S[2][2] = 1, i, i, -1;
+matrix Z2[2][2];
+matrix I4 = vid(4);
+matrix aQ[4][4] = y3, y2, 0, 0,  y2, y1, 0, 0,  0, 0, y3, y2,  0, 0, y2, y1;
+ccocheck("Q (calligraphic)", aQ, y1*y3 - y2^2);
+matrix aB1[4][4] = 0, y2, 0, 0,  y2, 0, 0, y3,  0, 0, 0, y1,  0, y3, y1, 0;
+ccocheck("B1", aB1, y1*y2);
+matrix aB2[4][4] = y1, 0, 0, 0,  0, y1, 0, 0,  0, 0, y2, 0,  0, 0, 0, y2;
+ccocheck("B2", aB2, y1*y2);
+matrix aC1 = vadd(vsc(y1, I4), vblk(vsc(y2, S), Z2, Z2, vsc(y3, S)));
+ccocheck("C1", aC1, y1^2);
+matrix aC2 = vadd(vsc(y1, I4), vblk(vsc(y3, S), vsc(y2, S), vsc(y2, S), Z2));
+ccocheck("C2", aC2, y1^2);
+matrix aC3 = vadd(vsc(y1, I4), vblk(vsc(y2, S), Z2, Z2, vsc(y2, S)));
+ccocheck("C3", aC3, y1^2);
+matrix aC4 = vadd(vsc(y1, I4), vblk(vsc(y2, S), Z2, Z2, Z2));
+ccocheck("C4", aC4, y1^2);
+matrix aC5 = vsc(y1, I4);
+ccocheck("C5", aC5, y1^2);
+quit;

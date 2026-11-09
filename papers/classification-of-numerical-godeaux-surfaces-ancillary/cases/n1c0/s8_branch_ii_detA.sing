@@ -1,0 +1,29 @@
+// s8_branch_ii_detA: information only (not used in the proof). On branch (ii) (b3 = b8, b8 != 0) the
+// elimination s5 leaves 0 equations, free g5, b2, b8, b9, D and 136 free lambda's (instead of 94).
+// Here: det A and the row-0 cofactors B_0k on branch (ii), with the A-coefficients from out_s5.txt:
+// g1 = -g5*D, g2 = b9^2*D - g5, g3 = g4 = g6 = g8 = g10 = 0, g7 = 2*b8*b9*D, g9 = b8^2*D,
+// b1 = 0, b3 = b8, b4 = 0, b5 = b9, b6 = 0, b7 = 0, b10 = 0, b11 = b12 = 0.
+system("--ticks-per-sec", 1000); int T0 = rtimer;
+ring R2 = 0, (g5, b2, b8, b9, D, w, y1, y2, y3), dp;
+poly y0 = w^2;
+poly G = (-g5*D)*y3^3 + (b9^2*D - g5)*y1^2*y3 + g5*y2^2*y3 + (2*b8*b9*D)*y0*y1*y3 + (b8^2*D)*y0^2*y3;
+poly q1 = b2*y1*y3;
+poly q2 = b8*y0*y2 + b9*y1*y2;
+poly q3 = b8*y0*y1 + b9*y1^2;
+poly q4 = 0;
+poly Q = y2^2 - D*y3^2 - y1^2;
+matrix A[6][6] =
+  y0*G, w*q1, w*q2, w*q3, w*q4, Q,
+  w*q1, D*y3, y2,   y1,   0,    w,
+  w*q2, y2,   y3,   0,    y1,   0,
+  w*q3, y1,   0,    -y3,  y2,   0,
+  w*q4, 0,    y1,   y2,   -D*y3, 0,
+  Q,    w,    0,    0,    0,    0;
+poly dA = det(A);
+"det A on branch (ii), factorized:"; factorize(dA);
+proc cofac(matrix M, int rr, int cc) { matrix S5[5][5]; int a, bb, p, q; a = 0; for (p=1; p<=6; p++) { if (p != rr) { a++; bb = 0; for (q=1; q<=6; q++) { if (q != cc) { bb++; S5[a,bb] = M[p,q]; } } } } return((-1)^(rr+cc) * det(S5)); }
+int k; poly gg = 0; ideal B0;
+for (k=1;k<=6;k++) { B0[k] = cofac(A,k,1); gg = gcd(gg, B0[k]); }
+"gcd of the row-0 cofactors B_00..B_05 on branch (ii), factorized:"; factorize(gg);
+"total ms:", rtimer-T0, "; memory (KB) in use / allocated:", memory(1) div 1024, memory(2) div 1024;
+quit;

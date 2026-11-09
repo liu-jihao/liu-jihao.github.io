@@ -1,0 +1,91 @@
+lambda coefficients: 371
+  by k = 0..5: 159,46,46,44,44,32
+  by w-order 0..8: 123,98,66,40,26,8,7,2,1
+trivial-syzygy directions: 94
+number of ring variables: 397
+lambda unknowns created: 371
+A symmetric: 1
+A: weight/sign violations: 0
+lambda: weight/sign violations: 0
+net alpha (w = 0):
+y3,y2,y1,0, 
+y2,0, 0, y1,
+y1,0, 0, y2,
+0, y1,y2,-y3
+det(alpha) - Q^2 = 0
+3x3 minors of alpha not divisible by Q: 0 of 10
+A*B = det(A)*I : violations 0
+B symmetric: 1
+B_00 mod w = 0
+B_01 mod w = 0
+B_02 mod w = 0
+B_03 mod w = 0
+B_04 mod w = 0
+B_05 mod w = y1^6-3*y1^4*y2^2+3*y1^2*y2^4-y2^6
+B_05 + Q^3 mod w = 0
+nonzero coefficient equations: 710
+  by w-order 0..15: 72,45,118,50,113,42,84,30,58,20,34,12,18,6,6,2
+  monomials of wrong weight/sign in E_ij: 0
+max total degree of an equation: 2
+unknowns not occurring in any equation: 0
+end of stage 0: pivots so far 18; active nonzero eqs left 0; all nonzero eqs left 611; nonzero constants 0
+step 37 stage 1: A-unknown b(8) [w-order 1] from eq #547 (w-order 1, pair 35), terms 1
+end of stage 1: pivots so far 37; active nonzero eqs left 0; all nonzero eqs left 527; nonzero constants 0
+step 67 stage 2: A-unknown b(5) [w-order 1] from eq #254 (w-order 2, pair 22), terms 3
+step 68 stage 2: A-unknown b(7) [w-order 1] from eq #256 (w-order 2, pair 22), terms 2
+step 69 stage 2: A-unknown b(10) [w-order 1] from eq #251 (w-order 2, pair 22), terms 1
+step 70 stage 2: A-unknown b(12) [w-order 1] from eq #303 (w-order 2, pair 23), terms 2
+step 71 stage 2: A-unknown g(1) [w-order 2] from eq #696 (w-order 2, pair 55), terms 1
+end of stage 2: pivots so far 71; active nonzero eqs left 0; all nonzero eqs left 425; nonzero constants 0
+step 94 stage 3: A-unknown g(3) [w-order 2] from eq #390 (w-order 3, pair 25), terms 2
+end of stage 3: pivots so far 94; active nonzero eqs left 0; all nonzero eqs left 383; nonzero constants 0
+step 169 stage 4: A-unknown b(11) [w-order 1] from eq #245 (w-order 4, pair 22), terms 2
+step 170 stage 4: A-unknown g(2) [w-order 2] from eq #426 (w-order 4, pair 33), terms 6
+step 171 stage 4: A-unknown g(5) [w-order 2] from eq #243 (w-order 4, pair 22), terms 5
+end of stage 4: pivots so far 171; active nonzero eqs left 0; all nonzero eqs left 257; nonzero constants 0
+step 198 stage 5: A-unknown g(4) [w-order 2] from eq #516 (w-order 5, pair 35), terms 8
+end of stage 5: pivots so far 198; active nonzero eqs left 0; all nonzero eqs left 214; nonzero constants 0
+step 241 stage 6: A-unknown g(6) [w-order 2] from eq #234 (w-order 6, pair 22), terms 2
+step 242 stage 6: A-unknown g(8) [w-order 4] from eq #666 (w-order 6, pair 55), terms 6
+end of stage 6: pivots so far 242; active nonzero eqs left 0; all nonzero eqs left 111; nonzero constants 0
+step 257 stage 7: A-unknown g(10) [w-order 6] from eq #366 (w-order 7, pair 25), terms 3
+end of stage 7: pivots so far 257; active nonzero eqs left 0; all nonzero eqs left 68; nonzero constants 0
+end of stage 8: pivots so far 275; active nonzero eqs left 0; all nonzero eqs left 32; nonzero constants 0
+end of stage 9: pivots so far 281; active nonzero eqs left 0; all nonzero eqs left 20; nonzero constants 0
+end of stage 10: pivots so far 288; active nonzero eqs left 0; all nonzero eqs left 6; nonzero constants 0
+end of stage 11: pivots so far 290; active nonzero eqs left 0; all nonzero eqs left 2; nonzero constants 0
+end of stage 12: pivots so far 291; active nonzero eqs left 0; all nonzero eqs left 0; nonzero constants 0
+end of stage 13: pivots so far 291; active nonzero eqs left 0; all nonzero eqs left 0; nonzero constants 0
+end of stage 14: pivots so far 291; active nonzero eqs left 0; all nonzero eqs left 0; nonzero constants 0
+end of stage 15: pivots so far 291; active nonzero eqs left 0; all nonzero eqs left 0; nonzero constants 0
+total pivots: 291
+leftover equations: 0
+free A-unknowns (8): g(7) g(9) b(1) b(2) b(3) b(4) b(6) b(9) 
+free lambda unknowns: 94
+free lambda by pair (11,12,13,14,15,22,23,24,25,33,34,35,44,45,55): 4,4,4,4,10,4,4,4,10,4,4,10,4,10,14
+free lambda by k = 0..5: 64,25,5,0,0,0
+  b(8) = 0
+  b(5) = -2*b(2)-b(6)
+  b(7) = -2
+  b(10) = 0
+  b(12) = 1
+  g(1) = 0
+  g(3) = -2*b(2)
+  b(11) = b(2)
+  g(2) = -4*b(2)^2-4*b(2)*b(6)-b(6)^2-b(1)+b(4)
+  g(5) = 2*b(2)*b(6)+b(6)^2-b(1)+b(4)
+  g(4) = -4*b(1)*b(2)-4*b(2)*b(4)-2*b(1)*b(6)-2*b(4)*b(6)+2*g(7)-2*b(3)
+  g(6) = -2*b(3)
+  g(8) = -4*b(2)*b(3)+2*b(1)*b(4)-2*b(3)*b(6)+2*g(9)+4*b(9)
+  g(10) = 2*b(1)*b(3)+2*b(6)*b(9)
+graph check (eliminated A-unknowns free of lambda): violations 0
+original equations not vanishing after substitution: 0
+E_ij not identically zero after substitution: 0
+largest final expression: 37 terms
+CPU/real time so far (s): 2
+memory (KB) 20620
+point 1: original equations nonzero at the point: 0
+point 1: det A != 0 : 1
+point 1: total rank of the trivial-syzygy map: 94 (directions 94)
+total real time (s): 2
+memory (KB) 20620

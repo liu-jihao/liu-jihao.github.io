@@ -1,0 +1,3 @@
+N1(D): conditions 13, rank 9, torus dimension 3; with c fixed (dc = 0): 2; grading solves: True; scaling s (dc = 2) solves: True
+N2: conditions 11, rank 9, torus dimension 3; with c fixed (dc = 0): 2; grading solves: True; scaling s (dc = 2) solves: True
+N3: conditions 11, rank 9, torus dimension 3; with c fixed (dc = 0): 2; grading solves: True; scaling s (dc = 2) solves: True

@@ -1,0 +1,24 @@
+// tiny test of Singular functions used later (no heavy computation)
+ring r = 0, (a,b,c,x,y), dp;
+poly f = 3*a + b*c + 2*b + a^2*0 + c*x;
+"variables:"; variables(f);
+"variables of ideal:"; variables(ideal(f, x*y));
+"rvar:", rvar(leadmonom(jet(f,1)-jet(f,0)));
+"deg with negative weights (a:-2,b:1,c:1,x:0,y:0):", deg(b*c + a, intvec(-2,1,1,0,0)), deg(b*c+a, intvec(2,-1,-1,0,0));
+ideal I = 2*a+b, 4*a+2*b, 0, b, b;
+"simplify 1:"; simplify(I,1);
+"simplify 1 then 2 then 4:"; ideal I2 = simplify(simplify(simplify(I,1),2),4); I2;
+"simplify 2+4+8:"; simplify(I, 2+4+8);
+ideal K = x, y, x*y, x^2;
+ideal P = 2*x + 3*y, x*y - x^2, x + y + x*y;
+"coeffs(P,K):"; print(coeffs(P, K));
+matrix M[3][3] = 1,2,3, 2,4,6, 1,0,1;
+"rank:", rank(M);
+"jet with weights:", jet(x^3*y + x*y + a, 2, intvec(0,0,0,1,1));
+poly g = 5;
+"deg const:", deg(g), deg(poly(0));
+"size:", size(f);
+ring rt = (0,t), (u,v), dp;
+poly h = t^(-2)*u + 1/t*v;
+"param field:", h;
+quit;

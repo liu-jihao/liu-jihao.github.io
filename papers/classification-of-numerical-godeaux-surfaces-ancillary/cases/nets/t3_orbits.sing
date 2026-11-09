@@ -1,0 +1,85 @@
+// T3 (case nets): orbits of the sigma-equivariant nets in CCO94's classification, and Lemma FR on CCO94's normal forms.
+// (ii) CCO94 Prop. 5.1 (p. 109, page image read): normal forms of the eight G x Gamma orbits Q, B1, B2, C1..C5.
+//      For each: det = Q^2, Q | adj, Krull dim of Q[y]/((Q) + I_2(alpha)) (0 <=> rank alpha = 2 at every point of V(Q)).
+// (i)  Our nets: Q smooth (Hessian determinant) or two lines (+ rank at the vertex), and explicit congruences
+//      L^t * alphaCCO(Y(y)) * L = lambda * alpha_ours(y) with CCO94's normal forms.
+< "nets_common.sing";
+int tt = timer;
+ring r = (0,i), (y1,y2,y3), dp;
+minpoly = i^2 + 1;
+
+proc report(matrix M, poly Q, string name)
+{
+  "=== " + name + "     Q = " + string(Q);
+  "det(M) - Q^2 == 0 :", det(M) - Q^2 == 0;
+  matrix B = adjm(M);
+  int ok = 1; int u, v;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { if (reduce(B[u,v], ideal(Q)) != 0) { ok = 0; } } }
+  "Q divides every entry of adj(M) (= all 3x3 minors up to sign) :", ok;
+  "Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] :", dim(std(ideal(Q) + minor(M, 2)));
+  ideal I0;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { I0 = I0, M[u,v]; } }
+  "Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] :", dim(std(I0));
+}
+
+// CCO94 Prop 5.1 normal forms as functions of (Y1, Y2, Y3)
+proc formQ(poly Y1, poly Y2, poly Y3)  { matrix M[4][4] = Y3,Y2,0,0,  Y2,Y1,0,0,  0,0,Y3,Y2,  0,0,Y2,Y1; return(M); }
+proc formB1(poly Y1, poly Y2, poly Y3) { matrix M[4][4] = 0,Y2,0,0,  Y2,0,0,Y3,  0,0,0,Y1,  0,Y3,Y1,0; return(M); }
+proc formB2(poly Y1, poly Y2, poly Y3) { matrix M[4][4] = Y1,0,0,0,  0,Y1,0,0,  0,0,Y2,0,  0,0,0,Y2; return(M); }
+
+matrix S[2][2] = 1, i, i, -1;
+matrix Z[2][2];
+matrix I2[2][2] = 1,0,0,1;
+
+"######## (ii) CCO94 Prop. 5.1 normal forms (p. 109)";
+report(formQ(y1,y2,y3),  y1*y3 - y2^2, "orbit Q  (smooth conic)");
+report(formB1(y1,y2,y3), y1*y2,        "orbit B1 (two lines, rank 2 at the vertex (0:0:1))");
+report(formB2(y1,y2,y3), y1*y2,        "orbit B2 (two lines, rank 0 at the vertex)");
+report(y1*idm(4) + blk4(y2*S, Z, Z, y3*S),  y1^2, "orbit C1 = y1*I4 + [[y2 S, 0], [0, y3 S]], S = [[1,i],[i,-1]]");
+report(y1*idm(4) + blk4(y3*S, y2*S, y2*S, Z), y1^2, "orbit C2 = y1*I4 + [[y3 S, y2 S], [y2 S, 0]]");
+report(y1*idm(4) + blk4(y2*S, Z, Z, y2*S),  y1^2, "orbit C3 = y1*I4 + [[y2 S, 0], [0, y2 S]]");
+report(y1*idm(4) + blk4(y2*S, Z, Z, Z),     y1^2, "orbit C4 = y1*I4 + [[y2 S, 0], [0, 0]]");
+report(y1*idm(4),                           y1^2, "orbit C5 = y1*I4");
+
+"######## (i) our sigma-equivariant nets";
+matrix A1[2][2] = 0, y2, y2, y3;      matrix A2[2][2] = -y3, y2, y2, 0;
+matrix N10 = blk4(A1, y1*I2, y1*I2, A2);
+matrix C1[2][2] = y2, 0, 0, y3;       matrix C2[2][2] = y3, 0, 0, y2;
+matrix N2 = blk4(C1, y1*I2, y1*I2, C2);
+matrix E1[2][2] = y3, y2, y2, 0;      matrix E2[2][2] = 0, y2, y2, -y3;
+matrix N3 = blk4(E1, y1*I2, y1*I2, E2);
+matrix T0 = blk4((y2+y3)*I2, y1*I2, y1*I2, (y2-y3)*I2);
+matrix B2n = blk4(y2*I2, y1*I2, y1*I2, y2*I2);
+
+"--- smoothness of Q: determinant of the Hessian matrix of Q";
+ring rD = 0, (y1,y2,y3,D), dp;
+poly QD = y2^2 - D*y3^2 - y1^2;
+matrix HD = jacob(jacob(QD));
+matrix HD3[3][3] = HD[1,1],HD[1,2],HD[1,3], HD[2,1],HD[2,2],HD[2,3], HD[3,1],HD[3,2],HD[3,3];
+"N1(D): Q = y2^2 - D*y3^2 - y1^2, det Hessian =", det(HD3), "  [nonzero iff D != 0: smooth conic for D != 0]";
+setring r;
+proc hessdet(poly Q) { matrix H = jacob(jacob(Q)); return(det(H)); }
+"N2:    Q = y2*y3 - y1^2,          det Hessian =", hessdet(y2*y3 - y1^2), "  [smooth conic]";
+"T0:    Q = y2^2 - y3^2 - y1^2,    det Hessian =", hessdet(y2^2 - y3^2 - y1^2), "  [smooth conic]";
+"N1(0), N3, B2: Q = y2^2 - y1^2 = (y2 - y1)(y2 + y1): two distinct lines through the vertex (0:0:1); factorization:"; factorize(y2^2 - y1^2);
+"rank of alpha at the vertex (0:0:1):  N1(0):", rank(subst(subst(subst(N10,y1,0),y2,0),y3,1)),
+     "  N3:", rank(subst(subst(subst(N3,y1,0),y2,0),y3,1)), "  B2:", rank(subst(subst(subst(B2n,y1,0),y2,0),y3,1));
+
+"--- explicit congruences with CCO94's normal forms (L^t * alphaCCO(Y(y)) * L - lambda*alpha == 0)";
+matrix LN2[4][4] = 1,0,0,0,  0,0,1,0,  0,0,0,1,  0,1,0,0;        // z0 = x1, z1 = x3, z2 = x4, z3 = x2
+"N2 ~ orbit Q,  Y = (y3, y1, y2), lambda = 1 :", iszero(transpose(LN2)*formQ(y3, y1, y2)*LN2 - N2),
+     "   Q_CCO(Y) - Q_N2 == 0 :", (y3*y2 - y1^2) - (y2*y3 - y1^2) == 0;
+matrix LT0[4][4] = 1,0,0,0,  0,0,1,0,  0,1,0,0,  0,0,0,1;        // z0 = x1, z1 = x3, z2 = x2, z3 = x4
+"T0 ~ orbit Q,  Y = (y2 - y3, y1, y2 + y3), lambda = 1 :", iszero(transpose(LT0)*formQ(y2-y3, y1, y2+y3)*LT0 - T0),
+     "   Q_CCO(Y) - Q_T0 == 0 :", ((y2-y3)*(y2+y3) - y1^2) - (y2^2 - y3^2 - y1^2) == 0;
+matrix LN3[4][4] = 0,1,1,0,  1,0,0,1,  0,1,-1,0,  1,0,0,-1;      // z0 = x2+x3, z1 = x1+x4, z2 = x2-x3, z3 = x1-x4
+"N3 ~ orbit B1, Y = (y2 - y1, y2 + y1, y3), lambda = 2 :", iszero(transpose(LN3)*formB1(y2-y1, y2+y1, y3)*LN3 - 2*N3),
+     "   Q_CCO(Y) - Q_N3 == 0 :", (y2-y1)*(y2+y1) - (y2^2 - y1^2) == 0, "  det L =", det(LN3);
+matrix LB2[4][4] = 1,0,1,0,  0,1,0,1,  1,0,-1,0,  0,1,0,-1;      // z0 = x1+x3, z1 = x2+x4, z2 = x1-x3, z3 = x2-x4
+"B2 ~ orbit B2, Y = (y2 + y1, y2 - y1, *), lambda = 2 :", iszero(transpose(LB2)*formB2(y2+y1, y2-y1, y3)*LB2 - 2*B2n),
+     "   Q_CCO(Y) - Q_B2 == 0 :", (y2+y1)*(y2-y1) - (y2^2 - y1^2) == 0, "  det L =", det(LB2);
+"[N1(D), D != 0, ~ N1(1) ~ N2 and N1(0) ~ N3: explicit congruences in T5 (t5_equivalences.sing)]";
+
+"total time (s):", timer - tt;
+"peak memory (KB, Singular memory(2)):", memory(2) div 1024;
+quit;

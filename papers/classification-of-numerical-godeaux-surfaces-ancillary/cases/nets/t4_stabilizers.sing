@@ -1,0 +1,138 @@
+// T4 (case nets): sigma-equivariant stabilizers of the nets N1(1), N2, N1(0), N3 (and N1(D), D generic), and the
+// induced action on the direction (c1 : c2) of the w-entries of column 5.
+// Convention: (g, h) in GL4 x GL3 acts on nets by  alpha(y) |-> g^t * alpha(h*y) * g  (substitute y_i -> (h*y)_i);
+// sigma-equivariant: g = diag(gI, gII) on (v1, v2 | v3, v4), h = diag(h1, h23) on (y1 | y2, y3).
+// Lie algebra (g = I + eps*X, h = I + eps*Y):  X^t*alpha + alpha*X + sum_i (Y*y)_i * d(alpha)/d(y_i) = 0,
+// X = diag(XI, XII) = [[x11,x12],[x21,x22]] (+) [[x33,x34],[x43,x44]],  (Y*y)_1 = t1*y1,  (Y*y)_2 = p*y2 + q*y3,  (Y*y)_3 = r*y2 + s*y3.
+// Trivially acting direction: g = lambda*I, h = lambda^(-2)*I, i.e. X = I, Y = -2I.
+// Column 5: rows v1, v2 carry (c1*w, c2*w); under v = g v' they become gI^t*(c1, c2)^t (times the scalar g5*s_w);
+// infinitesimally (c1, c2) |-> XI^t*(c1, c2).  The direction is fixed by the identity component iff it is an eigenvector of
+// XI^t for every X of the algebra, i.e. a common zero of the binary forms  c1*(XI^t c)_2 - c2*(XI^t c)_1.
+< "nets_common.sing";
+option(redSB);
+int tt = timer;
+
+proc stab(matrix al, string nm)
+{
+  "=================== " + nm;
+  "alpha ="; print(al);
+  matrix X[4][4] = x11,x12,0,0,  x21,x22,0,0,  0,0,x33,x34,  0,0,x43,x44;
+  // built entrywise (Singular parses "A + (poly sum)*B" as a module sum, i.e. a column concatenation)
+  matrix XtA = transpose(X)*al;
+  matrix AX = al*X;
+  matrix T[4][4];
+  int j, k, m;
+  for (j = 1; j <= 4; j++) { for (k = 1; k <= 4; k++) {
+    T[j,k] = XtA[j,k] + AX[j,k] + t1*y1*diff(al[j,k], y1) + (p*y2 + q*y3)*diff(al[j,k], y2) + (r*y2 + s*y3)*diff(al[j,k], y3); } }
+  "   (size of the matrix X^t*alpha + alpha*X + ... : " + string(nrows(T)) + "x" + string(ncols(T)) + ")";
+  ideal L;
+  for (j = 1; j <= 4; j++) { for (k = j; k <= 4; k++) { L = L, diff(T[j,k], y1), diff(T[j,k], y2), diff(T[j,k], y3); } }
+  L = simplify(L, 2);
+  ideal LS = std(L);
+  ideal U = x11,x12,x21,x22,x33,x34,x43,x44,t1,p,q,r,s;
+  "number of linear equations (nonzero coefficient equations):", size(L), "  rank:", size(LS),
+     "  dimension of the equivariant stabilizer algebra:", 13 - size(LS);
+  ideal NFu = reduce(U, LS);
+  "general element (unknowns -> normal form modulo the equations):";
+  for (m = 1; m <= 13; m++) { "   " + string(U[m]) + " = " + string(NFu[m]); }
+  // free unknowns = those whose normal form is themselves
+  ideal FR;
+  for (m = 1; m <= 13; m++) { if (NFu[m] == U[m]) { FR = FR, U[m]; } }
+  FR = simplify(FR, 2);
+  "free unknowns:", FR;
+  // basis
+  int nf = size(FR);
+  int b, l;
+  for (b = 1; b <= nf; b++) {
+    ideal V = NFu;
+    for (l = 1; l <= nf; l++) { if (l == b) { V = subst(V, FR[l], 1); } else { V = subst(V, FR[l], 0); } }
+    "basis element " + string(b) + " (" + string(FR[b]) + " = 1): XI = [" + string(V[1]) + "," + string(V[2]) + ";" + string(V[3]) + "," + string(V[4])
+       + "]  XII = [" + string(V[5]) + "," + string(V[6]) + ";" + string(V[7]) + "," + string(V[8]) + "]  t1 = " + string(V[9])
+       + "  Y23 = [" + string(V[10]) + "," + string(V[11]) + ";" + string(V[12]) + "," + string(V[13]) + "]";
+    kill V;
+  }
+  // trivial direction X = I, Y = -2I
+  ideal Lt = L;
+  Lt = subst(Lt, x11, 1); Lt = subst(Lt, x22, 1); Lt = subst(Lt, x33, 1); Lt = subst(Lt, x44, 1);
+  Lt = subst(Lt, x12, 0); Lt = subst(Lt, x21, 0); Lt = subst(Lt, x34, 0); Lt = subst(Lt, x43, 0);
+  Lt = subst(Lt, t1, -2); Lt = subst(Lt, p, -2); Lt = subst(Lt, s, -2); Lt = subst(Lt, q, 0); Lt = subst(Lt, r, 0);
+  "trivial direction (X = I, Y = -2I) solves the system:", size(simplify(Lt, 2)) == 0;
+  // fixed directions of the column
+  matrix XIt[2][2] = NFu[1], NFu[3], NFu[2], NFu[4];      // transpose of XI = [[NF1, NF2], [NF3, NF4]]
+  matrix cc[2][1] = c1, c2;
+  matrix vv = XIt*cc;
+  poly f = c1*vv[2,1] - c2*vv[1,1];
+  ideal F;
+  for (b = 1; b <= nf; b++) { F = F, diff(f, FR[b]); }
+  F = simplify(F, 2);
+  "eigenvector conditions (one binary form per free unknown):", F;
+  poly gg = 0;
+  for (b = 1; b <= size(F); b++) { gg = gcd(gg, F[b]); }
+  if (size(F) == 0) { "all directions fixed (XI scalar)"; }
+  else { "gcd of the eigenvector conditions:", gg, "   factorization:"; factorize(gg); }
+}
+
+// ---------------- the four nets over Q, and N1(D) over Q(D)
+ring R = (0,D), (x11,x12,x21,x22,x33,x34,x43,x44,t1,p,q,r,s, y1,y2,y3, c1,c2), dp;
+matrix I2[2][2] = 1,0,0,1;
+matrix B1[2][2] = y3, y2, y2, y3;     matrix B2m[2][2] = -y3, y2, y2, -y3;
+stab(blk4(B1, y1*I2, y1*I2, B2m), "N1(1)");
+matrix C1[2][2] = y2, 0, 0, y3;       matrix C2[2][2] = y3, 0, 0, y2;
+stab(blk4(C1, y1*I2, y1*I2, C2), "N2");
+matrix A1[2][2] = 0, y2, y2, y3;      matrix A2[2][2] = -y3, y2, y2, 0;
+stab(blk4(A1, y1*I2, y1*I2, A2), "N1(0)");
+matrix E1[2][2] = y3, y2, y2, 0;      matrix E2[2][2] = 0, y2, y2, -y3;
+stab(blk4(E1, y1*I2, y1*I2, E2), "N3");
+matrix G1[2][2] = D*y3, y2, y2, y3;   matrix G2[2][2] = -y3, y2, y2, -D*y3;
+stab(blk4(G1, y1*I2, y1*I2, G2), "N1(D), D generic (over Q(D))");
+
+// ---------------- group elements (exact verification)
+"=================== group elements: g^t * alpha(h*y) * g - alpha(y) == 0 ?";
+ring RG = (0,m1,m2,e), (y1,y2,y3,c1,c2), dp;
+matrix I2[2][2] = 1,0,0,1;
+// simultaneous substitution via a ring map
+proc actm(matrix al, matrix g, poly h1, poly h2, poly h3)
+{
+  map hm = basering, h1, h2, h3, c1, c2;
+  matrix ah = hm(al);
+  return(transpose(g)*ah*g);
+}
+proc colact(matrix g)
+{
+  matrix gI[2][2] = g[1,1], g[1,2], g[2,1], g[2,2];
+  matrix cc[2][1] = c1, c2;
+  matrix rr = transpose(gI)*cc;
+  return("(" + string(rr[1,1]) + ", " + string(rr[2,1]) + ")");
+}
+matrix C1[2][2] = y2, 0, 0, y3;       matrix C2[2][2] = y3, 0, 0, y2;
+matrix N2 = blk4(C1, y1*I2, y1*I2, C2);
+poly QN2 = y2*y3 - y1^2;
+matrix gT[4][4]; gT[1,1] = m1; gT[2,2] = m2; gT[3,3] = m2; gT[4,4] = m1;
+"N2 torus: g = diag(m1, m2, m2, m1), h: (y1,y2,y3) -> (y1/(m1*m2), y2/m1^2, y3/m2^2) :", iszero(actm(N2, gT, y1/(m1*m2), y2/m1^2, y3/m2^2) - N2);
+"   Q(h*y) - Q/(m1*m2)^2 == 0 :", subst(subst(subst(QN2, y1, y1/(m1*m2)), y2, y2/m1^2), y3, y3/m2^2) - QN2/(m1*m2)^2 == 0,
+    "   column (c1,c2) -> gI^t (c1,c2) =", colact(gT);
+matrix gS[4][4] = 0,1,0,0,  1,0,0,0,  0,0,0,1,  0,0,1,0;
+"N2 swap: g = (v1 v2)(v3 v4), h: y2 <-> y3 :", iszero(actm(N2, gS, y1, y3, y2) - N2),
+    "   Q(h*y) - Q == 0 :", (y3*y2 - y1^2) - QN2 == 0, "   column (c1,c2) ->", colact(gS);
+matrix gE[4][4]; gE[1,1] = 1; gE[2,2] = 1; gE[3,3] = -1; gE[4,4] = -1;
+"N2 sign element: g = diag(1,1,-1,-1), h: y1 -> -y1 :", iszero(actm(N2, gE, -y1, y2, y3) - N2), "   column ->", colact(gE);
+matrix E1[2][2] = y3, y2, y2, 0;      matrix E2[2][2] = 0, y2, y2, -y3;
+matrix N3 = blk4(E1, y1*I2, y1*I2, E2);
+"N3 torus: g = diag(m1, m2, m2, m1), h: (y1,y2,y3) -> (y1/(m1*m2), y2/(m1*m2), y3/m1^2) :", iszero(actm(N3, gT, y1/(m1*m2), y2/(m1*m2), y3/m1^2) - N3),
+    "   column ->", colact(gT);
+matrix gU[4][4] = 1,0,0,0,  -e/2,1,0,0,  0,0,1,e/2,  0,0,0,1;
+"N3 shear: gI = [[1,0],[-e/2,1]], gII = [[1,e/2],[0,1]], h: y3 -> y3 + e*y2 :", iszero(actm(N3, gU, y1, y2, y3 + e*y2) - N3),
+    "   Q unchanged (Q = y2^2 - y1^2 has no y3)", "   column ->", colact(gU);
+matrix A1[2][2] = 0, y2, y2, y3;      matrix A2[2][2] = -y3, y2, y2, 0;
+matrix N10 = blk4(A1, y1*I2, y1*I2, A2);
+"N1(0) = gS^t * N3 * gS (swap (v1 v2)(v3 v4)) :", iszero(transpose(gS)*N3*gS - N10);
+matrix gU0 = transpose(gS)*gU*gS;
+"N1(0) shear: g = gS*gU*gS = "; print(gU0);
+"   h: y3 -> y3 + e*y2 :", iszero(actm(N10, gU0, y1, y2, y3 + e*y2) - N10), "   column ->", colact(gU0);
+matrix gT0 = transpose(gS)*gT*gS;
+"N1(0) torus: g = diag(m2, m1, m1, m2), h: (y1,y2,y3) -> (y1/(m1*m2), y2/(m1*m2), y3/m1^2) :", iszero(actm(N10, gT0, y1/(m1*m2), y2/(m1*m2), y3/m1^2) - N10),
+    "   column ->", colact(gT0);
+
+"total time (s):", timer - tt;
+"peak memory (KB, Singular memory(2)):", memory(2) div 1024;
+quit;

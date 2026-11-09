@@ -1,0 +1,73 @@
+CHECK A symmetric: 1
+CHECK cofactor matrix symmetric: 1
+CHECK A*B = det(A)*I: 1
+CHECK sigma(A_jk) = -d_j d_k A_jk, failures: 0
+CHECK sigma(B_ij) = -d_i d_j B_ij, failures: 0
+CHECK det A sigma-invariant: 1
+CHECK weights of A entries, failures: 0
+CHECK det(alpha) - Q^2 = 0
+CHECK Q divides adj(alpha): 1
+CHECK B_05 + Q^3 = 0 mod w: 1
+CHECK B_0k = 0 mod w and [w^1]B_0k = Q*adj(alpha)_{k1} (k=1..4): 1
+CHECK B_00 = -y0*adj(a)_11: 1
+B_00 = -y3^2*y2*w^2+y3*y1^2*w^2
+number of nonzero coefficient equations: 661
+monomials with wrong weight or sign: 0
+nonzero equations by w-order 0..15: 72,45,126,52,112,39,77,27,51,17,27,8,8,0,0,0
+constant equations: 0
+distinct up to scalar: 557
+distinct by w-order 0..15: 18,31,108,51,108,39,75,27,49,17,23,7,4,0,0,0
+stage 0: equations added 18, pivots 18, equations remaining 0, max terms 0, CPU s 0
+stage 1: equations added 31, pivots 19, equations remaining 0, max terms 0, CPU s 0
+stage 2: equations added 108, pivots 70, equations remaining 0, max terms 0, CPU s 0
+stage 3: equations added 51, pivots 25, equations remaining 16, max terms 8, CPU s 0
+stage 4: equations added 108, pivots 46, equations remaining 48, max terms 8, CPU s 1
+stage 5: equations added 39, pivots 15, equations remaining 62, max terms 8, CPU s 1
+stage 6: equations added 75, pivots 22, equations remaining 89, max terms 8, CPU s 1
+stage 7: equations added 27, pivots 6, equations remaining 99, max terms 8, CPU s 1
+stage 8: equations added 49, pivots 8, equations remaining 115, max terms 8, CPU s 1
+stage 9: equations added 17, pivots 2, equations remaining 120, max terms 8, CPU s 1
+stage 10: equations added 23, pivots 1, equations remaining 121, max terms 8, CPU s 1
+stage 11: equations added 7, pivots 0, equations remaining 121, max terms 8, CPU s 1
+stage 12: equations added 4, pivots 0, equations remaining 122, max terms 8, CPU s 1
+stage 13: equations added 0, pivots 0, equations remaining 122, max terms 8, CPU s 1
+stage 14: equations added 0, pivots 0, equations remaining 122, max terms 8, CPU s 1
+stage 15: equations added 0, pivots 0, equations remaining 122, max terms 8, CPU s 1
+elimination CPU seconds: 1   sweeps: 231
+pivots: 232   nonzero constant equations met: 0
+eliminated lambda: 217   eliminated A: 15
+free lambda: 154   free A: 7
+free A-unknowns: g3 b12 b10 b9 b7 b4 b2
+eliminated A-unknowns (with step number): g10(step 194) g9(step 226) g8(step 199) g7(step 214) g6(step 40) g5(step 167) g4(step 145) g2(step 177) g1(step 148) b11(step 200) b8(step 23) b6(step 137) b5(step 180) b3(step 55) b1(step 110)
+leftover equations: 122
+original equations (all, with scalar multiples) not identically 0 after the final substitution: 130
+distinct normalized substituted equations: 128 ; leftover (normalized, distinct): 122 ; union: 122
+graph check (no lambda in the images of eliminated A-unknowns): 0
+g10 = -1/2*x(207)*b7*b2
+g9 = x(207)*b10*b2+b2^2
+g8 = 1/2*x(207)*b2
+g7 = x(82)*b12+x(78)*b2+2*b4*b2
+g6 = 0
+g5 = b9^2+2*b9*b7+2*b7^2
+g4 = -b7^2
+g2 = 2*b10*b9+2*b10*b7+x(243)*b4-x(247)*b4-g3
+g1 = -x(78)*b12+b10^2
+b11 = 0
+b8 = 0
+b6 = 0
+b5 = 1/2*x(207)*b2
+b3 = 0
+b1 = 0
+x(41) = lambda_{55,0}[y2^4] : eliminated 1, image = 0
+x(218) = lambda_{24,0}[y2^3] : eliminated 1, image = 0
+x(238) = lambda_{23,0}[y2^3] : eliminated 1, image = 0
+x(310) = lambda_{14,0}[y2^3] : eliminated 1, image = 0
+x(330) = lambda_{13,0}[y2^3] : eliminated 1, image = 0
+leftover: max degree 4, min degree of a term 2
+memory MB: 12
+my images: b5 = 1/2*x(207)*b2 ; g8 = 1/2*x(207)*b2 ; g10 = -1/2*x(207)*b7*b2
+size of the degree-2-truncated std of the leftover ideal: 116
+x(207)*b2 reduced by it: 0
+size of the degree-3-truncated std of the leftover ideal: 1030
+x(207)*b2 reduced by it: 0
+CPU s: 6

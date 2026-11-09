@@ -1,0 +1,136 @@
+// Checks of the matrices printed in CCO94 (normal forms 2.10, 2.12, 3.12, 3.28, 5.1, 4.10;
+// Case I / Case II webs; 6.1, 6.2, 6.4 matrices; 7.8 adjugate; 7.9 nets).
+// Each block prints labelled results; "OK" lines are exact identities over Q(i).
+ring r = (0,i),(y1,y2,y3,a,b,c,d,t),dp;
+minpoly = i2+1;
+option(redSB);
+
+proc cof(matrix A, int p, int q)
+{
+  int n = nrows(A);
+  matrix B[n-1][n-1];
+  int u, v, uu, vv;
+  uu = 0;
+  for (u = 1; u <= n; u++) {
+    if (u != p) {
+      uu++; vv = 0;
+      for (v = 1; v <= n; v++) {
+        if (v != q) { vv++; B[uu, vv] = A[u, v]; }
+      }
+    }
+  }
+  return((-1)^(p+q) * det(B));
+}
+
+proc report(string name, matrix M, poly Q)
+{
+  "=== " + name;
+  poly dd = det(M);
+  "det(M) - Q^2 == 0 :", dd - Q^2 == 0;
+  if (dd - Q^2 != 0) { "  det(M) =", dd; "  Q^2 =", Q^2; }
+  ideal m3 = minor(M, 3);
+  ideal red = reduce(m3, std(ideal(Q)));
+  "Q divides all 3x3 minors :", size(red) == 0;
+  // projective points of {Q=0} where rank(M) <= 1: affine dim of V(2x2 minors, Q) in (y1,y2,y3)
+  ideal I2 = minor(M, 2), Q, a, b, c, d, t;
+  "affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] :", dim(std(I2));
+  // points where M vanishes identically
+  ideal I0 = a, b, c, d, t;
+  int u, v;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { I0 = I0, M[u,v]; } }
+  "affine dim of V(all entries) [1 = a point of P^2 where alpha=0] :", dim(std(I0));
+  // dimension of the linear span of alpha(P^2): rank of the 16 x 3 coefficient matrix
+  matrix C[16][3];
+  int k = 0;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) {
+     k++; C[k,1] = diff(M[u,v], y1); C[k,2] = diff(M[u,v], y2); C[k,3] = diff(M[u,v], y3); } }
+  "rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] :", rank(C);
+}
+
+matrix S[2][2] = 1, i, i, -1;
+
+// ---- normal forms of 5.1 (p.109), and 2.10 (p.90), 2.12 (p.91), 3.12 (p.95)
+matrix NQ[4][4] = y3,y2,0,0,  y2,y1,0,0,  0,0,y3,y2,  0,0,y2,y1;
+report("Q (5.1, p.109)", NQ, y1*y3-y2^2);
+matrix NA[4][4] = y3,-y2,0,0,  -y2,y1,0,0,  0,0,y3,-y2,  0,0,-y2,y1;
+report("type A (2.10, p.90)", NA, y1*y3-y2^2);
+matrix N212[4][4] = 0,0,y3,y2,  0,0,y2,y1,  y3,y2,0,0,  y2,y1,0,0;
+report("2.12 (p.91)", N212, y1*y3-y2^2);
+matrix NB1[4][4] = 0,y2,0,0,  y2,0,0,y3,  0,0,0,y1,  0,y3,y1,0;
+report("B1 (5.1, p.109)", NB1, y1*y2);
+matrix NB1b[4][4] = 0,y2,0,0,  y2,0,0,-y3,  0,0,0,y1,  0,-y3,y1,0;
+report("B1 (3.12, p.95)", NB1b, y1*y2);
+matrix NB2[4][4] = y1,0,0,0,  0,y1,0,0,  0,0,y2,0,  0,0,0,y2;
+report("B2 (3.28 / 5.1)", NB2, y1*y2);
+matrix N1[4][4] = y1+y2*S[1,1], y2*S[1,2], 0, 0,
+                  y2*S[2,1], y1+y2*S[2,2], 0, 0,
+                  0, 0, y1+y3*S[1,1], y3*S[1,2],
+                  0, 0, y3*S[2,1], y1+y3*S[2,2];
+report("C1 (4.10 / 5.1)", N1, y1^2);
+matrix N2[4][4] = y1+y3*S[1,1], y3*S[1,2], y2*S[1,1], y2*S[1,2],
+                  y3*S[2,1], y1+y3*S[2,2], y2*S[2,1], y2*S[2,2],
+                  y2*S[1,1], y2*S[1,2], y1, 0,
+                  y2*S[2,1], y2*S[2,2], 0, y1;
+report("C2 (4.10 / 5.1)", N2, y1^2);
+matrix N3[4][4] = y1+y2*S[1,1], y2*S[1,2], 0, 0,
+                  y2*S[2,1], y1+y2*S[2,2], 0, 0,
+                  0, 0, y1+y2*S[1,1], y2*S[1,2],
+                  0, 0, y2*S[2,1], y1+y2*S[2,2];
+report("C3 (4.10 / 5.1)", N3, y1^2);
+matrix N4[4][4] = y1+y2*S[1,1], y2*S[1,2], 0, 0,
+                  y2*S[2,1], y1+y2*S[2,2], 0, 0,
+                  0, 0, y1, 0,
+                  0, 0, 0, y1;
+report("C4 (4.10 / 5.1)", N4, y1^2);
+matrix N5[4][4] = y1,0,0,0, 0,y1,0,0, 0,0,y1,0, 0,0,0,y1;
+report("C5 (4.10 / 5.1)", N5, y1^2);
+
+// ---- the two nets of 7.9 (p.126)
+matrix P1[4][4] = y2,y1,0,0,  y1,0,0,0,  0,0,0,y1,  0,0,y1,y3;
+report("7.9 first net (p.126)", P1, y1^2);
+matrix P2[4][4] = 0,y1,0,y2,  y1,0,0,0,  0,0,0,y1,  y2,0,y1,y3;
+report("7.9 second net (p.126)", P2, y1^2);
+"adjugate entries beta_jk (j<=k) of the first 7.9 net:";
+int u; int v;
+for (u = 1; u <= 4; u++) { for (v = u; v <= 4; v++) { if (cof(P1,v,u) != 0) { "beta", u, v, "=", cof(P1,v,u); } } }
+"adjugate entries beta_jk (j<=k) of the second 7.9 net:";
+for (u = 1; u <= 4; u++) { for (v = u; v <= 4; v++) { if (cof(P2,v,u) != 0) { "beta", u, v, "=", cof(P2,v,u); } } }
+
+// ---- Case I / Case II webs (p.81, p.82 = p.111, p.113)
+matrix W1[4][4] = 0,0,a,b,  0,0,c,d,  a,c,0,0,  b,d,0,0;
+"=== Case I web: det - (ad-bc)^2 == 0 :", det(W1) - (a*d-b*c)^2 == 0;
+"    (ad-bc) divides 3x3 minors :", size(reduce(minor(W1,3), std(ideal(a*d-b*c)))) == 0;
+matrix W2[4][4] = a,b,d,0,  b,0,0,0,  d,0,c,-b,  0,0,-b,0;
+"=== Case II web: det - b^4 == 0 :", det(W2) - b^4 == 0;
+"    b^2 divides 3x3 minors :", size(reduce(minor(W2,3), std(ideal(b^2)))) == 0;
+"    b divides 2x2 minors? (rank<=1 on b=0 would need this) :", size(reduce(minor(W2,2), std(ideal(b)))) == 0;
+
+// ---- 6.1 (p.116) C2-matrix, 6.2 (p.118) B2-matrix, 6.4 (p.120) family M
+matrix A61[4][4] = y1,0,y2,y3,  0,0,-y3,0,  y2,-y3,0,0,  y3,0,0,0;
+report("6.1 matrix (p.116)", A61, y3^2);
+matrix A62[4][4] = 0,0,0,y2,  0,0,y1,0,  0,y1,0,0,  y2,0,0,0;
+report("6.2 matrix (p.118)", A62, y1*y2);
+matrix M64[4][4] = 2*y1, a*y1, y1+(1-b)*y2, y3+a*y1+a*(1-b)*y2,
+                   a*y1, 0, -y3, 0,
+                   y1+(1-b)*y2, -y3, 2*y2, a*y2,
+                   y3+a*y1+a*(1-b)*y2, 0, a*y2, 0;
+poly d64 = det(M64);
+"=== 6.4 family (p.120): det(M) mod y2 - (y3*(y3+a*y1))^2 == 0 :", subst(d64, y2, 0) - (y3*(y3+a*y1))^2 == 0;
+"    det(M) mod y2 =", subst(d64, y2, 0);
+matrix m2[2][2] = 2*y1, y1+(1-b)*y2, y1+(1-b)*y2, 2*y2;
+"    2x2 minor det =", det(m2);
+
+// ---- 7.8 (p.125): adjugate of A'' = [[Q^2,0,Q],[0,alpha,0],[Q,0,0]] with alpha = normal form Q
+poly Qc = y1*y3-y2^2;
+matrix App[6][6];
+App[1,1] = Qc^2; App[1,6] = Qc; App[6,1] = Qc;
+for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { App[u+1,v+1] = NQ[u,v]; } }
+"=== 7.8 adjugate of A'' (alpha = normal form Q), indices 0..5 as in CCO94:";
+"B''_00 =", cof(App,1,1);
+"B''_05 =", cof(App,6,1), "   ( -Q^3 =", -Qc^3, ")";
+"B''_55 =", cof(App,6,6), "   ( Q^4 =", Qc^4, ")";
+"B''_01 =", cof(App,2,1), " B''_15 =", cof(App,6,2);
+"B''_11 + Q^2*beta_11 == 0 :", cof(App,2,2) + Qc^2*cof(NQ,1,1) == 0;
+"B''_12 + Q^2*beta_12 == 0 :", cof(App,3,2) + Qc^2*cof(NQ,2,1) == 0;
+"det(A'') + Q^4*det(alpha)/Q^2 == 0 :", det(App) + Qc^2*det(NQ) == 0;
+quit;

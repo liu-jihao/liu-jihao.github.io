@@ -1,0 +1,38 @@
+// n1c1, script E: independent mod-p tangent check at two random points of V over F_32003 (evidence only;
+// plan/case_common.md section 6).  Free unknowns random, eliminated ones computed from the substitution list
+// (subs_n1c1.txt) in reverse order.  A third point with D = 0 (slice of type B1-generic) is added.  J = Jacobian of all 782 distinct coefficient equations w.r.t. all 394 unknowns.
+system("--ticks-per-sec", 1000); int T0 = rtimer;
+LIB "matrix.lib";
+ring R1p = 32003, (l(1..371), g(1..10), b(1..12), D), dp;
+short = 0;
+< "meta_n1c1.sing";
+ideal EQ; intvec EO; execute(read("eqs_n1c1.txt"));
+list SV; list SE; intvec SSTG; intvec SEO; list SPIV; int NS; execute(read("subs_n1c1.txt"));
+intvec FREEV; execute(read("free_n1c1.txt"));
+"equations:", ncols(EQ), " substitutions:", NS, " free unknowns:", size(FREEV);
+matrix J = jacob(EQ);
+"Jacobian:", nrows(J), "x", ncols(J), " ms:", rtimer-T0;
+int seed, k, r, rl;
+intvec cl = 1..371;
+intvec rall = 1..nrows(J);
+for (seed = 1; seed <= 3; seed++) {   // points 1, 2: all free unknowns random; point 3: random with D = 0
+  system("random", 7000 + seed);
+  ideal VAL = maxideal(1);
+  for (k = 1; k <= 394; k++) { VAL[k] = 0; }
+  for (k = 1; k <= size(FREEV); k++) { VAL[FREEV[k]] = random(1, 32002); }
+  if (seed == 3) { VAL[394] = 0; }
+  for (k = NS; k >= 1; k--) { map phi = R1p, VAL; poly e = SE[k]; VAL[SV[k]] = phi(e); kill phi, e; }
+  map pt = R1p, VAL;
+  ideal chk = pt(EQ);
+  "point", seed, ": D =", VAL[394], "; all 782 equations vanish at the point:", size(chk) == 0;
+  matrix JP = pt(J);
+  r = rank(JP);
+  matrix JL = submat(JP, rall, cl);
+  rl = rank(JL);
+  "  rank J =", r, " -> tangent dimension 394 - r =", 394 - r, " (expected f + 94 = 103)";
+  "  rank J_lambda =", rl, " -> dim of tangent vectors with zero A-part =", 371 - rl, " (expected 94)";
+  "  rank of the projection of the tangent space to the 23 A-coefficients =", 23 - r + rl, " (expected f = 9)";
+  kill VAL, pt, chk, JP, JL;
+}
+"total ms:", rtimer-T0, " memory KB:", memory(2) div 1024;
+quit;

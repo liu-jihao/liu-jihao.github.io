@@ -1,0 +1,14 @@
+det A on branch (ii), factorized:
+[1]:
+   _[1]=-1
+   _[2]=b8^2*w^8+2*b8*b9*w^6*y1+b9^2*w^4*y1^2+2*b8*w^4*y1^2-2*b8*w^4*y2^2-g5*w^4*y3^2+2*b9*w^2*y1^3-2*b9*w^2*y1*y2^2+2*b2*w^2*y1*y3^2+D^2*y3^4+2*D*y1^2*y3^2-2*D*y2^2*y3^2+y1^4-2*y1^2*y2^2+y2^4
+   _[3]=D*y3^2+y1^2-y2^2
+[2]:
+   1,1,2
+gcd of the row-0 cofactors B_00..B_05 on branch (ii), factorized:
+[1]:
+   _[1]=1
+   _[2]=D*y3^2+y1^2-y2^2
+[2]:
+   1,1
+total ms: 2 ; memory (KB) in use / allocated: 4136 4160

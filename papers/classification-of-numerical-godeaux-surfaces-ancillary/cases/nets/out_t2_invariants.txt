@@ -1,0 +1,133 @@
+=== N1(D), D = s^2 generic (over Q(s))    Q = -y1^2+y2^2+(-s^2)*y3^2
+(i)   det(alpha) - Q^2 == 0 : 1
+(ii)  Q divides every entry of adj(alpha) : 1
+(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] : 1
+      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) : 1
+(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) : 0
+      Q(1,0,0) = -1   [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]
+      Q restricted to the sigma-fixed line y1 = 0 factorizes as:
+[1]:
+   _[1]=-1
+   _[2]=-y2+(s)*y3
+   _[3]=y2+(s)*y3
+[2]:
+   1,1,1
+(v)   point (0 : s : 1): Q(p) = 0;  D1(p) = [(s^2),(s);(s),1]  D2(p) = [-1,(s);(s),(-s^2)]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+(v)   point (0 : -s : 1): Q(p) = 0;  D1(p) = [(s^2),(-s);(-s),1]  D2(p) = [-1,(-s);(-s),(-s^2)]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+      [for every value of s: det D1(p) = s^2 - s^2 = 0 and D1(p)[2,2] = 1, det D2(p) = 0 and D2(p)[1,1] = -1, so both ranks are 1 for all s, t = 0]
+=== N1(D) with D a variable (statements for every value of D)
+(i)   det(alpha) - Q^2 == 0 in Q[D][y] : 1
+(ii)  Q divides every entry of adj(alpha) in Q[D][y] : 1
+(iv)  Rabinowitsch: 1 in (Q, I_2(alpha), 1 - tD*D, 1 - uu*y_i) for i = 1,2,3 (i.e. y_i in the radical after inverting D):
+      i = 1: 1
+      i = 2: 1
+      i = 3: 1
+      [all three true <=> for every D != 0 (over C), V((Q)+I_2(alpha)) = {0} in C^3, i.e. Krull dim 0 and rank alpha = 2 on all of V(Q)]
+=== N1(0)    Q = -y1^2+y2^2
+(i)   det(alpha) - Q^2 == 0 : 1
+(ii)  Q divides every entry of adj(alpha) : 1
+(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] : 1
+      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) : 1
+(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) : 0
+      Q(1,0,0) = -1   [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]
+      Q restricted to the sigma-fixed line y1 = 0 factorizes as:
+[1]:
+   _[1]=1
+   _[2]=y2
+[2]:
+   1,2
+(v)   point (0 : 0 : 1) [the vertex]: Q(p) = 0;  D1(p) = [0,0;0,1]  D2(p) = [-1,0;0,0]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+=== N1(1)    Q = -y1^2+y2^2-y3^2
+(i)   det(alpha) - Q^2 == 0 : 1
+(ii)  Q divides every entry of adj(alpha) : 1
+(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] : 1
+      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) : 1
+(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) : 0
+      Q(1,0,0) = -1   [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]
+      Q restricted to the sigma-fixed line y1 = 0 factorizes as:
+[1]:
+   _[1]=1
+   _[2]=y2-y3
+   _[3]=y2+y3
+[2]:
+   1,1,1
+(v)   point (0 : 1 : 1): Q(p) = 0;  D1(p) = [1,1;1,1]  D2(p) = [-1,1;1,-1]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+(v)   point (0 : -1 : 1): Q(p) = 0;  D1(p) = [1,-1;-1,1]  D2(p) = [-1,-1;-1,-1]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+=== N2    Q = -y1^2+y2*y3
+(i)   det(alpha) - Q^2 == 0 : 1
+(ii)  Q divides every entry of adj(alpha) : 1
+(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] : 1
+      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) : 1
+(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) : 0
+      Q(1,0,0) = -1   [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]
+      Q restricted to the sigma-fixed line y1 = 0 factorizes as:
+[1]:
+   _[1]=1
+   _[2]=y2
+   _[3]=y3
+[2]:
+   1,1,1
+(v)   point (0 : 1 : 0): Q(p) = 0;  D1(p) = [1,0;0,0]  D2(p) = [0,0;0,1]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+(v)   point (0 : 0 : 1): Q(p) = 0;  D1(p) = [0,0;0,1]  D2(p) = [1,0;0,0]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+=== N3    Q = -y1^2+y2^2
+(i)   det(alpha) - Q^2 == 0 : 1
+(ii)  Q divides every entry of adj(alpha) : 1
+(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] : 1
+      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) : 1
+(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) : 0
+      Q(1,0,0) = -1   [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]
+      Q restricted to the sigma-fixed line y1 = 0 factorizes as:
+[1]:
+   _[1]=1
+   _[2]=y2
+[2]:
+   1,2
+(v)   point (0 : 0 : 1) [the vertex]: Q(p) = 0;  D1(p) = [1,0;0,0]  D2(p) = [0,0;0,-1]
+      rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+=== T0    Q = -y1^2+y2^2-y3^2
+(i)   det(alpha) - Q^2 == 0 : 1
+(ii)  Q divides every entry of adj(alpha) : 1
+(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] : 1
+      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) : 1
+(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) : 0
+      Q(1,0,0) = -1   [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]
+      Q restricted to the sigma-fixed line y1 = 0 factorizes as:
+[1]:
+   _[1]=1
+   _[2]=y2-y3
+   _[3]=y2+y3
+[2]:
+   1,1,1
+(v)   point (0 : 1 : 1): Q(p) = 0;  D1(p) = [2,0;0,2]  D2(p) = [0,0;0,0]
+      rank D1(p) = 2, rank D2(p) = 0, t(p) = dim coker D2(p) - dim coker D1(p) = 2
+(v)   point (0 : 1 : -1): Q(p) = 0;  D1(p) = [0,0;0,0]  D2(p) = [2,0;0,2]
+      rank D1(p) = 0, rank D2(p) = 2, t(p) = dim coker D2(p) - dim coker D1(p) = -2
+=== B2    Q = -y1^2+y2^2
+(i)   det(alpha) - Q^2 == 0 : 1
+(ii)  Q divides every entry of adj(alpha) : 1
+(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] : 1
+      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) : 1
+(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) : 1
+      Q(1,0,0) = -1   [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]
+      Q restricted to the sigma-fixed line y1 = 0 factorizes as:
+[1]:
+   _[1]=1
+   _[2]=y2
+[2]:
+   1,2
+(v)   point (0 : 0 : 1) [the vertex]: Q(p) = 0;  D1(p) = [0,0;0,0]  D2(p) = [0,0;0,0]
+      rank D1(p) = 0, rank D2(p) = 0, t(p) = dim coker D2(p) - dim coker D1(p) = 0
+      B2 at the vertex: alpha(0,0,1) =
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0 
+total time (s): 0
+peak memory (KB, Singular memory(2)): 4200

@@ -1,0 +1,17 @@
+1,2,py+qy,0,   
+3,4,0,    py+qy
+nrows, ncols:
+2
+4
+-py-qy+1,2,      
+3,       -py-qy+4
+2
+2
+py+qy+1,2,     
+3,      py+qy+4
+2
+2
+ideal
+p
+rank via std of module:
+1

@@ -1,0 +1,63 @@
+  unit pivot b(6), coefficient b(8)^2
+  unit pivot b(4), coefficient -b(8)^2
+  unit pivot b(9), coefficient b(8)
+  unit pivot b(12), coefficient 2*b(8)
+  unit pivot b(11), coefficient 2*b(8)
+pass 1: pivots 5, divisions by b8 or t 0, nonzero equations left 0
+pass 2: pivots 0, divisions by b8 or t 0, nonzero equations left 0
+pivots with a non-constant (unit) coefficient: 5
+eliminated or fixed by the branch condition: 253 (A-unknowns 18, lambda 235)
+free A-unknowns: D b(2) b(5) b(8) g(2)  (5); free lambda: 136
+leftover equations: 0
+images of the 23 A-unknowns:
+  D -> D
+  b(1) -> 0
+  b(2) -> b(2)
+  b(3) -> b(8)
+  b(4) -> 0
+  b(5) -> b(5)
+  b(6) -> 0
+  b(7) -> 0
+  b(8) -> b(8)
+  b(9) -> b(5)
+  b(10) -> 0
+  b(11) -> 0
+  b(12) -> 0
+  g(1) -> -D^2*b(5)^2+D*g(2)
+  g(2) -> g(2)
+  g(3) -> 0
+  g(4) -> 0
+  g(5) -> D*b(5)^2-g(2)
+  g(6) -> 0
+  g(7) -> 2*D*b(5)*b(8)
+  g(8) -> 0
+  g(9) -> D*b(8)^2
+  g(10) -> 0
+graph check: lambda variables occurring in the images of the A-unknowns: 0
+eliminated variables occurring in tracked images: 0
+--- F2 point (1:0:...:0): b7, b10 and the pure w-power coefficients of the lambda_{ij,0} ---
+  b7 -> 0
+  b10 -> 0
+  lam_11_0[w^6] = L(213) -> 0
+  lam_12_0[w^6] = L(223) -> 0
+  lam_22_0[w^6] = L(263) -> D*b(8)^2
+  lam_33_0[w^6] = L(303) -> -D*b(8)^2
+  lam_34_0[w^6] = L(313) -> 0
+  lam_35_0[w^7] = L(323) -> 0
+  lam_44_0[w^6] = L(333) -> -b(8)^2
+  lam_45_0[w^7] = L(343) -> 0
+  lam_55_0[w^8] = L(353) -> 0
+all F2 conditions identically 0 after substitution: 0
+--- F3 points (0:0:+-sqrt(D):1|0): remainders of lambda_{ij,0}(0,0,y2,y3) modulo y2^2 - D*y3^2 ---
+  lambda_13,0 r1 -> 0
+  lambda_13,0 r0 -> 0
+  lambda_14,0 r1 -> 0
+  lambda_14,0 r0 -> 0
+  lambda_23,0 r1 -> 0
+  lambda_23,0 r0 -> 0
+  lambda_24,0 r1 -> 0
+  lambda_24,0 r0 -> 0
+  lambda_55,0 r1 -> 0
+  lambda_55,0 r0 -> 0
+all F3 remainders identically 0 after substitution: 1
+total time (ms): 42, memory(2) = 8562064

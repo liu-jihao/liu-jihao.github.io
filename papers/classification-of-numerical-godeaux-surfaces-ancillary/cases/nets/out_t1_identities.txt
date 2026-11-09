@@ -1,0 +1,32 @@
+alpha =
+y2*a1+y3*b1,y2*a2+y3*b2,y1,         0,          
+y2*a2+y3*b2,y2*a3+y3*b3,0,          y1,         
+y1,         0,          y2*a4+y3*b4,y2*a5+y3*b5,
+0,          y1,         y2*a5+y3*b5,y2*a6+y3*b6 
+number of terms of det(alpha): 62
+T1.1  det(alpha) - det(D1*D2 - y1^2*I) == 0 : 1
+      (also det(D2*D1 - y1^2*I) equals it : 1 )
+      alpha*adj(alpha) - det(alpha)*I4 == 0 (adjugate convention check) : 1
+      adjN = adj(D1*D2 - y1^2 I) (i.e. N*adjN = det(N)*I) : 1
+      adjNt = adj(D2*D1 - y1^2 I) : 1
+T1.2  top-left block:     adj(alpha)_TL - D2*((tr(D1D2) - y1^2)I - D1D2)    == 0 : 1
+      top-right block:    adj(alpha)_TR + y1*((tr(D1D2) - y1^2)I - D2D1)    == 0 : 1
+      bottom-left block:  adj(alpha)_BL + y1*((tr(D1D2) - y1^2)I - D1D2)    == 0 : 1
+      bottom-right block: adj(alpha)_BR - D1*((tr(D1D2) - y1^2)I - D2D1)    == 0 : 1
+      (bottom-right also = ((tr(D1D2) - y1^2)I - D1D2)*D1 : 1 )
+      (top-left also = ((tr(D1D2) - y1^2)I - D2D1)*D2 : 1 )
+      E^t = D2*D1 - Q2*I (D1, D2 symmetric) : 1
+T1.3a det(alpha) - Q^2 - (det(E) + Q*trace(E)) == 0 : 1
+      [det(E) = E11*E22 - E12*E21 and trace(E) = E11 + E22 lie in the ideal (E11,E12,E21,E22)]
+      adj(alpha) - Q*[[D2,-y1 I],[-y1 I,D1]] - [[D2*adj(E), -y1*adj(E^t)], [-y1*adj(E), adj(E)*D1]] == 0 : 1
+      [adj(E) = tr(E)*I - E has entries +-E_ij, so every entry of the last matrix lies in (E11,E12,E21,E22)]
+      hence modulo (entries of D1*D2 - Q2*I):  det(alpha) = Q^2  and  adj(alpha) = Q*[[D2,-y1 I],[-y1 I,D1]].
+      time so far (s): 0
+T1.3b substitution: D1*D2 - Q2*I == 0 : 1
+      det(alpha) - Q^2 == 0 : 1
+      adj(alpha) - Q*[[D2,-y1 I],[-y1 I,D1]] == 0 : 1
+      time so far (s): 0
+T1.4  y1^4-part of det([[D1, y1 M],[y1 M^t, D2]]) - det(M)^2*y1^4 == 0 : 1
+      (homogeneity check: det is homogeneous of degree 4 in y1,y2,y3 : 1 )
+total time (s): 0
+peak memory (KB, Singular memory(2)): 4176

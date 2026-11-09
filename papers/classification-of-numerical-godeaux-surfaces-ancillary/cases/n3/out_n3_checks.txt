@@ -1,0 +1,55 @@
+distinct equations: 613
+free unknowns: 102
+point 1 (free unknowns):
+lam(4)=-4 lam(8)=17 lam(17)=15 lam(18)=14 lam(24)=14 lam(28)=-16 lam(37)=5 lam(38)=-2 lam(45)=-18 lam(46)=9 lam(55)=1 lam(57)=6 lam(65)=15 lam(66)=-9 lam(75)=14 lam(77)=16 lam(85)=-10 lam(86)=-16 lam(101)=-15 lam(102)=20 lam(103)=14 lam(105)=7 lam(106)=-7 lam(107)=15 lam(108)=-13 lam(109)=-8 lam(116)=-3 lam(120)=14 lam(129)=-6 lam(130)=-20 lam(137)=-2 lam(138)=-12 lam(147)=20 lam(149)=1 lam(157)=-17 lam(158)=-4 lam(167)=18 lam(169)=12 lam(177)=17 lam(178)=-5 lam(193)=-3 lam(194)=-3 lam(195)=-8 lam(197)=6 lam(198)=19 lam(199)=-3 lam(200)=10 lam(201)=20 lam(208)=-8 lam(212)=-8 lam(221)=-15 lam(222)=13 lam(228)=4 lam(232)=17 lam(241)=1 lam(242)=-12 lam(248)=15 lam(252)=-14 lam(258)=-20 lam(264)=-7 lam(267)=17 lam(268)=-17 lam(271)=-14 lam(272)=-3 lam(273)=13 lam(274)=-11 lam(280)=-15 lam(284)=-4 lam(293)=-12 lam(294)=6 lam(300)=17 lam(304)=17 lam(310)=10 lam(316)=2 lam(319)=-5 lam(320)=-10 lam(323)=9 lam(324)=17 lam(325)=11 lam(326)=5 lam(334)=17 lam(335)=17 lam(336)=15 lam(337)=10 lam(341)=-12 lam(345)=17 lam(351)=7 lam(357)=-5 lam(360)=-2 lam(361)=7 lam(364)=-9 lam(365)=-2 lam(366)=8 lam(367)=-5 g(4)=-15 g(5)=19 g(6)=2 g(8)=14 b(4)=17 b(6)=-12 b(9)=-8 b(11)=10 
+point 1 (all g, b):
+g(1)=0 g(2)=51 g(3)=-20 g(4)=-15 g(5)=19 g(6)=2 g(7)=-1313/2 g(8)=14 g(9)=1681 g(10)=388 b(1)=-98 b(2)=10 b(3)=-1 b(4)=17 b(5)=-8 b(6)=-12 b(7)=-2 b(8)=0 b(9)=-8 b(10)=0 b(11)=10 b(12)=1 
+(a) exact: equations not vanishing at point 1: 0 of 613
+A at point 1:
+AP[1,1],   0, AP[1,3],AP[1,4],AP[1,5],-y1^2+y2^2,
+0,         y3,y2,     y1,     0,      w,         
+AP[3,1],   y2,0,      w^2,    y1,     0,         
+AP[4,1],   y1,w^2,    0,      y2,     0,         
+AP[5,1],   0, y1,     y2,     -y3,    0,         
+-y1^2+y2^2,w, 0,      0,      0,      0          
+(a) exact: pairs (i,j) with E_ij != 0 at point 1: 0
+det A at point 1 is nonzero: 1 ; terms: 49
+(b) syzygy map: columns 94 ; rank (exact, over Q): 94  (expected 94)
+(b) zero syzygy images: 0
+(c) conditions from the fixed monomials of N3 (rows: (row,col,monomial) of A):
+     0     0     2     0     1     0     0     0     0     1
+     0     2     0     0     1     0     0     0     0     1
+     0     0     0     1     0     2     0     0     0     0
+     0     0     1     0     0     1     1     0     0     0
+     0     1     0     0     0     1     0     1     0     0
+     1     0     0     0     0     1     0     0     0     1
+     2     0     0     0     0     0     1     1     0     0
+     0     1     0     0     0     0     1     0     1     0
+     0     0     1     0     0     0     0     1     1     0
+     0     0     0     1     0     0     0     0     2     0
+(c) rank of the condition matrix: 8  -> torus dimension 2
+(c) kernel basis (syz):
+-1,-1,
+-2,-1,
+-2,-1,
+-2,0, 
+4, 1, 
+1, 0, 
+1, 1, 
+1, 1, 
+1, 0, 
+0, 1  
+(c) TM*G0 = 0,0,0,0,0,0,0,0,0,0
+(c) TM*T1 = 0,0,0,0,0,0,0,0,0,0
+(c) unknowns with nonzero grading weight: 0  (expected 0: the grading acts trivially)
+(c) T1-weights of g, b: g(1):0 g(2):4 g(3):2 g(4):6 g(5):4 g(6):6 g(7):6 g(8):8 g(9):8 g(10):10 b(1):4 b(2):2 b(3):6 b(4):4 b(5):2 b(6):2 b(7):0 b(8):-2 b(9):8 b(10):4 b(11):2 b(12):0 
+(c) T1-weights of the free A-coefficients: g(4):6 g(5):4 g(6):6 g(8):8 b(4):4 b(6):2 b(9):8 b(11):2 
+(c) effective torus dimension e = rank of the weight matrix on the free A-coefficients: 1
+(c) range of T1-weights of the lambda coefficients: -4 16
+(c) exact: equations not vanishing at the torus image (s = 2) of point 1: 0
+(c) control (wrong lambda weights): equations not vanishing: 375  (expected > 0)
+Jacobian: 613 x 393 ; ms: 378
+(d) exact: equations not vanishing at point 2: 0
+(d) point 1: rank J mod p = 291 ; 393 - rank = 102 ; rank J_lambda = 277 ; dim ker J_lambda = 94 ; rank of the projection of ker J to the 22 A-coefficients = 8
+(d) point 2: rank J mod p = 291 ; 393 - rank = 102 ; rank J_lambda = 277 ; dim ker J_lambda = 94 ; rank of the projection of ker J to the 22 A-coefficients = 8
+== done; ms: 439 ; memory (KB): 57325 ; max: 91378

@@ -1,0 +1,11 @@
+// tiny syntax test (no computation)
+ring S = 0, (lam(1..3), g(1..2)), dp;
+poly f = 2*lam(1) + lam(2)*g(1) + 3;
+ideal vv = variables(f); vv;
+int nd = 4; intvec CAND = (-1):nd; CAND;
+intvec WL = 1:3, 0:2; WL;
+rvar(leadmonom(f[1]));
+deg(f, WL);
+int l1 = (2 <= 3); l1;
+list E; E[1] = f; E[2] = poly(0); size(E); E[2] == 0;
+quit;

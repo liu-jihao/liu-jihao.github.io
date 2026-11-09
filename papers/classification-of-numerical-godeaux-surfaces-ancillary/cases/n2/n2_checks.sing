@@ -1,0 +1,53 @@
+// n2: small checks: sigma-sign rule of the normal form (c = 1, 0); structure of the c = 0 leftover system (generated inline, see CASE.md)
+system("--ticks-per-sec", 1000); int T0 = rtimer;
+ring Rs1 = 0, (g(1..10), b(1..12), w, y1, y2, y3), dp;
+poly y0 = w^2;
+poly G = g(1)*y3^3 + g(2)*y1^2*y3 + g(3)*y2*y3^2 + g(4)*y1^2*y2 + g(5)*y2^2*y3 + g(6)*y2^3 + g(7)*y0*y1*y3 + g(8)*y0*y1*y2 + g(9)*y0^2*y3 + g(10)*y0^2*y2;
+poly q1 = 0;
+poly q2 = b(1)*y0*y2 + b(2)*y0*y3 + b(3)*y1*y2 + b(4)*y1*y3;
+poly q3 = b(5)*y0^2 + b(6)*y0*y1 + b(7)*y1^2 + b(8)*y2^2 + b(9)*y2*y3 + b(10)*y3^2;
+poly q4 = b(11)*y0^2 + b(12)*y3^2;
+poly Q = y2*y3 - y1^2;
+poly cc = 1;
+matrix A[6][6] =
+  y0*G, w*q1, w*q2, w*q3, w*q4, Q,
+  w*q1, y2,   0,    y1,   0,    w,
+  w*q2, 0,    y3,   cc*y0, y1,  0,
+  w*q3, y1,   cc*y0, y3,  0,    0,
+  w*q4, 0,    y1,   0,    y2,   0,
+  Q,    w,    0,    0,    0,    0;
+intvec dl = 1,-1,-1,1,1,-1; int i; int j; int oks = 1; poly sA;
+for (i = 1; i <= 6; i++) { for (j = 1; j <= 6; j++) { sA = subst(A[i,j], w, -w, y2, -y2, y3, -y3); if (sA != -dl[i]*dl[j]*A[i,j]) { oks = 0; } } }
+"c = 1: every entry satisfies sigma(A_jk) = -delta_j delta_k A_jk:", oks;
+poly dA = det(A); "c = 1: det A is sigma-invariant:", subst(dA, w, -w, y2, -y2, y3, -y3) == dA;
+kill dl, i, j, oks, sA, dA;
+ring Rs0 = 0, (g(1..10), b(1..12), w, y1, y2, y3), dp;
+poly y0 = w^2;
+poly G = g(1)*y3^3 + g(2)*y1^2*y3 + g(3)*y2*y3^2 + g(4)*y1^2*y2 + g(5)*y2^2*y3 + g(6)*y2^3 + g(7)*y0*y1*y3 + g(8)*y0*y1*y2 + g(9)*y0^2*y3 + g(10)*y0^2*y2;
+poly q1 = 0;
+poly q2 = b(1)*y0*y2 + b(2)*y0*y3 + b(3)*y1*y2 + b(4)*y1*y3;
+poly q3 = b(5)*y0^2 + b(6)*y0*y1 + b(7)*y1^2 + b(8)*y2^2 + b(9)*y2*y3 + b(10)*y3^2;
+poly q4 = b(11)*y0^2 + b(12)*y3^2;
+poly Q = y2*y3 - y1^2;
+poly cc = 0;
+matrix A[6][6] =
+  y0*G, w*q1, w*q2, w*q3, w*q4, Q,
+  w*q1, y2,   0,    y1,   0,    w,
+  w*q2, 0,    y3,   cc*y0, y1,  0,
+  w*q3, y1,   cc*y0, y3,  0,    0,
+  w*q4, 0,    y1,   0,    y2,   0,
+  Q,    w,    0,    0,    0,    0;
+intvec dl = 1,-1,-1,1,1,-1; int i; int j; int oks = 1; poly sA;
+for (i = 1; i <= 6; i++) { for (j = 1; j <= 6; j++) { sA = subst(A[i,j], w, -w, y2, -y2, y3, -y3); if (sA != -dl[i]*dl[j]*A[i,j]) { oks = 0; } } }
+"c = 0: every entry satisfies sigma(A_jk) = -delta_j delta_k A_jk:", oks;
+poly dA = det(A); "c = 0: det A is sigma-invariant:", subst(dA, w, -w, y2, -y2, y3, -y3) == dA;
+kill dl, i, j, oks, sA, dA;
+ring R = 0, (l(1..371), g(1..10), b(1..12), w, y1, y2, y3), dp;
+< "n2_defs.sing";
+link LS = "ssi:r n2c0_stage_state.ssi"; def ST = read(LS); close(LS); ideal IMG = ST[1]; intvec ELIMAT = ST[2]; ideal LEFT = ST[4]; kill ST;
+ideal LF = simplify(LEFT, 2); int u; int v; "c = 0 leftover equations:", ncols(LF);
+ideal Z = maxideal(1); for (v = 1; v <= 393; v++) { Z[v] = 0; } map z0 = R, Z; ideal LZ = z0(LF); "c = 0: leftover equations with nonzero constant term:", size(simplify(LZ, 2));
+int nb = 0; for (u = 1; u <= ncols(LF); u++) { if (reduce(LF[u], std(ideal(b(4), b(12)))) == 0) { nb++; } } "c = 0: leftover equations lying in the ideal (b4, b12):", nb;
+intvec dg = 0:6; for (u = 1; u <= ncols(LF); u++) { dg[deg(LF[u])+1] = dg[deg(LF[u])+1] + 1; } "c = 0: leftover equations by total degree 0..5:", dg;
+"ms:", rtimer-T0;
+quit;

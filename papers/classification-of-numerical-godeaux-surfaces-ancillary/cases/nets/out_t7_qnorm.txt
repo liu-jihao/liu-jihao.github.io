@@ -1,0 +1,82 @@
+group law: P(u)*P(u') - P(u+u') == 0 : 1
+P(u) commutes with sigma (sigma(P_jk) = d_j d_k P_jk) : 1
+================= N1(D):  Q = -y3^2*D-y1^2+y2^2,  alpha' = c*E_23
+rows/cols v1..v5 unchanged (alpha, alpha', column 5) : 1
+A_05 unchanged (= Q) : 1
+delta q_k = sum_{j=2..4} u_j*a_jk + delta_{k1}*y0*u5 (k = 1..4) : 1
+delta G = 2*sum_j u_j*q_j + sum_{j,l in {2,3,4}} u_j*u_l*a_jl + 2*u5*Q : 1
+literal reading 'delta G = sum_j (2*u_j*q_j + u_j^2*a_jj) + 2*u5*Q' (no cross terms) : 0
+   difference (true minus literal) = 2*sum_{j<l} u_j*u_l*a_jl = 2*w^4*y2*c*p0*r2+2*w^4*y3*c*p0*r3+2*w^2*y1*y2*c*p1*r2+2*w^2*y1*y3*c*p1*r3+2*w^2*y1*y2*p0*s2+2*w^2*y1*y3*p0*s3+2*y1^2*y2*p1*s2+2*y2^3*r2*s2+2*y2^2*y3*r3*s2+2*y1^2*y3*p1*s3+2*y2^2*y3*r2*s3+2*y2*y3^2*r3*s3
+   q1[w^2*y2]: coefficient change = p0+t2
+   q1[w^2*y3]: coefficient change = t3
+   q3[y2^2]: coefficient change = s2
+   q3[y2*y3]: coefficient change = -r2+s3
+   q3[y3^2]: coefficient change = -r3
+   q4[w^2*y1]: coefficient change = p0
+   q4[y1^2]: coefficient change = p1
+   q4[y2^2]: coefficient change = r2
+8x8 matrix (columns p0,p1,r2,r3,s2,s3,t2,t3):
+1,0,0, 0, 0,0,1,0,
+0,0,0, 0, 0,0,0,1,
+0,0,0, 0, 1,0,0,0,
+0,0,-1,0, 0,1,0,0,
+0,0,0, -1,0,0,0,0,
+1,0,0, 0, 0,0,0,0,
+0,1,0, 0, 0,0,0,0,
+0,0,1, 0, 0,0,0,0 
+determinant: 1
+kept monomials: q1[y1*y2] q1[y1*y3] q2[w^2*y2] q2[w^2*y3] q2[y1*y2] q2[y1*y3] q3[w^4] q3[w^2*y1] q3[y1^2] q4[w^4] q4[y2*y3] q4[y3^2]
+================= N2:  Q = -y1^2+y2*y3,  alpha' = c*E_23
+rows/cols v1..v5 unchanged (alpha, alpha', column 5) : 1
+A_05 unchanged (= Q) : 1
+delta q_k = sum_{j=2..4} u_j*a_jk + delta_{k1}*y0*u5 (k = 1..4) : 1
+delta G = 2*sum_j u_j*q_j + sum_{j,l in {2,3,4}} u_j*u_l*a_jl + 2*u5*Q : 1
+literal reading 'delta G = sum_j (2*u_j*q_j + u_j^2*a_jj) + 2*u5*Q' (no cross terms) : 0
+   difference (true minus literal) = 2*sum_{j<l} u_j*u_l*a_jl = 2*w^4*y2*c*p0*r2+2*w^4*y3*c*p0*r3+2*w^2*y1*y2*c*p1*r2+2*w^2*y1*y3*c*p1*r3+2*w^2*y1*y2*p0*s2+2*w^2*y1*y3*p0*s3+2*y1^2*y2*p1*s2+2*y1^2*y3*p1*s3
+   q1[w^2*y2]: coefficient change = t2
+   q1[w^2*y3]: coefficient change = t3
+   q1[y1*y2]: coefficient change = r2
+   q1[y1*y3]: coefficient change = r3
+   q4[w^2*y1]: coefficient change = p0
+   q4[y1^2]: coefficient change = p1
+   q4[y2^2]: coefficient change = s2
+   q4[y2*y3]: coefficient change = s3
+8x8 matrix (columns p0,p1,r2,r3,s2,s3,t2,t3):
+0,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,1,
+0,0,1,0,0,0,0,0,
+0,0,0,1,0,0,0,0,
+1,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,0,0 
+determinant: 1
+kept monomials: q2[w^2*y2] q2[w^2*y3] q2[y1*y2] q2[y1*y3] q3[w^4] q3[w^2*y1] q3[y1^2] q3[y2^2] q3[y2*y3] q3[y3^2] q4[w^4] q4[y3^2]
+================= N3:  Q = -y1^2+y2^2,  alpha' = c*E_23
+rows/cols v1..v5 unchanged (alpha, alpha', column 5) : 1
+A_05 unchanged (= Q) : 1
+delta q_k = sum_{j=2..4} u_j*a_jk + delta_{k1}*y0*u5 (k = 1..4) : 1
+delta G = 2*sum_j u_j*q_j + sum_{j,l in {2,3,4}} u_j*u_l*a_jl + 2*u5*Q : 1
+literal reading 'delta G = sum_j (2*u_j*q_j + u_j^2*a_jj) + 2*u5*Q' (no cross terms) : 0
+   difference (true minus literal) = 2*sum_{j<l} u_j*u_l*a_jl = 2*w^4*y2*c*p0*r2+2*w^4*y3*c*p0*r3+2*w^2*y1*y2*c*p1*r2+2*w^2*y1*y3*c*p1*r3+2*w^2*y1*y2*p0*s2+2*w^2*y1*y3*p0*s3+2*y1^2*y2*p1*s2+2*y2^3*r2*s2+2*y2^2*y3*r3*s2+2*y1^2*y3*p1*s3+2*y2^2*y3*r2*s3+2*y2*y3^2*r3*s3
+   q1[w^2*y2]: coefficient change = p0+t2
+   q1[w^2*y3]: coefficient change = t3
+   q1[y1*y2]: coefficient change = p1+r2
+   q1[y1*y3]: coefficient change = r3
+   q2[y1*y2]: coefficient change = s2
+   q2[y1*y3]: coefficient change = s3
+   q4[w^2*y1]: coefficient change = p0
+   q4[y1^2]: coefficient change = p1
+8x8 matrix (columns p0,p1,r2,r3,s2,s3,t2,t3):
+1,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,1,
+0,1,1,0,0,0,0,0,
+0,0,0,1,0,0,0,0,
+0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,0,0,
+1,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0 
+determinant: 1
+kept monomials: q2[w^2*y2] q2[w^2*y3] q3[w^4] q3[w^2*y1] q3[y1^2] q3[y2^2] q3[y2*y3] q3[y3^2] q4[w^4] q4[y2^2] q4[y2*y3] q4[y3^2]
+total time (s): 0
+peak memory (KB, Singular memory(2)): 4202

@@ -1,0 +1,14 @@
+equations: 630 ; leftover equations in the state: 0
+Jacobian: 630 x 397 ; ms: 31
+free unknowns: 102 ; free A-coefficients: 8
+point determined (all coordinates are numbers): 1
+equations vanishing at the point: 1
+seed 11: rank of the Jacobian (w.r.t. the 393 unknowns) mod 32003: 291 ; unknowns minus rank: 102 ; ms: 53
+kernel vectors: 102
+rank of the projection of the kernel to the 22 A-coefficients: 8
+point determined (all coordinates are numbers): 1
+equations vanishing at the point: 1
+seed 12: rank of the Jacobian (w.r.t. the 393 unknowns) mod 32003: 291 ; unknowns minus rank: 102 ; ms: 93
+kernel vectors: 102
+rank of the projection of the kernel to the 22 A-coefficients: 8
+memory MB: 65 ; ms: 112

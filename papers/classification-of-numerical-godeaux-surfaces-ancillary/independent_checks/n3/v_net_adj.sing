@@ -1,0 +1,24 @@
+// v_net_adj.sing -- the 16 signed 3x3 minors (adjugate entries) of the N3 net alpha, each reduced modulo Q;
+// also adj(alpha) = Q*[[D2, -y1 I], [-y1 I, D1]] (PLAN A4.4) for D1 = [[y3,y2],[y2,0]], D2 = [[0,y2],[y2,-y3]].
+LIB "matrix.lib";
+int r,c,nz,bad,bad2;
+ring Y = 0,(y1,y2,y3),dp;
+matrix al[4][4] = y3,y2,y1,0,  y2,0,0,y1,  y1,0,0,y2,  0,y1,y2,-y3;
+poly Q = y2^2 - y1^2;
+proc oth(int rr) { intvec vv0; int ii; int first = 1;
+  for (ii=1; ii<=4; ii++) { if (ii != rr) { if (first) { vv0 = ii; first = 0; } else { vv0 = vv0, ii; } } }
+  return(vv0); }
+matrix AD[4][4];
+for (r=1;r<=4;r++){ for (c=1;c<=4;c++){ AD[r,c] = (-1)^(r+c)*det(submat(al, oth(c), oth(r))); } }
+matrix EXP[4][4] = 0,y2,-y1,0,  y2,-y3,0,-y1,  -y1,0,y3,y2,  0,-y1,y2,0;
+nz = 0; bad = 0; bad2 = 0;
+for (r=1;r<=4;r++){ for (c=1;c<=4;c++){
+  if (AD[r,c] != 0) { nz++; }
+  if (reduce(AD[r,c], std(ideal(Q))) != 0) { bad++; }
+  if (AD[r,c] != Q*EXP[r,c]) { bad2++; }
+}}
+print("adjugate entries: 16, nonzero: " + string(nz) + ", not divisible by Q: " + string(bad));
+print("adj(alpha) - Q*[[D2,-y1 I],[-y1 I,D1]]: entries differing: " + string(bad2));
+matrix AA = al*AD;
+print("alpha*adj(alpha) = det(alpha)*I with det(alpha) = Q^2: " + string((AA[1,1] == Q^2) && (AA[2,2] == Q^2) && (AA[3,3] == Q^2) && (AA[4,4] == Q^2) && (AA[1,2] == 0)));
+quit;

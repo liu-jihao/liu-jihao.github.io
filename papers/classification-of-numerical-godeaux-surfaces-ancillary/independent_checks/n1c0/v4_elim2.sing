@@ -1,0 +1,99 @@
+// v4_elim2.sing: continue from v_state1 (lambda-only elimination) with constant pivots on lambda's AND on A-unknowns
+// except D and b8 (own priority: highest ring index first; lambda's have the highest indices).
+// Then: the lambda-free leftover equations generate J0, an ideal contained in I and in Q[A-unknowns];
+// memberships are tested with a Groebner basis of J0 (23 variables).
+system("--ticks-per-sec", 1000);
+int T0 = rtimer;
+< "vring.sing";
+execute(read("v_state1.txt"));
+int i; int k; int m; int ix; int best; int npiv = 0; int pass = 0; int found; int np;
+ideal E = E1; ideal TR = TR1;
+intvec allowed = 0:nvars(basering);
+intvec elim = ELIM1;
+for (i = 6; i <= 398; i++) { if (elim[i] == 0) { allowed[i] = 1; } }
+allowed[13] = 0;   // b(8) = var(13) kept free
+// D = var(5) kept free (allowed[5] = 0 already)
+poly f; poly dfd; poly bestd; ideal V; poly s;
+found = 1;
+while (found)
+{
+  found = 0; pass++; np = 0;
+  for (k = ncols(E); k >= 1; k--)
+  {
+    f = E[k];
+    if (f != 0)
+    {
+      V = variables(f); best = 0;
+      for (m = 1; m <= ncols(V); m++)
+      {
+        ix = univariate(V[m]);
+        if (allowed[ix] == 1)
+        {
+          dfd = diff(f, V[m]);
+          if (dfd != 0) { if (deg(dfd) == 0) { if (ix > best) { best = ix; bestd = dfd; } } }
+        }
+      }
+      if (best > 0)
+      {
+        s = var(best) - (1/leadcoef(bestd))*f;
+        E = subst(E, var(best), s); TR = subst(TR, var(best), s);
+        allowed[best] = 0; elim[best] = 1; npiv++; np++; found = 1;
+        if (best <= 27) { "  pivot on A-unknown " + string(var(best)) + " = " + string(s); }
+      }
+    }
+  }
+  E = simplify(E, 2);
+  "pass " + string(pass) + ": pivots " + string(np) + ", nonzero equations left " + string(size(E));
+}
+int nel = 0; int nelA = 0;
+for (i = 5; i <= 398; i++) { if (elim[i] == 1) { nel++; if (i <= 27) { nelA++; } } }
+"eliminated in total (v2 + v4): " + string(nel) + " (A-unknowns " + string(nelA) + ", lambda " + string(nel - nelA) + ")";
+ideal E2 = simplify(E, 2);
+"leftover equations: " + string(size(E2));
+string sfree = ""; int nfl = 0;
+for (i = 5; i <= 398; i++) { if (elim[i] == 0) { if (i <= 27) { sfree = sfree + string(var(i)) + " "; } else { nfl++; } } }
+"free A-unknowns: " + sfree + "; free lambda: " + string(nfl);
+// tracked images of the A-unknowns that are eliminated
+for (i = 1; i <= 23; i++) { if (elim[i+4] == 1) { "  image of " + string(var(i+4)) + " = " + string(TR[i]); } }
+// lambda-free leftover -> J0
+ideal J0; int nj = 0;
+for (k = 1; k <= ncols(E2); k++) {
+  poly fl = E2[k]; for (i = 28; i <= 398; i++) { fl = subst(fl, var(i), 0); }
+  if (fl == E2[k]) { nj++; J0[nj] = E2[k]; "lambda-free leftover " + string(nj) + ": " + string(factorize(E2[k])[1]); }
+  kill fl;
+}
+// images u - image(u) of eliminated A-unknowns lie in I; only the lambda-free ones are added to J0
+for (i = 1; i <= 23; i++) { if (elim[i+4] == 1) {
+  poly fi = TR[i]; int lf = 1; ideal VI = variables(fi);
+  for (k = 1; k <= ncols(VI); k++) { if (univariate(VI[k]) >= 28) { lf = 0; } }
+  if (lf == 1) { nj++; J0[nj] = var(i+4) - TR[i]; }
+  kill fi; kill lf; kill VI;
+} }
+ideal VJ = variables(J0); int lamJ = 0;
+for (k = 1; k <= ncols(VJ); k++) { if (univariate(VJ[k]) >= 28) { lamJ++; } }
+"lambda variables occurring in J0 (must be 0): " + string(lamJ);
+// g4, g8: is the image of g4 (resp. g8) a scalar multiple of a leftover equation?
+poly i4 = TR[17]; poly i8 = TR[21];   // TR index of g(k) is 13 + k
+int f4 = 0; int f8 = 0;
+for (k = 1; k <= ncols(E2); k++) { if (E2[k] != 0) {
+  if (i4 != 0) { if (simplify(E2[k], 1) == simplify(i4, 1)) { f4 = k; } }
+  if (i8 != 0) { if (simplify(E2[k], 1) == simplify(i8, 1)) { f8 = k; } }
+} }
+"image of g4 is (up to a scalar) leftover equation number " + string(f4) + " (0 = not found); image of g8: " + string(f8);
+ring SA = 0, (D, b(1..12), g(1..10)), dp;
+option(redSB);
+ideal J0 = imap(R, J0);
+int T1 = rtimer;
+ideal GJ = std(J0);
+"std(J0) in the 23 A-unknowns: " + string(rtimer - T1) + " ms; GJ = " + string(GJ);
+list H = list((b(3)-b(8))*(b(3)+b(8)), b(1), b(7), b(10), g(6), g(10), b(4)^2, b(3)*b(4));
+list HN = list("(b3-b8)(b3+b8)", "b1", "b7", "b10", "g6", "g10", "b4^2", "b3*b4");
+for (k = 1; k <= size(H); k++) { "  " + HN[k] + " in J0 (J0 is contained in I): " + string(reduce(H[k], GJ) == 0); }
+setring R;
+write(":w v_state2.txt", "ideal E2 = " + string(E2) + ";");
+write(":a v_state2.txt", "ideal TR2 = " + string(TR) + ";");
+write(":a v_state2.txt", "intvec ELIM2 = " + string(elim) + ";");
+"--- leftover equations, factorized ---";
+for (k = 1; k <= ncols(E2); k++) { list FF = factorize(E2[k]); "LEFT " + string(k) + ": " + string(FF[1]) + "  mult " + string(FF[2]); kill FF; }
+"total time (ms): " + string(rtimer - T0) + ", memory(2) = " + string(memory(2));
+quit;

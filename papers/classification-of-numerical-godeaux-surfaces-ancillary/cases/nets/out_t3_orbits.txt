@@ -1,0 +1,62 @@
+######## (ii) CCO94 Prop. 5.1 normal forms (p. 109)
+=== orbit Q  (smooth conic)     Q = -y2^2+y1*y3
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 0
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 0
+=== orbit B1 (two lines, rank 2 at the vertex (0:0:1))     Q = y1*y2
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 0
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 0
+=== orbit B2 (two lines, rank 0 at the vertex)     Q = y1*y2
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 1
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 1
+=== orbit C1 = y1*I4 + [[y2 S, 0], [0, y3 S]], S = [[1,i],[i,-1]]     Q = y1^2
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 1
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 0
+=== orbit C2 = y1*I4 + [[y3 S, y2 S], [y2 S, 0]]     Q = y1^2
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 1
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 0
+=== orbit C3 = y1*I4 + [[y2 S, 0], [0, y2 S]]     Q = y1^2
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 1
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 1
+=== orbit C4 = y1*I4 + [[y2 S, 0], [0, 0]]     Q = y1^2
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 2
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 1
+=== orbit C5 = y1*I4     Q = y1^2
+det(M) - Q^2 == 0 : 1
+Q divides every entry of adj(M) (= all 3x3 minors up to sign) : 1
+Krull dim of Q[y]/((Q) + I_2(M))  [0 <=> rank M = 2 at every point of V(Q)] : 2
+Krull dim of Q[y]/(all entries of M)  [>0 <=> M vanishes at some point of P^2] : 2
+######## (i) our sigma-equivariant nets
+--- smoothness of Q: determinant of the Hessian matrix of Q
+N1(D): Q = y2^2 - D*y3^2 - y1^2, det Hessian = 8*D   [nonzero iff D != 0: smooth conic for D != 0]
+N2:    Q = y2*y3 - y1^2,          det Hessian = 2   [smooth conic]
+T0:    Q = y2^2 - y3^2 - y1^2,    det Hessian = 8   [smooth conic]
+N1(0), N3, B2: Q = y2^2 - y1^2 = (y2 - y1)(y2 + y1): two distinct lines through the vertex (0:0:1); factorization:
+[1]:
+   _[1]=-1
+   _[2]=y1-y2
+   _[3]=y1+y2
+[2]:
+   1,1,1
+rank of alpha at the vertex (0:0:1):  N1(0): 2   N3: 2   B2: 0
+--- explicit congruences with CCO94's normal forms (L^t * alphaCCO(Y(y)) * L - lambda*alpha == 0)
+N2 ~ orbit Q,  Y = (y3, y1, y2), lambda = 1 : 1    Q_CCO(Y) - Q_N2 == 0 : 1
+T0 ~ orbit Q,  Y = (y2 - y3, y1, y2 + y3), lambda = 1 : 1    Q_CCO(Y) - Q_T0 == 0 : 1
+N3 ~ orbit B1, Y = (y2 - y1, y2 + y1, y3), lambda = 2 : 1    Q_CCO(Y) - Q_N3 == 0 : 1   det L = -4
+B2 ~ orbit B2, Y = (y2 + y1, y2 - y1, *), lambda = 2 : 1    Q_CCO(Y) - Q_B2 == 0 : 1   det L = 4
+[N1(D), D != 0, ~ N1(1) ~ N2 and N1(0) ~ N3: explicit congruences in T5 (t5_equivalences.sing)]
+total time (s): 0
+peak memory (KB, Singular memory(2)): 4196

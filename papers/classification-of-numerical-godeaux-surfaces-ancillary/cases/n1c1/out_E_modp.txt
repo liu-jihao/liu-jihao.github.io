@@ -1,0 +1,15 @@
+equations: 782  substitutions: 291  free unknowns: 103
+Jacobian: 782 x 394  ms: 79
+point 1 : D = 14550 ; all 782 equations vanish at the point: 1
+  rank J = 291  -> tangent dimension 394 - r = 103  (expected f + 94 = 103)
+  rank J_lambda = 277  -> dim of tangent vectors with zero A-part = 94  (expected 94)
+  rank of the projection of the tangent space to the 23 A-coefficients = 9  (expected f = 9)
+point 2 : D = 2436 ; all 782 equations vanish at the point: 1
+  rank J = 291  -> tangent dimension 394 - r = 103  (expected f + 94 = 103)
+  rank J_lambda = 277  -> dim of tangent vectors with zero A-part = 94  (expected 94)
+  rank of the projection of the tangent space to the 23 A-coefficients = 9  (expected f = 9)
+point 3 : D = 0 ; all 782 equations vanish at the point: 1
+  rank J = 291  -> tangent dimension 394 - r = 103  (expected f + 94 = 103)
+  rank J_lambda = 277  -> dim of tangent vectors with zero A-part = 94  (expected 94)
+  rank of the projection of the tangent space to the 23 A-coefficients = 9  (expected f = 9)
+total ms: 240  memory KB: 83885

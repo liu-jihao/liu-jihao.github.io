@@ -1,0 +1,142 @@
+// v4_stab.sing -- equivariant stabilizer algebras of the nets (case nets T4), by a different method:
+// expand g^t alpha(h y) g to first order in eps with g = I + eps X, h = I + eps Y (X, Y block diagonal),
+// extract the eps^1 coefficient, solve the linear system, and compute the fixed directions of the
+// induced action (c1, c2) -> X_I^t (c1, c2) on P(span(v1, v2)).
+< "vlib.sing";
+
+proc stab(string nm, matrix al, int dpar)
+{
+  // basering: (eps, y1, y2, y3, x(1..8), t(1..5), c1, c2 [, D])
+  "==== stabilizer algebra of " + nm + " ====";
+  ideal im = maxideal(1);
+  im[2] = y1 + eps*t(1)*y1;
+  im[3] = y2 + eps*(t(2)*y2 + t(3)*y3);
+  im[4] = y3 + eps*(t(4)*y2 + t(5)*y3);
+  map h = basering, im;
+  matrix ah = h(al);
+  matrix X[4][4] = x(1), x(2), 0, 0,  x(3), x(4), 0, 0,  0, 0, x(5), x(6),  0, 0, x(7), x(8);
+  matrix g = vadd(vid(4), vsc(eps, X));
+  matrix F = transpose(g) * ah * g;
+  int j; int k; int l;
+  ideal eqs; matrix cf; poly F1;
+  for (j = 1; j <= 4; j++) { for (k = j; k <= 4; k++) {
+    F1 = subst(diff(F[j, k], eps), eps, 0);
+    cf = coef(F1, y1*y2*y3);
+    for (l = 1; l <= ncols(cf); l++) { eqs = eqs, cf[2, l]; }
+  } }
+  eqs = simplify(eqs, 2);
+  // coefficient matrix w.r.t. the 13 unknowns
+  int ne = size(eqs);
+  matrix C[ne][13];
+  for (j = 1; j <= ne; j++) {
+    for (k = 1; k <= 8; k++) { C[j, k] = diff(eqs[j], x(k)); }
+    for (k = 1; k <= 5; k++) { C[j, 8+k] = diff(eqs[j], t(k)); }
+  }
+  "number of nonzero equations:"; ne;
+  // check that the system is linear homogeneous in (x, t) with coefficients free of y, x, t (except D)
+  int lin = 1;
+  for (j = 1; j <= ne; j++) {
+    poly chk = eqs[j];
+    for (k = 1; k <= 8; k++) { chk = chk - C[j, k]*x(k); }
+    for (k = 1; k <= 5; k++) { chk = chk - C[j, 8+k]*t(k); }
+    if (chk != 0) { lin = 0; }
+    kill chk;
+  }
+  "equations are linear homogeneous in (x,t):"; lin;
+  module K = syz(module(C));
+  matrix KM = K;
+  "dimension of the solution space (kernel):"; ncols(KM);
+  "kernel basis (columns; order x1..x8, t1..t5):"; print(KM);
+  // trivial direction: X = I, Y = -2 I  (x1 = x4 = x5 = x8 = 1, t1 = t2 = t5 = -2)
+  matrix triv[13][1] = 1, 0, 0, 1, 1, 0, 0, 1, -2, -2, 0, 0, -2;
+  "trivial direction solves the system:"; viszero(C * triv);
+  // fixed directions: f_v(c) = c1 (X_I^t c)_2 - c2 (X_I^t c)_1
+  ideal fx;
+  for (l = 1; l <= ncols(KM); l++) {
+    poly u1 = KM[1, l]*c1 + KM[3, l]*c2;   // (X_I^t c)_1 = x1 c1 + x3 c2
+    poly u2 = KM[2, l]*c1 + KM[4, l]*c2;   // (X_I^t c)_2 = x2 c1 + x4 c2
+    fx = fx, c1*u2 - c2*u1;
+    kill u1; kill u2;
+  }
+  fx = simplify(fx, 2);
+  "binary forms whose common zeros are the fixed directions:"; fx;
+  if (size(fx) > 0) { "their gcd:"; poly gg = fx[1]; for (l = 2; l <= size(fx); l++) { gg = gcd(gg, fx[l]); } gg; factorize(gg); }
+}
+
+ring R4 = 0, (eps, y1, y2, y3, x(1..8), t(1..5), c1, c2), dp;
+matrix I2 = vid(2);
+matrix Y1 = vsc(y1, I2);
+matrix D1[2][2]; matrix D2[2][2];
+// N1(1)
+D1 = y3, y2, y2, y3;  D2 = -y3, y2, y2, -y3;
+matrix aN11 = vblk(D1, Y1, Y1, D2);
+stab("N1(1)", aN11, 0);
+// N2
+D1 = y2, 0, 0, y3;  D2 = y3, 0, 0, y2;
+matrix aN2 = vblk(D1, Y1, Y1, D2);
+stab("N2", aN2, 0);
+// N1(0)
+D1 = 0, y2, y2, y3;  D2 = -y3, y2, y2, 0;
+matrix aN10 = vblk(D1, Y1, Y1, D2);
+stab("N1(0)", aN10, 0);
+// N3
+D1 = y3, y2, y2, 0;  D2 = 0, y2, y2, -y3;
+matrix aN3 = vblk(D1, Y1, Y1, D2);
+stab("N3", aN3, 0);
+// N1(2) as an extra specialization
+D1 = 2*y3, y2, y2, y3;  D2 = -y3, y2, y2, -2*y3;
+matrix aN12 = vblk(D1, Y1, Y1, D2);
+stab("N1(2)", aN12, 0);
+
+// N1(D) with D transcendental (coefficient field Q(D))
+ring R4D = (0, D), (eps, y1, y2, y3, x(1..8), t(1..5), c1, c2), dp;
+matrix I2 = vid(2);
+matrix Y1 = vsc(y1, I2);
+matrix D1[2][2] = D*y3, y2, y2, y3;
+matrix D2[2][2] = -y3, y2, y2, -D*y3;
+matrix aN1D = vblk(D1, Y1, Y1, D2);
+stab("N1(D), D generic", aN1D, 1);
+
+// ---------- explicit group elements (derived independently), exact over Q(a, b, e) ----------
+ring RG = (0, a, b, e), (w, y1, y2, y3, c1, c2), dp;
+matrix I2 = vid(2);
+proc act(matrix al, matrix gI, matrix gII, ideal img)
+{
+  // returns g^t alpha(h y) g, h given by the images of (w, y1, y2, y3, c1, c2)
+  map h = basering, img;
+  matrix ah = h(al);
+  matrix Z[2][2];
+  matrix g = vblk(gI, Z, Z, gII);
+  return(transpose(g) * ah * g);
+}
+matrix D1[2][2]; matrix D2[2][2];
+// N2 torus: g_I = diag(a, b), g_II = diag(b, a), h: y1 -> y1/(ab), y2 -> y2/a^2, y3 -> y3/b^2
+D1 = y2, 0, 0, y3;  D2 = y3, 0, 0, y2;
+matrix aN2 = vblk(D1, vsc(y1, I2), vsc(y1, I2), D2);
+matrix gI[2][2] = a, 0, 0, b;  matrix gII[2][2] = b, 0, 0, a;
+ideal img = w, y1/(a*b), y2/a^2, y3/b^2, c1, c2;
+"N2 torus (a, b) stabilizes the net:"; viszero(vsubm(act(aN2, gI, gII, img), aN2));
+"   column (c1, c2) -> g_I^t (c1, c2) = (a c1, b c2); Q(hy) / Q ="; (y2*y3/(a^2*b^2) - y1^2/(a*b)^2) / (y2*y3 - y1^2);
+// N2 swap: v1 <-> v2, v3 <-> v4, y2 <-> y3
+matrix sw[2][2] = 0, 1, 1, 0;
+ideal img2 = w, y1, y3, y2, c1, c2;
+"N2 swap stabilizes the net:"; viszero(vsubm(act(aN2, sw, sw, img2), aN2));
+// N3 torus and shear
+D1 = y3, y2, y2, 0;  D2 = 0, y2, y2, -y3;
+matrix aN3 = vblk(D1, vsc(y1, I2), vsc(y1, I2), D2);
+// torus: g_I = diag(a, b), g_II = diag(b, a); D1: [[a^2 h3 y3, ab h2 y2],[.., 0]] = D1 => h3 = 1/a^2, h2 = 1/(ab);
+// M: g_I^t (h1 y1) g_II = h1 y1 diag(ab, ab) => h1 = 1/(ab); D2: [[0, ab h2 y2],[.., -a^2 h3 y3]] = D2.
+gI = a, 0, 0, b;  gII = b, 0, 0, a;
+ideal img3 = w, y1/(a*b), y2/(a*b), y3/a^2, c1, c2;
+"N3 torus (a, b) stabilizes the net:"; viszero(vsubm(act(aN3, gI, gII, img3), aN3));
+// shear: y3 -> y3 + e y2, g_I = [[1,0],[-e/2,1]] (columns = new basis vectors), g_II = g_I^{-t}
+gI = 1, 0, -e/2, 1;  gII = 1, e/2, 0, 1;
+ideal img4 = w, y1, y2, y3 + e*y2, c1, c2;
+"N3 shear stabilizes the net:"; viszero(vsubm(act(aN3, gI, gII, img4), aN3));
+"   N3 shear acts on the column by g_I^t (c1, c2) ="; print(transpose(gI) * matrix(ideal(c1, c2), 2, 1));
+"   N3 torus x shear: the column orbit of (1:0) is fixed, every (c1:c2) with c2 != 0 is moved to (0:1) by e = 2 c1/c2.";
+// N1(0) = swap of N3
+D1 = 0, y2, y2, y3;  D2 = -y3, y2, y2, 0;
+matrix aN10 = vblk(D1, vsc(y1, I2), vsc(y1, I2), D2);
+"N1(0) = (swap)^t N3 (swap):"; viszero(vsubm(act(aN3, sw, sw, ideal(w, y1, y2, y3, c1, c2)), aN10));
+quit;

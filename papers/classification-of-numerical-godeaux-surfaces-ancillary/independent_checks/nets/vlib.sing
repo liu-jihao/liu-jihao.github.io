@@ -1,0 +1,103 @@
+// vlib.sing -- helper procedures for the independent verification of case nets.
+LIB "matrix.lib";
+// Written from scratch for verify/nets (not copied from cases/nets/nets_common.sing).
+// All matrices are built entry by entry (no "A + (p+q)*M" constructions).
+
+proc vcof(matrix A, int i, int j)
+"cofactor (-1)^(i+j) * det of A with row i and column j removed"
+{
+  int n = nrows(A); int k; int c;
+  intvec R; intvec C; int ri = 0; int ci = 0;
+  for (k = 1; k <= n; k++) { if (k != i) { ri++; R[ri] = k; } }
+  for (k = 1; k <= n; k++) { if (k != j) { ci++; C[ci] = k; } }
+  matrix S = submat(A, R, C);
+  return(((-1)^(i+j)) * det(S));
+}
+
+proc vadj(matrix A)
+"classical adjugate: adj[i][j] = cofactor(A, j, i)"
+{
+  int n = nrows(A); int i; int j;
+  matrix B[n][n];
+  for (i = 1; i <= n; i++) { for (j = 1; j <= n; j++) { B[i, j] = vcof(A, j, i); } }
+  return(B);
+}
+
+proc vblk(matrix P, matrix Q, matrix R, matrix S)
+"4x4 block matrix [[P,Q],[R,S]] from 2x2 blocks"
+{
+  matrix B[4][4]; int i; int j;
+  for (i = 1; i <= 2; i++) { for (j = 1; j <= 2; j++) {
+    B[i, j] = P[i, j]; B[i, j+2] = Q[i, j]; B[i+2, j] = R[i, j]; B[i+2, j+2] = S[i, j]; } }
+  return(B);
+}
+
+proc vsub(matrix A, int r0, int c0)
+"2x2 block of A starting at (r0+1, c0+1)"
+{
+  matrix B[2][2]; int i; int j;
+  for (i = 1; i <= 2; i++) { for (j = 1; j <= 2; j++) { B[i, j] = A[r0+i, c0+j]; } }
+  return(B);
+}
+
+proc vsc(poly f, matrix A)
+"f*A entrywise"
+{
+  int i; int j; matrix B[nrows(A)][ncols(A)];
+  for (i = 1; i <= nrows(A); i++) { for (j = 1; j <= ncols(A); j++) { B[i, j] = f * A[i, j]; } }
+  return(B);
+}
+
+proc vadd(matrix A, matrix B)
+"A+B entrywise"
+{
+  int i; int j; matrix C[nrows(A)][ncols(A)];
+  for (i = 1; i <= nrows(A); i++) { for (j = 1; j <= ncols(A); j++) { C[i, j] = A[i, j] + B[i, j]; } }
+  return(C);
+}
+
+proc vsubm(matrix A, matrix B)
+"A-B entrywise"
+{
+  int i; int j; matrix C[nrows(A)][ncols(A)];
+  for (i = 1; i <= nrows(A); i++) { for (j = 1; j <= ncols(A); j++) { C[i, j] = A[i, j] - B[i, j]; } }
+  return(C);
+}
+
+proc vid(int n)
+"identity matrix"
+{
+  matrix E[n][n]; int i;
+  for (i = 1; i <= n; i++) { E[i, i] = 1; }
+  return(E);
+}
+
+proc viszero(matrix A)
+"1 iff every entry is 0 (also checks the size, to catch silent reshaping)"
+{
+  int i; int j;
+  for (i = 1; i <= nrows(A); i++) { for (j = 1; j <= ncols(A); j++) { if (A[i, j] != 0) { return(0); } } }
+  return(1);
+}
+
+proc vtr2(matrix A)
+"trace of a 2x2 matrix"
+{
+  return(A[1, 1] + A[2, 2]);
+}
+
+proc vadj2(matrix A)
+"adjugate of a 2x2 matrix"
+{
+  matrix B[2][2];
+  B[1, 1] = A[2, 2]; B[1, 2] = -A[1, 2]; B[2, 1] = -A[2, 1]; B[2, 2] = A[1, 1];
+  return(B);
+}
+
+proc vreducemat(matrix A, ideal G)
+"entrywise normal form w.r.t. a standard basis G"
+{
+  int i; int j; matrix B[nrows(A)][ncols(A)];
+  for (i = 1; i <= nrows(A); i++) { for (j = 1; j <= ncols(A); j++) { B[i, j] = reduce(A[i, j], G); } }
+  return(B);
+}

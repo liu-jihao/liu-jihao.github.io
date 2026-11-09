@@ -1,0 +1,17 @@
+branch (iii): original equations not satisfied identically by the parametrization: 0
+branch (ii): original equations not satisfied identically by the parametrization: 0
+branch (iii) free unknowns: A 9 (D b(2) b(5) b(6) b(8) b(9) b(11) b(12) g(2) ), lambda 94
+point 1: D = -4, b3 = -5, b8 = 5
+  E_ij at the point, nonzero: 0
+  det A at the point: nonzero 1, number of terms 61
+  exact rank of the lambda-system (sum over the 15 pairs): 277; augmented: 277; kernel dimension 94
+point 2: D = -3, b3 = 6, b8 = -6
+  E_ij at the point, nonzero: 0
+  det A at the point: nonzero 1, number of terms 61
+  exact rank of the lambda-system (sum over the 15 pairs): 277; augmented: 277; kernel dimension 94
+point 3: D = 8, b3 = -2, b8 = 2
+  E_ij at the point, nonzero: 0
+  det A at the point: nonzero 1, number of terms 61
+  exact rank of the lambda-system (sum over the 15 pairs): 277; augmented: 277; kernel dimension 94
+trivial syzygy parameters (count from vgen_checks.py): 94
+total time (ms): 263, memory(2) = 25793856

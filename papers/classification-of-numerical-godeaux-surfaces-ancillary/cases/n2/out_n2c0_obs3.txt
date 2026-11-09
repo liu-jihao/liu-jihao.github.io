@@ -1,0 +1,122 @@
+equations loaded: 557
+=== stage 0 : equations of order m: 18 ; nonzero after substitution of earlier pivots: 18 ; unknowns of order m: lambda 123 , A 0
+   eliminated in this stage: 18 ; lambda by order 0..8: 18,0,0,0,0,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 20 ; memory MB: 8
+=== stage 1 : equations of order m: 31 ; nonzero after substitution of earlier pivots: 31 ; unknowns of order m: lambda 98 , A 7
+   eliminated in this stage: 19 ; lambda by order 0..8: 12,6,0,0,0,0,0,0,0 ; A by order 0..6: 0,1,0,0,0,0,0 ; A eliminated: b(8) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 50 ; memory MB: 8
+=== stage 2 : equations of order m: 108 ; nonzero after substitution of earlier pivots: 98 ; unknowns of order m: lambda 66 , A 6
+   eliminated in this stage: 70 ; lambda by order 0..8: 39,23,6,0,0,0,0,0,0 ; A by order 0..6: 0,1,1,0,0,0,0 ; A eliminated: g(6) b(3) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 294 ; memory MB: 8
+=== stage 3 : equations of order m: 51 ; nonzero after substitution of earlier pivots: 43 ; unknowns of order m: lambda 40 , A 3
+   eliminated in this stage: 25 ; lambda by order 0..8: 0,14,8,2,0,0,0,0,0 ; A by order 0..6: 0,0,0,1,0,0,0 ; A eliminated: b(1) 
+   equations remaining: 16 ; of these involving only unknowns of order < m (obstructions): 16 ; ms: 355 ; memory MB: 8
+     remaining eq from E15[w^3*y1^2*y2^2*y3^2] (order 3 ), max unknown order 1 : l(96)*b(4)-l(107)*b(4)
+       factors: [1]:
+   _[1]=1
+   _[2]=l(96)-l(107)
+   _[3]=b(4)
+[2]:
+   1,1,1
+     remaining eq from E15[w^3*y1^2*y2*y3^3] (order 3 ), max unknown order 1 : -l(95)*b(4)+l(106)*b(4)+l(108)*b(4)+b(4)^2+l(96)*b(12)-l(107)*b(12)
+       factors: [1]:
+   _[1]=-1
+   _[2]=l(95)*b(4)-l(106)*b(4)-l(108)*b(4)-b(4)^2-l(96)*b(12)+l(107)*b(12)
+[2]:
+   1,1
+     remaining eq from E15[w^3*y1^2*y3^4] (order 3 ), max unknown order 1 : l(105)*b(4)+l(95)*b(12)-l(106)*b(12)-l(108)*b(12)-2*b(4)*b(12)
+       factors: [1]:
+   _[1]=1
+   _[2]=l(105)*b(4)+l(95)*b(12)-l(106)*b(12)-l(108)*b(12)-2*b(4)*b(12)
+[2]:
+   1,1
+     remaining eq from E15[w^3*y3^6] (order 3 ), max unknown order 1 : l(105)*b(12)-b(12)^2
+       factors: [1]:
+   _[1]=1
+   _[2]=l(105)-b(12)
+   _[3]=b(12)
+[2]:
+   1,1,1
+     remaining eq from E25[w^3*y1^2*y2^2*y3^2] (order 3 ), max unknown order 1 : l(188)*b(4)-l(199)*b(4)-b(4)*b(7)-b(4)*b(9)
+       factors: [1]:
+   _[1]=-1
+   _[2]=b(4)
+   _[3]=-l(188)+l(199)+b(7)+b(9)
+[2]:
+   1,1,1
+     remaining eq from E25[w^3*y1^2*y2*y3^3] (order 3 ), max unknown order 1 : -l(187)*b(4)+l(198)*b(4)+l(200)*b(4)+b(4)*b(10)+l(188)*b(12)-l(199)*b(12)-b(7)*b(12)-b(9)*b(12)
+       factors: [1]:
+   _[1]=1
+   _[2]=-l(187)*b(4)+l(198)*b(4)+l(200)*b(4)+b(4)*b(10)+l(188)*b(12)-l(199)*b(12)-b(7)*b(12)-b(9)*b(12)
+[2]:
+   1,1
+     remaining eq from E25[w^3*y1^2*y3^4] (order 3 ), max unknown order 1 : l(197)*b(4)+l(187)*b(12)-l(198)*b(12)-l(200)*b(12)-b(10)*b(12)
+       factors: [1]:
+   _[1]=-1
+   _[2]=-l(197)*b(4)-l(187)*b(12)+l(198)*b(12)+l(200)*b(12)+b(10)*b(12)
+[2]:
+   1,1
+     remaining eq from E25[w^3*y3^6] (order 3 ), max unknown order 1 : l(197)*b(12)
+       factors: [1]:
+   _[1]=1
+   _[2]=l(197)
+   _[3]=b(12)
+[2]:
+   1,1,1
+     remaining eq from E35[w^3*y1^3*y2*y3^2] (order 3 ), max unknown order 1 : -l(262)*b(4)-l(264)*b(4)+l(272)*b(4)-b(4)^2+l(263)*b(12)
+       factors: [1]:
+   _[1]=1
+   _[2]=-l(262)*b(4)-l(264)*b(4)+l(272)*b(4)-b(4)^2+l(263)*b(12)
+[2]:
+   1,1
+     remaining eq from E35[w^3*y1*y2^3*y3^2] (order 3 ), max unknown order 1 : l(263)*b(4)
+       factors: [1]:
+   _[1]=1
+   _[2]=l(263)
+   _[3]=b(4)
+[2]:
+   1,1,1
+     remaining eq from E35[w^3*y1*y2*y3^4] (order 3 ), max unknown order 1 : l(261)*b(4)-l(271)*b(4)-l(262)*b(12)-l(264)*b(12)+l(272)*b(12)-2*b(4)*b(12)
+       factors: [1]:
+   _[1]=-1
+   _[2]=-l(261)*b(4)+l(271)*b(4)+l(262)*b(12)+l(264)*b(12)-l(272)*b(12)+2*b(4)*b(12)
+[2]:
+   1,1
+     remaining eq from E35[w^3*y1*y3^5] (order 3 ), max unknown order 1 : l(261)*b(12)-l(271)*b(12)-b(12)^2
+       factors: [1]:
+   _[1]=-1
+   _[2]=b(12)
+   _[3]=-l(261)+l(271)+b(12)
+[2]:
+   1,1,1
+     remaining eq from E45[w^3*y1*y2^3*y3^2] (order 3 ), max unknown order 1 : l(315)*b(4)
+       factors: [1]:
+   _[1]=1
+   _[2]=l(315)
+   _[3]=b(4)
+[2]:
+   1,1,1
+     remaining eq from E45[w^3*y1*y2^2*y3^3] (order 3 ), max unknown order 1 : l(314)*b(4)+l(316)*b(4)-l(324)*b(4)+b(4)*b(7)+b(4)*b(9)-l(315)*b(12)
+       factors: [1]:
+   _[1]=1
+   _[2]=l(314)*b(4)+l(316)*b(4)-l(324)*b(4)+b(4)*b(7)+b(4)*b(9)-l(315)*b(12)
+[2]:
+   1,1
+     remaining eq from E45[w^3*y1*y2*y3^4] (order 3 ), max unknown order 1 : l(313)*b(4)-l(323)*b(4)+b(4)*b(10)-l(314)*b(12)-l(316)*b(12)+l(324)*b(12)-b(7)*b(12)-b(9)*b(12)
+       factors: [1]:
+   _[1]=1
+   _[2]=l(313)*b(4)-l(323)*b(4)+b(4)*b(10)-l(314)*b(12)-l(316)*b(12)+l(324)*b(12)-b(7)*b(12)-b(9)*b(12)
+[2]:
+   1,1
+     remaining eq from E45[w^3*y1*y3^5] (order 3 ), max unknown order 1 : l(313)*b(12)-l(323)*b(12)+b(10)*b(12)
+       factors: [1]:
+   _[1]=-1
+   _[2]=-l(313)+l(323)-b(10)
+   _[3]=b(12)
+[2]:
+   1,1,1
+=== end of elimination; eliminated: 132 ; ms: 358
+free lambda-coefficients: 243 ; free A-coefficients: 18 : g(1) g(2) g(3) g(4) g(5) g(7) g(8) g(9) g(10) b(2) b(4) b(5) b(6) b(7) b(9) b(10) b(11) b(12) 
+eliminated A-coefficients: g(6) b(1) b(3) b(8) 
+equations left: 16
+saved n2c0_upto3_state.ssi; memory MB: 8 ; ms: 367

@@ -1,0 +1,3 @@
+(b1) case relations evaluated on my parametrization of Gamma: nonzero = 0  of 14
+my relations (eliminated A-coefficients): 14
+(b2) my relations evaluated on the case parametrization of Gamma: nonzero = 0  of 14

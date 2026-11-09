@@ -1,0 +1,38 @@
+stage  0:  18 eliminated: lambda k=5 ord 0: 18
+stage  1:  19 eliminated: b(8) (ord 1); lambda k=2 ord 0: 10; lambda k=3 ord 0: 2; lambda k=5 ord 1: 6
+stage  2:  34 eliminated: b(10) (ord 1); b(12) (ord 1); b(5) (ord 1); b(7) (ord 1); g(1) (ord 2); lambda k=2 ord 1: 17; lambda k=3 ord 1: 6; lambda k=5 ord 2: 6
+stage  3:  23 eliminated: b(2) (ord 3); lambda k=1 ord 0: 10; lambda k=2 ord 2: 6; lambda k=3 ord 0: 2; lambda k=3 ord 2: 2; lambda k=5 ord 3: 2
+stage  4:  77 eliminated: b(1) (ord 3); g(2) (ord 2); g(3) (ord 2); lambda k=0 ord 0: 39; lambda k=1 ord 1: 17; lambda k=2 ord 3: 7; lambda k=3 ord 1: 6; lambda k=3 ord 3: 5
+stage  5:  27 eliminated: b(3) (ord 5); lambda k=0 ord 1: 14; lambda k=1 ord 2: 6; lambda k=2 ord 4: 2; lambda k=3 ord 2: 2; lambda k=3 ord 4: 2
+stage  6:  44 eliminated: g(7) (ord 4); g(9) (ord 6); lambda k=0 ord 2: 29; lambda k=1 ord 3: 7; lambda k=2 ord 5: 1; lambda k=3 ord 3: 1; lambda k=4 ord 3: 4
+stage  7:  15 eliminated: g(10) (ord 6); lambda k=0 ord 3: 10; lambda k=1 ord 4: 2; lambda k=4 ord 4: 2
+stage  8:  18 eliminated: lambda k=0 ord 4: 17; lambda k=1 ord 5: 1
+stage  9:   6 eliminated: lambda k=0 ord 5: 6
+stage 10:   7 eliminated: lambda k=0 ord 6: 7
+stage 11:   2 eliminated: lambda k=0 ord 7: 2
+stage 12:   1 eliminated: lambda k=0 ord 8: 1
+stage 13:   0 eliminated: 
+stage 14:   0 eliminated: 
+stage 15:   0 eliminated: 
+
+unknowns eliminated at a stage different from their visibility stage (order + delay):
+  b(5)      b                  order 1, visible at 1, eliminated at stage 2
+  b(7)      b                  order 1, visible at 1, eliminated at stage 2
+  b(10)     b                  order 1, visible at 1, eliminated at stage 2
+  b(12)     b                  order 1, visible at 1, eliminated at stage 2
+  lam(100)  lambda_{15,3}      order 0, visible at 1, eliminated at stage 3
+  lam(192)  lambda_{25,3}      order 0, visible at 1, eliminated at stage 3
+  lam(16)   lambda_{11,3}      order 1, visible at 2, eliminated at stage 4
+  lam(36)   lambda_{12,3}      order 1, visible at 2, eliminated at stage 4
+  lam(128)  lambda_{22,3}      order 1, visible at 2, eliminated at stage 4
+  lam(220)  lambda_{33,3}      order 1, visible at 2, eliminated at stage 4
+  lam(240)  lambda_{34,3}      order 1, visible at 2, eliminated at stage 4
+  lam(292)  lambda_{44,3}      order 1, visible at 2, eliminated at stage 4
+  b(1)      b                  order 3, visible at 3, eliminated at stage 4
+  g(2)      g                  order 2, visible at 2, eliminated at stage 4
+  g(3)      g                  order 2, visible at 2, eliminated at stage 4
+  lam(270)  lambda_{35,3}      order 2, visible at 3, eliminated at stage 5
+  lam(322)  lambda_{45,3}      order 2, visible at 3, eliminated at stage 5
+  lam(363)  lambda_{55,3}      order 3, visible at 4, eliminated at stage 6
+  g(7)      g                  order 4, visible at 4, eliminated at stage 6
+  g(10)     g                  order 6, visible at 6, eliminated at stage 7

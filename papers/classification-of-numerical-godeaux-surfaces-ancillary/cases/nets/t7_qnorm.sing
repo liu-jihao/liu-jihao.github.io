@@ -1,0 +1,117 @@
+// T7 (case nets): normalization of the q's by the group U = A^8, for N1(D), N2, N3 with c symbolic,
+// on the full matrix A (general G: g(1..10); all 20 q-coefficients f(1..20); alpha' = c*E_23).
+// U: v_j -> v_j - w*u_j (j = 2,3,4), v5 -> v5 - y0*u5, i.e. the congruence by P = I + sum_j w*u_j*E_{j0} + y0*u5*E_{50},
+// u2 = p0*y0 + p1*y1, u3 = r2*y2 + r3*y3, u4 = s2*y2 + s3*y3, u5 = t2*y2 + t3*y3.
+< "nets_common.sing";
+int tt = timer;
+ring R = 0, (w,y1,y2,y3, D, c, g(1..10), f(1..20), p0,p1,r2,r3,s2,s3,t2,t3, P0,P1,R2,R3,S2,S3,T2,T3), dp;
+poly y0 = w^2;
+poly G = g(1)*y3^3 + g(2)*y1^2*y3 + g(3)*y2*y3^2 + g(4)*y1^2*y2 + g(5)*y2^2*y3 + g(6)*y2^3
+       + g(7)*y0*y1*y3 + g(8)*y0*y1*y2 + g(9)*y0^2*y3 + g(10)*y0^2*y2;
+list qq;
+qq[1] = f(1)*y0*y2 + f(2)*y0*y3 + f(3)*y1*y2 + f(4)*y1*y3;
+qq[2] = f(5)*y0*y2 + f(6)*y0*y3 + f(7)*y1*y2 + f(8)*y1*y3;
+qq[3] = f(9)*y0^2 + f(10)*y0*y1 + f(11)*y1^2 + f(12)*y2^2 + f(13)*y2*y3 + f(14)*y3^2;
+qq[4] = f(15)*y0^2 + f(16)*y0*y1 + f(17)*y1^2 + f(18)*y2^2 + f(19)*y2*y3 + f(20)*y3^2;
+list uu;
+uu[2] = p0*y0 + p1*y1;  uu[3] = r2*y2 + r3*y3;  uu[4] = s2*y2 + s3*y3;
+poly u5 = t2*y2 + t3*y3;
+ideal UP = p0,p1,r2,r3,s2,s3,t2,t3;
+
+proc Umat(poly a2, poly a3, poly a4, poly a5)     // P = I + w*a2*E_20 + w*a3*E_30 + w*a4*E_40 + y0*a5*E_50
+{
+  matrix P = idm(6);
+  P[3,1] = w*a2; P[4,1] = w*a3; P[5,1] = w*a4; P[6,1] = w^2*a5;
+  return(P);
+}
+intvec dl = 1, -1, -1, 1, 1, -1;
+proc Pcheck(matrix P)
+{
+  map sg = basering, -w, y1, -y2, -y3, D, c, g(1..10), f(1..20), p0,p1,r2,r3,s2,s3,t2,t3, P0,P1,R2,R3,S2,S3,T2,T3;
+  matrix SP = sg(P);
+  int u, v; int ok = 1;
+  for (u = 1; u <= 6; u++) { for (v = 1; v <= 6; v++) { if (SP[u,v] - dl[u]*dl[v]*P[u,v] != 0) { ok = 0; } } }
+  return(ok);
+}
+
+"group law: P(u)*P(u') - P(u+u') == 0 :",
+  iszero(Umat(uu[2], uu[3], uu[4], u5)*Umat(P0*y0+P1*y1, R2*y2+R3*y3, S2*y2+S3*y3, T2*y2+T3*y3)
+         - Umat(uu[2]+P0*y0+P1*y1, uu[3]+R2*y2+R3*y3, uu[4]+S2*y2+S3*y3, u5+T2*y2+T3*y3));
+"P(u) commutes with sigma (sigma(P_jk) = d_j d_k P_jk) :", Pcheck(Umat(uu[2], uu[3], uu[4], u5));
+
+proc runU(matrix al, poly Q, list killed, string nm)
+{
+  "================= " + nm + ":  Q = " + string(Q) + ",  alpha' = c*E_23";
+  matrix A[6][6];
+  int u, v, j, l, k;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { A[u+1, v+1] = al[u, v]; } }
+  A[3,4] = A[3,4] + c*w^2; A[4,3] = A[4,3] + c*w^2;
+  A[1,1] = w^2*G;
+  for (k = 1; k <= 4; k++) { A[1,k+1] = w*qq[k]; A[k+1,1] = w*qq[k]; }
+  A[1,6] = Q; A[6,1] = Q; A[2,6] = w; A[6,2] = w;
+  matrix P = Umat(uu[2], uu[3], uu[4], u5);
+  matrix A2 = transpose(P)*A*P;
+  int ok = 1;
+  for (u = 2; u <= 6; u++) { for (v = 2; v <= 6; v++) { if (A2[u,v] - A[u,v] != 0) { ok = 0; } } }
+  "rows/cols v1..v5 unchanged (alpha, alpha', column 5) :", ok;
+  "A_05 unchanged (= Q) :", A2[1,6] - Q == 0;
+  // q-changes
+  list dq; ok = 1;
+  for (k = 1; k <= 4; k++) {
+    poly pred = 0;
+    for (j = 2; j <= 4; j++) { pred = pred + uu[j]*A[j+1, k+1]; }
+    if (k == 1) { pred = pred + y0*u5; }
+    if (A2[1,k+1] - w*(qq[k] + pred) != 0) { ok = 0; }
+    dq[k] = pred;
+    kill pred;
+  }
+  "delta q_k = sum_{j=2..4} u_j*a_jk + delta_{k1}*y0*u5 (k = 1..4) :", ok;
+  poly dG = 0;
+  for (j = 2; j <= 4; j++) { dG = dG + 2*uu[j]*qq[j]; for (l = 2; l <= 4; l++) { dG = dG + uu[j]*uu[l]*A[j+1,l+1]; } }
+  dG = dG + 2*u5*Q;
+  "delta G = 2*sum_j u_j*q_j + sum_{j,l in {2,3,4}} u_j*u_l*a_jl + 2*u5*Q :", A2[1,1] - w^2*(G + dG) == 0;
+  poly dGlit = 0;
+  for (j = 2; j <= 4; j++) { dGlit = dGlit + 2*uu[j]*qq[j] + uu[j]^2*A[j+1,j+1]; }
+  dGlit = dGlit + 2*u5*Q;
+  "literal reading 'delta G = sum_j (2*u_j*q_j + u_j^2*a_jj) + 2*u5*Q' (no cross terms) :", A2[1,1] - w^2*(G + dGlit) == 0;
+  "   difference (true minus literal) = 2*sum_{j<l} u_j*u_l*a_jl =", dG - dGlit;
+  // 8x8 matrix: rows = killed monomials, columns = (p0,p1,r2,r3,s2,s3,t2,t3)
+  matrix MK[8][8];
+  string lab;
+  for (k = 1; k <= 8; k++) {
+    poly cf = cfm(dq[killed[k][1]], killed[k][2], w*y1*y2*y3);
+    for (l = 1; l <= 8; l++) { MK[k,l] = diff(cf, UP[l]); }
+    lab = "   q" + string(killed[k][1]) + "[" + string(killed[k][2]) + "]: coefficient change = " + string(cf);
+    lab;
+    kill cf;
+  }
+  "8x8 matrix (columns p0,p1,r2,r3,s2,s3,t2,t3):"; print(MK);
+  "determinant:", det(MK);
+  // kept monomials (complement), for the record
+  list allm = list(list(1,y0*y2),list(1,y0*y3),list(1,y1*y2),list(1,y1*y3),
+                   list(2,y0*y2),list(2,y0*y3),list(2,y1*y2),list(2,y1*y3),
+                   list(3,y0^2),list(3,y0*y1),list(3,y1^2),list(3,y2^2),list(3,y2*y3),list(3,y3^2),
+                   list(4,y0^2),list(4,y0*y1),list(4,y1^2),list(4,y2^2),list(4,y2*y3),list(4,y3^2));
+  string kept = "kept monomials:"; int isk;
+  for (u = 1; u <= 20; u++) {
+    isk = 0;
+    for (k = 1; k <= 8; k++) { if (killed[k][1] == allm[u][1] && killed[k][2] == allm[u][2]) { isk = 1; } }
+    if (isk == 0) { kept = kept + " q" + string(allm[u][1]) + "[" + string(allm[u][2]) + "]"; }
+  }
+  kept;
+}
+
+matrix I2[2][2] = 1,0,0,1;
+matrix X1[2][2] = D*y3, y2, y2, y3;   matrix X2[2][2] = -y3, y2, y2, -D*y3;
+list K1 = list(1,y0*y2), list(1,y0*y3), list(3,y2^2), list(3,y2*y3), list(3,y3^2), list(4,y0*y1), list(4,y1^2), list(4,y2^2);
+runU(blk4(X1, y1*I2, y1*I2, X2), y2^2 - D*y3^2 - y1^2, K1, "N1(D)");
+matrix C1[2][2] = y2, 0, 0, y3;       matrix C2[2][2] = y3, 0, 0, y2;
+list K2 = list(1,y0*y2), list(1,y0*y3), list(1,y1*y2), list(1,y1*y3), list(4,y0*y1), list(4,y1^2), list(4,y2^2), list(4,y2*y3);
+runU(blk4(C1, y1*I2, y1*I2, C2), y2*y3 - y1^2, K2, "N2");
+matrix E1[2][2] = y3, y2, y2, 0;      matrix E2[2][2] = 0, y2, y2, -y3;
+list K3 = list(1,y0*y2), list(1,y0*y3), list(1,y1*y2), list(1,y1*y3), list(2,y1*y2), list(2,y1*y3), list(4,y0*y1), list(4,y1^2);
+runU(blk4(E1, y1*I2, y1*I2, E2), y2^2 - y1^2, K3, "N3");
+
+"total time (s):", timer - tt;
+"peak memory (KB, Singular memory(2)):", memory(2) div 1024;
+quit;

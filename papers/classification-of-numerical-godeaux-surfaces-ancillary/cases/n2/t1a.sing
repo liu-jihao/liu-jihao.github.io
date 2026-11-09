@@ -1,0 +1,5 @@
+ring R = 0, (l(1..3), g(1..2), w, y1), dp;
+poly f = 3*l(2) + l(1)*g(1) + 5 + g(2);
+list LL = list(f, l(1)^2), intvec(1,2);
+link L = "ssi:w t1.ssi"; write(L, LL); close(L);
+quit;

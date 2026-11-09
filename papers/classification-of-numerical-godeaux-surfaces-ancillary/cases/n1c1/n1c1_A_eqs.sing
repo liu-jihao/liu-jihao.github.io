@@ -1,0 +1,78 @@
+// n1c1, script A: rank-condition equations, counts per w-order, delay and linearity checks
+system("--ticks-per-sec", 1000); int T0 = rtimer;
+< "common_n1c1.sing";
+int i, j, k, u, m, n, ok;
+intvec WW = 0:394; WW = WW, 1, 0, 0, 0;          // weight 1 on w only
+intvec WORD = ORD, 0, 0, 0, 0;                     // w-orders of the unknowns
+matrix B0[1][6]; for (k=1;k<=6;k++){ B0[1,k] = cofac(A,k,1); }   // B0[1,k] = B_{0,k-1}
+"cofactors of row 0 built, ms:", rtimer-T0;
+// ---- delay checks (case_common.md section 2) ----
+matrix al[4][4]; for (i=1;i<=4;i++){ for (j=1;j<=4;j++){ al[i,j] = subst(A[i+1,j+1], w, 0); } }
+poly da = det(al); "det(alpha) - Q^2 =", da - Q^2;
+proc cof4(matrix M, int rr, int cl) { matrix S3[3][3]; int a, bb, p, q; a = 0; for (p=1; p<=4; p++) { if (p != rr) { a++; bb = 0; for (q=1; q<=4; q++) { if (q != cl) { bb++; S3[a,bb] = M[p,q]; } } } } return((-1)^(rr+cl) * det(S3)); }
+"B_05 mod w + Q^3 =", subst(B0[1,6], w, 0) + Q^3, "   (0 means B_05 = -Q^3 mod w)";
+for (k=1;k<=4;k++){ poly t0 = subst(B0[1,k+1], w, 0); poly t1 = subst(diff(B0[1,k+1], w), w, 0); "k =", k, ": B_0k mod w =", t0, " ; [w^1]B_0k - Q*adj(alpha)_{k1} =", t1 - Q*cof4(al,1,k); kill t0, t1; }
+matrix aa[4][4]; for (i=1;i<=4;i++){ for (j=1;j<=4;j++){ aa[i,j] = A[i+1,j+1]; } }
+"B_00 + y0*adj(a)_{11} =", B0[1,1] + y0*cof4(aa,1,1), "   (a = full 4x4 block incl. y0-terms)";
+// ---- equations E_ij = B_ij - sum_k lambda_{ij,k} B_0k, 1 <= i <= j <= 5 ----
+ideal EQA; intvec EOA; list ETG; poly pol; matrix CM; n = 0;
+intvec nzij;
+pol = cofac(A,2,2) - ((lam_1_1_0)*B0[1,1] + (lam_1_1_1)*B0[1,2] + (lam_1_1_2)*B0[1,3] + (lam_1_1_3)*B0[1,4] + (lam_1_1_4)*B0[1,5] + (lam_1_1_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[1] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(1,1,string(CM[1,u])); }
+pol = cofac(A,3,2) - ((lam_1_2_0)*B0[1,1] + (lam_1_2_1)*B0[1,2] + (lam_1_2_2)*B0[1,3] + (lam_1_2_3)*B0[1,4] + (lam_1_2_4)*B0[1,5] + (lam_1_2_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[2] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(1,2,string(CM[1,u])); }
+pol = cofac(A,4,2) - ((lam_1_3_0)*B0[1,1] + (lam_1_3_1)*B0[1,2] + (lam_1_3_2)*B0[1,3] + (lam_1_3_3)*B0[1,4] + (lam_1_3_4)*B0[1,5] + (lam_1_3_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[3] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(1,3,string(CM[1,u])); }
+pol = cofac(A,5,2) - ((lam_1_4_0)*B0[1,1] + (lam_1_4_1)*B0[1,2] + (lam_1_4_2)*B0[1,3] + (lam_1_4_3)*B0[1,4] + (lam_1_4_4)*B0[1,5] + (lam_1_4_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[4] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(1,4,string(CM[1,u])); }
+pol = cofac(A,6,2) - ((lam_1_5_0)*B0[1,1] + (lam_1_5_1)*B0[1,2] + (lam_1_5_2)*B0[1,3] + (lam_1_5_3)*B0[1,4] + (lam_1_5_4)*B0[1,5] + (lam_1_5_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[5] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(1,5,string(CM[1,u])); }
+pol = cofac(A,3,3) - ((lam_2_2_0)*B0[1,1] + (lam_2_2_1)*B0[1,2] + (lam_2_2_2)*B0[1,3] + (lam_2_2_3)*B0[1,4] + (lam_2_2_4)*B0[1,5] + (lam_2_2_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[6] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(2,2,string(CM[1,u])); }
+pol = cofac(A,4,3) - ((lam_2_3_0)*B0[1,1] + (lam_2_3_1)*B0[1,2] + (lam_2_3_2)*B0[1,3] + (lam_2_3_3)*B0[1,4] + (lam_2_3_4)*B0[1,5] + (lam_2_3_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[7] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(2,3,string(CM[1,u])); }
+pol = cofac(A,5,3) - ((lam_2_4_0)*B0[1,1] + (lam_2_4_1)*B0[1,2] + (lam_2_4_2)*B0[1,3] + (lam_2_4_3)*B0[1,4] + (lam_2_4_4)*B0[1,5] + (lam_2_4_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[8] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(2,4,string(CM[1,u])); }
+pol = cofac(A,6,3) - ((lam_2_5_0)*B0[1,1] + (lam_2_5_1)*B0[1,2] + (lam_2_5_2)*B0[1,3] + (lam_2_5_3)*B0[1,4] + (lam_2_5_4)*B0[1,5] + (lam_2_5_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[9] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(2,5,string(CM[1,u])); }
+pol = cofac(A,4,4) - ((lam_3_3_0)*B0[1,1] + (lam_3_3_1)*B0[1,2] + (lam_3_3_2)*B0[1,3] + (lam_3_3_3)*B0[1,4] + (lam_3_3_4)*B0[1,5] + (lam_3_3_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[10] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(3,3,string(CM[1,u])); }
+pol = cofac(A,5,4) - ((lam_3_4_0)*B0[1,1] + (lam_3_4_1)*B0[1,2] + (lam_3_4_2)*B0[1,3] + (lam_3_4_3)*B0[1,4] + (lam_3_4_4)*B0[1,5] + (lam_3_4_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[11] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(3,4,string(CM[1,u])); }
+pol = cofac(A,6,4) - ((lam_3_5_0)*B0[1,1] + (lam_3_5_1)*B0[1,2] + (lam_3_5_2)*B0[1,3] + (lam_3_5_3)*B0[1,4] + (lam_3_5_4)*B0[1,5] + (lam_3_5_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[12] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(3,5,string(CM[1,u])); }
+pol = cofac(A,5,5) - ((lam_4_4_0)*B0[1,1] + (lam_4_4_1)*B0[1,2] + (lam_4_4_2)*B0[1,3] + (lam_4_4_3)*B0[1,4] + (lam_4_4_4)*B0[1,5] + (lam_4_4_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[13] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(4,4,string(CM[1,u])); }
+pol = cofac(A,6,5) - ((lam_4_5_0)*B0[1,1] + (lam_4_5_1)*B0[1,2] + (lam_4_5_2)*B0[1,3] + (lam_4_5_3)*B0[1,4] + (lam_4_5_4)*B0[1,5] + (lam_4_5_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[14] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(4,5,string(CM[1,u])); }
+pol = cofac(A,6,6) - ((lam_5_5_0)*B0[1,1] + (lam_5_5_1)*B0[1,2] + (lam_5_5_2)*B0[1,3] + (lam_5_5_3)*B0[1,4] + (lam_5_5_4)*B0[1,5] + (lam_5_5_5)*B0[1,6]);
+CM = coef(pol, w*y1*y2*y3); nzij[15] = ncols(CM); for (u=1;u<=ncols(CM);u++){ n++; EQA[n] = CM[2,u]; EOA[n] = deg(CM[1,u], WW); ETG[n] = list(5,5,string(CM[1,u])); }
+"equations built, ms:", rtimer-T0;
+intvec SLOTIJ = 60,60,60,60,60,60,60,60,60,60,60,60,60,60,80;
+intvec SLOTO = 204,72,156,56,120,42,84,30,58,20,34,12,18,6,6,2;
+"nonzero coefficient monomials per (i,j) vs slots:"; for (u=1;u<=15;u++){ "  pair", u, ":", nzij[u], "of", SLOTIJ[u]; }
+// sanity: every extracted coefficient has the weight/sign of a slot (checked by counting: nonzero <= slots)
+"total nonzero coefficient equations:", n;
+// per w-order counts and dedup up to scalar
+ideal EQ; intvec EO; int ne = 0; intvec NZO = 0:16; intvec DSO = 0:16;
+for (m=0;m<=15;m++){ ideal Im; int cm = 0; for (u=1;u<=n;u++){ if (EOA[u]==m) { cm++; Im[cm] = EQA[u]; } } NZO[m+1] = cm;
+  ideal Id = simplify(Im, 2+4+8);
+  int dd = 0; for (u=1;u<=ncols(Id);u++){ if (Id[u] != 0) { dd++; ne++; EQ[ne] = Id[u]; EO[ne] = m; } } DSO[m+1] = dd; kill Im, Id, cm, dd; }
+"w-order | slots | nonzero coefficient equations | distinct up to scalar";
+for (m=0;m<=15;m++){ "  ", m, "|", SLOTO[m+1], "|", NZO[m+1], "|", DSO[m+1]; }
+int s1 = 0; int s2 = 0; int s3 = 0; for (m=1;m<=16;m++){ s1 = s1 + SLOTO[m]; s2 = s2 + NZO[m]; s3 = s3 + DSO[m]; } "totals:", s1, s2, s3;
+ideal EQg = simplify(EQ, 2+4+8); "distinct up to scalar across all orders:", ncols(EQg);
+// structure checks: an order-m equation has total unknown-order <= m; for m >= 1 it is linear in the
+// order-m unknowns, whose coefficients involve only order-0 unknowns
+int bad1 = 0; int bad2 = 0; int bad3 = 0;
+for (u=1;u<=ne;u++){ if (deg(EQ[u], WORD) > EO[u]) { bad1++; } }
+intvec Wp = 0:398; for (k=1;k<=394;k++){ if (ORD[k]>=1) { Wp[k] = 1; } }
+for (m=1;m<=15;m++){ intvec Wm = 0:398; ideal zm; for (k=1;k<=398;k++){ zm[k] = var(k); } for (k=1;k<=394;k++){ if (ORD[k]==m) { Wm[k] = 1; zm[k] = 0; } } map ph = R0, zm;
+  for (u=1;u<=ne;u++){ if (EO[u]==m) { poly f0 = EQ[u]; poly f1 = f0 - ph(f0); if (f1 != 0) { if (deg(f1, Wm) > 1) { bad2++; } if (deg(f1, Wp) > 1) { bad3++; } } kill f0, f1; } } kill Wm, zm, ph; }
+"equations with a term of total unknown-order > m:", bad1;
+"equations (m>=1) nonlinear in order-m unknowns:", bad2, " ; with order-m coefficients involving unknowns of order >= 1:", bad3;
+// write the distinct equations (with their w-orders) for the elimination script
+write(":w eqs_n1c1.txt", "// distinct coefficient equations of case n1c1 (written by n1c1_A_eqs.sing)");
+for (u=1;u<=ne;u++){ write(":a eqs_n1c1.txt", "EQ[" + string(u) + "]=" + string(EQ[u]) + "; EO[" + string(u) + "]=" + string(EO[u]) + ";"); }
+"wrote eqs_n1c1.txt with", ne, "equations; ms:", rtimer-T0, " memory KB:", memory(2) div 1024;
+quit;

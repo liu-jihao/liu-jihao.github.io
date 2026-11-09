@@ -1,0 +1,54 @@
+equations loaded: 630
+=== stage 0 : equations of order m: 18 ; nonzero after substitution of earlier pivots: 18 ; unknowns of order m: lambda 123 , A 0
+   eliminated in this stage: 18 ; lambda by order 0..8: 18,0,0,0,0,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 28 ; memory MB: 12
+=== stage 1 : equations of order m: 31 ; nonzero after substitution of earlier pivots: 31 ; unknowns of order m: lambda 98 , A 7
+   eliminated in this stage: 19 ; lambda by order 0..8: 12,6,0,0,0,0,0,0,0 ; A by order 0..6: 0,1,0,0,0,0,0 ; A eliminated: b(8) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 59 ; memory MB: 12
+=== stage 2 : equations of order m: 108 ; nonzero after substitution of earlier pivots: 98 ; unknowns of order m: lambda 66 , A 6
+   eliminated in this stage: 70 ; lambda by order 0..8: 39,23,6,0,0,0,0,0,0 ; A by order 0..6: 0,1,1,0,0,0,0 ; A eliminated: g(6) b(3) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 311 ; memory MB: 12
+=== stage 3 : equations of order m: 51 ; nonzero after substitution of earlier pivots: 48 ; unknowns of order m: lambda 40 , A 3
+   eliminated in this stage: 37 ; lambda by order 0..8: 12,14,8,2,0,0,0,0,0 ; A by order 0..6: 0,0,0,1,0,0,0 ; A eliminated: b(1) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 408 ; memory MB: 12
+=== stage 4 : equations of order m: 110 ; nonzero after substitution of earlier pivots: 97 ; unknowns of order m: lambda 26 , A 2
+   eliminated in this stage: 68 ; lambda by order 0..8: 0,23,29,12,0,0,0,0,0 ; A by order 0..6: 0,0,3,1,0,0,0 ; A eliminated: b(6) g(5) g(1) g(2) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 693 ; memory MB: 12
+=== stage 5 : equations of order m: 42 ; nonzero after substitution of earlier pivots: 34 ; unknowns of order m: lambda 8 , A 2
+   eliminated in this stage: 23 ; lambda by order 0..8: 0,0,8,10,4,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,1,0 ; A eliminated: b(5) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 759 ; memory MB: 12
+=== stage 6 : equations of order m: 84 ; nonzero after substitution of earlier pivots: 63 ; unknowns of order m: lambda 7 , A 2
+   eliminated in this stage: 34 ; lambda by order 0..8: 0,0,0,12,17,1,0,0,0 ; A by order 0..6: 0,0,0,0,2,1,1 ; A eliminated: g(10) b(11) g(8) g(7) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 887 ; memory MB: 12
+=== stage 7 : equations of order m: 30 ; nonzero after substitution of earlier pivots: 22 ; unknowns of order m: lambda 2 , A 0
+   eliminated in this stage: 10 ; lambda by order 0..8: 0,0,0,0,4,6,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 915 ; memory MB: 12
+=== stage 8 : equations of order m: 58 ; nonzero after substitution of earlier pivots: 19 ; unknowns of order m: lambda 1 , A 0
+   eliminated in this stage: 9 ; lambda by order 0..8: 0,0,0,0,0,1,7,0,0 ; A by order 0..6: 0,0,0,0,0,0,1 ; A eliminated: g(9) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 942 ; memory MB: 12
+=== stage 9 : equations of order m: 20 ; nonzero after substitution of earlier pivots: 4 ; unknowns of order m: lambda 0 , A 0
+   eliminated in this stage: 2 ; lambda by order 0..8: 0,0,0,0,0,0,0,2,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 950 ; memory MB: 12
+=== stage 10 : equations of order m: 34 ; nonzero after substitution of earlier pivots: 2 ; unknowns of order m: lambda 0 , A 0
+   eliminated in this stage: 1 ; lambda by order 0..8: 0,0,0,0,0,0,0,0,1 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 955 ; memory MB: 12
+=== stage 11 : equations of order m: 12 ; nonzero after substitution of earlier pivots: 0 ; unknowns of order m: lambda 0 , A 0
+   eliminated in this stage: 0 ; lambda by order 0..8: 0,0,0,0,0,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 962 ; memory MB: 12
+=== stage 12 : equations of order m: 18 ; nonzero after substitution of earlier pivots: 0 ; unknowns of order m: lambda 0 , A 0
+   eliminated in this stage: 0 ; lambda by order 0..8: 0,0,0,0,0,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 970 ; memory MB: 12
+=== stage 13 : equations of order m: 6 ; nonzero after substitution of earlier pivots: 0 ; unknowns of order m: lambda 0 , A 0
+   eliminated in this stage: 0 ; lambda by order 0..8: 0,0,0,0,0,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 975 ; memory MB: 12
+=== stage 14 : equations of order m: 6 ; nonzero after substitution of earlier pivots: 0 ; unknowns of order m: lambda 0 , A 0
+   eliminated in this stage: 0 ; lambda by order 0..8: 0,0,0,0,0,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 980 ; memory MB: 12
+=== stage 15 : equations of order m: 2 ; nonzero after substitution of earlier pivots: 0 ; unknowns of order m: lambda 0 , A 0
+   eliminated in this stage: 0 ; lambda by order 0..8: 0,0,0,0,0,0,0,0,0 ; A by order 0..6: 0,0,0,0,0,0,0 ; A eliminated: 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 984 ; memory MB: 12
+=== end of elimination; eliminated: 291 ; ms: 984
+free lambda-coefficients: 94 ; free A-coefficients: 8 : g(3) g(4) b(2) b(4) b(7) b(9) b(10) b(12) 
+eliminated A-coefficients: g(1) g(2) g(5) g(6) g(7) g(8) g(9) g(10) b(1) b(3) b(5) b(6) b(8) b(11) 
+equations left: 0
+saved n2c1_stage_state.ssi; memory MB: 12 ; ms: 1004

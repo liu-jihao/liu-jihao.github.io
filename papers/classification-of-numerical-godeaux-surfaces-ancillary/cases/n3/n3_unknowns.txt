@@ -1,0 +1,396 @@
+# case n3: unknowns (index in ring S = (lam(1..371), g(1..10), b(1..12)); name; type; monomial; w-order)
+# lambda_{ij,k}: coefficient of the monomial in lambda_{ij,k} (weight c_i+c_j-c_k, sign d_i d_j d_k)
+# g: coefficient of y0*monomial in A_00 = y0*G; b: coefficient of the monomial in q_i (entry A_0i = w*q_i)
+  1  lam(1)    lambda_{11,0}       y1*y3^2         0
+  2  lam(2)    lambda_{11,0}       y1*y2*y3        0
+  3  lam(3)    lambda_{11,0}       y1*y2^2         0
+  4  lam(4)    lambda_{11,0}       y1^3            0
+  5  lam(5)    lambda_{11,0}       w^2*y3^2        2
+  6  lam(6)    lambda_{11,0}       w^2*y2*y3       2
+  7  lam(7)    lambda_{11,0}       w^2*y2^2        2
+  8  lam(8)    lambda_{11,0}       w^2*y1^2        2
+  9  lam(9)    lambda_{11,0}       w^4*y1          4
+ 10  lam(10)   lambda_{11,0}       w^6             6
+ 11  lam(11)   lambda_{11,1}       w*y1            1
+ 12  lam(12)   lambda_{11,1}       w^3             3
+ 13  lam(13)   lambda_{11,2}       w*y1            1
+ 14  lam(14)   lambda_{11,2}       w^3             3
+ 15  lam(15)   lambda_{11,3}       w*y3            1
+ 16  lam(16)   lambda_{11,3}       w*y2            1
+ 17  lam(17)   lambda_{11,4}       w*y3            1
+ 18  lam(18)   lambda_{11,4}       w*y2            1
+ 19  lam(19)   lambda_{11,5}       y3              0
+ 20  lam(20)   lambda_{11,5}       y2              0
+ 21  lam(21)   lambda_{12,0}       y1*y3^2         0
+ 22  lam(22)   lambda_{12,0}       y1*y2*y3        0
+ 23  lam(23)   lambda_{12,0}       y1*y2^2         0
+ 24  lam(24)   lambda_{12,0}       y1^3            0
+ 25  lam(25)   lambda_{12,0}       w^2*y3^2        2
+ 26  lam(26)   lambda_{12,0}       w^2*y2*y3       2
+ 27  lam(27)   lambda_{12,0}       w^2*y2^2        2
+ 28  lam(28)   lambda_{12,0}       w^2*y1^2        2
+ 29  lam(29)   lambda_{12,0}       w^4*y1          4
+ 30  lam(30)   lambda_{12,0}       w^6             6
+ 31  lam(31)   lambda_{12,1}       w*y1            1
+ 32  lam(32)   lambda_{12,1}       w^3             3
+ 33  lam(33)   lambda_{12,2}       w*y1            1
+ 34  lam(34)   lambda_{12,2}       w^3             3
+ 35  lam(35)   lambda_{12,3}       w*y3            1
+ 36  lam(36)   lambda_{12,3}       w*y2            1
+ 37  lam(37)   lambda_{12,4}       w*y3            1
+ 38  lam(38)   lambda_{12,4}       w*y2            1
+ 39  lam(39)   lambda_{12,5}       y3              0
+ 40  lam(40)   lambda_{12,5}       y2              0
+ 41  lam(41)   lambda_{13,0}       y3^3            0
+ 42  lam(42)   lambda_{13,0}       y2*y3^2         0
+ 43  lam(43)   lambda_{13,0}       y2^2*y3         0
+ 44  lam(44)   lambda_{13,0}       y2^3            0
+ 45  lam(45)   lambda_{13,0}       y1^2*y3         0
+ 46  lam(46)   lambda_{13,0}       y1^2*y2         0
+ 47  lam(47)   lambda_{13,0}       w^2*y1*y3       2
+ 48  lam(48)   lambda_{13,0}       w^2*y1*y2       2
+ 49  lam(49)   lambda_{13,0}       w^4*y3          4
+ 50  lam(50)   lambda_{13,0}       w^4*y2          4
+ 51  lam(51)   lambda_{13,1}       w*y3            1
+ 52  lam(52)   lambda_{13,1}       w*y2            1
+ 53  lam(53)   lambda_{13,2}       w*y3            1
+ 54  lam(54)   lambda_{13,2}       w*y2            1
+ 55  lam(55)   lambda_{13,3}       w*y1            1
+ 56  lam(56)   lambda_{13,3}       w^3             3
+ 57  lam(57)   lambda_{13,4}       w*y1            1
+ 58  lam(58)   lambda_{13,4}       w^3             3
+ 59  lam(59)   lambda_{13,5}       y1              0
+ 60  lam(60)   lambda_{13,5}       w^2             2
+ 61  lam(61)   lambda_{14,0}       y3^3            0
+ 62  lam(62)   lambda_{14,0}       y2*y3^2         0
+ 63  lam(63)   lambda_{14,0}       y2^2*y3         0
+ 64  lam(64)   lambda_{14,0}       y2^3            0
+ 65  lam(65)   lambda_{14,0}       y1^2*y3         0
+ 66  lam(66)   lambda_{14,0}       y1^2*y2         0
+ 67  lam(67)   lambda_{14,0}       w^2*y1*y3       2
+ 68  lam(68)   lambda_{14,0}       w^2*y1*y2       2
+ 69  lam(69)   lambda_{14,0}       w^4*y3          4
+ 70  lam(70)   lambda_{14,0}       w^4*y2          4
+ 71  lam(71)   lambda_{14,1}       w*y3            1
+ 72  lam(72)   lambda_{14,1}       w*y2            1
+ 73  lam(73)   lambda_{14,2}       w*y3            1
+ 74  lam(74)   lambda_{14,2}       w*y2            1
+ 75  lam(75)   lambda_{14,3}       w*y1            1
+ 76  lam(76)   lambda_{14,3}       w^3             3
+ 77  lam(77)   lambda_{14,4}       w*y1            1
+ 78  lam(78)   lambda_{14,4}       w^3             3
+ 79  lam(79)   lambda_{14,5}       y1              0
+ 80  lam(80)   lambda_{14,5}       w^2             2
+ 81  lam(81)   lambda_{15,0}       w*y3^3          1
+ 82  lam(82)   lambda_{15,0}       w*y2*y3^2       1
+ 83  lam(83)   lambda_{15,0}       w*y2^2*y3       1
+ 84  lam(84)   lambda_{15,0}       w*y2^3          1
+ 85  lam(85)   lambda_{15,0}       w*y1^2*y3       1
+ 86  lam(86)   lambda_{15,0}       w*y1^2*y2       1
+ 87  lam(87)   lambda_{15,0}       w^3*y1*y3       3
+ 88  lam(88)   lambda_{15,0}       w^3*y1*y2       3
+ 89  lam(89)   lambda_{15,0}       w^5*y3          5
+ 90  lam(90)   lambda_{15,0}       w^5*y2          5
+ 91  lam(91)   lambda_{15,1}       y1*y3           0
+ 92  lam(92)   lambda_{15,1}       y1*y2           0
+ 93  lam(93)   lambda_{15,1}       w^2*y3          2
+ 94  lam(94)   lambda_{15,1}       w^2*y2          2
+ 95  lam(95)   lambda_{15,2}       y1*y3           0
+ 96  lam(96)   lambda_{15,2}       y1*y2           0
+ 97  lam(97)   lambda_{15,2}       w^2*y3          2
+ 98  lam(98)   lambda_{15,2}       w^2*y2          2
+ 99  lam(99)   lambda_{15,3}       y3^2            0
+100  lam(100)  lambda_{15,3}       y2*y3           0
+101  lam(101)  lambda_{15,3}       y2^2            0
+102  lam(102)  lambda_{15,3}       y1^2            0
+103  lam(103)  lambda_{15,3}       w^2*y1          2
+104  lam(104)  lambda_{15,3}       w^4             4
+105  lam(105)  lambda_{15,4}       y3^2            0
+106  lam(106)  lambda_{15,4}       y2*y3           0
+107  lam(107)  lambda_{15,4}       y2^2            0
+108  lam(108)  lambda_{15,4}       y1^2            0
+109  lam(109)  lambda_{15,4}       w^2*y1          2
+110  lam(110)  lambda_{15,4}       w^4             4
+111  lam(111)  lambda_{15,5}       w*y1            1
+112  lam(112)  lambda_{15,5}       w^3             3
+113  lam(113)  lambda_{22,0}       y1*y3^2         0
+114  lam(114)  lambda_{22,0}       y1*y2*y3        0
+115  lam(115)  lambda_{22,0}       y1*y2^2         0
+116  lam(116)  lambda_{22,0}       y1^3            0
+117  lam(117)  lambda_{22,0}       w^2*y3^2        2
+118  lam(118)  lambda_{22,0}       w^2*y2*y3       2
+119  lam(119)  lambda_{22,0}       w^2*y2^2        2
+120  lam(120)  lambda_{22,0}       w^2*y1^2        2
+121  lam(121)  lambda_{22,0}       w^4*y1          4
+122  lam(122)  lambda_{22,0}       w^6             6
+123  lam(123)  lambda_{22,1}       w*y1            1
+124  lam(124)  lambda_{22,1}       w^3             3
+125  lam(125)  lambda_{22,2}       w*y1            1
+126  lam(126)  lambda_{22,2}       w^3             3
+127  lam(127)  lambda_{22,3}       w*y3            1
+128  lam(128)  lambda_{22,3}       w*y2            1
+129  lam(129)  lambda_{22,4}       w*y3            1
+130  lam(130)  lambda_{22,4}       w*y2            1
+131  lam(131)  lambda_{22,5}       y3              0
+132  lam(132)  lambda_{22,5}       y2              0
+133  lam(133)  lambda_{23,0}       y3^3            0
+134  lam(134)  lambda_{23,0}       y2*y3^2         0
+135  lam(135)  lambda_{23,0}       y2^2*y3         0
+136  lam(136)  lambda_{23,0}       y2^3            0
+137  lam(137)  lambda_{23,0}       y1^2*y3         0
+138  lam(138)  lambda_{23,0}       y1^2*y2         0
+139  lam(139)  lambda_{23,0}       w^2*y1*y3       2
+140  lam(140)  lambda_{23,0}       w^2*y1*y2       2
+141  lam(141)  lambda_{23,0}       w^4*y3          4
+142  lam(142)  lambda_{23,0}       w^4*y2          4
+143  lam(143)  lambda_{23,1}       w*y3            1
+144  lam(144)  lambda_{23,1}       w*y2            1
+145  lam(145)  lambda_{23,2}       w*y3            1
+146  lam(146)  lambda_{23,2}       w*y2            1
+147  lam(147)  lambda_{23,3}       w*y1            1
+148  lam(148)  lambda_{23,3}       w^3             3
+149  lam(149)  lambda_{23,4}       w*y1            1
+150  lam(150)  lambda_{23,4}       w^3             3
+151  lam(151)  lambda_{23,5}       y1              0
+152  lam(152)  lambda_{23,5}       w^2             2
+153  lam(153)  lambda_{24,0}       y3^3            0
+154  lam(154)  lambda_{24,0}       y2*y3^2         0
+155  lam(155)  lambda_{24,0}       y2^2*y3         0
+156  lam(156)  lambda_{24,0}       y2^3            0
+157  lam(157)  lambda_{24,0}       y1^2*y3         0
+158  lam(158)  lambda_{24,0}       y1^2*y2         0
+159  lam(159)  lambda_{24,0}       w^2*y1*y3       2
+160  lam(160)  lambda_{24,0}       w^2*y1*y2       2
+161  lam(161)  lambda_{24,0}       w^4*y3          4
+162  lam(162)  lambda_{24,0}       w^4*y2          4
+163  lam(163)  lambda_{24,1}       w*y3            1
+164  lam(164)  lambda_{24,1}       w*y2            1
+165  lam(165)  lambda_{24,2}       w*y3            1
+166  lam(166)  lambda_{24,2}       w*y2            1
+167  lam(167)  lambda_{24,3}       w*y1            1
+168  lam(168)  lambda_{24,3}       w^3             3
+169  lam(169)  lambda_{24,4}       w*y1            1
+170  lam(170)  lambda_{24,4}       w^3             3
+171  lam(171)  lambda_{24,5}       y1              0
+172  lam(172)  lambda_{24,5}       w^2             2
+173  lam(173)  lambda_{25,0}       w*y3^3          1
+174  lam(174)  lambda_{25,0}       w*y2*y3^2       1
+175  lam(175)  lambda_{25,0}       w*y2^2*y3       1
+176  lam(176)  lambda_{25,0}       w*y2^3          1
+177  lam(177)  lambda_{25,0}       w*y1^2*y3       1
+178  lam(178)  lambda_{25,0}       w*y1^2*y2       1
+179  lam(179)  lambda_{25,0}       w^3*y1*y3       3
+180  lam(180)  lambda_{25,0}       w^3*y1*y2       3
+181  lam(181)  lambda_{25,0}       w^5*y3          5
+182  lam(182)  lambda_{25,0}       w^5*y2          5
+183  lam(183)  lambda_{25,1}       y1*y3           0
+184  lam(184)  lambda_{25,1}       y1*y2           0
+185  lam(185)  lambda_{25,1}       w^2*y3          2
+186  lam(186)  lambda_{25,1}       w^2*y2          2
+187  lam(187)  lambda_{25,2}       y1*y3           0
+188  lam(188)  lambda_{25,2}       y1*y2           0
+189  lam(189)  lambda_{25,2}       w^2*y3          2
+190  lam(190)  lambda_{25,2}       w^2*y2          2
+191  lam(191)  lambda_{25,3}       y3^2            0
+192  lam(192)  lambda_{25,3}       y2*y3           0
+193  lam(193)  lambda_{25,3}       y2^2            0
+194  lam(194)  lambda_{25,3}       y1^2            0
+195  lam(195)  lambda_{25,3}       w^2*y1          2
+196  lam(196)  lambda_{25,3}       w^4             4
+197  lam(197)  lambda_{25,4}       y3^2            0
+198  lam(198)  lambda_{25,4}       y2*y3           0
+199  lam(199)  lambda_{25,4}       y2^2            0
+200  lam(200)  lambda_{25,4}       y1^2            0
+201  lam(201)  lambda_{25,4}       w^2*y1          2
+202  lam(202)  lambda_{25,4}       w^4             4
+203  lam(203)  lambda_{25,5}       w*y1            1
+204  lam(204)  lambda_{25,5}       w^3             3
+205  lam(205)  lambda_{33,0}       y1*y3^2         0
+206  lam(206)  lambda_{33,0}       y1*y2*y3        0
+207  lam(207)  lambda_{33,0}       y1*y2^2         0
+208  lam(208)  lambda_{33,0}       y1^3            0
+209  lam(209)  lambda_{33,0}       w^2*y3^2        2
+210  lam(210)  lambda_{33,0}       w^2*y2*y3       2
+211  lam(211)  lambda_{33,0}       w^2*y2^2        2
+212  lam(212)  lambda_{33,0}       w^2*y1^2        2
+213  lam(213)  lambda_{33,0}       w^4*y1          4
+214  lam(214)  lambda_{33,0}       w^6             6
+215  lam(215)  lambda_{33,1}       w*y1            1
+216  lam(216)  lambda_{33,1}       w^3             3
+217  lam(217)  lambda_{33,2}       w*y1            1
+218  lam(218)  lambda_{33,2}       w^3             3
+219  lam(219)  lambda_{33,3}       w*y3            1
+220  lam(220)  lambda_{33,3}       w*y2            1
+221  lam(221)  lambda_{33,4}       w*y3            1
+222  lam(222)  lambda_{33,4}       w*y2            1
+223  lam(223)  lambda_{33,5}       y3              0
+224  lam(224)  lambda_{33,5}       y2              0
+225  lam(225)  lambda_{34,0}       y1*y3^2         0
+226  lam(226)  lambda_{34,0}       y1*y2*y3        0
+227  lam(227)  lambda_{34,0}       y1*y2^2         0
+228  lam(228)  lambda_{34,0}       y1^3            0
+229  lam(229)  lambda_{34,0}       w^2*y3^2        2
+230  lam(230)  lambda_{34,0}       w^2*y2*y3       2
+231  lam(231)  lambda_{34,0}       w^2*y2^2        2
+232  lam(232)  lambda_{34,0}       w^2*y1^2        2
+233  lam(233)  lambda_{34,0}       w^4*y1          4
+234  lam(234)  lambda_{34,0}       w^6             6
+235  lam(235)  lambda_{34,1}       w*y1            1
+236  lam(236)  lambda_{34,1}       w^3             3
+237  lam(237)  lambda_{34,2}       w*y1            1
+238  lam(238)  lambda_{34,2}       w^3             3
+239  lam(239)  lambda_{34,3}       w*y3            1
+240  lam(240)  lambda_{34,3}       w*y2            1
+241  lam(241)  lambda_{34,4}       w*y3            1
+242  lam(242)  lambda_{34,4}       w*y2            1
+243  lam(243)  lambda_{34,5}       y3              0
+244  lam(244)  lambda_{34,5}       y2              0
+245  lam(245)  lambda_{35,0}       w*y1*y3^2       1
+246  lam(246)  lambda_{35,0}       w*y1*y2*y3      1
+247  lam(247)  lambda_{35,0}       w*y1*y2^2       1
+248  lam(248)  lambda_{35,0}       w*y1^3          1
+249  lam(249)  lambda_{35,0}       w^3*y3^2        3
+250  lam(250)  lambda_{35,0}       w^3*y2*y3       3
+251  lam(251)  lambda_{35,0}       w^3*y2^2        3
+252  lam(252)  lambda_{35,0}       w^3*y1^2        3
+253  lam(253)  lambda_{35,0}       w^5*y1          5
+254  lam(254)  lambda_{35,0}       w^7             7
+255  lam(255)  lambda_{35,1}       y3^2            0
+256  lam(256)  lambda_{35,1}       y2*y3           0
+257  lam(257)  lambda_{35,1}       y2^2            0
+258  lam(258)  lambda_{35,1}       y1^2            0
+259  lam(259)  lambda_{35,1}       w^2*y1          2
+260  lam(260)  lambda_{35,1}       w^4             4
+261  lam(261)  lambda_{35,2}       y3^2            0
+262  lam(262)  lambda_{35,2}       y2*y3           0
+263  lam(263)  lambda_{35,2}       y2^2            0
+264  lam(264)  lambda_{35,2}       y1^2            0
+265  lam(265)  lambda_{35,2}       w^2*y1          2
+266  lam(266)  lambda_{35,2}       w^4             4
+267  lam(267)  lambda_{35,3}       y1*y3           0
+268  lam(268)  lambda_{35,3}       y1*y2           0
+269  lam(269)  lambda_{35,3}       w^2*y3          2
+270  lam(270)  lambda_{35,3}       w^2*y2          2
+271  lam(271)  lambda_{35,4}       y1*y3           0
+272  lam(272)  lambda_{35,4}       y1*y2           0
+273  lam(273)  lambda_{35,4}       w^2*y3          2
+274  lam(274)  lambda_{35,4}       w^2*y2          2
+275  lam(275)  lambda_{35,5}       w*y3            1
+276  lam(276)  lambda_{35,5}       w*y2            1
+277  lam(277)  lambda_{44,0}       y1*y3^2         0
+278  lam(278)  lambda_{44,0}       y1*y2*y3        0
+279  lam(279)  lambda_{44,0}       y1*y2^2         0
+280  lam(280)  lambda_{44,0}       y1^3            0
+281  lam(281)  lambda_{44,0}       w^2*y3^2        2
+282  lam(282)  lambda_{44,0}       w^2*y2*y3       2
+283  lam(283)  lambda_{44,0}       w^2*y2^2        2
+284  lam(284)  lambda_{44,0}       w^2*y1^2        2
+285  lam(285)  lambda_{44,0}       w^4*y1          4
+286  lam(286)  lambda_{44,0}       w^6             6
+287  lam(287)  lambda_{44,1}       w*y1            1
+288  lam(288)  lambda_{44,1}       w^3             3
+289  lam(289)  lambda_{44,2}       w*y1            1
+290  lam(290)  lambda_{44,2}       w^3             3
+291  lam(291)  lambda_{44,3}       w*y3            1
+292  lam(292)  lambda_{44,3}       w*y2            1
+293  lam(293)  lambda_{44,4}       w*y3            1
+294  lam(294)  lambda_{44,4}       w*y2            1
+295  lam(295)  lambda_{44,5}       y3              0
+296  lam(296)  lambda_{44,5}       y2              0
+297  lam(297)  lambda_{45,0}       w*y1*y3^2       1
+298  lam(298)  lambda_{45,0}       w*y1*y2*y3      1
+299  lam(299)  lambda_{45,0}       w*y1*y2^2       1
+300  lam(300)  lambda_{45,0}       w*y1^3          1
+301  lam(301)  lambda_{45,0}       w^3*y3^2        3
+302  lam(302)  lambda_{45,0}       w^3*y2*y3       3
+303  lam(303)  lambda_{45,0}       w^3*y2^2        3
+304  lam(304)  lambda_{45,0}       w^3*y1^2        3
+305  lam(305)  lambda_{45,0}       w^5*y1          5
+306  lam(306)  lambda_{45,0}       w^7             7
+307  lam(307)  lambda_{45,1}       y3^2            0
+308  lam(308)  lambda_{45,1}       y2*y3           0
+309  lam(309)  lambda_{45,1}       y2^2            0
+310  lam(310)  lambda_{45,1}       y1^2            0
+311  lam(311)  lambda_{45,1}       w^2*y1          2
+312  lam(312)  lambda_{45,1}       w^4             4
+313  lam(313)  lambda_{45,2}       y3^2            0
+314  lam(314)  lambda_{45,2}       y2*y3           0
+315  lam(315)  lambda_{45,2}       y2^2            0
+316  lam(316)  lambda_{45,2}       y1^2            0
+317  lam(317)  lambda_{45,2}       w^2*y1          2
+318  lam(318)  lambda_{45,2}       w^4             4
+319  lam(319)  lambda_{45,3}       y1*y3           0
+320  lam(320)  lambda_{45,3}       y1*y2           0
+321  lam(321)  lambda_{45,3}       w^2*y3          2
+322  lam(322)  lambda_{45,3}       w^2*y2          2
+323  lam(323)  lambda_{45,4}       y1*y3           0
+324  lam(324)  lambda_{45,4}       y1*y2           0
+325  lam(325)  lambda_{45,4}       w^2*y3          2
+326  lam(326)  lambda_{45,4}       w^2*y2          2
+327  lam(327)  lambda_{45,5}       w*y3            1
+328  lam(328)  lambda_{45,5}       w*y2            1
+329  lam(329)  lambda_{55,0}       y3^4            0
+330  lam(330)  lambda_{55,0}       y2*y3^3         0
+331  lam(331)  lambda_{55,0}       y2^2*y3^2       0
+332  lam(332)  lambda_{55,0}       y2^3*y3         0
+333  lam(333)  lambda_{55,0}       y2^4            0
+334  lam(334)  lambda_{55,0}       y1^2*y3^2       0
+335  lam(335)  lambda_{55,0}       y1^2*y2*y3      0
+336  lam(336)  lambda_{55,0}       y1^2*y2^2       0
+337  lam(337)  lambda_{55,0}       y1^4            0
+338  lam(338)  lambda_{55,0}       w^2*y1*y3^2     2
+339  lam(339)  lambda_{55,0}       w^2*y1*y2*y3    2
+340  lam(340)  lambda_{55,0}       w^2*y1*y2^2     2
+341  lam(341)  lambda_{55,0}       w^2*y1^3        2
+342  lam(342)  lambda_{55,0}       w^4*y3^2        4
+343  lam(343)  lambda_{55,0}       w^4*y2*y3       4
+344  lam(344)  lambda_{55,0}       w^4*y2^2        4
+345  lam(345)  lambda_{55,0}       w^4*y1^2        4
+346  lam(346)  lambda_{55,0}       w^6*y1          6
+347  lam(347)  lambda_{55,0}       w^8             8
+348  lam(348)  lambda_{55,1}       w*y3^2          1
+349  lam(349)  lambda_{55,1}       w*y2*y3         1
+350  lam(350)  lambda_{55,1}       w*y2^2          1
+351  lam(351)  lambda_{55,1}       w*y1^2          1
+352  lam(352)  lambda_{55,1}       w^3*y1          3
+353  lam(353)  lambda_{55,1}       w^5             5
+354  lam(354)  lambda_{55,2}       w*y3^2          1
+355  lam(355)  lambda_{55,2}       w*y2*y3         1
+356  lam(356)  lambda_{55,2}       w*y2^2          1
+357  lam(357)  lambda_{55,2}       w*y1^2          1
+358  lam(358)  lambda_{55,2}       w^3*y1          3
+359  lam(359)  lambda_{55,2}       w^5             5
+360  lam(360)  lambda_{55,3}       w*y1*y3         1
+361  lam(361)  lambda_{55,3}       w*y1*y2         1
+362  lam(362)  lambda_{55,3}       w^3*y3          3
+363  lam(363)  lambda_{55,3}       w^3*y2          3
+364  lam(364)  lambda_{55,4}       w*y1*y3         1
+365  lam(365)  lambda_{55,4}       w*y1*y2         1
+366  lam(366)  lambda_{55,4}       w^3*y3          3
+367  lam(367)  lambda_{55,4}       w^3*y2          3
+368  lam(368)  lambda_{55,5}       y1*y3           0
+369  lam(369)  lambda_{55,5}       y1*y2           0
+370  lam(370)  lambda_{55,5}       w^2*y3          2
+371  lam(371)  lambda_{55,5}       w^2*y2          2
+372  g(1)      g (A_00 = y0*G)     y0*(y3^3)       2
+373  g(2)      g (A_00 = y0*G)     y0*(y1^2*y3)    2
+374  g(3)      g (A_00 = y0*G)     y0*(y2*y3^2)    2
+375  g(4)      g (A_00 = y0*G)     y0*(y1^2*y2)    2
+376  g(5)      g (A_00 = y0*G)     y0*(y2^2*y3)    2
+377  g(6)      g (A_00 = y0*G)     y0*(y2^3)       2
+378  g(7)      g (A_00 = y0*G)     y0*(y0*y1*y3)   4
+379  g(8)      g (A_00 = y0*G)     y0*(y0*y1*y2)   4
+380  g(9)      g (A_00 = y0*G)     y0*(y0^2*y3)    6
+381  g(10)     g (A_00 = y0*G)     y0*(y0^2*y2)    6
+382  b(1)      b (q2)              y0*y2           3
+383  b(2)      b (q2)              y0*y3           3
+384  b(3)      b (q3)              y0^2            5
+385  b(4)      b (q3)              y0*y1           3
+386  b(5)      b (q3)              y1^2            1
+387  b(6)      b (q3)              y2^2            1
+388  b(7)      b (q3)              y2*y3           1
+389  b(8)      b (q3)              y3^2            1
+390  b(9)      b (q4)              y0^2            5
+391  b(10)     b (q4)              y2^2            1
+392  b(11)     b (q4)              y2*y3           1
+393  b(12)     b (q4)              y3^2            1

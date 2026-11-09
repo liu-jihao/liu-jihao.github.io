@@ -1,0 +1,20 @@
+build time (ms): 27
+A: symmetry and sign/weight violations: 0
+rows v1..v5 of A times (B_00..B_05): nonzero results: 0
+row v0 times column v1 of adj(A) (should be 0): 1
+size(det A) = 170, det A even in w: 1
+det(alpha) - Q^2 = 0
+B_05 at w = 0, plus Q^3: 0
+B_01: w^0-part = 0; w^1-part - Q*adj(alpha)_{k1} = 0; adj(alpha)_{k1} = y3^3*D+y1^2*y3-y2^2*y3
+B_02: w^0-part = 0; w^1-part - Q*adj(alpha)_{k1} = 0; adj(alpha)_{k1} = -y2*y3^2*D-y1^2*y2+y2^3
+B_03: w^0-part = 0; w^1-part - Q*adj(alpha)_{k1} = 0; adj(alpha)_{k1} = y1*y3^2*D+y1^3-y1*y2^2
+B_04: w^0-part = 0; w^1-part - Q*adj(alpha)_{k1} = 0; adj(alpha)_{k1} = 0
+B_00 + y0*adj(a)_11 = 0
+weight/sign violations among the monomials of the E_ij: 0
+nonzero coefficient equations: 870
+nonzero by w-order 0..15: 180,72,156,56,120,42,84,30,58,20,32,11,9,0,0,0
+distinct up to scalar within each order, by order: 72,66,156,56,120,42,84,30,58,20,32,11,6,0,0,0  total 
+distinct up to scalar globally: 752
+number of ring variables occurring in the equations: 394 (w, y, t must not occur)
+w, y or t occurring: 0
+total time (ms): 56, memory(2) = 25288064

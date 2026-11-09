@@ -1,0 +1,116 @@
+=== Q (5.1, p.109)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 0
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== type A (2.10, p.90)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 0
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== 2.12 (p.91)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 0
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== B1 (5.1, p.109)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 0
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== B1 (3.12, p.95)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 0
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== B2 (3.28 / 5.1)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 1
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 2
+=== C1 (4.10 / 5.1)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== C2 (4.10 / 5.1)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== C3 (4.10 / 5.1)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 1
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 2
+=== C4 (4.10 / 5.1)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 2
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 1
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 2
+=== C5 (4.10 / 5.1)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 2
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 2
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 1
+=== 7.9 first net (p.126)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== 7.9 second net (p.126)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+adjugate entries beta_jk (j<=k) of the first 7.9 net:
+beta 1 2 = y1^3
+beta 2 2 = -y1^2*y2
+beta 3 3 = -y1^2*y3
+beta 3 4 = y1^3
+adjugate entries beta_jk (j<=k) of the second 7.9 net:
+beta 1 2 = y1^3
+beta 2 3 = -y1^2*y2
+beta 3 3 = -y1^2*y3
+beta 3 4 = y1^3
+=== Case I web: det - (ad-bc)^2 == 0 : 1
+    (ad-bc) divides 3x3 minors : 1
+=== Case II web: det - b^4 == 0 : 1
+    b^2 divides 3x3 minors : 1
+    b divides 2x2 minors? (rank<=1 on b=0 would need this) : 0
+=== 6.1 matrix (p.116)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 0
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 3
+=== 6.2 matrix (p.118)
+det(M) - Q^2 == 0 : 1
+Q divides all 3x3 minors : 1
+affine dim of V(2x2 minors, Q) [0 = rank exactly 2 on all of Q] : 1
+affine dim of V(all entries) [1 = a point of P^2 where alpha=0] : 1
+rank of coefficient matrix [3 = net, 2 = pencil, 1 = constant] : 2
+=== 6.4 family (p.120): det(M) mod y2 - (y3*(y3+a*y1))^2 == 0 : 1
+    det(M) mod y2 = y1^2*y3^2*a^2+2*y1*y3^3*a+y3^4
+    2x2 minor det = -y2^2*b^2+2*y1*y2*b+2*y2^2*b-y1^2+2*y1*y2-y2^2
+=== 7.8 adjugate of A'' (alpha = normal form Q), indices 0..5 as in CCO94:
+B''_00 = 0
+B''_05 = y2^6-3*y1*y2^4*y3+3*y1^2*y2^2*y3^2-y1^3*y3^3    ( -Q^3 = y2^6-3*y1*y2^4*y3+3*y1^2*y2^2*y3^2-y1^3*y3^3 )
+B''_55 = y2^8-4*y1*y2^6*y3+6*y1^2*y2^4*y3^2-4*y1^3*y2^2*y3^3+y1^4*y3^4    ( Q^4 = y2^8-4*y1*y2^6*y3+6*y1^2*y2^4*y3^2-4*y1^3*y2^2*y3^3+y1^4*y3^4 )
+B''_01 = 0  B''_15 = 0
+B''_11 + Q^2*beta_11 == 0 : 1
+B''_12 + Q^2*beta_12 == 0 : 1
+det(A'') + Q^4*det(alpha)/Q^2 == 0 : 1

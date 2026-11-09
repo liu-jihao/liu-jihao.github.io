@@ -1,0 +1,69 @@
+// v1_identities.sing -- independent check of the identities behind PLAN Lemma A4.4 (case nets T1).
+// Variable order differs from the case (parameters first, y's last, reversed).
+< "vlib.sing";
+ring R1 = 0, (e(1..3), b(1..6), a(1..6), m(1..4), y3, y2, y1), dp;
+matrix D1[2][2] = a(1)*y2 + b(1)*y3, a(2)*y2 + b(2)*y3, a(2)*y2 + b(2)*y3, a(3)*y2 + b(3)*y3;
+matrix D2[2][2] = a(4)*y2 + b(4)*y3, a(5)*y2 + b(5)*y3, a(5)*y2 + b(5)*y3, a(6)*y2 + b(6)*y3;
+poly Q2 = e(1)*y2^2 + e(2)*y2*y3 + e(3)*y3^2;
+poly Q = Q2 - y1^2;
+matrix I2 = vid(2);
+matrix Y1 = vsc(y1, I2);
+matrix al = vblk(D1, Y1, Y1, D2);
+"size check of alpha (4,4):"; nrows(al); ncols(al);
+poly da = det(al);
+"number of terms of det alpha:"; size(da);
+matrix P12 = D1 * D2;
+matrix P21 = D2 * D1;
+matrix N  = vsubm(P12, vsc(y1^2, I2));
+matrix Nt = vsubm(P21, vsc(y1^2, I2));
+"(1) det alpha = det(D1 D2 - y1^2 I):"; da - det(N) == 0;
+"(1') det alpha = det(D2 D1 - y1^2 I):"; da - det(Nt) == 0;
+"(1'') det N = det D1 det D2 - y1^2 tr(D1 D2) + y1^4:"; det(N) - (det(D1)*det(D2) - y1^2*vtr2(P12) + y1^4) == 0;
+// adjugate by cofactors, compared with the block formula derived by the Schur complement:
+// adj alpha = [[D2 adj N, -y1 adj N'], [-y1 adj N, adj(N) D1]], N' = D2 D1 - y1^2 I
+matrix B = vadj(al);
+"alpha * adj(alpha) = det(alpha) I (convention check):"; viszero(vsubm(al * B, vsc(da, vid(4))));
+matrix TL = D2 * vadj2(N);
+matrix TR = vsc(-y1, vadj2(Nt));
+matrix BL = vsc(-y1, vadj2(N));
+matrix BR = vadj2(N) * D1;
+matrix Bf = vblk(TL, TR, BL, BR);
+"(2) adj alpha equals the block formula (all 16 entries):"; viszero(vsubm(B, Bf));
+"(2') top-left block = D2((tr(D1D2) - y1^2) I - D1 D2):";
+viszero(vsubm(vsub(B,0,0), D2 * vsubm(vsc(vtr2(P12) - y1^2, I2), P12)));
+// (3) certificate for the converse: E = D1 D2 - Q2 I, E' = D2 D1 - Q2 I
+matrix E  = vsubm(P12, vsc(Q2, I2));
+matrix Ep = vsubm(P21, vsc(Q2, I2));
+"(3a) det alpha - Q^2 = det E + Q tr E:"; da - Q^2 - (det(E) + Q*vtr2(E)) == 0;
+matrix Bq = vblk(vsc(Q, D2), vsc(-Q*y1, I2), vsc(-Q*y1, I2), vsc(Q, D1));
+matrix Cert = vblk(D2 * vadj2(E), vsc(-y1, vadj2(Ep)), vsc(-y1, vadj2(E)), vadj2(E) * D1);
+"(3b) adj alpha - Q[[D2,-y1 I],[-y1 I,D1]] = [[D2 adjE, -y1 adjE'],[-y1 adjE, adjE D1]]:"; viszero(vsubm(vsubm(B, Bq), Cert));
+// the right-hand sides are linear in the entries of E, E' (adj of 2x2 is a signed permutation of entries);
+// E' = E^t because D1, D2 are symmetric:
+"(3c) E' = transpose(E):"; viszero(vsubm(Ep, transpose(E)));
+// (3d) a second, independent check of the converse: reduce modulo a standard basis of the
+// ideal J of all coefficients (in y2,y3) of the entries of E, in the polynomial ring of the parameters.
+ideal J;
+int i; int j; int k;
+matrix cf;
+for (i = 1; i <= 2; i++) { for (j = 1; j <= 2; j++) {
+  cf = coef(E[i, j], y2*y3);
+  for (k = 1; k <= ncols(cf); k++) { J = J, cf[2, k]; }
+} }
+J = simplify(J, 2);
+"number of coefficient equations in J:"; size(J);
+option(redSB);
+ideal GJ = std(J);
+"standard basis of J computed, size:"; size(GJ);
+"(3d) det alpha - Q^2 reduces to 0 mod J:"; reduce(da - Q^2, GJ) == 0;
+"(3e) adj alpha - Q[[D2,-y1 I],[-y1 I,D1]] reduces to 0 mod J:"; viszero(vreducemat(vsubm(B, Bq), GJ));
+// (4) forward-direction identity: TL = D2 (Q2 I - D1 D2) + (tr(D1 D2) - 2 Q2) D2 + Q D2
+"(4) TL = D2(Q2 I - D1D2) + (tr(D1D2) - 2Q2) D2 + Q D2:";
+viszero(vsubm(vsub(B,0,0), vadd(vadd(D2 * vsubm(vsc(Q2, I2), P12), vsc(vtr2(P12) - 2*Q2, D2)), vsc(Q, D2))));
+// (5) M symbolic: the y1^4 coefficient of det alpha_M is det(M)^2
+matrix Mm[2][2] = m(1), m(2), m(3), m(4);
+matrix alM = vblk(D1, vsc(y1, Mm), vsc(y1, transpose(Mm)), D2);
+poly dM = det(alM);
+poly dM0 = subst(subst(dM, y2, 0), y3, 0);
+"(5) det alpha_M at y2 = y3 = 0 equals det(M)^2 y1^4:"; dM0 - det(Mm)^2*y1^4 == 0;
+quit;

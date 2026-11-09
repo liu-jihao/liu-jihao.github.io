@@ -1,0 +1,11 @@
+(i) w-adic order and leading coefficient of the row-0 cofactors B_0k (k = 0..5):
+  B_00: w-order 4, coefficient of w^4 = -2*y1*y2
+  B_01: w-order 3, coefficient of w^3 = -2*y1^3*y2+2*y1*y2^3
+  B_02: w-order 1, coefficient of w^1 = y1^4*y2-2*y1^2*y2^3+y2^5
+  B_03: w-order 1, coefficient of w^1 = -y1^5+2*y1^3*y2^2-y1*y2^4
+  B_04: w-order 3, coefficient of w^3 = y1^4-y2^4
+  B_05: w-order 0, coefficient of w^0 = y1^6-3*y1^4*y2^2+3*y1^2*y2^4-y2^6
+(ii) nonzero coefficient equations: 710 ; not homogeneous for the T1-weights: 0
+(ii) eliminated g, b whose expression is not homogeneous of the weight of the unknown (zero expressions skipped): 0
+(ii) eliminated lambda whose expression is not homogeneous of the weight of the unknown (zero expressions skipped): 0
+== done; ms: 185 ; memory (KB): 28672 ; max: 28791

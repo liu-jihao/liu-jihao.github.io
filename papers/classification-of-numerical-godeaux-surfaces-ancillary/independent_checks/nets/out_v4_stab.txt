@@ -1,0 +1,215 @@
+==== stabilizer algebra of N1(1) ====
+number of nonzero equations:
+16
+equations are linear homogeneous in (x,t):
+1
+dimension of the solution space (kernel):
+2
+kernel basis (columns; order x1..x8, t1..t5):
+0, -1,
+-1,0, 
+-1,0, 
+0, -1,
+0, -1,
+1, 0, 
+1, 0, 
+0, -1,
+0, 2, 
+0, 2, 
+2, 0, 
+2, 0, 
+0, 2  
+trivial direction solves the system:
+1
+binary forms whose common zeros are the fixed directions:
+fx[1]=-c1^2+c2^2
+their gcd:
+-c1^2+c2^2
+[1]:
+   _[1]=-1
+   _[2]=c1-c2
+   _[3]=c1+c2
+[2]:
+   1,1,1
+==== stabilizer algebra of N2 ====
+number of nonzero equations:
+16
+equations are linear homogeneous in (x,t):
+1
+dimension of the solution space (kernel):
+2
+kernel basis (columns; order x1..x8, t1..t5):
+-1,0, 
+0, 0, 
+0, 0, 
+0, -1,
+0, -1,
+0, 0, 
+0, 0, 
+-1,0, 
+1, 1, 
+2, 0, 
+0, 0, 
+0, 0, 
+0, 2  
+trivial direction solves the system:
+1
+binary forms whose common zeros are the fixed directions:
+fx[1]=c1*c2
+fx[2]=-c1*c2
+their gcd:
+c1*c2
+[1]:
+   _[1]=1
+   _[2]=c1
+   _[3]=c2
+[2]:
+   1,1,1
+==== stabilizer algebra of N1(0) ====
+number of nonzero equations:
+14
+equations are linear homogeneous in (x,t):
+1
+dimension of the solution space (kernel):
+3
+kernel basis (columns; order x1..x8, t1..t5):
+-1,0, 1, 
+0, -1,0, 
+0, 0, 0, 
+0, 0, -1,
+0, 0, -1,
+0, 0, 0, 
+0, 1, 0, 
+-1,0, 1, 
+1, 0, 0, 
+1, 0, 0, 
+0, 0, 0, 
+0, 2, 0, 
+0, 0, 2  
+trivial direction solves the system:
+1
+binary forms whose common zeros are the fixed directions:
+fx[1]=c1*c2
+fx[2]=-c1^2
+fx[3]=-2*c1*c2
+their gcd:
+c1
+[1]:
+   _[1]=1
+   _[2]=c1
+[2]:
+   1,1
+==== stabilizer algebra of N3 ====
+number of nonzero equations:
+14
+equations are linear homogeneous in (x,t):
+1
+dimension of the solution space (kernel):
+3
+kernel basis (columns; order x1..x8, t1..t5):
+0, 0, -1,
+0, 0, 0, 
+0, -1,0, 
+-1,0, 1, 
+-1,0, 1, 
+0, 1, 0, 
+0, 0, 0, 
+0, 0, -1,
+1, 0, 0, 
+1, 0, 0, 
+0, 0, 0, 
+0, 2, 0, 
+0, 0, 2  
+trivial direction solves the system:
+1
+binary forms whose common zeros are the fixed directions:
+fx[1]=-c1*c2
+fx[2]=c2^2
+fx[3]=2*c1*c2
+their gcd:
+c2
+[1]:
+   _[1]=1
+   _[2]=c2
+[2]:
+   1,1
+==== stabilizer algebra of N1(2) ====
+number of nonzero equations:
+16
+equations are linear homogeneous in (x,t):
+1
+dimension of the solution space (kernel):
+2
+kernel basis (columns; order x1..x8, t1..t5):
+0, -1,
+-1,0, 
+-2,0, 
+0, -1,
+0, -1,
+2, 0, 
+1, 0, 
+0, -1,
+0, 2, 
+0, 2, 
+4, 0, 
+2, 0, 
+0, 2  
+trivial direction solves the system:
+1
+binary forms whose common zeros are the fixed directions:
+fx[1]=-c1^2+2*c2^2
+their gcd:
+-c1^2+2*c2^2
+[1]:
+   _[1]=-1
+   _[2]=c1^2-2*c2^2
+[2]:
+   1,1
+==== stabilizer algebra of N1(D), D generic ====
+number of nonzero equations:
+16
+equations are linear homogeneous in (x,t):
+1
+dimension of the solution space (kernel):
+2
+kernel basis (columns; order x1..x8, t1..t5):
+0,    -1,
+-1,   0, 
+(-D), 0, 
+0,    -1,
+0,    -1,
+(D),  0, 
+1,    0, 
+0,    -1,
+0,    2, 
+0,    2, 
+(2*D),0, 
+2,    0, 
+0,    2  
+trivial direction solves the system:
+1
+binary forms whose common zeros are the fixed directions:
+fx[1]=-c1^2+(D)*c2^2
+their gcd:
+-c1^2+(D)*c2^2
+[1]:
+   _[1]=1
+   _[2]=-c1^2+(D)*c2^2
+[2]:
+   1,1
+N2 torus (a, b) stabilizes the net:
+1
+   column (c1, c2) -> g_I^t (c1, c2) = (a c1, b c2); Q(hy) / Q =
+1/(a^2*b^2)
+N2 swap stabilizes the net:
+1
+N3 torus (a, b) stabilizes the net:
+1
+N3 shear stabilizes the net:
+1
+   N3 shear acts on the column by g_I^t (c1, c2) =
+c1+(-e)/2*c2,
+c2           
+   N3 torus x shear: the column orbit of (1:0) is fixed, every (c1:c2) with c2 != 0 is moved to (0:1) by e = 2 c1/c2.
+N1(0) = (swap)^t N3 (swap):
+1

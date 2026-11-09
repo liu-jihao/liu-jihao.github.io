@@ -1,0 +1,70 @@
+// v8_check_iii.sing: (1) the parametrizations of branches (ii), (iii) (my own elimination, v6/v7) satisfy all 870
+// original coefficient equations identically modulo t*b8 - 1; (2) at three rational points of (iii): all E_ij vanish,
+// det A != 0, exact rank of the lambda-linear system (blockwise over the 15 pairs), and the count of trivial syzygies.
+LIB "matrix.lib";
+system("--ticks-per-sec", 1000);
+int T0 = rtimer;
+< "vbuild.sing";
+poly detA = 0; for (k = 1; k <= 6; k++) { detA = detA + A[1,k]*B0[1,k]; }
+execute(read("v_param_iii.txt"));
+execute(read("v_param_ii.txt"));
+ideal Gt = std(t*b(8) - 1);
+int ii; int kk;
+map phi3 = R, w, y1, y2, y3, TRiii, t;
+ideal Z = reduce(phi3(EQ), Gt);
+"branch (iii): original equations not satisfied identically by the parametrization: " + string(size(Z));
+map phi2 = R, w, y1, y2, y3, TRii, t;
+Z = reduce(phi2(EQ), Gt);
+"branch (ii): original equations not satisfied identically by the parametrization: " + string(size(Z));
+// free unknowns of (iii)
+string sf = ""; int nfA = 0; int nfL = 0;
+for (ii = 5; ii <= 398; ii++) { if (ELiii[ii] == 0) { if (ii <= 27) { nfA++; sf = sf + string(var(ii)) + " "; } else { nfL++; } } }
+"branch (iii) free unknowns: A " + string(nfA) + " (" + sf + "), lambda " + string(nfL);
+proc evalpt(intvec pv, intvec el, ideal TRX)
+{
+  // assign pv[i] to every free unknown var(4+i) (el[4+i] == 0), others 0; t = 1/b8; return the images of all unknowns
+  int i2; ideal vals;
+  for (i2 = 1; i2 <= 394; i2++) { if (el[4+i2] == 0) { vals[i2] = pv[i2]; } else { vals[i2] = 0; } }
+  number b8v = leadcoef(vals[9]);
+  map ev = basering, w, y1, y2, y3, vals, 1/b8v;
+  ideal res = ev(TRX);
+  return(res);
+}
+list PTS = list(intvec(-4,-8,6,-5,4,2,-4,-9,5,-6,-3,6,-3,2,-4,1,-4,2,4,3,-3,9,4,-7,-3,-4,-1,-4,9,5,-5,1,2,6,-4,5,-5,8,-3,1,-7,-8,-5,-2,-8,3,-1,-2,8,-5,7,5,3,6,-9,5,7,-4,-6,-2,-9,-8,-3,-7,-6,-8,3,-5,-7,4,-6,-3,-9,6,4,2,4,-3,-1,-1,7,-3,5,-4,1,-8,-8,8,2,2,-3,2,5,4,-7,-2,2,4,4,-3,6,-8,3,6,-2,-9,4,-3,-7,8,2,3,7,9,-4,3,4,8,2,1,2,6,-2,9,-2,7,8,-2,-2,-2,6,9,7,3,8,5,-9,1,8,5,6,6,-6,6,1,-3,-8,-5,-2,7,9,5,3,-8,3,-2,2,-8,-9,4,4,-9,1,6,-4,-5,-5,2,6,-7,8,-9,2,1,-8,5,7,-5,-9,-6,-5,-5,-6,4,-3,-9,-7,6,-3,-5,-4,7,6,-9,7,-5,5,8,-1,3,5,6,-3,-9,-1,-8,-4,-1,7,2,-3,-6,-4,6,8,-9,3,3,3,9,-2,-2,9,3,3,-7,3,9,4,9,8,4,-9,-9,-2,-2,1,-1,-5,-5,6,5,1,-4,3,9,-9,-2,9,-2,-3,1,-5,6,-5,-4,-9,-6,-2,-2,7,2,-8,9,-8,2,-8,-5,4,8,1,-9,4,1,2,-1,2,-5,-8,2,-7,-9,-3,1,-3,-3,-2,-8,2,6,9,2,5,-9,-5,8,-2,9,-8,1,3,3,-9,-4,-3,4,9,6,1,5,7,-5,8,1,9,6,-8,-4,3,8,9,-5,7,-3,8,5,3,8,-1,-9,-3,4,-3,3,2,-3,1,7,-7,3,-5,-6,8,2,6,1,-8,-2,3,7,-1,-5,-3,6,3,-5,2,-4,4,-1,-7,-6,6,-1,-6,-4,-5,8,-9,-5,1,6,-7,-6,-1,6,4,-9,-6,5,1,5,-8,9,7,3,-2,-5,3,-4,3,8,6,7), intvec(-3,8,-1,-1,-3,3,9,7,-6,-2,-9,6,8,-9,-3,9,-3,5,3,-6,9,-4,-6,5,-5,-6,-4,5,-2,7,3,2,6,-4,-1,2,-1,-9,-5,6,-1,3,8,-4,-8,8,1,-5,-6,3,-3,6,5,7,1,7,-3,1,8,4,8,-6,3,-9,8,-8,-3,-9,-7,-7,-1,-6,7,2,-7,6,3,-6,5,-3,-7,-9,-6,6,-1,6,1,7,2,-7,-1,-1,3,6,-1,3,-6,2,-9,5,-9,9,-6,7,3,-3,-1,-7,-9,-9,7,5,-3,8,9,2,4,6,4,2,-8,6,6,8,1,-7,1,9,-2,4,-4,6,6,4,-1,5,9,-1,8,3,9,-5,-7,-8,-6,-9,-9,5,-4,-5,-6,4,9,-3,-9,-2,4,-1,-1,6,9,-4,-3,-5,-7,-5,9,9,-9,-6,6,6,-6,-2,-9,-3,-9,8,4,-9,-2,7,8,-4,2,-6,8,6,-9,6,-2,-9,3,-4,-7,-3,2,-6,-7,-5,1,-1,1,-1,-6,3,5,-3,2,2,2,3,-3,-8,-9,4,3,4,3,6,-6,-3,7,9,-3,-3,8,2,6,4,2,-1,-3,-7,-5,1,2,3,-8,9,7,-3,8,-6,-9,-8,-9,6,3,-6,-2,-6,8,-5,-8,9,-3,7,4,-5,-6,1,-1,4,9,1,-2,-6,-2,-5,-9,-3,-5,-7,6,5,-1,-6,-3,-3,-4,6,5,7,2,-2,-6,-6,7,9,-6,-2,-5,2,3,8,-3,-3,-8,-3,4,-4,-2,3,4,-9,-4,8,-8,-2,6,-6,5,-5,3,-5,7,-2,3,2,-4,-6,-2,-8,-6,5,-5,-2,6,8,-3,8,3,-4,9,8,-6,8,7,-2,-6,-9,5,-6,-8,7,-6,2,7,-1,-7,1,8,-6,1,-6,-5,-4,9,-5,-1,-5,-1,-1,-2,-9,-9,-9,-7,-8,9,4,6,-2,-5,-4,4,-7,7,4,1,-9,-9,8,-1,-5,-9,5,5,4,-2,2,-8,-7), intvec(8,-6,-2,2,-7,-8,-7,5,2,-5,-5,-3,-9,-4,5,-1,8,-5,4,9,4,-3,-8,7,6,6,-6,7,-1,4,-6,4,4,2,-8,-3,-9,3,-3,-9,7,-2,-2,2,-1,6,2,-8,-9,1,-5,7,5,-2,9,2,2,6,7,-6,9,-7,6,7,2,3,2,-5,1,1,-3,-2,-8,-2,7,-8,6,2,1,-1,3,6,-6,-7,1,-6,9,-9,7,-2,-3,5,4,5,2,-8,-7,-7,4,-7,-7,-2,7,-1,5,3,-6,-4,-9,-4,-8,2,-1,-2,-4,3,9,-9,-9,-3,-3,5,7,-8,-8,4,-3,-9,-6,5,3,-7,-7,6,5,-4,3,-4,2,-7,6,8,4,5,3,-5,-7,-9,3,6,4,-4,-2,-1,-6,-8,7,7,-2,-3,6,-1,-8,-4,-2,-7,6,-4,9,-5,7,-7,2,-4,-9,-5,4,9,-6,-3,-4,-4,-2,9,-5,8,-9,5,4,-9,4,-5,-9,4,6,6,-2,-8,-1,1,-5,-1,-2,-1,-8,-1,4,-5,-9,2,6,4,-7,-6,-9,-5,-5,4,4,-2,-7,9,-4,9,-2,-8,6,-6,1,-6,9,3,9,-1,-5,-9,5,9,9,9,-4,-3,-1,-8,7,8,5,7,3,4,6,4,9,-9,-9,9,-2,3,-5,-9,-6,-3,4,-9,-1,9,9,-9,2,6,-6,1,-4,2,-9,5,5,-4,8,9,-4,7,-3,6,-8,7,3,6,8,-3,-1,-3,-1,9,4,6,7,-6,-9,-8,-3,6,-6,2,3,7,2,5,-4,-7,5,-4,-4,5,-2,-8,6,-9,1,-4,4,-4,4,1,-8,5,8,8,-9,3,-1,-5,8,6,4,5,-2,7,-4,2,-7,3,7,-9,6,-7,5,-9,2,-2,-4,-9,-7,3,9,-7,8,-7,-1,-5,3,-6,4,-3,-7,-9,-2,4,-7,3,-3,-9,7,6,-4,-6,-8,7,-6,-7,1,5,-4,6,-8,4,3,8,6,4,8,-7,-6,-4));
+int pt; ideal VAL; int j2; matrix Mb; int rk; int rka; int rtot; int ratot; poly dA;
+for (pt = 1; pt <= 3; pt++)
+{
+  VAL = evalpt(PTS[pt], ELiii, TRiii);
+  "point " + string(pt) + ": D = " + string(VAL[1]) + ", b3 = " + string(VAL[4]) + ", b8 = " + string(VAL[9]);
+  // all E_ij at the point (values of all unknowns)
+  map evall = R, w, y1, y2, y3, VAL, 0;
+  ideal EEp = evall(EE);
+  "  E_ij at the point, nonzero: " + string(size(EEp));
+  // det A at the point
+  ideal VALA = VAL; for (j2 = 24; j2 <= 394; j2++) { VALA[j2] = var(4+j2); }
+  map evA = R, w, y1, y2, y3, VALA, t;
+  dA = evA(detA);
+  "  det A at the point: nonzero " + string(dA != 0) + ", number of terms " + string(size(dA));
+  // lambda-linear system at the A-values, blockwise by pair
+  ideal EQa = evA(EQ);
+  rtot = 0; ratot = 0;
+  for (kk = 1; kk <= 15; kk++)
+  {
+    ideal blk; int nb = 0;
+    for (j2 = 1; j2 <= ncols(EQa); j2++) { if (PR[j2] == kk) { if (EQa[j2] != 0) { nb++; blk[nb] = EQa[j2]; } } }
+    if (nb > 0)
+    {
+      matrix J1 = jacob(blk);
+      ideal z0 = blk; for (j2 = 28; j2 <= 398; j2++) { z0 = subst(z0, var(j2), 0); }
+      matrix Jaug = concat(J1, transpose(matrix(z0)));
+      rtot = rtot + rank(J1); ratot = ratot + rank(Jaug);
+      kill J1; kill z0; kill Jaug;
+    }
+    kill blk; kill nb;
+  }
+  "  exact rank of the lambda-system (sum over the 15 pairs): " + string(rtot) + "; augmented: " + string(ratot) + "; kernel dimension " + string(371 - rtot);
+  kill evall; kill EEp; kill VALA; kill evA; kill EQa;
+}
+"trivial syzygy parameters (count from vgen_checks.py): 94";
+"total time (ms): " + string(rtimer - T0) + ", memory(2) = " + string(memory(2));
+quit;

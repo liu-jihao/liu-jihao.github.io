@@ -1,0 +1,3 @@
+adjugate entries: 16, nonzero: 10, not divisible by Q: 0
+adj(alpha) - Q*[[D2,-y1 I],[-y1 I,D1]]: entries differing: 0
+alpha*adj(alpha) = det(alpha)*I with det(alpha) = Q^2: 1

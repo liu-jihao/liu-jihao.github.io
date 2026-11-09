@@ -1,0 +1,3 @@
+// ring of the n1c0 verification (vgen.py)
+ring R = 0, (w, y1, y2, y3, D, b(1..12), g(1..10), L(1..371), t), dp;
+option(redSB);

@@ -1,0 +1,16 @@
+rows/columns v1..v5 unchanged: 1
+A_05 unchanged: 1
+A_00 change divisible by y0: 1
+delta q1 = t3*y3*w^2+t2*y2*w^2+r3*y3*y1+r2*y2*y1
+delta q4 = p0*y1*w^2+s3*y3*y2+s2*y2^2+p1*y1^2
+delta q2 = p0*y3*w^2+(c)*r3*y3*w^2+(c)*r2*y2*w^2+p1*y3*y1+s3*y3*y1+s2*y2*y1
+delta q3 = (c)*p0*w^4+(c)*p1*y1*w^2+r3*y3^2+r2*y3*y2
+0,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,1,
+0,0,1,0,0,0,0,0,
+0,0,0,1,0,0,0,0,
+1,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,0,0 
+determinant of the 8x8 matrix (killed coefficients vs p0,p1,r2,r3,s2,s3,t2,t3): 1

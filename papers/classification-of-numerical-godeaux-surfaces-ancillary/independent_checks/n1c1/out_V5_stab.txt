@@ -1,0 +1,25 @@
+N1(1):
+  equations: 24  independent: 11  stabilizer dimension: 2
+  reduced equations: S[1]=d23-d32
+S[2]=d22-d33
+S[3]=c11-d33
+S[4]=2*b22+d33
+S[5]=2*b21-d32
+S[6]=2*b12-d32
+S[7]=2*b11+d33
+S[8]=2*a22+d33
+S[9]=2*a21+d32
+S[10]=2*a12+d32
+S[11]=2*a11+d33
+N1(0):
+  equations: 22  independent: 10  stabilizer dimension: 3
+  reduced equations: S[1]=d23
+S[2]=c11-d22
+S[3]=2*b22+2*d22-d33
+S[4]=2*b21-d32
+S[5]=b12
+S[6]=2*b11+d33
+S[7]=2*a22+d33
+S[8]=a21
+S[9]=2*a12+d32
+S[10]=2*a11+2*d22-d33

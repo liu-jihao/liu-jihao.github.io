@@ -1,0 +1,68 @@
+// v1_build.sing (verification of n1c0): build the system with vbuild.sing, structural checks, counts, save equations.
+system("--ticks-per-sec", 1000);
+int T0 = rtimer;
+< "vbuild.sing";
+"build time (ms): " + string(rtimer - T0);
+// ---- sign/weight rule of the entries of A ----
+int J; int K; int bad = 0; intvec e2; int ww; int ss;
+for (J = 1; J <= 6; J++) { for (K = 1; K <= 6; K++) {
+  if (A[J,K] != 0) {
+    def CA = coef(A[J,K], w*y1*y2*y3);
+    for (k = 1; k <= ncols(CA); k++) {
+      e2 = leadexp(CA[1,k]); ww = e2[1] + 2*(e2[2]+e2[3]+e2[4]); ss = (-1)^(e2[1]+e2[3]+e2[4]);
+      if (ww != 8 - cc[J] - cc[K]) { bad++; }
+      if (ss != -dd[J]*dd[K]) { bad++; }
+    }
+    kill CA;
+  }
+  if (A[J,K] != A[K,J]) { bad++; }
+}}
+"A: symmetry and sign/weight violations: " + string(bad);
+// ---- cofactors: rows 1..5 of A are syzygies of the B_0k; det A ----
+poly detA = 0; for (k = 1; k <= 6; k++) { detA = detA + A[1,k]*B0[1,k]; }
+int badsyz = 0; poly sz;
+for (m = 2; m <= 6; m++) { sz = 0; for (k = 1; k <= 6; k++) { sz = sz + A[m,k]*B0[1,k]; } if (sz != 0) { badsyz++; } }
+"rows v1..v5 of A times (B_00..B_05): nonzero results: " + string(badsyz);
+// cross-check of the cofactor formula on one more column: sum_k A[1,k]*adj[k,2] = 0
+poly c12 = 0;
+for (k = 1; k <= 6; k++) { c12 = c12 + A[1,k]*(-1)^(k+2)*det(mysub(A, 2, k)); }
+"row v0 times column v1 of adj(A) (should be 0): " + string(c12 == 0);
+"size(det A) = " + string(size(detA)) + ", det A even in w: " + string(detA == subst(detA, w, -w));
+// ---- special net and delays (information) ----
+matrix al[4][4]; for (J = 1; J <= 4; J++) { for (K = 1; K <= 4; K++) { al[J,K] = subst(A[J+1,K+1], w, 0); } }
+"det(alpha) - Q^2 = " + string(det(al) - Q^2);
+"B_05 at w = 0, plus Q^3: " + string(subst(B0[1,6], w, 0) + Q^3);
+matrix adjal[4][4]; for (J = 1; J <= 4; J++) { for (K = 1; K <= 4; K++) { adjal[J,K] = (-1)^(J+K)*det(mysub(al, K, J)); } }
+for (k = 2; k <= 5; k++) {
+  poly lw = subst(B0[1,k], w, 0);
+  poly l1 = subst(diff(B0[1,k], w), w, 0);
+  "B_0" + string(k-1) + ": w^0-part = " + string(lw) + "; w^1-part - Q*adj(alpha)_{k1} = " + string(l1 - Q*adjal[k-1,1]) + "; adj(alpha)_{k1} = " + string(adjal[k-1,1]);
+  kill lw; kill l1;
+}
+matrix a4[4][4]; for (J = 1; J <= 4; J++) { for (K = 1; K <= 4; K++) { a4[J,K] = A[J+1,K+1]; } }
+"B_00 + y0*adj(a)_11 = " + string(B0[1,1] + y0*det(mysub(a4, 1, 1)));
+// ---- equations ----
+"weight/sign violations among the monomials of the E_ij: " + string(badws);
+"nonzero coefficient equations: " + string(ne);
+intvec nz = 0:16; intvec ndist = 0:16;
+for (k = 1; k <= ne; k++) { nz[ORD[k]+1] = nz[ORD[k]+1] + 1; }
+"nonzero by w-order 0..15: " + string(nz);
+for (m = 0; m <= 15; m++) {
+  ideal Em; int cnt = 0;
+  for (k = 1; k <= ne; k++) { if (ORD[k] == m) { cnt++; Em[cnt] = EQ[k]; } }
+  if (cnt > 0) { Em = simplify(Em, 1); Em = simplify(Em, 4); ndist[m+1] = size(Em); }
+  kill Em; kill cnt;
+}
+"distinct up to scalar within each order, by order: " + string(ndist) + "  total " + string(sum(ndist));
+ideal EQn = simplify(EQ, 1); EQn = simplify(EQn, 4); EQn = simplify(EQn, 2);
+"distinct up to scalar globally: " + string(size(EQn));
+// unknowns occurring
+ideal VV = variables(EQ);
+"number of ring variables occurring in the equations: " + string(ncols(VV)) + " (w, y, t must not occur)";
+int wyt = 0; for (k = 1; k <= ncols(VV); k++) { if (univariate(VV[k]) <= 4 || univariate(VV[k]) == nvars(basering)) { wyt++; } }
+"w, y or t occurring: " + string(wyt);
+write(":w v_eqs.txt", "ideal EQ = " + string(EQ) + ";");
+write(":a v_eqs.txt", "intvec ORD = " + string(ORD) + ";");
+write(":a v_eqs.txt", "intvec PR = " + string(PR) + ";");
+"total time (ms): " + string(rtimer - T0) + ", memory(2) = " + string(memory(2));
+quit;

@@ -1,0 +1,9 @@
+equations whose weighted degree (unknowns weighted by their w-order) exceeds their w-order: 0
+A-unknowns, first occurrence / own w-order: D:0/0 b(1):1/1 b(2):1/1 b(3):3/3 b(4):3/3 b(5):1/1 b(6):1/1 b(7):5/5 b(8):3/3 b(9):1/1 b(10):5/5 b(11):1/1 b(12):1/1 g(1):2/2 g(2):2/2 g(3):2/2 g(4):2/2 g(5):2/2 g(6):2/2 g(7):4/4 g(8):4/4 g(9):6/6 g(10):6/6 
+k = 0: delay 2 x 159  
+k = 1: delay 1 x 46  
+k = 2: delay 1 x 46  
+k = 3: delay 1 x 44  
+k = 4: delay 3 x 44  
+k = 5: delay 0 x 32  
+total time (ms): 58

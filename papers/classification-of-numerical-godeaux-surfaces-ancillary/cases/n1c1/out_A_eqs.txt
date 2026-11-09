@@ -1,0 +1,48 @@
+cofactors of row 0 built, ms: 4
+det(alpha) - Q^2 = 0
+B_05 mod w + Q^3 = 0    (0 means B_05 = -Q^3 mod w)
+k = 1 : B_0k mod w = 0  ; [w^1]B_0k - Q*adj(alpha)_{k1} = 0
+k = 2 : B_0k mod w = 0  ; [w^1]B_0k - Q*adj(alpha)_{k1} = 0
+k = 3 : B_0k mod w = 0  ; [w^1]B_0k - Q*adj(alpha)_{k1} = 0
+k = 4 : B_0k mod w = 0  ; [w^1]B_0k - Q*adj(alpha)_{k1} = 0
+B_00 + y0*adj(a)_{11} = 0    (a = full 4x4 block incl. y0-terms)
+equations built, ms: 66
+nonzero coefficient monomials per (i,j) vs slots:
+  pair 1 : 60 of 60
+  pair 2 : 60 of 60
+  pair 3 : 54 of 60
+  pair 4 : 54 of 60
+  pair 5 : 60 of 60
+  pair 6 : 60 of 60
+  pair 7 : 54 of 60
+  pair 8 : 54 of 60
+  pair 9 : 60 of 60
+  pair 10 : 60 of 60
+  pair 11 : 60 of 60
+  pair 12 : 60 of 60
+  pair 13 : 60 of 60
+  pair 14 : 60 of 60
+  pair 15 : 80 of 80
+total nonzero coefficient equations: 896
+w-order | slots | nonzero coefficient equations | distinct up to scalar
+   0 | 204 | 180 | 72
+   1 | 72 | 72 | 66
+   2 | 156 | 156 | 156
+   3 | 56 | 56 | 56
+   4 | 120 | 120 | 120
+   5 | 42 | 42 | 42
+   6 | 84 | 84 | 84
+   7 | 30 | 30 | 30
+   8 | 58 | 58 | 58
+   9 | 20 | 20 | 20
+   10 | 34 | 34 | 34
+   11 | 12 | 12 | 12
+   12 | 18 | 18 | 18
+   13 | 6 | 6 | 6
+   14 | 6 | 6 | 6
+   15 | 2 | 2 | 2
+totals: 920 896 782
+distinct up to scalar across all orders: 782
+equations with a term of total unknown-order > m: 0
+equations (m>=1) nonlinear in order-m unknowns: 0  ; with order-m coefficients involving unknowns of order >= 1: 0
+wrote eqs_n1c1.txt with 782 equations; ms: 225  memory KB: 28791

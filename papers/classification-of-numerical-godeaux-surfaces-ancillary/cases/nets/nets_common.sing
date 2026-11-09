@@ -1,0 +1,123 @@
+// nets_common.sing -- shared procedures for the case "nets" (read with  < "nets_common.sing"; ).
+// No ring is defined here; every procedure works in the basering of the caller.
+
+// cofactor (-1)^(p+q) * det(A with row p and column q deleted)
+proc cof(matrix A, int p, int q)
+{
+  int n = nrows(A);
+  if (n == 1) { return(poly(1)); }
+  matrix B[n-1][n-1];
+  int u, v, uu, vv;
+  uu = 0;
+  for (u = 1; u <= n; u++) {
+    if (u != p) {
+      uu++; vv = 0;
+      for (v = 1; v <= n; v++) { if (v != q) { vv++; B[uu, vv] = A[u, v]; } }
+    }
+  }
+  return((-1)^(p+q) * det(B));
+}
+
+// adjugate: adj(A)[u,v] = cofactor(A, v, u), so that A*adj(A) = det(A)*I
+proc adjm(matrix A)
+{
+  int n = nrows(A);
+  matrix B[n][n];
+  int u, v;
+  for (u = 1; u <= n; u++) { for (v = 1; v <= n; v++) { B[u, v] = cof(A, v, u); } }
+  return(B);
+}
+
+// 1 if every entry of M is 0
+proc iszero(matrix M)
+{
+  int u, v;
+  for (u = 1; u <= nrows(M); u++) { for (v = 1; v <= ncols(M); v++) { if (M[u, v] != 0) { return(0); } } }
+  return(1);
+}
+
+// 4x4 matrix from 2x2 blocks [[TL, TR], [BL, BR]]
+proc blk4(matrix TL, matrix TR, matrix BL, matrix BR)
+{
+  matrix A[4][4];
+  int u, v;
+  for (u = 1; u <= 2; u++) { for (v = 1; v <= 2; v++) {
+    A[u, v] = TL[u, v]; A[u, v+2] = TR[u, v]; A[u+2, v] = BL[u, v]; A[u+2, v+2] = BR[u, v]; } }
+  return(A);
+}
+
+// the 2x2 block of a 4x4 matrix starting at (r0, c0)
+proc blk2(matrix A, int r0, int c0)
+{
+  matrix B[2][2];
+  B[1,1] = A[r0, c0]; B[1,2] = A[r0, c0+1]; B[2,1] = A[r0+1, c0]; B[2,2] = A[r0+1, c0+1];
+  return(B);
+}
+
+// rank of a 2x2 matrix with entries in the ground field (possibly with parameters):
+// 2 if det != 0, 0 if M = 0, 1 otherwise (exact over the coefficient field)
+proc rk2(matrix M)
+{
+  if (det(M) != 0) { return(2); }
+  if (iszero(M)) { return(0); }
+  return(1);
+}
+
+// 6x6 "pair" matrix (orders w^0 and w^1 only): net al (4x4) in rows/cols 2..5, A[1,6] = A[6,1] = Q,
+// column 6 rows 2,3 = cc1*w, cc2*w  (w = the poly passed as ww)
+proc pairmat(matrix al, poly Q, poly ww, cc1, cc2)
+{
+  matrix A[6][6];
+  int u, v;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { A[u+1, v+1] = al[u, v]; } }
+  A[1,6] = Q; A[6,1] = Q;
+  A[2,6] = cc1*ww; A[6,2] = cc1*ww;
+  A[3,6] = cc2*ww; A[6,3] = cc2*ww;
+  return(A);
+}
+
+// 6x6 diagonal matrix
+proc diag6(d0, d1, d2, d3, d4, d5)
+{
+  matrix P[6][6];
+  P[1,1] = d0; P[2,2] = d1; P[3,3] = d2; P[4,4] = d3; P[5,5] = d4; P[6,6] = d5;
+  return(P);
+}
+
+// 6x6 block-diagonal matrix diag(d0, gI, gII, d5)
+proc blkdiag6(d0, matrix gI, matrix gII, d5)
+{
+  matrix P[6][6];
+  P[1,1] = d0; P[6,6] = d5;
+  int u, v;
+  for (u = 1; u <= 2; u++) { for (v = 1; v <= 2; v++) { P[u+1, v+1] = gI[u, v]; P[u+3, v+3] = gII[u, v]; } }
+  return(P);
+}
+
+// coefficient of the monomial m (in the variables whose product is vv) in f
+proc cfm(poly f, poly m, poly vv)
+{
+  if (f == 0) { return(poly(0)); }
+  matrix C = coef(f, vv);
+  int u;
+  for (u = 1; u <= ncols(C); u++) { if (C[1, u] == m) { return(C[2, u]); } }
+  return(poly(0));
+}
+
+// identity matrix of size n
+proc idm(int n)
+{
+  matrix U[n][n];
+  int u;
+  for (u = 1; u <= n; u++) { U[u, u] = 1; }
+  return(U);
+}
+
+// entrywise derivative of a matrix (keeps the shape explicit; not used by the final scripts)
+proc dmat(matrix A, poly v)
+{
+  matrix B[nrows(A)][ncols(A)];
+  int u, w;
+  for (u = 1; u <= nrows(A); u++) { for (w = 1; w <= ncols(A); w++) { B[u, w] = diff(A[u, w], v); } }
+  return(B);
+}

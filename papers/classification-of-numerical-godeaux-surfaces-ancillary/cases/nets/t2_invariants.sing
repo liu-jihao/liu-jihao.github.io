@@ -1,0 +1,108 @@
+// T2 (case nets): invariants of the five sigma-equivariant nets N1(D), N2, N3, T0, B2 (order w^0, c irrelevant).
+// alpha = [[D1, y1*I], [y1*I, D2]] on (v1, v2 | v3, v4);  sigma: y1 -> y1, y2 -> -y2, y3 -> -y3.
+// (i) det(alpha) - Q^2 = 0;  (ii) Q | adj(alpha);  (iii) sigma-sign pattern;  (iv) Krull dim of Q[y]/((Q)+I_2(alpha));
+// (v) sigma-fixed points of P^2 on V(Q) and, at each, rank D1(p), rank D2(p), t(p) = dim coker D2(p) - dim coker D1(p).
+LIB "primdec.lib";
+< "nets_common.sing";
+int tt = timer;
+
+proc inv4(matrix al, poly Q, string nm)
+{
+  "=== " + nm + "    Q = " + string(Q);
+  "(i)   det(alpha) - Q^2 == 0 :", det(al) - Q^2 == 0;
+  matrix B = adjm(al);
+  ideal IQ = Q;                       // a principal ideal: {Q} is a Groebner basis
+  int ok = 1; int u, v;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { if (reduce(B[u,v], IQ) != 0) { ok = 0; } } }
+  "(ii)  Q divides every entry of adj(alpha) :", ok;
+  map sg = basering, y1, -y2, -y3;
+  matrix sa = sg(al);
+  matrix Ed[4][4]; Ed[1,1] = 1; Ed[2,2] = 1; Ed[3,3] = -1; Ed[4,4] = -1;
+  "(iii) sigma(alpha) == -Ed*alpha*Ed, Ed = diag(1,1,-1,-1) [diagonal blocks anti-invariant, off-diagonal block invariant] :", iszero(sa + Ed*al*Ed);
+  "      diagonal blocks lie in span(y2,y3), off-diagonal block in span(y1) :", iszero(subst(blk2(al,1,1), y1, 0) - blk2(al,1,1)) && iszero(subst(blk2(al,3,3), y1, 0) - blk2(al,3,3)) && iszero(blk2(al,1,3) - y1*diff(blk2(al,1,3), y1));
+  ideal J = std(ideal(Q) + minor(al, 2));
+  "(iv)  Krull dim of Q[y1,y2,y3]/((Q) + I_2(alpha)) :", dim(J);
+  "      Q(1,0,0) =", subst(subst(subst(Q, y1, 1), y2, 0), y3, 0), "  [so the isolated sigma-fixed point (1:0:0) is not on V(Q)]";
+  "      Q restricted to the sigma-fixed line y1 = 0 factorizes as:"; factorize(subst(Q, y1, 0));
+}
+
+proc atpt(matrix al, poly Q, poly p1, poly p2, poly p3, string nm)
+{
+  matrix D1 = blk2(al, 1, 1);
+  matrix D2 = blk2(al, 3, 3);
+  matrix D1p = subst(subst(subst(D1, y1, p1), y2, p2), y3, p3);
+  matrix D2p = subst(subst(subst(D2, y1, p1), y2, p2), y3, p3);
+  poly Qp = subst(subst(subst(Q, y1, p1), y2, p2), y3, p3);
+  int r1 = rk2(D1p); int r2 = rk2(D2p);
+  "(v)   point " + nm + ": Q(p) = " + string(Qp) + ";  D1(p) = [" + string(D1p[1,1]) + "," + string(D1p[1,2]) + ";" + string(D1p[2,1]) + "," + string(D1p[2,2])
+       + "]  D2(p) = [" + string(D2p[1,1]) + "," + string(D2p[1,2]) + ";" + string(D2p[2,1]) + "," + string(D2p[2,2]) + "]";
+  "      rank D1(p) = " + string(r1) + ", rank D2(p) = " + string(r2) + ", t(p) = dim coker D2(p) - dim coker D1(p) = " + string((2 - r2) - (2 - r1));
+}
+
+// ---------------- N1(D), D symbolic (generic), over Q(s), D = s^2
+ring RS = (0,s), (y1,y2,y3), dp;
+matrix I2[2][2] = 1,0,0,1;
+poly D = s^2;
+matrix D1[2][2] = D*y3, y2, y2, y3;
+matrix D2[2][2] = -y3, y2, y2, -D*y3;
+matrix N1 = blk4(D1, y1*I2, y1*I2, D2);
+inv4(N1, y2^2 - D*y3^2 - y1^2, "N1(D), D = s^2 generic (over Q(s))");
+atpt(N1, y2^2 - D*y3^2 - y1^2, 0, s, 1, "(0 : s : 1)");
+atpt(N1, y2^2 - D*y3^2 - y1^2, 0, -s, 1, "(0 : -s : 1)");
+"      [for every value of s: det D1(p) = s^2 - s^2 = 0 and D1(p)[2,2] = 1, det D2(p) = 0 and D2(p)[1,1] = -1, so both ranks are 1 for all s, t = 0]";
+
+// ---------------- N1(D) for ALL D != 0 and for D = 0: D as a variable
+ring RD = 0, (y1,y2,y3,D,tD,uu), dp;
+matrix I2[2][2] = 1,0,0,1;
+matrix D1[2][2] = D*y3, y2, y2, y3;
+matrix D2[2][2] = -y3, y2, y2, -D*y3;
+matrix N1 = blk4(D1, y1*I2, y1*I2, D2);
+poly QD = y2^2 - D*y3^2 - y1^2;
+"=== N1(D) with D a variable (statements for every value of D)";
+"(i)   det(alpha) - Q^2 == 0 in Q[D][y] :", det(N1) - QD^2 == 0;
+matrix BD = adjm(N1);
+int okD = 1; int u, v;
+for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { if (reduce(BD[u,v], ideal(QD)) != 0) { okD = 0; } } }
+"(ii)  Q divides every entry of adj(alpha) in Q[D][y] :", okD;
+ideal JD = ideal(QD) + minor(N1, 2);
+"(iv)  Rabinowitsch: 1 in (Q, I_2(alpha), 1 - tD*D, 1 - uu*y_i) for i = 1,2,3 (i.e. y_i in the radical after inverting D):";
+"      i = 1:", reduce(1, std(JD + ideal(1 - tD*D, 1 - uu*y1))) == 0;
+"      i = 2:", reduce(1, std(JD + ideal(1 - tD*D, 1 - uu*y2))) == 0;
+"      i = 3:", reduce(1, std(JD + ideal(1 - tD*D, 1 - uu*y3))) == 0;
+"      [all three true <=> for every D != 0 (over C), V((Q)+I_2(alpha)) = {0} in C^3, i.e. Krull dim 0 and rank alpha = 2 on all of V(Q)]";
+
+// ---------------- N1(0), N1(1), N2, N3, T0, B2 over Q
+ring R = 0, (y1,y2,y3), dp;
+matrix I2[2][2] = 1,0,0,1;
+matrix A1[2][2] = 0, y2, y2, y3;      matrix A2[2][2] = -y3, y2, y2, 0;
+matrix N10 = blk4(A1, y1*I2, y1*I2, A2);
+inv4(N10, y2^2 - y1^2, "N1(0)");
+atpt(N10, y2^2 - y1^2, 0, 0, 1, "(0 : 0 : 1) [the vertex]");
+matrix B1[2][2] = y3, y2, y2, y3;     matrix B2m[2][2] = -y3, y2, y2, -y3;
+matrix N11 = blk4(B1, y1*I2, y1*I2, B2m);
+inv4(N11, y2^2 - y3^2 - y1^2, "N1(1)");
+atpt(N11, y2^2 - y3^2 - y1^2, 0, 1, 1, "(0 : 1 : 1)");
+atpt(N11, y2^2 - y3^2 - y1^2, 0, -1, 1, "(0 : -1 : 1)");
+matrix C1[2][2] = y2, 0, 0, y3;       matrix C2[2][2] = y3, 0, 0, y2;
+matrix N2 = blk4(C1, y1*I2, y1*I2, C2);
+inv4(N2, y2*y3 - y1^2, "N2");
+atpt(N2, y2*y3 - y1^2, 0, 1, 0, "(0 : 1 : 0)");
+atpt(N2, y2*y3 - y1^2, 0, 0, 1, "(0 : 0 : 1)");
+matrix E1[2][2] = y3, y2, y2, 0;      matrix E2[2][2] = 0, y2, y2, -y3;
+matrix N3 = blk4(E1, y1*I2, y1*I2, E2);
+inv4(N3, y2^2 - y1^2, "N3");
+atpt(N3, y2^2 - y1^2, 0, 0, 1, "(0 : 0 : 1) [the vertex]");
+matrix F1 = (y2+y3)*I2;               matrix F2 = (y2-y3)*I2;
+matrix T0 = blk4(F1, y1*I2, y1*I2, F2);
+inv4(T0, y2^2 - y3^2 - y1^2, "T0");
+atpt(T0, y2^2 - y3^2 - y1^2, 0, 1, 1, "(0 : 1 : 1)");
+atpt(T0, y2^2 - y3^2 - y1^2, 0, 1, -1, "(0 : 1 : -1)");
+matrix H1 = y2*I2;
+matrix B2n = blk4(H1, y1*I2, y1*I2, H1);
+inv4(B2n, y2^2 - y1^2, "B2");
+atpt(B2n, y2^2 - y1^2, 0, 0, 1, "(0 : 0 : 1) [the vertex]");
+"      B2 at the vertex: alpha(0,0,1) =";  print(subst(subst(subst(B2n, y1, 0), y2, 0), y3, 1));
+
+"total time (s):", timer - tt;
+"peak memory (KB, Singular memory(2)):", memory(2) div 1024;
+quit;

@@ -1,0 +1,6 @@
+N1(D) : det-Q^2 = 0  Q|adj: 1
+N2 : det-Q^2 = 0  Q|adj: 1
+N3 : det-Q^2 = 0  Q|adj: 1
+T0 : det-Q^2 = 0  Q|adj: 1
+B2 : det-Q^2 = 0  Q|adj: 1
+N3 c=0: det A + det(X)^2 = 0

@@ -1,0 +1,207 @@
+equations read: 782  size of EO: 782
+
+=== stage 0 ===
+equations of w-order 0 added: 72  (already reduced to 0 by earlier substitutions: 0 )
+unknowns of w-order 0 : lambda_{.,5}: 18  lambda_{.,1..4}: 48  lambda_{.,0}: 57  g: 0  b: 0
+  (and the parameter D, order 0, never a pivot)
+unknowns eliminated at stage 0 : 18
+  eliminated lambda_{.,5} :  order 0: 18;
+  log:  l(19)[lambda(k=5),o0,eq-o0,t0] l(40)[lambda(k=5),o0,eq-o0,t0] l(79)[lambda(k=5),o0,eq-o0,t0] l(131)[lambda(k=5),o0,eq-o0,t0] l(151)[lambda(k=5),o0,eq-o0,t0] l(223)[lambda(k=5),o0,eq-o0,t0] l(244)[lambda(k=5),o0,eq-o0,t0] l(295)[lambda(k=5),o0,eq-o0,t0] l(368)[lambda(k=5),o0,eq-o0,t0] l(369)[lambda(k=5),o0,eq-o0,t0] l(20)[lambda(k=5),o0,eq-o0,t1] l(39)[lambda(k=5),o0,eq-o0,t1] l(59)[lambda(k=5),o0,eq-o0,t1] l(132)[lambda(k=5),o0,eq-o0,t1] l(171)[lambda(k=5),o0,eq-o0,t1] l(224)[lambda(k=5),o0,eq-o0,t1] l(243)[lambda(k=5),o0,eq-o0,t1] l(296)[lambda(k=5),o0,eq-o0,t1]
+equations remaining at the end of stage 0 : 0  ; of these involving only unknowns of order < 0 : 0
+stage 0 time ms: 132  total ms: 184  memory KB: 16659
+
+=== stage 1 ===
+equations of w-order 1 added: 66  (already reduced to 0 by earlier substitutions: 0 )
+unknowns of w-order 1 : lambda_{.,5}: 6  lambda_{.,1..4}: 72  lambda_{.,0}: 20  g: 0  b: 7
+unknowns eliminated at stage 1 : 20
+  eliminated lambda_{.,5} :  order 1: 6;
+  eliminated lambda_{.,1..4} :  order 0: 14;
+  log:  l(203)[lambda(k=5),o1,eq-o1,t1] l(275)[lambda(k=5),o1,eq-o1,t1] l(327)[lambda(k=5),o1,eq-o1,t1] l(111)[lambda(k=5),o1,eq-o1,t2] l(328)[lambda(k=5),o1,eq-o1,t2] l(276)[lambda(k=5),o1,eq-o1,t3] l(187)[lambda(k=2),o0,eq-o1,t3] l(257)[lambda(k=1),o0,eq-o1,t3] l(258)[lambda(k=1),o0,eq-o1,t3] l(261)[lambda(k=2),o0,eq-o1,t3] l(309)[lambda(k=1),o0,eq-o1,t3] l(310)[lambda(k=1),o0,eq-o1,t3] l(91)[lambda(k=1),o0,eq-o1,t4] l(92)[lambda(k=1),o0,eq-o1,t4] l(95)[lambda(k=2),o0,eq-o1,t4] l(184)[lambda(k=1),o0,eq-o1,t4] l(307)[lambda(k=1),o0,eq-o1,t4] l(313)[lambda(k=2),o0,eq-o1,t4] l(183)[lambda(k=1),o0,eq-o1,t5] l(255)[lambda(k=1),o0,eq-o1,t6]
+equations remaining at the end of stage 1 : 0  ; of these involving only unknowns of order < 1 : 0
+stage 1 time ms: 160  total ms: 344  memory KB: 16659
+
+=== stage 2 ===
+equations of w-order 2 added: 156  (already reduced to 0 by earlier substitutions: 0 )
+unknowns of w-order 2 : lambda_{.,5}: 6  lambda_{.,1..4}: 24  lambda_{.,0}: 36  g: 6  b: 0
+unknowns eliminated at stage 2 : 74
+  eliminated lambda_{.,5} :  order 2: 6;
+  eliminated lambda_{.,1..4} :  order 1: 28;
+  eliminated lambda_{.,0} :  order 0: 39;
+  eliminated b :  order 1: 1;
+  log:  l(60)[lambda(k=5),o2,eq-o2,t1] l(152)[lambda(k=5),o2,eq-o2,t1] l(172)[lambda(k=5),o2,eq-o2,t1] l(80)[lambda(k=5),o2,eq-o2,t2] l(370)[lambda(k=5),o2,eq-o2,t2] l(371)[lambda(k=5),o2,eq-o2,t4] l(33)[lambda(k=2),o1,eq-o2,t1] l(53)[lambda(k=2),o1,eq-o2,t1] l(125)[lambda(k=2),o1,eq-o2,t1] l(145)[lambda(k=2),o1,eq-o2,t1] l(217)[lambda(k=2),o1,eq-o2,t1] l(13)[lambda(k=2),o1,eq-o2,t2] l(71)[lambda(k=1),o1,eq-o2,t2] l(73)[lambda(k=2),o1,eq-o2,t2] l(165)[lambda(k=2),o1,eq-o2,t2] l(237)[lambda(k=2),o1,eq-o2,t2] l(289)[lambda(k=2),o1,eq-o2,t2] l(11)[lambda(k=1),o1,eq-o2,t3] l(31)[lambda(k=1),o1,eq-o2,t3] l(51)[lambda(k=1),o1,eq-o2,t3] l(52)[lambda(k=1),o1,eq-o2,t3] l(72)[lambda(k=1),o1,eq-o2,t3] l(123)[lambda(k=1),o1,eq-o2,t3] l(143)[lambda(k=1),o1,eq-o2,t3] l(163)[lambda(k=1),o1,eq-o2,t3] l(287)[lambda(k=1),o1,eq-o2,t3] l(144)[lambda(k=1),o1,eq-o2,t4] l(164)[lambda(k=1),o1,eq-o2,t4] l(215)[lambda(k=1),o1,eq-o2,t4] l(235)[lambda(k=1),o1,eq-o2,t4] l(350)[lambda(k=1),o1,eq-o2,t5] l(354)[lambda(k=2),o1,eq-o2,t5] l(351)[lambda(k=1),o1,eq-o2,t7] l(348)[lambda(k=1),o1,eq-o2,t9] l(3)[lambda(k=0),o0,eq-o2,t2] l(21)[lambda(k=0),o0,eq-o2,t2] l(41)[lambda(k=0),o0,eq-o2,t2] l(45)[lambda(k=0),o0,eq-o2,t2] l(46)[lambda(k=0),o0,eq-o2,t2] l(62)[lambda(k=0),o0,eq-o2,t2] l(65)[lambda(k=0),o0,eq-o2,t2] l(66)[lambda(k=0),o0,eq-o2,t2] l(137)[lambda(k=0),o0,eq-o2,t2] l(138)[lambda(k=0),o0,eq-o2,t2] l(153)[lambda(k=0),o0,eq-o2,t2] l(157)[lambda(k=0),o0,eq-o2,t2] l(225)[lambda(k=0),o0,eq-o2,t2] l(279)[lambda(k=0),o0,eq-o2,t2] l(336)[lambda(k=0),o0,eq-o2,t2] l(1)[lambda(k=0),o0,eq-o2,t3] l(4)[lambda(k=0),o0,eq-o2,t3] l(23)[lambda(k=0),o0,eq-o2,t3] l(61)[lambda(k=0),o0,eq-o2,t3] l(115)[lambda(k=0),o0,eq-o2,t3] l(116)[lambda(k=0),o0,eq-o2,t3] l(134)[lambda(k=0),o0,eq-o2,t3] l(158)[lambda(k=0),o0,eq-o2,t3] l(207)[lambda(k=0),o0,eq-o2,t3] l(208)[lambda(k=0),o0,eq-o2,t3] l(227)[lambda(k=0),o0,eq-o2,t3] l(277)[lambda(k=0),o0,eq-o2,t3] l(280)[lambda(k=0),o0,eq-o2,t3] l(24)[lambda(k=0),o0,eq-o2,t4] l(42)[lambda(k=0),o0,eq-o2,t4] l(154)[lambda(k=0),o0,eq-o2,t4] l(228)[lambda(k=0),o0,eq-o2,t4] l(337)[lambda(k=0),o0,eq-o2,t4] l(113)[lambda(k=0),o0,eq-o2,t5] l(133)[lambda(k=0),o0,eq-o2,t5] l(205)[lambda(k=0),o0,eq-o2,t5] l(331)[lambda(k=0),o0,eq-o2,t8] l(332)[lambda(k=0),o0,eq-o2,t9] l(329)[lambda(k=0),o0,eq-o2,t10] b(1)[b,o1,eq-o2,t0]
+equations remaining at the end of stage 2 : 0  ; of these involving only unknowns of order < 2 : 0
+stage 2 time ms: 518  total ms: 862  memory KB: 16659
+
+=== stage 3 ===
+equations of w-order 3 added: 56  (already reduced to 0 by earlier substitutions: 0 )
+unknowns of w-order 3 : lambda_{.,5}: 2  lambda_{.,1..4}: 26  lambda_{.,0}: 12  g: 0  b: 3
+unknowns eliminated at stage 3 : 30
+  eliminated lambda_{.,5} :  order 3: 2;
+  eliminated lambda_{.,1..4} :  order 0: 4; order 2: 10;
+  eliminated lambda_{.,0} :  order 1: 14;
+  log:  l(204)[lambda(k=5),o3,eq-o3,t2] l(112)[lambda(k=5),o3,eq-o3,t3] l(189)[lambda(k=2),o2,eq-o3,t4] l(265)[lambda(k=2),o2,eq-o3,t4] l(97)[lambda(k=2),o2,eq-o3,t5] l(317)[lambda(k=2),o2,eq-o3,t5] l(185)[lambda(k=1),o2,eq-o3,t6] l(93)[lambda(k=1),o2,eq-o3,t7] l(94)[lambda(k=1),o2,eq-o3,t10] l(259)[lambda(k=1),o2,eq-o3,t10] l(186)[lambda(k=1),o2,eq-o3,t11] l(311)[lambda(k=1),o2,eq-o3,t11] l(85)[lambda(k=0),o1,eq-o3,t10] l(177)[lambda(k=0),o1,eq-o3,t11] l(299)[lambda(k=0),o1,eq-o3,t11] l(81)[lambda(k=0),o1,eq-o3,t12] l(86)[lambda(k=0),o1,eq-o3,t13] l(178)[lambda(k=0),o1,eq-o3,t13] l(297)[lambda(k=0),o1,eq-o3,t13] l(245)[lambda(k=0),o1,eq-o3,t14] l(247)[lambda(k=0),o1,eq-o3,t14] l(82)[lambda(k=0),o1,eq-o3,t15] l(173)[lambda(k=0),o1,eq-o3,t15] l(174)[lambda(k=0),o1,eq-o3,t17] l(300)[lambda(k=0),o1,eq-o3,t19] l(248)[lambda(k=0),o1,eq-o3,t20] l(315)[lambda(k=2),o0,eq-o3,t3] l(96)[lambda(k=2),o0,eq-o3,t4] l(263)[lambda(k=2),o0,eq-o3,t7] l(188)[lambda(k=2),o0,eq-o3,t8]
+equations remaining at the end of stage 3 : 20  ; of these involving only unknowns of order < 3 : 20
+  remaining equations that factor nontrivially: 8 of 20  ; lambda-coefficients occurring in them: l(100)(k=3,o0) l(102)(k=3,o0) l(107)(k=4,o0) l(101)(k=3,o0) l(106)(k=4,o0) l(108)(k=4,o0) l(192)(k=3,o0) l(194)(k=3,o0) l(199)(k=4,o0) l(193)(k=3,o0) l(198)(k=4,o0) l(200)(k=4,o0) l(262)(k=2,o0) l(264)(k=2,o0) l(267)(k=3,o0) l(272)(k=4,o0) l(314)(k=2,o0) l(316)(k=2,o0) l(319)(k=3,o0) l(324)(k=4,o0) 
+stage 3 time ms: 285  total ms: 1147  memory KB: 16659
+
+=== stage 4 ===
+equations of w-order 4 added: 120  (already reduced to 0 by earlier substitutions: 0 )
+unknowns of w-order 4 : lambda_{.,5}: 0  lambda_{.,1..4}: 8  lambda_{.,0}: 18  g: 2  b: 0
+unknowns eliminated at stage 4 : 62
+  eliminated lambda_{.,1..4} :  order 1: 11; order 3: 18;
+  eliminated lambda_{.,0} :  order 2: 29;
+  eliminated g :  order 2: 4;
+  log:  l(14)[lambda(k=2),o3,eq-o4,t1] l(34)[lambda(k=2),o3,eq-o4,t1] l(56)[lambda(k=3),o3,eq-o4,t1] l(76)[lambda(k=3),o3,eq-o4,t1] l(148)[lambda(k=3),o3,eq-o4,t1] l(218)[lambda(k=2),o3,eq-o4,t1] l(290)[lambda(k=2),o3,eq-o4,t1] l(126)[lambda(k=2),o3,eq-o4,t2] l(168)[lambda(k=3),o3,eq-o4,t2] l(238)[lambda(k=2),o3,eq-o4,t2] l(32)[lambda(k=1),o3,eq-o4,t3] l(216)[lambda(k=1),o3,eq-o4,t4] l(12)[lambda(k=1),o3,eq-o4,t5] l(124)[lambda(k=1),o3,eq-o4,t5] l(236)[lambda(k=1),o3,eq-o4,t5] l(288)[lambda(k=1),o3,eq-o4,t5] l(358)[lambda(k=2),o3,eq-o4,t6] l(352)[lambda(k=1),o3,eq-o4,t15] l(47)[lambda(k=0),o2,eq-o4,t2] l(67)[lambda(k=0),o2,eq-o4,t3] l(7)[lambda(k=0),o2,eq-o4,t5] l(25)[lambda(k=0),o2,eq-o4,t5] l(27)[lambda(k=0),o2,eq-o4,t5] l(159)[lambda(k=0),o2,eq-o4,t5] l(48)[lambda(k=0),o2,eq-o4,t6] l(68)[lambda(k=0),o2,eq-o4,t6] l(211)[lambda(k=0),o2,eq-o4,t6] l(231)[lambda(k=0),o2,eq-o4,t6] l(283)[lambda(k=0),o2,eq-o4,t6] l(5)[lambda(k=0),o2,eq-o4,t7] l(28)[lambda(k=0),o2,eq-o4,t7] l(119)[lambda(k=0),o2,eq-o4,t7] l(139)[lambda(k=0),o2,eq-o4,t7] l(209)[lambda(k=0),o2,eq-o4,t7] l(117)[lambda(k=0),o2,eq-o4,t8] l(140)[lambda(k=0),o2,eq-o4,t8] l(229)[lambda(k=0),o2,eq-o4,t8] l(8)[lambda(k=0),o2,eq-o4,t9] l(281)[lambda(k=0),o2,eq-o4,t9] l(160)[lambda(k=0),o2,eq-o4,t10] l(232)[lambda(k=0),o2,eq-o4,t10] l(284)[lambda(k=0),o2,eq-o4,t10] l(212)[lambda(k=0),o2,eq-o4,t11] l(120)[lambda(k=0),o2,eq-o4,t12] l(338)[lambda(k=0),o2,eq-o4,t23] l(340)[lambda(k=0),o2,eq-o4,t23] l(341)[lambda(k=0),o2,eq-o4,t31] l(16)[lambda(k=3),o1,eq-o4,t1] l(74)[lambda(k=2),o1,eq-o4,t1] l(36)[lambda(k=3),o1,eq-o4,t2] l(54)[lambda(k=2),o1,eq-o4,t2] l(166)[lambda(k=2),o1,eq-o4,t2] l(128)[lambda(k=3),o1,eq-o4,t3] l(146)[lambda(k=2),o1,eq-o4,t3] l(240)[lambda(k=3),o1,eq-o4,t3] l(292)[lambda(k=3),o1,eq-o4,t3] l(220)[lambda(k=3),o1,eq-o4,t4] l(356)[lambda(k=2),o1,eq-o4,t8] g(1)[g,o2,eq-o4,t5] g(3)[g,o2,eq-o4,t5] g(4)[g,o2,eq-o4,t5] g(2)[g,o2,eq-o4,t6]
+equations remaining at the end of stage 4 : 53  ; of these involving only unknowns of order < 4 : 53
+  remaining equations that factor nontrivially: 34 of 53  ; lambda-coefficients occurring in them: l(100)(k=3,o0) l(102)(k=3,o0) l(107)(k=4,o0) l(101)(k=3,o0) l(106)(k=4,o0) l(108)(k=4,o0) l(192)(k=3,o0) l(194)(k=3,o0) l(199)(k=4,o0) l(193)(k=3,o0) l(198)(k=4,o0) l(200)(k=4,o0) l(262)(k=2,o0) l(264)(k=2,o0) l(267)(k=3,o0) l(272)(k=4,o0) l(314)(k=2,o0) l(316)(k=2,o0) l(319)(k=3,o0) l(324)(k=4,o0) l(15)(k=3,o1) l(18)(k=4,o1) l(35)(k=3,o1) l(38)(k=4,o1) l(127)(k=3,o1) l(130)(k=4,o1) l(219)(k=3,o1) l(222)(k=4,o1) l(239)(k=3,o1) l(242)(k=4,o1) l(291)(k=3,o1) l(294)(k=4,o1) l(355)(k=2,o1) l(357)(k=2,o1) l(360)(k=3,o1) l(365)(k=4,o1) 
+stage 4 time ms: 592  total ms: 1739  memory KB: 16659
+
+=== stage 5 ===
+equations of w-order 5 added: 42  (already reduced to 0 by earlier substitutions: 0 )
+unknowns of w-order 5 : lambda_{.,5}: 0  lambda_{.,1..4}: 2  lambda_{.,0}: 6  g: 0  b: 2
+unknowns eliminated at stage 5 : 26
+  eliminated lambda_{.,1..4} :  order 0: 6; order 2: 4; order 4: 6;
+  eliminated lambda_{.,0} :  order 3: 10;
+  log:  l(104)[lambda(k=3),o4,eq-o5,t2] l(196)[lambda(k=3),o4,eq-o5,t2] l(266)[lambda(k=2),o4,eq-o5,t2] l(318)[lambda(k=2),o4,eq-o5,t3] l(260)[lambda(k=1),o4,eq-o5,t7] l(312)[lambda(k=1),o4,eq-o5,t8] l(251)[lambda(k=0),o3,eq-o5,t11] l(87)[lambda(k=0),o3,eq-o5,t12] l(303)[lambda(k=0),o3,eq-o5,t14] l(88)[lambda(k=0),o3,eq-o5,t15] l(180)[lambda(k=0),o3,eq-o5,t19] l(249)[lambda(k=0),o3,eq-o5,t19] l(304)[lambda(k=0),o3,eq-o5,t19] l(179)[lambda(k=0),o3,eq-o5,t20] l(252)[lambda(k=0),o3,eq-o5,t20] l(301)[lambda(k=0),o3,eq-o5,t20] l(98)[lambda(k=2),o2,eq-o5,t5] l(190)[lambda(k=2),o2,eq-o5,t7] l(270)[lambda(k=3),o2,eq-o5,t10] l(322)[lambda(k=3),o2,eq-o5,t10] l(102)[lambda(k=3),o0,eq-o5,t3] l(108)[lambda(k=4),o0,eq-o5,t3] l(316)[lambda(k=2),o0,eq-o5,t5] l(194)[lambda(k=3),o0,eq-o5,t9] l(264)[lambda(k=2),o0,eq-o5,t11] l(200)[lambda(k=4),o0,eq-o5,t24]
+equations remaining at the end of stage 5 : 57  ; of these involving only unknowns of order < 5 : 57
+  remaining equations that factor nontrivially: 31 of 57  ; lambda-coefficients occurring in them: l(15)(k=3,o1) l(18)(k=4,o1) l(35)(k=3,o1) l(38)(k=4,o1) l(127)(k=3,o1) l(130)(k=4,o1) l(219)(k=3,o1) l(222)(k=4,o1) l(239)(k=3,o1) l(242)(k=4,o1) l(291)(k=3,o1) l(294)(k=4,o1) l(355)(k=2,o1) l(357)(k=2,o1) l(360)(k=3,o1) l(365)(k=4,o1) l(256)(k=1,o0) l(269)(k=3,o2) l(274)(k=4,o2) l(308)(k=1,o0) l(321)(k=3,o2) l(326)(k=4,o2) 
+stage 5 time ms: 446  total ms: 2185  memory KB: 16659
+
+=== stage 6 ===
+equations of w-order 6 added: 82  (already reduced to 0 by earlier substitutions: 2 )
+unknowns of w-order 6 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 7  g: 2  b: 0
+unknowns eliminated at stage 6 : 38
+  eliminated lambda_{.,1..4} :  order 1: 7; order 3: 5; order 5: 2;
+  eliminated lambda_{.,0} :  order 4: 17;
+  eliminated g :  order 2: 1; order 4: 2;
+  eliminated b :  order 3: 2; order 5: 2;
+  log:  l(359)[lambda(k=2),o5,eq-o6,t3] l(353)[lambda(k=1),o5,eq-o6,t13] l(49)[lambda(k=0),o4,eq-o6,t2] l(69)[lambda(k=0),o4,eq-o6,t2] l(50)[lambda(k=0),o4,eq-o6,t3] l(70)[lambda(k=0),o4,eq-o6,t3] l(29)[lambda(k=0),o4,eq-o6,t4] l(141)[lambda(k=0),o4,eq-o6,t4] l(9)[lambda(k=0),o4,eq-o6,t5] l(161)[lambda(k=0),o4,eq-o6,t5] l(121)[lambda(k=0),o4,eq-o6,t7] l(142)[lambda(k=0),o4,eq-o6,t9] l(162)[lambda(k=0),o4,eq-o6,t9] l(213)[lambda(k=0),o4,eq-o6,t10] l(233)[lambda(k=0),o4,eq-o6,t11] l(285)[lambda(k=0),o4,eq-o6,t11] l(344)[lambda(k=0),o4,eq-o6,t21] l(345)[lambda(k=0),o4,eq-o6,t28] l(342)[lambda(k=0),o4,eq-o6,t39] l(58)[lambda(k=4),o3,eq-o6,t0] l(78)[lambda(k=4),o3,eq-o6,t0] l(150)[lambda(k=4),o3,eq-o6,t1] l(170)[lambda(k=4),o3,eq-o6,t1] l(363)[lambda(k=3),o3,eq-o6,t21] l(38)[lambda(k=4),o1,eq-o6,t1] l(18)[lambda(k=4),o1,eq-o6,t2] l(130)[lambda(k=4),o1,eq-o6,t3] l(222)[lambda(k=4),o1,eq-o6,t3] l(242)[lambda(k=4),o1,eq-o6,t3] l(294)[lambda(k=4),o1,eq-o6,t4] l(357)[lambda(k=2),o1,eq-o6,t26] b(7)[b,o5,eq-o6,t1] b(10)[b,o5,eq-o6,t5] g(8)[g,o4,eq-o6,t6] g(7)[g,o4,eq-o6,t11] b(4)[b,o3,eq-o6,t2] b(3)[b,o3,eq-o6,t3] g(6)[g,o2,eq-o6,t2]
+equations remaining at the end of stage 6 : 12  ; of these involving only unknowns of order < 6 : 12
+  remaining equations that factor nontrivially: 12 of 12  ; lambda-coefficients occurring in them: l(256)(k=1,o0) l(269)(k=3,o2) l(274)(k=4,o2) l(308)(k=1,o0) l(321)(k=3,o2) l(326)(k=4,o2) l(333)(k=0,o0) l(349)(k=1,o1) l(362)(k=3,o3) l(367)(k=4,o3) 
+   eq 495 (w-order 5 , terms 10 , max unknown order 2 )
+      -b(5)*b(9)*D^2+b(9)^2*D^2+l(256)*b(5)*D-l(269)*b(5)*D-l(256)*b(9)*D+l(269)*b(9)*D+b(5)*b(11)*D-b(9)*b(11)*D-l(274)*b(5)+l(274)*b(9)
+   eq 497 (w-order 5 , terms 5 , max unknown order 2 )
+      -b(6)*b(9)*D^2+l(256)*b(6)*D-l(269)*b(6)*D+b(6)*b(11)*D-l(274)*b(6)
+   eq 499 (w-order 5 , terms 5 , max unknown order 2 )
+      b(9)*b(11)*D^2-l(256)*b(11)*D+l(269)*b(11)*D-b(11)^2*D+l(274)*b(11)
+   eq 500 (w-order 5 , terms 5 , max unknown order 2 )
+      b(9)*b(12)*D^2-l(256)*b(12)*D+l(269)*b(12)*D-b(11)*b(12)*D+l(274)*b(12)
+   eq 507 (w-order 5 , terms 8 , max unknown order 3 )
+      l(308)*b(5)*D-l(321)*b(5)*D-b(5)*b(8)*D-l(308)*b(9)*D+l(321)*b(9)*D+b(8)*b(9)*D-l(326)*b(5)+l(326)*b(9)
+   eq 509 (w-order 5 , terms 4 , max unknown order 3 )
+      l(308)*b(6)*D-l(321)*b(6)*D-b(6)*b(8)*D-l(326)*b(6)
+   eq 511 (w-order 5 , terms 4 , max unknown order 3 )
+      -l(308)*b(11)*D+l(321)*b(11)*D+b(8)*b(11)*D+l(326)*b(11)
+   eq 512 (w-order 5 , terms 4 , max unknown order 3 )
+      -l(308)*b(12)*D+l(321)*b(12)*D+b(8)*b(12)*D+l(326)*b(12)
+   eq 591 (w-order 6 , terms 16 , max unknown order 3 )
+      b(5)*b(6)*D^2-2*b(5)*b(8)*D^2-b(6)*b(9)*D^2+2*b(8)*b(9)*D^2-2*b(5)*D^3+2*b(9)*D^3-l(333)*b(5)*D+l(349)*b(5)*D-l(362)*b(5)*D+g(5)*b(5)*D+l(333)*b(9)*D-l(349)*b(9)*D+l(362)*b(9)*D-g(5)*b(9)*D-l(367)*b(5)+l(367)*b(9)
+   eq 593 (w-order 6 , terms 8 , max unknown order 3 )
+      b(6)^2*D^2-2*b(6)*b(8)*D^2-2*b(6)*D^3-l(333)*b(6)*D+l(349)*b(6)*D-l(362)*b(6)*D+g(5)*b(6)*D-l(367)*b(6)
+   eq 595 (w-order 6 , terms 8 , max unknown order 3 )
+      -b(6)*b(11)*D^2+2*b(8)*b(11)*D^2+2*b(11)*D^3+l(333)*b(11)*D-l(349)*b(11)*D+l(362)*b(11)*D-g(5)*b(11)*D+l(367)*b(11)
+   eq 596 (w-order 6 , terms 8 , max unknown order 3 )
+      -b(6)*b(12)*D^2+2*b(8)*b(12)*D^2+2*b(12)*D^3+l(333)*b(12)*D-l(349)*b(12)*D+l(362)*b(12)*D-g(5)*b(12)*D+l(367)*b(12)
+stage 6 time ms: 313  total ms: 2498  memory KB: 16659
+
+=== stage 7 ===
+equations of w-order 7 added: 29  (already reduced to 0 by earlier substitutions: 1 )
+unknowns of w-order 7 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 2  g: 0  b: 0
+unknowns eliminated at stage 7 : 11
+  eliminated lambda_{.,1..4} :  order 2: 2; order 4: 2;
+  eliminated lambda_{.,0} :  order 5: 6;
+  eliminated g :  order 6: 1;
+  log:  l(89)[lambda(k=0),o5,eq-o7,t9] l(305)[lambda(k=0),o5,eq-o7,t18] l(90)[lambda(k=0),o5,eq-o7,t19] l(181)[lambda(k=0),o5,eq-o7,t22] l(182)[lambda(k=0),o5,eq-o7,t22] l(253)[lambda(k=0),o5,eq-o7,t27] l(202)[lambda(k=4),o4,eq-o7,t0] l(110)[lambda(k=4),o4,eq-o7,t3] l(326)[lambda(k=4),o2,eq-o7,t3] l(274)[lambda(k=4),o2,eq-o7,t9] g(10)[g,o6,eq-o7,t6]
+equations remaining at the end of stage 7 : 4  ; of these involving only unknowns of order < 7 : 4
+  remaining equations that factor nontrivially: 4 of 4  ; lambda-coefficients occurring in them: l(333)(k=0,o0) l(349)(k=1,o1) l(362)(k=3,o3) l(367)(k=4,o3) 
+   eq 591 (w-order 6 , terms 16 , max unknown order 3 )
+      b(5)*b(6)*D^2-2*b(5)*b(8)*D^2-b(6)*b(9)*D^2+2*b(8)*b(9)*D^2-2*b(5)*D^3+2*b(9)*D^3-l(333)*b(5)*D+l(349)*b(5)*D-l(362)*b(5)*D+g(5)*b(5)*D+l(333)*b(9)*D-l(349)*b(9)*D+l(362)*b(9)*D-g(5)*b(9)*D-l(367)*b(5)+l(367)*b(9)
+   eq 593 (w-order 6 , terms 8 , max unknown order 3 )
+      b(6)^2*D^2-2*b(6)*b(8)*D^2-2*b(6)*D^3-l(333)*b(6)*D+l(349)*b(6)*D-l(362)*b(6)*D+g(5)*b(6)*D-l(367)*b(6)
+   eq 595 (w-order 6 , terms 8 , max unknown order 3 )
+      -b(6)*b(11)*D^2+2*b(8)*b(11)*D^2+2*b(11)*D^3+l(333)*b(11)*D-l(349)*b(11)*D+l(362)*b(11)*D-g(5)*b(11)*D+l(367)*b(11)
+   eq 596 (w-order 6 , terms 8 , max unknown order 3 )
+      -b(6)*b(12)*D^2+2*b(8)*b(12)*D^2+2*b(12)*D^3+l(333)*b(12)*D-l(349)*b(12)*D+l(362)*b(12)*D-g(5)*b(12)*D+l(367)*b(12)
+stage 7 time ms: 88  total ms: 2586  memory KB: 16659
+
+=== stage 8 ===
+equations of w-order 8 added: 27  (already reduced to 0 by earlier substitutions: 31 )
+unknowns of w-order 8 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 1  g: 0  b: 0
+unknowns eliminated at stage 8 : 9
+  eliminated lambda_{.,1..4} :  order 3: 1;
+  eliminated lambda_{.,0} :  order 6: 7;
+  eliminated g :  order 6: 1;
+  log:  l(30)[lambda(k=0),o6,eq-o8,t5] l(10)[lambda(k=0),o6,eq-o8,t8] l(122)[lambda(k=0),o6,eq-o8,t11] l(234)[lambda(k=0),o6,eq-o8,t11] l(286)[lambda(k=0),o6,eq-o8,t12] l(214)[lambda(k=0),o6,eq-o8,t13] l(346)[lambda(k=0),o6,eq-o8,t27] l(367)[lambda(k=4),o3,eq-o8,t13] g(9)[g,o6,eq-o8,t9]
+equations remaining at the end of stage 8 : 0  ; of these involving only unknowns of order < 8 : 0
+stage 8 time ms: 55  total ms: 2641  memory KB: 16659
+
+=== stage 9 ===
+equations of w-order 9 added: 6  (already reduced to 0 by earlier substitutions: 14 )
+unknowns of w-order 9 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 0  g: 0  b: 0
+unknowns eliminated at stage 9 : 2
+  eliminated lambda_{.,0} :  order 7: 2;
+  log:  l(254)[lambda(k=0),o7,eq-o9,t8] l(306)[lambda(k=0),o7,eq-o9,t14]
+equations remaining at the end of stage 9 : 0  ; of these involving only unknowns of order < 9 : 0
+stage 9 time ms: 19  total ms: 2660  memory KB: 16659
+
+=== stage 10 ===
+equations of w-order 10 added: 3  (already reduced to 0 by earlier substitutions: 31 )
+unknowns of w-order 10 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 0  g: 0  b: 0
+unknowns eliminated at stage 10 : 1
+  eliminated lambda_{.,0} :  order 8: 1;
+  log:  l(347)[lambda(k=0),o8,eq-o10,t21]
+equations remaining at the end of stage 10 : 0  ; of these involving only unknowns of order < 10 : 0
+stage 10 time ms: 15  total ms: 2675  memory KB: 16659
+
+=== stage 11 ===
+equations of w-order 11 added: 0  (already reduced to 0 by earlier substitutions: 12 )
+unknowns of w-order 11 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 0  g: 0  b: 0
+unknowns eliminated at stage 11 : 0
+  log: 
+equations remaining at the end of stage 11 : 0  ; of these involving only unknowns of order < 11 : 0
+stage 11 time ms: 10  total ms: 2685  memory KB: 16659
+
+=== stage 12 ===
+equations of w-order 12 added: 0  (already reduced to 0 by earlier substitutions: 18 )
+unknowns of w-order 12 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 0  g: 0  b: 0
+unknowns eliminated at stage 12 : 0
+  log: 
+equations remaining at the end of stage 12 : 0  ; of these involving only unknowns of order < 12 : 0
+stage 12 time ms: 10  total ms: 2696  memory KB: 16659
+
+=== stage 13 ===
+equations of w-order 13 added: 0  (already reduced to 0 by earlier substitutions: 6 )
+unknowns of w-order 13 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 0  g: 0  b: 0
+unknowns eliminated at stage 13 : 0
+  log: 
+equations remaining at the end of stage 13 : 0  ; of these involving only unknowns of order < 13 : 0
+stage 13 time ms: 10  total ms: 2706  memory KB: 16659
+
+=== stage 14 ===
+equations of w-order 14 added: 0  (already reduced to 0 by earlier substitutions: 6 )
+unknowns of w-order 14 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 0  g: 0  b: 0
+unknowns eliminated at stage 14 : 0
+  log: 
+equations remaining at the end of stage 14 : 0  ; of these involving only unknowns of order < 14 : 0
+stage 14 time ms: 11  total ms: 2718  memory KB: 16659
+
+=== stage 15 ===
+equations of w-order 15 added: 0  (already reduced to 0 by earlier substitutions: 2 )
+unknowns of w-order 15 : lambda_{.,5}: 0  lambda_{.,1..4}: 0  lambda_{.,0}: 0  g: 0  b: 0
+unknowns eliminated at stage 15 : 0
+  log: 
+equations remaining at the end of stage 15 : 0  ; of these involving only unknowns of order < 15 : 0
+stage 15 time ms: 11  total ms: 2729  memory KB: 16659
+
+=== result of the order-by-order elimination ===
+substitutions: 291
+free unknowns: 103  ; free lambda: 94  ; free A-coefficients: 9
+free A-coefficients (D, g, b): g(5) b(2) b(5) b(6) b(8) b(9) b(11) b(12) D 
+free lambda: l(2) l(6) l(15) l(17) l(22) l(26) l(35) l(37) l(43) l(44) l(55) l(57) l(63) l(64) l(75) l(77) l(83) l(84) l(99) l(100) l(101) l(103) l(105) l(106) l(107) l(109) l(114) l(118) l(127) l(129) l(135) l(136) l(147) l(149) l(155) l(156) l(167) l(169) l(175) l(176) l(191) l(192) l(193) l(195) l(197) l(198) l(199) l(201) l(206) l(210) l(219) l(221) l(226) l(230) l(239) l(241) l(246) l(250) l(256) l(262) l(267) l(268) l(269) l(271) l(272) l(273) l(278) l(282) l(291) l(293) l(298) l(302) l(308) l(314) l(319) l(320) l(321) l(323) l(324) l(325) l(330) l(333) l(334) l(335) l(339) l(343) l(349) l(355) l(360) l(361) l(362) l(364) l(365) l(366) 
+eliminated: lambda 277  g 9  b 5  ; eliminated g,b: b(1) g(1) g(3) g(4) g(2) b(7) b(10) g(8) g(7) b(4) b(3) g(6) g(10) g(9) 
+leftover equations: 0  (nonzero entries in the whole list: 0 )
+saved subs_n1c1.txt, free_n1c1.txt, left_n1c1.txt
+expression sizes (terms): total 1826  max 39
+pivot coefficients that are not nonzero rational constants: 0
+pivot coefficients (in elimination order): -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 -1 1 1 -1 1 1 -1 1 1 1 1 -1 1 1 -1 1 1 -1 -1 1 -1 1 1 -1 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 -1 1 -1 1 -1 -1 1 1 1 1 -1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -1 1 1 1 1 1 1 2 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1 -1 -1 -1 1 -1 -1 1 1 -1 1 -1 1 1 1 2 2 2 2 2 -1 1 1 1 -1 -1 -1 1 -1 1 1 1 1 1 1 -1 1 -1 -1 -1 1 -1 -1 1 1 -1 -1 -1 1 1 -1 -1 1 1 1 1 -1 1 1 -1 -1 -1 -1 -1 -1 -1 -1 2 -2 2 2 -2 -2 -2 -2 -2 2 -1 -1 1 -1 1 1 -1 -1 1 1 -1 -1 -1 1 1 1 -1 -1 -1 1 -2 -2 2 -2 4 4 -4 4 -4 4 -1 1 -1 -1 -1 -1 1 -1 1 -1 1 -1 1 -1 -1 1 -1 -1 1 -1 -1 -1 -1 2 2 2 2 2 2 2 -4 -2 4 -1 -1 -4 -4 -2 -1 1 -1 -1 1 1 -1 -1 2 2 1 1 1 1 1 1 -1 1 2 1 1 1 1 
+total ms: 2745  memory KB: 16659

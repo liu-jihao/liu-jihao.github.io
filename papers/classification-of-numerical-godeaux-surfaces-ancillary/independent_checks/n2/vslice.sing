@@ -1,0 +1,48 @@
+// vslice.sing -- independent check of the q-slice of case n2 (PLAN A6): the unipotent group U = A^8,
+// v_j -> v_j - w*u_j (j = 2,3,4), v5 -> v5 - y0*u5, acts on A by A -> M^T A M, M = I + sum_j w*u_j*E_{j0} + y0*u5*E_{50};
+// general q1..q4 (all 20 coefficients), general G (10), c a parameter.
+ring S = (0, c), (p0, p1, r2, r3, s2, s3, t2, t3,
+  a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20,
+  g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, y3, y2, y1, w), dp;
+poly y0 = w^2;
+poly Q = y2*y3 - y1^2;
+poly G = g1*y3^3 + g2*y1^2*y3 + g3*y2*y3^2 + g4*y1^2*y2 + g5*y2^2*y3 + g6*y2^3 + g7*y0*y1*y3 + g8*y0*y1*y2 + g9*y0^2*y3 + g10*y0^2*y2;
+poly q1 = a1*y0*y2 + a2*y0*y3 + a3*y1*y2 + a4*y1*y3;
+poly q2 = a5*y0*y2 + a6*y0*y3 + a7*y1*y2 + a8*y1*y3;
+poly q3 = a9*y0^2 + a10*y0*y1 + a11*y1^2 + a12*y2^2 + a13*y2*y3 + a14*y3^2;
+poly q4 = a15*y0^2 + a16*y0*y1 + a17*y1^2 + a18*y2^2 + a19*y2*y3 + a20*y3^2;
+matrix A[6][6] =
+  y0*G, w*q1, w*q2, w*q3, w*q4, Q,
+  w*q1, y2,   0,    y1,   0,    w,
+  w*q2, 0,    y3,   c*y0, y1,   0,
+  w*q3, y1,   c*y0, y3,   0,    0,
+  w*q4, 0,    y1,   0,    y2,   0,
+  Q,    w,    0,    0,    0,    0;
+poly u2 = p0*y0 + p1*y1; poly u3 = r2*y2 + r3*y3; poly u4 = s2*y2 + s3*y3; poly u5 = t2*y2 + t3*y3;
+matrix M[6][6]; int i; int j;
+for (i = 1; i <= 6; i++) { M[i, i] = 1; }
+M[3, 1] = w*u2; M[4, 1] = w*u3; M[5, 1] = w*u4; M[6, 1] = y0*u5;
+matrix A2 = transpose(M)*A*M;
+int unch = 1;
+for (i = 2; i <= 6; i++) { for (j = 2; j <= 6; j++) { if (A2[i, j] != A[i, j]) { unch = 0; } } }
+"rows/columns v1..v5 unchanged: " + string(unch);
+"A_05 unchanged: " + string(A2[1, 6] == A[1, 6]);
+"A_00 change divisible by y0: " + string(reduce(A2[1, 1] - A[1, 1], std(ideal(y0))) == 0);
+poly d1 = (A2[2, 1] - A[2, 1]) / w; poly d4 = (A2[5, 1] - A[5, 1]) / w;
+"delta q1 = " + string(d1);
+"delta q4 = " + string(d4);
+"delta q2 = " + string((A2[3, 1] - A[3, 1]) / w);
+"delta q3 = " + string((A2[4, 1] - A[4, 1]) / w);
+// killed coefficients: q1 at y0y2, y0y3, y1y2, y1y3; q4 at y0y1, y1^2, y2^2, y2y3
+list km = list(d1, y0*y2), list(d1, y0*y3), list(d1, y1*y2), list(d1, y1*y3), list(d4, y0*y1), list(d4, y1^2), list(d4, y2^2), list(d4, y2*y3);
+ideal pv = p0, p1, r2, r3, s2, s3, t2, t3;
+matrix T[8][8]; poly cfm; matrix CC;
+for (i = 1; i <= 8; i++) {
+  CC = coef(km[i][1], w*y1*y2*y3);
+  cfm = 0;
+  for (j = 1; j <= ncols(CC); j++) { if (CC[1, j] == km[i][2]) { cfm = CC[2, j]; } }
+  for (j = 1; j <= 8; j++) { T[i, j] = diff(cfm, pv[j]); }
+}
+print(T);
+"determinant of the 8x8 matrix (killed coefficients vs p0,p1,r2,r3,s2,s3,t2,t3): " + string(det(T));
+quit;

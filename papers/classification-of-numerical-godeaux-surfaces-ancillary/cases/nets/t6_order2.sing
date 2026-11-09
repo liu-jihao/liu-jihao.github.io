@@ -1,0 +1,192 @@
+// T6 (case nets): order-2 normalization, verified symbolically on the full matrix A of case_common.md section 1
+// (general G with 10 coefficients g(1..10), all 20 q-coefficients f(1..20), general M' = [[m13,m14],[m23,m24]]),
+// on top of each of N1(D), N2, N3.  Rows/cols of A are v0..v5 = Singular indices 1..6.
+//  (i)   P = I + k3*w*E_{53} + k4*w*E_{54} (v5 -> v5 + k3 w v3 + k4 w v4): adds k_j*y0 to a_{1j} and k_j*Q to q_j, nothing else;
+//  (ii)  y1 -> y1 + be*y0, then P = I + w*u*E_{10}, u = 2*be*y1 + be^2*y0: restores A_05 = Q and adds be*I to M';
+//  (iii) hence M' -> c*E_23 with c = m23;
+//  (iv)  diagonal torus of the order <= 2 normal form, with the weights of c and D.
+// NB: matrices are built entrywise; Singular parses "A + (poly sum)*B" as a module sum (column concatenation).
+< "nets_common.sing";
+int tt = timer;
+ring R = 0, (w,y1,y2,y3, D, m13,m14,m23,m24, g(1..10), f(1..20), k3,k4,be), dp;
+poly y0 = w^2;
+poly G = g(1)*y3^3 + g(2)*y1^2*y3 + g(3)*y2*y3^2 + g(4)*y1^2*y2 + g(5)*y2^2*y3 + g(6)*y2^3
+       + g(7)*y0*y1*y3 + g(8)*y0*y1*y2 + g(9)*y0^2*y3 + g(10)*y0^2*y2;
+poly q1 = f(1)*y0*y2 + f(2)*y0*y3 + f(3)*y1*y2 + f(4)*y1*y3;
+poly q2 = f(5)*y0*y2 + f(6)*y0*y3 + f(7)*y1*y2 + f(8)*y1*y3;
+poly q3 = f(9)*y0^2 + f(10)*y0*y1 + f(11)*y1^2 + f(12)*y2^2 + f(13)*y2*y3 + f(14)*y3^2;
+poly q4 = f(15)*y0^2 + f(16)*y0*y1 + f(17)*y1^2 + f(18)*y2^2 + f(19)*y2*y3 + f(20)*y3^2;
+matrix Mp[2][2] = m13, m14, m23, m24;
+
+// full A: net al (4x4), order-2 part y0*[[0,Mp],[Mp^t,0]], Q, column 5 = (Q, w, 0, 0, 0, 0)
+proc fullA(matrix al, matrix M2, poly Q, poly GG, poly p1, poly p2, poly p3, poly p4)
+{
+  matrix A[6][6];
+  int u, v;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { A[u+1, v+1] = al[u, v]; } }
+  for (u = 1; u <= 2; u++) { for (v = 1; v <= 2; v++) {
+    A[u+1, v+3] = A[u+1, v+3] + w^2*M2[u, v];
+    A[v+3, u+1] = A[v+3, u+1] + w^2*M2[u, v]; } }
+  A[1,1] = w^2*GG;
+  A[1,2] = w*p1; A[2,1] = w*p1;  A[1,3] = w*p2; A[3,1] = w*p2;
+  A[1,4] = w*p3; A[4,1] = w*p3;  A[1,5] = w*p4; A[5,1] = w*p4;
+  A[1,6] = Q; A[6,1] = Q; A[2,6] = w; A[6,2] = w;
+  return(A);
+}
+intvec dl = 1, -1, -1, 1, 1, -1;     // sigma-signs of v0..v5
+proc sigmacheck(matrix A)            // sigma(A_jk) = -dl_j dl_k A_jk
+{
+  map sg = basering, -w, y1, -y2, -y3, D, m13, m14, m23, m24, g(1..10), f(1..20), k3, k4, be;
+  matrix SA = sg(A);
+  int u, v; int ok = 1;
+  for (u = 1; u <= 6; u++) { for (v = 1; v <= 6; v++) { if (SA[u,v] + dl[u]*dl[v]*A[u,v] != 0) { ok = 0; } } }
+  return(ok);
+}
+proc Pcheck(matrix P)                // sigma(P_jk) = dl_j dl_k P_jk  (P commutes with sigma)
+{
+  map sg = basering, -w, y1, -y2, -y3, D, m13, m14, m23, m24, g(1..10), f(1..20), k3, k4, be;
+  matrix SP = sg(P);
+  int u, v; int ok = 1;
+  for (u = 1; u <= 6; u++) { for (v = 1; v <= 6; v++) { if (SP[u,v] - dl[u]*dl[v]*P[u,v] != 0) { ok = 0; } } }
+  return(ok);
+}
+proc shapecheck(matrix A)            // A_00 divisible by y0, A_0k divisible by w (k = 1..4)
+{
+  int ok = 1; int k;
+  if (subst(A[1,1], w, 0) != 0 || subst(diff(A[1,1], w), w, 0) != 0) { ok = 0; }
+  for (k = 2; k <= 5; k++) { if (subst(A[1,k], w, 0) != 0) { ok = 0; } }
+  return(ok);
+}
+
+proc runall(matrix al, poly Q, string nm)
+{
+  "================= normal form " + nm + ":  Q = " + string(Q);
+  matrix A = fullA(al, Mp, Q, G, q1, q2, q3, q4);
+  "A is sigma-equivariant (sigma(A_jk) = -d_j d_k A_jk) :", sigmacheck(A);
+  // ---- (i)
+  matrix P1 = idm(6); P1[6,4] = k3*w; P1[6,5] = k4*w;
+  matrix A1 = transpose(P1)*A*P1;
+  matrix A1p = A;
+  A1p[2,4] = A1p[2,4] + k3*w^2;  A1p[4,2] = A1p[4,2] + k3*w^2;
+  A1p[2,5] = A1p[2,5] + k4*w^2;  A1p[5,2] = A1p[5,2] + k4*w^2;
+  A1p[1,4] = A1p[1,4] + k3*w*Q;  A1p[4,1] = A1p[4,1] + k3*w*Q;
+  A1p[1,5] = A1p[1,5] + k4*w*Q;  A1p[5,1] = A1p[5,1] + k4*w*Q;
+  "(i)   P = I + k3*w*E_53 + k4*w*E_54 commutes with sigma :", Pcheck(P1);
+  "      P^t*A*P - [A with a13 += k3*y0, a14 += k4*y0, q3 += k3*Q, q4 += k4*Q] == 0 :", iszero(A1 - A1p);
+  // ---- (ii)
+  map sb = basering, w, y1 + be*w^2, y2, y3, D, m13, m14, m23, m24, g(1..10), f(1..20), k3, k4, be;
+  matrix As = sb(A);
+  poly uu = 2*be*y1 + be^2*w^2;
+  matrix P2 = idm(6); P2[2,1] = w*uu;
+  matrix A2 = transpose(P2)*As*P2;
+  "(ii)  y1 -> y1 + be*y0, then P = I + w*u*E_10, u = 2*be*y1 + be^2*y0;  P commutes with sigma :", Pcheck(P2);
+  "      A_05 restored: (P^t*A(y1+be*y0)*P)_05 - Q == 0 :", A2[1,6] - Q == 0;
+  matrix A2p = A;                                    // rows/cols v1..v5 predicted: a-block + be*y0*(E13+E31+E24+E42)
+  A2p[2,4] = A2p[2,4] + be*w^2; A2p[4,2] = A2p[4,2] + be*w^2;
+  A2p[3,5] = A2p[3,5] + be*w^2; A2p[5,3] = A2p[5,3] + be*w^2;
+  int u, v; int ok = 1;
+  for (u = 2; u <= 6; u++) { for (v = 2; v <= 6; v++) { if (A2[u,v] - A2p[u,v] != 0) { ok = 0; } } }
+  "      rows/cols v1..v5 = those of A with M' replaced by M' + be*I (net, column 5 unchanged) :", ok;
+  // row 0 formulas: q_k' = q_k(sub) + u*a_{1k}(sub), G' = G(sub) + 2u*q1(sub) + u^2*a11(sub)
+  ok = 1;
+  for (v = 2; v <= 5; v++) { if (A2[1,v] - (As[1,v] + w*uu*As[2,v]) != 0) { ok = 0; } }
+  if (A2[1,1] - (As[1,1] + 2*w*uu*As[2,1] + w^2*uu^2*As[2,2]) != 0) { ok = 0; }
+  "      row 0: q_k' = q_k(y1+be*y0) + u*a_1k(y1+be*y0), G' = G(..) + 2u*q1(..) + u^2*a11(..) :", ok;
+  "      new matrix has the shape of case_common section 1 (y0 | A_00, w | A_0k) and is sigma-equivariant :", shapecheck(A2), sigmacheck(A2);
+  // ---- (iii) composite: (ii) with be = -m24, then (i) with k3 = -(m13 - m24), k4 = -m14
+  matrix B1 = subst(A2, be, -m24);
+  matrix P3 = idm(6); P3[6,4] = -(m13 - m24)*w; P3[6,5] = -m14*w;
+  matrix B2 = transpose(P3)*B1*P3;
+  matrix target[4][4];
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { target[u,v] = al[u,v]; } }
+  target[2,3] = target[2,3] + m23*w^2; target[3,2] = target[3,2] + m23*w^2;
+  ok = 1;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { if (B2[u+1,v+1] - target[u,v] != 0) { ok = 0; } } }
+  "(iii) after (ii) with be = -m24 and (i) with k3 = m24 - m13, k4 = -m14: a-block = net + m23*y0*(E_23 + E_32) :", ok;
+  "      A_05 = Q, column 5 = (Q, w, 0, 0, 0, 0) :", B2[1,6] - Q == 0 && B2[2,6] - w == 0 && B2[3,6] == 0 && B2[4,6] == 0 && B2[5,6] == 0 && B2[6,6] == 0;
+  "      shape (y0 | A_00, w | A_0k) and sigma-equivariance :", shapecheck(B2), sigmacheck(B2);
+}
+
+matrix I2[2][2] = 1,0,0,1;
+matrix X1[2][2] = D*y3, y2, y2, y3;   matrix X2[2][2] = -y3, y2, y2, -D*y3;
+runall(blk4(X1, y1*I2, y1*I2, X2), y2^2 - D*y3^2 - y1^2, "N1(D) (D a variable)");
+matrix C1[2][2] = y2, 0, 0, y3;       matrix C2[2][2] = y3, 0, 0, y2;
+runall(blk4(C1, y1*I2, y1*I2, C2), y2*y3 - y1^2, "N2");
+matrix E1[2][2] = y3, y2, y2, 0;      matrix E2[2][2] = 0, y2, y2, -y3;
+runall(blk4(E1, y1*I2, y1*I2, E2), y2^2 - y1^2, "N3");
+"time for (i)-(iii) (s):", timer - tt;
+
+// ---- (iv) diagonal torus of the order <= 2 normal forms:  w -> e^OM w, y_i -> e^{S_i} y_i, P = diag(e^{G_0},...,e^{G_5});
+// D -> e^{dD} D, c -> e^{dc} c.  A term kappa*D^d*c^e*w^a*y^b of A_jk is preserved iff G_j + G_k + a*OM + b.S - d*dD - e*dc = 0.
+ring T = 0, (w,y1,y2,y3,D,c), dp;
+matrix I2[2][2] = 1,0,0,1;
+proc nfmat(matrix al, poly Q)
+{
+  matrix A[6][6];
+  int u, v;
+  for (u = 1; u <= 4; u++) { for (v = 1; v <= 4; v++) { A[u+1, v+1] = al[u, v]; } }
+  A[3,4] = A[3,4] + c*w^2; A[4,3] = A[4,3] + c*w^2;
+  A[1,6] = Q; A[6,1] = Q; A[2,6] = w; A[6,2] = w;
+  return(A);
+}
+proc termlist(matrix A)               // list of intvecs (j, k, a, b1, b2, b3, d, e) for all terms of A_jk, j <= k
+{
+  list Lt; int j, k, m; poly t; poly pp; intvec ev;
+  for (j = 1; j <= 6; j++) { for (k = j; k <= 6; k++) {
+    pp = A[j,k];
+    for (m = 1; m <= size(pp); m++) {
+      t = pp[m]; ev = leadexp(t);
+      Lt = insert(Lt, intvec(j-1, k-1, ev[1], ev[2], ev[3], ev[4], ev[5], ev[6]), size(Lt));
+    } } }
+  return(Lt);
+}
+matrix X1[2][2] = D*y3, y2, y2, y3;   matrix X2[2][2] = -y3, y2, y2, -D*y3;
+list TL1 = termlist(nfmat(blk4(X1, y1*I2, y1*I2, X2), y2^2 - D*y3^2 - y1^2));
+matrix C1[2][2] = y2, 0, 0, y3;       matrix C2[2][2] = y3, 0, 0, y2;
+list TL2 = termlist(nfmat(blk4(C1, y1*I2, y1*I2, C2), y2*y3 - y1^2));
+matrix E1[2][2] = y3, y2, y2, 0;      matrix E2[2][2] = 0, y2, y2, -y3;
+list TL3 = termlist(nfmat(blk4(E1, y1*I2, y1*I2, E2), y2^2 - y1^2));
+
+ring W = 0, (G0,G1,G2,G3,G4,G5,OM,S1,S2,S3,dD,dc), dp;
+option(redSB);
+proc torus(list Lt, string nm)
+{
+  "================= (iv) diagonal torus of " + nm + " (orders <= 2, column at v1, c*y0 at (v2,v3))";
+  ideal Gv = G0,G1,G2,G3,G4,G5;
+  ideal L; int m; intvec t;
+  for (m = 1; m <= size(Lt); m++) {
+    t = Lt[m];
+    L = L, Gv[t[1]+1] + Gv[t[2]+1] + t[3]*OM + t[4]*S1 + t[5]*S2 + t[6]*S3 - t[7]*dD - t[8]*dc;
+  }
+  int hasD = 0;
+  for (m = 1; m <= size(Lt); m++) { t = Lt[m]; if (t[7] > 0) { hasD = 1; } }
+  L = simplify(L, 2+4);
+  "number of term conditions:", size(L);
+  if (hasD == 0) { L = L, dD; "   (D does not occur in this normal form: dD = 0 imposed)"; }
+  ideal LS = std(L);
+  "rank:", size(LS), "  dimension of the diagonal torus (12 unknowns incl. dD, dc):", 12 - size(LS);
+  "weight of c (dc) as a function of the free log-weights:", reduce(dc, LS);
+  "weight of D (dD) as a function of the free log-weights:", reduce(dD, LS);
+  ideal U = G0,G1,G2,G3,G4,G5,OM,S1,S2,S3;
+  "general element:"; for (m = 1; m <= 10; m++) { "   " + string(U[m]) + " = " + string(reduce(U[m], LS)); }
+  // grading direction: G_j = c_j - 4 = (-4,-1,-1,-1,-1,0), OM = 1, S = 2, dD = dc = 0
+  ideal Lg = L;
+  Lg = subst(Lg, G0, -4); Lg = subst(Lg, G1, -1); Lg = subst(Lg, G2, -1); Lg = subst(Lg, G3, -1); Lg = subst(Lg, G4, -1); Lg = subst(Lg, G5, 0);
+  Lg = subst(Lg, OM, 1); Lg = subst(Lg, S1, 2); Lg = subst(Lg, S2, 2); Lg = subst(Lg, S3, 2); Lg = subst(Lg, dD, 0); Lg = subst(Lg, dc, 0);
+  "grading direction (G = (-4,-1,-1,-1,-1,0), OM = 1, S = (2,2,2), dD = dc = 0) is a solution :", size(simplify(Lg,2)) == 0;
+  // the scaling s: w -> s w, v0 -> s v0, v5 -> v5/s (G0 = 1, G5 = -1, OM = 1, all else 0) with dc = 2
+  ideal Ls = L;
+  Ls = subst(Ls, G0, 1); Ls = subst(Ls, G1, 0); Ls = subst(Ls, G2, 0); Ls = subst(Ls, G3, 0); Ls = subst(Ls, G4, 0); Ls = subst(Ls, G5, -1);
+  Ls = subst(Ls, OM, 1); Ls = subst(Ls, S1, 0); Ls = subst(Ls, S2, 0); Ls = subst(Ls, S3, 0); Ls = subst(Ls, dD, 0); Ls = subst(Ls, dc, 2);
+  "scaling s (G0 = 1, G5 = -1, OM = 1; i.e. w -> s*w, P = diag(s,1,1,1,1,1/s)) is a solution with weight dc = 2, dD = 0 :", size(simplify(Ls,2)) == 0;
+  ideal Lc = std(L + ideal(dc));
+  "dimension of the subtorus fixing c (dc = 0):", 12 - size(Lc), "  [includes the grading direction]";
+  "   weight of D on it:", reduce(dD, Lc);
+}
+torus(TL1, "N1(D)");
+torus(TL2, "N2");
+torus(TL3, "N3");
+
+"total time (s):", timer - tt;
+"peak memory (KB, Singular memory(2)):", memory(2) div 1024;
+quit;

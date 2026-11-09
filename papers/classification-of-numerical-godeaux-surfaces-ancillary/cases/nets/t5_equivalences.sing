@@ -1,0 +1,132 @@
+// T5 (case nets): explicit sigma-equivariant equivalences of pairs (net, column) at orders w^0, w^1.
+// A "pair matrix" is the 6x6 matrix (rows/cols v0..v5) with the net in rows/cols v1..v4, A_05 = A_50 = Q and
+// column 5 = (Q, c1*w, c2*w, 0, 0, 0).  An equivalence is  A'(w,y) = P^t * A(s_w*w, h*y) * P  with
+// P = diag(g0, gI, gII, g5) (gI on v1,v2; gII on v3,v4) and h = diag(h1, h23) on (y1 | y2, y3): sigma-equivariant.
+// The substitution (w, y) -> (s_w*w, h*y) is a ring map phi; we check  P^t * phi(A) * P - A' == 0  exactly.
+< "nets_common.sing";
+int tt = timer;
+
+// orders <= 2 normal-form matrix: pair matrix plus the order-2 entry cc*y0 at (v2,v3), (v3,v2)
+proc nf2(matrix al, poly Q, poly ww, cc1, cc2, cc)
+{
+  matrix A = pairmat(al, Q, ww, cc1, cc2);
+  A[3,4] = A[3,4] + cc*ww^2;
+  A[4,3] = A[4,3] + cc*ww^2;
+  return(A);
+}
+
+// ======================= (a) (N2, column (1:1)) ~ (N1(1), column at v1), over Q(i)
+ring Ri = (0,i), (w,y1,y2,y3), dp;
+minpoly = i^2 + 1;
+matrix I2[2][2] = 1,0,0,1;
+matrix C1[2][2] = y2,0,0,y3;          matrix C2[2][2] = y3,0,0,y2;
+matrix N2 = blk4(C1, y1*I2, y1*I2, C2);
+poly QN2 = y2*y3 - y1^2;
+matrix B1[2][2] = y3,y2,y2,y3;        matrix B2m[2][2] = -y3,y2,y2,-y3;
+matrix N11 = blk4(B1, y1*I2, y1*I2, B2m);
+poly QN11 = y2^2 - y3^2 - y1^2;
+"=== (a) source: N2 with column (c1,c2) = (1,1);  target: N1(1) with column (1,0)";
+map phia = Ri, -w/8, (i/2)*y1, (y3-y2)/2, (y2+y3)/2;
+matrix gIa[2][2] = 1,-1,  1,1;
+matrix gIIa[2][2] = -i,i,  -i,-i;           // = (i/2)^(-1) * (gIa^t)^(-1)
+matrix Pa = blkdiag6(1, gIa, gIIa, -4);
+"change: w -> -w/8, y1 -> (i/2)*y1, y2 -> (y3 - y2)/2, y3 -> (y2 + y3)/2;  gI = [[1,-1],[1,1]], gII = -i*[[1,-1],[1,1]], g0 = 1, g5 = -4";
+"   net:     gI^t*D1_N2(hy)*gI - D1_N1(1) == 0 :", iszero(transpose(gIa)*phia(C1)*gIa - B1);
+"            gII^t*D2_N2(hy)*gII - D2_N1(1) == 0 :", iszero(transpose(gIIa)*phia(C2)*gIIa - B2m);
+"            gI^t*((i/2) y1 I)*gII - y1 I == 0 :", iszero(transpose(gIa)*((i/2)*y1*I2)*gIIa - y1*I2);
+"   Q_N2(hy) =", phia(QN2), "  = -(1/4)*Q_N1(1) :", phia(QN2) + QN11/4 == 0, "  so g0*g5 = -4 restores A_05 = Q";
+"   column: gI^t*(1,1)^t = (2, 0)^t, times s_w*g5 = (-1/8)*(-4) = 1/2 gives (1, 0)";
+matrix Sa = pairmat(N2, QN2, w, 1, 1);  matrix Ta = pairmat(N11, QN11, w, 1, 0);
+"   P^t * A_N2,(1,1)(phi) * P - A_N1(1),(1,0) == 0 :", iszero(transpose(Pa)*phia(Sa)*Pa - Ta);
+"   the change commutes with sigma (diagonal in the sigma-eigenspaces): P block-diagonal, h = diag(i/2, h23), w -> -w/8.";
+
+// ======================= reduction of an arbitrary column for the net N2 (torus and swap), and for N3 (torus, shear)
+ring Rp = (0,c1,c2), (w,y1,y2,y3), dp;
+matrix I2[2][2] = 1,0,0,1;
+matrix C1[2][2] = y2,0,0,y3;          matrix C2[2][2] = y3,0,0,y2;
+matrix N2 = blk4(C1, y1*I2, y1*I2, C2);
+poly QN2 = y2*y3 - y1^2;
+"=== N2: an arbitrary column (c1, c2) with c1*c2 != 0 is moved to (1, 1) by the torus (m1, m2) = (1/c1, 1/c2)";
+number m1 = 1/c1; number m2 = 1/c2;
+map phit = Rp, w, y1/(m1*m2), y2/m1^2, y3/m2^2;
+matrix gIt[2][2] = m1,0,0,m2;         matrix gIIt[2][2] = m2,0,0,m1;
+matrix Pt = blkdiag6((m1*m2)^2, gIt, gIIt, 1);
+"   P = diag((m1 m2)^2, m1, m2, m2, m1, 1), h = (y1/(m1 m2), y2/m1^2, y3/m2^2), w fixed:";
+matrix St = pairmat(N2, QN2, w, c1, c2);  matrix Tt = pairmat(N2, QN2, w, 1, 1);
+"   P^t * A_N2,(c1,c2)(phi) * P - A_N2,(1,1) == 0 :", iszero(transpose(Pt)*phit(St)*Pt - Tt);
+"=== N2: the column (0, 1) is moved to (1, 0) by the swap y2 <-> y3, v1 <-> v2, v3 <-> v4";
+map phis = Rp, w, y1, y3, y2;
+matrix gSw[2][2] = 0,1,1,0;
+matrix Ps = blkdiag6(1, gSw, gSw, 1);
+matrix Ss = pairmat(N2, QN2, w, 0, 1);  matrix Ts = pairmat(N2, QN2, w, 1, 0);
+"   P^t * A_N2,(0,1)(phi) * P - A_N2,(1,0) == 0 :", iszero(transpose(Ps)*phis(Ss)*Ps - Ts);
+matrix E1[2][2] = y3,y2,y2,0;         matrix E2[2][2] = 0,y2,y2,-y3;
+matrix N3 = blk4(E1, y1*I2, y1*I2, E2);
+poly QN3 = y2^2 - y1^2;
+"=== N3: an arbitrary column (c1, c2) with c2 != 0 is moved to (0, 1) by the shear e = 2*c1/c2 and the scaling g0 = c2, g5 = 1/c2";
+number ee = 2*c1/c2;
+map phiu = Rp, w, y1, y2, y3 + ee*y2;
+matrix gIu[2][2] = 1,0,-ee/2,1;       matrix gIIu[2][2] = 1,ee/2,0,1;
+matrix Pu = blkdiag6(c2, gIu, gIIu, 1/c2);
+matrix Su = pairmat(N3, QN3, w, c1, c2);  matrix Tu = pairmat(N3, QN3, w, 0, 1);
+"   P^t * A_N3,(c1,c2)(phi) * P - A_N3,(0,1) == 0 :", iszero(transpose(Pu)*phiu(Su)*Pu - Tu);
+
+// ======================= (b) (N3, column at v2) ~ (N1(0), column at v1)
+ring Rq = 0, (w,y1,y2,y3), dp;
+matrix I2[2][2] = 1,0,0,1;
+matrix E1[2][2] = y3,y2,y2,0;         matrix E2[2][2] = 0,y2,y2,-y3;
+matrix N3 = blk4(E1, y1*I2, y1*I2, E2);
+matrix A1[2][2] = 0,y2,y2,y3;         matrix A2[2][2] = -y3,y2,y2,0;
+matrix N10 = blk4(A1, y1*I2, y1*I2, A2);
+poly Q0 = y2^2 - y1^2;
+"=== (b) source: N3 with column (0,1);  target: N1(0) with column (1,0);  P = diag(1, (v1 v2), (v3 v4), 1), no coordinate change";
+matrix gSw[2][2] = 0,1,1,0;
+matrix Pb = blkdiag6(1, gSw, gSw, 1);
+"   P^t * A_N3,(0,1) * P - A_N1(0),(1,0) == 0 :", iszero(transpose(Pb)*pairmat(N3, Q0, w, 0, 1)*Pb - pairmat(N10, Q0, w, 1, 0));
+"   (with the order-2 entry: c*y0 at (v2,v3) of N3 goes to (v1,v4); it is re-normalized by T6)";
+
+// ======================= (c) (N1(D), v1) ~ (N1(1), v1) for D != 0;  D = r^4, r != 0 (every D != 0 has a 4th root)
+ring Rr = (0,r,c), (w,y1,y2,y3), dp;
+matrix I2[2][2] = 1,0,0,1;
+proc N1net(number DD)
+{
+  matrix I2[2][2] = 1,0,0,1;
+  matrix X1[2][2] = DD*y3, y2, y2, y3;
+  matrix X2[2][2] = -y3, y2, y2, -DD*y3;
+  return(blk4(X1, y1*I2, y1*I2, X2));
+}
+number DD = r^4;
+poly QD = y2^2 - DD*y3^2 - y1^2;
+poly Q1 = y2^2 - y3^2 - y1^2;
+"=== (c) version 1 (P = diag(1, gI, gII, 1)): y3 -> y3/sqrt(D) = y3/r^2, gI = diag(D^(-1/4), D^(1/4)), gII = diag(D^(1/4), D^(-1/4)), w -> D^(1/4) w";
+map phic = Rr, r*w, y1, y2, y3/r^2;
+matrix gIc[2][2] = 1/r,0,0,r;         matrix gIIc[2][2] = r,0,0,1/r;
+matrix Pc = blkdiag6(1, gIc, gIIc, 1);
+matrix Sc0 = nf2(N1net(DD), QD, w, 1, 0, 0);  matrix Tc0 = nf2(N1net(number(1)), Q1, w, 1, 0, 0);
+"   pair (net, Q, column):  P^t * A_N1(D),(1,0)(phi) * P - A_N1(1),(1,0) == 0 :", iszero(transpose(Pc)*phic(Sc0)*Pc - Tc0);
+"   Q_N1(D)(hy) - Q_N1(1) == 0 :", phic(QD) - Q1 == 0, "   [A_05 = g0*g5*Q(hy) = Q_N1(1) with g0 = g5 = 1]";
+"   A_15: w -> s_w*w*gI[1,1]*g5 = (r*w)*(1/r)*1 = w  [restored by w -> D^(1/4) w]";
+matrix Sc = nf2(N1net(DD), QD, w, 1, 0, c);  matrix Tc = nf2(N1net(number(1)), Q1, w, 1, 0, c*DD);
+"   with the order-2 entry c*y0 at (v2,v3):  P^t * A_N1(D),c(phi) * P - A_N1(1),c*D == 0 :", iszero(transpose(Pc)*phic(Sc)*Pc - Tc);
+"   [so version 1 multiplies c by D; c is restored by the torus s of T6 (weight 2 on c)]";
+"=== (c) version 2 (PLAN's torus, u = sqrt(D) = r^2): y3 -> y3/u, w -> u^(-1/2) w, P = diag(1/u, u^(-1/2), u^(1/2), u^(1/2), u^(-1/2), u)";
+map phic2 = Rr, w/r, y1, y2, y3/r^2;
+matrix Pc2 = diag6(1/r^2, 1/r, r, r, 1/r, r^2);
+matrix Tc2 = nf2(N1net(number(1)), Q1, w, 1, 0, c);
+"   P^t * A_N1(D),c(phi) * P - A_N1(1),c == 0 :", iszero(transpose(Pc2)*phic2(Sc)*Pc2 - Tc2);
+"   [here A_05: g0*g5 = (1/u)*u = 1;  A_15: u^(-1/2)*u^(-1/2)*u = 1;  c: u^(1/2)*u^(1/2)*u^(-1) = 1;  P = u^(-1)*diag(1, u^(1/2), u^(3/2), u^(3/2), u^(1/2), u^2), i.e. a congruence with g0 = 1 times the overall scalar u^(-2), which does not change coker A]";
+"   general torus check on N1(D): the same change maps N1(D) to N1(D/u^2) for any D:";
+ring Rr2 = (0,r,c,D), (w,y1,y2,y3), dp;
+matrix I2[2][2] = 1,0,0,1;
+matrix X1[2][2] = D*y3, y2, y2, y3;   matrix X2[2][2] = -y3, y2, y2, -D*y3;
+matrix N1D = blk4(X1, y1*I2, y1*I2, X2);
+matrix X1u[2][2] = D/r^4*y3, y2, y2, y3;   matrix X2u[2][2] = -y3, y2, y2, -D/r^4*y3;
+matrix N1Du = blk4(X1u, y1*I2, y1*I2, X2u);
+map phic3 = Rr2, w/r, y1, y2, y3/r^2;
+matrix Pc3 = diag6(1/r^2, 1/r, r, r, 1/r, r^2);
+matrix Sc3 = nf2(N1D, y2^2 - D*y3^2 - y1^2, w, 1, 0, c);  matrix Tc3 = nf2(N1Du, y2^2 - D/r^4*y3^2 - y1^2, w, 1, 0, c);
+"   P^t * A_N1(D),c(phi) * P - A_N1(D/u^2),c == 0 (u = r^2) :", iszero(transpose(Pc3)*phic3(Sc3)*Pc3 - Tc3);
+
+"total time (s):", timer - tt;
+"peak memory (KB, Singular memory(2)):", memory(2) div 1024;
+quit;

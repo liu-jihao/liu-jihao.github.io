@@ -1,0 +1,265 @@
+==== net N1(0) ====
+Q = 
+y2^2-y1^2
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides every entry of adj(alpha):
+1
+(ii') D1*D2 - Q2*I == 0:
+1
+(iii) sigma(alpha) = -Delta alpha Delta:
+1
+(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):
+0
+     Krull dim of Q[y]/(entries of alpha):
+0
+Q2 factorization:
+[1]:
+   _[1]=1
+   _[2]=y2
+[2]:
+   1,2
+  N1(0) at (0 : 0 : 1): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+==== net N1(1) ====
+Q = 
+-y3^2+y2^2-y1^2
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides every entry of adj(alpha):
+1
+(ii') D1*D2 - Q2*I == 0:
+1
+(iii) sigma(alpha) = -Delta alpha Delta:
+1
+(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):
+0
+     Krull dim of Q[y]/(entries of alpha):
+0
+Q2 factorization:
+[1]:
+   _[1]=-1
+   _[2]=y3-y2
+   _[3]=y3+y2
+[2]:
+   1,1,1
+  N1(1) at (0 : 1 : 1): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+  N1(1) at (0 : -1 : 1): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+==== net N2 ====
+Q = 
+y3*y2-y1^2
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides every entry of adj(alpha):
+1
+(ii') D1*D2 - Q2*I == 0:
+1
+(iii) sigma(alpha) = -Delta alpha Delta:
+1
+(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):
+0
+     Krull dim of Q[y]/(entries of alpha):
+0
+Q2 factorization:
+[1]:
+   _[1]=1
+   _[2]=y3
+   _[3]=y2
+[2]:
+   1,1,1
+  N2 at (0 : 1 : 0): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+  N2 at (0 : 0 : 1): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+==== net N3 ====
+Q = 
+y2^2-y1^2
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides every entry of adj(alpha):
+1
+(ii') D1*D2 - Q2*I == 0:
+1
+(iii) sigma(alpha) = -Delta alpha Delta:
+1
+(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):
+0
+     Krull dim of Q[y]/(entries of alpha):
+0
+Q2 factorization:
+[1]:
+   _[1]=1
+   _[2]=y2
+[2]:
+   1,2
+  N3 at (0 : 0 : 1): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+==== net T0 ====
+Q = 
+-y3^2+y2^2-y1^2
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides every entry of adj(alpha):
+1
+(ii') D1*D2 - Q2*I == 0:
+1
+(iii) sigma(alpha) = -Delta alpha Delta:
+1
+(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):
+0
+     Krull dim of Q[y]/(entries of alpha):
+0
+Q2 factorization:
+[1]:
+   _[1]=-1
+   _[2]=y3-y2
+   _[3]=y3+y2
+[2]:
+   1,1,1
+  T0 at (0 : 1 : -1): Q(p) = 0, rank D1(p) = 0, rank D2(p) = 2, t(p) = dim coker D2 - dim coker D1 = -2
+  T0 at (0 : 1 : 1): Q(p) = 0, rank D1(p) = 2, rank D2(p) = 0, t(p) = dim coker D2 - dim coker D1 = 2
+==== net B2 ====
+Q = 
+y2^2-y1^2
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides every entry of adj(alpha):
+1
+(ii') D1*D2 - Q2*I == 0:
+1
+(iii) sigma(alpha) = -Delta alpha Delta:
+1
+(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):
+1
+     Krull dim of Q[y]/(entries of alpha):
+1
+Q2 factorization:
+[1]:
+   _[1]=1
+   _[2]=y2
+[2]:
+   1,2
+  B2 at (0 : 0 : 1): Q(p) = 0, rank D1(p) = 0, rank D2(p) = 0, t(p) = dim coker D2 - dim coker D1 = 0
+==== net N1(s^2), s generic ====
+Q = 
+(-s^2)*y3^2+y2^2-y1^2
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides every entry of adj(alpha):
+1
+(ii') D1*D2 - Q2*I == 0:
+1
+(iii) sigma(alpha) = -Delta alpha Delta:
+1
+(iv) Krull dim of Q[y]/((Q) + I_2(alpha)):
+0
+     Krull dim of Q[y]/(entries of alpha):
+0
+Q2 factorization:
+[1]:
+   _[1]=1
+   _[2]=(-s)*y3+y2
+   _[3]=(s)*y3+y2
+[2]:
+   1,1,1
+  N1(s^2) at (0 : (s) : 1): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+  N1(s^2) at (0 : (-s) : 1): Q(p) = 0, rank D1(p) = 1, rank D2(p) = 1, t(p) = dim coker D2 - dim coker D1 = 0
+==== N1(D), D a variable ====
+(i) det alpha - Q^2 == 0:
+1
+(ii) Q divides adj(alpha) in Q[D,y]:
+1
+(ii') D1 D2 = Q2 I:
+1
+elimination ideal in Q[D] (points with y1 != 0):
+K1[1]=1
+elimination ideal in Q[D] (points with y2 != 0):
+K2[1]=1
+elimination ideal in Q[D] (points with y3 != 0):
+K3[1]=1
+D-values with a point of P^2 where rank alpha <= 1 (y3 != 0 chart):
+_[1]=1
+==== CCO94 orbit Q (calligraphic) ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+0
+Krull dim of (entries):
+0
+==== CCO94 orbit B1 ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+0
+Krull dim of (entries):
+0
+==== CCO94 orbit B2 ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+1
+Krull dim of (entries):
+1
+==== CCO94 orbit C1 ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+1
+Krull dim of (entries):
+0
+==== CCO94 orbit C2 ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+1
+Krull dim of (entries):
+0
+==== CCO94 orbit C3 ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+1
+Krull dim of (entries):
+1
+==== CCO94 orbit C4 ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+2
+Krull dim of (entries):
+1
+==== CCO94 orbit C5 ====
+det - Q^2 == 0:
+1
+symmetric:
+1
+Q | adj:
+1
+Krull dim of (Q) + I_2:
+2
+Krull dim of (entries):
+2

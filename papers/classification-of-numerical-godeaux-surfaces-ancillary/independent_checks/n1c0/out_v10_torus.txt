@@ -1,0 +1,3 @@
+equations not homogeneous for the s-weights: 0
+equations not homogeneous for the u-weights: 0
+total time (ms): 70, memory(2) = 12826000

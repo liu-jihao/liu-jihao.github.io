@@ -1,0 +1,33 @@
+// Planner's sanity check of the normal forms of PLAN.md (exact, tiny). Not a substitute for case nets.
+ring r = (0,D,c), (w,y1,y2,y3), dp;
+proc chk(matrix al, poly Q, string nm)
+{
+  int i,j,k,l,a,b; int okdiv = 1; matrix S[3][3]; poly cf;
+  for (i=1;i<=4;i++) { for (j=1;j<=4;j++) {
+    a=0; for (k=1;k<=4;k++) { if (k!=i) { a++; b=0; for (l=1;l<=4;l++) { if (l!=j) { b++; S[a,b]=al[k,l]; } } } }
+    cf = det(S); if (reduce(cf, std(ideal(Q))) != 0) { okdiv = 0; } } }
+  nm, ": det-Q^2 =", det(al) - Q^2, " Q|adj:", okdiv;
+}
+matrix N1[4][4] = D*y3, y2, y1, 0,  y2, y3, 0, y1,  y1, 0, -y3, y2,  0, y1, y2, -D*y3;
+chk(N1, y2^2 - D*y3^2 - y1^2, "N1(D)");
+matrix N2[4][4] = y2, 0, y1, 0,  0, y3, 0, y1,  y1, 0, y3, 0,  0, y1, 0, y2;
+chk(N2, y2*y3 - y1^2, "N2");
+matrix N3[4][4] = y3, y2, y1, 0,  y2, 0, 0, y1,  y1, 0, 0, y2,  0, y1, y2, -y3;
+chk(N3, y2^2 - y1^2, "N3");
+matrix T0[4][4] = y2+y3, 0, y1, 0,  0, y2+y3, 0, y1,  y1, 0, y2-y3, 0,  0, y1, 0, y2-y3;
+chk(T0, y2^2 - y3^2 - y1^2, "T0");
+matrix B2[4][4] = y2, 0, y1, 0,  0, y2, 0, y1,  y1, 0, y2, 0,  0, y1, 0, y2;
+chk(B2, y2^2 - y1^2, "B2");
+// N3 with c = 0: det A is minus a square (general G, q's)
+ring s = 0, (w,y1,y2,y3,G0,a1,a2,a3,a4), dp;   // symbolic stand-ins for y0*G and w*q_i
+poly y0 = w^2; poly Q = y2^2 - y1^2;
+matrix A[6][6] = G0, a1, a2, a3, a4, Q,
+                 a1, y3, y2, y1, 0, w,
+                 a2, y2, 0, 0, y1, 0,
+                 a3, y1, 0, 0, y2, 0,
+                 a4, 0, y1, y2, -y3, 0,
+                 Q, w, 0, 0, 0, 0;
+matrix X[3][3] = a2, y2, y1,  a3, y1, y2,  Q, w, 0;   // rows v2,v3,v5; columns v0,v1,v4
+"N3 c=0: det A + det(X)^2 =", det(A) + det(X)^2;
+// N1 order-0 adjugate of row-0 cofactors: leading terms (delays), with symbolic q's absent (w-order 0,1)
+quit;

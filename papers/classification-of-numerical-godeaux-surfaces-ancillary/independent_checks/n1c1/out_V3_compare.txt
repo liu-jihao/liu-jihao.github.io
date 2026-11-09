@@ -1,0 +1,6 @@
+dictionary entries (case -> mine): 394 ; injective: True
+A-coefficients: {'g(1)': 'gg(10)', 'g(2)': 'gg(6)', 'g(3)': 'gg(9)', 'g(4)': 'gg(5)', 'g(5)': 'gg(8)', 'g(6)': 'gg(7)', 'g(7)': 'gg(4)', 'g(8)': 'gg(3)', 'g(9)': 'gg(2)', 'g(10)': 'gg(1)', 'b(1)': 'qq(12)', 'b(2)': 'qq(11)', 'b(3)': 'qq(10)', 'b(4)': 'qq(9)', 'b(5)': 'qq(8)', 'b(6)': 'qq(7)', 'b(7)': 'qq(6)', 'b(8)': 'qq(5)', 'b(9)': 'qq(4)', 'b(10)': 'qq(3)', 'b(11)': 'qq(2)', 'b(12)': 'qq(1)', 'D': 'D'}
+(a) my distinct equations: 782 ; case distinct equations (translated): 782
+    common up to scalar: 782 ; only mine: 0 ; only case: 0
+    w-order mismatches among common equations: 0
+(b) wrote V3_graph.sing

@@ -1,0 +1,8 @@
+ring R = 0, (l(1..3), g(1..2), w, y1), dp;
+link L = "ssi:r t1.ssi"; def LL = read(L); close(L);
+LL;
+nameof(basering);
+poly h = LL[1][1] + l(3);
+h;
+ideal vz = variables(poly(0)); vz; ncols(vz);
+quit;

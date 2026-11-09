@@ -1,0 +1,19 @@
+// probe: syntax and library behaviour used by the verify scripts
+LIB "elim.lib";
+ring r = 0, (p, q, y), dp;
+matrix A[2][2] = 1, 2, 3, 4;
+matrix M[2][2] = y, 0, 0, y;
+matrix S1 = A + (p+q)*M;
+print(S1); "nrows, ncols:"; nrows(S1); ncols(S1);
+matrix S2 = A - (p+q)*M;
+print(S2); nrows(S2); ncols(S2);
+poly pq = p+q;
+matrix S3 = A + pq*M;
+print(S3); nrows(S3); ncols(S3);
+ideal I = y^2*p, y*p^2;
+def ss = sat(I, ideal(y));
+typeof(ss);
+print(ss);
+matrix C[2][3] = 1, 2, 3, 2, 4, 6;
+"rank via std of module:"; size(std(module(C)));
+quit;

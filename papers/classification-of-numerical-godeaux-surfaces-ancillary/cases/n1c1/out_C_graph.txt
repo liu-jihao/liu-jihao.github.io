@@ -1,0 +1,46 @@
+substitutions read: 291  free unknowns read: 103
+back-substitution done, ms: 55
+images involving a non-free unknown or a coordinate: 0  ; image sizes: total 1625  max 35
+g(1) = b(5)*b(11)*D+b(9)*b(11)*D+b(6)*b(12)-g(5)*D-2*b(12)*D    [terms: 5 , contains a lambda: 0 ]
+g(2) = b(9)^2*D+b(5)*b(11)+b(9)*b(11)-2*b(6)*D-g(5)-4*b(12)    [terms: 6 , contains a lambda: 0 ]
+g(3) = -2*b(9)*D^2+b(6)*b(11)+b(5)*b(12)+b(9)*b(12)    [terms: 4 , contains a lambda: 0 ]
+g(4) = -2*b(5)*D-4*b(9)*D+4*b(2)-2*b(11)    [terms: 4 , contains a lambda: 0 ]
+g(6) = 2*b(9)*D-2*b(11)    [terms: 2 , contains a lambda: 0 ]
+g(7) = -2*b(6)*b(9)*D+2*b(8)*b(9)*D-2*b(5)*D^2+b(6)*b(11)-b(5)*b(12)-b(9)*b(12)+2*b(2)*D-2*b(11)*D    [terms: 8 , contains a lambda: 0 ]
+g(8) = -2*b(5)*b(9)*D+2*b(5)*b(11)-2*b(6)*D-2*g(5)-4*b(12)    [terms: 5 , contains a lambda: 0 ]
+g(9) = -2*b(5)*b(9)*D^2-b(9)^2*D^2+b(8)^2*D+2*b(5)*b(11)*D+2*b(8)*D^2+b(11)^2+b(6)*b(12)-g(5)*D-2*b(12)*D    [terms: 9 , contains a lambda: 0 ]
+g(10) = -2*b(6)*b(9)*D+2*b(8)*b(9)*D+4*b(9)*D^2+2*b(6)*b(11)-2*b(8)*b(11)-4*b(11)*D    [terms: 6 , contains a lambda: 0 ]
+b(1) = 0    [terms: 0 , contains a lambda: 0 ]
+b(3) = b(6)-b(8)-2*D    [terms: 3 , contains a lambda: 0 ]
+b(4) = b(5)*D+b(11)    [terms: 2 , contains a lambda: 0 ]
+b(7) = -b(9)*D+b(11)    [terms: 2 , contains a lambda: 0 ]
+b(10) = b(8)*D+D^2+b(12)    [terms: 3 , contains a lambda: 0 ]
+graph check: eliminated g, b whose expression contains a lambda-coefficient: 0
+verification of the rank conditions E_ij = 0 (15 pairs) for the parametrized family: nonzero E_ij: 0  ms: 80
+random point (free A-coefficients): g(5)=-4, b(2)=-8, b(5)=6, b(6)=-5, b(8)=4, b(9)=2, b(11)=-4, b(12)=-9, D=5
+A at the point:
+AQ[1,1],   -8*w*y1*y3,AQ[1,3],AQ[1,4],AQ[1,5],AQ[1,6],
+-8*w*y1*y3,5*y3,      y2,     y1,     0,      w,      
+AQ[3,1],   y2,        y3,     w^2,    y1,     0,      
+AQ[4,1],   y1,        w^2,    -y3,    y2,     0,      
+AQ[5,1],   0,         y1,     y2,     -5*y3,  0,      
+AQ[6,1],   w,         0,      0,      0,      0       
+det A at the point is nonzero: 1  (terms: 75 )
+pair (1,1): syzygy directions 4, rank 4
+pair (1,2): syzygy directions 4, rank 4
+pair (1,3): syzygy directions 4, rank 4
+pair (1,4): syzygy directions 4, rank 4
+pair (1,5): syzygy directions 10, rank 10
+pair (2,2): syzygy directions 4, rank 4
+pair (2,3): syzygy directions 4, rank 4
+pair (2,4): syzygy directions 4, rank 4
+pair (2,5): syzygy directions 10, rank 10
+pair (3,3): syzygy directions 4, rank 4
+pair (3,4): syzygy directions 4, rank 4
+pair (3,5): syzygy directions 10, rank 10
+pair (4,4): syzygy directions 4, rank 4
+pair (4,5): syzygy directions 10, rank 10
+pair (5,5): syzygy directions 14, rank 14
+all syzygy vectors lie in the lambda-space (coefficient extraction exact): 1
+total rank of the trivial-syzygy map at the point: 94  (number of directions: 94)
+total ms: 82  memory KB: 12438

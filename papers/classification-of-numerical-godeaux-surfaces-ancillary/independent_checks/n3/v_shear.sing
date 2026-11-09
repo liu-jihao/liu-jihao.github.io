@@ -1,0 +1,141 @@
+// v_shear.sing -- verifier's re-computation of the case's claim (e) (not load-bearing):
+// the shear y3 -> y3 + ee*y2 of the N3 net, followed by the re-normalizations (b)-(e) of CASE.md 3.7,
+// maps the family A(x) over the case's free coordinates x = (g4,g5,g6,g8,b4,b6,b9,b11) into the slice,
+// onto the graph, and induces the map F(ee,x) printed in CASE.md 3.7.  The U-normalization is solved
+// here from the verifier's own 8x8 matrix (v_nf.sing, Part 2).
+LIB "matrix.lib";
+int i,r,c,t,bad;
+ring T2 = 0,(lam(1..371),g(1..10),b(1..12),w,y1,y2,y3,ee),dp;
+ideal FIN = maxideal(1);
+< "../../cases/n3/n3_final.sing";
+// the family on the case's graph: g(t) -> FIN[371+t], b(t) -> FIN[381+t]
+ideal img = maxideal(1);
+for (t=1;t<=10;t++){ img[371+t] = FIN[371+t]; }
+for (t=1;t<=12;t++){ img[381+t] = FIN[381+t]; }
+map onGraph = T2, img;
+poly y0 = w^2;
+poly G = g(1)*y3^3 + g(2)*y1^2*y3 + g(3)*y2*y3^2 + g(4)*y1^2*y2 + g(5)*y2^2*y3 + g(6)*y2^3
+       + g(7)*y0*y1*y3 + g(8)*y0*y1*y2 + g(9)*y0^2*y3 + g(10)*y0^2*y2;
+poly q2 = b(1)*y0*y2 + b(2)*y0*y3;
+poly q3 = b(3)*y0^2 + b(4)*y0*y1 + b(5)*y1^2 + b(6)*y2^2 + b(7)*y2*y3 + b(8)*y3^2;
+poly q4 = b(9)*y0^2 + b(10)*y2^2 + b(11)*y2*y3 + b(12)*y3^2;
+poly Q = y2^2 - y1^2;
+matrix A0[6][6] =
+  y0*G, 0,    w*q2, w*q3, w*q4, Q,
+  0,    y3,   y2,   y1,   0,    w,
+  w*q2, y2,   0,    y0,   y1,   0,
+  w*q3, y1,   y0,   0,    y2,   0,
+  w*q4, 0,    y1,   y2,   -y3,  0,
+  Q,    w,    0,    0,    0,    0;
+matrix Ax = onGraph(A0);
+// (a) shear of the coordinates
+matrix Aa = subst(Ax, y3, y3 + ee*y2);
+// (b) congruence by diag(1, gI, gII, 1)
+matrix Pb[6][6]; for (i=1;i<=6;i++){ Pb[i,i] = 1; }
+Pb[3,2] = -ee/2; Pb[4,5] = ee/2;
+matrix Ab = transpose(Pb)*Aa*Pb;
+// (c) beta = -ee/2
+poly bet = -ee/2;
+matrix Acs = subst(Ab, y1, y1 + bet*y0);
+matrix Pc[6][6]; for (i=1;i<=6;i++){ Pc[i,i] = 1; }
+Pc[2,1] = w*(2*bet*y1 + bet^2*y0);
+matrix Ac = transpose(Pc)*Acs*Pc;
+// (d) kappa3 = ee, kappa4 = ee^2/4 : congruence by I + kappa_j*w*E_{5j}
+matrix Pd[6][6]; for (i=1;i<=6;i++){ Pd[i,i] = 1; }
+Pd[6,4] = ee*w; Pd[6,5] = (1/4)*ee^2*w;
+matrix Ad = transpose(Pd)*Ac*Pd;
+// check the block (a), column v5 and A_05 against the normal form
+matrix NFm[6][6] =
+  0,    0,    0,    0,    0,    Q,
+  0,    y3,   y2,   y1,   0,    w,
+  0,    y2,   0,    y0,   y1,   0,
+  0,    y1,   y0,   0,    y2,   0,
+  0,    0,    y1,   y2,   -y3,  0,
+  Q,    w,    0,    0,    0,    0;
+bad = 0;
+for (r=2;r<=6;r++){ for (c=2;c<=6;c++){ if (Ad[r,c] != NFm[r,c]) { bad++; } } }
+if (Ad[1,6] != Q) { bad++; }
+print("after (a)-(d): entries of rows/columns v1..v5 differing from the normal form N3, c = 1: " + string(bad));
+proc cf(poly f, int a, int b1, int e1, int f1)
+{ poly d = f; int ii; number fac = 1;
+  for (ii=1;ii<=a;ii++){ d = diff(d, w); fac = fac*ii; }
+  for (ii=1;ii<=b1;ii++){ d = diff(d, y1); fac = fac*ii; }
+  for (ii=1;ii<=e1;ii++){ d = diff(d, y2); fac = fac*ii; }
+  for (ii=1;ii<=f1;ii++){ d = diff(d, y3); fac = fac*ii; }
+  d = subst(d, w, 0); d = subst(d, y1, 0); d = subst(d, y2, 0); d = subst(d, y3, 0);
+  return(d/fac); }
+// killed coefficients K1..K8 of Ad (in the order of v_nf.sing Part 2)
+poly nq1 = Ad[1,2]/w; poly nq2 = Ad[1,3]/w; poly nq4 = Ad[1,5]/w;
+poly K1 = cf(nq1,2,0,1,0); poly K2 = cf(nq1,2,0,0,1); poly K3 = cf(nq1,0,1,1,0); poly K4 = cf(nq1,0,1,0,1);
+poly K5 = cf(nq2,0,1,1,0); poly K6 = cf(nq2,0,1,0,1); poly K7 = cf(nq4,2,1,0,0); poly K8 = cf(nq4,0,2,0,0);
+// solve K + MU*u = 0 with MU from v_nf.sing: K1+p0+t2, K2+t3, K3+p1+r2, K4+r3, K5+s2, K6+s3, K7+p0, K8+p1
+poly p0 = -K7; poly p1 = -K8; poly t2 = -K1 - p0; poly t3 = -K2; poly r2 = -K3 - p1; poly r3 = -K4; poly s2 = -K5; poly s3 = -K6;
+poly u2 = p0*y0 + p1*y1; poly u3 = r2*y2 + r3*y3; poly u4 = s2*y2 + s3*y3; poly u5 = t2*y2 + t3*y3;
+matrix Pe[6][6]; for (i=1;i<=6;i++){ Pe[i,i] = 1; }
+Pe[3,1] = w*u2; Pe[4,1] = w*u3; Pe[5,1] = w*u4; Pe[6,1] = y0*u5;
+matrix Ae = transpose(Pe)*Ad*Pe;
+bad = 0;
+for (r=2;r<=6;r++){ for (c=2;c<=6;c++){ if (Ae[r,c] != NFm[r,c]) { bad++; } } }
+if (Ae[1,6] != Q) { bad++; }
+print("after (e): entries of rows/columns v1..v5 differing from the normal form: " + string(bad));
+// read off G and the q's of the result
+poly Gn = Ae[1,1]/w^2; poly r1 = Ae[1,1] - w^2*Gn;
+poly n1 = Ae[1,2]/w; poly n2 = Ae[1,3]/w; poly n3 = Ae[1,4]/w; poly n4 = Ae[1,5]/w;
+print("A_00 divisible by y0: " + string(r1 == 0) + "; q1 of the result: " + string(n1));
+// coordinates of the result
+ideal NEW;
+NEW[1] = cf(Gn,0,0,0,3); NEW[2] = cf(Gn,0,2,0,1); NEW[3] = cf(Gn,0,0,1,2); NEW[4] = cf(Gn,0,2,1,0); NEW[5] = cf(Gn,0,0,2,1);
+NEW[6] = cf(Gn,0,0,3,0); NEW[7] = cf(Gn,2,1,0,1); NEW[8] = cf(Gn,2,1,1,0); NEW[9] = cf(Gn,4,0,0,1); NEW[10] = cf(Gn,4,0,1,0);
+NEW[11] = cf(n2,2,0,1,0); NEW[12] = cf(n2,2,0,0,1);
+NEW[13] = cf(n3,4,0,0,0); NEW[14] = cf(n3,2,1,0,0); NEW[15] = cf(n3,0,2,0,0); NEW[16] = cf(n3,0,0,2,0); NEW[17] = cf(n3,0,0,1,1); NEW[18] = cf(n3,0,0,0,2);
+NEW[19] = cf(n4,4,0,0,0); NEW[20] = cf(n4,0,0,2,0); NEW[21] = cf(n4,0,0,1,1); NEW[22] = cf(n4,0,0,0,2);
+// shape: rebuild the slice matrix from NEW and compare with Ae
+poly Gr = NEW[1]*y3^3 + NEW[2]*y1^2*y3 + NEW[3]*y2*y3^2 + NEW[4]*y1^2*y2 + NEW[5]*y2^2*y3 + NEW[6]*y2^3
+        + NEW[7]*y0*y1*y3 + NEW[8]*y0*y1*y2 + NEW[9]*y0^2*y3 + NEW[10]*y0^2*y2;
+poly q2r = NEW[11]*y0*y2 + NEW[12]*y0*y3;
+poly q3r = NEW[13]*y0^2 + NEW[14]*y0*y1 + NEW[15]*y1^2 + NEW[16]*y2^2 + NEW[17]*y2*y3 + NEW[18]*y3^2;
+poly q4r = NEW[19]*y0^2 + NEW[20]*y2^2 + NEW[21]*y2*y3 + NEW[22]*y3^2;
+print("result in the slice (A_00 = y0*G, q1 = 0, q2, q3, q4 only kept monomials): "
+      + string((Gn == Gr) && (n1 == 0) && (n2 == q2r) && (n3 == q3r) && (n4 == q4r)));
+// on the graph: the case's 14 relations hold for NEW
+ideal toNEW = maxideal(1);
+for (t=1;t<=10;t++){ toNEW[371+t] = NEW[t]; }
+for (t=1;t<=12;t++){ toNEW[381+t] = NEW[10+t]; }
+map phN = T2, toNEW;
+bad = 0; poly lhs; poly tmpp;
+for (t=1;t<=22;t++){ lhs = var(371+t) - FIN[371+t]; tmpp = phN(lhs); if (tmpp != 0) { bad++; } }
+print("result violates the case's graph relations: " + string(bad) + " of 22");
+// induced map on the free coordinates vs. CASE.md 3.7
+ideal Fc = g(4) + (2*g(5) - 2*b(4) - 2*b(6)^2 - 4*b(6)*b(11))*ee + 1/2*b(6)*ee^2,
+           g(5) + (4*b(6) + 3*b(11))*ee + 3/2*ee^2,
+           g(6) + 2*b(4)*ee + (3/2*b(6) + 3*b(11))*ee^2 + ee^3,
+           g(8) + (2*b(6)^3 + 8*b(6)^2*b(11) + 8*b(6)*b(11)^2 - 2*g(5)*b(6) + 2*b(4)*b(6) - 4*g(5)*b(11) + 4*b(4)*b(11) - 1/2*g(4) - 1/2*g(6))*ee
+                + (2*b(6)^2 + 4*b(6)*b(11) - 5/2*g(5) + 2*b(4))*ee^2 - (b(6) + 1/2*b(11))*ee^3 - 1/8*ee^4,
+           b(4) + (3/2*b(6) + 3*b(11))*ee + 3/2*ee^2,
+           b(6),
+           b(9) - 1/4*g(6)*ee - 1/4*b(4)*ee^2 - (1/8*b(6) + 1/4*b(11))*ee^3 - 1/16*ee^4,
+           b(11) + ee;
+ideal Fm = NEW[4], NEW[5], NEW[6], NEW[8], NEW[14], NEW[16], NEW[19], NEW[21];
+bad = 0; for (t=1;t<=8;t++){ if (Fm[t] != Fc[t]) { bad++; print("   differs in coordinate " + string(t) + ": " + string(Fm[t] - Fc[t])); } }
+print("induced map on (g4,g5,g6,g8,b4,b6,b9,b11) differing from CASE.md 3.7: " + string(bad) + " of 8 coordinates");
+// group law F(e1, F(e2, x)) = F(e1 + e2, x), with e1 = ee and e2 = lam(1) (lam(1) used as a spare variable)
+ideal sub2 = maxideal(1);
+sub2[375] = subst(Fm[1], ee, lam(1)); sub2[376] = subst(Fm[2], ee, lam(1)); sub2[377] = subst(Fm[3], ee, lam(1)); sub2[379] = subst(Fm[4], ee, lam(1));
+sub2[385] = subst(Fm[5], ee, lam(1)); sub2[387] = subst(Fm[6], ee, lam(1)); sub2[390] = subst(Fm[7], ee, lam(1)); sub2[392] = subst(Fm[8], ee, lam(1));
+map comp = T2, sub2;
+ideal FF = comp(Fm);
+ideal Fsum = subst(Fm, ee, ee + lam(1));
+bad = 0; for (t=1;t<=8;t++){ if (FF[t] != Fsum[t]) { bad++; } }
+print("group law F(e1,F(e2,x)) = F(e1+e2,x): coordinates violating it: " + string(bad));
+// transversality to the torus at a random rational point: torus field (T1-weights 6,4,6,8,4,2,8,2)
+matrix TF[1][8] = 6*g(4), 4*g(5), 6*g(6), 8*g(8), 4*b(4), 2*b(6), 8*b(9), 2*b(11);
+matrix SF[1][8];
+for (t=1;t<=8;t++){ SF[1,t] = subst(diff(Fm[t], ee), ee, 0); }
+ideal ptx = maxideal(1);
+ptx[375] = 3; ptx[376] = -2; ptx[377] = 5; ptx[379] = 7; ptx[385] = -1; ptx[387] = 2; ptx[390] = 4; ptx[392] = -3;
+map atx = T2, ptx;
+matrix TFx = atx(TF); matrix SFx = atx(SF);
+matrix TS[2][8];
+for (t=1;t<=8;t++){ TS[1,t] = TFx[1,t]; TS[2,t] = SFx[1,t]; }
+print("rank of [torus field; shear field] at a rational point: " + string(rank(TS)));
+quit;

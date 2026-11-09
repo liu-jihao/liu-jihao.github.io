@@ -1,0 +1,21 @@
+A_00: weight 8, sign -: 16 monomials: y1*y3^3, y1*y2*y3^2, y1*y2^2*y3, y1*y2^3, y1^3*y3, y1^3*y2, w^2*y3^3, w^2*y2*y3^2, w^2*y2^2*y3, w^2*y2^3, w^2*y1^2*y3, w^2*y1^2*y2, w^4*y1*y3, w^4*y1*y2, w^6*y3, w^6*y2
+A_01: weight 5, sign +: 4 monomials: w*y1*y3, w*y1*y2, w^3*y3, w^3*y2
+A_02: weight 5, sign +: 4 monomials: w*y1*y3, w*y1*y2, w^3*y3, w^3*y2
+A_03: weight 5, sign -: 6 monomials: w*y3^2, w*y2*y3, w*y2^2, w*y1^2, w^3*y1, w^5
+A_04: weight 5, sign -: 6 monomials: w*y3^2, w*y2*y3, w*y2^2, w*y1^2, w^3*y1, w^5
+A_05: weight 4, sign +: 6 monomials: y3^2, y2*y3, y2^2, y1^2, w^2*y1, w^4
+A_11: weight 2, sign -: 2 monomials: y3, y2
+A_12: weight 2, sign -: 2 monomials: y3, y2
+A_13: weight 2, sign +: 2 monomials: y1, w^2
+A_14: weight 2, sign +: 2 monomials: y1, w^2
+A_15: weight 1, sign -: 1 monomials: w
+A_22: weight 2, sign -: 2 monomials: y3, y2
+A_23: weight 2, sign +: 2 monomials: y1, w^2
+A_24: weight 2, sign +: 2 monomials: y1, w^2
+A_25: weight 1, sign -: 1 monomials: w
+A_33: weight 2, sign -: 2 monomials: y3, y2
+A_34: weight 2, sign -: 2 monomials: y3, y2
+A_35: weight 1, sign +: 0 monomials: 
+A_44: weight 2, sign -: 2 monomials: y3, y2
+A_45: weight 1, sign +: 0 monomials: 
+A_55: weight 0, sign -: 0 monomials: 

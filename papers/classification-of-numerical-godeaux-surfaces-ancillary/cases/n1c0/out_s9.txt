@@ -1,0 +1,9 @@
+A symmetric: 1
+nonzero coefficient equations (before removing duplicates): 870  ms: 48
+nonzero coefficient equations per w-order 0..15: 180,72,156,56,120,42,84,30,58,20,32,11,9,0,0,0
+distinct up to scalar per w-order 0..15:      72,66,156,56,120,42,84,30,58,20,32,11,6,0,0,0
+total distinct: 753  ms: 171
+equations violating the order filtration (should be 0): 0
+nonzero coefficients checked: 870 ; at a monomial of wrong weight: 0 ; of wrong sigma-sign: 0
+entries of A: monomials of wrong weight: 0 ; of wrong sigma-sign (rule sign(A_jk) = -delta_j delta_k): 0
+total ms: 217 ; memory (KB) in use / allocated: 12288 12391

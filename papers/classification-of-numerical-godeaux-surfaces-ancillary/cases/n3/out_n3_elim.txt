@@ -1,0 +1,464 @@
+== system built; ms: 43
+nonzero coefficient equations (monomial slots with nonzero coefficient): 710 ; weight/sign violations: 0
+net alpha (rows/columns v1..v4, w = 0):
+y3,y2,y1,0, 
+y2,0, 0, y1,
+y1,0, 0, y2,
+0, y1,y2,-y3
+det(alpha) - Q^2 = 0
+Q divides every 3x3 minor of alpha: 1
+B_05 mod w: y1^6-3*y1^4*y2^2+3*y1^2*y2^4-y2^6  ; equals Q^3: 0  ; equals -Q^3: 1
+B_01: mod w = 0 ; coefficient of w^1 = 0 ; Q*adj(alpha)_{11} = 0 ; equal: 1 ; opposite: 1
+B_02: mod w = 0 ; coefficient of w^1 = y1^4*y2-2*y1^2*y2^3+y2^5 ; Q*adj(alpha)_{21} = y1^4*y2-2*y1^2*y2^3+y2^5 ; equal: 1 ; opposite: 0
+B_03: mod w = 0 ; coefficient of w^1 = -y1^5+2*y1^3*y2^2-y1*y2^4 ; Q*adj(alpha)_{31} = -y1^5+2*y1^3*y2^2-y1*y2^4 ; equal: 1 ; opposite: 0
+B_04: mod w = 0 ; coefficient of w^1 = 0 ; Q*adj(alpha)_{41} = 0 ; equal: 1 ; opposite: 1
+B_00 + y0*adj(a)_11 = 0   (expected 0: B_00 = -y0*adj(a)_11 exactly)
+w-order : slots / nonzero / distinct (up to scalar, kept at the lowest order)
+  0 : 204 / 72 / 18
+  1 : 72 / 45 / 31
+  2 : 156 / 118 / 99
+  3 : 56 / 50 / 48
+  4 : 120 / 113 / 105
+  5 : 42 / 42 / 42
+  6 : 84 / 84 / 84
+  7 : 30 / 30 / 30
+  8 : 58 / 58 / 58
+  9 : 20 / 20 / 20
+  10 : 34 / 34 / 34
+  11 : 12 / 12 / 12
+  12 : 18 / 18 / 18
+  13 : 6 / 6 / 6
+  14 : 6 / 6 / 6
+  15 : 2 / 2 / 2
+totals: 920 / 710 / 613  (duplicates removed: 97 )
+== counts done; ms: 329
+distinct equations in S: 613 ; maximal total degree in the unknowns: 2
+unknowns occurring in no equation: 0
+   step 1 | stage 0 | lam(19) | w-order 0 | first occurrence 0 | pivot eq 2 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 2 | stage 0 | lam(20) | w-order 0 | first occurrence 0 | pivot eq 1 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 3 | stage 0 | lam(39) | w-order 0 | first occurrence 0 | pivot eq 4 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 4 | stage 0 | lam(40) | w-order 0 | first occurrence 0 | pivot eq 3 (w-order 0, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 5 | stage 0 | lam(59) | w-order 0 | first occurrence 0 | pivot eq 5 (w-order 0, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 6 | stage 0 | lam(79) | w-order 0 | first occurrence 0 | pivot eq 6 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 7 | stage 0 | lam(131) | w-order 0 | first occurrence 0 | pivot eq 8 (w-order 0, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 8 | stage 0 | lam(132) | w-order 0 | first occurrence 0 | pivot eq 7 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 9 | stage 0 | lam(151) | w-order 0 | first occurrence 0 | pivot eq 9 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 10 | stage 0 | lam(171) | w-order 0 | first occurrence 0 | pivot eq 10 (w-order 0, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 11 | stage 0 | lam(223) | w-order 0 | first occurrence 0 | pivot eq 12 (w-order 0, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 12 | stage 0 | lam(224) | w-order 0 | first occurrence 0 | pivot eq 11 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 13 | stage 0 | lam(243) | w-order 0 | first occurrence 0 | pivot eq 14 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 14 | stage 0 | lam(244) | w-order 0 | first occurrence 0 | pivot eq 13 (w-order 0, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 15 | stage 0 | lam(295) | w-order 0 | first occurrence 0 | pivot eq 16 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 16 | stage 0 | lam(296) | w-order 0 | first occurrence 0 | pivot eq 15 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 17 | stage 0 | lam(368) | w-order 0 | first occurrence 0 | pivot eq 18 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+   step 18 | stage 0 | lam(369) | w-order 0 | first occurrence 0 | pivot eq 17 (w-order 0, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 0
+== stage 0 : equations of w-order 0 added: 18 ; unknowns of w-order 0 : lambda 123 , g/b 0
+   eliminated at stage 0 (name[w-order]): lam(19)[0] lam(20)[0] lam(39)[0] lam(40)[0] lam(59)[0] lam(79)[0] lam(131)[0] lam(132)[0] lam(151)[0] lam(171)[0] lam(223)[0] lam(224)[0] lam(243)[0] lam(244)[0] lam(295)[0] lam(296)[0] lam(368)[0] lam(369)[0] 
+   unknowns occurring for the first time in equations of w-order 0 : lambda 18 , g/b 0
+   pivots at stage 0 on equations all of whose unknowns occur already before w-order 0 (conditions on lower-order data): 0 : 
+   pivots at stage 0 on equations involving only unknowns of w-order < 0 : 0 : 
+   equations that became identically zero during stage 0 : 13
+   equations remaining (w-order <= 0): 0 ; involving only unknowns of w-order < 0 (obstructions): 0 ; ms: 449
+   step 19 | stage 1 | lam(111) | w-order 1 | first occurrence 1 | pivot eq 19 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 20 | stage 1 | lam(203) | w-order 1 | first occurrence 1 | pivot eq 25 (w-order 1, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 21 | stage 1 | lam(275) | w-order 1 | first occurrence 1 | pivot eq 35 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 22 | stage 1 | lam(276) | w-order 1 | first occurrence 1 | pivot eq 31 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 23 | stage 1 | lam(327) | w-order 1 | first occurrence 1 | pivot eq 45 (w-order 1, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 24 | stage 1 | lam(328) | w-order 1 | first occurrence 1 | pivot eq 44 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 25 | stage 1 | lam(95) | w-order 0 | first occurrence 1 | pivot eq 23 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 26 | stage 1 | lam(96) | w-order 0 | first occurrence 1 | pivot eq 20 (w-order 1, 5 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 27 | stage 1 | lam(99) | w-order 0 | first occurrence 1 | pivot eq 24 (w-order 1, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 28 | stage 1 | lam(187) | w-order 0 | first occurrence 1 | pivot eq 29 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 29 | stage 1 | lam(188) | w-order 0 | first occurrence 1 | pivot eq 26 (w-order 1, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 30 | stage 1 | lam(191) | w-order 0 | first occurrence 1 | pivot eq 30 (w-order 1, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 31 | stage 1 | lam(261) | w-order 0 | first occurrence 1 | pivot eq 39 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 32 | stage 1 | lam(262) | w-order 0 | first occurrence 1 | pivot eq 36 (w-order 1, 5 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 33 | stage 1 | lam(263) | w-order 0 | first occurrence 1 | pivot eq 32 (w-order 1, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 34 | stage 1 | lam(313) | w-order 0 | first occurrence 1 | pivot eq 49 (w-order 1, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 35 | stage 1 | lam(314) | w-order 0 | first occurrence 1 | pivot eq 46 (w-order 1, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 36 | stage 1 | lam(315) | w-order 0 | first occurrence 1 | pivot eq 41 (w-order 1, 5 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 37 | stage 1 | b(8) | w-order 1 | first occurrence 1 | pivot eq 40 (w-order 1, 1 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+== stage 1 : equations of w-order 1 added: 31 ; unknowns of w-order 1 : lambda 98 , g/b 7
+   eliminated at stage 1 (name[w-order]): lam(111)[1] lam(203)[1] lam(275)[1] lam(276)[1] lam(327)[1] lam(328)[1] lam(95)[0] lam(96)[0] lam(99)[0] lam(187)[0] lam(188)[0] lam(191)[0] lam(261)[0] lam(262)[0] lam(263)[0] lam(313)[0] lam(314)[0] lam(315)[0] b(8)[1] 
+   unknowns occurring for the first time in equations of w-order 1 : lambda 30 , g/b 7
+   pivots at stage 1 on equations all of whose unknowns occur already before w-order 1 (conditions on lower-order data): 0 : 
+   pivots at stage 1 on equations involving only unknowns of w-order < 1 : 0 : 
+   equations that became identically zero during stage 1 : 38
+   equations remaining (w-order <= 1): 0 ; involving only unknowns of w-order < 1 (obstructions): 0 ; ms: 563
+   step 38 | stage 2 | lam(60) | w-order 2 | first occurrence 2 | pivot eq 66 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 39 | stage 2 | lam(80) | w-order 2 | first occurrence 2 | pivot eq 74 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 40 | stage 2 | lam(152) | w-order 2 | first occurrence 2 | pivot eq 90 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 41 | stage 2 | lam(172) | w-order 2 | first occurrence 2 | pivot eq 100 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 42 | stage 2 | lam(370) | w-order 2 | first occurrence 2 | pivot eq 137 (w-order 2, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 43 | stage 2 | lam(371) | w-order 2 | first occurrence 2 | pivot eq 133 (w-order 2, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 44 | stage 2 | lam(13) | w-order 1 | first occurrence 2 | pivot eq 50 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 45 | stage 2 | lam(15) | w-order 1 | first occurrence 2 | pivot eq 53 (w-order 2, 1 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 46 | stage 2 | lam(33) | w-order 1 | first occurrence 2 | pivot eq 58 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 47 | stage 2 | lam(35) | w-order 1 | first occurrence 2 | pivot eq 61 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 48 | stage 2 | lam(53) | w-order 1 | first occurrence 2 | pivot eq 70 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 49 | stage 2 | lam(54) | w-order 1 | first occurrence 2 | pivot eq 67 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 50 | stage 2 | lam(73) | w-order 1 | first occurrence 2 | pivot eq 78 (w-order 2, 1 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 51 | stage 2 | lam(74) | w-order 1 | first occurrence 2 | pivot eq 75 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 52 | stage 2 | lam(125) | w-order 1 | first occurrence 2 | pivot eq 82 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 53 | stage 2 | lam(127) | w-order 1 | first occurrence 2 | pivot eq 85 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 54 | stage 2 | lam(145) | w-order 1 | first occurrence 2 | pivot eq 94 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 55 | stage 2 | lam(146) | w-order 1 | first occurrence 2 | pivot eq 92 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 56 | stage 2 | lam(165) | w-order 1 | first occurrence 2 | pivot eq 104 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 57 | stage 2 | lam(166) | w-order 1 | first occurrence 2 | pivot eq 101 (w-order 2, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 58 | stage 2 | lam(217) | w-order 1 | first occurrence 2 | pivot eq 109 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 59 | stage 2 | lam(219) | w-order 1 | first occurrence 2 | pivot eq 112 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 60 | stage 2 | lam(237) | w-order 1 | first occurrence 2 | pivot eq 117 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 61 | stage 2 | lam(239) | w-order 1 | first occurrence 2 | pivot eq 120 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 62 | stage 2 | lam(289) | w-order 1 | first occurrence 2 | pivot eq 125 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 63 | stage 2 | lam(291) | w-order 1 | first occurrence 2 | pivot eq 128 (w-order 2, 1 terms) | max w-order / max first occurrence of its unknowns 1 / 2
+   step 64 | stage 2 | lam(354) | w-order 1 | first occurrence 2 | pivot eq 141 (w-order 2, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 65 | stage 2 | lam(355) | w-order 1 | first occurrence 2 | pivot eq 138 (w-order 2, 7 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 66 | stage 2 | lam(356) | w-order 1 | first occurrence 2 | pivot eq 134 (w-order 2, 6 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 67 | stage 2 | g(1) | w-order 2 | first occurrence 2 | pivot eq 144 (w-order 2, 1 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 68 | stage 2 | b(5) | w-order 1 | first occurrence 1 | pivot eq 86 (w-order 2, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 69 | stage 2 | b(7) | w-order 1 | first occurrence 1 | pivot eq 88 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 70 | stage 2 | b(10) | w-order 1 | first occurrence 1 | pivot eq 83 (w-order 2, 1 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+   step 71 | stage 2 | b(12) | w-order 1 | first occurrence 1 | pivot eq 97 (w-order 2, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 1
+== stage 2 : equations of w-order 2 added: 99 ; unknowns of w-order 2 : lambda 66 , g/b 6
+   eliminated at stage 2 (name[w-order]): lam(60)[2] lam(80)[2] lam(152)[2] lam(172)[2] lam(370)[2] lam(371)[2] lam(13)[1] lam(15)[1] lam(33)[1] lam(35)[1] lam(53)[1] lam(54)[1] lam(73)[1] lam(74)[1] lam(125)[1] lam(127)[1] lam(145)[1] lam(146)[1] lam(165)[1] lam(166)[1] lam(217)[1] lam(219)[1] lam(237)[1] lam(239)[1] lam(289)[1] lam(291)[1] lam(354)[1] lam(355)[1] lam(356)[1] g(1)[2] b(5)[1] b(7)[1] b(10)[1] b(12)[1] 
+   unknowns occurring for the first time in equations of w-order 2 : lambda 42 , g/b 6
+   pivots at stage 2 on equations all of whose unknowns occur already before w-order 2 (conditions on lower-order data): 4 : b(5)[1] b(7)[1] b(10)[1] b(12)[1] 
+   pivots at stage 2 on equations involving only unknowns of w-order < 2 : 24 : lam(13)[1] lam(15)[1] lam(33)[1] lam(35)[1] lam(53)[1] lam(54)[1] lam(73)[1] lam(74)[1] lam(125)[1] lam(127)[1] lam(145)[1] lam(146)[1] lam(165)[1] lam(166)[1] lam(217)[1] lam(219)[1] lam(237)[1] lam(239)[1] lam(289)[1] lam(291)[1] b(5)[1] b(7)[1] b(10)[1] b(12)[1] 
+   equations that became identically zero during stage 2 : 66
+   equations remaining (w-order <= 2): 0 ; involving only unknowns of w-order < 2 (obstructions): 0 ; ms: 776
+   step 72 | stage 3 | lam(112) | w-order 3 | first occurrence 3 | pivot eq 149 (w-order 3, 4 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 73 | stage 3 | lam(204) | w-order 3 | first occurrence 3 | pivot eq 161 (w-order 3, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 74 | stage 3 | lam(97) | w-order 2 | first occurrence 3 | pivot eq 154 (w-order 3, 6 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 75 | stage 3 | lam(98) | w-order 2 | first occurrence 3 | pivot eq 151 (w-order 3, 6 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 76 | stage 3 | lam(189) | w-order 2 | first occurrence 3 | pivot eq 167 (w-order 3, 7 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 77 | stage 3 | lam(190) | w-order 2 | first occurrence 3 | pivot eq 164 (w-order 3, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 3
+   step 78 | stage 3 | lam(265) | w-order 2 | first occurrence 3 | pivot eq 175 (w-order 3, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 3
+   step 79 | stage 3 | lam(269) | w-order 2 | first occurrence 3 | pivot eq 178 (w-order 3, 8 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 80 | stage 3 | lam(317) | w-order 2 | first occurrence 3 | pivot eq 186 (w-order 3, 6 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 81 | stage 3 | lam(321) | w-order 2 | first occurrence 3 | pivot eq 189 (w-order 3, 6 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 82 | stage 3 | lam(91) | w-order 0 | first occurrence 3 | pivot eq 153 (w-order 3, 5 terms) | max w-order / max first occurrence of its unknowns 1 / 3
+   step 83 | stage 3 | lam(92) | w-order 0 | first occurrence 3 | pivot eq 150 (w-order 3, 3 terms) | max w-order / max first occurrence of its unknowns 0 / 3
+   step 84 | stage 3 | lam(100) | w-order 0 | first occurrence 1 | pivot eq 156 (w-order 3, 3 terms) | max w-order / max first occurrence of its unknowns 0 / 3
+   step 85 | stage 3 | lam(183) | w-order 0 | first occurrence 3 | pivot eq 165 (w-order 3, 8 terms) | max w-order / max first occurrence of its unknowns 2 / 3
+   step 86 | stage 3 | lam(184) | w-order 0 | first occurrence 3 | pivot eq 162 (w-order 3, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 3
+   step 87 | stage 3 | lam(192) | w-order 0 | first occurrence 1 | pivot eq 168 (w-order 3, 5 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 88 | stage 3 | lam(255) | w-order 0 | first occurrence 3 | pivot eq 181 (w-order 3, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 3
+   step 89 | stage 3 | lam(256) | w-order 0 | first occurrence 3 | pivot eq 179 (w-order 3, 7 terms) | max w-order / max first occurrence of its unknowns 2 / 3
+   step 90 | stage 3 | lam(257) | w-order 0 | first occurrence 3 | pivot eq 176 (w-order 3, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 3
+   step 91 | stage 3 | lam(307) | w-order 0 | first occurrence 3 | pivot eq 192 (w-order 3, 3 terms) | max w-order / max first occurrence of its unknowns 0 / 3
+   step 92 | stage 3 | lam(308) | w-order 0 | first occurrence 3 | pivot eq 190 (w-order 3, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 3
+   step 93 | stage 3 | lam(309) | w-order 0 | first occurrence 3 | pivot eq 187 (w-order 3, 3 terms) | max w-order / max first occurrence of its unknowns 0 / 3
+   step 94 | stage 3 | b(2) | w-order 3 | first occurrence 3 | pivot eq 169 (w-order 3, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+== stage 3 : equations of w-order 3 added: 48 ; unknowns of w-order 3 : lambda 40 , g/b 3
+   eliminated at stage 3 (name[w-order]): lam(112)[3] lam(204)[3] lam(97)[2] lam(98)[2] lam(189)[2] lam(190)[2] lam(265)[2] lam(269)[2] lam(317)[2] lam(321)[2] lam(91)[0] lam(92)[0] lam(100)[0] lam(183)[0] lam(184)[0] lam(192)[0] lam(255)[0] lam(256)[0] lam(257)[0] lam(307)[0] lam(308)[0] lam(309)[0] b(2)[3] 
+   unknowns occurring for the first time in equations of w-order 3 : lambda 38 , g/b 3
+   pivots at stage 3 on equations all of whose unknowns occur already before w-order 3 (conditions on lower-order data): 0 : 
+   pivots at stage 3 on equations involving only unknowns of w-order < 3 : 13 : lam(190)[2] lam(265)[2] lam(91)[0] lam(92)[0] lam(100)[0] lam(183)[0] lam(184)[0] lam(255)[0] lam(256)[0] lam(257)[0] lam(307)[0] lam(308)[0] lam(309)[0] 
+   equations that became identically zero during stage 3 : 19
+   equations remaining (w-order <= 3): 0 ; involving only unknowns of w-order < 3 (obstructions): 0 ; ms: 905
+   step 95 | stage 4 | lam(14) | w-order 3 | first occurrence 4 | pivot eq 199 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 96 | stage 4 | lam(34) | w-order 3 | first occurrence 4 | pivot eq 209 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 97 | stage 4 | lam(56) | w-order 3 | first occurrence 4 | pivot eq 217 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 98 | stage 4 | lam(76) | w-order 3 | first occurrence 4 | pivot eq 225 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 99 | stage 4 | lam(126) | w-order 3 | first occurrence 4 | pivot eq 235 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 100 | stage 4 | lam(148) | w-order 3 | first occurrence 4 | pivot eq 244 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 101 | stage 4 | lam(168) | w-order 3 | first occurrence 4 | pivot eq 253 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 102 | stage 4 | lam(218) | w-order 3 | first occurrence 4 | pivot eq 263 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 103 | stage 4 | lam(238) | w-order 3 | first occurrence 4 | pivot eq 273 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 104 | stage 4 | lam(290) | w-order 3 | first occurrence 4 | pivot eq 283 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 105 | stage 4 | lam(358) | w-order 3 | first occurrence 4 | pivot eq 293 (w-order 4, 7 terms) | max w-order / max first occurrence of its unknowns 4 / 4
+   step 106 | stage 4 | lam(362) | w-order 3 | first occurrence 4 | pivot eq 294 (w-order 4, 12 terms) | max w-order / max first occurrence of its unknowns 4 / 4
+   step 107 | stage 4 | lam(11) | w-order 1 | first occurrence 4 | pivot eq 198 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 108 | stage 4 | lam(16) | w-order 1 | first occurrence 2 | pivot eq 200 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 109 | stage 4 | lam(31) | w-order 1 | first occurrence 4 | pivot eq 207 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 110 | stage 4 | lam(36) | w-order 1 | first occurrence 2 | pivot eq 210 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 111 | stage 4 | lam(51) | w-order 1 | first occurrence 4 | pivot eq 220 (w-order 4, 5 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 112 | stage 4 | lam(52) | w-order 1 | first occurrence 4 | pivot eq 218 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 113 | stage 4 | lam(71) | w-order 1 | first occurrence 4 | pivot eq 228 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 114 | stage 4 | lam(72) | w-order 1 | first occurrence 4 | pivot eq 227 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 115 | stage 4 | lam(123) | w-order 1 | first occurrence 4 | pivot eq 233 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 116 | stage 4 | lam(128) | w-order 1 | first occurrence 2 | pivot eq 236 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 117 | stage 4 | lam(143) | w-order 1 | first occurrence 4 | pivot eq 248 (w-order 4, 8 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 118 | stage 4 | lam(144) | w-order 1 | first occurrence 4 | pivot eq 245 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 119 | stage 4 | lam(163) | w-order 1 | first occurrence 4 | pivot eq 257 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 120 | stage 4 | lam(164) | w-order 1 | first occurrence 4 | pivot eq 254 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 121 | stage 4 | lam(215) | w-order 1 | first occurrence 4 | pivot eq 261 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 122 | stage 4 | lam(220) | w-order 1 | first occurrence 2 | pivot eq 266 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 123 | stage 4 | lam(235) | w-order 1 | first occurrence 4 | pivot eq 271 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 124 | stage 4 | lam(240) | w-order 1 | first occurrence 2 | pivot eq 276 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 125 | stage 4 | lam(287) | w-order 1 | first occurrence 4 | pivot eq 281 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 126 | stage 4 | lam(292) | w-order 1 | first occurrence 2 | pivot eq 284 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 127 | stage 4 | lam(348) | w-order 1 | first occurrence 4 | pivot eq 297 (w-order 4, 12 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 128 | stage 4 | lam(349) | w-order 1 | first occurrence 4 | pivot eq 296 (w-order 4, 14 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 129 | stage 4 | lam(350) | w-order 1 | first occurrence 4 | pivot eq 291 (w-order 4, 8 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 130 | stage 4 | lam(1) | w-order 0 | first occurrence 4 | pivot eq 203 (w-order 4, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 131 | stage 4 | lam(2) | w-order 0 | first occurrence 4 | pivot eq 201 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 132 | stage 4 | lam(3) | w-order 0 | first occurrence 4 | pivot eq 197 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 133 | stage 4 | lam(21) | w-order 0 | first occurrence 4 | pivot eq 213 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 134 | stage 4 | lam(22) | w-order 0 | first occurrence 4 | pivot eq 211 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 135 | stage 4 | lam(23) | w-order 0 | first occurrence 4 | pivot eq 208 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 136 | stage 4 | lam(41) | w-order 0 | first occurrence 4 | pivot eq 224 (w-order 4, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 137 | stage 4 | lam(42) | w-order 0 | first occurrence 4 | pivot eq 223 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 138 | stage 4 | lam(43) | w-order 0 | first occurrence 4 | pivot eq 221 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 139 | stage 4 | lam(44) | w-order 0 | first occurrence 4 | pivot eq 219 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 140 | stage 4 | lam(61) | w-order 0 | first occurrence 4 | pivot eq 232 (w-order 4, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 141 | stage 4 | lam(62) | w-order 0 | first occurrence 4 | pivot eq 231 (w-order 4, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 142 | stage 4 | lam(63) | w-order 0 | first occurrence 4 | pivot eq 229 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 143 | stage 4 | lam(64) | w-order 0 | first occurrence 4 | pivot eq 226 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 144 | stage 4 | lam(113) | w-order 0 | first occurrence 4 | pivot eq 239 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 145 | stage 4 | lam(114) | w-order 0 | first occurrence 4 | pivot eq 237 (w-order 4, 7 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 146 | stage 4 | lam(115) | w-order 0 | first occurrence 4 | pivot eq 234 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 147 | stage 4 | lam(133) | w-order 0 | first occurrence 4 | pivot eq 251 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 148 | stage 4 | lam(134) | w-order 0 | first occurrence 4 | pivot eq 250 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 149 | stage 4 | lam(135) | w-order 0 | first occurrence 4 | pivot eq 247 (w-order 4, 6 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 150 | stage 4 | lam(136) | w-order 0 | first occurrence 4 | pivot eq 246 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 151 | stage 4 | lam(153) | w-order 0 | first occurrence 4 | pivot eq 260 (w-order 4, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 152 | stage 4 | lam(154) | w-order 0 | first occurrence 4 | pivot eq 259 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 153 | stage 4 | lam(155) | w-order 0 | first occurrence 4 | pivot eq 256 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 154 | stage 4 | lam(156) | w-order 0 | first occurrence 4 | pivot eq 255 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 155 | stage 4 | lam(205) | w-order 0 | first occurrence 4 | pivot eq 267 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 156 | stage 4 | lam(206) | w-order 0 | first occurrence 4 | pivot eq 265 (w-order 4, 6 terms) | max w-order / max first occurrence of its unknowns 3 / 4
+   step 157 | stage 4 | lam(207) | w-order 0 | first occurrence 4 | pivot eq 262 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 158 | stage 4 | lam(225) | w-order 0 | first occurrence 4 | pivot eq 277 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 159 | stage 4 | lam(226) | w-order 0 | first occurrence 4 | pivot eq 275 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 160 | stage 4 | lam(227) | w-order 0 | first occurrence 4 | pivot eq 272 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 161 | stage 4 | lam(277) | w-order 0 | first occurrence 4 | pivot eq 287 (w-order 4, 1 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 162 | stage 4 | lam(278) | w-order 0 | first occurrence 4 | pivot eq 285 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 163 | stage 4 | lam(279) | w-order 0 | first occurrence 4 | pivot eq 282 (w-order 4, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 4
+   step 164 | stage 4 | lam(329) | w-order 0 | first occurrence 4 | pivot eq 301 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 0 / 4
+   step 165 | stage 4 | lam(330) | w-order 0 | first occurrence 4 | pivot eq 300 (w-order 4, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 166 | stage 4 | lam(331) | w-order 0 | first occurrence 4 | pivot eq 298 (w-order 4, 7 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 167 | stage 4 | lam(332) | w-order 0 | first occurrence 4 | pivot eq 295 (w-order 4, 8 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 168 | stage 4 | lam(333) | w-order 0 | first occurrence 4 | pivot eq 292 (w-order 4, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 4
+   step 169 | stage 4 | b(1) | w-order 3 | first occurrence 3 | pivot eq 238 (w-order 4, 5 terms) | max w-order / max first occurrence of its unknowns 3 / 3
+   step 170 | stage 4 | g(2) | w-order 2 | first occurrence 2 | pivot eq 264 (w-order 4, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+   step 171 | stage 4 | g(3) | w-order 2 | first occurrence 2 | pivot eq 240 (w-order 4, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 2
+== stage 4 : equations of w-order 4 added: 105 ; unknowns of w-order 4 : lambda 26 , g/b 2
+   eliminated at stage 4 (name[w-order]): lam(14)[3] lam(34)[3] lam(56)[3] lam(76)[3] lam(126)[3] lam(148)[3] lam(168)[3] lam(218)[3] lam(238)[3] lam(290)[3] lam(358)[3] lam(362)[3] lam(11)[1] lam(16)[1] lam(31)[1] lam(36)[1] lam(51)[1] lam(52)[1] lam(71)[1] lam(72)[1] lam(123)[1] lam(128)[1] lam(143)[1] lam(144)[1] lam(163)[1] lam(164)[1] lam(215)[1] lam(220)[1] lam(235)[1] lam(240)[1] lam(287)[1] lam(292)[1] lam(348)[1] lam(349)[1] lam(350)[1] lam(1)[0] lam(2)[0] lam(3)[0] lam(21)[0] lam(22)[0] lam(23)[0] lam(41)[0] lam(42)[0] lam(43)[0] lam(44)[0] lam(61)[0] lam(62)[0] lam(63)[0] lam(64)[0] lam(113)[0] lam(114)[0] lam(115)[0] lam(133)[0] lam(134)[0] lam(135)[0] lam(136)[0] lam(153)[0] lam(154)[0] lam(155)[0] lam(156)[0] lam(205)[0] lam(206)[0] lam(207)[0] lam(225)[0] lam(226)[0] lam(227)[0] lam(277)[0] lam(278)[0] lam(279)[0] lam(329)[0] lam(330)[0] lam(331)[0] lam(332)[0] lam(333)[0] b(1)[3] g(2)[2] g(3)[2] 
+   unknowns occurring for the first time in equations of w-order 4 : lambda 106 , g/b 2
+   pivots at stage 4 on equations all of whose unknowns occur already before w-order 4 (conditions on lower-order data): 3 : b(1)[3] g(2)[2] g(3)[2] 
+   pivots at stage 4 on equations involving only unknowns of w-order < 4 : 75 : lam(14)[3] lam(34)[3] lam(56)[3] lam(76)[3] lam(126)[3] lam(148)[3] lam(168)[3] lam(218)[3] lam(238)[3] lam(290)[3] lam(11)[1] lam(16)[1] lam(31)[1] lam(36)[1] lam(51)[1] lam(52)[1] lam(71)[1] lam(72)[1] lam(123)[1] lam(128)[1] lam(143)[1] lam(144)[1] lam(163)[1] lam(164)[1] lam(215)[1] lam(220)[1] lam(235)[1] lam(240)[1] lam(287)[1] lam(292)[1] lam(348)[1] lam(349)[1] lam(350)[1] lam(1)[0] lam(2)[0] lam(3)[0] lam(21)[0] lam(22)[0] lam(23)[0] lam(41)[0] lam(42)[0] lam(43)[0] lam(44)[0] lam(61)[0] lam(62)[0] lam(63)[0] lam(64)[0] lam(113)[0] lam(114)[0] lam(115)[0] lam(133)[0] lam(134)[0] lam(135)[0] lam(136)[0] lam(153)[0] lam(154)[0] lam(155)[0] lam(156)[0] lam(205)[0] lam(206)[0] lam(207)[0] lam(225)[0] lam(226)[0] lam(227)[0] lam(277)[0] lam(278)[0] lam(279)[0] lam(329)[0] lam(330)[0] lam(331)[0] lam(332)[0] lam(333)[0] b(1)[3] g(2)[2] g(3)[2] 
+   equations that became identically zero during stage 4 : 49
+   equations remaining (w-order <= 4): 0 ; involving only unknowns of w-order < 4 (obstructions): 0 ; ms: 1324
+   step 172 | stage 5 | lam(104) | w-order 4 | first occurrence 5 | pivot eq 302 (w-order 5, 3 terms) | max w-order / max first occurrence of its unknowns 5 / 5
+   step 173 | stage 5 | lam(196) | w-order 4 | first occurrence 5 | pivot eq 311 (w-order 5, 3 terms) | max w-order / max first occurrence of its unknowns 5 / 5
+   step 174 | stage 5 | lam(266) | w-order 4 | first occurrence 5 | pivot eq 322 (w-order 5, 3 terms) | max w-order / max first occurrence of its unknowns 5 / 5
+   step 175 | stage 5 | lam(318) | w-order 4 | first occurrence 5 | pivot eq 334 (w-order 5, 4 terms) | max w-order / max first occurrence of its unknowns 5 / 5
+   step 176 | stage 5 | lam(93) | w-order 2 | first occurrence 5 | pivot eq 306 (w-order 5, 12 terms) | max w-order / max first occurrence of its unknowns 3 / 5
+   step 177 | stage 5 | lam(94) | w-order 2 | first occurrence 5 | pivot eq 304 (w-order 5, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 178 | stage 5 | lam(185) | w-order 2 | first occurrence 5 | pivot eq 315 (w-order 5, 17 terms) | max w-order / max first occurrence of its unknowns 4 / 5
+   step 179 | stage 5 | lam(186) | w-order 2 | first occurrence 5 | pivot eq 313 (w-order 5, 6 terms) | max w-order / max first occurrence of its unknowns 4 / 5
+   step 180 | stage 5 | lam(259) | w-order 2 | first occurrence 5 | pivot eq 321 (w-order 5, 6 terms) | max w-order / max first occurrence of its unknowns 4 / 5
+   step 181 | stage 5 | lam(270) | w-order 2 | first occurrence 3 | pivot eq 325 (w-order 5, 7 terms) | max w-order / max first occurrence of its unknowns 5 / 5
+   step 182 | stage 5 | lam(311) | w-order 2 | first occurrence 5 | pivot eq 333 (w-order 5, 6 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 183 | stage 5 | lam(322) | w-order 2 | first occurrence 3 | pivot eq 335 (w-order 5, 5 terms) | max w-order / max first occurrence of its unknowns 3 / 5
+   step 184 | stage 5 | lam(81) | w-order 1 | first occurrence 5 | pivot eq 309 (w-order 5, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 5
+   step 185 | stage 5 | lam(82) | w-order 1 | first occurrence 5 | pivot eq 308 (w-order 5, 6 terms) | max w-order / max first occurrence of its unknowns 1 / 5
+   step 186 | stage 5 | lam(83) | w-order 1 | first occurrence 5 | pivot eq 305 (w-order 5, 9 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 187 | stage 5 | lam(84) | w-order 1 | first occurrence 5 | pivot eq 303 (w-order 5, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 188 | stage 5 | lam(173) | w-order 1 | first occurrence 5 | pivot eq 318 (w-order 5, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 5
+   step 189 | stage 5 | lam(174) | w-order 1 | first occurrence 5 | pivot eq 317 (w-order 5, 9 terms) | max w-order / max first occurrence of its unknowns 3 / 5
+   step 190 | stage 5 | lam(175) | w-order 1 | first occurrence 5 | pivot eq 314 (w-order 5, 8 terms) | max w-order / max first occurrence of its unknowns 3 / 5
+   step 191 | stage 5 | lam(176) | w-order 1 | first occurrence 5 | pivot eq 312 (w-order 5, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 192 | stage 5 | lam(245) | w-order 1 | first occurrence 5 | pivot eq 326 (w-order 5, 7 terms) | max w-order / max first occurrence of its unknowns 3 / 5
+   step 193 | stage 5 | lam(246) | w-order 1 | first occurrence 5 | pivot eq 324 (w-order 5, 12 terms) | max w-order / max first occurrence of its unknowns 5 / 5
+   step 194 | stage 5 | lam(247) | w-order 1 | first occurrence 5 | pivot eq 320 (w-order 5, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 195 | stage 5 | lam(297) | w-order 1 | first occurrence 5 | pivot eq 338 (w-order 5, 3 terms) | max w-order / max first occurrence of its unknowns 1 / 5
+   step 196 | stage 5 | lam(298) | w-order 1 | first occurrence 5 | pivot eq 336 (w-order 5, 7 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 197 | stage 5 | lam(299) | w-order 1 | first occurrence 5 | pivot eq 332 (w-order 5, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 5
+   step 198 | stage 5 | b(3) | w-order 5 | first occurrence 5 | pivot eq 323 (w-order 5, 11 terms) | max w-order / max first occurrence of its unknowns 5 / 5
+== stage 5 : equations of w-order 5 added: 42 ; unknowns of w-order 5 : lambda 8 , g/b 2
+   eliminated at stage 5 (name[w-order]): lam(104)[4] lam(196)[4] lam(266)[4] lam(318)[4] lam(93)[2] lam(94)[2] lam(185)[2] lam(186)[2] lam(259)[2] lam(270)[2] lam(311)[2] lam(322)[2] lam(81)[1] lam(82)[1] lam(83)[1] lam(84)[1] lam(173)[1] lam(174)[1] lam(175)[1] lam(176)[1] lam(245)[1] lam(246)[1] lam(247)[1] lam(297)[1] lam(298)[1] lam(299)[1] b(3)[5] 
+   unknowns occurring for the first time in equations of w-order 5 : lambda 36 , g/b 2
+   pivots at stage 5 on equations all of whose unknowns occur already before w-order 5 (conditions on lower-order data): 0 : 
+   pivots at stage 5 on equations involving only unknowns of w-order < 5 : 20 : lam(93)[2] lam(94)[2] lam(185)[2] lam(186)[2] lam(259)[2] lam(311)[2] lam(322)[2] lam(81)[1] lam(82)[1] lam(83)[1] lam(84)[1] lam(173)[1] lam(174)[1] lam(175)[1] lam(176)[1] lam(245)[1] lam(247)[1] lam(297)[1] lam(298)[1] lam(299)[1] 
+   equations that became identically zero during stage 5 : 16
+   equations remaining (w-order <= 5): 0 ; involving only unknowns of w-order < 5 (obstructions): 0 ; ms: 1457
+   step 199 | stage 6 | lam(359) | w-order 5 | first occurrence 6 | pivot eq 418 (w-order 6, 8 terms) | max w-order / max first occurrence of its unknowns 6 / 6
+   step 200 | stage 6 | lam(12) | w-order 3 | first occurrence 6 | pivot eq 344 (w-order 6, 5 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 201 | stage 6 | lam(32) | w-order 3 | first occurrence 6 | pivot eq 351 (w-order 6, 3 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 202 | stage 6 | lam(58) | w-order 3 | first occurrence 6 | pivot eq 356 (w-order 6, 1 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 203 | stage 6 | lam(78) | w-order 3 | first occurrence 6 | pivot eq 365 (w-order 6, 1 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 204 | stage 6 | lam(124) | w-order 3 | first occurrence 6 | pivot eq 375 (w-order 6, 6 terms) | max w-order / max first occurrence of its unknowns 5 / 6
+   step 205 | stage 6 | lam(150) | w-order 3 | first occurrence 6 | pivot eq 380 (w-order 6, 2 terms) | max w-order / max first occurrence of its unknowns 5 / 6
+   step 206 | stage 6 | lam(170) | w-order 3 | first occurrence 6 | pivot eq 389 (w-order 6, 11 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 207 | stage 6 | lam(216) | w-order 3 | first occurrence 6 | pivot eq 399 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 5 / 6
+   step 208 | stage 6 | lam(236) | w-order 3 | first occurrence 6 | pivot eq 405 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 209 | stage 6 | lam(288) | w-order 3 | first occurrence 6 | pivot eq 411 (w-order 6, 5 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 210 | stage 6 | lam(352) | w-order 3 | first occurrence 6 | pivot eq 417 (w-order 6, 13 terms) | max w-order / max first occurrence of its unknowns 5 / 6
+   step 211 | stage 6 | lam(363) | w-order 3 | first occurrence 4 | pivot eq 419 (w-order 6, 15 terms) | max w-order / max first occurrence of its unknowns 6 / 6
+   step 212 | stage 6 | lam(5) | w-order 2 | first occurrence 6 | pivot eq 348 (w-order 6, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 213 | stage 6 | lam(6) | w-order 2 | first occurrence 6 | pivot eq 347 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 214 | stage 6 | lam(7) | w-order 2 | first occurrence 6 | pivot eq 345 (w-order 6, 6 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 215 | stage 6 | lam(25) | w-order 2 | first occurrence 6 | pivot eq 354 (w-order 6, 3 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 216 | stage 6 | lam(26) | w-order 2 | first occurrence 6 | pivot eq 353 (w-order 6, 7 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 217 | stage 6 | lam(27) | w-order 2 | first occurrence 6 | pivot eq 350 (w-order 6, 3 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 218 | stage 6 | lam(47) | w-order 2 | first occurrence 6 | pivot eq 359 (w-order 6, 2 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 219 | stage 6 | lam(48) | w-order 2 | first occurrence 6 | pivot eq 357 (w-order 6, 1 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 220 | stage 6 | lam(67) | w-order 2 | first occurrence 6 | pivot eq 368 (w-order 6, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 221 | stage 6 | lam(68) | w-order 2 | first occurrence 6 | pivot eq 366 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 222 | stage 6 | lam(117) | w-order 2 | first occurrence 6 | pivot eq 378 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 223 | stage 6 | lam(118) | w-order 2 | first occurrence 6 | pivot eq 377 (w-order 6, 12 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 224 | stage 6 | lam(119) | w-order 2 | first occurrence 6 | pivot eq 374 (w-order 6, 5 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 225 | stage 6 | lam(139) | w-order 2 | first occurrence 6 | pivot eq 383 (w-order 6, 11 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 226 | stage 6 | lam(140) | w-order 2 | first occurrence 6 | pivot eq 381 (w-order 6, 2 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 227 | stage 6 | lam(159) | w-order 2 | first occurrence 6 | pivot eq 392 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 228 | stage 6 | lam(160) | w-order 2 | first occurrence 6 | pivot eq 390 (w-order 6, 11 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 229 | stage 6 | lam(209) | w-order 2 | first occurrence 6 | pivot eq 402 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 230 | stage 6 | lam(210) | w-order 2 | first occurrence 6 | pivot eq 401 (w-order 6, 12 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 231 | stage 6 | lam(211) | w-order 2 | first occurrence 6 | pivot eq 398 (w-order 6, 4 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 232 | stage 6 | lam(229) | w-order 2 | first occurrence 6 | pivot eq 408 (w-order 6, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 233 | stage 6 | lam(230) | w-order 2 | first occurrence 6 | pivot eq 407 (w-order 6, 8 terms) | max w-order / max first occurrence of its unknowns 3 / 6
+   step 234 | stage 6 | lam(231) | w-order 2 | first occurrence 6 | pivot eq 404 (w-order 6, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 235 | stage 6 | lam(281) | w-order 2 | first occurrence 6 | pivot eq 414 (w-order 6, 2 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 236 | stage 6 | lam(282) | w-order 2 | first occurrence 6 | pivot eq 413 (w-order 6, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 237 | stage 6 | lam(283) | w-order 2 | first occurrence 6 | pivot eq 410 (w-order 6, 5 terms) | max w-order / max first occurrence of its unknowns 2 / 6
+   step 238 | stage 6 | lam(338) | w-order 2 | first occurrence 6 | pivot eq 422 (w-order 6, 10 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 239 | stage 6 | lam(339) | w-order 2 | first occurrence 6 | pivot eq 420 (w-order 6, 26 terms) | max w-order / max first occurrence of its unknowns 6 / 6
+   step 240 | stage 6 | lam(340) | w-order 2 | first occurrence 6 | pivot eq 416 (w-order 6, 12 terms) | max w-order / max first occurrence of its unknowns 4 / 6
+   step 241 | stage 6 | g(9) | w-order 6 | first occurrence 6 | pivot eq 421 (w-order 6, 21 terms) | max w-order / max first occurrence of its unknowns 6 / 6
+   step 242 | stage 6 | g(7) | w-order 4 | first occurrence 4 | pivot eq 376 (w-order 6, 10 terms) | max w-order / max first occurrence of its unknowns 4 / 4
+== stage 6 : equations of w-order 6 added: 84 ; unknowns of w-order 6 : lambda 7 , g/b 2
+   eliminated at stage 6 (name[w-order]): lam(359)[5] lam(12)[3] lam(32)[3] lam(58)[3] lam(78)[3] lam(124)[3] lam(150)[3] lam(170)[3] lam(216)[3] lam(236)[3] lam(288)[3] lam(352)[3] lam(363)[3] lam(5)[2] lam(6)[2] lam(7)[2] lam(25)[2] lam(26)[2] lam(27)[2] lam(47)[2] lam(48)[2] lam(67)[2] lam(68)[2] lam(117)[2] lam(118)[2] lam(119)[2] lam(139)[2] lam(140)[2] lam(159)[2] lam(160)[2] lam(209)[2] lam(210)[2] lam(211)[2] lam(229)[2] lam(230)[2] lam(231)[2] lam(281)[2] lam(282)[2] lam(283)[2] lam(338)[2] lam(339)[2] lam(340)[2] g(9)[6] g(7)[4] 
+   unknowns occurring for the first time in equations of w-order 6 : lambda 50 , g/b 2
+   pivots at stage 6 on equations all of whose unknowns occur already before w-order 6 (conditions on lower-order data): 1 : g(7)[4] 
+   pivots at stage 6 on equations involving only unknowns of w-order < 6 : 40 : lam(12)[3] lam(32)[3] lam(58)[3] lam(78)[3] lam(124)[3] lam(150)[3] lam(170)[3] lam(216)[3] lam(236)[3] lam(288)[3] lam(352)[3] lam(5)[2] lam(6)[2] lam(7)[2] lam(25)[2] lam(26)[2] lam(27)[2] lam(47)[2] lam(48)[2] lam(67)[2] lam(68)[2] lam(117)[2] lam(118)[2] lam(119)[2] lam(139)[2] lam(140)[2] lam(159)[2] lam(160)[2] lam(209)[2] lam(210)[2] lam(211)[2] lam(229)[2] lam(230)[2] lam(231)[2] lam(281)[2] lam(282)[2] lam(283)[2] lam(338)[2] lam(340)[2] g(7)[4] 
+   equations that became identically zero during stage 6 : 59
+   equations remaining (w-order <= 6): 0 ; involving only unknowns of w-order < 6 (obstructions): 0 ; ms: 1669
+   step 243 | stage 7 | lam(110) | w-order 4 | first occurrence 7 | pivot eq 428 (w-order 7, 2 terms) | max w-order / max first occurrence of its unknowns 5 / 7
+   step 244 | stage 7 | lam(202) | w-order 4 | first occurrence 7 | pivot eq 437 (w-order 7, 1 terms) | max w-order / max first occurrence of its unknowns 4 / 7
+   step 245 | stage 7 | lam(260) | w-order 4 | first occurrence 7 | pivot eq 446 (w-order 7, 9 terms) | max w-order / max first occurrence of its unknowns 6 / 7
+   step 246 | stage 7 | lam(312) | w-order 4 | first occurrence 7 | pivot eq 452 (w-order 7, 9 terms) | max w-order / max first occurrence of its unknowns 5 / 7
+   step 247 | stage 7 | lam(87) | w-order 3 | first occurrence 7 | pivot eq 431 (w-order 7, 13 terms) | max w-order / max first occurrence of its unknowns 3 / 7
+   step 248 | stage 7 | lam(88) | w-order 3 | first occurrence 7 | pivot eq 429 (w-order 7, 7 terms) | max w-order / max first occurrence of its unknowns 4 / 7
+   step 249 | stage 7 | lam(179) | w-order 3 | first occurrence 7 | pivot eq 440 (w-order 7, 9 terms) | max w-order / max first occurrence of its unknowns 5 / 7
+   step 250 | stage 7 | lam(180) | w-order 3 | first occurrence 7 | pivot eq 438 (w-order 7, 10 terms) | max w-order / max first occurrence of its unknowns 6 / 7
+   step 251 | stage 7 | lam(249) | w-order 3 | first occurrence 7 | pivot eq 450 (w-order 7, 9 terms) | max w-order / max first occurrence of its unknowns 3 / 7
+   step 252 | stage 7 | lam(250) | w-order 3 | first occurrence 7 | pivot eq 449 (w-order 7, 25 terms) | max w-order / max first occurrence of its unknowns 5 / 7
+   step 253 | stage 7 | lam(251) | w-order 3 | first occurrence 7 | pivot eq 447 (w-order 7, 14 terms) | max w-order / max first occurrence of its unknowns 5 / 7
+   step 254 | stage 7 | lam(301) | w-order 3 | first occurrence 7 | pivot eq 456 (w-order 7, 6 terms) | max w-order / max first occurrence of its unknowns 3 / 7
+   step 255 | stage 7 | lam(302) | w-order 3 | first occurrence 7 | pivot eq 455 (w-order 7, 20 terms) | max w-order / max first occurrence of its unknowns 3 / 7
+   step 256 | stage 7 | lam(303) | w-order 3 | first occurrence 7 | pivot eq 453 (w-order 7, 12 terms) | max w-order / max first occurrence of its unknowns 4 / 7
+   step 257 | stage 7 | g(10) | w-order 6 | first occurrence 6 | pivot eq 439 (w-order 7, 6 terms) | max w-order / max first occurrence of its unknowns 6 / 6
+== stage 7 : equations of w-order 7 added: 30 ; unknowns of w-order 7 : lambda 2 , g/b 0
+   eliminated at stage 7 (name[w-order]): lam(110)[4] lam(202)[4] lam(260)[4] lam(312)[4] lam(87)[3] lam(88)[3] lam(179)[3] lam(180)[3] lam(249)[3] lam(250)[3] lam(251)[3] lam(301)[3] lam(302)[3] lam(303)[3] g(10)[6] 
+   unknowns occurring for the first time in equations of w-order 7 : lambda 16 , g/b 0
+   pivots at stage 7 on equations all of whose unknowns occur already before w-order 7 (conditions on lower-order data): 1 : g(10)[6] 
+   pivots at stage 7 on equations involving only unknowns of w-order < 7 : 15 : lam(110)[4] lam(202)[4] lam(260)[4] lam(312)[4] lam(87)[3] lam(88)[3] lam(179)[3] lam(180)[3] lam(249)[3] lam(250)[3] lam(251)[3] lam(301)[3] lam(302)[3] lam(303)[3] g(10)[6] 
+   equations that became identically zero during stage 7 : 28
+   equations remaining (w-order <= 7): 0 ; involving only unknowns of w-order < 7 (obstructions): 0 ; ms: 1736
+   step 258 | stage 8 | lam(353) | w-order 5 | first occurrence 8 | pivot eq 510 (w-order 8, 13 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 259 | stage 8 | lam(9) | w-order 4 | first occurrence 8 | pivot eq 458 (w-order 8, 3 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 260 | stage 8 | lam(29) | w-order 4 | first occurrence 8 | pivot eq 464 (w-order 8, 3 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 261 | stage 8 | lam(49) | w-order 4 | first occurrence 8 | pivot eq 472 (w-order 8, 3 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 262 | stage 8 | lam(50) | w-order 4 | first occurrence 8 | pivot eq 471 (w-order 8, 6 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 263 | stage 8 | lam(69) | w-order 4 | first occurrence 8 | pivot eq 476 (w-order 8, 2 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 264 | stage 8 | lam(70) | w-order 4 | first occurrence 8 | pivot eq 475 (w-order 8, 6 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 265 | stage 8 | lam(121) | w-order 4 | first occurrence 8 | pivot eq 478 (w-order 8, 5 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 266 | stage 8 | lam(141) | w-order 4 | first occurrence 8 | pivot eq 486 (w-order 8, 8 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 267 | stage 8 | lam(142) | w-order 4 | first occurrence 8 | pivot eq 485 (w-order 8, 10 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 268 | stage 8 | lam(161) | w-order 4 | first occurrence 8 | pivot eq 490 (w-order 8, 4 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 269 | stage 8 | lam(162) | w-order 4 | first occurrence 8 | pivot eq 489 (w-order 8, 7 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 270 | stage 8 | lam(213) | w-order 4 | first occurrence 8 | pivot eq 492 (w-order 8, 7 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 271 | stage 8 | lam(233) | w-order 4 | first occurrence 8 | pivot eq 498 (w-order 8, 4 terms) | max w-order / max first occurrence of its unknowns 5 / 8
+   step 272 | stage 8 | lam(285) | w-order 4 | first occurrence 8 | pivot eq 504 (w-order 8, 9 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 273 | stage 8 | lam(342) | w-order 4 | first occurrence 8 | pivot eq 514 (w-order 8, 12 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 274 | stage 8 | lam(343) | w-order 4 | first occurrence 8 | pivot eq 513 (w-order 8, 24 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+   step 275 | stage 8 | lam(344) | w-order 4 | first occurrence 8 | pivot eq 511 (w-order 8, 23 terms) | max w-order / max first occurrence of its unknowns 4 / 8
+== stage 8 : equations of w-order 8 added: 58 ; unknowns of w-order 8 : lambda 1 , g/b 0
+   eliminated at stage 8 (name[w-order]): lam(353)[5] lam(9)[4] lam(29)[4] lam(49)[4] lam(50)[4] lam(69)[4] lam(70)[4] lam(121)[4] lam(141)[4] lam(142)[4] lam(161)[4] lam(162)[4] lam(213)[4] lam(233)[4] lam(285)[4] lam(342)[4] lam(343)[4] lam(344)[4] 
+   unknowns occurring for the first time in equations of w-order 8 : lambda 19 , g/b 0
+   pivots at stage 8 on equations all of whose unknowns occur already before w-order 8 (conditions on lower-order data): 0 : 
+   pivots at stage 8 on equations involving only unknowns of w-order < 8 : 18 : lam(353)[5] lam(9)[4] lam(29)[4] lam(49)[4] lam(50)[4] lam(69)[4] lam(70)[4] lam(121)[4] lam(141)[4] lam(142)[4] lam(161)[4] lam(162)[4] lam(213)[4] lam(233)[4] lam(285)[4] lam(342)[4] lam(343)[4] lam(344)[4] 
+   equations that became identically zero during stage 8 : 18
+   equations remaining (w-order <= 8): 0 ; involving only unknowns of w-order < 8 (obstructions): 0 ; ms: 1813
+   step 276 | stage 9 | lam(89) | w-order 5 | first occurrence 9 | pivot eq 518 (w-order 9, 12 terms) | max w-order / max first occurrence of its unknowns 5 / 9
+   step 277 | stage 9 | lam(90) | w-order 5 | first occurrence 9 | pivot eq 517 (w-order 9, 12 terms) | max w-order / max first occurrence of its unknowns 5 / 9
+   step 278 | stage 9 | lam(181) | w-order 5 | first occurrence 9 | pivot eq 522 (w-order 9, 7 terms) | max w-order / max first occurrence of its unknowns 5 / 9
+   step 279 | stage 9 | lam(182) | w-order 5 | first occurrence 9 | pivot eq 521 (w-order 9, 11 terms) | max w-order / max first occurrence of its unknowns 5 / 9
+   step 280 | stage 9 | lam(253) | w-order 5 | first occurrence 9 | pivot eq 524 (w-order 9, 8 terms) | max w-order / max first occurrence of its unknowns 5 / 9
+   step 281 | stage 9 | lam(305) | w-order 5 | first occurrence 9 | pivot eq 530 (w-order 9, 9 terms) | max w-order / max first occurrence of its unknowns 5 / 9
+== stage 9 : equations of w-order 9 added: 20 ; unknowns of w-order 9 : lambda 0 , g/b 0
+   eliminated at stage 9 (name[w-order]): lam(89)[5] lam(90)[5] lam(181)[5] lam(182)[5] lam(253)[5] lam(305)[5] 
+   unknowns occurring for the first time in equations of w-order 9 : lambda 6 , g/b 0
+   pivots at stage 9 on equations all of whose unknowns occur already before w-order 9 (conditions on lower-order data): 0 : 
+   pivots at stage 9 on equations involving only unknowns of w-order < 9 : 6 : lam(89)[5] lam(90)[5] lam(181)[5] lam(182)[5] lam(253)[5] lam(305)[5] 
+   equations that became identically zero during stage 9 : 6
+   equations remaining (w-order <= 9): 0 ; involving only unknowns of w-order < 9 (obstructions): 0 ; ms: 1841
+   step 282 | stage 10 | lam(10) | w-order 6 | first occurrence 10 | pivot eq 536 (w-order 10, 3 terms) | max w-order / max first occurrence of its unknowns 6 / 10
+   step 283 | stage 10 | lam(30) | w-order 6 | first occurrence 10 | pivot eq 538 (w-order 10, 3 terms) | max w-order / max first occurrence of its unknowns 6 / 10
+   step 284 | stage 10 | lam(122) | w-order 6 | first occurrence 10 | pivot eq 548 (w-order 10, 4 terms) | max w-order / max first occurrence of its unknowns 6 / 10
+   step 285 | stage 10 | lam(214) | w-order 6 | first occurrence 10 | pivot eq 558 (w-order 10, 3 terms) | max w-order / max first occurrence of its unknowns 6 / 10
+   step 286 | stage 10 | lam(234) | w-order 6 | first occurrence 10 | pivot eq 560 (w-order 10, 8 terms) | max w-order / max first occurrence of its unknowns 6 / 10
+   step 287 | stage 10 | lam(286) | w-order 6 | first occurrence 10 | pivot eq 562 (w-order 10, 10 terms) | max w-order / max first occurrence of its unknowns 6 / 10
+   step 288 | stage 10 | lam(346) | w-order 6 | first occurrence 10 | pivot eq 564 (w-order 10, 10 terms) | max w-order / max first occurrence of its unknowns 6 / 10
+== stage 10 : equations of w-order 10 added: 34 ; unknowns of w-order 10 : lambda 0 , g/b 0
+   eliminated at stage 10 (name[w-order]): lam(10)[6] lam(30)[6] lam(122)[6] lam(214)[6] lam(234)[6] lam(286)[6] lam(346)[6] 
+   unknowns occurring for the first time in equations of w-order 10 : lambda 7 , g/b 0
+   pivots at stage 10 on equations all of whose unknowns occur already before w-order 10 (conditions on lower-order data): 0 : 
+   pivots at stage 10 on equations involving only unknowns of w-order < 10 : 7 : lam(10)[6] lam(30)[6] lam(122)[6] lam(214)[6] lam(234)[6] lam(286)[6] lam(346)[6] 
+   equations that became identically zero during stage 10 : 7
+   equations remaining (w-order <= 10): 0 ; involving only unknowns of w-order < 10 (obstructions): 0 ; ms: 1873
+   step 289 | stage 11 | lam(254) | w-order 7 | first occurrence 11 | pivot eq 578 (w-order 11, 4 terms) | max w-order / max first occurrence of its unknowns 7 / 11
+   step 290 | stage 11 | lam(306) | w-order 7 | first occurrence 11 | pivot eq 580 (w-order 11, 4 terms) | max w-order / max first occurrence of its unknowns 7 / 11
+== stage 11 : equations of w-order 11 added: 12 ; unknowns of w-order 11 : lambda 0 , g/b 0
+   eliminated at stage 11 (name[w-order]): lam(254)[7] lam(306)[7] 
+   unknowns occurring for the first time in equations of w-order 11 : lambda 2 , g/b 0
+   pivots at stage 11 on equations all of whose unknowns occur already before w-order 11 (conditions on lower-order data): 0 : 
+   pivots at stage 11 on equations involving only unknowns of w-order < 11 : 2 : lam(254)[7] lam(306)[7] 
+   equations that became identically zero during stage 11 : 2
+   equations remaining (w-order <= 11): 0 ; involving only unknowns of w-order < 11 (obstructions): 0 ; ms: 1885
+   step 291 | stage 12 | lam(347) | w-order 8 | first occurrence 12 | pivot eq 598 (w-order 12, 4 terms) | max w-order / max first occurrence of its unknowns 8 / 12
+== stage 12 : equations of w-order 12 added: 18 ; unknowns of w-order 12 : lambda 0 , g/b 0
+   eliminated at stage 12 (name[w-order]): lam(347)[8] 
+   unknowns occurring for the first time in equations of w-order 12 : lambda 1 , g/b 0
+   pivots at stage 12 on equations all of whose unknowns occur already before w-order 12 (conditions on lower-order data): 0 : 
+   pivots at stage 12 on equations involving only unknowns of w-order < 12 : 1 : lam(347)[8] 
+   equations that became identically zero during stage 12 : 1
+   equations remaining (w-order <= 12): 0 ; involving only unknowns of w-order < 12 (obstructions): 0 ; ms: 1895
+== stage 13 : equations of w-order 13 added: 6 ; unknowns of w-order 13 : lambda 0 , g/b 0
+   eliminated at stage 13 (name[w-order]): 
+   unknowns occurring for the first time in equations of w-order 13 : lambda 0 , g/b 0
+   pivots at stage 13 on equations all of whose unknowns occur already before w-order 13 (conditions on lower-order data): 0 : 
+   pivots at stage 13 on equations involving only unknowns of w-order < 13 : 0 : 
+   equations that became identically zero during stage 13 : 0
+   equations remaining (w-order <= 13): 0 ; involving only unknowns of w-order < 13 (obstructions): 0 ; ms: 1900
+== stage 14 : equations of w-order 14 added: 6 ; unknowns of w-order 14 : lambda 0 , g/b 0
+   eliminated at stage 14 (name[w-order]): 
+   unknowns occurring for the first time in equations of w-order 14 : lambda 0 , g/b 0
+   pivots at stage 14 on equations all of whose unknowns occur already before w-order 14 (conditions on lower-order data): 0 : 
+   pivots at stage 14 on equations involving only unknowns of w-order < 14 : 0 : 
+   equations that became identically zero during stage 14 : 0
+   equations remaining (w-order <= 14): 0 ; involving only unknowns of w-order < 14 (obstructions): 0 ; ms: 1906
+== stage 15 : equations of w-order 15 added: 2 ; unknowns of w-order 15 : lambda 0 , g/b 0
+   eliminated at stage 15 (name[w-order]): 
+   unknowns occurring for the first time in equations of w-order 15 : lambda 0 , g/b 0
+   pivots at stage 15 on equations all of whose unknowns occur already before w-order 15 (conditions on lower-order data): 0 : 
+   pivots at stage 15 on equations involving only unknowns of w-order < 15 : 0 : 
+   equations that became identically zero during stage 15 : 0
+   equations remaining (w-order <= 15): 0 ; involving only unknowns of w-order < 15 (obstructions): 0 ; ms: 1911
+== order-by-order elimination finished: eliminated 291 unknowns; equations left: 0 ; inconsistent equations met: 0 ; ms: 1912
+free (non-eliminated) unknowns: 102 ; free lambda: 94 ; free A-coefficients f = 8
+free A-coefficients (name[w-order]): g(4)[2] g(5)[2] g(6)[2] g(8)[4] b(4)[3] b(6)[1] b(9)[5] b(11)[1] 
+free lambda: lam(4) lam(8) lam(17) lam(18) lam(24) lam(28) lam(37) lam(38) lam(45) lam(46) lam(55) lam(57) lam(65) lam(66) lam(75) lam(77) lam(85) lam(86) lam(101) lam(102) lam(103) lam(105) lam(106) lam(107) lam(108) lam(109) lam(116) lam(120) lam(129) lam(130) lam(137) lam(138) lam(147) lam(149) lam(157) lam(158) lam(167) lam(169) lam(177) lam(178) lam(193) lam(194) lam(195) lam(197) lam(198) lam(199) lam(200) lam(201) lam(208) lam(212) lam(221) lam(222) lam(228) lam(232) lam(241) lam(242) lam(248) lam(252) lam(258) lam(264) lam(267) lam(268) lam(271) lam(272) lam(273) lam(274) lam(280) lam(284) lam(293) lam(294) lam(300) lam(304) lam(310) lam(316) lam(319) lam(320) lam(323) lam(324) lam(325) lam(326) lam(334) lam(335) lam(336) lam(337) lam(341) lam(345) lam(351) lam(357) lam(360) lam(361) lam(364) lam(365) lam(366) lam(367) 
+eliminated A-coefficients: 14 : b(8)[stage 1] g(1)[stage 2] b(5)[stage 2] b(7)[stage 2] b(10)[stage 2] b(12)[stage 2] b(2)[stage 3] b(1)[stage 4] g(2)[stage 4] g(3)[stage 4] b(3)[stage 5] g(9)[stage 6] g(7)[stage 6] g(10)[stage 7] 
+== back-substitution done; ms: 1948
+eliminated g, b as polynomials in the free unknowns:
+  g(1) = 0
+  g(2) = -2*b(6)^2-6*b(6)*b(11)-4*b(11)^2+g(5)
+  g(3) = -2*b(11)
+  g(7) = b(6)^3+4*b(6)^2*b(11)+4*b(6)*b(11)^2-g(5)*b(6)+2*b(4)*b(6)-2*g(5)*b(11)+4*b(4)*b(11)+1/2*g(4)-1/2*g(6)
+  g(9) = -b(4)*b(6)^2-2*b(4)*b(6)*b(11)+g(5)*b(4)-b(4)^2-1/2*g(6)*b(6)-g(6)*b(11)+1/2*g(8)-2*b(9)
+  g(10) = -g(6)*b(6)^2-2*g(6)*b(6)*b(11)+g(5)*g(6)-g(6)*b(4)+2*b(6)*b(9)
+  b(1) = b(6)^2+2*b(6)*b(11)-g(5)+b(4)
+  b(2) = b(11)
+  b(3) = -1/2*g(6)
+  b(5) = -b(6)-2*b(11)
+  b(7) = -2
+  b(8) = 0
+  b(10) = 0
+  b(12) = 1
+graph check (no free lambda occurs in the eliminated g, b): 1
+exact substitution check: original equations not vanishing identically on the parametrization: 0 of 613 ; ms: 1997
+largest final expression (terms): 24
+== done; ms: 2014 ; memory (KB, allocated): 28672 ; max: 28791

@@ -1,0 +1,165 @@
+==== the general matrices are sigma-equivariant and of the right weights ====
+N2:
+1
+1
+N3:
+1
+1
+N1(D):
+1
+1
+shape test on the untransformed general matrices (N2, N3, N1(D)):
+1
+1
+1
+==== T5 (a), my version: (N2, column (1,1)) -> (N1(1), column (1,0)), over Q(i) ====
+result has the general shape with net N1(1), Q = y2^2 - y3^2 - y1^2, column at v1:
+1
+P is sigma-equivariant (block diagonal constants) and invertible, det P =
+16
+==== T5 (b): swap (v1 v2)(v3 v4): (N3, column (0,1)) -> (N1(0), column (1,0)) ====
+result has the general shape with net N1(0), column at v1:
+1
+  (the entry m23 y0 of M' moves to position (v1, v4); T6 re-normalizes M')
+==== T6 (i): v5 -> v5 + k3 w v3 + k4 w v4 ====
+  N2: P^t A P = A with a13 += k3 y0, a14 += k4 y0, q3 += k3 Q, q4 += k4 Q (nothing else):
+1
+  N2: P sigma-equivariant (sigma(P_jk) = delta_j delta_k P_jk):
+1
+  N3: P^t A P = A with a13 += k3 y0, a14 += k4 y0, q3 += k3 Q, q4 += k4 Q (nothing else):
+1
+  N3: P sigma-equivariant (sigma(P_jk) = delta_j delta_k P_jk):
+1
+  N1(D): P^t A P = A with a13 += k3 y0, a14 += k4 y0, q3 += k3 Q, q4 += k4 Q (nothing else):
+1
+  N1(D): P sigma-equivariant (sigma(P_jk) = delta_j delta_k P_jk):
+1
+==== T6 (ii): y1 -> y1 + be y0, then v1 -> v1 + w u v0, u = 2 be y1 + be^2 y0 ====
+  N2: rows/columns v1..v5 equal those of the normal form with M' + be I:
+1
+  N2: A_05 = Q:
+1
+  N2: general shape preserved (sigma, weights, A_00 in (y0), A_0k in (w)):
+1
+  P sigma-equivariant:
+1
+  N3: rows/columns v1..v5 equal those of the normal form with M' + be I:
+1
+  N3: A_05 = Q:
+1
+  N3: general shape preserved (sigma, weights, A_00 in (y0), A_0k in (w)):
+1
+  P sigma-equivariant:
+1
+  N1(D): rows/columns v1..v5 equal those of the normal form with M' + be I:
+1
+  N1(D): A_05 = Q:
+1
+  N1(D): general shape preserved (sigma, weights, A_00 in (y0), A_0k in (w)):
+1
+  P sigma-equivariant:
+1
+==== T6 (iii): (ii) with be = -m24, then (i) with k3 = m24 - m13, k4 = -m14 gives M' = m23 E_23 ====
+  N2: rows/columns v1..v5 are those of the normal form with M' = m23 E_23:
+1
+  N2: general shape:
+1
+  N3: rows/columns v1..v5 are those of the normal form with M' = m23 E_23:
+1
+  N3: general shape:
+1
+  N1(D): rows/columns v1..v5 are those of the normal form with M' = m23 E_23:
+1
+  N1(D): general shape:
+1
+==== T7: the group U ====
+  N1(D): rows/columns v1..v5 unchanged:
+1
+  N1(D): A_05 unchanged:
+1
+  N1(D): delta q_k = sum_{j=2..4} u_j a_jk + delta_{k1} y0 u5:
+1
+  N1(D): delta(y0 G) divisible by y0:
+1
+  N1(D): delta G = 2 sum u_j q_j + sum_{j,l} u_j u_l a_jl + 2 u5 Q:
+1
+  N1(D): the formula without cross terms would be correct:
+0
+  N1(D): 8x8 matrix (rows = killed monomials, columns p0 p1 r2 r3 s2 s3 t2 t3):
+1,0,0, 0, 0,0,1,0,
+0,0,0, 0, 0,0,0,1,
+0,0,0, 0, 1,0,0,0,
+0,0,-1,0, 0,1,0,0,
+0,0,0, -1,0,0,0,0,
+1,0,0, 0, 0,0,0,0,
+0,1,0, 0, 0,0,0,0,
+0,0,1, 0, 0,0,0,0 
+  entries free of D and of c = m23:
+1
+  determinant:
+1
+  N2: rows/columns v1..v5 unchanged:
+1
+  N2: A_05 unchanged:
+1
+  N2: delta q_k = sum_{j=2..4} u_j a_jk + delta_{k1} y0 u5:
+1
+  N2: delta(y0 G) divisible by y0:
+1
+  N2: delta G = 2 sum u_j q_j + sum_{j,l} u_j u_l a_jl + 2 u5 Q:
+1
+  N2: the formula without cross terms would be correct:
+0
+  N2: 8x8 matrix (rows = killed monomials, columns p0 p1 r2 r3 s2 s3 t2 t3):
+0,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,1,
+0,0,1,0,0,0,0,0,
+0,0,0,1,0,0,0,0,
+1,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0,
+0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,0,0 
+  entries free of D and of c = m23:
+1
+  determinant:
+1
+  N3: rows/columns v1..v5 unchanged:
+1
+  N3: A_05 unchanged:
+1
+  N3: delta q_k = sum_{j=2..4} u_j a_jk + delta_{k1} y0 u5:
+1
+  N3: delta(y0 G) divisible by y0:
+1
+  N3: delta G = 2 sum u_j q_j + sum_{j,l} u_j u_l a_jl + 2 u5 Q:
+1
+  N3: the formula without cross terms would be correct:
+0
+  N3: 8x8 matrix (rows = killed monomials, columns p0 p1 r2 r3 s2 s3 t2 t3):
+1,0,0,0,0,0,1,0,
+0,0,0,0,0,0,0,1,
+0,1,1,0,0,0,0,0,
+0,0,0,1,0,0,0,0,
+0,0,0,0,1,0,0,0,
+0,0,0,0,0,1,0,0,
+1,0,0,0,0,0,0,0,
+0,1,0,0,0,0,0,0 
+  entries free of D and of c = m23:
+1
+  determinant:
+1
+==== T8: N3 with c = 0 ====
+principal submatrix on (v2, v3, v5) is zero:
+1
+X =
+X[1,1],    y2,y1,
+X[2,1],    y1,y2,
+-y1^2+y2^2,w, 0  
+number of terms of det A:
+90
+det A + (det X)^2 == 0:
+1
+det X mod w = Q^2:
+1
+det X - Q^2 - y0 (y1 q3 - y2 q2) == 0:
+1

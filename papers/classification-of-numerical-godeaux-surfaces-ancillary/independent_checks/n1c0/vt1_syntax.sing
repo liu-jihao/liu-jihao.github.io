@@ -1,0 +1,11 @@
+ring R = 0, (x, b, t), dp;
+poly f = b^3*x + 2*b^2*x^2 - b^2;
+f / b;
+f / b^2;
+poly g = x*b + 1;
+g / b;
+ideal Gt = std(t*b - 1);
+reduce(t^2*b^3*x + t*b - x, Gt);
+intvec e = leadexp(3*b^2*t);
+e;
+quit;

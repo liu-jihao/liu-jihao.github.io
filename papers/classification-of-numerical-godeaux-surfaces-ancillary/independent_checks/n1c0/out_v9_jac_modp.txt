@@ -1,0 +1,5 @@
+distinct equations: 752
+(iii) point 1: rank mod 32003 = 291, nullity = 103, rank of the lambda-columns = 277, rank of the kernel projection to the A-coordinates = 9
+(iii) point 2: rank mod 32003 = 291, nullity = 103, rank of the lambda-columns = 277, rank of the kernel projection to the A-coordinates = 9
+(ii) point 3: rank mod 32003 = 253, nullity = 141, rank of the lambda-columns = 235, rank of the kernel projection to the A-coordinates = 5
+total time (ms): 1380, memory(2) = 102953744

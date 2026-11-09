@@ -1,0 +1,19 @@
+entries in rows/columns v1..v5 changed: 0; A_05 unchanged: 1
+A_00 still divisible by y0: 1
+killed coefficients after the change: e(1)+p0+t2,e(2)+t3,e(12)+s2,e(13)-r2+s3,e(14)-r3,e(16)+p0,e(17)+p1,e(18)+r2
+1,0,0, 0, 0,0,1,0,
+0,0,0, 0, 0,0,0,1,
+0,0,0, 0, 1,0,0,0,
+0,0,-1,0, 0,1,0,0,
+0,0,0, -1,0,0,0,0,
+1,0,0, 0, 0,0,0,0,
+0,1,0, 0, 0,0,0,0,
+0,0,1, 0, 0,0,0,0 
+det of the 8x8 Jacobian: 1
+Jacobian entries depending on anything (must be 0 for affine-linear with constant part): 0
+branch (ii): factors of det A on the parametrization: -1,w^8*b(8)^2-w^4*y3^2*D*b(5)^2+2*w^6*y1*b(5)*b(8)+w^4*y1^2*b(5)^2+2*w^4*y1^2*b(8)-2*w^4*y2^2*b(8)+w^4*y3^2*g(2)+y3^4*D^2+2*w^2*y1*y3^2*b(2)+2*w^2*y1^3*b(5)-2*w^2*y1*y2^2*b(5)+2*y1^2*y3^2*D-2*y2^2*y3^2*D+y1^4-2*y1^2*y2^2+y2^4,y3^2*D+y1^2-y2^2  mult 1,1,2
+branch (ii): gcd(B_00..B_05) = y3^2*D+y1^2-y2^2
+branch (iii) point 1: gcd(B_00..B_05) = 1; det A at the point: irreducible over Q 1 (factor list 2 entries incl. the constant)
+branch (iii) point 2: gcd(B_00..B_05) = 1; det A at the point: irreducible over Q 1 (factor list 2 entries incl. the constant)
+branch (iii) point 3: gcd(B_00..B_05) = 1; det A at the point: irreducible over Q 1 (factor list 2 entries incl. the constant)
+total time (ms): 52, memory(2) = 16899472

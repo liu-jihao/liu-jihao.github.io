@@ -1,0 +1,43 @@
+free A-unknowns read from v_graph.sing: 8
+random graph point 1: det A != 0: 1; pairs (i,j), 1<=i<=j<=5, with B_ij not in (B_00..B_05): 0 of 15
+random graph point 2: det A != 0: 1; pairs (i,j), 1<=i<=j<=5, with B_ij not in (B_00..B_05): 0 of 15
+random graph point 3: det A != 0: 1; pairs (i,j), 1<=i<=j<=5, with B_ij not in (B_00..B_05): 0 of 15
+graph point with free A-unknowns = 0: det A != 0: 1; pairs (i,j), 1<=i<=j<=5, with B_ij not in (B_00..B_05): 0 of 15
+NEGATIVE control: graph point 1 with b(8) shifted by 1: det A != 0: 1; pairs (i,j), 1<=i<=j<=5, with B_ij not in (B_00..B_05): 10 of 15
+NEGATIVE control: all 22 A-coefficients random: det A != 0: 1; pairs (i,j), 1<=i<=j<=5, with B_ij not in (B_00..B_05): 10 of 15
+Part A time (s): 0
+lambda coefficients: 371
+  by k = 0..5: 159,46,46,44,44,32
+  by w-order 0..8: 123,98,66,40,26,8,7,2,1
+trivial-syzygy directions: 94
+number of ring variables: 397
+lambda unknowns created: 371
+A symmetric: 1
+A: weight/sign violations: 0
+lambda: weight/sign violations: 0
+net alpha (w = 0):
+y3,y2,y1,0, 
+y2,0, 0, y1,
+y1,0, 0, y2,
+0, y1,y2,-y3
+det(alpha) - Q^2 = 0
+3x3 minors of alpha not divisible by Q: 0 of 10
+A*B = det(A)*I : violations 0
+B symmetric: 1
+B_00 mod w = 0
+B_01 mod w = 0
+B_02 mod w = 0
+B_03 mod w = 0
+B_04 mod w = 0
+B_05 mod w = y1^6-3*y1^4*y2^2+3*y1^2*y2^4-y2^6
+B_05 + Q^3 mod w = 0
+nonzero coefficient equations: 710
+  by w-order 0..15: 72,45,118,50,113,42,84,30,58,20,34,12,18,6,6,2
+  monomials of wrong weight/sign in E_ij: 0
+max total degree of an equation: 2
+unknowns not occurring in any equation: 0
+Jacobian size: 710 x 397
+mod-p point 1: equations nonzero at the point: 0; rank J = 291 (unknowns 393, corank 102); rank J_lambda = 277 (lambda corank 94); rank of projection of ker J to the 22 A-coefficients = 8
+mod-p point 2: equations nonzero at the point: 0; rank J = 291 (unknowns 393, corank 102); rank J_lambda = 277 (lambda corank 94); rank of projection of ker J to the 22 A-coefficients = 8
+total real time (s): 0
+memory (KB) 100769

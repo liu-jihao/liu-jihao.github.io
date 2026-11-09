@@ -1,0 +1,15 @@
+equations read: 782  parametrization entries: 399
+free unknowns: 103
+Jacobian size: 782 399
+point 1 0 (D=0 if 1): equations not vanishing: 0 ; rank J = 291 ; rank J_lambda = 277 ; tangent dim = 103 ; tangent vectors with zero A-part = 94 ; projection rank to A-coefficients = 9
+point 2 0 (D=0 if 1): equations not vanishing: 0 ; rank J = 291 ; rank J_lambda = 277 ; tangent dim = 103 ; tangent vectors with zero A-part = 94 ; projection rank to A-coefficients = 9
+point 3 1 (D=0 if 1): equations not vanishing: 0 ; rank J = 291 ; rank J_lambda = 277 ; tangent dim = 103 ; tangent vectors with zero A-part = 94 ; projection rank to A-coefficients = 9
+time (ms) after mod p part: 201
+A-coefficient values at the rational point of Gamma (qq(1..12), gg(1..10), D):
+qq(1)=311/4 qq(2)=-37 qq(3)=251/4 qq(4)=-7 qq(5)=-8 qq(6)=-2 qq(7)=-3 qq(8)=6 qq(9)=-7 qq(10)=-5 qq(11)=-147/4 qq(12)=0 gg(1)=20 gg(2)=-4327/4 gg(3)=-311 gg(4)=965/4 gg(5)=7 gg(6)=-2 gg(7)=4 gg(8)=3 gg(9)=1533/4 gg(10)=-3363/4 D=5 
+exact: lambda-system at the point of Gamma: contains 1: 0 ; Krull dim = 122 ; solution dimension in lambda-space = 94
+perturbed coefficient: gg(1)  eliminated: 1
+exact: lambda-system after gg(1) -> gg(1) + 1: contains 1 (unsolvable): 1
+exact: lambda-system after D -> D + 1 with the other 22 coefficients unchanged: contains 1 (unsolvable): 1
+time (ms) total: 409
+memory(1), memory(2): 71034112 90689456

@@ -1,0 +1,8 @@
+after (a)-(d): entries of rows/columns v1..v5 differing from the normal form N3, c = 1: 0
+after (e): entries of rows/columns v1..v5 differing from the normal form: 0
+A_00 divisible by y0: 1; q1 of the result: 0
+result in the slice (A_00 = y0*G, q1 = 0, q2, q3, q4 only kept monomials): 1
+result violates the case's graph relations: 0 of 22
+induced map on (g4,g5,g6,g8,b4,b6,b9,b11) differing from CASE.md 3.7: 0 of 8 coordinates
+group law F(e1,F(e2,x)) = F(e1+e2,x): coordinates violating it: 0
+rank of [torus field; shear field] at a rational point: 2

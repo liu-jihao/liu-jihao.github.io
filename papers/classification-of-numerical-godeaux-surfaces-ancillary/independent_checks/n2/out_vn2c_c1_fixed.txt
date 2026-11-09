@@ -1,0 +1,64 @@
+CHECK A symmetric: 1
+CHECK cofactor matrix symmetric: 1
+CHECK A*B = det(A)*I: 1
+CHECK sigma(A_jk) = -d_j d_k A_jk, failures: 0
+CHECK sigma(B_ij) = -d_i d_j B_ij, failures: 0
+CHECK det A sigma-invariant: 1
+CHECK weights of A entries, failures: 0
+CHECK det(alpha) - Q^2 = 0
+CHECK Q divides adj(alpha): 1
+CHECK B_05 + Q^3 = 0 mod w: 1
+CHECK B_0k = 0 mod w and [w^1]B_0k = Q*adj(alpha)_{k1} (k=1..4): 1
+CHECK B_00 = -y0*adj(a)_11: 1
+B_00 = y2*w^6-y3^2*y2*w^2+y3*y1^2*w^2
+number of nonzero coefficient equations: 720
+monomials with wrong weight or sign: 0
+nonzero equations by w-order 0..15: 72,45,126,52,113,42,84,30,58,20,34,12,18,6,6,2
+constant equations: 0
+distinct up to scalar: 630
+distinct by w-order 0..15: 18,31,108,51,110,42,84,30,58,20,34,12,18,6,6,2
+stage 0: equations added 18, pivots 18, equations remaining 0, max terms 0, CPU s 0
+stage 1: equations added 31, pivots 19, equations remaining 0, max terms 0, CPU s 0
+stage 2: equations added 108, pivots 70, equations remaining 0, max terms 0, CPU s 0
+stage 3: equations added 51, pivots 37, equations remaining 0, max terms 0, CPU s 1
+stage 4: equations added 110, pivots 68, equations remaining 0, max terms 0, CPU s 1
+stage 5: equations added 42, pivots 23, equations remaining 0, max terms 0, CPU s 1
+stage 6: equations added 84, pivots 34, equations remaining 0, max terms 0, CPU s 1
+stage 7: equations added 30, pivots 10, equations remaining 0, max terms 0, CPU s 1
+stage 8: equations added 58, pivots 9, equations remaining 0, max terms 0, CPU s 1
+stage 9: equations added 20, pivots 2, equations remaining 0, max terms 0, CPU s 1
+stage 10: equations added 34, pivots 1, equations remaining 0, max terms 0, CPU s 1
+stage 11: equations added 12, pivots 0, equations remaining 0, max terms 0, CPU s 1
+stage 12: equations added 18, pivots 0, equations remaining 0, max terms 0, CPU s 1
+stage 13: equations added 6, pivots 0, equations remaining 0, max terms 0, CPU s 1
+stage 14: equations added 6, pivots 0, equations remaining 0, max terms 0, CPU s 1
+stage 15: equations added 2, pivots 0, equations remaining 0, max terms 0, CPU s 1
+elimination CPU seconds: 1   sweeps: 1064
+pivots: 291   nonzero constant equations met: 0
+eliminated lambda: 277   eliminated A: 14
+free lambda: 94   free A: 8
+free A-unknowns: g10 g8 g4 g2 b9 b7 b6 b5
+eliminated A-unknowns (with step number): g9(step 285) g7(step 267) g6(step 40) g5(step 196) g3(step 261) g1(step 157) b12(step 206) b11(step 259) b10(step 254) b8(step 23) b4(step 194) b3(step 53) b2(step 224) b1(step 117)
+leftover equations: 0
+original equations (all, with scalar multiples) not identically 0 after the final substitution: 0
+distinct normalized substituted equations: 0 ; leftover (normalized, distinct): 0 ; union: 0
+graph check (no lambda in the images of eliminated A-unknowns): 1
+g9 = -1/2*b7^6-g4*b7^4+3/2*b7^4*b6-1/2*g4^2*b7^2+1/2*g8*b7^3+2*g4*b7^2*b6-1/2*b7^2*b6^2+1/2*g8*g4*b7-1/2*g10*b7^2+1/2*g2*b7^2+1/2*g4^2*b6-1/2*g4*b6^2-2*b7*b6*b5-1/2*g10*g4+1/2*g4*g2-g8*b5+b5^2
+g7 = b9*b7^4+b7^5+g4*b9*b7^2+g4*b7^3-3*b9*b7^2*b6-2*b7^3*b6-g8*b9*b7-g8*b7^2-g4*b9*b6+b9*b6^2-b7*b6^2+2*b9*b7*b5+b7^2*b5+g10*b9-g2*b9+g10*b7-g2*b7-g8*b6-g4*b5+2*b6*b5
+g6 = -1
+g5 = b9^2+2*b9*b7+2*b7^2
+g3 = b9*b7^3+g4*b9*b7-2*b9*b7*b6-g8*b9-2*b7*b5-g10
+g1 = 3/4*b7^6+3/2*g4*b7^4-5/2*b7^4*b6+3/4*g4^2*b7^2-g8*b7^3-3*g4*b7^2*b6+3/2*b7^2*b6^2+b7^3*b5-g8*g4*b7+1/2*g10*b7^2-1/2*g2*b7^2-1/2*g4^2*b6+g8*b7*b6+1/2*g4*b6^2+g4*b7*b5+1/4*g8^2+1/2*g10*g4-1/2*g4*g2
+b12 = -1/2*b7^4-1/2*g4*b7^2+3/2*b7^2*b6+1/2*g8*b7+1/2*g4*b6-1/2*b6^2-b7*b5-1/2*g10+1/2*g2
+b11 = 1/2*b7^4+1/2*g4*b7^2-3/2*b7^2*b6-1/2*g8*b7-1/2*g4*b6+1/2*b6^2+b7*b5+1/2*g10-1/2*g2
+b10 = 1/2*b7^3+1/2*g4*b7-b7*b6-1/2*g8
+b8 = 0
+b4 = -b7^2-g4+b6
+b3 = 1
+b2 = 1/2*b7^3+1/2*g4*b7-b7*b6-1/2*g8+b5
+b1 = -b9-2*b7
+(0:0:1:0|0): x(330)=l13,0[y2^3] -> 0 ; x(310)=l14,0[y2^3] -> 0 ; x(238)=l23,0[y2^3] -> -1 ; x(218)=l24,0[y2^3] -> 0 ; x(41)=l55,0[y2^4] -> 1
+(0:0:0:1|0): x(326)=l13,0[y3^3] -> 0 ; x(306)=l14,0[y3^3] -> -1/2*b7^4-1/2*g4*b7^2+3/2*b7^2*b6+1/2*g8*b7+1/2*g4*b6-1/2*b6^2-b7*b5-1/2*g10+1/2*g2 ; x(234)=l23,0[y3^3] -> 0 ; x(214)=l24,0[y3^3] -> 0 ; x(35)=l55,0[y3^4] -> 1/4*b7^8+1/2*g4*b7^6-3/2*b7^6*b6+1/4*g4^2*b7^4-1/2*g8*b7^5-2*g4*b7^4*b6+11/4*b7^4*b6^2+b7^5*b5-1/2*g8*g4*b7^3+1/2*g10*b7^4-1/2*g2*b7^4-1/2*g4^2*b7^2*b6+3/2*g8*b7^3*b6+2*g4*b7^2*b6^2-3/2*b7^2*b6^3+g4*b7^3*b5-3*b7^3*b6*b5+1/4*g8^2*b7^2+1/2*g10*g4*b7^2-1/2*g4*g2*b7^2+1/2*g8*g4*b7*b6-3/2*g10*b7^2*b6+3/2*g2*b7^2*b6+1/4*g4^2*b6^2-1/2*g8*b7*b6^2-1/2*g4*b6^3+1/4*b6^4-g8*b7^2*b5-g4*b7*b6*b5+b7*b6^2*b5+b7^2*b5^2-1/2*g10*g8*b7+1/2*g8*g2*b7-1/2*g10*g4*b6+1/2*g4*g2*b6+1/2*g10*b6^2-1/2*g2*b6^2+g10*b7*b5-g2*b7*b5+1/4*g10^2-1/2*g10*g2+1/4*g2^2
+b12 -> -1/2*b7^4-1/2*g4*b7^2+3/2*b7^2*b6+1/2*g8*b7+1/2*g4*b6-1/2*b6^2-b7*b5-1/2*g10+1/2*g2
+(0:0:0:1|0) coefficients minus the case's (0, b12, 0, 0, b12^2), evaluated on my parametrization: 0 ; 0 ; 0 ; 0 ; 0
+memory MB: 28

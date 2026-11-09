@@ -1,0 +1,14 @@
+equations loaded: 630
+=== global elimination: all equations at once; priority lambda first by smallest index, then A by smallest index
+eliminated 50  ms: 1875
+eliminated 100  ms: 3460
+eliminated 150  ms: 4823
+eliminated 200  ms: 6059
+eliminated 250  ms: 7230
+   eliminated in this stage: 291 ; lambda by order 0..8: 83,65,50,36,25,8,7,2,1 ; A by order 0..6: 0,2,5,1,2,2,2 ; A eliminated: g(1) g(2) g(4) g(5) g(6) g(7) g(8) g(9) g(10) b(1) b(3) b(8) b(5) b(11) 
+   equations remaining: 0 ; of these involving only unknowns of order < m (obstructions): 0 ; ms: 8103 ; memory MB: 48
+=== end of elimination; eliminated: 291 ; ms: 8103
+free lambda-coefficients: 94 ; free A-coefficients: 8 : g(3) b(2) b(4) b(6) b(7) b(9) b(10) b(12) 
+eliminated A-coefficients: g(1) g(2) g(4) g(5) g(6) g(7) g(8) g(9) g(10) b(1) b(3) b(5) b(8) b(11) 
+equations left: 0
+saved n2c1_global_state.ssi; memory MB: 48 ; ms: 8124

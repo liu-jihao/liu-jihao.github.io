@@ -1,0 +1,15 @@
+variant general : equations parsed: 800
+(a) terms checked: 16780 ; terms whose total unknown-w-order exceeds the w-order of their equation: 0
+(b) torus grading (W,Y1,Y2,Y3;P)=(1,2,2,2;-4,-1,-1,-1,-1,0)
+    fixed entries weight (must all be 0): {'(1,2) y2': 0, '(1,3) y1': 0, '(2,2) y3': 0, '(2,3) y0': 0, '(2,4) y1': 0, '(3,3) y3': 0, '(3,4) y2': 0, '(1,5) w': 0, '(0,5) y2^2': 0, '(0,5) y1^2': 0}
+    weight of D from its three entries (must agree): {'D at (1,1)': 0, 'D at (4,4)': 0, 'D at (0,5)': 0}
+    equations not weighted-homogeneous: 0
+    coefficients with nonzero grading weight: []
+(b) torus u (t-units) (W,Y1,Y2,Y3;P)=(-1,0,0,-2;-2,-1,1,1,-1,2)
+    fixed entries weight (must all be 0): {'(1,2) y2': 0, '(1,3) y1': 0, '(2,2) y3': 0, '(2,3) y0': 0, '(2,4) y1': 0, '(3,3) y3': 0, '(3,4) y2': 0, '(1,5) w': 0, '(0,5) y2^2': 0, '(0,5) y1^2': 0}
+    weight of D from its three entries (must agree): {'D at (1,1)': -4, 'D at (4,4)': -4, 'D at (0,5)': -4}
+    equations not weighted-homogeneous: 0
+    u-weights (u-units = t-weight/2) of A-coefficients: {'D': '-2', 'gg(1)': '-5', 'gg(2)': '-6', 'gg(3)': '-4', 'gg(4)': '-5', 'gg(5)': '-3', 'gg(6)': '-4', 'gg(7)': '-3', 'gg(8)': '-4', 'gg(9)': '-5', 'gg(10)': '-6', 'hh(1)': '-2', 'hh(2)': '-3', 'hh(3)': '-2', 'hh(4)': '-3', 'hh(5)': '-4', 'hh(6)': '-5', 'll(1)': '-2', 'll(2)': '-1', 'qq(1)': '-4', 'qq(2)': '-3', 'qq(3)': '-2', 'qq(4)': '-2', 'qq(5)': '-3', 'qq(6)': '-4', 'qq(7)': '-3', 'qq(8)': '-2', 'qq(9)': '-1', 'qq(10)': '-1', 'qq(11)': '-2', 'qq(12)': '-3', 'qq(13)': '-2', 'qq(14)': '-1', 'qq(15)': '-3', 'qq(16)': '-2', 'qq(17)': '-3', 'qq(18)': '-2', 'qq(19)': '-4', 'qq(20)': '-3'}
+    free A-coefficients and u-weights: {'qq(4)': '-2', 'qq(9)': '-1', 'qq(10)': '-1', 'qq(11)': '-2', 'qq(13)': '-2', 'qq(14)': '-1', 'qq(15)': '-3', 'qq(16)': '-2', 'qq(17)': '-3', 'qq(18)': '-2', 'qq(20)': '-3', 'gg(3)': '-4', 'gg(5)': '-3', 'gg(6)': '-4', 'gg(7)': '-3', 'gg(8)': '-4', 'hh(3)': '-2', 'hh(4)': '-3', 'll(1)': '-2', 'll(2)': '-1', 'D': '-2'}
+    free A-coefficients with zero u-weight: []
+    free lambda with nonzero u-weight: 91 of 94

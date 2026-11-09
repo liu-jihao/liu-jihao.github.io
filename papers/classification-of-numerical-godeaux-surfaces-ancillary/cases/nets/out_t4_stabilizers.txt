@@ -1,0 +1,198 @@
+=================== N1(1)
+alpha =
+y3,y2,y1, 0, 
+y2,y3,0,  y1,
+y1,0, -y3,y2,
+0, y1,y2, -y3
+   (size of the matrix X^t*alpha + alpha*X + ... : 4x4)
+number of linear equations (nonzero coefficient equations): 16   rank: 11   dimension of the equivariant stabilizer algebra: 2
+general element (unknowns -> normal form modulo the equations):
+   x11 = -1/2*s
+   x12 = -1/2*r
+   x21 = -1/2*r
+   x22 = -1/2*s
+   x33 = -1/2*s
+   x34 = 1/2*r
+   x43 = 1/2*r
+   x44 = -1/2*s
+   t1 = s
+   p = s
+   q = r
+   r = r
+   s = s
+free unknowns: FR[1]=r
+FR[2]=s
+basis element 1 (r = 1): XI = [0,-1/2;-1/2,0]  XII = [0,1/2;1/2,0]  t1 = 0  Y23 = [0,1;1,0]
+basis element 2 (s = 1): XI = [-1/2,0;0,-1/2]  XII = [-1/2,0;0,-1/2]  t1 = 1  Y23 = [1,0;0,1]
+trivial direction (X = I, Y = -2I) solves the system: 1
+eigenvector conditions (one binary form per free unknown): F[1]=-1/2*c1^2+1/2*c2^2
+gcd of the eigenvector conditions: c1^2-c2^2    factorization:
+[1]:
+   _[1]=1
+   _[2]=c1-c2
+   _[3]=c1+c2
+[2]:
+   1,1,1
+=================== N2
+alpha =
+y2,0, y1,0, 
+0, y3,0, y1,
+y1,0, y3,0, 
+0, y1,0, y2 
+   (size of the matrix X^t*alpha + alpha*X + ... : 4x4)
+number of linear equations (nonzero coefficient equations): 16   rank: 11   dimension of the equivariant stabilizer algebra: 2
+general element (unknowns -> normal form modulo the equations):
+   x11 = -1/2*p
+   x12 = 0
+   x21 = 0
+   x22 = -1/2*s
+   x33 = -1/2*s
+   x34 = 0
+   x43 = 0
+   x44 = -1/2*p
+   t1 = 1/2*p+1/2*s
+   p = p
+   q = 0
+   r = 0
+   s = s
+free unknowns: FR[1]=p
+FR[2]=s
+basis element 1 (p = 1): XI = [-1/2,0;0,0]  XII = [0,0;0,-1/2]  t1 = 1/2  Y23 = [1,0;0,0]
+basis element 2 (s = 1): XI = [0,0;0,-1/2]  XII = [-1/2,0;0,0]  t1 = 1/2  Y23 = [0,0;0,1]
+trivial direction (X = I, Y = -2I) solves the system: 1
+eigenvector conditions (one binary form per free unknown): F[1]=1/2*c1*c2
+F[2]=-1/2*c1*c2
+gcd of the eigenvector conditions: c1*c2    factorization:
+[1]:
+   _[1]=1
+   _[2]=c1
+   _[3]=c2
+[2]:
+   1,1,1
+=================== N1(0)
+alpha =
+0, y2,y1, 0, 
+y2,y3,0,  y1,
+y1,0, -y3,y2,
+0, y1,y2, 0  
+   (size of the matrix X^t*alpha + alpha*X + ... : 4x4)
+number of linear equations (nonzero coefficient equations): 14   rank: 10   dimension of the equivariant stabilizer algebra: 3
+general element (unknowns -> normal form modulo the equations):
+   x11 = -p+1/2*s
+   x12 = -1/2*r
+   x21 = 0
+   x22 = -1/2*s
+   x33 = -1/2*s
+   x34 = 0
+   x43 = 1/2*r
+   x44 = -p+1/2*s
+   t1 = p
+   p = p
+   q = 0
+   r = r
+   s = s
+free unknowns: FR[1]=p
+FR[2]=r
+FR[3]=s
+basis element 1 (p = 1): XI = [-1,0;0,0]  XII = [0,0;0,-1]  t1 = 1  Y23 = [1,0;0,0]
+basis element 2 (r = 1): XI = [0,-1/2;0,0]  XII = [0,0;1/2,0]  t1 = 0  Y23 = [0,0;1,0]
+basis element 3 (s = 1): XI = [1/2,0;0,-1/2]  XII = [-1/2,0;0,1/2]  t1 = 0  Y23 = [0,0;0,1]
+trivial direction (X = I, Y = -2I) solves the system: 1
+eigenvector conditions (one binary form per free unknown): F[1]=c1*c2
+F[2]=-1/2*c1^2
+F[3]=-c1*c2
+gcd of the eigenvector conditions: c1    factorization:
+[1]:
+   _[1]=1
+   _[2]=c1
+[2]:
+   1,1
+=================== N3
+alpha =
+y3,y2,y1,0, 
+y2,0, 0, y1,
+y1,0, 0, y2,
+0, y1,y2,-y3
+   (size of the matrix X^t*alpha + alpha*X + ... : 4x4)
+number of linear equations (nonzero coefficient equations): 14   rank: 10   dimension of the equivariant stabilizer algebra: 3
+general element (unknowns -> normal form modulo the equations):
+   x11 = -1/2*s
+   x12 = 0
+   x21 = -1/2*r
+   x22 = -p+1/2*s
+   x33 = -p+1/2*s
+   x34 = 1/2*r
+   x43 = 0
+   x44 = -1/2*s
+   t1 = p
+   p = p
+   q = 0
+   r = r
+   s = s
+free unknowns: FR[1]=p
+FR[2]=r
+FR[3]=s
+basis element 1 (p = 1): XI = [0,0;0,-1]  XII = [-1,0;0,0]  t1 = 1  Y23 = [1,0;0,0]
+basis element 2 (r = 1): XI = [0,0;-1/2,0]  XII = [0,1/2;0,0]  t1 = 0  Y23 = [0,0;1,0]
+basis element 3 (s = 1): XI = [-1/2,0;0,1/2]  XII = [1/2,0;0,-1/2]  t1 = 0  Y23 = [0,0;0,1]
+trivial direction (X = I, Y = -2I) solves the system: 1
+eigenvector conditions (one binary form per free unknown): F[1]=-c1*c2
+F[2]=1/2*c2^2
+F[3]=c1*c2
+gcd of the eigenvector conditions: c2    factorization:
+[1]:
+   _[1]=1
+   _[2]=c2
+[2]:
+   1,1
+=================== N1(D), D generic (over Q(D))
+alpha =
+(D)*y3,y2,y1, 0,     
+y2,    y3,0,  y1,    
+y1,    0, -y3,y2,    
+0,     y1,y2, (-D)*y3
+   (size of the matrix X^t*alpha + alpha*X + ... : 4x4)
+number of linear equations (nonzero coefficient equations): 16   rank: 11   dimension of the equivariant stabilizer algebra: 2
+general element (unknowns -> normal form modulo the equations):
+   x11 = -1/2*s
+   x12 = -1/2*r
+   x21 = (-D)/2*r
+   x22 = -1/2*s
+   x33 = -1/2*s
+   x34 = (D)/2*r
+   x43 = 1/2*r
+   x44 = -1/2*s
+   t1 = s
+   p = s
+   q = (D)*r
+   r = r
+   s = s
+free unknowns: FR[1]=r
+FR[2]=s
+basis element 1 (r = 1): XI = [0,-1/2;(-D)/2,0]  XII = [0,(D)/2;1/2,0]  t1 = 0  Y23 = [0,(D);1,0]
+basis element 2 (s = 1): XI = [-1/2,0;0,-1/2]  XII = [-1/2,0;0,-1/2]  t1 = 1  Y23 = [1,0;0,1]
+trivial direction (X = I, Y = -2I) solves the system: 1
+eigenvector conditions (one binary form per free unknown): F[1]=-1/2*c1^2+(D)/2*c2^2
+gcd of the eigenvector conditions: c1^2+(-D)*c2^2    factorization:
+[1]:
+   _[1]=-1
+   _[2]=-c1^2+(D)*c2^2
+[2]:
+   1,1
+=================== group elements: g^t * alpha(h*y) * g - alpha(y) == 0 ?
+N2 torus: g = diag(m1, m2, m2, m1), h: (y1,y2,y3) -> (y1/(m1*m2), y2/m1^2, y3/m2^2) : 1
+   Q(h*y) - Q/(m1*m2)^2 == 0 : 1    column (c1,c2) -> gI^t (c1,c2) = ((m1)*c1, (m2)*c2)
+N2 swap: g = (v1 v2)(v3 v4), h: y2 <-> y3 : 1    Q(h*y) - Q == 0 : 1    column (c1,c2) -> (c2, c1)
+N2 sign element: g = diag(1,1,-1,-1), h: y1 -> -y1 : 1    column -> (c1, c2)
+N3 torus: g = diag(m1, m2, m2, m1), h: (y1,y2,y3) -> (y1/(m1*m2), y2/(m1*m2), y3/m1^2) : 1    column -> ((m1)*c1, (m2)*c2)
+N3 shear: gI = [[1,0],[-e/2,1]], gII = [[1,e/2],[0,1]], h: y3 -> y3 + e*y2 : 1    Q unchanged (Q = y2^2 - y1^2 has no y3)    column -> (c1+(-e)/2*c2, c2)
+N1(0) = gS^t * N3 * gS (swap (v1 v2)(v3 v4)) : 1
+N1(0) shear: g = gS*gU*gS = 
+1,(-e)/2,0,    0,
+0,1,     0,    0,
+0,0,     1,    0,
+0,0,     (e)/2,1 
+   h: y3 -> y3 + e*y2 : 1    column -> (c1, (-e)/2*c1+c2)
+N1(0) torus: g = diag(m2, m1, m1, m2), h: (y1,y2,y3) -> (y1/(m1*m2), y2/(m1*m2), y3/m1^2) : 1    column -> ((m2)*c1, (m1)*c2)
+total time (s): 0
+peak memory (KB, Singular memory(2)): 4187

@@ -1,0 +1,79 @@
+// V2_points.sing -- evidence checks at points, using the equations and parametrization written by V1_slice.sing.
+// (1) mod p = 1000003: at 3 points of the parametrized family (free unknowns random; point 3 with D = 0):
+//     all 782 equations vanish; rank of the Jacobian J (782 x 394 unknowns); rank of its lambda-columns;
+//     projection rank of the tangent space to the 23 A-coefficients = 23 - rank J + rank J_lambda.
+// (2) exact over Q: at a rational point of Gamma (free A-coefficients small integers), the rank conditions,
+//     a linear system in the 371 lambda's, are solvable with a 94-dimensional affine solution space;
+//     after changing one eliminated A-coefficient by +1 they are unsolvable.
+system("--ticks-per-sec", 1000);
+int T0 = rtimer;
+int NX = 371; int NA = 22; int NU = NX + NA + 1;
+int i, k, pt, rJ, rL, nfree, bad;
+// ---------------- (1) mod p ----------------
+ring Rp = 1000003, (x(1..371), qq(1..12), gg(1..10), D, y3, y2, y1, w, tt), dp;
+execute("ideal EQ = " + read("V1_slice_eqs_ideal.txt") + ";");
+execute("ideal MM = " + read("V1_slice_param_ideal.txt") + ";");
+"equations read:", ncols(EQ), " parametrization entries:", ncols(MM);
+intvec isfree = 0:nvars(Rp);
+nfree = 0; for (i=1;i<=NU;i++) { if (MM[i] == var(i)) { isfree[i] = 1; nfree++; } }
+"free unknowns:", nfree;
+matrix J = jacob(EQ);
+"Jacobian size:", nrows(J), ncols(J);
+matrix DL[nvars(Rp)][nvars(Rp)]; for (i=1;i<=NX;i++) { DL[i,i] = 1; }
+ideal FV; ideal VAL; ideal Z;
+for (pt=1;pt<=3;pt++)
+{
+  FV = maxideal(1);
+  for (i=1;i<=nvars(Rp);i++) { if (i <= NU) { if (isfree[i] == 1) { FV[i] = random(1, 1000002); } else { FV[i] = 0; } } else { FV[i] = 0; } }
+  if (pt == 3) { FV[NU] = 0; }   // D = 0 (D is the variable with index NU)
+  map evf = Rp, FV;
+  VAL = evf(MM);
+  for (i=NU+1;i<=nvars(Rp);i++) { VAL[i] = 0; }
+  map evp = Rp, VAL;
+  Z = evp(EQ);
+  bad = 0; for (i=1;i<=ncols(Z);i++) { if (Z[i] != 0) { bad++; } }
+  matrix Jp = evp(J);
+  rJ = rank(Jp);
+  matrix JL = Jp*DL;
+  rL = rank(JL);
+  "point", pt, (pt == 3)*1, "(D=0 if 1): equations not vanishing:", bad, "; rank J =", rJ, "; rank J_lambda =", rL, "; tangent dim =", NU - rJ, "; tangent vectors with zero A-part =", NX - rL, "; projection rank to A-coefficients =", (NA+1) - rJ + rL;
+  kill evf, evp, Jp, JL;
+}
+"time (ms) after mod p part:", rtimer - T0;
+// ---------------- (2) exact over Q ----------------
+ring R0 = 0, (x(1..371), qq(1..12), gg(1..10), D, y3, y2, y1, w, tt), dp;
+execute("ideal EQ = " + read("V1_slice_eqs_ideal.txt") + ";");
+execute("ideal MM = " + read("V1_slice_param_ideal.txt") + ";");
+isfree = 0:nvars(R0);
+for (i=1;i<=NU;i++) { if (MM[i] == var(i)) { isfree[i] = 1; } }
+// free A-coefficient values (small integers), lambda's kept as variables
+ideal FA = maxideal(1);
+intvec vals = 3, -2, 5, -7, 2, 4, -3, 6, 7, -5, 1, -4, 2, 3, -6, 5, 7, -2, 4, 3, -1, 2, 5;
+k = 0;
+for (i=NX+1;i<=NU;i++) { k++; if (isfree[i] == 1) { FA[i] = vals[k]; } }
+map eva = R0, FA;
+ideal AV = maxideal(1);
+for (i=NX+1;i<=NU;i++) { poly tmp = MM[i]; AV[i] = eva(tmp); kill tmp; }
+"A-coefficient values at the rational point of Gamma (qq(1..12), gg(1..10), D):";
+string sv = ""; for (i=NX+1;i<=NU;i++) { sv = sv + string(var(i)) + "=" + string(AV[i]) + " "; } sv;
+map evA = R0, AV;
+ideal LS = evA(EQ);
+ideal SLS = std(LS);
+"exact: lambda-system at the point of Gamma: contains 1:", (reduce(1, SLS) == 0), "; Krull dim =", dim(SLS), "; solution dimension in lambda-space =", dim(SLS) - (nvars(R0) - NX);
+// perturb an eliminated A-coefficient: gg(1) is index NX + 13
+int ig = NX + 13;
+"perturbed coefficient:", string(var(ig)), " eliminated:", (isfree[ig] == 0);
+ideal AV2 = AV; AV2[ig] = AV[ig] + 1;
+map evA2 = R0, AV2;
+ideal LS2 = evA2(EQ);
+ideal SLS2 = std(LS2);
+"exact: lambda-system after gg(1) -> gg(1) + 1: contains 1 (unsolvable):", (reduce(1, SLS2) == 0);
+// perturb D only (D is free; the point moves along Gamma only if the eliminated ones are recomputed): keep eliminated values, change D by +1
+ideal AV3 = AV; AV3[NU] = AV[NU] + 1;
+map evA3 = R0, AV3;
+ideal LS3 = evA3(EQ);
+ideal SLS3 = std(LS3);
+"exact: lambda-system after D -> D + 1 with the other 22 coefficients unchanged: contains 1 (unsolvable):", (reduce(1, SLS3) == 0);
+"time (ms) total:", rtimer - T0;
+"memory(1), memory(2):", memory(1), memory(2);
+quit;

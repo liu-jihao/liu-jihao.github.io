@@ -1,0 +1,24 @@
+// branch (iii) b3 = -b8, b8 != 0: eliminated A-unknowns as polynomials in the free A-unknowns (s6_branch_iii)
+g1 = b(5)*b(11)*D+b(9)*b(11)*D+b(6)*b(12)-g(5)*D
+g2 = b(9)^2*D+b(5)*b(11)+b(9)*b(11)-g(5)
+g3 = b(6)*b(11)+b(5)*b(12)+b(9)*b(12)
+g4 = 0
+g5 = g(5)
+g6 = 0
+g7 = 2*b(8)*b(9)*D
+g8 = 0
+g9 = b(8)^2*D
+g10 = 0
+b1 = 0
+b2 = b(2)
+b3 = -b(8)
+b4 = 0
+b5 = b(5)
+b6 = b(6)
+b7 = 0
+b8 = b(8)
+b9 = b(9)
+b10 = 0
+b11 = b(11)
+b12 = b(12)
+D = D
