@@ -4097,6 +4097,10 @@
       "label": "Surfaces"
     },
     {
+      "id": "pos",
+      "label": "Positivity"
+    },
+    {
       "id": "generalag",
       "label": "General algebraic geometry"
     },
@@ -4133,7 +4137,7 @@
       "disclaimer": "Note",
       "yymm": 2611,
       "topics": [
-        "generalag"
+        "pos"
       ]
     },
     {
