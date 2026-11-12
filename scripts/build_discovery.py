@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from html import escape
 import argparse, hashlib, json, re
 ROOT=Path(__file__).resolve().parents[1]
+LIUXIV={(l['page'],l['anchor']):r['id'] for r in __import__('json').loads((ROOT/'data/liuxiv.json').read_text())['records'] for l in [r['listing']]+r.get('listing_aliases',[])} if (ROOT/'data/liuxiv.json').is_file() else {}
 VOID={'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 class Node:
     def __init__(self,tag='',attrs=None,start=0,raw=''):
@@ -79,7 +80,8 @@ def build(check=False):
                 title=text_of(entry,'entry-title');number=text_of(entry,'entry-number').strip('. ')
                 stable=entry.attrs.get('id') or ('note-' if page.name=='notes.html' else 'paper-')+(number or str(index))
                 if not entry.attrs.get('id'):replacements.append((entry.start,entry.raw,entry.raw[:-1]+f' id="{stable}">'))
-                add(page.name+'-'+stable,title,entry.text(),page.name+'#'+stable,'notes' if page.name=='notes.html' else 'ai',year(text_of(entry,'entry-venue')))
+                lx=LIUXIV.get((page.name,stable))  # the old list pages are no longer updated: search results go to the liuxiv abstract page
+                add(page.name+'-'+stable,title,entry.text(),('abs/'+lx+'/') if lx else page.name+'#'+stable,'notes' if page.name=='notes.html' else 'ai',year(text_of(entry,'entry-venue')))
         else:
             heading=next(iter(main.all(lambda n:n.tag=='h1')),None)
             text=main.text()

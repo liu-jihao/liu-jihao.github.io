@@ -45,6 +45,7 @@ records=index['records']; search_ids=[r['id'] for r in records]
 if len(search_ids)!=len(set(search_ids)):errors.append('Duplicate search record IDs')
 for record in records:
  u=urlsplit(record['url']);target=ROOT/u.path
+ if not u.scheme and not u.netloc and u.path.startswith('abs/') and u.path.endswith('/') and (target/'index.html').is_file():continue  # liuxiv abstract pages
  if u.scheme or u.netloc or target not in pages:errors.append('Nonlocal or missing search result '+record['url']);continue
  if u.fragment and unquote(u.fragment) not in pages[target].ids:errors.append('Missing search result anchor '+record['url'])
 result={'pages':len(pages),'local_links_checked':links,'publication_records':len(publications),'search_records':len(records),'errors':errors}
