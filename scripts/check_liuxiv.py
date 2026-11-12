@@ -122,7 +122,7 @@ def norm_letters(s):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--base', default='main')
+    ap.add_argument('--base', default='fc31a7c')   # the last commit before liuxiv went live (11-13): the old site's texts and files are compared against it
     base = ap.parse_args().base
     data, nav, records, permanent = B.load()
     rep, fail = {}, []
@@ -142,6 +142,8 @@ def main():
     def base_texts(r):
         """The base site's list entry and permanent page <main> for a record."""
         lst = r['listing']
+        if not lst:   # 11-13: a paper posted directly on liuxiv has no entry on the frozen list pages
+            return '', ''
         e = entries(show(lst['page']))[lst['anchor']]
         for al in r.get('listing_aliases', []):  # a paper listed twice on the base (Notes no. 8 = first version of AI results no. 30)
             e += '\n' + entries(show(al['page']))[al['anchor']]
@@ -205,7 +207,8 @@ def main():
             if line:
                 meta, path = line.split('\t', 1)
                 tree[path] = meta.split()[2]
-        pdf_all = sorted(str(p.relative_to(ROOT)) for p in ROOT.rglob('*.pdf') if '.git' not in p.parts)
+        ignored = set(git('ls-files', '--others', '--ignored', '--exclude-standard').split('\n'))   # local build files such as cv/.build/cv.pdf
+        pdf_all = sorted(str(p.relative_to(ROOT)) for p in ROOT.rglob('*.pdf') if '.git' not in p.parts and str(p.relative_to(ROOT)) not in ignored)
         copies = [f for f in pdf_all if re.fullmatch(r'pdf/\d{4}\.\d{4}(?:v\d+)?\.pdf', f)]
         pdf_now = [f for f in pdf_all if f not in copies]
         blob_bad = [f for f in pdf_now if tree.get(f) != git('hash-object', f).strip()]
@@ -230,7 +233,7 @@ def main():
         nav_only, nav_bad = 0, []
         for c in changed:
             p = c[-1]
-            if c[0] == 'M' and re.fullmatch(r'[^/]+\.html', p):
+            if c[0] == 'M' and re.fullmatch(r'[^/]+\.html', p) and p != 'liuxiv.html':   # 11-13: liuxiv.html itself changes when a paper is posted
                 if norm_root(p, (ROOT / p).read_text()) == norm_root(p, show(p)):
                     nav_only += 1
                 else:
@@ -382,7 +385,7 @@ def main():
                 if (f.get('source_where') or '').endswith('of the PDF') and f['source_text']:
                     pdf_txt = subprocess.run(['pdftotext', str(ROOT / r['old_urls']['pdf_current']), '-'], capture_output=True, text=True).stdout
                     in_pdf = re.sub(r'\s+', ' ', f['source_text']) in re.sub(r'\s+', ' ', pdf_txt)
-                if f['value'] is not None and not (f.get('source_where') or '').startswith('Jihao 11-11') and not in_pdf and (not f['source_text'] or f['source_text'] not in base_plain):
+                if f['value'] is not None and not r.get('new_on_liuxiv') and not (f.get('source_where') or '').startswith('Jihao 11-11') and not in_pdf and (not f['source_text'] or f['source_text'] not in base_plain):   # a paper posted directly on liuxiv has no old entry
                     bad.append((r['id'], name, 'source sentence not printed on the base'))
                 m = re.search(rf'{name}</a>:</th><td><span class="lx-mark [^"]*" title="[^"]*">(.)<', page)
                 if not m or m.group(1) != sym:

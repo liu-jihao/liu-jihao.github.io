@@ -5,7 +5,7 @@ from html.parser import HTMLParser
 from html import escape
 import argparse, hashlib, json, re
 ROOT=Path(__file__).resolve().parents[1]
-LIUXIV={(l['page'],l['anchor']):r['id'] for r in __import__('json').loads((ROOT/'data/liuxiv.json').read_text())['records'] for l in [r['listing']]+r.get('listing_aliases',[])} if (ROOT/'data/liuxiv.json').is_file() else {}
+LIUXIV={(l['page'],l['anchor']):r['id'] for r in __import__('json').loads((ROOT/'data/liuxiv.json').read_text())['records'] for l in ([r['listing']] if r.get('listing') else [])+r.get('listing_aliases',[])} if (ROOT/'data/liuxiv.json').is_file() else {}
 VOID={'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 class Node:
     def __init__(self,tag='',attrs=None,start=0,raw=''):
@@ -89,6 +89,10 @@ def build(check=False):
             add('page-'+page.stem,heading.text() if heading else page.stem,text,page.name,'pages',year(text) if page.name=='ffm-conference.html' else '')
         for start,old,new in sorted(replacements,reverse=True):source=source[:start]+new+source[start+len(old):]
         if replacements:results[page]=source
+    # Papers posted directly on liuxiv (no entry on the frozen list pages): index their abstract pages.
+    for r in (json.loads((ROOT/'data/liuxiv.json').read_text())['records'] if (ROOT/'data/liuxiv.json').is_file() else []):
+        if r.get('listing'):continue
+        add('liuxiv-'+r['id'],r['title_html'],'liuxiv:'+r['id']+' '+r['authors_html']+' '+' '.join(r['abstract_display']['html'])+' '+' '.join(r['comments_html']),'abs/'+r['id']+'/','ai',r['first_posted_utc'][:4])
     # The published index contains only rendered text and public navigation metadata, never source notes/confirmation fields.
     payload={'version':1,'updated':data['updated'],'topics':data['topics'],'records':records}
     results[ROOT/'assets/search-index.js']='/* Generated from public website text. No analytics or remote requests. */\nwindow.SITE_SEARCH = '+json.dumps(payload,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')+';\n'

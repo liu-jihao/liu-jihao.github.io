@@ -79,7 +79,7 @@
   "publications": "arXiv and Zenodo items in publications.html keep their own ids and are not in this file"
  },
  "counts": {
-  "records": 67,
+  "records": 68,
   "ai_results": 52,
   "notes": 15,
   "with_permanent_page": 52,
@@ -93,7 +93,7 @@
    "2608": 1,
    "2609": 6,
    "2610": 36,
-   "2611": 21
+   "2611": 22
   }
  },
  "listings": {
@@ -8946,6 +8946,100 @@
    "writing_model_html": "Opus 5.5",
    "authorship_note_html": "(Authorship is temporary and only for citation before the final version of the paper. Collaboration on human verification, understanding, and polishing the writing is very welcome. If you are interested in collaboration, please contact <a href=\"mailto:liujihao@math.pku.edu.cn?subject=liuxiv:2611.0021\">Jihao Liu</a> directly.)",
    "authorship_listing_html": "*"
+  },
+  {
+   "id": "2611.0022",
+   "cite_as": "liuxiv:2611.0022",
+   "first_posted_utc": "2026-11-12 16:05:45 UTC",
+   "old": {
+    "listing": null,
+    "label": "posted on liuxiv",
+    "section": null,
+    "section_id": null,
+    "anchor": null
+   },
+   "old_urls": {
+    "permanent_page": null,
+    "pdf_current": "pdf/2611.0022.pdf",
+    "ancillary": []
+   },
+   "title_html": "Boundedness of threefolds of general type in large characteristic",
+   "title_text": "Boundedness of threefolds of general type in large characteristic",
+   "authors_html": "Jihao Liu",
+   "topics": null,
+   "publication": null,
+   "abstract_html": [
+    "We prove the analogues of theorems of Hacon, M<sup>c</sup>Kernan, and Xu in characteristic zero for threefold pairs with coefficients in a fixed DCC set, over algebraically closed fields of large characteristic: effective birationality, the descending chain condition for volumes, and boundedness of stable pairs of fixed volume. The bound on the characteristic depends neither on the coefficient set nor on the volume, and the multiple of the log canonical divisor that defines a birational map depends only on the coefficient set."
+   ],
+   "timestamp_html": null,
+   "permanent_page": null,
+   "pages_current": 163,
+   "versions": [
+    {
+     "v": 1,
+     "pdf_path": "pdf/2611.0022.pdf",
+     "sha256": "2324c14e7884c5675ad1f8413327f01985b75b51840147f109f8e342de46cd53"
+    }
+   ],
+   "ancillary": [],
+   "extra_links": [],
+   "abstract_display": {
+    "html": [
+     "We prove the analogues of theorems of Hacon, M<sup>c</sup>Kernan, and Xu in characteristic zero for threefold pairs with coefficients in a fixed DCC set, over algebraically closed fields of large characteristic: effective birationality, the descending chain condition for volumes, and boundedness of stable pairs of fixed volume. The bound on the characteristic depends neither on the coefficient set nor on the volume, and the multiple of the log canonical divisor that defines a birational map depends only on the coefficient set."
+    ],
+    "source": "pdf",
+    "pdf_text": "We prove the analogues of theorems of Hacon, Mc Kernan, and Xu in characteristic zero for threefold pairs with coefficients in a fixed DCC set, over algebraically closed fields of large characteristic: effective birationality, the descending chain condition for volumes, and boundedness of stable pairs of fixed volume. The bound on the characteristic depends neither on the coefficient set nor on the volume, and the multiple of the log canonical divisor that defines a birational map depends only on the coefficient set.",
+    "pdf_page": 1
+   },
+   "comments_html": [
+    "163 pages. Proves the analogues of Theorem&nbsp;1.3 of <a href=\"https://doi.org/10.4007/annals.2014.180.2.3\">[Hacon–McKernan–Xu–2014]</a> and Theorem&nbsp;1.1 of <a href=\"https://doi.org/10.4171/jems/778\">[Hacon–McKernan–Xu–2018]</a> for threefolds in large characteristic."
+   ],
+   "comments_more": [],
+   "machine_verified": {
+    "value": "yes",
+    "source_text": null,
+    "source_where": "Jihao 11-11: every paper is machine-verified",
+    "note": null
+   },
+   "human_verified": {
+    "value": "no",
+    "source_text": null,
+    "source_where": "posted on liuxiv as not verified by a human",
+    "note": null
+   },
+   "links": [],
+   "history_display": [
+    {
+     "v": 1,
+     "time": "2026-11-12 16:05:45 UTC",
+     "time_source": "posted on liuxiv",
+     "change": null,
+     "pages": 163,
+     "sha256": "2324c14e7884c5675ad1f8413327f01985b75b51840147f109f8e342de46cd53",
+     "pdf_path": "pdf/2611.0022.pdf",
+     "sha256_source": "computed from the served file"
+    }
+   ],
+   "listing": null,
+   "subjects_display": {
+    "primary": "Birational geometry",
+    "sub": [
+     "Positive characteristic"
+    ],
+    "undecided": false
+   },
+   "first_version_ai": true,
+   "writing_html": "Danus (local variation v05)",
+   "authorship_note_html": "(Authorship is temporary and only for citation before the final version of the paper. Collaboration on human verification, understanding, and polishing the writing is very welcome. If you are interested in collaboration, please contact <a href=\"mailto:liujihao@math.pku.edu.cn?subject=liuxiv:2611.0022\">Jihao Liu</a> directly.)",
+   "authorship_listing_html": "*",
+   "agent_system_html": "Pharos",
+   "base_model_html": "GPT 6-Astra",
+   "writing_model_html": "Opus 5.5",
+   "redirect": null,
+   "subject": {
+    "section": null
+   },
+   "new_on_liuxiv": true
   }
  ],
  "build2": {
