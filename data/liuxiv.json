@@ -9058,6 +9058,7 @@
   "description": "The AI-generated results and the notes posted on this website, with permanent identifiers liuxiv:YYMM.NNNN and abstract pages.",
   "intro_html": [
    "This page lists the papers whose first versions were produced with AI systems, and the notes posted on this website.",
+   "In principle, papers posted on arXiv on or before September 23, 2026 are not listed here; the one exception is <a href=\"abs/2608.0001/\">liuxiv:2608.0001</a>, <em>The equality case of Ehrhart’s volume conjecture</em>.",
    "Each paper has a permanent identifier liuxiv:YYMM.NNNN, where YYMM is the year and month of its first posting and NNNN its order within that month. Its abstract page is jihaoliu.org/abs/YYMM.NNNN/."
   ],
   "verification_html": "<strong>Machine-verified</strong> (✓): the proof has been checked by an internal AI verifier and by AI reviews of the manuscript; this is not formal verification. <strong>Human-verified</strong> (✓): the proof has been verified by a human. ✗ means that the paper’s entry says this has not been done; – means that it says nothing about it. Readers should independently check every mathematical claim before relying on or citing it.",
