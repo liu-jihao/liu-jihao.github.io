@@ -79,7 +79,7 @@
   "publications": "arXiv and Zenodo items in publications.html keep their own ids and are not in this file"
  },
  "counts": {
-  "records": 69,
+  "records": 70,
   "ai_results": 52,
   "notes": 15,
   "with_permanent_page": 52,
@@ -93,7 +93,7 @@
    "2608": 1,
    "2609": 6,
    "2610": 36,
-   "2611": 23
+   "2611": 24
   }
  },
  "listings": {
@@ -9127,6 +9127,100 @@
    "first_version_ai": true,
    "writing_html": "Danus (local variation v05)",
    "authorship_note_html": "(Authorship is temporary and only for citation before the final version of the paper. Collaboration on human verification, understanding, and polishing the writing is very welcome. If you are interested in collaboration, please contact <a href=\"mailto:liujihao@math.pku.edu.cn?subject=liuxiv:2611.0023\">Jihao Liu</a> directly.)",
+   "authorship_listing_html": "*",
+   "agent_system_html": "Pharos",
+   "base_model_html": "GPT 6-Astra",
+   "writing_model_html": "Opus 5.5",
+   "redirect": null,
+   "subject": {
+    "section": null
+   },
+   "new_on_liuxiv": true
+  },
+  {
+   "id": "2611.0024",
+   "cite_as": "liuxiv:2611.0024",
+   "first_posted_utc": "2026-11-14 02:40:38 UTC",
+   "old": {
+    "listing": null,
+    "label": "posted on liuxiv",
+    "section": null,
+    "section_id": null,
+    "anchor": null
+   },
+   "old_urls": {
+    "permanent_page": null,
+    "pdf_current": "pdf/2611.0024.pdf",
+    "ancillary": []
+   },
+   "title_html": "ACC for minimal log discrepancies in dimension three, III",
+   "title_text": "ACC for minimal log discrepancies in dimension three, III",
+   "authors_html": "Jihao Liu",
+   "topics": null,
+   "publication": null,
+   "abstract_html": [
+    "We prove Shokurov&rsquo;s ACC conjecture for minimal log discrepancies in dimension three: the minimal log discrepancies at closed points of log canonical threefold pairs with boundary coefficients in a fixed DCC set satisfy the ascending chain condition."
+   ],
+   "timestamp_html": null,
+   "permanent_page": null,
+   "pages_current": 754,
+   "versions": [
+    {
+     "v": 1,
+     "pdf_path": "pdf/2611.0024.pdf",
+     "sha256": "0fa8b328081a5c6d6d78307cdd6a340692bbee183f0a3910fd3cbb12415b23b3"
+    }
+   ],
+   "ancillary": [],
+   "extra_links": [],
+   "abstract_display": {
+    "html": [
+     "We prove Shokurov&rsquo;s ACC conjecture for minimal log discrepancies in dimension three: the minimal log discrepancies at closed points of log canonical threefold pairs with boundary coefficients in a fixed DCC set satisfy the ascending chain condition."
+    ],
+    "source": "pdf",
+    "pdf_text": "We prove Shokurov’s ACC conjecture for minimal log discrepancies in dimension three: the minimal log discrepancies at closed points of log canonical threefold pairs with boundary coefficients in a fixed DCC set satisfy the ascending chain condition.",
+    "pdf_page": 1
+   },
+   "comments_html": [
+    "754 pages. Proves Conjecture&nbsp;4.2 of <a href=\"https://doi.org/10.1007/BF02362335\">[Shokurov–1996]</a> in dimension three."
+   ],
+   "comments_more": [],
+   "machine_verified": {
+    "value": "yes",
+    "source_text": null,
+    "source_where": "Jihao 11-11: every paper is machine-verified",
+    "note": null
+   },
+   "human_verified": {
+    "value": "no",
+    "source_text": null,
+    "source_where": "posted on liuxiv as not verified by a human",
+    "note": null
+   },
+   "links": [],
+   "history_display": [
+    {
+     "v": 1,
+     "time": "2026-11-14 02:40:38 UTC",
+     "time_source": "posted on liuxiv",
+     "change": null,
+     "pages": 754,
+     "sha256": "0fa8b328081a5c6d6d78307cdd6a340692bbee183f0a3910fd3cbb12415b23b3",
+     "pdf_path": "pdf/2611.0024.pdf",
+     "sha256_source": "computed from the served file"
+    }
+   ],
+   "listing": null,
+   "subjects_display": {
+    "primary": "Birational geometry",
+    "sub": [
+     "Singularities"
+    ],
+    "undecided": false
+   },
+   "first_version_ai": true,
+   "writing_html": "Danus (local variation v05)",
+   "authorship_note_html": "(Authorship is temporary and only for citation before the final version of the paper. Collaboration on human verification, understanding, and polishing the writing is very welcome. If you are interested in collaboration, please contact <a href=\"mailto:liujihao@math.pku.edu.cn?subject=liuxiv:2611.0024\">Jihao Liu</a> directly.)",
    "authorship_listing_html": "*",
    "agent_system_html": "Pharos",
    "base_model_html": "GPT 6-Astra",
