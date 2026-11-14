@@ -8,4 +8,5 @@ for script in ('build_content.py','build_research_topics.py','build_seminar.py',
     cmd=[sys.executable,str(ROOT/'scripts'/script)]+(['--check'] if args.check else [])
     subprocess.run(cmd,check=True,cwd=ROOT)
 subprocess.run([sys.executable,str(ROOT/'scripts/build_chrome.py')]+(['--check'] if args.check else []),check=True,cwd=ROOT)
+subprocess.run([sys.executable,str(ROOT/'scripts/crawl_policy.py')]+(['--check'] if args.check else []),check=True,cwd=ROOT)
 subprocess.run([sys.executable,str(ROOT/'scripts/check_site.py')],check=True,cwd=ROOT)

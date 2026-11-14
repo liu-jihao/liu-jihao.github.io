@@ -54,6 +54,12 @@ Review the generated files and `make check` results before committing. Pushing t
 
 `_config.yml` excludes source data, scripts, templates, LaTeX inputs, build files and this documentation from the deployed website. These files remain versioned in the repository for reproducibility. Only the compiled `cv/cv.pdf` is served as the CV.
 
+## Crawler policy
+
+`robots.txt` disallows all crawling, including search engines and AI crawlers, for the entire site and its PDFs. Every HTML page also carries `noindex, nofollow, nosnippet, noimageindex`. `scripts/crawl_policy.py` maintains these directives; the website and liuxiv generators preserve them, and `make check` verifies coverage.
+
+These are voluntary crawler instructions, not access control. A crawler blocked by `robots.txt` cannot read the page's `noindex` tag, so this configuration does not guarantee removal of existing search results. HTML directives do not apply to the PDF bytes; an HTTP `X-Robots-Tag` for PDFs requires an edge/server configuration. Public GitHub source files and the directly reachable GitHub Pages origin remain alternative download paths. Enforced blocking requires additional hosting or edge controls, and a public origin or source repository can still bypass an edge-only policy.
+
 ## License
 
 Site content © Jihao Liu. Source code (HTML/CSS templates) is free to reuse. Crimson Pro is distributed under its included SIL Open Font License.

@@ -2,6 +2,7 @@
 """Regenerate shared navigation and local progressive-enhancement scripts."""
 from pathlib import Path
 import argparse,html,json,re
+from crawl_policy import apply_policy
 ROOT=Path(__file__).resolve().parents[1]
 def render_page(source,name,data):
     def link(pair):
@@ -17,7 +18,7 @@ def render_page(source,name,data):
     source=re.sub(r'      <nav class="main-nav".*?</nav>','\n'.join(nav),source,count=1,flags=re.S)
     source=re.sub(r'  <script[^>]+src="assets/(?:search-index|discovery)\.js"[^>]*></script>\n?', '',source)
     scripts=('  <script src="assets/search-index.js" defer></script>\n' if name in ('publications.html','search.html') else '')+'  <script src="assets/discovery.js" defer></script>\n'
-    return source.replace('</head>',scripts+'</head>').replace('<main>','<main id="main-content" tabindex="-1">')
+    return apply_policy(source.replace('</head>',scripts+'</head>').replace('<main>','<main id="main-content" tabindex="-1">'))
 def build(check=False):
     data=json.loads((ROOT/'data/navigation.json').read_text());stale=[]
     for page in ROOT.glob('*.html'):

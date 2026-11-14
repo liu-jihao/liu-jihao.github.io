@@ -26,6 +26,7 @@ import argparse, datetime, json, re, shutil, sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from build_chrome import render_page  # noqa: E402
+from crawl_policy import apply_policy  # noqa: E402
 
 DATA = ROOT / 'data/liuxiv.json'
 NAV = ROOT / 'data/navigation.json'
@@ -596,7 +597,7 @@ def outputs():
     copies = pdf_copies(records)
     managed = sorted(p for p in (ROOT / 'pdf').glob('*.pdf') if PDF_RE.match(p.name)) if (ROOT / 'pdf').is_dir() else []
     orphans += [p for p in managed if p not in copies]
-    return out, orphans, copies
+    return {path: apply_policy(text) for path, text in out.items()}, orphans, copies
 
 
 def main():
